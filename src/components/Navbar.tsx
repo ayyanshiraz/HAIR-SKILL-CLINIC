@@ -74,7 +74,7 @@ export default function Navbar() {
                 {hoveredItem === `Doctors` && (
                   <motion.div layoutId={`active-pill`} className={`absolute inset-0 bg-[#772424]/10 rounded-full`} transition={{ type: `spring`, stiffness: 400, damping: 25 }} />
                 )}
-                <Link href={`/doctors`} className={`relative z-10 transition-colors duration-300`}>Doctors</Link>
+                <Link href={`/doctors-category`} className={`relative z-10 transition-colors duration-300`}>Doctors</Link>
               </div>
               <div className={`absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
                 {[
@@ -106,7 +106,7 @@ export default function Navbar() {
               </div>
               <div className={`absolute left-0 top-full hidden group-hover:block w-64 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
                 
-                {/* Treatments Sub-Menu (Converted to clickable Link) */}
+                {/* Treatments Sub-Menu */}
                 <div className={`relative group/treatments`}>
                   <Link href={`/treatments`} className={`group/link flex justify-between items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300 cursor-pointer`}>
                     <div className={`flex items-center`}>
@@ -137,7 +137,7 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                {/* Techniques Sub-Menu (Converted to clickable Link) */}
+                {/* Techniques Sub-Menu */}
                 <div className={`relative group/techniques`}>
                   <Link href={`/techniques`} className={`group/link flex justify-between items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300 cursor-pointer`}>
                     <div className={`flex items-center`}>
@@ -236,9 +236,9 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Before & After */}
+            {/* --- STANDALONE Before & After Link --- */}
             <div 
-              className={`relative h-full flex items-center group`}
+              className={`relative h-full flex items-center`}
               onMouseEnter={() => setHoveredItem(`Before After`)}
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -247,17 +247,6 @@ export default function Navbar() {
                   <motion.div layoutId={`active-pill`} className={`absolute inset-0 bg-[#772424]/10 rounded-full`} transition={{ type: `spring`, stiffness: 400, damping: 25 }} />
                 )}
                 <Link href={`/before-after`} className={`relative z-10 transition-colors duration-300`}>Before & After</Link>
-              </div>
-              <div className={`absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
-                {[
-                  { name: `Our Patients`, path: `/before-after/patients` },
-                  { name: `Case Studies`, path: `/before-after/case-studies` }
-                ].map((item) => (
-                  <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
-                    <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>
-                    <span>{item.name}</span>
-                  </Link>
-                ))}
               </div>
             </div>
 
