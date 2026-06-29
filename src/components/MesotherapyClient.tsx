@@ -51,7 +51,7 @@ export default function MesotherapyClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 10 FAQS DATA (Verbatim from pasted text, scrubbed of safe prose & exact numeric price errors) ---
+  // --- 10 FAQS DATA ---
   const faqList = [
     {
       q: "Is hair mesotherapy enough for advanced hair loss?",
@@ -96,7 +96,7 @@ export default function MesotherapyClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
@@ -106,8 +106,8 @@ export default function MesotherapyClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          {/* Breadcrumbs pinned to far left with flex-wrap for mobile safety */}
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
@@ -130,10 +130,10 @@ export default function MesotherapyClient() {
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & 5 MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_18ba24.jpg: Doctor applying mesotherapy tool to scalp) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/mesotherapy-hero.jpg" 
+                  src="/hair-transplant/26.webp" 
                   alt="Doctor placing nutrient rich mesotherapy micro injections directly into patient scalp at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
@@ -232,9 +232,9 @@ export default function MesotherapyClient() {
                   Who Is Hair Mesotherapy Best For?
                 </h2>
 
-                {/* IMAGE 2: Section Image Crown Injections (Capture image_18bde1.jpg: Doctor injecting crown area) */}
+                {/* IMAGE 2: Section Image Crown Injections */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/mesotherapy-crown.jpg" alt="Surgeon administering targeted mesotherapy compound into patient crown zone at Hair Skill Clinic" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/27.webp" alt="Surgeon administering targeted mesotherapy compound into patient crown zone at Hair Skill Clinic" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -298,9 +298,9 @@ export default function MesotherapyClient() {
                   How Many Mesotherapy Sessions Will You Need?
                 </h2>
 
-                {/* IMAGE 3: Section Image Syringe Close Up (Capture image_18be01.jpg: Close up small syringe) */}
+                {/* IMAGE 3: Section Image Syringe Close Up */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/mesotherapy-sessions.jpg" alt="Close up view of physician administering measured micro dosage with fine needle" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/28.webp" alt="Close up view of physician administering measured micro dosage with fine needle" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -359,9 +359,9 @@ export default function MesotherapyClient() {
                   Hair Mesotherapy vs PRP vs Hair Transplant
                 </h2>
 
-                {/* IMAGE 4: Section Image PRP Purple Gloves (Capture image_18be1f.jpg: Purple gloves cleaning scalp) */}
+                {/* IMAGE 4: Section Image PRP Purple Gloves */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/mesotherapy-prp.jpg" alt="Nurse wearing purple gloves prepping scalp for combined PRP and mesotherapy session" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/29.webp" alt="Nurse wearing purple gloves prepping scalp for combined PRP and mesotherapy session" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -378,9 +378,9 @@ export default function MesotherapyClient() {
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-3">When a Hair Transplant Becomes the Better Option</h3>
 
-                    {/* IMAGE 5: Section Image Patient Thumbs Up (Capture image_18be40.jpg: C.N., 32, 4500 Grafts thumbs up) */}
+                    {/* IMAGE 5: Section Image Patient Thumbs Up */}
                     <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-6 shadow-md">
-                      <img src="/treatments/mesotherapy-transplant.jpg" alt="Smiling patient C.N., 32 years old, giving thumbs up after successful restoration session" className="w-full h-full object-cover object-center" />
+                      <img src="/hair-transplant/30.webp" alt="Smiling patient C.N., 32 years old, giving thumbs up after successful restoration session" className="w-full h-full object-cover object-center" />
                     </div>
 
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Mesotherapy does not replace follicles that are completely gone. If areas show smooth skin with no visible activity even the best cocktail cannot regrow new roots. This is where a hair transplant becomes more appropriate. Hair Skill performs transplants for advanced cases then uses mesotherapy selectively to protect native hair and support texture around the implanted areas.</p>
@@ -417,7 +417,7 @@ export default function MesotherapyClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Mesotherapy Cost Ranges in Pakistan (PURE PKR TIERS / ZERO LOGISTICS) */}
+              {/* Section: Mesotherapy Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Hair Mesotherapy Cost Ranges in Pakistan

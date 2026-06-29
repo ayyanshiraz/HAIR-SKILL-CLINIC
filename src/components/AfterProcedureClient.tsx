@@ -97,7 +97,7 @@ export default function AfterProcedureClient() {
                 className="w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group"
               >
                 <img 
-                  src="/guide/after-procedure-banner.jpg" 
+                  src="/patient-guide/7.webp" 
                   alt="Patient recovering after hair transplant procedure at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95" 
                 />

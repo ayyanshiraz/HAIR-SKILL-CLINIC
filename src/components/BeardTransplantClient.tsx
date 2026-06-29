@@ -157,7 +157,7 @@ export default function BeardTransplantClient() {
               {/* IMAGE 1: Flagship Hero Visual (Targeting verified asset /treatments/beard-card.jpg) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/beard-card.jpg" 
+                  src="/hair-transplant/treatments/2.webp" 
                   alt="Smiling bearded patient standing prior to surgical facial restoration at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
@@ -209,7 +209,7 @@ export default function BeardTransplantClient() {
 
               {/* IMAGE 2: Marked Goatee Profile */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                <img src="/treatments/jv-marked-goatee.jpg" alt="Patient J.V., 24 years old, mapped with black pen marker for 4560 graft lower face procedure" className="w-full h-full object-cover object-top" />
+                <img src="/hair-transplant/treatments/3.webp" alt="Patient J.V., 24 years old, mapped with black pen marker for 4560 graft lower face procedure" className="w-full h-full object-cover object-top" />
               </motion.div>
 
               {/* Section: Why Pakistan Became a Global Center (100% Complete) */}

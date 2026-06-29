@@ -110,13 +110,13 @@ export default function WidowsPeakClient() {
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-[#772424] transition-colors">Blogs</Link>
+            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
             <span className="text-[#772424]">Widows Peak Hair Transplant</span>
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-[#772424] tracking-tight text-center">
+          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Widows Peak Hair Transplant Create or Remove a V-Shaped Hairline
           </h1>
         </div>
@@ -132,7 +132,7 @@ export default function WidowsPeakClient() {
               
               {/* IMAGE 1: Flagship Hero V-Shape Comparison */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
-                <img src="/treatments/widows-peak-hero.jpg" alt="Patient before and after Widows Peak Hair Transplant creation and frontal band redesign" className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" />
+                <img src="/hair-transplant/2.webp" alt="Patient before and after Widows Peak Hair Transplant creation and frontal band redesign" className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
                   Widows Peak Redesign, © Hair Skill Clinic
@@ -208,7 +208,7 @@ export default function WidowsPeakClient() {
 
                 {/* IMAGE 2: Bathroom mirror inspection */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/widows-peak-mirror.jpg" alt="Gentleman checking native receding widows peak hairline inside mirror" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/3.webp" alt="Gentleman checking native receding widows peak hairline inside mirror" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -277,7 +277,7 @@ export default function WidowsPeakClient() {
 
                 {/* IMAGE 3: Scalp top view marked */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/widows-peak-create.jpg" alt="Top surgical view of patient forehead marked with white mapping pencil" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/4.webp" alt="Top surgical view of patient forehead marked with white mapping pencil" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -397,7 +397,7 @@ export default function WidowsPeakClient() {
 
                 {/* IMAGE 4: Gloved hand holding sapphire pen */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-6 shadow-md">
-                  <img src="/treatments/sapphire-pen.jpg" alt="Surgeon holding synthetic crystal Sapphire blade tool used for dense micro slits" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/5.webp" alt="Surgeon holding synthetic crystal Sapphire blade tool used for dense micro slits" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
@@ -406,7 +406,7 @@ export default function WidowsPeakClient() {
 
                 {/* IMAGE 5: DHI implanter pen */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-6 shadow-md">
-                  <img src="/treatments/dhi-implanter.jpg" alt="Direct Hair Implantation DHI implanter pen placing single hair graft directly into scalp" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/6.webp" alt="Direct Hair Implantation DHI implanter pen placing single hair graft directly into scalp" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
@@ -435,7 +435,7 @@ export default function WidowsPeakClient() {
 
                 {/* IMAGE 6: Two diagnostic angles marked */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/grafts-planning.jpg" alt="Frontal and oblique diagnostic views of patient forehead mapped for graft volume distribution" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/7.webp" alt="Frontal and oblique diagnostic views of patient forehead mapped for graft volume distribution" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -476,7 +476,7 @@ export default function WidowsPeakClient() {
 
                 {/* IMAGE 7: Cost graphic / Pakistan Hub visual */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/cost-comparison.jpg" alt="Global healthcare package and medical hub investment tiers graphic" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/8.webp" alt="Global healthcare package and medical hub investment tiers graphic" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -519,7 +519,7 @@ export default function WidowsPeakClient() {
 
                 {/* IMAGE 8: Downward timeline view */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/widows-peak-timeline.jpg" alt="Top downward comparison of marked surgical plan versus 12 months mature healed growth" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/9.webp" alt="Top downward comparison of marked surgical plan versus 12 months mature healed growth" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
@@ -561,7 +561,7 @@ export default function WidowsPeakClient() {
 
                 {/* IMAGE 9: Dermatoscope check */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/candidate-check.jpg" alt="Doctor examining patient scalp density reserves using clinical diagnostic dermatoscope lens" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/10.webp" alt="Doctor examining patient scalp density reserves using clinical diagnostic dermatoscope lens" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -598,10 +598,7 @@ export default function WidowsPeakClient() {
                   How to get a natural widows peak hairline
                 </h2>
 
-                {/* IMAGE 10: Forehead marked with 5 / 2.5 lines */}
-                <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/natural-design.jpg" alt="Surgical macro calculation of forehead zones marked with 5 and 2.5 centimeter staging lines" className="w-full h-full object-cover object-top" />
-                </div>
+                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   A widows peak hair transplant looks natural when the design follows how hair actually grows. The shape is important. The small details matter even more.

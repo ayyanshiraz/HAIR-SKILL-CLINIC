@@ -165,14 +165,11 @@ export default function AfroHairClient() {
               {/* IMAGE 1: Flagship Hero Visual (Man flexing bicep in plaid shirt) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/afro-hero.jpg" 
+                  src="/hair-transplant/13.webp" 
                   alt="Confident smiling African American gentleman flexing bicep after successful Afro Hair Transplant restoration" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
-                  V.G., 42 Years Old, 4100 Grafts © Hair Skill Clinic
-                </div>
+                
               </motion.div>
 
               {/* Lead Introduction */}
@@ -212,7 +209,7 @@ export default function AfroHairClient() {
 
                 {/* IMAGE 2: Scalp marked with blue mapping pen */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/afro-follicle-reading.jpg" alt="Macro view of patient scalp marked with surgical blue pen defining temporal and frontal curl boundaries" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/14.webp" alt="Macro view of patient scalp marked with surgical blue pen defining temporal and frontal curl boundaries" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <div className="space-y-6">
@@ -244,7 +241,7 @@ export default function AfroHairClient() {
 
                 {/* IMAGE 3: Before / After comparison of gentleman in yellow shirt */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/afro-comparison-yellow.jpg" alt="Side by side comparison of Afro patient in yellow shirt showing native frontal thinning versus restored dense mature hairline" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/15.webp" alt="Side by side comparison of Afro patient in yellow shirt showing native frontal thinning versus restored dense mature hairline" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -299,7 +296,7 @@ export default function AfroHairClient() {
 
                 {/* IMAGE 4: Comparison of man looking slightly down */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/afro-candidate-flow.jpg" alt="Frontal downward view comparing thinned native Afro hairline profile against dense restored mature results" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/16.webp" alt="Frontal downward view comparing thinned native Afro hairline profile against dense restored mature results" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -479,7 +476,7 @@ export default function AfroHairClient() {
 
                 {/* IMAGE 5: Dermatoscope inspection on hairline/edges */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/afro-edges-planning.jpg" alt="Clinical examination of African American female hairline and edges using diagnostic dermatoscope lens" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/17.webp" alt="Clinical examination of African American female hairline and edges using diagnostic dermatoscope lens" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">

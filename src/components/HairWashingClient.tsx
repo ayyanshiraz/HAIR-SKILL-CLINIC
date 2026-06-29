@@ -84,7 +84,7 @@ export default function HairWashingClient() {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
-            Hair Wash After the Procedure
+            Hair Washing
           </h1>
         </div>
       </motion.section>
@@ -105,14 +105,11 @@ export default function HairWashingClient() {
                 className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group"
               >
                 <img 
-                  src="/guide/washing-hero.jpg" 
+                  src="/patient-guide/5.webp" 
                   alt="Medical assistant performing gentle post-op hair wash on patient" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 bg-[#772424] text-white text-xs md:text-sm font-black px-5 py-2.5 rounded-full shadow-lg border border-white/20 tracking-wide">
-                  T.B., 40, 5000 Grafts @ Hair Skill Clinic
-                </div>
+                
               </motion.div>
 
               {/* Lead Intro Paragraph */}
@@ -137,24 +134,7 @@ export default function HairWashingClient() {
                   It would be best to wash your head once a day for the first month after the hair transplant. It should be the way we taught you in the clinic or watched on our Youtube channel for the first two weeks. Two weeks after the surgery, you can wash your hair the way you used to do before. After a month, you can wash your hair once in two or three days.
                 </p>
 
-                {/* Video Embed Cover Box */}
-                <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-gray-200 my-6 bg-gray-900">
-                  <img 
-                    src="/guide/youtube-wash-cover.jpg" 
-                    alt="Hair Washing Tutorial Thumbnail" 
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
-                  />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-[#e52d27] rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(229,45,39,0.8)] group-hover:scale-110 group-hover:bg-[#ff3b35] transition-all duration-300">
-                      <div className="w-0 h-0 border-t-[14px] border-t-transparent border-l-[22px] border-l-white border-b-[14px] border-b-transparent ml-2" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
-                    <span className="text-white font-black text-xl md:text-2xl tracking-wide uppercase block">Watch Official Washing Guide</span>
-                    <span className="text-[#C5A059] font-bold text-xs">Hair Skill Clinic Youtube Channel</span>
-                  </div>
-                </div>
+                
               </motion.div>
 
               {/* Section 2: Apply Lotion/Foam */}

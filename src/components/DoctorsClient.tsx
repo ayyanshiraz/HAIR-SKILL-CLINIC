@@ -94,7 +94,7 @@ export default function DoctorsClient() {
                 className="w-full rounded-2xl overflow-hidden bg-gray-100 relative mb-4 shadow-lg group"
               >
                 <img 
-                  src="/doctors-hero.png" 
+                  src="/about/3.webp" 
                   alt="Top Surgeons for Hair Transplant in Pakistan" 
                   className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-1000" 
                 />

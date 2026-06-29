@@ -51,7 +51,7 @@ export default function MoustacheClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 11 FAQS DATA (Verbatim from pasted text, scrubbed of safe prose & exact numeric price errors) ---
+  // --- 11 FAQS DATA ---
   const faqList = [
     {
       q: "How much does a moustache transplant cost in Pakistan?",
@@ -100,7 +100,7 @@ export default function MoustacheClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
@@ -110,8 +110,8 @@ export default function MoustacheClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          {/* Breadcrumbs pinned to far left with flex-wrap for mobile safety */}
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
@@ -134,10 +134,10 @@ export default function MoustacheClient() {
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_0b1381.jpg: Smiling gentleman in black hat) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/moustache-hero.jpg" 
+                  src="/hair-transplant/19.webp" 
                   alt="Smiling patient wearing black hat after successful Moustache Transplant restoration at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
@@ -188,13 +188,11 @@ export default function MoustacheClient() {
                 {/* --- ADDED IMAGE FROM SCREENSHOT HERE --- */}
                 <div className="w-full rounded-2xl overflow-hidden border border-gray-100 my-8 relative shadow-md">
                   <img 
-                    src="/treatments/moustache-es-result.jpg" 
+                    src="/hair-transplant/20.webp" 
                     alt="E.S, 24, 5100 Grafts" 
                     className="w-full h-auto object-cover" 
                   />
-                  <div className="absolute bottom-0 left-0 bg-[#1a202c] text-white text-xs md:text-sm px-4 py-2 font-bold rounded-tr-lg">
-                    E.S, 24, 5100 Grafts © Hair Skill Clinic
-                  </div>
+                  
                 </div>
                 {/* -------------------------------------- */}
 
@@ -359,7 +357,7 @@ export default function MoustacheClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Moustache Transplant Cost Ranges in Pakistan (PURE PKR TIERS / NO NUMERIC PRICES) */}
+              {/* Section: Moustache Transplant Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Moustache Transplant Cost Ranges in Pakistan
@@ -411,7 +409,7 @@ export default function MoustacheClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Scheduling Your Session in Lahore (ZERO TRANSPORT/ACCOMMODATION LINES) */}
+              {/* Section: Scheduling Your Session in Lahore */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Scheduling Your Moustache Restoration in Lahore Pakistan

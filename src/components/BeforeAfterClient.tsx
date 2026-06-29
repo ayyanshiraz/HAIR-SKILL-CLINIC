@@ -31,19 +31,40 @@ export default function BeforeAfterClient() {
   // --- LIGHTBOX STATE ---
   const [selectedCaseIndex, setSelectedCaseIndex] = useState<number | null>(null);
 
-  // --- 40 MOCK CASES ---
-  const caseGrafts = [
-    5300, 1800, 4200, 3500, 2800, 5100, 3100, 4800, 3900, 2200,
-    4500, 3300, 2900, 4100, 5500, 2700, 3600, 4700, 3200, 3800,
-    2500, 4900, 3400, 4300, 3000, 5200, 2600, 4600, 3700, 4000,
-    2300, 5000, 2400, 4400, 2100, 5400, 2000, 5600, 1900, 5700
-  ];
-
-  const cases = caseGrafts.map((grafts, idx) => ({
-    // Using placeholder images that cycle 1-10
-    image: `/cases/case${(idx % 10) + 1}.webp`, 
-    grafts: grafts.toString()
-  }));
+  // --- REAL PATIENT CASES ---
+const cases = [
+  { image: "home/before-after/30.webp" },
+  { image: "home/before-after/2.webp"  },
+  { image: "home/before-after/3.webp" },
+  { image: "home/before-after/4.webp" },
+  { image: "home/before-after/5.webp" },
+  { image: "home/before-after/6.webp" },
+  { image: "home/before-after/7.webp" },
+  { image: "home/before-after/8.webp" },
+  { image: "home/before-after/9.webp" },
+  { image: "home/before-after/10.webp" },
+  { image: "home/before-after/11.webp" },
+  { image: "home/before-after/12.webp" },
+  { image: "home/before-after/13.webp" },
+  { image: "home/before-after/14.webp"},
+  { image: "home/before-after/15.webp" },
+  { image: "home/before-after/16.webp" },
+  { image: "home/before-after/17.webp" },
+  { image: "home/before-after/18.webp" },
+  { image: "home/before-after/19.webp" },
+  { image: "home/before-after/20.webp" },
+  { image: "home/before-after/21.webp" },
+  { image: "home/before-after/22.webp" },
+  { image: "home/before-after/23.webp" },
+  { image: "home/before-after/24.webp" },
+  { image: "home/before-after/25.webp" },
+  { image: "home/before-after/26.webp" },
+  { image: "home/before-after/27.webp" },
+  { image: "home/before-after/28.webp" },
+  { image: "home/before-after/29.webp" },
+  { image: "home/before-after/1.webp" },
+  // ... continue adding a new line for every single image you put in the folder
+];
 
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
@@ -87,46 +108,41 @@ export default function BeforeAfterClient() {
               </p>
             </motion.div>
 
-            {/* 40-Card Gallery Grid */}
+            {/* 30-Card Gallery Grid (Set to 3 Columns Max) */}
             <motion.div 
               initial="hidden" 
               whileInView="visible" 
               viewport={{ once: true, margin: "-50px" }} 
               variants={staggerContainer} 
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {cases.map((c, idx) => (
                 <motion.div 
                   key={idx} 
                   variants={fadeUp}
                   onClick={() => setSelectedCaseIndex(idx)}
-                  className="bg-[#772424] rounded-3xl p-2.5 flex flex-col shadow-lg cursor-pointer transition-transform duration-300 hover:-translate-y-2 select-none"
+                  className="bg-[#772424] rounded-3xl p-3 flex flex-col shadow-lg cursor-pointer transition-transform duration-300 hover:-translate-y-2 select-none"
                 >
                   {/* Image Wrapper */}
                   <div className="w-full aspect-[4/3] bg-white rounded-2xl overflow-hidden relative">
                     <img 
                       src={c.image} 
-                      alt={`${c.grafts} Grafts Transformation`} 
+                      alt={`${c} Grafts Transformation`} 
                       className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" 
                     />
                   </div>
                   
                   {/* Bottom Text Bar */}
-                  <div className="flex justify-between items-end pt-3 px-1 pb-1">
+                  <div className="flex justify-between items-end pt-3.5 px-1 pb-1">
                     <div className="flex items-baseline gap-1.5">
                       <span className="text-white font-black text-4xl leading-none">
-                        {c.grafts}
+                        
                       </span>
-                      <span className="text-white font-bold text-xs uppercase tracking-wider">
-                        GRAFTS
-                      </span>
+                      
                     </div>
-                    <div className="flex flex-col text-right leading-none gap-0.5">
-                      <span className="text-white/80 font-black text-[10px] uppercase tracking-widest">
-                        HAIR SKILL
-                      </span>
-                      <span className="text-white/80 font-black text-[10px] uppercase tracking-widest">
-                        CLINIC
+                    <div className="text-right leading-none">
+                      <span className="text-white/90 font-black text-xs uppercase tracking-widest">
+                        HAIR SKILL CLINIC
                       </span>
                     </div>
                   </div>
@@ -196,31 +212,26 @@ export default function BeforeAfterClient() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: -20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-4xl bg-[#772424] rounded-3xl p-3 flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 select-none"
+              className="relative w-fit max-w-[95vw] md:max-w-4xl bg-[#772424] rounded-3xl p-3 flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 select-none"
             >
-              <div className="w-full bg-white rounded-2xl relative flex justify-center items-center overflow-hidden">
+              <div className="w-fit mx-auto bg-white rounded-2xl relative flex justify-center items-center overflow-hidden">
                 <img 
                   src={cases[selectedCaseIndex].image} 
-                  alt={`${cases[selectedCaseIndex].grafts} Grafts Transformation`} 
-                  className="w-full h-auto max-h-[70vh] object-contain" 
+                  alt={`${cases[selectedCaseIndex]} Grafts Transformation`} 
+                  className="block max-h-[70vh] w-auto h-auto max-w-full object-contain" 
                 />
               </div>
               
               <div className="pt-5 px-3 pb-2 flex items-end justify-between bg-[#772424]">
                 <div className="flex items-baseline gap-2">
                   <span className="text-5xl md:text-6xl font-black text-white leading-none">
-                    {cases[selectedCaseIndex].grafts}
+          
                   </span>
-                  <span className="text-white font-bold text-sm md:text-base uppercase tracking-wider">
-                    GRAFTS
-                  </span>
+                  
                 </div>
-                <div className="flex flex-col text-right leading-none gap-1">
-                  <span className="text-white/80 font-black text-xs md:text-sm uppercase tracking-widest">
-                    HAIR SKILL
-                  </span>
-                  <span className="text-white/80 font-black text-xs md:text-sm uppercase tracking-widest">
-                    CLINIC
+                <div className="text-right leading-none">
+                  <span className="text-white/90 font-black text-xs md:text-sm uppercase tracking-widest">
+                    HAIR SKILL CLINIC
                   </span>
                 </div>
               </div>

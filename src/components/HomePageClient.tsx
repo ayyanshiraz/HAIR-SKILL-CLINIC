@@ -258,7 +258,7 @@ function InteractiveDoctorsStage() {
                   
                   <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.65 }}>
                     <Link 
-                      href={`/doctors/${selectedDoctor.name.toLowerCase().replace(/[^a-z0-9]+/g, `-`)}`} 
+                      href={`/doctors-category/${selectedDoctor.name.toLowerCase().replace(/[^a-z0-9]+/g, `-`)}`} 
                       className={`group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white bg-[#772424] rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_30px_rgba(119,36,36,0.3)]`}
                     >
                       <span className={`absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black`}></span>
@@ -285,11 +285,11 @@ function BeforeAfterStage() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const cases = [
-    { image: `/before-after/1.webp`, grafts: `5300` },
-    { image: `/before-after/2.webp`, grafts: `1800` },
-    { image: `/before-after/3.webp`, grafts: `4500` },
-    { image: `/before-after/4.webp`, grafts: `2800` },
-    { image: `/before-after/6.webp`, grafts: `4800` },
+    { image: `/home/before-after/30.webp`, grafts: `5300` },
+    { image: `/home/before-after/2.webp`, grafts: `1800` },
+    { image: `/home/before-after/3.webp`, grafts: `4500` },
+    { image: `/home/before-after/4.webp`, grafts: `2800` },
+    { image: `/home/before-after/6.webp`, grafts: `4800` },
     
   ];
 
@@ -584,7 +584,7 @@ function PhilosophyStage() {
             className={`w-full lg:w-1/2 flex justify-center items-center relative min-h-[400px]`}
           >
             <img 
-              src={`/philosophy-hair.png`} 
+              src={`/home/sac.webp`} 
               alt={`Hair Skill True Philosophy Hair Anatomy`} 
               className={`w-full max-w-xl object-contain drop-shadow-xl`} 
             />
@@ -760,46 +760,55 @@ function TreatmentsStage() {
   const treatments = [
     {
       title: `Hair Transplant`,
+      href: "/hair-transplant",
       bgColor: `bg-[#4A0E0E]`,
       icon: <img src={`/our%20treatments/1.svg`} alt={`Hair Transplant Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Beard Transplant`,
+      href: `/treatments/beard-transplant`,
       bgColor: `bg-[#5A1212]`,
       icon: <img src={`/our%20treatments/2.svg`} alt={`Beard Transplant Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Eyebrow Transplant`,
+      href: `/treatments/eyebrow`,
       bgColor: `bg-[#6B1616]`,
       icon: <img src={`/our%20treatments/3.svg`} alt={`Eyebrow Transplant Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Female Hair Transplant`,
+      href: `/treatments/female`,
       bgColor: `bg-[#772424]`,
       icon: <img src={`/our%20treatments/4.svg`} alt={`Female Hair Transplant Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Afro Hair Transplant`,
+      href: `/treatments/afro-hair`,
       bgColor: `bg-[#8C2222]`,
       icon: <img src={`/our%20treatments/5.svg`} alt={`Afro Hair Transplant Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Restoration of Sideburns`,
+      href: `/treatments/sideburn`,
       bgColor: `bg-[#A32A2A]`,
       icon: <img src={`/our%20treatments/6.svg`} alt={`Restoration of Sideburns Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Moustache Transplant`,
+      href: `/treatments/moustache`,
       bgColor: `bg-[#B93232]`,
       icon: <img src={`/our%20treatments/7.svg`} alt={`Moustache Transplant Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Mesotherapy`,
+      href: `/treatments/mesotherapy`,
       bgColor: `bg-[#CF3D3D]`,
       icon: <img src={`/our%20treatments/8.svg`} alt={`Mesotherapy Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Hair Transplantation And Local Anesthesia`,
+      href: `/techniques/needle-free`,
       bgColor: `bg-[#E34949]`,
       icon: <img src={`/our%20treatments/9.svg`} alt={`Hair Transplantation And Local Anesthesia Icon`} className={`w-full h-full object-contain`} />
     }
@@ -820,7 +829,7 @@ function TreatmentsStage() {
 
         <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 perspective-[2000px]`}>
           {treatments.map((item, idx) => (
-            <Link href={`/${item.title.toLowerCase().replace(/ /g, "-")}`} key={idx} className={`block relative group`}>
+            <Link href={item.href} key={idx} className={`block relative group`}>
               
               <motion.div 
                 initial={{ opacity: 0, y: 100, rotateX: 45, scale: 0.8 }}
@@ -1023,7 +1032,7 @@ function PatientGuideStage() {
       title: `Before the Process`,
       circleColor: `bg-[#4A0E0E]`,
       ringColor: `border-[#4A0E0E]`,
-      icon: `/guide/1.webp`,
+      icon: `/home/guide/1.webp`,
       position: `bottom`,
       description: `What to consider before having a hair transplant is one of the most important questions in the minds of many hair transplant candidates. For those who have not had this experience before, the unknown may cause anxiety, but this is completely natural. As Hair Skill Clinic, we have prepared a detailed pre-operation guide so that you can feel safe at every stage of the process. Being informed about all processes will allow you to prepare for the day of the operation more comfortably and consciously.`
     },
@@ -1032,7 +1041,7 @@ function PatientGuideStage() {
       title: `Operation Day`,
       circleColor: `bg-[#772424]`,
       ringColor: `border-[#772424]`,
-      icon: `/guide/2.webp`,
+      icon: `/home/guide/2.webp`,
       position: `top`,
       description: `The day of the operation is one of the most important steps of your hair transplantation process. When you come to our clinic, our team will greet you and make the necessary preparations before the operation. Your comfort is at the forefront during the procedure and our team will guide you. The stages of the operation and all the details to be considered are included in the guide specially presented to you. Our team will continue to support you throughout the process.`
     },
@@ -1041,7 +1050,7 @@ function PatientGuideStage() {
       title: `After Operation`,
       circleColor: `bg-[#B93232]`,
       ringColor: `border-[#B93232]`,
-      icon: `/guide/3.webp`,
+      icon: `/home/guide/3.webp`,
       position: `bottom`,
       description: `Your post-operative recovery process begins and there are some basic points you need to pay attention to during this process. You can manage the process in the healthiest way by following your doctors recommendations from the first days. Remember that hair transplantation is a natural recovery process and be patient. All the details you need to pay attention to during this period are included in our post-operative guide prepared specifically for you. Our team will continue to support you whenever you need it.`
     }
@@ -1156,38 +1165,38 @@ function TechniquesStage() {
   const techniques = [
     { 
       title: `Sapphire Hair\nTransplant`, 
-      image: `/techniques/sapphire.jpg`, 
-      link: `/sapphire-hair-transplant`, 
+      image: `/home/techniques/2.webp`, 
+      link: `/techniques/sapphire`, 
       radius: `rounded-tl-[3rem] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl` 
     },
     { 
       title: `DHI Hair\nTransplantation`, 
-      image: `/techniques/dhi.jpg`, 
-      link: `/dhi-hair-transplantation`, 
+      image: `/home/techniques/3.webp`, 
+      link: `/techniques/dhi`, 
       radius: `rounded-2xl` 
     },
     { 
       title: `Manuel Fue\nHair Transplant`, 
-      image: `/techniques/manuel-fue.jpg`, 
-      link: `/manuel-fue-hair-transplant`, 
+      image: `/home/techniques/4.webp`, 
+      link: `/techniques/manuel-fue`, 
       radius: `rounded-tr-[3rem] rounded-tl-2xl rounded-bl-2xl rounded-br-2xl` 
     },
     { 
       title: `Body Hair\nTransplant`, 
-      image: `/techniques/body-hair.jpg`, 
-      link: `/body-hair-transplant`, 
+      image: `/home/techniques/6.webp`, 
+      link: `/techniques/body`, 
       radius: `rounded-bl-[3rem] rounded-tl-2xl rounded-tr-2xl rounded-br-2xl` 
     },
     { 
       title: `Unshaven Hair\nTransplant`, 
-      image: `/techniques/unshaven.jpg`, 
-      link: `/unshaven-hair-transplant`, 
+      image: `/home/techniques/8.webp`, 
+      link: `/treatments/unshaven-transplant`, 
       radius: `rounded-2xl` 
     },
     { 
       title: `Needle-Free\nAnesthesia`, 
-      image: `/techniques/needle-free.jpg`, 
-      link: `/needle-free-anesthesia`, 
+      image: `/home/techniques/10.webp`, 
+      link: `/techniques/needle-free`, 
       radius: `rounded-br-[3rem] rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl` 
     }
   ];

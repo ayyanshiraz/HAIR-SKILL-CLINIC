@@ -86,14 +86,11 @@ export default function UnshavenTransplantClient() {
               {/* Main Reference Split Hero Visual (Patient in Orange Shirt) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/unshaven-hero.jpg" 
+                  src="/home/techniques/7.webp" 
                   alt="Split comparison of patient in orange shirt showing native forward styling versus un-shaved top recipient bed" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
-                  P.T., 28 Years Old, 3450 Grafts © Hair Skill Clinic
-                </div>
+                
               </motion.div>
 
               {/* Lead Introduction */}

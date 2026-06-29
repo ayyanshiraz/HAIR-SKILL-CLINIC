@@ -49,46 +49,46 @@ export default function ManuelFueClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-6"
+        className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
-            <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
+            <Link href="/" className="hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
+            <Link href="/hair-transplant" className="hover:text-[#772424] active:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
             <span className="text-[#772424]">Manuel Fue Hair Transplant</span>
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Manuel Fue Hair Transplant
           </h1>
         </div>
       </motion.section>
 
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
-      <section className="py-12 px-6 bg-white">
+      <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED HERO */}
-            <div className="w-full lg:w-2/3 flex flex-col">
+            <div className="w-full lg:w-2/3 block">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_198be1.jpg: Hand holding manual punch tool) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/techniques/manuel-fue-hero.jpg" 
+                  src="/home/techniques/4.webp" 
                   alt="Surgeon performing manual punch follicular unit extraction one by one at Hair Skill Clinic" 
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
+                  className="w-full h-full object-cover group-hover:scale-[1.02] group-active:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
@@ -120,7 +120,7 @@ export default function ManuelFueClient() {
 
               {/* Section: Micro FUE Hair Transplantation */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Micro FUE Hair Transplantation
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -142,19 +142,19 @@ export default function ManuelFueClient() {
 
               {/* Section: Manuel FUE vs Micro FUE */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Manuel FUE vs Micro FUE
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Since the use of micromotors in FUE hair transplantation there has been debates on which method is superior to the other. Hair Skill Clinic embraces the classic medical statement that there is no universal patient there is only the individual condition. Therefore surgeons who successfully apply many techniques make special plans for the needs of patients.
                 </p>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-3">When we compare these two methods</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">When we compare these two methods</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Actually the two techniques are basically the same. Manual FUE is slower and more controlled whereas micro FUE is faster. Although it is true that the grafts taken in manual FUE technique are less damaged it is another fact that the rapid implantation of the grafts affects the mentality and quality of life.
                 </p>
 
-                <div className="space-y-3 ml-2 mb-6">
+                <div className="space-y-3 ml-1 sm:ml-2 mb-6">
                   {[
                     "Manual FUE is superior in terms of less damage to the grafts and donor area",
                     "Micro FUE is superior in that the number of grafts that can be transplanted in a single session can be 3 times more than manual FUE",
@@ -162,14 +162,14 @@ export default function ManuelFueClient() {
                     "Since fewer grafts are transplanted recovery in the donor area is faster in the manual FUE method",
                     "It is easy to find a clinic that uses the micro FUE technique. The number of surgeons using the manual FUE method is less"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-3"><span className="text-[#772424] font-black text-lg">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
+                    <div key={i} className="flex items-start gap-3"><span className="text-[#772424] font-black text-lg shrink-0">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
                   ))}
                 </div>
               </motion.div>
 
               {/* Section: The Best Hair Transplantation */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   The Best Hair Transplantation
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -185,7 +185,7 @@ export default function ManuelFueClient() {
 
               {/* Section: Manual FUE Hair Transplantation in Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-6 border-t border-gray-200">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight">
                   Manual FUE Hair Transplantation in Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -211,7 +211,7 @@ export default function ManuelFueClient() {
               variants={slideInRight}
               className="w-full lg:w-1/3 lg:sticky lg:top-32"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -251,7 +251,7 @@ export default function ManuelFueClient() {
                     {isDropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
                         {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
+                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 active:bg-gray-200 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
                               <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
@@ -274,14 +274,14 @@ export default function ManuelFueClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="mfuePrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="mfuePrivacy" className="text-xs text-white/80 cursor-pointer">
-                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="mfuePrivacy" required defaultChecked className="w-4 h-4 mt-0.5 sm:mt-0 accent-[#C5A059] rounded cursor-pointer shrink-0" />
+                    <label htmlFor="mfuePrivacy" className="text-xs text-white/80 cursor-pointer leading-relaxed">
+                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline active:underline">Privacy Policy.</Link>
                     </label>
                   </div>
 
-                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02]">
+                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 active:bg-gray-200 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-[0.98]">
                     Submit <span>›</span>
                   </button>
                 </form>

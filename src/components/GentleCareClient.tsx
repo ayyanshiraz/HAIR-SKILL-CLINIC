@@ -99,14 +99,11 @@ export default function GentleCareClient() {
                 className={`w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gray-900 relative mb-12 shadow-2xl border border-gray-100 group`}
               >
                 <img 
-                  src={`/gentle-care-banner.jpg`} 
+                  src={`/about/4.webp`} 
                   alt={`Hair Skill Clinic Gentle Care Program`} 
                   className={`w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000`} 
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent`} />
-                <div className={`absolute bottom-6 left-6 bg-[#772424] text-white text-xs md:text-sm font-black px-5 py-2.5 rounded-full shadow-lg border border-white/20 tracking-wide`}>
-                  S.H., 30, 3725 Grafts @ Hair Skill Clinic
-                </div>
+                
               </motion.div>
 
               {/* Core Introduction */}
@@ -215,14 +212,11 @@ export default function GentleCareClient() {
                 className={`w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gray-900 relative mb-12 shadow-2xl border border-gray-100 group`}
               >
                 <img 
-                  src={`/doctors-checkup.jpg`} 
+                  src={`/about/5.webp`} 
                   alt={`Dr. Mehmet Erdogan Checkup`} 
                   className={`w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000`} 
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent`} />
-                <div className={`absolute bottom-6 left-6 bg-[#772424] text-white text-xs md:text-sm font-black px-5 py-2.5 rounded-full shadow-lg border border-white/20 tracking-wide`}>
-                  F.B., 39, 3400 Grafts @ Hair Skill Clinic
-                </div>
+               
               </motion.div>
 
               {/* Holistic Approach Paragraphs */}

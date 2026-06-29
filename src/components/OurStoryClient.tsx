@@ -56,6 +56,9 @@ export default function OurStoryClient() {
   const [lightboxIndex, setLightboxIndex] = useState<number>(-1);
   const isLightboxOpen = lightboxIndex !== -1;
 
+  // --- VIDEO STATE ---
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
   // Prevent scrolling when lightbox is open
   useEffect(() => {
     if (isLightboxOpen) {
@@ -143,7 +146,7 @@ export default function OurStoryClient() {
                 className={`w-full rounded-2xl overflow-hidden bg-[#f8f9fa] relative mb-12 shadow-lg group`}
               >
                 <img 
-                  src={`/about/story-hero.jpg`} 
+                  src={`/about/7.webp`} 
                   alt={`Hair Skill Clinic Building`} 
                   className={`w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-1000`} 
                 />
@@ -170,29 +173,44 @@ export default function OurStoryClient() {
                 </p>
 
                 {/* --- VIDEO COVER PAGE COMPONENT --- */}
-                <div className={`relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-gray-100 mb-12`}>
-                  <img 
-                    src={`/about/bbc-documentary-cover.jpg`} 
-                    alt={`Hair Transplant Documentary in Pakistan`} 
-                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`} 
-                  />
-                  {/* Dark Gradient Overlay */}
-                  <div className={`absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500`} />
-                  
-                  {/* Animated Play Button */}
-                  <div className={`absolute inset-0 flex items-center justify-center`}>
-                    <div className={`w-20 h-20 md:w-24 md:h-24 bg-[#e52d27] rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(229,45,39,0.5)] group-hover:scale-110 group-hover:bg-[#ff3b35] transition-all duration-300`}>
-                      <div className={`w-0 h-0 border-t-[14px] border-t-transparent border-l-[22px] border-l-white border-b-[14px] border-b-transparent ml-2`} />
+                {!isVideoPlaying ? (
+                  <div 
+                    onClick={() => setIsVideoPlaying(true)}
+                    className={`relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-gray-100 mb-12`}
+                  >
+                    <img 
+                      src={`/about/8.webp`} 
+                      alt={`Hair Transplant Documentary in Pakistan`} 
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`} 
+                    />
+                    {/* Dark Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500`} />
+                    
+                    {/* Animated Play Button */}
+                    <div className={`absolute inset-0 flex items-center justify-center`}>
+                      <div className={`w-20 h-20 md:w-24 md:h-24 bg-[#e52d27] rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(229,45,39,0.5)] group-hover:scale-110 group-hover:bg-[#ff3b35] transition-all duration-300`}>
+                        <div className={`w-0 h-0 border-t-[14px] border-t-transparent border-l-[22px] border-l-white border-b-[14px] border-b-transparent ml-2`} />
+                      </div>
+                    </div>
+
+                    {/* Text Overlay */}
+                    <div className={`absolute bottom-0 left-0 w-full p-6 md:p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent`}>
+                      <h3 className={`text-3xl md:text-5xl font-black text-white uppercase tracking-tight`}>
+                        Hair Transplant in <span className={`text-transparent bg-clip-text bg-gradient-to-r from-white to-[#C5A059]`}>Pakistan</span>
+                      </h3>
                     </div>
                   </div>
-
-                  {/* Text Overlay */}
-                  <div className={`absolute bottom-0 left-0 w-full p-6 md:p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent`}>
-                    <h3 className={`text-3xl md:text-5xl font-black text-white uppercase tracking-tight`}>
-                      Hair Transplant in <span className={`text-transparent bg-clip-text bg-gradient-to-r from-white to-[#C5A059]`}>Pakistan</span>
-                    </h3>
+                ) : (
+                  <div className={`relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-gray-100 mb-12 bg-black`}>
+                    <video 
+                      src={`/about/Arif sb documentry (1).mp4`} 
+                      controls 
+                      autoPlay 
+                      playsInline
+                      className={`w-full h-full object-cover`}
+                    />
                   </div>
-                </div>
+                )}
 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-12 font-medium`}>
                   Relocated to the financial district of Lahore, Hair Skill Clinic now continues its operations in a sophisticated, high-tech, seven-story clinic building where more than 100 well-trained staff members work. At Hair Skill, where quality and excellence are tied to intensive training procedures, every team member involved in hair transplant operations is well trained and tested according to the success criteria of the True Philosophy.
@@ -201,7 +219,7 @@ export default function OurStoryClient() {
                 {/* Second Building Image */}
                 <div className={`w-full rounded-2xl overflow-hidden bg-[#f8f9fa] relative mb-12 shadow-lg group`}>
                   <img 
-                    src={`/about/clinic-building-secondary.jpg`} 
+                    src={`/about/3.webp`} 
                     alt={`Hair Skill Clinic Building Exterior`} 
                     className={`w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-1000`} 
                   />
@@ -403,7 +421,6 @@ export default function OurStoryClient() {
                 alt={galleryImages[lightboxIndex].caption}
                 className={`max-w-full max-h-[80vh] object-contain shadow-2xl rounded-sm`} 
               />
-              {/* Caption completely removed from here */}
             </div>
 
             {/* Right Arrow */}

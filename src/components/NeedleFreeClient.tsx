@@ -49,7 +49,7 @@ export default function NeedleFreeClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
@@ -59,8 +59,8 @@ export default function NeedleFreeClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          {/* Breadcrumbs pinned to far left with flex-wrap for mobile safety */}
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
@@ -83,10 +83,10 @@ export default function NeedleFreeClient() {
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_18a382.jpg: Gloved hand holding jet injector tool) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/techniques/needle-free-hero.jpg" 
+                  src="/hair-transplant/25.webp" 
                   alt="Surgeon holding advanced high pressure jet injection device used for Needle Free Anesthesia in Lahore" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
@@ -127,14 +127,8 @@ export default function NeedleFreeClient() {
                 </p>
               </motion.div>
 
-              {/* IMAGE 2: Converted Static Showcase (Capture image_18a3dd.jpg: Mike Majlak holding head in surprise) */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-14 shadow-2xl">
-                <img 
-                  src="/techniques/mike-showcase.jpg" 
-                  alt="Static showcase banner displaying patient demonstrating astonishment at the comfort of jet injection delivery" 
-                  className="w-full h-full object-cover object-top" 
-                />
-              </motion.div>
+              
+            
 
               {/* Section: Needle-free Anesthesia Is Not a Pain-free Anesthesia */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">

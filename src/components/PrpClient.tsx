@@ -133,7 +133,7 @@ export default function PrpClient() {
               {/* IMAGE 1: Flagship Hero Visual (Capture image_35bb7e.jpg: Purple gloved hands injecting top of scalp) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/prp-hero.jpg" 
+                  src="/hair-transplant/treatments/8.webp" 
                   alt="Medical professional wearing sterile purple gloves administering precise PRP cellular injection into patient scalp at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
@@ -242,7 +242,7 @@ export default function PrpClient() {
 
                 {/* IMAGE 2: Section Image Injecting Temple (Capture image_35bb9d.jpg: Doctor injecting front temple) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/prp-temple.jpg" alt="Surgeon administering precise localized platelet plasma dosage into male frontal temple peak at Hair Skill Clinic" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/treatments/9.webp" alt="Surgeon administering precise localized platelet plasma dosage into male frontal temple peak at Hair Skill Clinic" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -279,7 +279,7 @@ export default function PrpClient() {
 
                 {/* IMAGE 3: Section Image Blood Draw Tube (Capture image_35bbd5.jpg: Drawing blood into PRP tube) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/prp-blood-draw.jpg" alt="Clinical blood draw from patient arm into specialized biological centrifuge separation container" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/treatments/10.webp" alt="Clinical blood draw from patient arm into specialized biological centrifuge separation container" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -353,7 +353,7 @@ export default function PrpClient() {
 
                 {/* IMAGE 4: Section Image Crown Syringe Injection (Capture image_35be88.jpg: Syringe injecting crown) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/prp-crown.jpg" alt="Surgeon administering concentrated platelet booster into patient crown and midscalp parting" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/treatments/11.webp" alt="Surgeon administering concentrated platelet booster into patient crown and midscalp parting" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">

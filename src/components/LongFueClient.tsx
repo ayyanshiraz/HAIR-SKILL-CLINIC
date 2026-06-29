@@ -91,7 +91,7 @@ export default function LongFueClient() {
                 className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group"
               >
                 <img 
-                  src="/treatments/long-fue-hero.jpg" 
+                  src="/hair-transplant/1.webp" 
                   alt="Doctor marking patient hairline for Long FUE procedure without shaving" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />

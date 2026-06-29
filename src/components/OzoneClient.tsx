@@ -129,7 +129,7 @@ export default function OzoneClient() {
               {/* IMAGE 1: Flagship Hero Visual (Capture image_354de2.jpg: Handheld high frequency ozone comb emitting blue/violet energy) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/ozone-hero.jpg" 
+                  src="/hair-transplant/treatments/4.webp" 
                   alt="Medical professional utilizing advanced handheld high frequency medical ozone comb wand to energize scalp follicles at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
@@ -238,7 +238,7 @@ export default function OzoneClient() {
 
                 {/* IMAGE 2: Section Image Glass Comb Wand (Capture image_354e09.jpg: High frequency glass comb wand emitting violet light) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/ozone-comb-wand.jpg" alt="Close up view of medical high frequency glass comb electrode conducting activated oxygen across scalp" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/treatments/5.webp" alt="Close up view of medical high frequency glass comb electrode conducting activated oxygen across scalp" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -275,7 +275,7 @@ export default function OzoneClient() {
 
                 {/* IMAGE 3: Section Image Follicle Macro (Capture image_354e28.jpg: Scalp root follicles energized) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/ozone-follicle-macro.jpg" alt="Macro close up view of follicular unit shafts responding to cellular oxygenation and vascular dilation" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/treatments/6.webp" alt="Macro close up view of follicular unit shafts responding to cellular oxygenation and vascular dilation" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -309,10 +309,7 @@ export default function OzoneClient() {
                   Benefits of Ozone Hair Treatment: What Patients Can Expect
                 </h2>
 
-                {/* IMAGE 4: Section Image Crown Application (Capture image_354e47.jpg: Nurse applying wand to parting) */}
-                <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/ozone-crown-wand.jpg" alt="Clinical specialist administering high frequency ozone wand across sensitive thinning part line" className="w-full h-full object-cover object-center" />
-                </div>
+                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Patients often choose ozone hair therapy because they want relief from scalp discomfort thinning or chronic flaking. They want something that feels gentle yet effective. When applied correctly ozone therapy for hair supports the scalp in ways many topical products cannot. It works across several layers of scalp health which is why improvement often feels gradual but steady.
@@ -378,7 +375,7 @@ export default function OzoneClient() {
 
                 {/* IMAGE 5: Section Image Smiling Patient (Capture image_354ebe.jpg: Patient smiling with healthy hair) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/ozone-smiling-patient.jpg" alt="Smiling patient experiencing absolute scalp comfort and revitalized hair texture post medical ozone therapy" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/treatments/7.webp" alt="Smiling patient experiencing absolute scalp comfort and revitalized hair texture post medical ozone therapy" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">

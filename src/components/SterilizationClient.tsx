@@ -116,7 +116,7 @@ export default function SterilizationClient() {
                 className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-10 shadow-lg group"
               >
                 <img 
-                  src="/guide/autoclave-hero.jpg" 
+                  src="/patient-guide/1.webp" 
                   alt="Autoclave device measuring barometric steam pressure" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000" 
                 />
@@ -140,7 +140,7 @@ export default function SterilizationClient() {
 
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img 
-                    src="/guide/autoclave-testing.jpg" 
+                    src="/patient-guide/2.webp" 
                     alt="Medical technician running testing procedures on autoclave" 
                     className="w-full h-full object-cover" 
                   />
@@ -201,7 +201,7 @@ export default function SterilizationClient() {
 
                 <div className="w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img 
-                    src="/guide/sterile-trays.jpg" 
+                    src="/patient-guide/3.webp" 
                     alt="Surgical stainless steel instrument trays organized" 
                     className="w-full h-full object-cover" 
                   />
@@ -262,7 +262,7 @@ export default function SterilizationClient() {
 
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-6 shadow-md">
                   <img 
-                    src="/guide/packaging-sealer.jpg" 
+                    src="/patient-guide/4.webp" 
                     alt="Nurse sealing sterile pouches inside sterilization cleanroom" 
                     className="w-full h-full object-cover" 
                   />

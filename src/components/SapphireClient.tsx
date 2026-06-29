@@ -121,7 +121,7 @@ export default function SapphireClient() {
           
           {/* Title centered independently */}
           <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-            Sapphire Hair Transplant Pakistan
+            Sapphire Hair Transplant 
           </h1>
         </div>
       </motion.section>
@@ -137,14 +137,11 @@ export default function SapphireClient() {
               {/* IMAGE 1: Flagship Hero Visual (Capture image_1a7137.jpg: Macro close up of synthetic sapphire scalpel pen tip) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/techniques/sapphire-pen-tip.jpg" 
+                  src="/home/techniques/1.webp" 
                   alt="Macro close up view of synthetic sapphire crystal blade scalpel pen tip used for micro channel incisions at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
-                  Synthetic Sapphire Blade, © Hair Skill Clinic
-                </div>
+                
               </motion.div>
 
               {/* Lead Introduction */}
@@ -178,7 +175,7 @@ export default function SapphireClient() {
 
               {/* IMAGE 2: Frontal Hairline Comparison (Capture image_1a74a1.jpg & image_1a8004.jpg: Marked hairline vs grown results) */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                <img src="/techniques/sapphire-hairline-comparison.jpg" alt="Frontal view comparing lowered pre surgical Sapphire FUE hairline markings against mature dense growth" className="w-full h-full object-cover object-top" />
+                <img src="/hair-transplant/34.webp" alt="Frontal view comparing lowered pre surgical Sapphire FUE hairline markings against mature dense growth" className="w-full h-full object-cover object-top" />
               </motion.div>
 
               {/* Section: Why Sapphire FUE Became Popular */}
@@ -195,7 +192,7 @@ export default function SapphireClient() {
 
                 {/* IMAGE 3: Gloved Hand Holding Sapphire Tool (Capture image_1a74be.jpg & image_1a8020.jpg: Gloved hand display) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-8 shadow-md">
-                  <img src="/techniques/sapphire-glove-tool.jpg" alt="Surgeon hand wearing sterile white glove holding synthetic blue sapphire micro incision instrument" className="w-full h-full object-cover object-center" />
+                  <img src="/home/techniques/1.webp" alt="Surgeon hand wearing sterile white glove holding synthetic blue sapphire micro incision instrument" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <h3 className="text-2xl font-black text-[#772424] mb-3">What is Sapphire FUE?</h3>
@@ -235,10 +232,7 @@ export default function SapphireClient() {
                   Why Choose Sapphire Hair Transplant in Pakistan at Hair Skill Clinic
                 </h2>
 
-                {/* IMAGE 4: Converted Static Showcase (Capture image_1a74dc.jpg & image_1a8042.jpg: Static showcase panel) */}
-                <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-8 shadow-2xl">
-                  <img src="/techniques/sapphire-static-showcase.jpg" alt="Static showcase panel displaying restored patient results demonstrating authentic frontal density" className="w-full h-full object-cover object-top" />
-                </div>
+                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Pakistan became the center of sapphire hair transplant Pakistan for two reasons: High surgeon experience and strong regional healthcare accessibility. Urban hubs like Lahore treat thousands of FUE cases every year which sharpens technique speed and design across clinics.
@@ -326,7 +320,7 @@ export default function SapphireClient() {
 
                 {/* IMAGE 5: Macro Close Up Channel Incision (Capture image_1a7516.jpg & image_1a8078.jpg: Macro scalpel incision) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/techniques/sapphire-macro-incision.jpg" alt="Macro close up view of surgeon executing precise V shaped micro channel incision into scalp" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/6.webp" alt="Macro close up view of surgeon executing precise V shaped micro channel incision into scalp" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -428,10 +422,7 @@ export default function SapphireClient() {
                   Recovery, Healing, and 12 to 18 Month Results With Sapphire FUE
                 </h2>
 
-                {/* IMAGE 6: Follicular Survival Staging Graph (Capture image_1a7534.jpg & image_1a8099.jpg: 4-12 Weeks curve) */}
-                <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-8 shadow-md">
-                  <img src="/techniques/sapphire-timeline-curve.jpg" alt="Clinical graph demonstrating follicular survival cycle shocking shedding phase and mature 18 month density" className="w-full h-full object-contain p-4" />
-                </div>
+                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Recovery after a sapphire FUE hair transplant Pakistan is usually calm and predictable. Sapphire blades create cleaner narrower channels which can make surface healing feel smoother compared to classic steel blades. The deeper healing process remains the same. Your grafts need time to settle shed restart their growth cycle and mature into full density upfront.
@@ -488,7 +479,7 @@ export default function SapphireClient() {
 
                 {/* IMAGE 7: Crown Before / After Comparison (Capture image_1a7558.jpg & image_1a80b5.jpg: Crown restoration) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/techniques/sapphire-crown-comparison.jpg" alt="Top downward view comparing native crown thinning against restored mature circular density" className="w-full h-full object-cover object-top" />
+                  <img src="/hair-transplant/36.webp" alt="Top downward view comparing native crown thinning against restored mature circular density" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">

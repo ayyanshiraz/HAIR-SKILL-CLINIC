@@ -88,18 +88,18 @@ export default function ExosomeClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-6"
+        className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/treatments" className="hover:text-[#772424] transition-colors">Treatments</Link>
@@ -108,24 +108,24 @@ export default function ExosomeClient() {
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Exosome Hair Therapy 
           </h1>
         </div>
       </motion.section>
 
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
-      <section className="py-12 px-6 bg-white">
+      <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGE */}
-            <div className="w-full lg:w-2/3 flex flex-col">
+            <div className="w-full lg:w-2/3 block">
               
-              {/* IMAGE 1: Flagship Hero Visual (Targeting verified asset /treatments/ecm-hero.jpg) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/ecm-hero.jpg" 
+                  src="/hair-transplant/treatments/12.webp" 
                   alt="Physician injecting concentrated stem cell exosome serum directly into male upper temple hairline at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
@@ -136,8 +136,8 @@ export default function ExosomeClient() {
               </motion.div>
 
               {/* Section: What Is Exosome Therapy */}
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-14 flex flex-col gap-6">
-                <h2 className="text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
+              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   What Is Exosome Therapy?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
@@ -150,7 +150,7 @@ export default function ExosomeClient() {
 
               {/* Section: Exosome Therapy Before and After Hair Transplantation */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Exosome Therapy Before and After Hair Transplantation
                 </h2>
 
@@ -163,7 +163,7 @@ export default function ExosomeClient() {
                         "Reduces shedding and hair thinning",
                         "Prepares the scalp for better transplant results"
                       ].map((item, i) => (
-                        <div key={i} className="flex items-center gap-2.5"><span className="text-[#772424] font-black">•</span><p className="text-black text-sm md:text-base font-bold">{item}</p></div>
+                        <div key={i} className="flex items-start gap-2.5"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-sm md:text-base font-bold">{item}</p></div>
                       ))}
                     </div>
                   </div>
@@ -176,7 +176,7 @@ export default function ExosomeClient() {
                         "Minimizes the shock loss phase",
                         "Enhances the growth and survival of transplanted grafts"
                       ].map((item, i) => (
-                        <div key={i} className="flex items-center gap-2.5"><span className="text-[#772424] font-black">•</span><p className="text-black text-sm md:text-base font-bold">{item}</p></div>
+                        <div key={i} className="flex items-start gap-2.5"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-sm md:text-base font-bold">{item}</p></div>
                       ))}
                     </div>
                   </div>
@@ -189,14 +189,14 @@ export default function ExosomeClient() {
 
               {/* Section: How Is Exosome Therapy Applied & Does It Hurt */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
                   How Is Exosome Therapy Applied?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   The procedure involves injecting a concentrated exosome serum into the scalp using fine microneedles. A numbing cream local anesthetic cream is applied beforehand to ensure comfort. Sessions typically last 30 to 45 minutes and there is no downtime; you can return to your daily activities right after.
                 </p>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-2">Does Exosome Therapy Hurt?</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Does Exosome Therapy Hurt?</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Most patients report little to no discomfort during the procedure. Any sensations are usually limited to mild tingling or pressure thanks to fine needles and anesthetic cream.
                 </p>
@@ -204,7 +204,7 @@ export default function ExosomeClient() {
 
               {/* Section: Benefits of Exosome Hair Therapy */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Benefits of Exosome Hair Therapy
                 </h2>
 
@@ -219,21 +219,21 @@ export default function ExosomeClient() {
                     "Suitable for both men and women",
                     "Safe non-surgical approach to hair restoration"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black text-lg">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
+                    <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black text-lg shrink-0">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
                   ))}
                 </div>
               </motion.div>
 
               {/* Section: Side Effects & Recommended Sessions */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
                   Are There Any Side Effects?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
                   Exosome therapy is a safe well tolerated procedure. You may experience mild redness or tenderness at the injection site but these effects typically resolve within a few hours. Adverse reactions are infrequent because the solution is highly purified and derived from stem cells.
                 </p>
 
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
                   How Many Sessions Are Recommended?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
@@ -243,7 +243,7 @@ export default function ExosomeClient() {
 
               {/* Section: Candidate Screening */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Who Is a Good Candidate for Exosome Therapy?
                 </h2>
                 <p className="text-black text-base md:text-lg font-medium mb-4">Exosome therapy is ideal for individuals experiencing:</p>
@@ -256,11 +256,11 @@ export default function ExosomeClient() {
                     "Post-hair transplant patients seeking enhanced results",
                     "Anyone looking for a non-invasive regenerative treatment"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
+                    <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
                   ))}
                 </div>
 
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Who Should Avoid Exosome Therapy?
                 </h2>
                 <p className="text-black text-base md:text-lg font-medium mb-4">Exosome therapy is not recommended for:</p>
@@ -272,7 +272,7 @@ export default function ExosomeClient() {
                     "Patients undergoing chemotherapy or with active cancer",
                     "Individuals with known allergies to components in the exosome solution"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
+                    <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
                   ))}
                 </div>
 
@@ -281,9 +281,9 @@ export default function ExosomeClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Exosome Cost Ranges in Pakistan (PURE PKR TIERS / ZERO LOGISTICS) */}
+              {/* Section: Exosome Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Exosome Hair Therapy Cost Ranges in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -296,7 +296,7 @@ export default function ExosomeClient() {
 
               {/* Section: Exosome Therapy at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Exosome Therapy at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-6">
@@ -311,7 +311,7 @@ export default function ExosomeClient() {
                     "Direct access to their doctor",
                     "Personalized post care instructions"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
+                    <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
                   ))}
                 </div>
 
@@ -322,7 +322,7 @@ export default function ExosomeClient() {
 
               {/* SECTION: 8 FAQS ACCORDION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Exosome Hair Therapy FAQs
                 </h2>
 
@@ -333,7 +333,7 @@ export default function ExosomeClient() {
                       <div key={idx} className={`border border-gray-200 transition-all duration-300 ${isOpen ? "rounded-3xl bg-gray-50 shadow-md" : "rounded-2xl bg-white"}`}>
                         <button 
                           onClick={() => setActiveFaq(isOpen ? null : idx)}
-                          className="w-full text-left p-6 font-black text-[#772424] text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
+                          className="w-full text-left p-4 sm:p-6 font-black text-[#772424] text-base sm:text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
                         >
                           <span>{faq.q}</span>
                           <span className="text-2xl font-light leading-none shrink-0">{isOpen ? "−" : "+"}</span>
@@ -346,7 +346,7 @@ export default function ExosomeClient() {
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.3 }}
-                              className="overflow-hidden px-6 pb-6"
+                              className="overflow-hidden px-4 sm:px-6 pb-6"
                             >
                               <p className="text-black text-base md:text-lg font-medium pt-2 border-t border-gray-200/60 leading-relaxed">
                                 {faq.a}
@@ -362,7 +362,7 @@ export default function ExosomeClient() {
 
               {/* Section: Closing CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Ready to Learn More or Book Your Consultation?
                 </h2>
                 <p className="text-black text-base md:text-lg font-medium mb-6">
@@ -379,7 +379,7 @@ export default function ExosomeClient() {
               variants={slideInRight}
               className="w-full lg:w-1/3 lg:sticky lg:top-32"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -442,9 +442,9 @@ export default function ExosomeClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="exoPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="exoPrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="exoPrivacy" required defaultChecked className="w-4 h-4 mt-0.5 sm:mt-0 accent-[#C5A059] rounded cursor-pointer shrink-0" />
+                    <label htmlFor="exoPrivacy" className="text-xs text-white/80 cursor-pointer leading-relaxed">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>

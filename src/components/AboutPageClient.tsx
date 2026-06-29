@@ -37,7 +37,7 @@ function AnimatedStat({ from = 0, to, duration = 2.5 }: { from?: number, to: num
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest: number) => Math.round(latest).toLocaleString());
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: `-50px` });
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -69,43 +69,43 @@ export default function AboutPageClient() {
   const aboutArticles = [
     {
       title: `Code of Ethics`,
-      image: `/about/ethics.jpg`,
+      image: `/about/1.webp`,
       summary: `Our Ethical Approach at Hair Skill Clinic. At Hair Skill Clinic, we place honesty, transparency, patient safety, and confidentiality at the core of our operations.`,
       link: `/about/ethics`
     },
     {
       title: `Hair Skill Reference Program`,
-      image: `/about/reference.jpg`,
+      image: `/about/2.webp`,
       summary: `Hair Skill Gentle Club. For all these years, our patients and we have formed a great family, and our relationship has been the most valuable asset we possess.`,
       link: `/about/reference-program`
     },
     {
       title: `Why To Choose Hair Skill Clinic?`,
-      image: `/about/why-choose.jpg`,
+      image: `/about/3.webp`,
       summary: `Excellence in Hair Transplantation in Lahore, Pakistan. Hair Skill Clinic is a leading hair transplant clinic in Pakistan, providing advanced micro-surgical procedures.`,
       link: `/about/why-choose-us`
     },
     {
       title: `Hair Skill Gentle Care`,
-      image: `/about/gentle-care.jpg`,
-      summary: `Hair Skill Clinic is passionate about patients ultimate comfort in all stages of your visit. Hair Skill Gentle Care™ manifests how a patients well-being is prioritized.`,
+      image: `/about/4.webp`,
+      summary: `Hair Skill Clinic is passionate about patients ultimate comfort in all stages of your visit. Hair Skill Gentle Care manifests how a patients well-being is prioritized.`,
       link: `/about/gentle-care`
     },
     {
       title: `Hair Skill True Philosophy`,
-      image: `/about/philosophy.jpg`,
-      summary: `True™ Philosophy. Hair Skill Clinic has disciplined its way of performing hair transplantation around the TRUE Philosophy, establishing a higher medical benchmark.`,
+      image: `/about/6.webp`,
+      summary: `True Philosophy. Hair Skill Clinic has disciplined its way of performing hair transplantation around the TRUE Philosophy, establishing a higher medical benchmark.`,
       link: `/about/philosophy`
     },
     {
       title: `Hair Skill Clinic`,
-      image: `/about/story.jpg`,
-      summary: `The Journey of Growth of Two Perfectionists! It all started with Dr. M. Erdogan and Dr. G. Bilgins passion for advancing hair transplantation.`,
+      image: `/about/7.webp`,
+      summary: `The Journey of Growth of Two Perfectionists! It all started with passion for advancing hair transplantation.`,
       link: `/about/our-story`
     }
   ];
 
-  // Defeats Google Chrome's forced white Autofill background override
+  // Defeats Google Chrome forced white Autofill background override
   const autofillFixStyle = {
     WebkitBoxShadow: `0 0 0px 1000px #772424 inset`,
     WebkitTextFillColor: `#ffffff`
@@ -166,7 +166,7 @@ export default function AboutPageClient() {
             <motion.div 
               initial={{ opacity: 0, scale: 0.85, rotate: -2 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              viewport={{ once: true, margin: `-100px` }}
+              viewport={{ once: true }}
               transition={{ duration: 1, ease: customEase }}
               className={`relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100 group`}
             >
@@ -174,13 +174,13 @@ export default function AboutPageClient() {
               <img 
                 src={`/about-clinic.jpg`} 
                 alt={`State of the art clinic facilities`} 
-                className={`w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105`}
+                className={`w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-105`}
               />
             </motion.div>
 
             {/* Animated Text Side */}
             <motion.div 
-              initial={`hidden`} whileInView={`visible`} viewport={{ once: true, margin: `-100px` }} variants={staggerContainer}
+              initial={`hidden`} whileInView={`visible`} viewport={{ once: true }} variants={staggerContainer}
               className={`flex flex-col gap-8`}
             >
               <div>
@@ -231,20 +231,20 @@ export default function AboutPageClient() {
                   key={idx}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: `-50px` }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className={`bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg`}
+                  className={`bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group md:hover:border-[#772424] active:border-[#772424] md:hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg`}
                 >
-                  <Link href={art.link} className={`flex flex-col flex-1 h-full block cursor-pointer`}>
+                  <Link href={art.link} className={`flex flex-col flex-1 h-full cursor-pointer`}>
                     <div className={`w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0`}>
-                      <img src={art.image} alt={art.title} className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700`} />
+                      <img src={art.image} alt={art.title} className={`w-full h-full object-cover md:group-hover:scale-105 group-active:scale-105 transition-transform duration-700`} />
                     </div>
                     <div className={`p-8 flex flex-col flex-1 justify-between bg-white`}>
                       <div>
-                        <h3 className={`text-xl font-extrabold text-gray-900 mb-3 group-hover:text-[#772424] transition-colors`}>{art.title}</h3>
+                        <h3 className={`text-xl font-extrabold text-gray-900 mb-3 md:group-hover:text-[#772424] group-active:text-[#772424] transition-colors`}>{art.title}</h3>
                         <p className={`text-gray-600 text-sm leading-relaxed mb-6 font-medium`}>{art.summary}</p>
                       </div>
-                      <div className={`text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 transition-transform w-fit`}>
+                      <div className={`text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 md:group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit`}>
                         More <span>→</span>
                       </div>
                     </div>
@@ -295,7 +295,7 @@ export default function AboutPageClient() {
                     {isDropdownOpen && (
                       <div className={`absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50`}>
                         {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className={`px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-gray-900 transition-colors`}>
+                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className={`px-4 py-2.5 md:hover:bg-gray-100 active:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-gray-900 transition-colors`}>
                             <div className={`flex items-center gap-2.5 truncate mr-2`}>
                               <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className={`w-5 object-contain shrink-0`} />
                               <span className={`font-bold`}>{country.code}</span>
@@ -321,11 +321,11 @@ export default function AboutPageClient() {
                   <div className={`flex items-center gap-2 mt-2`}>
                     <input type={`checkbox`} id={`aboutPrivacy`} required defaultChecked className={`w-4 h-4 accent-[#C5A059] rounded cursor-pointer`} />
                     <label htmlFor={`aboutPrivacy`} className={`text-xs text-white/80 cursor-pointer`}>
-                      I have read and accept the <Link href={`/privacy-policy`} className={`text-[#C5A059] font-black hover:underline`}>Privacy Policy.</Link>
+                      I have read and accept the <Link href={`/privacy-policy`} className={`text-[#C5A059] font-black md:hover:underline active:underline`}>Privacy Policy.</Link>
                     </label>
                   </div>
 
-                  <button type={`submit`} className={`w-full py-4 bg-white hover:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02]`}>
+                  <button type={`submit`} className={`w-full py-4 bg-white md:hover:bg-gray-100 active:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg md:hover:scale-[1.02] active:scale-[0.99]`}>
                     Submit <span>›</span>
                   </button>
                 </form>

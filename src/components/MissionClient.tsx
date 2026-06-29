@@ -98,7 +98,7 @@ export default function MissionClient() {
                 className={`w-full rounded-2xl overflow-hidden bg-[#f8f9fa] relative mb-12 shadow-lg group`}
               >
                 <img 
-                  src={`/about/mission-banner.jpg`} 
+                  src={`/about/7.webp`} 
                   alt={`Hair Skill Clinic Mission`} 
                   className={`w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-1000`} 
                 />

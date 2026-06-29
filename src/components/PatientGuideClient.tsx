@@ -60,31 +60,31 @@ export default function PatientGuideClient() {
   const guideArticles = [
     {
       title: "Sterilization at Hair Skill Clinic",
-      image: "/guide/sterilization-cover.jpg",
+      image: "/patient-guide/1.webp",
       summary: "Sterilization and Hygiene Standards at Hair Skill Clinic. At Hair Skill Clinic, our priority is to provide patients with the safest and highest medical standards.",
       link: "/patient-guide/sterilization"
     },
     {
       title: "Hair Washing",
-      image: "/guide/washing-cover.jpg",
+      image: "/patient-guide/5.webp",
       summary: "Hair Wash After the Procedure. Hair washing is one of the essential parts of a hair transplant. Therefore, there are some necessary steps to follow carefully.",
       link: "/patient-guide/hair-washing"
     },
     {
       title: "What Should I Do Before Hair Transplant",
-      image: "/guide/before-cover.jpg",
+      image: "/home/techniques/4.webp",
       summary: "What Should I Do Before Hair Transplant Procedure? Before Procedure; If you are the one who is thinking about undergoing a hair transplant, read these steps.",
       link: "/patient-guide/before"
     },
     {
       title: "Day Of Procedure",
-      image: "/guide/day-of-cover.jpg",
+      image: "/patient-guide/6.webp",
       summary: "The Day When The Transformation Starts. Day Of Procedure; Eventually, the big day when the transformation starts to come. It is structured for ultimate comfort.",
       link: "/patient-guide/day-of"
     },
     {
       title: "After Hair Transplant Procedure",
-      image: "/guide/after-cover.jpg",
+      image: "/patient-guide/7.webp",
       summary: "Hair Transplant After Procedure: What to Expect and What to Pay Attention After Procedure; One of the most critical phases of your natural hair restoration.",
       link: "/patient-guide/after"
     }
@@ -102,7 +102,7 @@ export default function PatientGuideClient() {
       >
         <div className="max-w-[1300px] mx-auto">
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2">
-            <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
+            <Link href="/" className="hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <span className="text-[#772424]">Patient Guide</span>
           </div>
@@ -126,21 +126,21 @@ export default function PatientGuideClient() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: (idx % 2) * 0.15 }}
-                  className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg"
+                  className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg"
                 >
                   <Link href={art.link} className="flex flex-col flex-1 h-full block cursor-pointer">
                     <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
                       <img 
                         src={art.image} 
                         alt={art.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-top" 
+                        className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
                       />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 group-active:bg-black/10 transition-colors duration-300" />
                     </div>
                     
                     <div className="p-8 flex flex-col flex-1 justify-between bg-white">
                       <div>
-                        <h3 className="text-xl font-extrabold text-gray-900 mb-3 group-hover:text-[#772424] transition-colors">
+                        <h3 className="text-xl font-extrabold text-gray-900 mb-3 group-hover:text-[#772424] group-active:text-[#772424] transition-colors">
                           {art.title}
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed mb-6 font-medium">
@@ -148,7 +148,7 @@ export default function PatientGuideClient() {
                         </p>
                       </div>
                       
-                      <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 transition-transform w-fit">
+                      <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
                         More <span>→</span>
                       </div>
                     </div>
@@ -204,7 +204,7 @@ export default function PatientGuideClient() {
                     {isDropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
                         {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-gray-900 transition-colors">
+                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 active:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-gray-900 transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
                               <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
@@ -230,11 +230,11 @@ export default function PatientGuideClient() {
                   <div className="flex items-center gap-2 mt-2">
                     <input type="checkbox" id="pgPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
                     <label htmlFor="pgPrivacy" className="text-xs text-white/80 cursor-pointer">
-                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
+                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline active:underline">Privacy Policy.</Link>
                     </label>
                   </div>
 
-                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02]">
+                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 active:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-[1.02]">
                     Submit <span>›</span>
                   </button>
                 </form>

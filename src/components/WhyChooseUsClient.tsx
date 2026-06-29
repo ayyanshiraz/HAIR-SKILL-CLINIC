@@ -77,7 +77,7 @@ export default function WhyChooseUsClient() {
             <span className={`text-[#772424]`}>Why To Choose Hair Skill Clinic?</span>
           </div>
           {/* Explicitly excepted heading: Changed to text-black */}
-          <h1 className={`text-4xl md:text-6xl font-black text-black tracking-tight`}>
+          <h1 className={`text-4xl md:text-6xl font-black text-gray-900 tracking-tight`}>
             Why To Choose Hair Skill Clinic?
           </h1>
         </div>
@@ -99,7 +99,7 @@ export default function WhyChooseUsClient() {
                 className={`w-full rounded-2xl overflow-hidden bg-[#0A1A2F] relative mb-10 shadow-lg group`}
               >
                 <img 
-                  src={`/about/why-choose-banner.jpg`} 
+                  src={`/about/3.webp`} 
                   alt={`Hair Skill Clinic Doctors and Before After Showcase`} 
                   className={`w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-1000`} 
                 />

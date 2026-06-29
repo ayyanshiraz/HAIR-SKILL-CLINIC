@@ -51,7 +51,7 @@ export default function BodyClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 9 FAQS DATA (Verbatim from pasted text, scrubbed of safe prose, exact numeric price & logistics errors) ---
+  // --- 9 FAQS DATA ---
   const faqList = [
     {
       q: "What is a body hair transplant?",
@@ -102,16 +102,14 @@ export default function BodyClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
-            <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start flex-wrap">
+            <Link href="/" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
+            <Link href="/hair-transplant" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
             <span className="text-[#772424]">Body Hair Transplant</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Body Hair Transplant
           </h1>
@@ -121,22 +119,18 @@ export default function BodyClient() {
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_1926a2.jpg: Bearded patient standing in front of dark logo) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/techniques/body-hero.jpg" 
+                  src="/home/techniques/5.webp" 
                   alt="Bearded patient standing confidently after Body Hair Transplant donor assessment at Hair Skill Clinic" 
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
+                  className="w-full h-full object-cover md:group-hover:scale-[1.02] group-active:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
-                  BHT Donor Assessment, © Hair Skill Clinic
-                </div>
               </motion.div>
 
               {/* Lead Introduction */}
@@ -172,7 +166,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Why This Treatment Is a Smart Choice */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why This Treatment Is a Smart Choice
                 </h2>
@@ -199,7 +193,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: What Is a Body Hair Transplant (BHT) */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   What Is a Body Hair Transplant (BHT)?
                 </h2>
@@ -210,9 +204,9 @@ export default function BodyClient() {
                   Body hair behaves differently. Each donor area has its own texture curl angle and growth cycle. Beard hair is thicker and usually stronger. Chest hair is softer and often shorter. Arm or leg hair can be fine or slow growing. Understanding these differences is essential because texture mismatch can affect how natural your body hair to scalp transplant looks.
                 </p>
 
-                {/* IMAGE 2: Follicular Survival Staging Graph (Capture image_1926be.jpg: 4-12 Weeks curve) */}
+                {/* IMAGE 2: Follicular Survival Graph */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-50 border border-gray-200/80 relative mb-8 shadow-md">
-                  <img src="/techniques/body-timeline-graph.jpg" alt="Clinical graph demonstrating follicular survival cycle shocking shedding phase and mature 18 month density" className="w-full h-full object-contain p-4" />
+                  <img src="/hair-transplant/31.webp" alt="Clinical graph demonstrating follicular survival cycle shocking shedding phase and mature 18 month density" className="w-full h-full object-contain p-4" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -230,7 +224,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Who Is a Good Candidate */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Who Is a Good Candidate for Body Hair Transplant in Pakistan?
                 </h2>
@@ -265,8 +259,8 @@ export default function BodyClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Donor Areas for Body Hair Transplant at Hair Skill */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              {/* Section: Donor Areas for Body Hair Transplant */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Donor Areas for Body Hair Transplant at Hair Skill Clinic
                 </h2>
@@ -297,7 +291,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Technique and Planning */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Body Hair Transplant Technique and Planning at Hair Skill Clinic
                 </h2>
@@ -337,7 +331,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Procedure Step by Step */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Body Hair Transplant Procedure Step by Step
                 </h2>
@@ -364,8 +358,8 @@ export default function BodyClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Cost Ranges in Pakistan (PURE PKR TIERS / ZERO LOGISTICS) */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              {/* Section: Cost Ranges in Pakistan */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Body Hair Transplant Cost Ranges in Pakistan
                 </h2>
@@ -403,7 +397,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Recovery Healing and Results */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Recovery, Healing and Results After Body Hair Transplant
                 </h2>
@@ -429,7 +423,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Risks Limits and Success Rate */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Risks, Limits and Success Rate of Body Hair Transplant
                 </h2>
@@ -467,7 +461,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Why Choose Pakistan and Hair Skill Clinic */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Choose Pakistan and Hair Skill Clinic for Body Hair Transplant?
                 </h2>
@@ -493,7 +487,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Aesthetics Density and Expected Outcomes */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Aesthetics, Density, and Expected Outcomes
                 </h2>
@@ -528,7 +522,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* SECTION: 9 FAQS ACCORDION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16">
                 <h2 className="text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Body Hair Transplant Pakistan FAQs
                 </h2>
@@ -540,7 +534,7 @@ export default function BodyClient() {
                       <div key={idx} className={`border border-gray-200 transition-all duration-300 ${isOpen ? "rounded-3xl bg-gray-50 shadow-md" : "rounded-2xl bg-white"}`}>
                         <button 
                           onClick={() => setActiveFaq(isOpen ? null : idx)}
-                          className="w-full text-left p-6 font-black text-[#772424] text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
+                          className="w-full text-left p-6 font-black text-[#772424] text-base md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none md:hover:opacity-80 active:opacity-60 transition-opacity"
                         >
                           <span>{faq.q}</span>
                           <span className="text-2xl font-light leading-none shrink-0">{isOpen ? "−" : "+"}</span>
@@ -568,7 +562,7 @@ export default function BodyClient() {
               </motion.div>
 
               {/* Section: Closing CTA */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="pt-8 border-t border-gray-200">
                 <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Start Your Body Hair Transplant Journey With Hair Skill Clinic
                 </h2>
@@ -648,7 +642,7 @@ export default function BodyClient() {
                     {isDropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
                         {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
+                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 md:hover:bg-gray-100 active:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
                               <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
@@ -674,11 +668,11 @@ export default function BodyClient() {
                   <div className="flex items-center gap-2 mt-2">
                     <input type="checkbox" id="bhtPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
                     <label htmlFor="bhtPrivacy" className="text-xs text-white/80 cursor-pointer">
-                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
+                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black md:hover:underline active:underline">Privacy Policy.</Link>
                     </label>
                   </div>
 
-                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02]">
+                  <button type="submit" className="w-full py-4 bg-white md:hover:bg-gray-100 active:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg md:hover:scale-[1.02] active:scale-[0.99]">
                     Submit <span>›</span>
                   </button>
                 </form>

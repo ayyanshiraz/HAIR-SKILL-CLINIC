@@ -99,7 +99,7 @@ export default function CodeOfEthicsClient() {
                 className={`w-full rounded-2xl overflow-hidden bg-[#f8f9fa] relative mb-12 shadow-lg group`}
               >
                 <img 
-                  src={`/about/ethics-banner.jpg`} 
+                  src={`/about/1.webp`} 
                   alt={`Hair Skill Clinic Building and Ethics`} 
                   className={`w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-1000`} 
                 />

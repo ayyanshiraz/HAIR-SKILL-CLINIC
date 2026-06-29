@@ -93,7 +93,7 @@ export default function ManualPunchClient() {
               {/* Flagship Visual Block as shown in Screenshot 2/3 */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative shadow-xl group">
                 <img 
-                  src="/techniques/manual-punch-hero.jpg" 
+                  src="/hair-transplant/treatments/13.webp" 
                   alt="Surgeon performing controlled manual punch extraction at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />

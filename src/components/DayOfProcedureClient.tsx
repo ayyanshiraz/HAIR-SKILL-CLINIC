@@ -67,10 +67,10 @@ export default function DayOfProcedureClient() {
         className="pt-28 lg:pt-36 pb-12 bg-gray-50 border-b border-gray-200 px-6"
       >
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2">
-            <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 flex-wrap">
+            <Link href="/" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/patient-guide" className="hover:text-[#772424] transition-colors">Patient Guide</Link>
+            <Link href="/patient-guide" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Patient Guide</Link>
             <span>/</span>
             <span className="text-[#772424]">Day Of Procedure</span>
           </div>
@@ -84,7 +84,7 @@ export default function DayOfProcedureClient() {
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             
             {/* LEFT SIDE: SCROLL-ANIMATED CONTENT */}
             <div className="w-full lg:w-2/3 flex flex-col">
@@ -97,9 +97,9 @@ export default function DayOfProcedureClient() {
                 className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group"
               >
                 <img 
-                  src="/guide/day-of-hero.jpg" 
+                  src="/patient-guide/6.webp" 
                   alt="Patient completing medical evaluation form at Hair Skill Clinic" 
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95" 
+                  className="w-full h-full object-cover md:group-hover:scale-[1.02] group-active:scale-[1.02] transition-transform duration-1000 opacity-95" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
@@ -118,7 +118,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: Where to Stay */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   Where to Stay During My Experience in Hair Skill Clinic?
                 </h2>
@@ -131,7 +131,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: How to Get to Clinic */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   How to Get to Hair Skill Clinic on the Day of the procedure?
                 </h2>
@@ -141,7 +141,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: Interpreter */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   Do I Have an Interpreter in the Clinic?
                 </h2>
@@ -151,7 +151,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: Will I Be Informed */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   Will I Be Informed about the Whole Process of Hair Transplant on the Day of the Procedure?
                 </h2>
@@ -161,7 +161,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: Prepared for Operation */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   How Do We Get You Prepared for Operation?
                 </h2>
@@ -195,7 +195,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: Operation Time */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   How Long Does the Operation Take?
                 </h2>
@@ -205,7 +205,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: Steps of Surgery */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h3 className="text-xl md:text-2xl font-black text-[#772424] tracking-tight">
                   What are the Steps of Surgery?
                 </h3>
@@ -239,7 +239,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: Lunch */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   What about Lunch?
                 </h2>
@@ -249,7 +249,7 @@ export default function DayOfProcedureClient() {
               </motion.div>
 
               {/* Section: The Next Day */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="flex flex-col gap-6 pt-6 border-t border-gray-100">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex flex-col gap-6 pt-6 border-t border-gray-100">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   The Next Day After the Operation
                 </h2>
@@ -310,7 +310,7 @@ export default function DayOfProcedureClient() {
                     {isDropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
                         {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
+                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 md:hover:bg-gray-100 active:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
                               <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
@@ -336,11 +336,11 @@ export default function DayOfProcedureClient() {
                   <div className="flex items-center gap-2 mt-2">
                     <input type="checkbox" id="dayOfPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
                     <label htmlFor="dayOfPrivacy" className="text-xs text-white/80 cursor-pointer">
-                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
+                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black md:hover:underline active:underline">Privacy Policy.</Link>
                     </label>
                   </div>
 
-                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02]">
+                  <button type="submit" className="w-full py-4 bg-white md:hover:bg-gray-100 active:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg md:hover:scale-[1.02] active:scale-[0.99]">
                     Submit <span>›</span>
                   </button>
                 </form>

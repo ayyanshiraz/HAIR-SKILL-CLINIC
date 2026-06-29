@@ -97,7 +97,7 @@ export default function BeforeProcedureClient() {
                 className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group"
               >
                 <img 
-                  src="/guide/before-hero.jpg" 
+                  src="/home/techniques/4.webp" 
                   alt="Surgeon marking patients hairline before hair transplant procedure" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95" 
                 />
@@ -122,23 +122,7 @@ export default function BeforeProcedureClient() {
                   The before hair transplant procedure is simple. That is why, if you pay attention carefully, there is nothing to be worried about your forthcoming procedure.
                 </p>
 
-                {/* Video Embed Cover Box */}
-                <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-gray-200 my-4 bg-gray-900">
-                  <img 
-                    src="/guide/youtube-before-cover.jpg" 
-                    alt="Dr Mehmet Erdogan Before Operation FAQ Video" 
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
-                  />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-[#772424] rounded-full flex items-center justify-center shadow-[#772424] group-hover:scale-110 transition-all duration-300">
-                      <svg className="w-10 h-10 text-white fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                  </div>
-                  <div className="absolute top-6 left-6 right-6 flex justify-between items-start">
-                    <span className="text-white font-bold text-lg md:text-xl max-w-lg drop-shadow-md">Hair Transplant FAQs | Before Operation | Dr. Mehmet Erdogan</span>
-                  </div>
-                </div>
+                
               </motion.div>
 
               {/* Master Header H2 */}

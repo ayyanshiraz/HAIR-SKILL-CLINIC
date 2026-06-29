@@ -53,67 +53,67 @@ export default function TreatmentsHubClient() {
     {
       title: "Hair Transplant",
       desc: "What is a Hair Transplant and Why Does It Matter? Hair transplantation is a surgical relocation of healthy hair follicles from donor...",
-      img: "/treatments/hair-transplant-card.jpg",
+      img: "/hair-transplant/treatments/1.webp",
       href: "/hair-transplant"
     },
     {
       title: "Beard Transplant",
       desc: "If you are searching for a beard transplant Pakistan guide that feels honest calm and grounded in real treatment experience you ar...",
-      img: "/treatments/beard-card.jpg",
+      img: "/hair-transplant/treatments/2.webp",
       href: "/treatments/beard-transplant"
     },
     {
       title: "Moustache Transplant",
       desc: "If you have been thinking about a moustache transplant Pakistan treatment because your upper lip never fills in the way you want you...",
-      img: "/treatments/moustache-hero.jpg",
+      img: "/hair-transplant/19.webp",
       href: "/treatments/moustache"
     },
     {
       title: "Eyebrow Transplant",
       desc: "Natural brows change everything. They frame your eyes lift your expression and shape how confident you feel when you look in the mirror...",
-      img: "/treatments/eyebrow-hero.jpg",
+      img: "/hair-transplant/24.webp",
       href: "/treatments/eyebrow"
     },
     {
       title: "Female Hair Transplant",
       desc: "Losing hair as a woman feels different. It is not just about coverage. It is about how you see yourself in photos how confidently you style...",
-      img: "/treatments/female-hero.jpg",
+      img: "/hair-transplant/21.webp",
       href: "/treatments/female"
     },
     {
       title: "Afro Hair Transplant",
       desc: "If you have been searching for a clinic that truly understands the needs of tightly coiled hair this page gives you the clarity you have been...",
-      img: "/treatments/afro-hero.jpg",
+      img: "/hair-transplant/13.webp",
       href: "/treatments/afro-hair"
     },
     {
       title: "Sideburn Transplantation",
       desc: "A sideburn transplant is a focused detail-driven procedure that restores shape density and balance to an area that defines the fram...",
-      img: "/treatments/sideburn-hero.jpg",
+      img: "/hair-transplant/18.webp",
       href: "/treatments/sideburn"
     },
     {
       title: "Mesotherapy",
       desc: "Hair Treatment Mesotherapy in Pakistan is a targeted micro-injection method placing vitamins minerals and growth-supporting...",
-      img: "/treatments/mesotherapy-hero.jpg",
+      img: "/hair-transplant/26.webp",
       href: "/treatments/mesotherapy"
     },
     {
       title: "Ozone Hair Therapy",
       desc: "Ozone therapy for hair is a targeted scalp treatment that uses controlled medical ozone to support follicles calm inflammation and...",
-      img: "/treatments/ozone-card.jpg",
+      img: "/hair-transplant/treatments/4.webp",
       href: "/treatments/ozone-hair-therapy"
     },
     {
       title: "PRP Hair Treatment",
       desc: "PRP hair treatment is a medical procedure that uses your own blood to support weaker follicles. At Hair Skill Clinic PRP hair treatment...",
-      img: "/treatments/prp-card.jpg",
+      img: "/hair-transplant/treatments/8.webp",
       href: "/treatments/prp-hair-treatment"
     },
     {
       title: "Exosome Hair Therapy",
       desc: "Exosome hair therapy represents the latest frontier in cellular regeneration delivering potent growth supportive signals directly to dormant...",
-      img: "/treatments/ecm-hero.jpg",
+      img: "/hair-transplant/treatments/12.webp",
       href: "/treatments/exosome-hair-therapy"
     }
   ];

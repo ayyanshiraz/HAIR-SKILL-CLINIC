@@ -133,7 +133,7 @@ export default function SideburnClient() {
               {/* IMAGE 1: Flagship Hero Visual (Capture image_0a9ea0.jpg: Side view of marked sideburn) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/sideburn-hero.jpg" 
+                  src="/hair-transplant/18.webp" 
                   alt="Doctor drawing precise sideburn restoration outline on patient temple before surgical extraction" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
@@ -225,10 +225,7 @@ export default function SideburnClient() {
                   Why Choose Hair Skill Clinic for Sideburn Transplantation in Lahore
                 </h2>
 
-                {/* IMAGE 2: Static Results Showcase (Capture image_0aa322.jpg: Top results showcase static banner) */}
-                <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-8 shadow-2xl">
-                  <img src="/treatments/top-results-banner.jpg" alt="Static showcase panel displaying top restored patient results across multiple facial profiles" className="w-full h-full object-cover object-top" />
-                </div>
+                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Guests searching for a sideburn transplant in Lahore often compare dozens of clinics before making a decision. What sets Hair Skill Clinic apart is not only the doctor led approach but the philosophy behind every step. Sideburns demand nuance. They influence facial proportion beard flow and the overall expression. When handled with care the change feels subtle yet meaningful.
@@ -263,7 +260,7 @@ export default function SideburnClient() {
 
                 {/* IMAGE 3: Close up macro marking (Capture image_0aa5c5.jpg: D.T. 24, 2400 Grafts close up) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/dt-sideburn-plan.jpg" alt="Close up macro view of patient D.T., 24 years old, mapped for 2400 graft sideburn procedure" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/18.webp" alt="Close up macro view of patient D.T., 24 years old, mapped for 2400 graft sideburn procedure" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -372,10 +369,7 @@ export default function SideburnClient() {
                   Sideburn Transplant Before and After: What Results Can You Expect
                 </h2>
 
-                {/* IMAGE 4: Dermatoscope Scalp Audit (Capture image_d66b69.jpg: Doctor checking temple/sideburn with dermatoscope) */}
-                <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/sideburn-follicle-audit.jpg" alt="Surgeon inspecting sideburn graft viability and vascular health using clinical dermatoscope camera" className="w-full h-full object-cover object-top" />
-                </div>
+                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   A well designed sideburn transplant creates a subtle but powerful shift in facial balance. Most guests describe the final look as something that feels naturally theirs rather than surgically added. This is the result of precise angle control careful graft distribution and a design approach that respects facial symmetry. When executed correctly sideburns begin to frame the face sharpen the jawline and connect smoothly with beard or temple hair.

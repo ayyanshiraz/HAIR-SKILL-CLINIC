@@ -49,18 +49,18 @@ export default function ExtracellularMatrixClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-6"
+        className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
@@ -69,31 +69,27 @@ export default function ExtracellularMatrixClient() {
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Extracellular Matrix Products & Hair Transplant Using ( EMP) Acell in Medicine
           </h1>
         </div>
       </motion.section>
 
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
-      <section className="py-12 px-6 bg-white">
+      <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE */}
-            <div className="w-full lg:w-2/3 flex flex-col">
+            <div className="w-full lg:w-2/3 block">
               
               {/* Main Reference Hero Visual (Orange/Red Cellular Scaffold) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/ecm-hero.jpg" 
+                  src="/hair-transplant/12.webp" 
                   alt="3D visual representation of Extracellular Matrix ECM biological scaffold and cellular regeneration network" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
-                  Regenerative ECM Scaffold, © Hair Skill Clinic
-                </div>
               </motion.div>
 
               {/* Lead Intro Paragraph */}
@@ -105,7 +101,7 @@ export default function ExtracellularMatrixClient() {
 
               {/* Section: The Healing Power */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
                   The Healing Power of Extracellular Matrix Products
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
@@ -115,7 +111,7 @@ export default function ExtracellularMatrixClient() {
 
               {/* Section: Major Applications */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Major Applications of Acell in Medicine
                 </h2>
 
@@ -149,7 +145,7 @@ export default function ExtracellularMatrixClient() {
 
               {/* Section: How Acell Works */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
                   How Acell Works
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
@@ -159,27 +155,27 @@ export default function ExtracellularMatrixClient() {
 
               {/* Section: Advantages of Acell Treatment */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="space-y-6 pt-6 border-t border-gray-100">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight">
                   Advantages of Acell Treatment
                 </h2>
 
-                <div className="flex flex-col gap-4 ml-2">
+                <div className="flex flex-col gap-4 ml-1 sm:ml-2">
                   <div className="flex items-start gap-3">
-                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
+                    <span className="text-[#772424] font-black text-lg pb-1 shrink-0">•</span>
                     <p className="text-black text-base md:text-lg font-medium">
                       <span className="font-extrabold text-[#772424]">Assists in the promotion of natural tissue regeneration:</span> Acell injects help promote the bodys regeneration of healthy tissue and minimize scarring improving patient healing.
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
+                    <span className="text-[#772424] font-black text-lg pb-1 shrink-0">•</span>
                     <p className="text-black text-base md:text-lg font-medium">
                       <span className="font-extrabold text-[#772424]">Applicability:</span> Useful in different medical fields including wound healing and the more demanding reconstruction surgeries.
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
+                    <span className="text-[#772424] font-black text-lg pb-1 shrink-0">•</span>
                     <p className="text-black text-base md:text-lg font-medium">
                       <span className="font-extrabold text-[#772424]">Minimally invasive:</span> Acell can be applied non-surgically or in conjunction with surgical procedures to enhance healing and recovery.
                     </p>
@@ -200,7 +196,7 @@ export default function ExtracellularMatrixClient() {
               variants={slideInRight}
               className="w-full lg:w-1/3 lg:sticky lg:top-32"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -263,9 +259,9 @@ export default function ExtracellularMatrixClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="ecmPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="ecmPrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="ecmPrivacy" required defaultChecked className="w-4 h-4 mt-0.5 sm:mt-0 accent-[#C5A059] rounded cursor-pointer shrink-0" />
+                    <label htmlFor="ecmPrivacy" className="text-xs text-white/80 cursor-pointer leading-relaxed">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>

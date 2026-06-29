@@ -86,7 +86,7 @@ export default function SideEffectsClient() {
               {/* Main Scalp Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/transplant/side-effects-hero.jpg" 
+                  src="/hair-transplant/11.webp" 
                   alt="Close up of patient scalp during early post operative healing phase showing newly placed follicular units" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />

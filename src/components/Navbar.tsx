@@ -117,17 +117,17 @@ export default function Navbar() {
                   </Link>
                   <div className={`absolute left-full top-0 hidden group-hover/treatments:block w-72 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
                     {[
-                      { name: `Hair Transplant Turkey`, path: `/treatments/turkey` },
-                      { name: `Beard Transplant`, path: `/treatments/beard` },
+                      { name: `Hair Transplant`, path: `/hair-transplant` },
+                      { name: `Beard Transplant`, path: `/treatments/beard-transplant` },
                       { name: `Moustache Transplant`, path: `/treatments/moustache` },
                       { name: `Eyebrow Transplant`, path: `/treatments/eyebrow` },
                       { name: `Female Hair Transplant`, path: `/treatments/female` },
-                      { name: `Afro Hair Transplant`, path: `/treatments/afro` },
+                      { name: `Afro Hair Transplant`, path: `/treatments/afro-hair` },
                       { name: `Sideburn Transplantation`, path: `/treatments/sideburn` },
                       { name: `Mesotherapy`, path: `/treatments/mesotherapy` },
-                      { name: `Ozone Hair Therapy`, path: `/treatments/ozone` },
-                      { name: `PRP Hair Treatment`, path: `/treatments/prp` },
-                      { name: `Exosome Hair Therapy`, path: `/treatments/exosome` }
+                      { name: `Ozone Hair Therapy`, path: `/treatments/ozone-hair-therapy` },
+                      { name: `PRP Hair Treatment`, path: `/treatments/prp-hair-treatment` },
+                      { name: `Exosome Hair Therapy`, path: `/treatments/exosome-hair-therapy` }
                     ].map((item) => (
                       <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
                         <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>
@@ -152,8 +152,8 @@ export default function Navbar() {
                       { name: `DHI Hair Transplant`, path: `/techniques/dhi` },
                       { name: `Manuel Fue Hair Transplant`, path: `/techniques/manuel-fue` },
                       { name: `Body Hair Transplant`, path: `/techniques/body` },
-                      { name: `Unshaven Hair Transplant`, path: `/techniques/unshaven` },
-                      { name: `Long FUE Hair Transplant`, path: `/techniques/long-fue` },
+                      { name: `Unshaven Hair Transplant`, path: `/treatments/unshaven-transplant` },
+                      { name: `Long FUE Hair Transplant`, path: `/treatments/long-fue` },
                       { name: `Manual Punch Hair Transplant`, path: `/techniques/manual-punch` },
                       { name: `Needle-Free Anesthesia`, path: `/techniques/needle-free` }
                     ].map((item) => (
@@ -260,12 +260,12 @@ export default function Navbar() {
                 {hoveredItem === `Blogs` && (
                   <motion.div layoutId={`active-pill`} className={`absolute inset-0 bg-[#772424]/10 rounded-full`} transition={{ type: `spring`, stiffness: 400, damping: 25 }} />
                 )}
-                <Link href={`/blog`} className={`relative z-10 transition-colors duration-300`}>Blogs</Link>
+                <Link href={`/blogs`} className={`relative z-10 transition-colors duration-300`}>Blogs</Link>
               </div>
               <div className={`absolute left-0 top-full hidden group-hover:block w-60 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
                 {[
-                  { name: `Hair Transplant`, path: `/blog/hair-transplant` },
-                  { name: `Hair Loss`, path: `/blog/hair-loss` }
+                  { name: `Hair Transplant`, path: `/blogs/hair-transplant` },
+                  { name: `Hair Loss`, path: `/blogs/hair-loss` }
                 ].map((item) => (
                   <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
                     <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>

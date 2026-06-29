@@ -99,7 +99,7 @@ export default function ReferenceProgramClient() {
                 className={`w-full rounded-2xl overflow-hidden bg-[#f8f9fa] relative mb-12 shadow-lg group`}
               >
                 <img 
-                  src={`/about/reference-banner.jpg`} 
+                  src={`/about/2.webp`} 
                   alt={`Hair Skill Reference Program`} 
                   className={`w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-1000`} 
                 />

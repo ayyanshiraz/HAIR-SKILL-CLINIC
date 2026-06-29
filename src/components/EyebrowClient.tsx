@@ -96,18 +96,18 @@ export default function EyebrowClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-6"
+        className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
@@ -116,24 +116,24 @@ export default function EyebrowClient() {
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Eyebrow Transplant
           </h1>
         </div>
       </motion.section>
 
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
-      <section className="py-12 px-6 bg-white">
+      <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & 3 MAPPED IMAGES */}
-            <div className="w-full lg:w-2/3 flex flex-col">
+            <div className="w-full lg:w-2/3 block">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_20a2f8.jpg: Woman having brows measured) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
-                  src="/treatments/eyebrow-hero.jpg" 
+                  src="/hair-transplant/24.webp" 
                   alt="Surgeon measuring patient facial symmetry and arch height during Eyebrow Transplant design phase" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
@@ -164,7 +164,7 @@ export default function EyebrowClient() {
 
               {/* Section: Is Eyebrow Transplant Right for You */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Is Eyebrow Transplant in Pakistan Right for You?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -181,13 +181,13 @@ export default function EyebrowClient() {
                       "those with gaps after medical treatments",
                       "those who want a refined softer brow shape that suits their face"
                     ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
+                      <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
                     ))}
                   </div>
                 </div>
 
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-black text-[#772424] mb-4">Who gets the best results</h3>
+                  <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Who gets the best results</h3>
                   <p className="text-black text-base md:text-lg font-medium mb-3">Eyebrow transplant works best when there is:</p>
                   <div className="space-y-2 ml-2">
                     {[
@@ -195,7 +195,7 @@ export default function EyebrowClient() {
                       "healthy donor hair behind the ears or on the scalp",
                       "realistic expectations about density and shape"
                     ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
+                      <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
                     ))}
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function EyebrowClient() {
 
               {/* Section: Why Choose Pakistan and Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Choose Eyebrow Transplant in Pakistan and at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -219,7 +219,7 @@ export default function EyebrowClient() {
 
                 <div className="space-y-6 mb-8">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-3">Benefits of having your eyebrow transplant in Lahore</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Benefits of having your eyebrow transplant in Lahore</h3>
                     <div className="space-y-2 ml-2">
                       {[
                         "Lahore clinics handle thousands of eyebrow cases annually which improves technique consistency",
@@ -227,13 +227,13 @@ export default function EyebrowClient() {
                         "Brow focused surgeons refine angle control density planning and design mapping every day",
                         "All inclusive clinical packages simplify your experience and reduce unneeded stress"
                       ].map((item, i) => (
-                        <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
+                        <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
                       ))}
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-3">What makes Hair Skill different</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">What makes Hair Skill different</h3>
                     <div className="space-y-2 ml-2">
                       {[
                         "Hair Skill Clinic is design driven and internationally recognized",
@@ -242,7 +242,7 @@ export default function EyebrowClient() {
                         "We regularly treat international patients seeking refined natural brow outcomes",
                         "Each design is created individually focusing on symmetry arch structure and facial harmony"
                       ].map((item, i) => (
-                        <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
+                        <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
                       ))}
                     </div>
                   </div>
@@ -255,19 +255,19 @@ export default function EyebrowClient() {
 
               {/* Section: Transplant vs Microblading */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why People Choose Eyebrow Transplant Instead of Microblading
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Eyebrow transplant in Pakistan continues to gain popularity because people want brows that grow behave and age like real hair. Microblading powder brows and tattoos can help temporarily yet they fade blur or shift color over time. A transplant gives you something more stable. It gives you hair you can shape trim and style exactly the way you prefer.
                 </p>
 
-                {/* IMAGE 2: Close up brow marking (Capture image_20a322.jpg: Close up marked brows) */}
+                {/* IMAGE 2: Close up brow marking */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/treatments/eyebrow-marking.jpg" alt="Macro close up of patient brow zone marked with surgical white pen defining the new arch density" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/32.webp" alt="Macro close up of patient brow zone marked with surgical white pen defining the new arch density" className="w-full h-full object-cover object-center" />
                 </div>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-4">What makes a transplant different</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">What makes a transplant different</h3>
                 <p className="text-black text-base md:text-lg font-medium mb-3">A transplant uses your own living follicles taken from behind the ears or along the scalp. These grafts allow:</p>
                 <div className="space-y-2 ml-2 mb-6">
                   {[
@@ -276,7 +276,7 @@ export default function EyebrowClient() {
                     "styling freedom with tweezers gel or pencil",
                     "a softer organic look from every angle"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
+                    <div key={i} className="flex items-start sm:items-center gap-3"><span className="text-[#772424] font-black shrink-0">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
                   ))}
                 </div>
 
@@ -287,28 +287,28 @@ export default function EyebrowClient() {
 
               {/* Section: Step by Step Procedure */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   What an Eyebrow Transplant Looks Like Step by Step
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
                   An eyebrow transplant in Pakistan is a precise and gentle procedure that focuses on creating harmony softness and long term balance. At Hair Skill Clinic the process is shaped around comfort and design accuracy from the moment you arrive.
                 </p>
 
-                <div className="space-y-6 border-l-2 border-[#772424]/20 pl-6 ml-2 mb-6">
+                <div className="space-y-6 border-l-2 border-[#772424]/20 pl-4 sm:pl-6 ml-1 sm:ml-2 mb-6">
                   <div>
-                    <h3 className="text-xl font-black text-[#772424] mb-1">Step 1: Consultation and digital eyebrow design</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">Step 1: Consultation and digital eyebrow design</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">You meet your surgeon share your expectations and explore reference shapes. We map your ideal brow based on facial structure symmetry and muscle movement.</p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-black text-[#772424] mb-1">Step 2: Donor area preparation</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">Step 2: Donor area preparation</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Most grafts come from behind the ears or the lower scalp. These follicles have the right thickness for soft refined brows. Only single hair grafts are selected to avoid a heavy appearance.</p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-black text-[#772424] mb-1">Step 3: Extraction using micro FUE</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">Step 3: Extraction using micro FUE</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">We use micro sized punches to gently remove follicles. This protects the root and keeps scarring minimal. Patients often describe this step as surprisingly comfortable.</p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-black text-[#772424] mb-1">Step 4: Creating tiny channels & Implantation</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">Step 4: Creating tiny channels & Implantation</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Angles matter here. Each opening is set between 10 and 15 degrees following natural brow direction. Your grafts are placed one by one. Total duration is usually 2 to 3 hours.</p>
                   </div>
                 </div>
@@ -320,7 +320,7 @@ export default function EyebrowClient() {
 
               {/* Section: Recovery Healing and Growth Timeline */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Eyebrow Transplant Recovery, Healing, and Growth Timeline
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
@@ -352,18 +352,18 @@ export default function EyebrowClient() {
 
               {/* Section: Techniques at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Eyebrow Transplant Techniques at Hair Skill Clinic
                 </h2>
 
-                {/* IMAGE 3: Surgeon with ruler (Capture image_20a34b.jpg: Surgeon using ruler) */}
+                {/* IMAGE 3: Surgeon with ruler */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-8 shadow-md">
-                  <img src="/treatments/eyebrow-ruler.jpg" alt="Hair Skill surgeon using micro precision ruler to calibrate eyebrow arch symmetry and graft placement" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/33.webp" alt="Hair Skill surgeon using micro precision ruler to calibrate eyebrow arch symmetry and graft placement" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">FUE, DHI, and Sapphire Options</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">FUE, DHI, and Sapphire Options</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Creating natural expressive brows requires precision at every step. FUE remains the most common choice where follicles are extracted one by one. DHI uses an implanter pen for direct placement along arches and tails without channel creation. Sapphire blades create ultra fine channels to support smooth blending with existing brow hair.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our attending physicians often explain: Technique is chosen after design. The design always leads and the method follows.
@@ -372,9 +372,9 @@ export default function EyebrowClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Eyebrow Transplant Cost Ranges in Pakistan (PURE PKR TIERS / ZERO LOGISTICS) */}
+              {/* Section: Eyebrow Transplant Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Eyebrow Transplant Cost Ranges in Pakistan 2026
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -383,14 +383,14 @@ export default function EyebrowClient() {
 
                 <div className="space-y-6 mb-6">
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">Typical Package Tiers in PKR</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">Typical Package Tiers in PKR</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
                       Reputable Lahore clinics operate inside competitive investment brackets in PKR. Prices vary based on technique FUE DHI or Sapphire surgeon experience and graft count. Our package brackets stay within the typical Pakistan range; the true difference comes from the artisan craftsmanship of your medical design team.
                     </p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">What Your PKR Investment Includes</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">What Your PKR Investment Includes</h3>
                     <p className="text-black font-medium text-base leading-relaxed mb-3">Your custom tier calculation includes your surgeon consultation personalized design procedure using refined micro tools and post treatment products for healing and comfort. This clinical focus ensures every graft is placed with attention to facial harmony not just coverage.</p>
                     <p className="text-black font-bold text-base leading-relaxed border-t border-gray-200/80 pt-3">
                       Our financial counselors note: Price should reflect craftsmanship. Eyebrows shape identity. They deserve careful planning not quick shortcuts.
@@ -401,7 +401,7 @@ export default function EyebrowClient() {
 
               {/* Section: Candidacy and Safety */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Candidacy, Design, and Clinical Safety
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -410,7 +410,7 @@ export default function EyebrowClient() {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">How design and angle are mapped</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">How design and angle are mapped</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Your arch height is chosen according to eye shape and bone structure. Grafts are placed at acute angles between 10 and 15 degrees so brows look brushable smooth and natural. Female designs prefer a gentle arch with refined tails while male designs often favor straighter stronger definition.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our medical leadership summarizes: Safe eyebrows are planned not rushed. Natural outcomes start long before the surgery.
@@ -419,9 +419,9 @@ export default function EyebrowClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Scheduling Your Session in Lahore (ZERO LOGISTICS LINES) */}
+              {/* Section: Scheduling Your Session in Lahore */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Scheduling Your Eyebrow Restoration in Lahore Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -434,7 +434,7 @@ export default function EyebrowClient() {
 
               {/* SECTION: 10 FAQS ACCORDION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Eyebrow Transplant Pakistan FAQs
                 </h2>
 
@@ -445,7 +445,7 @@ export default function EyebrowClient() {
                       <div key={idx} className={`border border-gray-200 transition-all duration-300 ${isOpen ? "rounded-3xl bg-gray-50 shadow-md" : "rounded-2xl bg-white"}`}>
                         <button 
                           onClick={() => setActiveFaq(isOpen ? null : idx)}
-                          className="w-full text-left p-6 font-black text-[#772424] text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
+                          className="w-full text-left p-4 sm:p-6 font-black text-[#772424] text-base sm:text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
                         >
                           <span>{faq.q}</span>
                           <span className="text-2xl font-light leading-none shrink-0">{isOpen ? "−" : "+"}</span>
@@ -458,7 +458,7 @@ export default function EyebrowClient() {
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.3 }}
-                              className="overflow-hidden px-6 pb-6"
+                              className="overflow-hidden px-4 sm:px-6 pb-6"
                             >
                               <p className="text-black text-base md:text-lg font-medium pt-2 border-t border-gray-200/60 leading-relaxed">
                                 {faq.a}
@@ -474,7 +474,7 @@ export default function EyebrowClient() {
 
               {/* Section: Closing CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Start Your Eyebrow Transplant Journey With Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -500,7 +500,7 @@ export default function EyebrowClient() {
               variants={slideInRight}
               className="w-full lg:w-1/3 lg:sticky lg:top-32"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -563,9 +563,9 @@ export default function EyebrowClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="ebPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="ebPrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="ebPrivacy" required defaultChecked className="w-4 h-4 mt-0.5 sm:mt-0 accent-[#C5A059] rounded cursor-pointer shrink-0" />
+                    <label htmlFor="ebPrivacy" className="text-xs text-white/80 cursor-pointer leading-relaxed">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>
