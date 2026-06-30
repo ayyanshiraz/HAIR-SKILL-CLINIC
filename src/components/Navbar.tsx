@@ -23,7 +23,8 @@ export default function Navbar() {
       className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-[1400px] bg-white border border-gray-200 rounded-3xl lg:rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] text-[#772424]`}
     >
       <div className={`px-6 sm:px-8`}>
-        <div className={`flex justify-between items-center h-20`}>
+        {/* Changed h-20 to h-14 lg:h-20 to reduce mobile height */}
+        <div className={`flex justify-between items-center h-14 lg:h-20`}>
 
           {/* Logo Section */}
           <motion.div 
@@ -33,9 +34,9 @@ export default function Navbar() {
           >
             <Link href={`/`}>
               <img 
-                src={`/logo.png`} 
+                src={`/home/logo.webp`} 
                 alt={`Smile Hair Clinic`} 
-                className={`h-12 w-auto object-contain`} 
+                className={`h-8 w-auto object-contain`} 
               />
             </Link>
           </motion.div>

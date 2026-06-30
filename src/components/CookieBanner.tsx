@@ -37,16 +37,15 @@ export default function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed bottom-0 left-0 w-full z-50 p-4 md:p-6 pointer-events-none"
+          className="fixed bottom-0 left-0 w-full z-50 px-4 py-3 md:px-6 md:py-4 pointer-events-none"
         >
-          {/* 
-            AMENDMENT: Changed 'max-w-5xl' to 'w-full max-w-[95%] 2xl:max-w-7xl' 
+          {/* AMENDMENT: Changed 'max-w-5xl' to 'w-full max-w-[95%] 2xl:max-w-7xl' 
             to significantly increase the width across all large screens.
           */}
-          <div className="w-full max-w-[95%] 2xl:max-w-7xl mx-auto pointer-events-auto bg-[#111111] border border-gray-800 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] rounded-2xl p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="w-full max-w-[95%] 2xl:max-w-7xl mx-auto pointer-events-auto bg-[#111111] border border-gray-800 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] rounded-2xl px-5 py-3.5 md:px-6 md:py-4 flex flex-col md:flex-row items-center justify-between gap-4">
             
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-white font-bold mb-2">We value your privacy</h3>
+              <h3 className="text-white font-bold mb-1">We value your privacy</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
                 We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our{" "}
                 <Link href="/cookie-policy" className="text-white underline hover:text-gray-300 transition-colors">
@@ -59,13 +58,13 @@ export default function CookieBanner() {
             <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
               <button
                 onClick={rejectCookies}
-                className="px-6 py-3 text-sm font-bold text-gray-400 uppercase tracking-wider border border-gray-800 rounded hover:bg-gray-900 hover:text-white transition-colors w-full sm:w-auto text-center"
+                className="px-6 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider border border-gray-800 rounded hover:bg-gray-900 hover:text-white transition-colors w-full sm:w-auto text-center"
               >
                 Reject Non-Essential
               </button>
               <button
                 onClick={acceptCookies}
-                className="px-6 py-3 text-sm font-bold text-black bg-white uppercase tracking-wider rounded hover:bg-gray-200 transition-colors w-full sm:w-auto text-center"
+                className="px-6 py-2 text-sm font-bold text-black bg-white uppercase tracking-wider rounded hover:bg-gray-200 transition-colors w-full sm:w-auto text-center"
               >
                 Accept All
               </button>

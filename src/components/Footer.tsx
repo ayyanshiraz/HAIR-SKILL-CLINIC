@@ -86,16 +86,18 @@ export default function Footer() {
         <div className={`grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#8f2b2b]/80`}>
           
           {/* Col 1 (Span 4): Elevated Brand Showcase */}
-          <div className={`lg:col-span-4 flex flex-col items-start justify-center`}>
+          <div className={`lg:col-span-4 flex flex-col items-start justify-start`}>
             <div className={`group relative flex flex-col items-start cursor-pointer`}>
               <div className={`absolute -inset-4 rounded-3xl bg-white/5 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100`} />
               <img
-                src={`/logo.png`}
+                src={`/home/logo.webp`}
                 alt={`Hair Skill Clinic Logo`}
                 className={`relative w-auto h-24 mb-4 object-contain transition-transform duration-500 group-hover:scale-105`}
               />
-              
             </div>
+            <p className={`text-base text-red-100 font-medium mb-6 pr-4 leading-relaxed`}>
+              Lahore's premier clinic for advanced hair transplant and restoration services. We specialize in delivering natural-looking results to help you regain your confidence with expert care.
+            </p>
           </div>
 
           {/* Col 2 (Span 5): Tactile Interactive Contact Details */}
