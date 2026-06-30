@@ -20,7 +20,7 @@ export default function Footer() {
     { name: `Doctors`, href: `/doctors-category` },
     { name: `Hair Transplant Before & After`, href: `/before-after` },
     { name: `F.A.Q.S`, href: `/faqs` },
-    { name: `Price`, href: `/price` },
+    { name: `Blogs`, href: `/blogs` },
     { name: `Contact`, href: `/contact` },
   ];
 
@@ -94,12 +94,7 @@ export default function Footer() {
                 alt={`Hair Skill Clinic Logo`}
                 className={`relative w-auto h-24 mb-4 object-contain transition-transform duration-500 group-hover:scale-105`}
               />
-              <span className={`text-2xl font-black tracking-tight uppercase leading-none drop-shadow-sm`}>
-                Hair Skill
-              </span>
-              <span className={`text-base font-medium tracking-widest uppercase text-red-200 mt-1.5`}>
-                Clinic
-              </span>
+              
             </div>
           </div>
 

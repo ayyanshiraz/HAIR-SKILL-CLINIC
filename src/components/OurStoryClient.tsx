@@ -87,12 +87,12 @@ export default function OurStoryClient() {
 
   // Gallery Images with Captions for the Lightbox (captions kept in array just for alt tags)
   const galleryImages = [
-    { src: `/about/gallery-1.jpg`, caption: `Reception, Hair Skill Clinic` },
-    { src: `/about/gallery-2.jpg`, caption: `Entrance, Hair Skill Clinic` },
-    { src: `/about/gallery-3.jpg`, caption: `Lobby, Hair Skill Clinic` },
-    { src: `/about/gallery-4.jpg`, caption: `Waiting Lounge, Hair Skill Clinic` },
-    { src: `/about/gallery-5.jpg`, caption: `Operation Theater, Hair Skill Clinic` },
-    { src: `/about/gallery-6.jpg`, caption: `Resting Area, Hair Skill Clinic` },
+    { src: `/home/clinic/1.webp`, caption: `Reception, Hair Skill Clinic` },
+    { src: `/home/clinic/2.webp`, caption: `Entrance, Hair Skill Clinic` },
+    { src: `/home/clinic/3.webp`, caption: `Lobby, Hair Skill Clinic` },
+    { src: `/home/clinic/4.webp`, caption: `Waiting Lounge, Hair Skill Clinic` },
+    { src: `/home/clinic/5.webp`, caption: `Operation Theater, Hair Skill Clinic` },
+    { src: `/home/clinic/6.webp`, caption: `Resting Area, Hair Skill Clinic` },
   ];
 
   // Lightbox Navigation Controls

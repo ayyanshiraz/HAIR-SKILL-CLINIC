@@ -22,260 +22,94 @@ function AnimatedCounter({ from = 0, to, duration = 2.5 }: { from?: number, to: 
   return <motion.span ref={ref}>{rounded}</motion.span>;
 }
 
-function InteractiveDoctorsStage() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const [selectedDoctor, setSelectedDoctor] = useState<{name: string, title: string, image: string, bio: string} | null>(null);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const doctors = [
-    {
-      name: `Dr. Gokay Bilgin`,
-      title: `Co-Founder`,
-      image: `/doctors/gokay.png`,
-      bio: `Hair Transplant Surgeon, MD. Medical Aesthetic Physician Dr. Gokay Bilgin is a successful hair transplant surgeon sharing his vast experience in hair transplantation and treatment with patients and guiding them globally.`
-    },
-    {
-      name: `Dr. Mehmet Erdogan`,
-      title: `Co-Founder`,
-      image: `/doctors/mehmet.png`,
-      bio: `Hair Transplant Surgeon, MD. Medical Aesthetic Physician Dr. Mehmet Erdogan is a renowned expert in dense follicular framing, bringing years of surgical excellence to Hair Skill Clinic.`
-    },
-    {
-      name: `Dr. Firdavs Ahmedov`,
-      title: `Hair Transplant Surgeon`,
-      image: `/doctors/firdavs.png`,
-      bio: `Hair Transplant Surgeon, MD. Medical Aesthetic Physician Dr. Firdavs Ahmedov works at Hair Skill Clinic, known for his precision and highly successful aesthetic outcomes in restorative surgery.`
-    },
-    {
-      name: `Dr. Ali Osman Soluk`,
-      title: `Hair Transplant Surgeon`,
-      image: `/doctors/ali.png`,
-      bio: `Hair Transplant Surgeon, MD. Medical Aesthetic Physician Dr. Ali Osman SOLUK is a successful hair transplant surgeon who works at Hair Skill Clinic, sharing his experience in hair transplantation and treatment with patients and guiding them. Dr. Ali Osman SOLUK, who graduated from Istanbul Faculty of Medicine, started his medical career in Istanbul Metropolitan Municipality, [...]`
-    },
-    {
-      name: `Dr. M. Resat Arpaci`,
-      title: `Hair Transplant Surgeon`,
-      image: `/doctors/resat.png`,
-      bio: `Hair Transplant Surgeon, MD. Medical Aesthetic Physician Dr. M. Resat Arpaci is dedicated to patient care and natural-looking hair restoration results at Hair Skill Clinic.`
-    }
-  ];
-
-  useEffect(() => {
-    if (isHovered || selectedDoctor) return;
-    
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex: number) => (prevIndex + 1) % doctors.length);
-    }, 3000);
-    
-    return () => clearInterval(timer);
-  }, [isHovered, selectedDoctor, doctors.length]);
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      const container = scrollRef.current;
-      const card = container.children[currentIndex] as HTMLElement;
-      if (card) {
-        container.scrollTo({
-          left: card.offsetLeft - container.offsetLeft,
-          behavior: `smooth`
-        });
-      }
-    }
-  }, [currentIndex]);
+function SingleDoctorStage() {
+  const doctor = {
+    name: `Dr. Mansoor Ahmad`,
+    title: `Senior Chief Surgeon and Medical Director`,
+    image: `/home/doctor.webp`,
+    bio: `Dr Mansoor Ahmad is a highly distinguished surgical specialist with over four decades of operative practice and clinical leadership. Registered permanently with the Pakistan Medical and Dental Council his career represents a lifelong commitment to surgical precision patient safety and advanced medical administration.`
+  };
 
   return (
-    <>
-      <div className={`w-full bg-white text-gray-900 py-28 relative overflow-hidden z-20`}>
-        <div className={`max-w-[1400px] mx-auto px-6 sm:px-8 relative z-10`}>
-          
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: `-50px` }}
-            transition={{ duration: 0.8 }}
-            className={`mb-24 text-center flex flex-col items-center justify-center gap-6 max-w-4xl mx-auto`}
-          >
-            <div>
-              <motion.span 
-                initial={{ opacity: 0, scale: 0.8, filter: `blur(8px)` }}
-                whileInView={{ opacity: 1, scale: 1, filter: `blur(0px)` }}
-                transition={{ delay: 0.1, duration: 0.7, ease: `easeOut` }}
-                className={`text-[#772424] font-black text-xs md:text-sm tracking-[0.3em] uppercase block mb-4`}
-              >
-                World Class Operations
-              </motion.span>
-              <motion.h2 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8, ease: `easeOut` }}
-                className={`text-4xl md:text-5xl lg:text-7xl font-black tracking-tight text-gray-900 leading-[1.1]`}
-              >
-                Meet Your Medical <br />
-                <span className={`text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-[#772424] to-[#C5A059]`}>
-                  Master Craftsmen
-                </span>
-              </motion.h2>
-            </div>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
+    <div className={`w-full bg-white text-gray-900 py-28 relative overflow-hidden z-20`}>
+      <div className={`max-w-[1400px] mx-auto px-6 sm:px-8 relative z-10`}>
+        
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: `-50px` }}
+          transition={{ duration: 0.8 }}
+          className={`mb-16 text-center flex flex-col items-center justify-center gap-6 max-w-4xl mx-auto`}
+        >
+          <div>
+            <motion.span 
+              initial={{ opacity: 0, scale: 0.8, filter: `blur(8px)` }}
+              whileInView={{ opacity: 1, scale: 1, filter: `blur(0px)` }}
+              transition={{ delay: 0.1, duration: 0.7, ease: `easeOut` }}
+              className={`text-[#772424] font-black text-xs md:text-sm tracking-[0.3em] uppercase block mb-4`}
+            >
+              World Class Operations
+            </motion.span>
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8, ease: `easeOut` }}
-              className={`text-gray-600 max-w-2xl font-medium text-base md:text-lg leading-relaxed mt-2`}
+              transition={{ delay: 0.3, duration: 0.8, ease: `easeOut` }}
+              className={`text-4xl md:text-5xl lg:text-7xl font-black tracking-tight text-gray-900 leading-[1.1]`}
             >
-              Our hair restoration clinics are directed exclusively by legendary surgeons who execute every single micro-incision with clinical perfection.
-            </motion.p>
-          </motion.div>
-
-          <div 
-            className={`relative w-full`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+              Meet Our <br />
+              <span className={`text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-[#772424] to-[#C5A059]`}>
+                Master Craftsman
+              </span>
+            </motion.h2>
+          </div>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8, ease: `easeOut` }}
+            className={`text-gray-600 max-w-2xl font-medium text-base md:text-lg leading-relaxed mt-2`}
           >
-            <div 
-              ref={scrollRef}
-              className={`flex overflow-x-auto gap-8 pb-16 pt-4 snap-x snap-mandatory`} 
-              style={{ scrollbarWidth: `none`, WebkitOverflowScrolling: `touch` }}
-            >
-              {doctors.map((doc, idx) => (
-                <div 
-                  key={idx} 
-                  onClick={() => setSelectedDoctor(doc)}
-                  className={`group snap-center shrink-0 w-[300px] md:w-[340px] lg:w-[380px] rounded-[2rem] overflow-hidden bg-white shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] flex flex-col relative border border-gray-100/60 cursor-pointer transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4 hover:shadow-[0_40px_80px_-20px_rgba(119,36,36,0.3)]`}
-                >
-                  <div className={`absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:24px_24px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0`} />
-                  <div className={`absolute top-1/4 left-1/2 -translate-x-1/2 w-48 h-48 bg-gradient-to-tr from-[#772424]/20 to-[#C5A059]/20 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0`} />
+            Our hair restoration clinics are directed exclusively by legendary surgeons who execute every single micro-incision with clinical perfection.
+          </motion.p>
+        </motion.div>
 
-                  <div className={`h-[320px] md:h-[350px] lg:h-[380px] w-full relative flex items-end justify-center pt-8 bg-gradient-to-b from-gray-50 to-gray-200/50 z-10 overflow-visible`}>
-                    <img 
-                      src={doc.image} 
-                      alt={doc.name} 
-                      className={`w-[90%] h-[95%] object-contain object-bottom drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] transition-all duration-700 ease-out group-hover:scale-105 group-hover:drop-shadow-[0_25px_35px_rgba(0,0,0,0.25)] origin-bottom`} 
-                    />
-                  </div>
-
-                  <div className={`pt-8 pb-8 px-6 relative flex flex-col items-center text-center z-20 bg-[#772424] group-hover:bg-[#f8f9fa] transition-colors duration-700 ease-out overflow-hidden`}>
-                    <div className={`absolute top-0 left-0 w-full h-1.5 bg-[#5a1b1b] group-hover:bg-[#C5A059] transition-colors duration-700`} />
-                    <div className={`absolute top-0 left-[-150%] w-[100%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] group-hover:left-[200%] transition-all duration-[1.2s] ease-in-out z-0`} />
-                    <h3 className={`relative z-10 text-xl md:text-2xl font-bold mb-2 tracking-wide text-white md:group-hover:text-black transition-colors duration-700`}>{doc.name}</h3>
-                    <p className={`relative z-10 text-sm md:text-base font-medium text-white/80 md:group-hover:text-black/70 transition-colors duration-700`}>{doc.title}</p>
-                    
-                    <div className={`relative z-10 h-0 opacity-0 group-hover:h-6 group-hover:opacity-100 group-hover:mt-4 transition-all duration-500 ease-out flex items-center justify-center gap-2`}>
-                      <span className={`text-[11px] font-black uppercase tracking-[0.2em] text-[#772424]`}>View Profile</span>
-                      <svg className={`w-3.5 h-3.5 text-[#772424]`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`}><path strokeLinecap={`round`} strokeLinejoin={`round`} strokeWidth={3} d={`M14 5l7 7m0 0l-7 7m7-7H3`} /></svg>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className={`flex justify-center items-center gap-4 mt-2`}>
-              {[0, 1, 2].map((idx) => {
-                const activeDotIndex = currentIndex <= 1 ? 0 : currentIndex >= 3 ? 2 : 1;
-                const isActive = activeDotIndex === idx;
-                return (
-                  <div 
-                    key={idx}
-                    onClick={() => {
-                       const newIndex = idx === 0 ? 0 : idx === 1 ? 2 : 4;
-                       setCurrentIndex(newIndex);
-                    }}
-                    className={`h-3 rounded-full cursor-pointer transition-all duration-500 ease-out ${isActive ? `w-12 bg-[#772424] shadow-md` : `w-3 bg-gray-300 hover:bg-gray-400`}`}
-                  />
-                )
-              })}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className={`max-w-4xl mx-auto bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden flex flex-col md:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100`}
+        >
+          <div className={`w-full md:w-2/5 bg-gradient-to-b from-gray-50 to-gray-200/50 relative flex items-end justify-center pt-12 px-6`}>
+            <img 
+              src={doctor.image} 
+              alt={doctor.name} 
+              className={`relative z-10 w-full max-w-[280px] object-contain object-bottom drop-shadow-xl`}
+            />
+          </div>
+          <div className={`w-full md:w-3/5 p-8 md:p-12 flex flex-col justify-center`}>
+            <span className={`text-[#772424] font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-3 block`}>
+              {doctor.title}
+            </span>
+            <h3 className={`text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tight`}>
+              {doctor.name}
+            </h3>
+            <div className={`w-12 h-1 bg-[#C5A059] mb-6`} />
+            <p className={`text-gray-600 text-base md:text-lg leading-relaxed mb-8`}>
+              {doctor.bio}
+            </p>
+            <div>
+              <Link 
+                href={`/doctors-category`} 
+                className={`inline-flex items-center justify-center px-8 py-3.5 font-bold text-white bg-[#772424] rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg`}
+              >
+                Read Full Profile
+              </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
+
       </div>
-
-      <AnimatePresence>
-        {selectedDoctor && (
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
-            exit={{ opacity: 0 }} 
-            className={`fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-12`}
-          >
-            <div className={`absolute inset-0 bg-[#0a0a0a]/60 backdrop-blur-xl`} onClick={() => setSelectedDoctor(null)} />
-            
-            <motion.div 
-              initial={{ scale: 0.95, y: 40, opacity: 0, rotateX: 5 }}
-              animate={{ scale: 1, y: 0, opacity: 1, rotateX: 0 }}
-              exit={{ scale: 0.95, y: 20, opacity: 0 }}
-              transition={{ type: `spring`, damping: 25, stiffness: 300 }}
-              className={`relative w-full max-w-6xl bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden flex flex-col md:flex-row shadow-[0_0_80px_rgba(119,36,36,0.25)]`}
-            >
-              <div className={`w-full md:w-[45%] bg-[#f4f5f7] relative flex items-end justify-center pt-20 px-8 overflow-hidden`}>
-                <div className={`absolute top-12 left-8 text-[150px] font-black text-gray-200/60 leading-none tracking-tighter pointer-events-none select-none z-0`}>
-                  {selectedDoctor.name.split(` `)[1]?.substring(0,1)}{selectedDoctor.name.split(` `)[2]?.substring(0,1)}
-                </div>
-                
-                <motion.img 
-                  initial={{ y: 60, opacity: 0 }} 
-                  animate={{ y: 0, opacity: 1 }} 
-                  transition={{ delay: 0.2, type: `spring`, stiffness: 200 }}
-                  src={selectedDoctor.image} 
-                  alt={selectedDoctor.name} 
-                  className={`relative z-10 w-full max-w-[360px] object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.2)]`}
-                />
-              </div>
-              
-              <div className={`w-full md:w-[55%] p-10 md:p-16 flex flex-col justify-center relative bg-white`}>
-                <button 
-                  onClick={() => setSelectedDoctor(null)} 
-                  className={`absolute top-6 right-6 md:top-10 md:right-10 w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-[#772424] hover:text-white transition-all duration-300 z-20`}
-                >
-                  <svg className={`w-6 h-6`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`}><path strokeLinecap={`round`} strokeLinejoin={`round`} strokeWidth={2} d={`M6 18L18 6M6 6l12 12`} /></svg>
-                </button>
-                
-                <div className={`relative z-10`}>
-                  <motion.span 
-                    initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.25 }} 
-                    className={`text-[#772424] font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-4 block`}
-                  >
-                    {selectedDoctor.title}
-                  </motion.span>
-                  
-                  <motion.h3 
-                    initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.35 }} 
-                    className={`text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 tracking-tight leading-none`}
-                  >
-                    {selectedDoctor.name}
-                  </motion.h3>
-                  
-                  <motion.div 
-                    initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 0.45 }} 
-                    className={`w-16 h-1.5 bg-[#C5A059] mb-8 origin-left`} 
-                  />
-                  
-                  <motion.p 
-                    initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.55 }} 
-                    className={`text-gray-600 text-base md:text-lg leading-relaxed mb-10`}
-                  >
-                    {selectedDoctor.bio}
-                  </motion.p>
-                  
-                  <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.65 }}>
-                    <Link 
-                      href={`/doctors-category/${selectedDoctor.name.toLowerCase().replace(/[^a-z0-9]+/g, `-`)}`} 
-                      className={`group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white bg-[#772424] rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_30px_rgba(119,36,36,0.3)]`}
-                    >
-                      <span className={`absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black`}></span>
-                      <span className={`relative flex items-center gap-3 text-lg tracking-wide`}>
-                        Read Full Profile
-                        <svg className={`w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`}><path strokeLinecap={`round`} strokeLinejoin={`round`} strokeWidth={2.5} d={`M14 5l7 7m0 0l-7 7m7-7H3`} /></svg>
-                      </span>
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
-
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+    </div>
   );
 }
 
@@ -290,7 +124,6 @@ function BeforeAfterStage() {
     { image: `/home/before-after/3.webp`, grafts: `4500` },
     { image: `/home/before-after/4.webp`, grafts: `2800` },
     { image: `/home/before-after/6.webp`, grafts: `4800` },
-    
   ];
 
   useEffect(() => {
@@ -333,14 +166,14 @@ function BeforeAfterStage() {
                   onClick={() => setSelectedCaseIndex(idx)}
                   className={`snap-center shrink-0 w-full md:w-[calc(50%-1rem)] bg-[#772424] rounded-3xl overflow-hidden flex flex-col border border-gray-100/10 shadow-lg cursor-pointer group transition-transform duration-300 hover:-translate-y-2`}
                 >
-                  <div className={`w-full aspect-square md:aspect-[4/3] bg-white relative overflow-hidden flex items-center justify-center`}>
+                  <div className={`w-full aspect-square md:aspect-[4/3] bg-white relative overflow-hidden flex items-center justify-center p-2`}>
                     <img 
                       src={c.image} 
                       alt={`${c.grafts} Grafts Transformation`} 
-                      className={`w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105`} 
+                      className={`w-full h-full object-contain bg-white transition-transform duration-500 md:group-hover:scale-105`} 
                     />
-                    <div className={`absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center`}>
-                      <div className={`w-16 h-16 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-xl`}>
+                    <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none`}>
+                      <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 md:scale-75 md:group-hover:scale-100 shadow-xl`}>
                         <svg className={`w-6 h-6 text-[#772424]`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`}><path strokeLinecap={`round`} strokeLinejoin={`round`} strokeWidth={2} d={`M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7`} /></svg>
                       </div>
                     </div>
@@ -438,11 +271,11 @@ function BeforeAfterStage() {
               transition={{ type: `spring`, damping: 25, stiffness: 300 }}
               className={`relative w-full max-w-4xl bg-[#772424] rounded-2xl md:rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10`}
             >
-              <div className={`w-full bg-white relative flex justify-center items-center`}>
+              <div className={`w-full bg-white relative flex justify-center items-center p-2 md:p-4`}>
                 <img 
                   src={cases[selectedCaseIndex].image} 
                   alt={`${cases[selectedCaseIndex].grafts} Grafts Transformation`} 
-                  className={`w-full h-auto max-h-[60vh] object-contain`} 
+                  className={`w-full h-auto max-h-[50vh] md:max-h-[60vh] object-contain`} 
                 />
               </div>
               
@@ -648,114 +481,6 @@ function WhyChooseStage() {
   );
 }
 
-function HighlightsStage() {
-  const [activeVideo, setActiveVideo] = useState<{title: string, videoUrl: string, coverUrl: string} | null>(null);
-
-  const videos = [
-    {
-      title: `Case Studies Compilation`,
-      coverUrl: `/videos/case-study-cover.jpg`,
-      videoUrl: `/videos/case-study.mp4`
-    },
-    {
-      title: `Hair Transplant FAQs`,
-      coverUrl: `/videos/faqs-cover.jpg`,
-      videoUrl: `/videos/faqs.mp4`
-    }
-  ];
-
-  return (
-    <>
-      <div className={`w-full bg-white py-24 relative z-20`}>
-        <div className={`max-w-[1400px] mx-auto px-6 sm:px-8 relative`}>
-          
-          <div className={`flex items-center justify-center gap-6 mb-16`}>
-            <div className={`h-[2px] bg-[#1a202c] w-full max-w-[250px]`} />
-            <h2 className={`text-4xl md:text-5xl font-black text-[#1a202c] tracking-tight`}>
-              Highlights
-            </h2>
-            <div className={`h-[2px] bg-[#1a202c] w-full max-w-[250px]`} />
-          </div>
-
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-8`}>
-            {videos.map((vid, idx) => (
-              <div 
-                key={idx}
-                onClick={() => setActiveVideo(vid)}
-                className={`relative rounded-3xl overflow-hidden cursor-pointer group shadow-xl bg-gray-100 aspect-video`}
-              >
-                <img 
-                  src={vid.coverUrl} 
-                  alt={vid.title} 
-                  className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`}
-                />
-                <div className={`absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center`}>
-                  <div className={`w-16 h-12 md:w-20 md:h-14 bg-[#772424] rounded-xl flex items-center justify-center shadow-[0_10px_20px_rgba(119,36,36,0.3)] transition-transform duration-300 group-hover:scale-110`}>
-                    <svg className={`w-6 h-6 md:w-8 md:h-8 text-white ml-1`} fill={`currentColor`} viewBox={`0 0 24 24`}>
-                      <path d={`M8 5v14l11-7z`}/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </div>
-
-      <AnimatePresence>
-        {activeVideo && (
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
-            exit={{ opacity: 0 }} 
-            className={`fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12`}
-          >
-            <div 
-              className={`absolute inset-0 bg-[#0a0a0a]/95 backdrop-blur-sm`} 
-              onClick={() => setActiveVideo(null)} 
-            />
-            
-            <div className={`absolute top-0 left-0 w-full p-4 md:p-8 flex justify-between items-start z-30 pointer-events-none`}>
-              <div className={`flex flex-col gap-2`}>
-                 <span className={`text-white font-bold text-lg md:text-2xl drop-shadow-md`}>{activeVideo.title}</span>
-                 <span className={`text-gray-300 text-sm`}>Hair Skill Clinic</span>
-              </div>
-              <button 
-                onClick={() => setActiveVideo(null)} 
-                className={`text-white hover:text-[#772424] transition-colors pointer-events-auto w-12 h-12 flex items-center justify-center`}
-              >
-                <svg className={`w-8 h-8`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`}><path strokeLinecap={`round`} strokeLinejoin={`round`} strokeWidth={2} d={`M6 18L18 6M6 6l12 12`} /></svg>
-              </button>
-            </div>
-
-            <motion.div 
-              initial={{ scale: 0.95, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.95, opacity: 0, y: -20 }}
-              transition={{ type: `spring`, damping: 25, stiffness: 300 }}
-              className={`relative w-full max-w-6xl rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-20 bg-black`}
-            >
-              <video 
-                src={activeVideo.videoUrl} 
-                poster={activeVideo.coverUrl} 
-                controls 
-                autoPlay 
-                preload={`auto`} 
-                className={`w-full h-auto max-h-[85vh] object-contain`}
-              >
-                <source src={activeVideo.videoUrl} type={`video/mp4`} />
-                Your browser does not support the video tag.
-              </video>
-            </motion.div>
-
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
-}
-
 function TreatmentsStage() {
   const treatments = [
     {
@@ -893,11 +618,11 @@ function GalleryStage() {
   const [selectedGalleryIndex, setSelectedGalleryIndex] = useState<number | null>(null);
 
   const galleryImages = [
-    `/clinic/1.jpg`,
-    `/clinic/2.jpg`,
-    `/clinic/3.jpg`,
-    `/clinic/4.jpg`,
-    `/clinic/5.jpg`
+    `/home/clinic/1.webp`,
+    `/home/clinic/2.webp`,
+    `/home/clinic/3.webp`,
+    `/home/clinic/5.webp`,
+    `/home/clinic/6.webp`
   ];
 
   return (
@@ -930,9 +655,9 @@ function GalleryStage() {
               <img 
                 src={galleryImages[0]} 
                 alt={`Clinic View 1`} 
-                className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`} 
+                className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105`} 
               />
-              <div className={`absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300`} />
+              <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300`} />
             </div>
 
             {/* Right Grid of 4 Small Images */}
@@ -946,9 +671,9 @@ function GalleryStage() {
                   <img 
                     src={img} 
                     alt={`Clinic View ${idx + 2}`} 
-                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`} 
+                    className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105`} 
                   />
-                  <div className={`absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300`} />
+                  <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300`} />
                 </div>
               ))}
             </div>
@@ -1088,7 +813,7 @@ function PatientGuideStage() {
                 >
                   {/* Top Content (Step 2) */}
                   {step.position === `top` && (
-                    <div className={`absolute bottom-[100%] mb-8 flex flex-col items-center w-[250px] transition-transform duration-300 group-hover:-translate-y-2`}>
+                    <div className={`absolute bottom-[100%] mb-8 flex flex-col items-center w-[250px] transition-transform duration-300 md:group-hover:-translate-y-2`}>
                       <img src={step.icon} alt={step.title} className={`h-16 lg:h-20 object-contain mb-4`} />
                       <span className={`text-[#772424] font-extrabold text-lg lg:text-xl text-center`}>{step.title}</span>
                     </div>
@@ -1097,14 +822,14 @@ function PatientGuideStage() {
                   {/* Main Circle & Active Ring */}
                   <div className={`relative flex items-center justify-center w-[80px] h-[80px] lg:w-[100px] lg:h-[100px]`}>
                     <div className={`absolute inset-[-8px] rounded-full transition-all duration-300 ${isActive ? `border-[3px] ${step.ringColor} scale-100` : `border-0 opacity-0 scale-90`}`} />
-                    <div className={`absolute inset-0 rounded-full flex items-center justify-center text-white text-4xl lg:text-5xl font-black ${step.circleColor} transition-transform duration-300 ${isActive ? `scale-100` : `scale-95 group-hover:scale-90`} z-10`}>
+                    <div className={`absolute inset-0 rounded-full flex items-center justify-center text-white text-4xl lg:text-5xl font-black ${step.circleColor} transition-transform duration-300 ${isActive ? `scale-100` : `scale-95 md:group-hover:scale-90`} z-10`}>
                       {step.id}
                     </div>
                   </div>
 
                   {/* Bottom Content (Step 1, Step 3) */}
                   {step.position === `bottom` && (
-                    <div className={`absolute top-[100%] mt-8 flex flex-col items-center w-[250px] transition-transform duration-300 group-hover:translate-y-2`}>
+                    <div className={`absolute top-[100%] mt-8 flex flex-col items-center w-[250px] transition-transform duration-300 md:group-hover:translate-y-2`}>
                       <img src={step.icon} alt={step.title} className={`h-16 lg:h-20 object-contain mb-4`} />
                       <span className={`text-[#772424] font-extrabold text-lg lg:text-xl text-center`}>{step.title}</span>
                     </div>
@@ -1216,8 +941,8 @@ function TechniquesStage() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
               <Link href={tech.link} className={`group block relative aspect-[4/5] overflow-hidden ${tech.radius} shadow-lg cursor-pointer`}>
-                <img src={tech.image} alt={tech.title.replace(`\n`, ` `)} className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110`} />
-                <div className={`absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300`} />
+                <img src={tech.image} alt={tech.title.replace(`\n`, ` `)} className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110`} />
+                <div className={`absolute inset-0 bg-black/40 md:group-hover:bg-black/50 transition-colors duration-300`} />
                 <div className={`absolute inset-0 p-4 flex items-center justify-center text-center`}>
                   <h3 className={`text-white font-bold text-lg md:text-xl drop-shadow-md whitespace-pre-line leading-tight`}>
                     {tech.title}
@@ -1337,7 +1062,7 @@ function FAQStage() {
       <div className={`max-w-[1200px] mx-auto px-6 sm:px-8 relative`}>
         <div className={`text-center mb-16`}>
           <span className={`text-[#772424] font-bold text-sm md:text-base tracking-wide block mb-3 uppercase`}>
-            Hair Transplant Pakistan
+            Hair Skill Clinic
           </span>
           <h2 className={`text-4xl md:text-5xl font-black text-black tracking-tight`}>
             Frequently Asked Questions
@@ -1422,17 +1147,18 @@ export default function Home() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
-            className={`relative w-full flex flex-col justify-end items-center lg:items-start`}
+            className={`relative w-full flex flex-row justify-center lg:justify-start items-end gap-3 sm:gap-6 px-2 sm:px-0`}
           >
             <img 
-              src={`/doctors-hero.png`} 
+              src={`/home/doctor.webp`} 
               alt={`Dr. Mehmet Erdogan and Dr. Gokay Bilgin`} 
-              className={`w-full max-w-xl object-contain drop-shadow-2xl`}
+              className={`w-1/2 sm:w-full max-w-[180px] sm:max-w-[280px] object-contain drop-shadow-2xl`}
             />
-            <div className={`absolute bottom-4 left-0 w-full flex justify-around px-8 opacity-90`}>
-               <img src={`/signature-mehmet.png`} alt={`Dr. Mehmet Erdogan Signature`} className={`h-12 object-contain`} />
-               <img src={`/signature-gokay.png`} alt={`Dr. Gokay Bilgin Signature`} className={`h-12 object-contain`} />
-            </div>
+            <img 
+              src={`/doctors/dr-mansoor.webp`} 
+              alt={`Dr. Mansoor Ahmad`} 
+              className={`w-1/2 sm:w-full max-w-[180px] sm:max-w-[280px] object-contain drop-shadow-2xl`}
+            />
           </motion.div>
 
           <motion.div 
@@ -1448,14 +1174,14 @@ export default function Home() {
               
               <form className={`flex flex-col gap-6`} onSubmit={handleSubmit}>
                 <div className={`relative flex items-center border-b border-gray-300 pb-2 transition-colors focus-within:border-[#772424]`}>
-                  <svg className={`w-5 h-5 text-gray-400 mr-3`} fill={`currentColor`} viewBox={`0 0 20 20`}>
+                  <svg className={`w-5 h-5 text-gray-400 mr-3 shrink-0`} fill={`currentColor`} viewBox={`0 0 20 20`}>
                     <path fillRule={`evenodd`} d={`M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z`} clipRule={`evenodd`} />
                   </svg>
                   <input type={`text`} placeholder={`Full Name`} value={fullName} onChange={(e) => setFullName(e.target.value)} required className={`w-full text-sm outline-none bg-transparent text-gray-800 placeholder-gray-500 font-medium autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)]`} />
                 </div>
 
                 <div className={`relative flex items-center border-b border-gray-300 pb-2 transition-colors focus-within:border-[#772424]`}>
-                  <svg className={`w-5 h-5 text-gray-400 mr-3`} fill={`currentColor`} viewBox={`0 0 20 20`}>
+                  <svg className={`w-5 h-5 text-gray-400 mr-3 shrink-0`} fill={`currentColor`} viewBox={`0 0 20 20`}>
                     <path d={`M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z`} />
                     <path d={`M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z`} />
                   </svg>
@@ -1488,8 +1214,8 @@ export default function Home() {
                 </div>
 
                 <div className={`flex items-center gap-2 mt-2`}>
-                  <input type={`checkbox`} id={`privacy`} className={`w-4 h-4 accent-[#772424] rounded cursor-pointer`} required defaultChecked />
-                  <label htmlFor={`privacy`} className={`text-[13px] text-gray-600 cursor-pointer`}>
+                  <input type={`checkbox`} id={`privacy`} className={`w-4 h-4 accent-[#772424] rounded cursor-pointer shrink-0`} required defaultChecked />
+                  <label htmlFor={`privacy`} className={`text-[13px] text-gray-600 cursor-pointer leading-tight`}>
                     I have read and accept the <Link href={`/privacy-policy`} className={`text-[#772424] font-bold hover:underline`}>Privacy Policy.</Link>
                   </label>
                 </div>
@@ -1552,7 +1278,7 @@ export default function Home() {
               variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: `easeOut` } } }}
               className={`flex flex-col items-center justify-center py-8 relative group`}
             >
-              <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#C5A059]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
+              <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#C5A059]/10 rounded-full blur-3xl opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
               
               <h3 className={`text-6xl lg:text-[80px] font-black text-[#1a202c] tracking-tighter mb-2 relative z-10 flex items-center`}>
                 <AnimatedCounter to={20} duration={2} />
@@ -1574,7 +1300,7 @@ export default function Home() {
               variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2, ease: `easeOut` } } }}
               className={`flex flex-col items-center justify-center py-8 relative group`}
             >
-              <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#C5A059]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
+              <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#C5A059]/10 rounded-full blur-3xl opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
               <h3 className={`text-6xl lg:text-[80px] font-black text-[#1a202c] tracking-tighter mb-2 relative z-10 flex items-center`}>
                 <AnimatedCounter to={5} duration={1.5} />
                 <span className={`text-[#772424]`}>+</span>
@@ -1595,7 +1321,7 @@ export default function Home() {
               variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.4, ease: `easeOut` } } }}
               className={`flex flex-col items-center justify-center py-8 relative group`}
             >
-              <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#C5A059]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
+              <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#C5A059]/10 rounded-full blur-3xl opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
               <h3 className={`text-6xl lg:text-[80px] font-black text-[#1a202c] tracking-tighter mb-2 relative z-10 flex items-center`}>
                 <AnimatedCounter to={20000} duration={3} />
                 <span className={`text-[#772424]`}>+</span>
@@ -1610,11 +1336,10 @@ export default function Home() {
         </div>
       </div>
 
-      <InteractiveDoctorsStage />
+      <SingleDoctorStage />
       <BeforeAfterStage />
       <PhilosophyStage />
       <WhyChooseStage />
-      <HighlightsStage />
       <TreatmentsStage />
       <GalleryStage />
       <PatientGuideStage />

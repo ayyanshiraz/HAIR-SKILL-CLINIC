@@ -92,23 +92,23 @@ export default function TechniquesClient() {
   );
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- BREADCRUMBS & HERO HEADLINE --- */}
       <motion.section 
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-6"
+        className="pt-28 lg:pt-36 pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <span className="text-[#772424]">Techniques</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight text-center mt-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 tracking-tight text-center mt-4">
             Advanced Hair Restoration Techniques
           </h1>
           <p className="text-black text-center max-w-2xl mx-auto mt-4 text-base md:text-lg font-medium leading-relaxed">
@@ -118,7 +118,7 @@ export default function TechniquesClient() {
       </motion.section>
 
       {/* --- LIVE INTERACTIVE FILTER HUB --- */}
-      <section className="py-6 px-6 bg-white">
+      <section className="py-6 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           
           <div className="mb-12 max-w-md mx-auto">
@@ -131,7 +131,7 @@ export default function TechniquesClient() {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 w-full">
             {filteredTechniques.map((tech, idx) => (
               <motion.div
                 key={tech.title}
@@ -139,10 +139,10 @@ export default function TechniquesClient() {
                 initial="hidden"
                 animate="visible"
                 variants={cardVariants}
-                className="border border-gray-100 rounded-3xl p-8 bg-gray-50/60 hover:bg-white hover:border-[#772424]/30 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between group border-[#772424]/5"
+                className="border border-gray-100 rounded-3xl p-6 sm:p-8 bg-gray-50/60 lg:hover:bg-white lg:hover:border-[#772424]/30 lg:hover:shadow-2xl transition-all duration-500 flex flex-col justify-between group border-[#772424]/5 w-full"
               >
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight group-hover:text-[#772424] transition-colors">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight lg:group-hover:text-[#772424] transition-colors">
                     {tech.title}
                   </h2>
                   <p className="text-black text-sm md:text-base leading-relaxed font-medium mb-6">
@@ -159,7 +159,7 @@ export default function TechniquesClient() {
                   </div>
                 </div>
 
-                <div className="border-t border-gray-200/60 pt-6 mt-2 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div className="border-t border-gray-200/60 pt-6 mt-2 flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4">
                   <div className="w-full sm:w-auto text-left">
                     <p className="text-gray-400 font-bold uppercase tracking-wider text-[10px]">Est Clinical Duration</p>
                     <p className="text-black font-extrabold text-sm mt-0.5">{tech.duration}</p>
@@ -167,7 +167,7 @@ export default function TechniquesClient() {
 
                   <Link 
                     href={`/${tech.categoryFolder}/${tech.slug}`}
-                    className="w-full sm:w-auto px-8 py-3.5 bg-white border border-gray-200 text-black hover:border-[#772424] hover:bg-[#772424] hover:text-white font-extrabold text-xs md:text-sm rounded-xl transition-all text-center tracking-wider uppercase shadow-xs group-hover:scale-[1.02]"
+                    className="w-full sm:w-auto px-6 sm:px-8 py-3.5 bg-white border border-gray-200 text-black active:bg-[#772424] active:text-white lg:hover:border-[#772424] lg:hover:bg-[#772424] lg:hover:text-white font-extrabold text-xs md:text-sm rounded-xl transition-all text-center tracking-wider uppercase shadow-xs lg:group-hover:scale-[1.02] block"
                   >
                     Explore Details <span>›</span>
                   </Link>
@@ -177,7 +177,7 @@ export default function TechniquesClient() {
           </div>
 
           {filteredTechniques.length === 0 && (
-            <div className="text-center py-16 bg-gray-50 rounded-3xl border border-dashed border-gray-200 mt-6">
+            <div className="text-center py-16 bg-gray-50 rounded-3xl border border-dashed border-gray-200 mt-6 px-4">
               <p className="text-black font-extrabold text-lg">No clinical techniques match your current search parameter.</p>
               <button onClick={() => setSearchQuery("")} className="mt-3 text-xs font-bold text-[#772424] uppercase tracking-wider hover:underline">Reset Search</button>
             </div>

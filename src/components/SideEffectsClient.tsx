@@ -49,18 +49,18 @@ export default function SideEffectsClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-6"
+        className="pt-28 lg:pt-36 pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
@@ -69,16 +69,16 @@ export default function SideEffectsClient() {
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Side Effects After Hair Transplant
           </h1>
         </div>
       </motion.section>
 
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
-      <section className="py-12 px-6 bg-white">
+      <section className="py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE */}
             <div className="w-full lg:w-2/3 flex flex-col">
@@ -91,7 +91,7 @@ export default function SideEffectsClient() {
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
+                <div className="absolute bottom-4 left-4 sm:left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-3 sm:px-4 py-1.5 rounded-md backdrop-blur-xs">
                   Post Operative Healing, © Hair Skill Clinic
                 </div>
               </motion.div>
@@ -105,13 +105,13 @@ export default function SideEffectsClient() {
 
               {/* Section: Most Seen Side Effects */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Most Seen Hair Transplant Side Effects
                 </h2>
 
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Swelling</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Swelling</h3>
                     <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-3">
                       Swelling is a common side effect after hair transplantation especially around the eyes and forehead. Additionally people may get bruises around their eyes. Closely adhering to post-operative care instructions can considerably decrease swelling and typically vanishes in a few days.
                     </p>
@@ -121,14 +121,14 @@ export default function SideEffectsClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Itching</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Itching</h3>
                     <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                       Itching is a common reaction during the healing process. It may be uncomfortable but it usually goes away in a week. Relief is frequently achieved with gentle washing and prescribed drugs.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Pain and Unease</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Pain and Unease</h3>
                     <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-3">
                       Its common to experience some minor pain or discomfort following the procedure. Painkillers prescribed by the doctor can easily stop the pain.
                     </p>
@@ -138,21 +138,21 @@ export default function SideEffectsClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Contamination</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Contamination</h3>
                     <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                       Although infections are uncommon they can happen if proper hygiene practices are not followed. Choosing a trustworthy clinic lowers this risk considerably.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Hemorrhage</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Hemorrhage</h3>
                     <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                       Following surgery there may be some minor bleeding or spotting right away. Gently pressing on the problem usually fixes it quickly.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Short-Term Hair Loss</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Short-Term Hair Loss</h3>
                     <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                       Following hair transplantation temporary thinning also referred to as shock loss is typical. As new hair growth starts it usually goes away in a few months.
                     </p>
@@ -162,7 +162,7 @@ export default function SideEffectsClient() {
 
               {/* Section: Uncommon Side Effects */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Uncommon Side Effects
                 </h2>
 
@@ -185,7 +185,7 @@ export default function SideEffectsClient() {
 
               {/* Section: Why Pick Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-6 border-t border-gray-100">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight">
                   Why Pick Hair Skill Clinic to Reduce Hazards?
                 </h2>
                 
@@ -207,9 +207,9 @@ export default function SideEffectsClient() {
               initial="hidden"
               animate="visible"
               variants={slideInRight}
-              className="w-full lg:w-1/3 lg:sticky lg:top-32"
+              className="w-full lg:w-1/3 lg:sticky lg:top-32 mt-4 lg:mt-0"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -272,9 +272,9 @@ export default function SideEffectsClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="sePrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="sePrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="sePrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer mt-0.5 sm:mt-0 shrink-0" />
+                    <label htmlFor="sePrivacy" className="text-xs text-white/80 cursor-pointer leading-tight">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>

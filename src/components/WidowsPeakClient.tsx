@@ -96,7 +96,7 @@ export default function WidowsPeakClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
@@ -107,16 +107,16 @@ export default function WidowsPeakClient() {
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
-            <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start flex-wrap">
+            <Link href="/" className="md:hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
+            <Link href="/hair-transplant" className="md:hover:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
             <span className="text-[#772424]">Widows Peak Hair Transplant</span>
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center break-words">
             Widows Peak Hair Transplant Create or Remove a V-Shaped Hairline
           </h1>
         </div>
@@ -132,7 +132,7 @@ export default function WidowsPeakClient() {
               
               {/* IMAGE 1: Flagship Hero V-Shape Comparison */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
-                <img src="/hair-transplant/2.webp" alt="Patient before and after Widows Peak Hair Transplant creation and frontal band redesign" className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" />
+                <img src="/hair-transplant/2.webp" alt="Patient before and after Widows Peak Hair Transplant creation and frontal band redesign" className="w-full h-full object-cover md:group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
                   Widows Peak Redesign, © Hair Skill Clinic
@@ -598,8 +598,6 @@ export default function WidowsPeakClient() {
                   How to get a natural widows peak hairline
                 </h2>
 
-                
-
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   A widows peak hair transplant looks natural when the design follows how hair actually grows. The shape is important. The small details matter even more.
                 </p>
@@ -728,7 +726,7 @@ export default function WidowsPeakClient() {
                     {isDropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
                         {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
+                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 md:hover:bg-gray-100 active:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
                               <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
@@ -754,11 +752,11 @@ export default function WidowsPeakClient() {
                   <div className="flex items-center gap-2 mt-2">
                     <input type="checkbox" id="wpPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
                     <label htmlFor="wpPrivacy" className="text-xs text-white/80 cursor-pointer">
-                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
+                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black md:hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>
 
-                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02]">
+                  <button type="submit" className="w-full py-4 bg-white md:hover:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg md:hover:scale-[1.02] active:scale-95">
                     Submit <span>›</span>
                   </button>
                 </form>

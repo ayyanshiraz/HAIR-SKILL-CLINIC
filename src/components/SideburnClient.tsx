@@ -96,18 +96,18 @@ export default function SideburnClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-6"
+        className="pt-28 lg:pt-36 pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
@@ -116,16 +116,16 @@ export default function SideburnClient() {
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Sideburn Transplantation
           </h1>
         </div>
       </motion.section>
 
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
-      <section className="py-12 px-6 bg-white">
+      <section className="py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
@@ -138,7 +138,7 @@ export default function SideburnClient() {
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
+                <div className="absolute bottom-4 left-4 sm:left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-3 sm:px-4 py-1.5 rounded-md backdrop-blur-xs">
                   Facelining Analysis, © Hair Skill Clinic
                 </div>
               </motion.div>
@@ -164,7 +164,7 @@ export default function SideburnClient() {
 
               {/* Section: What Is a Sideburn Hair Transplant */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
                   What Is a Sideburn Hair Transplant
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
@@ -180,7 +180,7 @@ export default function SideburnClient() {
 
               {/* Section: How the Procedure Works */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   How the Procedure Works
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
@@ -208,7 +208,7 @@ export default function SideburnClient() {
 
               {/* Section: Why Sideburns Require Specialist Technique */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
                   Why Sideburns Require Specialist Technique
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
@@ -221,11 +221,9 @@ export default function SideburnClient() {
 
               {/* Section: Why Choose Hair Skill Clinic in Lahore */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Choose Hair Skill Clinic for Sideburn Transplantation in Lahore
                 </h2>
-
-                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Guests searching for a sideburn transplant in Lahore often compare dozens of clinics before making a decision. What sets Hair Skill Clinic apart is not only the doctor led approach but the philosophy behind every step. Sideburns demand nuance. They influence facial proportion beard flow and the overall expression. When handled with care the change feels subtle yet meaningful.
@@ -233,17 +231,17 @@ export default function SideburnClient() {
 
                 <div className="space-y-6 mb-8">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Started by Doctors Performed by Doctors</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Started by Doctors Performed by Doctors</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Hair Skill was founded by surgeons who dedicated years to refining hair restoration techniques. Today every sideburn restoration is shaped through that same expertise. The doctors guide the design supervise graft handling and monitor placement. This is essential for sideburns where natural growth direction and micro changes in angle determine whether results look real or forced.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Institutional Philosophy The Core of Hair Skills Method</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Institutional Philosophy The Core of Hair Skills Method</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Our institutional philosophy focuses on aesthetics comfort and long term transformation. For a small area like the sideburn this means creating a look that feels balanced from the front profile and three quarter view. Guests appreciate the calm workflow the consistency of the team and the clear explanations during each step. It is more than a medical procedure. It is a curated experience for men and women who want precision without unnecessary stress.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Tailored Experience for International Patients</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Tailored Experience for International Patients</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Many visitors choose Pakistan because of high quality and favorable pricing but they choose Hair Skill because everything feels organised. Translation support transfers accommodation and follow up are part of the hair transplant travel package Pakistan options. This structure makes the journey easy even for first time travelers.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our supervising doctors often note that the sideburn is a signature feature. When rebuilt correctly it gives the face a grounded confident look. That is why every design even the smallest curve receives careful attention.
@@ -254,7 +252,7 @@ export default function SideburnClient() {
 
               {/* Section: Sideburn Transplantation Candidates in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sideburn Transplantation Candidates in Pakistan
                 </h2>
 
@@ -278,7 +276,7 @@ export default function SideburnClient() {
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-3">Who benefits most</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Who benefits most</h3>
                     <p className="text-black text-base md:text-lg font-medium mb-3">People who gain the strongest results usually fit one of these:</p>
                     <div className="space-y-2 ml-2">
                       {[
@@ -294,7 +292,7 @@ export default function SideburnClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">When a transplant may not be advised</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">When a transplant may not be advised</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Some guests learn that timing matters. Active autoimmune scalp conditions unstable hair loss or limited donor supply can affect suitability. In these cases Hair Skill focuses on medical evaluation before any next step.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our medical leadership explains that sideburn evaluation is more than counting grafts. It is about matching the patients personality beard flow and long term goals. They often say a well designed sideburn can change the mood of the face without changing anything else.
@@ -305,7 +303,7 @@ export default function SideburnClient() {
 
               {/* Section: How Sideburn Transplantation Is Done at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   How Sideburn Transplantation Is Done at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -330,7 +328,7 @@ export default function SideburnClient() {
 
               {/* Section: How Many Grafts Do You Need */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   How Many Grafts Do You Need for a Sideburn Transplant
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -343,7 +341,7 @@ export default function SideburnClient() {
                   Patients dealing with post-facelift sideburn loss or distortion often need more careful distribution to rebuild the original contour. Individuals with no sideburns may require a broader plan covering both length and width. Every number is an estimate until the doctor examines the donor region and the natural beard pattern.
                 </p>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-3">Factors that influence graft count</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Factors that influence graft count</h3>
                 <div className="space-y-2 mb-6 ml-2">
                   {[
                     "Desired sideburn length and style",
@@ -365,11 +363,9 @@ export default function SideburnClient() {
 
               {/* Section: Before and After Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sideburn Transplant Before and After: What Results Can You Expect
                 </h2>
-
-                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   A well designed sideburn transplant creates a subtle but powerful shift in facial balance. Most guests describe the final look as something that feels naturally theirs rather than surgically added. This is the result of precise angle control careful graft distribution and a design approach that respects facial symmetry. When executed correctly sideburns begin to frame the face sharpen the jawline and connect smoothly with beard or temple hair.
@@ -393,7 +389,7 @@ export default function SideburnClient() {
 
               {/* Section: Recovery Timeline */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Recovery After Sideburn Transplant at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
@@ -433,7 +429,7 @@ export default function SideburnClient() {
 
               {/* Section: Risks Side Effects and Safety */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Risks, Side Effects, and How Hair Skill Keeps You Safe
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -442,12 +438,12 @@ export default function SideburnClient() {
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Common and Temporary Side Effects</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Common and Temporary Side Effects</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Most side effects are mild and short lived. Swelling around the cheek or temple area is normal during the first days. Tiny crusts form around each graft and naturally fall within 10 to 15 days which aligns with the typical short recovery minimal discomfort experience patients report. Some redness may stay a little longer especially if the skin is naturally sensitive. Guests with scars burns trauma in sideburn area may notice slower blending as the skin remodels.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Less Common Risks & Technical Safety</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Less Common Risks & Technical Safety</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Occasionally patients worry about infection poor graft growth or unnatural direction. These risks usually appear when grafts are handled roughly or placed without respecting natural growth direction facial flow or hairline design. Hair Skills internal training and core philosophy help prevent this. Every team member follows doctor-led planning to protect grafts and preserve facial symmetry.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">When guests arrive with post-facelift sideburn loss or distortion the doctors assess incision lines and skin tension to avoid overpacking grafts into compromised areas. If frontal fibrosing alopecia affecting sideburns is suspected evaluation comes first so grafts are not placed into active inflammation. Modern methods like FUE sideburn hair transplant and DHI direct hair implantation reduce scarring and allow precise control across tight curves.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
@@ -459,7 +455,7 @@ export default function SideburnClient() {
 
               {/* Section: Sideburn Transplant Cost Ranges in Pakistan (PURE PKR TIERS / NO NUMERIC PRICES) */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sideburn Transplant Cost Ranges in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -471,14 +467,14 @@ export default function SideburnClient() {
 
                 <div className="space-y-6 mb-6">
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">Typical Package Tiers in PKR at Hair Skill Clinic</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">Typical Package Tiers in PKR at Hair Skill Clinic</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
                       At Hair Skill investment tiers in PKR comfortably cover a wide variety of cases from minor density work to complete facial reconstruction. Smaller touch ups for thinning sideburns tend to sit inside accessible introductory brackets while rebuilding asymmetrical or patchy sideburns congenital absent sideburns or areas affected by scars burns trauma in sideburn area shifts toward comprehensive upper tier package ranges. Guests with post-facelift sideburn loss or distortion often need detailed micro angle adjustments which also influence final tier planning. Procedures performed with FUE or DHI deliver high precision; FUT is avoided.
                     </p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">What Hair Skills Packages Commonly Include</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">What Hair Skills Packages Commonly Include</h3>
                     <p className="text-black font-medium text-base leading-relaxed mb-3">Most sideburn transplant packages in PKR at Hair Skill cover consultation doctor led planning extraction implantation medications and follow up care. </p>
                     <p className="text-black font-bold text-base leading-relaxed border-t border-gray-200/80 pt-3">
                       Our financial counselors note cost makes sense only when compared with result quality. A balanced natural sideburn provides lifelong value far beyond initial investment.
@@ -489,7 +485,7 @@ export default function SideburnClient() {
 
               {/* Section: Special Focus Post-Facelift & Scar Restoration */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Special Focus: Post-Facelift and Scar Sideburn Restoration
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -498,12 +494,12 @@ export default function SideburnClient() {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Post-Facelift Sideburn Loss or Distortion</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Post-Facelift Sideburn Loss or Distortion</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">After a facelift the natural sideburn may shift rise or narrow. Some patients lose the sideburn entirely leaving the face looking sharper than intended. A sideburn transplant in Pakistan offers a reliable way to restore the lost contour. The doctors evaluate incision lines skin tension and blood supply before designing the new sideburn. The goal is to recreate a soft natural taper that blends with temple and cheek hair rather than producing a rigid painted look. Women especially appreciate how this restores openness around the eyes.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Scar Burn Reconstruction & Female Framing</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Scar Burn Reconstruction & Female Framing</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Guests with scars burns trauma in sideburn area often assume nothing can be done. In reality facial hair restoration works well when planned carefully. Scar tissue tends to be firmer and less vascular so grafts must be spaced thoughtfully. Women experiencing post-facelift sideburn loss seek a softer framing effect with finer angles and lighter density.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our medical specialists mention these cases require sensitivity as much as technique. For patients who lost sideburns to surgery or trauma the emotional impact is real. Restoring this small area changes how they see themselves again.
@@ -514,7 +510,7 @@ export default function SideburnClient() {
 
               {/* SECTION: FAQS ACCORDION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Sideburn Transplant FAQs
                 </h2>
 
@@ -525,7 +521,7 @@ export default function SideburnClient() {
                       <div key={idx} className={`border border-gray-200 transition-all duration-300 ${isOpen ? "rounded-3xl bg-gray-50 shadow-md" : "rounded-2xl bg-white"}`}>
                         <button 
                           onClick={() => setActiveFaq(isOpen ? null : idx)}
-                          className="w-full text-left p-6 font-black text-[#772424] text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
+                          className="w-full text-left p-4 sm:p-6 font-black text-[#772424] text-base sm:text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
                         >
                           <span>{faq.q}</span>
                           <span className="text-2xl font-light leading-none shrink-0">{isOpen ? "−" : "+"}</span>
@@ -538,7 +534,7 @@ export default function SideburnClient() {
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.3 }}
-                              className="overflow-hidden px-6 pb-6"
+                              className="overflow-hidden px-4 sm:px-6 pb-6"
                             >
                               <p className="text-black text-base md:text-lg font-medium pt-2 border-t border-gray-200/60 leading-relaxed">
                                 {faq.a}
@@ -554,7 +550,7 @@ export default function SideburnClient() {
 
               {/* Section: Start Your Transformation CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Start Your Sideburn Transformation at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -564,7 +560,7 @@ export default function SideburnClient() {
                   Hair Skill Clinic approaches sideburn restoration with precision and empathy. Every design is doctor led. Every graft is placed with intention. Every guest receives clear guidance through recovery and long term care. International patients find the journey smooth thanks to organised travel support and welcoming hospitality. The clinics experience across FUE sideburn hair transplant and DHI direct hair implantation ensures your result blends naturally with beard or temple hair.
                 </p>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-4">Key Benefits</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Key Benefits</h3>
                 <div className="space-y-3 mb-8 ml-2">
                   {[
                     "Full Customisation: Your sideburns are designed to match your beard type hairstyle and facial proportions",
@@ -588,9 +584,9 @@ export default function SideburnClient() {
               initial="hidden"
               animate="visible"
               variants={slideInRight}
-              className="w-full lg:w-1/3 lg:sticky lg:top-32"
+              className="w-full lg:w-1/3 lg:sticky lg:top-32 mt-4 lg:mt-0"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -653,9 +649,9 @@ export default function SideburnClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="sbPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="sbPrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="sbPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer mt-0.5 sm:mt-0 shrink-0" />
+                    <label htmlFor="sbPrivacy" className="text-xs text-white/80 cursor-pointer leading-tight">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>

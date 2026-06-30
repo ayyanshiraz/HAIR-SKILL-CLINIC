@@ -76,17 +76,17 @@ export default function SterilizationClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- PAGE HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-gray-50 border-b border-gray-200 px-6"
+        className="pt-28 lg:pt-36 pb-12 bg-gray-50 border-b border-gray-200 px-4 sm:px-6"
       >
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/patient-guide" className="hover:text-[#772424] transition-colors">Patient Guide</Link>
@@ -94,16 +94,16 @@ export default function SterilizationClient() {
             <span className="text-[#772424]">Sterilization at Hair Skill Clinic</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
             Sterilization and Hygiene Standards at Hair Skill Clinic
           </h1>
         </div>
       </motion.section>
 
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-4 sm:px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
             {/* LEFT SIDE: SCROLL-ANIMATED CONTENT */}
             <div className="w-full lg:w-2/3 flex flex-col">
@@ -159,7 +159,7 @@ export default function SterilizationClient() {
                 </div>
 
                 {/* Sub-Tests Breakdown */}
-                <div className="flex flex-col gap-8 ml-2 border-l-2 border-gray-100 pl-6">
+                <div className="flex flex-col gap-8 ml-2 border-l-2 border-gray-100 pl-4 sm:pl-6">
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Vacuum Leak Test</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
@@ -272,7 +272,7 @@ export default function SterilizationClient() {
                   Cleaned instruments are packaged using sterilization compatible materials, with biological indicators included, preparing them for sterilization.
                 </p>
 
-                <div className="flex flex-col gap-8 ml-2 border-l-2 border-gray-100 pl-6">
+                <div className="flex flex-col gap-8 ml-2 border-l-2 border-gray-100 pl-4 sm:pl-6">
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Sterilization Process</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">
@@ -315,9 +315,9 @@ export default function SterilizationClient() {
               initial="hidden"
               animate="visible"
               variants={slideInRight}
-              className="w-full lg:w-1/3 lg:sticky lg:top-32"
+              className="w-full lg:w-1/3 lg:sticky lg:top-32 mt-4 lg:mt-0"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -380,9 +380,9 @@ export default function SterilizationClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="sterPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="sterPrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="sterPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer mt-0.5 sm:mt-0 shrink-0" />
+                    <label htmlFor="sterPrivacy" className="text-xs text-white/80 cursor-pointer leading-tight">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>

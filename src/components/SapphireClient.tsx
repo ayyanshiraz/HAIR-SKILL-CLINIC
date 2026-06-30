@@ -100,18 +100,18 @@ export default function SapphireClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-6"
+        className="pt-28 lg:pt-36 pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
@@ -120,16 +120,16 @@ export default function SapphireClient() {
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Sapphire Hair Transplant 
           </h1>
         </div>
       </motion.section>
 
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
-      <section className="py-12 px-6 bg-white">
+      <section className="py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
@@ -159,10 +159,10 @@ export default function SapphireClient() {
                   If you want a method that supports high density while keeping tissue handling gentle this guide helps you decide whether Sapphire FUE is the right choice.
                 </p>
 
-                <h2 className="text-3xl font-black text-[#772424] mt-4 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mt-4 tracking-tight">
                   Sapphire FUE Hair Transplant in Pakistan
                 </h2>
-                <h3 className="text-xl font-extrabold text-[#772424]">
+                <h3 className="text-lg sm:text-xl font-extrabold text-[#772424]">
                   Precision, Comfort, and Natural Design At Hair Skill Clinic
                 </h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
@@ -180,7 +180,7 @@ export default function SapphireClient() {
 
               {/* Section: Why Sapphire FUE Became Popular */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Sapphire FUE Became Popular in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -195,12 +195,12 @@ export default function SapphireClient() {
                   <img src="/home/techniques/1.webp" alt="Surgeon hand wearing sterile white glove holding synthetic blue sapphire micro incision instrument" className="w-full h-full object-cover object-center" />
                 </div>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-3">What is Sapphire FUE?</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">What is Sapphire FUE?</h3>
                 <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-6">Sapphire FUE uses blades crafted from sapphire to create V shaped micro channels. These channels allow surgeons to place grafts at natural angles while keeping the surrounding tissue calm. Sapphire blades maintain sharpness longer than steel giving consistent cuts throughout the session.</p>
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Sapphire FUE vs classic FUE</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Sapphire FUE vs classic FUE</h3>
                     <p className="text-black text-base md:text-lg font-medium mb-2">Classic FUE uses steel blades. Sapphire blades create smaller smoother incisions. This helps with:</p>
                     <div className="space-y-1 ml-2 mb-3">
                       {["more precise direction control", "better density planning", "potentially faster surface healing"].map((item, i) => (
@@ -211,7 +211,7 @@ export default function SapphireClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Sapphire FUE vs DHI & Where Sapphire truly excels</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Sapphire FUE vs DHI & Where Sapphire truly excels</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">DHI places grafts directly with implanter pens. Sapphire FUE creates channels first then implants. Sapphire FUE often performs better for large areas needing dense packing while DHI excels in smaller detail zones.</p>
                     <p className="text-black text-base md:text-lg font-bold mb-2">Hair Skill uses Sapphire FUE in cases where design density and natural flow matter most:</p>
                     <div className="space-y-1 ml-2 mb-4">
@@ -228,11 +228,9 @@ export default function SapphireClient() {
 
               {/* Section: Why Choose Sapphire Hair Transplant at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Choose Sapphire Hair Transplant in Pakistan at Hair Skill Clinic
                 </h2>
-
-                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Pakistan became the center of sapphire hair transplant Pakistan for two reasons: High surgeon experience and strong regional healthcare accessibility. Urban hubs like Lahore treat thousands of FUE cases every year which sharpens technique speed and design across clinics.
@@ -243,12 +241,12 @@ export default function SapphireClient() {
 
                 <div className="space-y-6 mb-8">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Why Pakistan leads in Sapphire FUE</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Why Pakistan leads in Sapphire FUE</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Patients travel from the USA UK Europe and the Middle East because they can receive advanced treatments inside accessible package tiers for a fraction of Western tier calculations. Hair restoration in Pakistan sits significantly lower than heavy capital calculations in Western clinics. You receive medical planning cleanroom extraction and cellular aftercare without inflated pricing upfront.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Why Hair Skill stands out & What patients look for</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Why Hair Skill stands out & What patients look for</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Hair Skill is shortlisted as a top sapphire hair transplant clinic in Pakistan because we limit the number of surgeries per day. This gives surgeons time to open every sapphire channel themselves. No rushed cases. No technician driven shortcuts. Patients get a design shaped by real doctors who understand density angles and long term donor health.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Most people come to Hair Skill wanting clarity not flashy promises. They want to know if sapphire blades truly help their case. They want comfort natural flow and predictable density. That is exactly where surgeon led Sapphire FUE becomes valuable.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
@@ -257,7 +255,7 @@ export default function SapphireClient() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-3">Key Benefits of Sapphire FUE</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Key Benefits of Sapphire FUE</h3>
                 <div className="space-y-2 ml-2 mb-4">
                   {[
                     "More precise channel openings for controlled depth and direction",
@@ -276,7 +274,7 @@ export default function SapphireClient() {
 
               {/* Section: Who Is a Good Candidate */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Who Is a Good Candidate for Sapphire FUE at Hair Skill?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -285,7 +283,7 @@ export default function SapphireClient() {
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">When Sapphire FUE fits well</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">When Sapphire FUE fits well</h3>
                     <p className="text-black text-base md:text-lg font-medium mb-2">Sapphire blades help when the plan requires refined density or smooth channel architecture. Patients who benefit most include those with:</p>
                     <div className="space-y-1 ml-2 mb-3">
                       {[
@@ -302,7 +300,7 @@ export default function SapphireClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">When regular FUE or DHI may work just as well & Assessment</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">When regular FUE or DHI may work just as well & Assessment</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">If your thinning is minimal or you only need a small correction classic FUE or DHI may be more suitable. DHI can be ideal for micro refinements in temples. Standard FUE might be enough for patients whose density goals are moderate not high.</p>
                     <p className="text-black text-base md:text-lg font-medium mb-2">Hair Skill evaluates your donor density scalp elasticity hair thickness and long term patterns before choosing the method. The decision is always personal never automatic.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
@@ -314,7 +312,7 @@ export default function SapphireClient() {
 
               {/* Section: Techniques and Tools */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire FUE at Hair Skill: Techniques and Tools
                 </h2>
 
@@ -329,12 +327,12 @@ export default function SapphireClient() {
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">How sapphire blades are used</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">How sapphire blades are used</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Sapphire blades create narrow V shaped channels with smooth edges. Their sharpness stays consistent which helps the surgeon place grafts at predictable angles. This matters when designing a hairline or packing the front zone because the wrong angle can make hair stand too straight or fall unnaturally. Sapphire blades support clean geometry.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Benefits compared to steel blades</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Benefits compared to steel blades</h3>
                     <p className="text-black text-base md:text-lg font-medium mb-2">Steel loses sharpness as the session continues. Sapphire stays stable. This can lead to:</p>
                     <div className="space-y-1 ml-2 mb-3">
                       {["smoother channel walls", "better graft fit", "more controlled spacing", "calmer surface healing"].map((item, i) => (
@@ -345,7 +343,7 @@ export default function SapphireClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Sapphire FUE vs DHI & Honest limits</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Sapphire FUE vs DHI & Honest limits</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">DHI uses implanter pens and suits micro detail. Sapphire FUE suits broad areas that require even structure. Combining both is common for cases involving a full hairline plus temple refinement. Sapphire blades are a tool. They help with precision but they do not replace surgeon judgment or proper graft handling. They are most effective when used in a plan tailored for your hair pattern and your donor capacity.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our medical leadership shares: Sharp blades help. But the real artistry is knowing where to place each channel not how new the tool is.
@@ -356,24 +354,24 @@ export default function SapphireClient() {
 
               {/* Section: Procedure Step by Step */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire FUE Hair Transplant Procedure Step by Step
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   A clear process brings peace of mind. Many patients researching sapphire FUE hair transplant Pakistan want to understand exactly how the day unfolds and what makes Sapphire FUE feel different from their previous expectations. Hair Skill keeps the journey predictable. Every stage is guided by your surgeon and every decision is explained before it happens.
                 </p>
 
-                <div className="space-y-6 border-l-2 border-[#772424]/20 pl-6 ml-2 mb-6">
+                <div className="space-y-6 border-l-2 border-[#772424]/20 pl-4 sm:pl-6 ml-2 mb-6">
                   <div>
-                    <h3 className="text-xl font-black text-[#772424] mb-1">Before your surgery</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">Before your surgery</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your journey begins with an online assessment. You send your photos. A doctor studies your pattern donor strength and long term stability. You learn whether Sapphire FUE DHI or a combined approach fits your goals. You also receive a transparent graft estimate and an outline of your potential density upfront. This step often removes most of the anxiety people feel when searching for sapphire FUE Lahore clinics.</p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-black text-[#772424] mb-1">On the surgery day</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">On the surgery day</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">You meet your surgeon for a design session. Together you review hairline options that match your age face shape and growth direction. After numbing extraction begins. This part uses the same FUE principles focused on gentle graft handling. Once grafts are ready your surgeon opens channels using sapphire blades. These channels guide the final direction distribution and density of your new hair. Sapphire blades allow consistent channel sizes giving grafts a comfortable fit. This is where the method contributes most: Clean structure. Natural flow. Predictable spacing.</p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-black text-[#772424] mb-1">Duration & Staging Allocation</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">Duration & Staging Allocation</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Most sessions last 6 to 8 hours depending on graft count and complexity. You take breaks eat and rest as needed. The pace stays calm. Quality first. Allocate 3 to 4 days in Lahore to complete your personal consultation surgical extractions first clinical wash and aftercare guidance smoothly.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-5 rounded-2xl border-l-4 border-[#772424]">
                       Our attending physicians add: Transplants succeed when the day feels unhurried. Sapphire tools help but the relaxed pace protects the result.
@@ -384,7 +382,7 @@ export default function SapphireClient() {
 
               {/* Section: Cost Ranges in Pakistan (PURE PKR TIERS / ZERO LOGISTICS) */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire Hair Transplant Cost Ranges in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -393,14 +391,14 @@ export default function SapphireClient() {
 
                 <div className="space-y-6 mb-6">
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">Typical sapphire FUE package tiers in PKR</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">Typical sapphire FUE package tiers in PKR</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
                       Most reputable clinics in Lahore operate inside competitive investment brackets in PKR upfront. The final tier planning depends on graft count design complexity and surgeon involvement. Large cases or repair surgeries sit closer to comprehensive upper tier package ranges. Smaller sessions fall inside accessible introductory brackets upfront.
                     </p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">What affects your quote & Global comparisons</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">What affects your quote & Global comparisons</h3>
                     <p className="text-black font-medium text-base leading-relaxed mb-3">Your custom quote depends on realistic factors such as total grafts needed technique choice Sapphire FUE DHI or mixed hairline complexity crown involvement donor density and thickness repair of previous poor work and surgeon time required. Patients searching for how much a sapphire restoration costs in Pakistan should know that honest clinics never promise high density with low graft counts. Density requires time and precise channel work.</p>
                     <p className="text-black font-bold text-base leading-relaxed border-t border-gray-200/80 pt-3">
                       Comparing investment ranges globally demonstrates an immense economic advantage: Rebuilding hair inside accessible local PKR package tiers offers 60 to 70 percent relative savings compared to heavy capital calculations in the USA or UK while supplying elite cleanroom surgical standards.
@@ -408,7 +406,7 @@ export default function SapphireClient() {
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">Comprehensive Clinical Care Packages</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">Comprehensive Clinical Care Packages</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
                       Comprehensive Sapphire FUE care packages at Hair Skill bundle your cleanroom extractions micro channel incisions cellular post op medications first clinical wash and 12 months of scheduled follow up monitoring upfront.
                     </p>
@@ -418,11 +416,9 @@ export default function SapphireClient() {
 
               {/* Section: Recovery Healing and Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Recovery, Healing, and 12 to 18 Month Results With Sapphire FUE
                 </h2>
-
-                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Recovery after a sapphire FUE hair transplant Pakistan is usually calm and predictable. Sapphire blades create cleaner narrower channels which can make surface healing feel smoother compared to classic steel blades. The deeper healing process remains the same. Your grafts need time to settle shed restart their growth cycle and mature into full density upfront.
@@ -430,12 +426,12 @@ export default function SapphireClient() {
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">First week after surgery</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">First week after surgery</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">You may notice redness tightness or mild swelling for a few days. Scabs usually fall between days 7 and 10. Your first wash happens at the clinic where your medical team shows you the exact home routine. Many people return to desk work within a few days which is why searches for sapphire FUE recovery time often report quick comfort.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Shedding Staging & Regrowth Milestones</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Shedding Staging & Regrowth Milestones</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Shedding begins around weeks 2 to 4. This phase can feel unsettling but it is normal. The follicles enter a resting stage before emerging again. Early growth appears between months 3 and 4. You will see thin strands first then stronger fibers. Direction becomes clearer by months 5 to 7 as the new hair adapts to your natural angle.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">When real density appears: Between months 6 and 9 the transformation becomes obvious. By months 12 to 18 most patients see their final fullness. This timing is similar to classic FUE though surface healing with sapphire channels can feel more comfortable. Most people resume gentle activity quickly while exercise requires additional tissue recovery upfront.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
@@ -447,7 +443,7 @@ export default function SapphireClient() {
 
               {/* Section: Risks Safety and Guarantees */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Risks, Safety, and What Sapphire FUE Can and Cannot Guarantee
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -456,12 +452,12 @@ export default function SapphireClient() {
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Normal side effects & Possible complications</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Normal side effects & Possible complications</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">After a sapphire FUE hair transplant Pakistan mild swelling redness tightness and temporary numbness are common. These fade with proper care. Small pimples can appear during early growth as the follicle clears the surface. True complications happen almost exclusively in unaccredited technician facilities including infection poor growth unnatural upright direction overharvested donor zones and patchy density.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Is Sapphire FUE better than classic FUE?</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Is Sapphire FUE better than classic FUE?</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Sometimes. Sapphire blades allow smaller smoother incisions which can help with dense packing and calm healing. But the blade alone cannot guarantee better results. Quality depends entirely on the person opening your channels direction and depth consistency donor management and graft survival. This is why Hair Skill uses sapphire blades selectively rather than automatically.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Does Sapphire FUE guarantee better results? No technique can guarantee an outcome. Sapphire FUE offers advantages when applied correctly but the success of your transplant depends on surgeon involvement donor strength and healing behavior.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
@@ -473,7 +469,7 @@ export default function SapphireClient() {
 
               {/* Section: Aesthetics Density and Natural Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Aesthetics, Density, and Natural Results With Sapphire FUE
                 </h2>
 
@@ -488,12 +484,12 @@ export default function SapphireClient() {
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">What natural results actually mean</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">What natural results actually mean</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Natural does not mean full at any cost. It means correct direction smooth transitions density where the eye expects it balanced temples and a hairline appropriate for your age and features. Sapphire channels help grafts sit at lifelike angles making early growth look promising upfront.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Where Sapphire FUE shines in visual outcomes</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Where Sapphire FUE shines in visual outcomes</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Patients with thicker hair wavy patterns or strong donor areas often see impressive density with Sapphire FUE. The controlled channel spacing supports uniform coverage especially across the front and midscalp. For crown cases the circular growth pattern requires careful mapping. Sapphire micro channels allow surgeons to follow that pattern more naturally creating a swirl that looks authentic.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Before and after expectations & Density goals: Photos help but they never tell the full story. Hair matures over 12 to 18 months and density builds slowly. The final result feels softer fuller and better blended than what many patients expect from classic FUE. Hair Skill avoids overpacking to prevent graft starvation planning consistent coverage that ages gracefully upfront.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
@@ -505,7 +501,7 @@ export default function SapphireClient() {
 
               {/* Section: Scheduling Your Session in Lahore (ZERO LOGISTICS LINES) */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Planning Your Sapphire Restoration Staging in Lahore Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -518,7 +514,7 @@ export default function SapphireClient() {
 
               {/* SECTION: 11 FAQS ACCORDION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire FUE Pakistan FAQs
                 </h2>
 
@@ -529,7 +525,7 @@ export default function SapphireClient() {
                       <div key={idx} className={`border border-gray-200 transition-all duration-300 ${isOpen ? "rounded-3xl bg-gray-50 shadow-md" : "rounded-2xl bg-white"}`}>
                         <button 
                           onClick={() => setActiveFaq(isOpen ? null : idx)}
-                          className="w-full text-left p-6 font-black text-[#772424] text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
+                          className="w-full text-left p-4 sm:p-6 font-black text-[#772424] text-base sm:text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
                         >
                           <span>{faq.q}</span>
                           <span className="text-2xl font-light leading-none shrink-0">{isOpen ? "−" : "+"}</span>
@@ -542,7 +538,7 @@ export default function SapphireClient() {
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.3 }}
-                              className="overflow-hidden px-6 pb-6"
+                              className="overflow-hidden px-4 sm:px-6 pb-6"
                             >
                               <p className="text-black text-base md:text-lg font-medium pt-2 border-t border-gray-200/60 leading-relaxed">
                                 {faq.a}
@@ -558,14 +554,14 @@ export default function SapphireClient() {
 
               {/* Section: Closing CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Start Your Sapphire FUE Journey With Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   If you want a natural result shaped by real surgeons who take time to understand your goals Sapphire FUE at Hair Skill Clinic is a strong fit. Patients often tell us the moment they felt at ease was when they saw how carefully their hairline was designed. Every angle has a purpose. Every channel supports direction. Nothing is rushed upfront. You are not choosing a trend. You are choosing a method that supports precision when applied with right judgment.
                 </p>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-3">What you receive at Hair Skill Clinic</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">What you receive at Hair Skill Clinic</h3>
                 <div className="space-y-2 ml-2 mb-6">
                   {[
                     "surgeon led planning from the first moment",
@@ -582,8 +578,8 @@ export default function SapphireClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
                   You should feel informed not pressured. Your plan should make sense for your donor your age and your long term goals. That is how we work upfront.
                 </p>
-
-                <h3 className="text-2xl font-black text-[#772424] mb-2">Your next step</h3>
+                
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Your next step</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-extrabold">
                   Send your photos. Your doctor studies your pattern. You receive a clear personalized plan and your exact package quote in PKR upfront. No confusion. No upselling. Just honest medical guidance. Get Your Free Sapphire FUE Assessment Today. Take the first step toward a natural confident result.
                 </p>
@@ -596,9 +592,9 @@ export default function SapphireClient() {
               initial="hidden"
               animate="visible"
               variants={slideInRight}
-              className="w-full lg:w-1/3 lg:sticky lg:top-32"
+              className="w-full lg:w-1/3 lg:sticky lg:top-32 mt-4 lg:mt-0"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -661,9 +657,9 @@ export default function SapphireClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="sphPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="sphPrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="sphPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer mt-0.5 sm:mt-0 shrink-0" />
+                    <label htmlFor="sphPrivacy" className="text-xs text-white/80 cursor-pointer leading-tight">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>

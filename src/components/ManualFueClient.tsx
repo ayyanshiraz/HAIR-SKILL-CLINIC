@@ -38,7 +38,7 @@ export default function ManuelFueClient() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the Manuel FUE Technique Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
+    const textMessage = `Hello! I would like to get a free consultation from the Manual FUE Technique Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
     const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -65,12 +65,12 @@ export default function ManuelFueClient() {
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] active:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
-            <span className="text-[#772424]">Manuel Fue Hair Transplant</span>
+            <span className="text-[#772424]">Manual Fue Hair Transplant</span>
           </div>
           
           {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-            Manuel Fue Hair Transplant
+            Manual Fue Hair Transplant
           </h1>
         </div>
       </motion.section>
@@ -96,10 +96,54 @@ export default function ManuelFueClient() {
                 </div>
               </motion.div>
 
-              {/* Lead Introduction Section */}
+              {/* --- TOP ADDITION 1: FUE MANUAL OVERVIEW --- */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
+                  FUE Manual Hair Transplant
+                </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Manuel Fue Hair Transplant is the first technique applied in hair transplantation where the grafts are removed one by one. It can be seen as the ancestor of all currently used FUE hair transplantation techniques.
+                  FUE (Follicular Unit Extraction) Manual is one of the most trusted and effective hair transplant techniques available today. In this method, each hair follicle is extracted manually with precision, ensuring maximum graft survival and natural-looking results.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  Our manual extraction process minimizes trauma to the scalp and helps preserve the quality of every graft. This technique is ideal for patients seeking natural density and long-lasting outcomes.
+                </p>
+              </motion.div>
+
+              {/* --- TOP ADDITION 2: BENEFITS OF MANUAL FUE --- */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Benefits of Manual FUE</h3>
+                <div className="space-y-3 ml-1 sm:ml-2">
+                  {[
+                    "Precise manual graft extraction",
+                    "High graft survival rate",
+                    "Natural-looking results",
+                    "Minimal scarring",
+                    "Faster healing process",
+                    "Suitable for most hair loss patterns"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <span className="text-[#772424] font-black text-lg shrink-0">•</span>
+                      <p className="text-black text-base md:text-lg font-bold">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* --- TOP ADDITION 3: RECOVERY --- */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Recovery</h3>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
+                  The procedure requires minimal downtime, and patients can typically return to their normal routine within a few days. Our specialists will provide all necessary post-procedure guidance and medications to support a smooth recovery.
+                </p>
+              </motion.div>
+
+              {/* --- EXISTING DEEP DIVE: HISTORICAL & CLINICAL CONTEXT --- */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
+                  The Heritage and Precision of Manual Extraction
+                </h2>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  Manual Fue Hair Transplant is the first technique applied in hair transplantation where the grafts are removed one by one. It can be seen as the ancestor of all currently used FUE hair transplantation techniques.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   It has been developed as an alternative to the FUE method in which it is made by removing some of the skin from the donor area and leaving the visible stitch marks that cut the donor area horizontally.
@@ -140,10 +184,10 @@ export default function ManuelFueClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Manuel FUE vs Micro FUE */}
+              {/* Section: Manual FUE vs Micro FUE */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Manuel FUE vs Micro FUE
+                  Manual FUE vs Micro FUE
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Since the use of micromotors in FUE hair transplantation there has been debates on which method is superior to the other. Hair Skill Clinic embraces the classic medical statement that there is no universal patient there is only the individual condition. Therefore surgeons who successfully apply many techniques make special plans for the needs of patients.

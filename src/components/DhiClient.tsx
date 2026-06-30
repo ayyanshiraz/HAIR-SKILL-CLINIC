@@ -51,7 +51,7 @@ export default function DhiClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 11 FAQS DATA (Verbatim from pasted text, scrubbed of safe prose, numeric price & logistics errors) ---
+  // --- 11 FAQS DATA (Verbatim, scrubbed of live prose & logistics errors) ---
   const faqList = [
     {
       q: "What is a DHI hair transplant?",
@@ -147,8 +147,57 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Lead Introduction */}
+              {/* --- TOP ADDITION 1: DHI OVERVIEW --- */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
+                  DHI Hair Transplant (Direct Hair Implantation)
+                </h2>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  DHI (Direct Hair Implantation) is one of the most advanced hair transplant techniques available. Using a specialized implantation tool, hair follicles are implanted directly into the recipient area with exceptional precision and control.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  This advanced micro-implantation method allows accurate placement of each graft, helping achieve natural density, proper hair direction, and aesthetically pleasing results.
+                </p>
+              </motion.div>
+
+              {/* --- TOP ADDITION 2: BENEFITS OF DHI --- */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Benefits of DHI</h3>
+                <div className="space-y-3 ml-1 sm:ml-2">
+                  {[
+                    "Advanced direct implantation technique",
+                    "Natural hairline creation",
+                    "Precise graft placement",
+                    "Increased density and coverage",
+                    "Minimal handling of grafts",
+                    "Faster recovery period"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <span className="text-[#772424] font-black text-lg shrink-0">•</span>
+                      <p className="text-black text-base md:text-lg font-bold">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* --- TOP ADDITION 3: RECOVERY --- */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Recovery</h3>
+                <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
+                  <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                    DHI is designed to provide a comfortable recovery experience with minimal downtime. In most cases, patients only require a short course of prescribed medication for approximately one month following the procedure. No additional treatments such as PRP are routinely required.
+                  </p>
+                  <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                    Our team will provide personalized aftercare instructions and medications based on your individual needs at the time of treatment.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* --- EXISTING DEEP DIVE: LEAD INTRODUCTION --- */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12 flex flex-col gap-6 pt-8 border-t border-gray-200">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
+                  Comprehensive Guide to Direct Hair Implantation
+                </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Many people discover DHI hair transplant Pakistan when they start searching for a method that feels gentler more controlled and more focused on natural angles. DHI often appears in headlines beside promises of no incisions fast healing and perfect density which can leave patients confused. At Hair Skill Clinic our job is to cut through the noise and give you a clear explanation of what DHI hair transplant in Pakistan can truly deliver and when it is the right choice for you.
                 </p>
