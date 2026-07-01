@@ -51,6 +51,30 @@ export default function TreatmentsHubClient() {
   // --- 11 MASTER TREATMENTS CARDS (Exactly matching the dropdown items, deduplicated & build-safe) ---
   const treatmentsList = [
     {
+      title: "Manual Fue Hair Transplant",
+      desc: "Experience the precision of Manual FUE Hair Transplant for seamless and natural looking hair restoration results...",
+      img: "/home/techniques/4.webp",
+      href: "/techniques/manual-fue"
+    },
+    {
+      title: "DHI Hair Transplant",
+      desc: "Direct Hair Implantation DHI offers advanced placement for maximum density and natural growth without prior shaving...",
+      img: "/home/techniques/3.webp",
+      href: "/techniques/dhi"
+    },
+    {
+      title: "FUE By Moterize Method",
+      desc: "The Motorized FUE method ensures highly efficient and precise extraction for optimal hair transplant outcomes...",
+      img: "/home/techniques/1.webp",
+      href: "/treatments/fue-by-moterize"
+    },
+    {
+      title: "Chinese Method",
+      desc: "Explore the specialized Chinese Method for hair restoration uniquely tailored to specific hair and scalp characteristics...",
+      img: "/hair-transplant/35.webp",
+      href: "/treatments/chinese"
+    },
+    {
       title: "Hair Transplant",
       desc: "What is a Hair Transplant and Why Does It Matter? Hair transplantation is a surgical relocation of healthy hair follicles from donor...",
       img: "/hair-transplant/treatments/1.webp",

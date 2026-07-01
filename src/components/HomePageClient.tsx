@@ -514,10 +514,10 @@ function TreatmentsStage() {
       icon: <img src={`/our%20treatments/8.svg`} alt={`Mesotherapy Icon`} className={`w-full h-full object-contain`} />
     },
     {
-      title: `Hair Transplantation And Local Anesthesia`,
+      title: `Needle-Free Anesthesia`,
       href: `/techniques/needle-free`,
       bgColor: `bg-[#E34949]`,
-      icon: <img src={`/our%20treatments/9.svg`} alt={`Hair Transplantation And Local Anesthesia Icon`} className={`w-full h-full object-contain`} />
+      icon: <img src={`/our%20treatments/9.svg`} alt={`Needle-Free Anesthesia`} className={`w-full h-full object-contain`} />
     }
   ];
 

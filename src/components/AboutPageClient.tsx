@@ -173,7 +173,7 @@ export default function AboutPageClient() {
               <div className={`absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none`} />
               <img 
                 src={`/about-clinic.jpg`} 
-                alt={`State of the art clinic facilities`} 
+                alt={`Clinic Founder`} 
                 className={`w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-105`}
               />
             </motion.div>
@@ -185,14 +185,14 @@ export default function AboutPageClient() {
             >
               <div>
                 <motion.h2 variants={fadeUp} className={`text-3xl md:text-5xl font-black mb-6 tracking-tight text-gray-900 leading-[1.1]`}>
-                  Born from a Vision of <br />
-                  <span className={`italic font-light text-[#772424]`}>Excellence</span>
+                  Meet Our <br />
+                  <span className={`italic font-light text-[#772424]`}>Visionary Founder</span>
                 </motion.h2>
                 <motion.p variants={fadeUp} className={`text-gray-600 text-lg leading-relaxed mb-6 font-medium`}>
-                  Founded by pioneering surgeons, our clinic was built on a simple premise: hair transplantation should not be an industrial process. It is a highly personalized medical art form. 
+                  Driven by a passion for perfection, our owner established this clinic on a simple premise: hair transplantation should never be an industrial process. It is a highly personalized medical art form. 
                 </motion.p>
                 <motion.p variants={fadeUp} className={`text-gray-600 text-lg leading-relaxed font-medium`}>
-                  Every follicular unit is extracted with care, preserved with advanced cellular solutions, and implanted at the exact angle, depth, and direction required to recreate your natural growth pattern. We treat every patient as our masterpiece.
+                  Under this expert leadership, every follicular unit is extracted with care, preserved with advanced cellular solutions, and implanted at the exact angle, depth, and direction required to recreate your natural growth pattern. We treat every patient as our masterpiece.
                 </motion.p>
               </div>
 
