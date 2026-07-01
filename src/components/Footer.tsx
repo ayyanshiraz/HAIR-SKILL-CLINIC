@@ -115,7 +115,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span className={`transition-colors duration-300 group-hover/item:text-white pt-1 leading-snug`}>
-                  Hotel MayFair 4th floor, 50-52, E - III, Commercial Zone, Gulberg III, 54660, Lahore, Punjab.
+                  Hotel MayFair 1st floor, 50-52, E - III, Commercial Zone, Gulberg III, 54660, Lahore, Punjab.
                 </span>
               </li>
 

@@ -1,0 +1,72 @@
+import { MetadataRoute } from 'next';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  // IMPORTANT: Replace this with your actual live domain URL
+  const baseUrl = 'https://www.yourdomain.com';
+
+  const routes = [
+    '',
+    '/about/data-protection',
+    '/about/ethics',
+    '/about/gentle-care',
+    '/about/mission',
+    '/about/our-story',
+    '/about/philosophy',
+    '/about/reference-program',
+    '/about/why-choose-us',
+    '/before-after',
+    '/blogs/hair-loss',
+    '/blogs/hair-transplant',
+    '/cart',
+    '/checkout',
+    '/contact',
+    '/cookie-policy',
+    '/doctors',
+    '/doctors-category',
+    '/faqs',
+    '/faqs/general',
+    '/faqs/post-op',
+    '/faqs/pre-op',
+    '/female-hair-loss-guide',
+    '/hair-transplant',
+    '/hair-unit',
+    '/patient-guide/after',
+    '/patient-guide/before',
+    '/patient-guide/day-of',
+    '/patient-guide/hair-washing',
+    '/patient-guide/sterilization',
+    '/privacy-policy',
+    '/reviews',
+    '/side-effects-after-hair-transplant',
+    '/techniques/body',
+    '/techniques/dhi',
+    '/techniques/manual-fue',
+    '/techniques/manual-punch',
+    '/techniques/needle-free',
+    '/techniques/sapphire',
+    '/treatments/afro-hair',
+    '/treatments/beard-transplant',
+    '/treatments/chinese',
+    '/treatments/exosome-hair-therapy',
+    '/treatments/extracellular-matrix',
+    '/treatments/eyebrow',
+    '/treatments/female',
+    '/treatments/fue-by-moterize',
+    '/treatments/fut',
+    '/treatments/long-fue',
+    '/treatments/mesotherapy',
+    '/treatments/moustache',
+    '/treatments/ozone-hair-therapy',
+    '/treatments/prp-hair-treatment',
+    '/treatments/sideburn',
+    '/treatments/unshaven-transplant',
+    '/treatments/widows-peak'
+  ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: route === '' ? 1 : 0.8,
+  }));
+}

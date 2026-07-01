@@ -318,7 +318,7 @@ export default function Navbar() {
               animate={{ height: `auto`, opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className={`lg:hidden flex flex-col pt-4 pb-6 space-y-3 border-t border-gray-100 overflow-y-auto max-h-[calc(100vh-8.5rem)] overscroll-contain pr-1 text-[15px] font-bold`}
+              className={`lg:hidden flex flex-col pt-4 pb-6 space-y-3 border-t border-gray-100 overflow-y-auto max-h-[calc(100vh-8.5rem)] overscroll-contain pr-1 text-[15px] font-bold [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
             >
               {/* About Mobile */}
               <div>

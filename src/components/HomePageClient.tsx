@@ -164,13 +164,13 @@ function BeforeAfterStage() {
                 <div 
                   key={idx}
                   onClick={() => setSelectedCaseIndex(idx)}
-                  className={`snap-center shrink-0 w-full md:w-[calc(50%-1rem)] bg-[#772424] rounded-3xl overflow-hidden flex flex-col border border-gray-100/10 shadow-lg cursor-pointer group transition-transform duration-300 hover:-translate-y-2`}
+                  className={`snap-center shrink-0 w-fit mx-auto bg-[#772424] rounded-3xl overflow-hidden flex flex-col border border-gray-100/10 shadow-lg cursor-pointer group transition-transform duration-300 hover:-translate-y-2`}
                 >
-                  <div className={`w-full aspect-square md:aspect-[4/3] bg-white relative overflow-hidden flex items-center justify-center p-2`}>
+                  <div className={`bg-white relative overflow-hidden flex items-center justify-center p-2`}>
                     <img 
                       src={c.image} 
                       alt={`${c.grafts} Grafts Transformation`} 
-                      className={`w-full h-full object-contain bg-white transition-transform duration-500 md:group-hover:scale-105`} 
+                      className={`h-[300px] md:h-[400px] w-auto object-contain bg-white transition-transform duration-500 md:group-hover:scale-105 block`} 
                     />
                     <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none`}>
                       <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 md:scale-75 md:group-hover:scale-100 shadow-xl`}>
@@ -179,17 +179,8 @@ function BeforeAfterStage() {
                     </div>
                   </div>
                   
-                  <div className={`flex-1 py-7 px-8 flex items-center justify-between bg-[#772424]`}>
-                    <div className={`flex flex-col md:flex-row md:items-baseline gap-1 md:gap-2`}>
-                      <span 
-                        className={`text-5xl md:text-[56px] font-black tracking-tighter text-white drop-shadow-sm`}
-                        style={{ WebkitTextStroke: `1px rgba(255,255,255,0.05)` }}
-                      >
-                        {c.grafts}
-                      </span>
-                      <span className={`text-white/80 text-sm md:text-lg font-bold tracking-widest`}>GRAFTS</span>
-                    </div>
-                    <span className={`text-white/60 font-bold text-lg md:text-xl tracking-wide uppercase text-right leading-none max-w-[150px]`}>
+                  <div className={`py-6 px-6 md:px-8 flex items-center justify-center bg-[#772424]`}>
+                    <span className={`text-white font-bold text-lg md:text-xl tracking-wide uppercase text-center leading-none whitespace-nowrap`}>
                       Hair Skill Clinic
                     </span>
                   </div>
@@ -269,27 +260,18 @@ function BeforeAfterStage() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: -20 }}
               transition={{ type: `spring`, damping: 25, stiffness: 300 }}
-              className={`relative w-full max-w-4xl bg-[#772424] rounded-2xl md:rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10`}
+              className={`relative w-fit max-w-[95vw] bg-[#772424] rounded-2xl md:rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 mx-auto`}
             >
-              <div className={`w-full bg-white relative flex justify-center items-center p-2 md:p-4`}>
+              <div className={`bg-white relative flex justify-center items-center p-2 md:p-4`}>
                 <img 
                   src={cases[selectedCaseIndex].image} 
                   alt={`${cases[selectedCaseIndex].grafts} Grafts Transformation`} 
-                  className={`w-full h-auto max-h-[50vh] md:max-h-[60vh] object-contain`} 
+                  className={`w-auto h-auto max-h-[50vh] md:max-h-[60vh] object-contain block`} 
                 />
               </div>
               
-              <div className={`py-6 px-6 md:px-10 flex items-center justify-between bg-[#772424]`}>
-                <div className={`flex flex-col md:flex-row md:items-baseline gap-1 md:gap-3`}>
-                  <span 
-                    className={`text-5xl md:text-[56px] font-black tracking-tighter text-white drop-shadow-sm`}
-                    style={{ WebkitTextStroke: `1px rgba(255,255,255,0.05)` }}
-                  >
-                    {cases[selectedCaseIndex].grafts}
-                  </span>
-                  <span className={`text-white/80 text-sm md:text-xl font-bold tracking-widest`}>GRAFTS</span>
-                </div>
-                <span className={`text-white font-bold text-lg md:text-3xl tracking-wide uppercase text-right leading-none max-w-[200px] md:max-w-[300px]`}>
+              <div className={`py-6 px-6 md:px-10 flex items-center justify-end bg-[#772424]`}>
+                <span className={`text-white font-bold text-lg md:text-xl tracking-wide uppercase text-right leading-none whitespace-nowrap`}>
                   Hair Skill Clinic
                 </span>
               </div>
@@ -316,7 +298,7 @@ function PhilosophyStage() {
     },
     {
       title: `True Execution`,
-      content: `The day of the operation is a key milestone for a successful outcome in the entire transformation process. The day of the operation is a marathon after a long technical detail preparation. Therefore, thanks to Hair Skills high-level precautions, nothing is allowed to go wrong. Hair Skills main goal is always to achieve successful operations and results, and it uses all its efforts and resources to succeed and do its best.`
+      content: `The day of the operation is a key milestone for a successful outcome in the entire transformation process. The day of the operation is a marathon after a long technical detail preparation. Therefore, thanks to Hair Skills high-level precautions, nothing is allowed to go wrong. Hair Skills main goal is always to achieve successful operations and results, and it uses all its efforts and resources to succeed and do room best.`
     },
     {
       title: `True Innovation`,
