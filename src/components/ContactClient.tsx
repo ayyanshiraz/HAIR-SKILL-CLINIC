@@ -123,22 +123,38 @@ export default function ContactClient() {
                 variants={fadeUp} 
                 className="flex flex-col gap-8"
               >
-                {/* Address */}
+                {/* Headquarters Address */}
                 <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-full bg-[#772424] flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#772424] flex items-center justify-center shrink-0 mt-1">
                     <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-xl font-black text-[#772424] tracking-tight uppercase">ADDRESS:</h3>
+                    <h3 className="text-xl font-black text-[#772424] tracking-tight uppercase">HEADQUARTERS (LAHORE):</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
                       Hotel MayFair 1st floor, 50-52, E - III, Commercial Zone, Gulberg III, 54660, Lahore, Punjab.
                     </p>
                   </div>
                 </div>
 
+                {/* Karachi Office Address */}
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-full bg-[#772424] flex items-center justify-center shrink-0 mt-1">
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-xl font-black text-[#772424] tracking-tight uppercase">KARACHI OFFICE:</h3>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">
+                      Hair Skill, office #9, 1st floor AMJAD HOSPITAL, Akber paradise building, rashid minhas road, opp Aladin park, Gulshan-e-iqbal, Karachi.
+                    </p>
+                  </div>
+                </div>
+                
                 {/* Email */}
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 rounded-full bg-[#772424] flex items-center justify-center shrink-0">
@@ -181,6 +197,21 @@ export default function ContactClient() {
                     <a href="tel:+923014923336" className="text-black text-base md:text-lg font-medium hover:text-[#772424] transition-colors">
                       +92 301 492 3336
                     </a>
+                  </div>
+                </div>
+
+                {/* Timings */}
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-full bg-[#772424] flex items-center justify-center shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-xl font-black text-[#772424] tracking-tight uppercase">TIMINGS:</h3>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">
+                      10am - 8pm
+                    </p>
                   </div>
                 </div>
 
