@@ -65,6 +65,8 @@ export default function NeedleFreeClient() {
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
+            <Link href="/hair-transplant/techniques" className="hover:text-[#772424] active:text-[#772424] transition-colors">Techniques</Link>
+             <span>/</span>
             <span className="text-[#772424]">Needle-Free Anesthesia</span>
           </div>
           

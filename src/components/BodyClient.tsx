@@ -107,6 +107,8 @@ export default function BodyClient() {
             <span>/</span>
             <Link href="/hair-transplant" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
+            <Link href="/hair-transplant/techniques" className="hover:text-[#772424] active:text-[#772424] transition-colors">Techniques</Link>
+             <span>/</span>
             <span className="text-[#772424]">Body Hair Transplant</span>
           </div>
           

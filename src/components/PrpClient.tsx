@@ -110,8 +110,10 @@ export default function PrpClient() {
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/treatments" className="hover:text-[#772424] transition-colors">Treatments</Link>
+            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
+            <Link href="/hair-transplant/treatments" className="hover:text-[#772424] active:text-[#772424] transition-colors">Treatments</Link>
+             <span>/</span>
             <span className="text-[#772424]">PRP Hair Treatment</span>
           </div>
           

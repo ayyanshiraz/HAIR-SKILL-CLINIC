@@ -103,7 +103,7 @@ export default function Navbar() {
                 
                 {/* Treatments Sub-Menu */}
                 <div className={`relative group/treatments`}>
-                  <Link href={`/treatments`} className={`group/link flex justify-between items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300 cursor-pointer`}>
+                  <Link href={`/hair-transplant/treatments`} className={`group/link flex justify-between items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300 cursor-pointer`}>
                     <div className={`flex items-center`}>
                       <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>
                       <span>Treatments</span>
@@ -112,21 +112,19 @@ export default function Navbar() {
                   </Link>
                   <div className={`absolute left-full top-0 hidden group-hover/treatments:block w-72 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100 max-h-[60vh] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}>
                     {[
-                      { name: `Manual Fue Hair Transplant`, path: `/techniques/manual-fue` },
-                      { name: `DHI Hair Transplant`, path: `/techniques/dhi` },
-                       { name: `FUE By Moterize Method`, path: `/treatments/fue-by-moterize` },
-                        { name: `Chinese Method`, path: `/treatments/chinese` },
-                         { name: `FUT Hair Trasnplant`, path: `/treatments/fut` },
-                      { name: `Beard Transplant`, path: `/treatments/beard-transplant` },
-                      { name: `Moustache Transplant`, path: `/treatments/moustache` },
-                      { name: `Eyebrow Transplant`, path: `/treatments/eyebrow` },
-                      { name: `Female Hair Transplant`, path: `/treatments/female` },
-                      { name: `Afro Hair Transplant`, path: `/treatments/afro-hair` },
-                      { name: `Sideburn Transplantation`, path: `/treatments/sideburn` },
-                      { name: `Mesotherapy`, path: `/treatments/mesotherapy` },
-                      { name: `Ozone Hair Therapy`, path: `/treatments/ozone-hair-therapy` },
-                      { name: `PRP Hair Treatment`, path: `/treatments/prp-hair-treatment` },
-                      { name: `Exosome Hair Therapy`, path: `/treatments/exosome-hair-therapy` }
+                      { name: `Manual Fue Hair Transplant`, path: `/hair-transplant/treatments/manual-fue` },
+                      { name: `DHI Hair Transplant`, path: `/hair-transplant/treatments/dhi` },
+                       { name: `FUE By Moterize Method`, path: `/hair-transplant/treatments/fue-by-moterize` },
+                        { name: `Chinese Method`, path: `/hair-transplant/treatments/chinese` },
+                         { name: `FUT Hair Trasnplant`, path: `/hair-transplant/treatments/fut` },
+                      { name: `Beard Transplant`, path: `/hair-transplant/treatments/beard-transplant` },
+                      { name: `Female Hair Transplant`, path: `/hair-transplant/treatments/female` },
+                      { name: `Afro Hair Transplant`, path: `/hair-transplant/treatments/afro-hair` },
+                      { name: `Sideburn Transplantation`, path: `/hair-transplant/treatments/sideburn` },
+                      { name: `Mesotherapy`, path: `/hair-transplant/treatments/mesotherapy` },
+                      { name: `Ozone Hair Therapy`, path: `/hair-transplant/treatments/ozone-hair-therapy` },
+                      { name: `PRP Hair Treatment`, path: `/hair-transplant/treatments/prp-hair-treatment` },
+                     
                     ].map((item) => (
                       <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
                         <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>
@@ -138,7 +136,7 @@ export default function Navbar() {
 
                 {/* Techniques Sub-Menu */}
                 <div className={`relative group/techniques`}>
-                  <Link href={`/techniques`} className={`group/link flex justify-between items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300 cursor-pointer`}>
+                  <Link href={`/hair-transplant/techniques`} className={`group/link flex justify-between items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300 cursor-pointer`}>
                     <div className={`flex items-center`}>
                       <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>
                       <span>Techniques</span>
@@ -147,13 +145,13 @@ export default function Navbar() {
                   </Link>
                   <div className={`absolute left-full top-0 hidden group-hover/techniques:block w-72 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
                     {[
-                      { name: `Sapphire Hair Transplant`, path: `/techniques/sapphire` },
-                      { name: `DHI Hair Transplant`, path: `/techniques/dhi` },
-                      { name: `Body Hair Transplant`, path: `/techniques/body` },
-                      { name: `Unshaven Hair Transplant`, path: `/treatments/unshaven-transplant` },
-                      { name: `Long FUE Hair Transplant`, path: `/treatments/long-fue` },
-                      { name: `Manual Punch Hair Transplant`, path: `/techniques/manual-punch` },
-                      { name: `Needle-Free Anesthesia`, path: `/techniques/needle-free` }
+                      { name: `Sapphire Hair Transplant`, path: `/hair-transplant/techniques/sapphire` },
+                    
+                      { name: `Body Hair Transplant`, path: `/hair-transplant/techniques/body` },
+                      { name: `Unshaven Hair Transplant`, path: `/hair-transplant/techniques/unshaven-transplant` },
+                      { name: `Long FUE Hair Transplant`, path: `/hair-transplant/techniques/long-fue` },
+                      { name: `Manual Punch Hair Transplant`, path: `/hair-transplant/techniques/manual-punch` },
+                      { name: `Needle-Free Anesthesia`, path: `/hair-transplant/techniques/needle-free` }
                     ].map((item) => (
                       <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
                         <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>
@@ -322,10 +320,14 @@ export default function Navbar() {
             >
               {/* About Mobile */}
               <div>
-                <button onClick={() => toggleMobileAccordion(`about`)} className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
-                  <span>About</span>
-                  <span>{openMobileAccordion === `about` ? `−` : `+`}</span>
-                </button>
+                <div className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
+                  <Link href={`/about`} onClick={() => setIsMobileMenuOpen(false)} className={`flex-1`}>
+                    About
+                  </Link>
+                  <button onClick={() => toggleMobileAccordion(`about`)} className={`px-2`}>
+                    <span>{openMobileAccordion === `about` ? `−` : `+`}</span>
+                  </button>
+                </div>
                 {openMobileAccordion === `about` && (
                   <div className={`flex flex-col pl-4 mt-2 space-y-2 border-l-2 border-[#772424]/20 text-sm font-medium text-gray-600`}>
                     {[
@@ -347,31 +349,32 @@ export default function Navbar() {
 
               {/* Hair Transplant Mobile */}
               <div>
-                <button onClick={() => toggleMobileAccordion(`ht`)} className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
-                  <span>Hair Transplant</span>
-                  <span>{openMobileAccordion === `ht` ? `−` : `+`}</span>
-                </button>
+                <div className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
+                  <Link href={`/hair-transplant`} onClick={() => setIsMobileMenuOpen(false)} className={`flex-1`}>
+                    Hair Transplant
+                  </Link>
+                  <button onClick={() => toggleMobileAccordion(`ht`)} className={`px-2`}>
+                    <span>{openMobileAccordion === `ht` ? `−` : `+`}</span>
+                  </button>
+                </div>
                 {openMobileAccordion === `ht` && (
                   <div className={`flex flex-col pl-4 mt-2 space-y-3 border-l-2 border-[#772424]/20 text-sm font-medium text-gray-600`}>
                     <div>
                       <span className={`text-[#772424] text-xs uppercase font-extrabold tracking-wider block mb-1`}>Treatments</span>
                       <div className={`flex flex-col pl-2 space-y-1.5`}>
                         {[
-                          { name: `Manual Fue Hair Transplant`, path: `/techniques/manual-fue` },
-                          { name: `DHI Hair Transplant`, path: `/techniques/dhi` },
-                           { name: `FUE By Moterize Method`, path: `/treatments/fue-by-moterize` },
-                            { name: `Chinese Method`, path: `/treatments/chinese` },
-                             { name: `FUT Hair Trasnplant`, path: `/treatments/fut` },
-                          { name: `Beard Transplant`, path: `/treatments/beard-transplant` },
-                          { name: `Moustache Transplant`, path: `/treatments/moustache` },
-                          { name: `Eyebrow Transplant`, path: `/treatments/eyebrow` },
-                          { name: `Female Hair Transplant`, path: `/treatments/female` },
-                          { name: `Afro Hair Transplant`, path: `/treatments/afro-hair` },
-                          { name: `Sideburn Transplantation`, path: `/treatments/sideburn` },
-                          { name: `Mesotherapy`, path: `/treatments/mesotherapy` },
-                          { name: `Ozone Hair Therapy`, path: `/treatments/ozone-hair-therapy` },
-                          { name: `PRP Hair Treatment`, path: `/treatments/prp-hair-treatment` },
-                          { name: `Exosome Hair Therapy`, path: `/treatments/exosome-hair-therapy` }
+                          { name: `Manual Fue Hair Transplant`, path: `/hair-transplant/treatments/manual-fue` },
+                      { name: `DHI Hair Transplant`, path: `/hair-transplant/treatments/dhi` },
+                       { name: `FUE By Moterize Method`, path: `/hair-transplant/treatments/fue-by-moterize` },
+                        { name: `Chinese Method`, path: `/hair-transplant/treatments/chinese` },
+                         { name: `FUT Hair Trasnplant`, path: `/hair-transplant/treatments/fut` },
+                      { name: `Beard Transplant`, path: `/hair-transplant/treatments/beard-transplant` },
+                      { name: `Female Hair Transplant`, path: `/hair-transplant/treatments/female` },
+                      { name: `Afro Hair Transplant`, path: `/hair-transplant/treatments/afro-hair` },
+                      { name: `Sideburn Transplantation`, path: `/hair-transplant/treatments/sideburn` },
+                      { name: `Mesotherapy`, path: `/hair-transplant/treatments/mesotherapy` },
+                      { name: `Ozone Hair Therapy`, path: `/hair-transplant/treatments/ozone-hair-therapy` },
+                      { name: `PRP Hair Treatment`, path: `/hair-transplant/treatments/prp-hair-treatment` },
                         ].map(item => (
                           <Link key={item.path} href={item.path} onClick={() => setIsMobileMenuOpen(false)} className={`py-1 block`}>{item.name}</Link>
                         ))}
@@ -381,13 +384,13 @@ export default function Navbar() {
                       <span className={`text-[#772424] text-xs uppercase font-extrabold tracking-wider block mb-1`}>Techniques</span>
                       <div className={`flex flex-col pl-2 space-y-1.5`}>
                         {[
-                          { name: `Sapphire Hair Transplant`, path: `/techniques/sapphire` },
-                          { name: `DHI Hair Transplant`, path: `/techniques/dhi` },
-                          { name: `Body Hair Transplant`, path: `/techniques/body` },
-                          { name: `Unshaven Hair Transplant`, path: `/treatments/unshaven-transplant` },
-                          { name: `Long FUE Hair Transplant`, path: `/treatments/long-fue` },
-                          { name: `Manual Punch Hair Transplant`, path: `/techniques/manual-punch` },
-                          { name: `Needle-Free Anesthesia`, path: `/techniques/needle-free` }
+                          { name: `Sapphire Hair Transplant`, path: `/hair-transplant/techniques/sapphire` },
+                      
+                      { name: `Body Hair Transplant`, path: `/hair-transplant/techniques/body` },
+                      { name: `Unshaven Hair Transplant`, path: `/hair-transplant/treatments/unshaven-transplant` },
+                      { name: `Long FUE Hair Transplant`, path: `/hair-transplant/treatments/long-fue` },
+                      { name: `Manual Punch Hair Transplant`, path: `/hair-transplant/techniques/manual-punch` },
+                      { name: `Needle-Free Anesthesia`, path: `/hair-transplant/techniques/needle-free` }
                         ].map(item => (
                           <Link key={item.path} href={item.path} onClick={() => setIsMobileMenuOpen(false)} className={`py-1 block`}>{item.name}</Link>
                         ))}
@@ -405,10 +408,14 @@ export default function Navbar() {
 
               {/* Patient Guide Mobile */}
               <div>
-                <button onClick={() => toggleMobileAccordion(`guide`)} className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
-                  <span>Patient Guide</span>
-                  <span>{openMobileAccordion === `guide` ? `−` : `+`}</span>
-                </button>
+                <div className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
+                  <Link href={`/patient-guide`} onClick={() => setIsMobileMenuOpen(false)} className={`flex-1`}>
+                    Patient Guide
+                  </Link>
+                  <button onClick={() => toggleMobileAccordion(`guide`)} className={`px-2`}>
+                    <span>{openMobileAccordion === `guide` ? `−` : `+`}</span>
+                  </button>
+                </div>
                 {openMobileAccordion === `guide` && (
                   <div className={`flex flex-col pl-4 mt-2 space-y-2 border-l-2 border-[#772424]/20 text-sm font-medium text-gray-600`}>
                     {[
@@ -426,10 +433,14 @@ export default function Navbar() {
 
               {/* FAQ Mobile */}
               <div>
-                <button onClick={() => toggleMobileAccordion(`faq`)} className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
-                  <span>F.A.Q.S</span>
-                  <span>{openMobileAccordion === `faq` ? `−` : `+`}</span>
-                </button>
+                <div className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
+                  <Link href={`/faqs`} onClick={() => setIsMobileMenuOpen(false)} className={`flex-1`}>
+                    F.A.Q.S
+                  </Link>
+                  <button onClick={() => toggleMobileAccordion(`faq`)} className={`px-2`}>
+                    <span>{openMobileAccordion === `faq` ? `−` : `+`}</span>
+                  </button>
+                </div>
                 {openMobileAccordion === `faq` && (
                   <div className={`flex flex-col pl-4 mt-2 space-y-2 border-l-2 border-[#772424]/20 text-sm font-medium text-gray-600`}>
                     {[
@@ -448,10 +459,14 @@ export default function Navbar() {
               
               {/* Blogs Mobile */}
               <div>
-                <button onClick={() => toggleMobileAccordion(`blogs`)} className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
-                  <span>Blogs</span>
-                  <span>{openMobileAccordion === `blogs` ? `−` : `+`}</span>
-                </button>
+                <div className={`w-full flex justify-between items-center py-2 text-left active:text-[#902b2b]`}>
+                  <Link href={`/blogs`} onClick={() => setIsMobileMenuOpen(false)} className={`flex-1`}>
+                    Blogs
+                  </Link>
+                  <button onClick={() => toggleMobileAccordion(`blogs`)} className={`px-2`}>
+                    <span>{openMobileAccordion === `blogs` ? `−` : `+`}</span>
+                  </button>
+                </div>
                 {openMobileAccordion === `blogs` && (
                   <div className={`flex flex-col pl-4 mt-2 space-y-2 border-l-2 border-[#772424]/20 text-sm font-medium text-gray-600`}>
                     {[

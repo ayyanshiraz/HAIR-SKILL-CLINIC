@@ -112,6 +112,8 @@ export default function FemaleClient() {
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
+            <Link href="/hair-transplant/treatments" className="hover:text-[#772424] active:text-[#772424] transition-colors">Treatments</Link>
+             <span>/</span>
             <span className="text-[#772424]">Female Hair Transplant</span>
           </div>
           

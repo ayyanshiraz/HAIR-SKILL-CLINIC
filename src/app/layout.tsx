@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import { CartProvider } from "../context/CartContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang={`en`}>
+      
       <body className={inter.className}>
+        
         <Navbar />
         <main>
+          <CartProvider>
           {children}
+          </CartProvider>
         </main>
         <Footer />
         <CookieBanner />

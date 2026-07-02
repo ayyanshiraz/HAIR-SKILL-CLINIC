@@ -23,31 +23,15 @@ export default function TechniquesClient() {
     {
       title: "Sapphire Hair Transplant",
       slug: "sapphire",
-      categoryFolder: "techniques",
+      categoryFolder: "hair-transplant/techniques",
       description: "Utilizing precious sapphire gemstone blades instead of traditional steel to open micro channels in the recipient zone. This advanced precision reduces tissue trauma minimizes scab formation and accelerates overall healing while enabling maximum graft density.",
       duration: "6 - 8 Hours",
       benefits: ["Minimal tissue crusting", "Higher density placement", "Faster scalp recovery"]
     },
     {
-      title: "DHI Hair Transplant",
-      slug: "dhi",
-      categoryFolder: "techniques",
-      description: "Direct Hair Implantation utilizes a specialized Choi Implanter pen tool. Grafts are loaded and injected directly into the scalp simultaneously without the need for prior channel creation ensuring maximum graft survival rates and angle control.",
-      duration: "6 - 8 Hours",
-      benefits: ["No prior channel incisions", "Reduced out of body graft time", "Excellent for hairline lowering"]
-    },
-    {
-      title: "Manuel Fue Hair Transplant",
-      slug: "manuel-fue",
-      categoryFolder: "techniques",
-      description: "The classic ancestral technique where follicular units are extracted one by one using a specialized handheld punch. This meticulous manual control guarantees the lowest possible transection rate and pristine graft preservation.",
-      duration: "6 - 8 Hours",
-      benefits: ["Pristine graft quality", "Highly controlled extraction", "Safeguards native donor reserves"]
-    },
-    {
       title: "Body Hair Transplant",
       slug: "body",
-      categoryFolder: "techniques",
+      categoryFolder: "hair-transplant/techniques",
       description: "When scalp donor reserves are depleted body hair from the beard chest or limbs can be safely harvested to provide vital background density and midscalp coverage creating a fully balanced and believable overall appearance.",
       duration: "6 - 8 Hours",
       benefits: ["Expands depleted donor pools", "Excellent midscalp filling", "Strategic layered placement"]
@@ -55,7 +39,7 @@ export default function TechniquesClient() {
     {
       title: "Unshaven Hair Transplant",
       slug: "unshaven-transplant",
-      categoryFolder: "treatments",
+      categoryFolder: "hair-transplant/techniques",
       description: "A highly discreet procedure tailored for individuals who require immediate return to professional life. The restoration process is executed without shaving the recipient or visible donor zones keeping the treatment completely undetectable.",
       duration: "6 - 8 Hours",
       benefits: ["Zero visible hair length change", "Complete conversational privacy", "Ideal for executive profiles"]
@@ -63,7 +47,7 @@ export default function TechniquesClient() {
     {
       title: "Long FUE Hair Transplant",
       slug: "long-fue",
-      categoryFolder: "treatments",
+      categoryFolder: "hair-transplant/techniques",
       description: "An advanced extraction protocol where follicles are harvested with longer hair shafts intact. This allows patients to walk out of the clinical facility with an immediate architectural preview of their fully mature future density.",
       duration: "7 - 9 Hours",
       benefits: ["Immediate visual density preview", "Longer shaft extractions", "Highly specialized handling"]
@@ -71,7 +55,7 @@ export default function TechniquesClient() {
     {
       title: "Manual Punch Hair Transplant",
       slug: "manual-punch",
-      categoryFolder: "techniques",
+      categoryFolder: "hair-transplant/techniques",
       description: "Relying strictly on tactile human precision rather than automated micro motors. The surgeon gently rotates fine punches by hand to free individual follicles keeping surrounding native tissue completely undisturbed.",
       duration: "6 - 8 Hours",
       benefits: ["Strict human tactile control", "Zero mechanical heat trauma", "Rapid donor zone closure"]
@@ -79,7 +63,7 @@ export default function TechniquesClient() {
     {
       title: "Needle-Free Anesthesia",
       slug: "needle-free",
-      categoryFolder: "techniques",
+      categoryFolder: "hair-transplant/techniques",
       description: "Eliminating injection anxiety through high pressure jet diffusion technology. Anesthetic medication is sprayed directly into the scalp tissue creating rapid localized numbing before any extraction begins.",
       duration: "15 - 30 Mins",
       benefits: ["Overcomes needle phobia", "Rapid subcutaneous diffusion", "Enhanced operational comfort"]
@@ -105,6 +89,8 @@ export default function TechniquesClient() {
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
+            <Link href="/hair-transplant" className="hover:text-[#772424] active:text-[#772424] transition-colors">Hair Transplant</Link>
+             <span>/</span>
             <span className="text-[#772424]">Techniques</span>
           </div>
           

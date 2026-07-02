@@ -59,12 +59,14 @@ export default function LongFueClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs pinned strictly to left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
+          {/* Breadcrumbs pinned strictly to left with flex-wrap added */}
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
+            <Link href="/hair-transplant/techniques" className="hover:text-[#772424] active:text-[#772424] transition-colors">Techniques</Link>
+             <span>/</span>
             <span className="text-[#772424]">Long FUE</span>
           </div>
           

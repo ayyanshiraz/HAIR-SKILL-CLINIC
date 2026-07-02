@@ -140,7 +140,7 @@ export default function DoctorsCategoryClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-clip">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
@@ -153,8 +153,7 @@ export default function DoctorsCategoryClient() {
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/doctors" className="hover:text-[#772424] active:text-[#772424] transition-colors">Doctors</Link>
-            <span>/</span>
+           
             <span className="text-[#772424]">Dr Mansoor Ahmad Profile</span>
           </div>
           
@@ -176,12 +175,12 @@ export default function DoctorsCategoryClient() {
             <div className="w-full lg:w-2/3 block">
               
               {/* Lead Biography & Doctor Profile Picture */}
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-14 grid grid-cols-1 md:grid-cols-3 gap-8 items-center bg-gray-50 rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-sm">
-                <div className="w-full aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden bg-gray-900 relative shadow-md shrink-0">
+              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-14 grid grid-cols-1 md:grid-cols-5 gap-8 items-stretch bg-gray-50 rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-sm">
+                <div className="md:col-span-2 w-full h-full rounded-2xl overflow-hidden bg-gray-900 relative shadow-md shrink-0">
                   <img src="/home/doctor.webp" alt="Dr Mansoor Ahmad Senior Chief Surgeon and Medical Director at Hair Skill Clinic" className="w-full h-full object-cover object-top" />
                 </div>
                 
-                <div className="md:col-span-2 flex flex-col gap-4">
+                <div className="md:col-span-3 flex flex-col gap-4 justify-center">
                   <span className="text-xs font-black text-[#772424] tracking-widest uppercase">Verified Medical Leadership</span>
                   <h2 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">40+ Years of Surgical Craftsmanship</h2>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">

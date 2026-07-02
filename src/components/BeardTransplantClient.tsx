@@ -131,16 +131,18 @@ export default function BeardTransplantClient() {
       >
         <div className="max-w-[1300px] mx-auto relative">
           {/* Breadcrumbs strictly pinned to far left (Updated to Treatments) */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
-            <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
-            <span>/</span>
-            <Link href="/treatments" className="hover:text-[#772424] transition-colors">Treatments</Link>
-            <span>/</span>
-            <span className="text-[#772424]">Beard Transplant</span>
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
+            <Link href="/" className="hover:text-[#772424] transition-colors whitespace-nowrap">Homepage</Link>
+            <span className="whitespace-nowrap">/</span>
+            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors whitespace-nowrap">Hair Transplant</Link>
+            <span className="whitespace-nowrap">/</span>
+            <Link href="/hair-transplant/treatments" className="hover:text-[#772424] active:text-[#772424] transition-colors whitespace-nowrap">Treatments</Link>
+             <span className="whitespace-nowrap">/</span>
+            <span className="text-[#772424] whitespace-nowrap">Beard Transplant</span>
           </div>
           
           {/* Title centered independently */}
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 tracking-tight text-center break-words">
             Beard Transplant 
           </h1>
         </div>

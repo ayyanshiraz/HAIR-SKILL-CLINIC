@@ -22,7 +22,7 @@ const slideInRight: Variants = {
   hidden: { opacity: 0, x: 40 },
   visible: { 
     opacity: 1, 
-    x: 0, 
+    y: 0, 
     transition: { duration: 0.8, delay: 0.2, ease: customEase } 
   }
 };
@@ -77,6 +77,29 @@ export default function BlogClient() {
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
+          
+          {/* --- CATEGORY NAVIGATION --- */}
+          <div className="flex flex-wrap items-center gap-4 mb-10 border-b border-gray-100 pb-6">
+            <Link 
+              href="/blogs" 
+              className="px-6 py-2.5 rounded-xl bg-[#772424] text-white font-extrabold text-sm tracking-wider uppercase shadow-lg transition-colors"
+            >
+              General
+            </Link>
+            <Link 
+              href="/blogs/hair-transplant" 
+              className="px-6 py-2.5 rounded-xl bg-gray-100 text-black md:hover:bg-gray-200 active:bg-gray-200 font-extrabold text-sm tracking-wider uppercase transition-colors"
+            >
+              Hair Transplant
+            </Link>
+            <Link 
+              href="/blogs/hair-loss" 
+              className="px-6 py-2.5 rounded-xl bg-gray-100 text-black md:hover:bg-gray-200 active:bg-gray-200 font-extrabold text-sm tracking-wider uppercase transition-colors"
+            >
+              Hair Loss
+            </Link>
+          </div>
+
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             
             {/* LEFT COLUMN: FILTERED GENERAL CARDS GRID */}

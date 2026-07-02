@@ -1,21 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useCart } from "../context/CartContext";
 
-type CartItem = {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-};
-
-export default function CartClient({ initialItems }: { initialItems: CartItem[] }) {
+export default function CartClient() {
   const router = useRouter();
-  const [cartItems, setCartItems] = useState<CartItem[]>(initialItems);
+  const { cartItems, removeFromCart, updateQuantity } = useCart();
 
   const deliveryCharge = 15.00;
   const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -23,30 +15,14 @@ export default function CartClient({ initialItems }: { initialItems: CartItem[] 
   const taxAmount = subtotal * taxRate;
   const finalTotal = subtotal > 0 ? subtotal + taxAmount + deliveryCharge : 0;
 
-  const handleQuantityChange = (id: number, delta: number) => {
-    setCartItems(cartItems.map(item => {
-      if (item.id === id) {
-        const newQuantity = item.quantity + delta;
-        return { ...item, quantity: newQuantity > 0 ? newQuantity : 1 };
-      }
-      return item;
-    }));
-  };
-
-  const handleRemoveItem = (id: number) => {
-    setCartItems(cartItems.filter(item => item.id !== id));
-  };
-
   const handleProceedToCheckout = () => {
-    // Navigate to the checkout page we created earlier
-    router.push("/checkout");
+    router.push(`/checkout`);
   };
 
   return (
     <div className={`min-h-screen bg-gray-50 pt-32 pb-20 font-sans`}>
       <div className={`max-w-[1400px] mx-auto px-6 sm:px-8`}>
         
-        {/* Header Section */}
         <div className={`mb-12`}>
           <h1 className={`text-4xl md:text-5xl font-extrabold text-[#772424] mb-4`}>
             Your Shopping Cart
@@ -58,7 +34,6 @@ export default function CartClient({ initialItems }: { initialItems: CartItem[] 
 
         <div className={`flex flex-col lg:flex-row gap-10`}>
           
-          {/* Cart Items List */}
           <div className={`w-full lg:w-2/3 flex flex-col space-y-6`}>
             <AnimatePresence>
               {cartItems.length > 0 ? (
@@ -71,7 +46,6 @@ export default function CartClient({ initialItems }: { initialItems: CartItem[] 
                     transition={{ duration: 0.3 }}
                     className={`bg-white rounded-3xl border border-gray-200 p-6 flex flex-col sm:flex-row items-center gap-6 shadow-[0_4px_20px_rgb(0,0,0,0.03)]`}
                   >
-                    {/* Product Image */}
                     <div className={`w-full sm:w-32 h-32 bg-gray-100 rounded-2xl overflow-hidden flex-shrink-0`}>
                       <img 
                         src={item.image} 
@@ -80,14 +54,13 @@ export default function CartClient({ initialItems }: { initialItems: CartItem[] 
                       />
                     </div>
 
-                    {/* Product Details */}
                     <div className={`flex-grow flex flex-col w-full`}>
                       <div className={`flex justify-between items-start mb-2`}>
                         <h2 className={`text-xl font-bold text-gray-900 leading-tight`}>
                           {item.name}
                         </h2>
                         <button 
-                          onClick={() => handleRemoveItem(item.id)}
+                          onClick={() => removeFromCart(item.id)}
                           className={`text-gray-400 hover:text-red-500 transition-colors p-1`}
                         >
                           ✕
@@ -98,14 +71,13 @@ export default function CartClient({ initialItems }: { initialItems: CartItem[] 
                         ${item.price}
                       </span>
 
-                      {/* Quantity Controls */}
                       <div className={`flex items-center space-x-4`}>
                         <span className={`text-sm font-bold text-gray-500 uppercase tracking-wider`}>
                           Quantity
                         </span>
                         <div className={`flex items-center bg-gray-50 border border-gray-200 rounded-full`}>
                           <button 
-                            onClick={() => handleQuantityChange(item.id, -1)}
+                            onClick={() => updateQuantity(item.id, -1)}
                             className={`w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-200 rounded-l-full transition-colors`}
                           >
                             −
@@ -114,7 +86,7 @@ export default function CartClient({ initialItems }: { initialItems: CartItem[] 
                             {item.quantity}
                           </span>
                           <button 
-                            onClick={() => handleQuantityChange(item.id, 1)}
+                            onClick={() => updateQuantity(item.id, 1)}
                             className={`w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-200 rounded-r-full transition-colors`}
                           >
                             +
@@ -135,7 +107,6 @@ export default function CartClient({ initialItems }: { initialItems: CartItem[] 
             </AnimatePresence>
           </div>
 
-          {/* Order Summary Panel */}
           <div className={`w-full lg:w-1/3`}>
             <div className={`bg-white rounded-3xl border border-gray-200 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] sticky top-32`}>
               <h3 className={`text-2xl font-extrabold text-gray-900 mb-8`}>Order Summary</h3>

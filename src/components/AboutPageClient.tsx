@@ -172,7 +172,7 @@ export default function AboutPageClient() {
             >
               <div className={`absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none`} />
               <img 
-                src={`/about-clinic.jpg`} 
+                src={`/home/owner2.webp`} 
                 alt={`Clinic Founder`} 
                 className={`w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-105`}
               />

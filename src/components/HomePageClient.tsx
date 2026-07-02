@@ -68,7 +68,7 @@ function SingleDoctorStage() {
             transition={{ delay: 0.6, duration: 0.8, ease: `easeOut` }}
             className={`text-gray-600 max-w-2xl font-medium text-base md:text-lg leading-relaxed mt-2`}
           >
-            Our hair restoration clinics are directed exclusively by legendary surgeons who execute every single micro-incision with clinical perfection.
+            Our hair restoration clinics are directed exclusively by legendary surgeon who execute every single micro-incision with clinical perfection.
           </motion.p>
         </motion.div>
 
@@ -79,11 +79,11 @@ function SingleDoctorStage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className={`max-w-4xl mx-auto bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden flex flex-col md:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100`}
         >
-          <div className={`w-full md:w-2/5 bg-gradient-to-b from-gray-50 to-gray-200/50 relative flex items-end justify-center pt-12 px-6`}>
+          <div className={`w-full md:w-2/5 bg-gradient-to-b from-gray-50 to-gray-200/50 relative flex items-stretch`}>
             <img 
               src={doctor.image} 
               alt={doctor.name} 
-              className={`relative z-10 w-full max-w-[280px] object-contain object-bottom drop-shadow-xl`}
+              className={`relative z-10 w-full h-full object-cover drop-shadow-xl`}
             />
           </div>
           <div className={`w-full md:w-3/5 p-8 md:p-12 flex flex-col justify-center`}>
@@ -116,14 +116,15 @@ function SingleDoctorStage() {
 function BeforeAfterStage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedCaseIndex, setSelectedCaseIndex] = useState<number | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const cases = [
-    { image: `/home/before-after/30.webp`, grafts: `5300` },
-    { image: `/home/before-after/2.webp`, grafts: `1800` },
-    { image: `/home/before-after/3.webp`, grafts: `4500` },
-    { image: `/home/before-after/4.webp`, grafts: `2800` },
-    { image: `/home/before-after/6.webp`, grafts: `4800` },
+    { image: `home/before-after/30.webp`, video: `/home/before-after/video1.mp4` },
+    { image: `home/before-after/18.webp`, video: `/home/before-after/video2.mp4` },
+    { image: `home/before-after/31.webp`, video: `/home/before-after/video3.mp4` },
+    { image: `/home/before-after/4.webp` },
+    { image: `/home/before-after/6.webp` },
   ];
 
   useEffect(() => {
@@ -169,7 +170,7 @@ function BeforeAfterStage() {
                   <div className={`bg-white relative overflow-hidden flex items-center justify-center p-2`}>
                     <img 
                       src={c.image} 
-                      alt={`${c.grafts} Grafts Transformation`} 
+                      alt={`Grafts Transformation`} 
                       className={`h-[300px] md:h-[400px] w-auto object-contain bg-white transition-transform duration-500 md:group-hover:scale-105 block`} 
                     />
                     <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none`}>
@@ -179,8 +180,23 @@ function BeforeAfterStage() {
                     </div>
                   </div>
                   
-                  <div className={`py-6 px-6 md:px-8 flex items-center justify-center bg-[#772424]`}>
-                    <span className={`text-white font-bold text-lg md:text-xl tracking-wide uppercase text-center leading-none whitespace-nowrap`}>
+                  <div className={`py-6 px-6 md:px-8 flex items-center justify-between bg-[#772424]`}>
+                    <div className={`flex items-center gap-2 min-h-[32px] w-8`}>
+                      {/* Video Button (Left Side) */}
+                      {c.video && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedVideo(c.video);
+                          }}
+                          className={`flex items-center justify-center w-8 h-8 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full border border-white/40 transition-transform hover:scale-110 z-10`}
+                          aria-label={`Play Video`}
+                        >
+                          <svg className={`w-4 h-4 text-white ml-0.5`} fill={`currentColor`} viewBox={`0 0 24 24`}><path d={`M8 5v14l11-7z`}/></svg>
+                        </button>
+                      )}
+                    </div>
+                    <span className={`text-white font-bold text-lg md:text-xl tracking-wide uppercase text-right leading-none whitespace-nowrap`}>
                       Hair Skill Clinic
                     </span>
                   </div>
@@ -214,6 +230,7 @@ function BeforeAfterStage() {
         </div>
       </div>
 
+      {/* --- LIGHTBOX FOR IMAGES --- */}
       <AnimatePresence>
         {selectedCaseIndex !== null && (
           <motion.div 
@@ -237,7 +254,7 @@ function BeforeAfterStage() {
             <button 
               onClick={(e) => { 
                 e.stopPropagation(); 
-                setSelectedCaseIndex(prev => prev === 0 ? cases.length - 1 : prev! - 1); 
+                setSelectedCaseIndex((prev: number | null) => prev === 0 ? cases.length - 1 : prev! - 1); 
               }}
               className={`absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-gray-400 hover:text-white bg-white/5 hover:bg-[#772424] backdrop-blur-md rounded-full transition-all z-20`}
             >
@@ -247,7 +264,7 @@ function BeforeAfterStage() {
             <button 
               onClick={(e) => { 
                 e.stopPropagation(); 
-                setSelectedCaseIndex(prev => prev === cases.length - 1 ? 0 : prev! + 1); 
+                setSelectedCaseIndex((prev: number | null) => prev === cases.length - 1 ? 0 : prev! + 1); 
               }}
               className={`absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-gray-400 hover:text-white bg-white/5 hover:bg-[#772424] backdrop-blur-md rounded-full transition-all z-20`}
             >
@@ -265,7 +282,7 @@ function BeforeAfterStage() {
               <div className={`bg-white relative flex justify-center items-center p-2 md:p-4`}>
                 <img 
                   src={cases[selectedCaseIndex].image} 
-                  alt={`${cases[selectedCaseIndex].grafts} Grafts Transformation`} 
+                  alt={`Grafts Transformation`} 
                   className={`w-auto h-auto max-h-[50vh] md:max-h-[60vh] object-contain block`} 
                 />
               </div>
@@ -277,6 +294,44 @@ function BeforeAfterStage() {
               </div>
             </motion.div>
 
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* --- LIGHTBOX FOR VIDEOS --- */}
+      <AnimatePresence>
+        {selectedVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={`fixed inset-0 z-[110] flex items-center justify-center p-4 sm:p-6 lg:p-12`}
+          >
+            <div className={`absolute inset-0 bg-[#0a0a0a]/90 backdrop-blur-sm`} onClick={() => setSelectedVideo(null)} />
+            
+            <div className={`absolute top-0 right-0 p-4 md:p-8 z-20`}>
+              <button 
+                onClick={() => setSelectedVideo(null)} 
+                className={`text-gray-400 hover:text-white transition-colors w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-[#772424] rounded-full backdrop-blur-md`}
+              >
+                <svg className={`w-6 h-6`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`}><path strokeLinecap={`round`} strokeLinejoin={`round`} strokeWidth={2} d={`M6 18L18 6M6 6l12 12`} /></svg>
+              </button>
+            </div>
+
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: -20 }}
+              transition={{ type: `spring`, damping: 25, stiffness: 300 }}
+              className={`relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10`}
+            >
+              <video 
+                src={selectedVideo} 
+                controls 
+                autoPlay 
+                className={`w-full h-auto max-h-[80vh] object-contain`}
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -473,52 +528,37 @@ function TreatmentsStage() {
     },
     {
       title: `Beard Transplant`,
-      href: `/treatments/beard-transplant`,
+      href: `/hair-transplant/treatments/beard-transplant`,
       bgColor: `bg-[#5A1212]`,
       icon: <img src={`/our%20treatments/2.svg`} alt={`Beard Transplant Icon`} className={`w-full h-full object-contain`} />
     },
-    {
-      title: `Eyebrow Transplant`,
-      href: `/treatments/eyebrow`,
-      bgColor: `bg-[#6B1616]`,
-      icon: <img src={`/our%20treatments/3.svg`} alt={`Eyebrow Transplant Icon`} className={`w-full h-full object-contain`} />
-    },
+    
     {
       title: `Female Hair Transplant`,
-      href: `/treatments/female`,
+      href: `/hair-transplant/treatments/female`,
       bgColor: `bg-[#772424]`,
       icon: <img src={`/our%20treatments/4.svg`} alt={`Female Hair Transplant Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Afro Hair Transplant`,
-      href: `/treatments/afro-hair`,
+      href: `/hair-transplant/treatments/afro-hair`,
       bgColor: `bg-[#8C2222]`,
       icon: <img src={`/our%20treatments/5.svg`} alt={`Afro Hair Transplant Icon`} className={`w-full h-full object-contain`} />
     },
     {
       title: `Restoration of Sideburns`,
-      href: `/treatments/sideburn`,
+      href: `/hair-transplant/treatments/sideburn`,
       bgColor: `bg-[#A32A2A]`,
       icon: <img src={`/our%20treatments/6.svg`} alt={`Restoration of Sideburns Icon`} className={`w-full h-full object-contain`} />
     },
-    {
-      title: `Moustache Transplant`,
-      href: `/treatments/moustache`,
-      bgColor: `bg-[#B93232]`,
-      icon: <img src={`/our%20treatments/7.svg`} alt={`Moustache Transplant Icon`} className={`w-full h-full object-contain`} />
-    },
+    
     {
       title: `Mesotherapy`,
-      href: `/treatments/mesotherapy`,
+      href: `/hair-transplant/treatments/mesotherapy`,
       bgColor: `bg-[#CF3D3D]`,
       icon: <img src={`/our%20treatments/8.svg`} alt={`Mesotherapy Icon`} className={`w-full h-full object-contain`} />
     },
-    {
-      title: `Needle-Free Anesthesia`,
-      href: `/techniques/needle-free`,
-      bgColor: `bg-[#E34949]`,
-      icon: <img src={`/our%20treatments/9.svg`} alt={`Needle-Free Anesthesia`} className={`w-full h-full object-contain`} />
-    }
+    
   ];
 
   return (
@@ -873,37 +913,37 @@ function TechniquesStage() {
     { 
       title: `Sapphire Hair\nTransplant`, 
       image: `/home/techniques/2.webp`, 
-      link: `/techniques/sapphire`, 
+      link: `/hair-transplant/techniques/sapphire`, 
       radius: `rounded-tl-[3rem] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl` 
     },
     { 
       title: `DHI Hair\nTransplantation`, 
       image: `/home/techniques/3.webp`, 
-      link: `/techniques/dhi`, 
+      link: `/hair-transplant/treatments/dhi`, 
       radius: `rounded-2xl` 
     },
     { 
-      title: `Manuel Fue\nHair Transplant`, 
+      title: `Manual Fue\nHair Transplant`, 
       image: `/home/techniques/4.webp`, 
-      link: `/techniques/manuel-fue`, 
+      link: `/hair-transplant/treatments/manual-fue`, 
       radius: `rounded-tr-[3rem] rounded-tl-2xl rounded-bl-2xl rounded-br-2xl` 
     },
     { 
       title: `Body Hair\nTransplant`, 
       image: `/home/techniques/6.webp`, 
-      link: `/techniques/body`, 
+      link: `/hair-transplant/techniques/body`, 
       radius: `rounded-bl-[3rem] rounded-tl-2xl rounded-tr-2xl rounded-br-2xl` 
     },
     { 
       title: `Unshaven Hair\nTransplant`, 
       image: `/home/techniques/8.webp`, 
-      link: `/treatments/unshaven-transplant`, 
+      link: `/hair-transplant/techniques/unshaven-transplant`, 
       radius: `rounded-2xl` 
     },
     { 
       title: `Needle-Free\nAnesthesia`, 
       image: `/home/techniques/10.webp`, 
-      link: `/techniques/needle-free`, 
+      link: `/hair-transplant/techniques/needle-free`, 
       radius: `rounded-br-[3rem] rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl` 
     }
   ];
@@ -1125,21 +1165,16 @@ export default function Home() {
 
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-end relative mt-8`}>
           
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
-            className={`relative w-full flex flex-row justify-center lg:justify-start items-end gap-3 sm:gap-6 px-2 sm:px-0`}
+            className={`relative w-full flex justify-center lg:justify-start items-end h-full lg:-ml-12 xl:-ml-16 mt-12 -mb-20`}
           >
-            <img 
-              src={`/home/doctor.webp`} 
-              alt={`Dr. Mehmet Erdogan and Dr. Gokay Bilgin`} 
-              className={`w-1/2 sm:w-full max-w-[180px] sm:max-w-[280px] object-contain drop-shadow-2xl`}
-            />
-            <img 
-              src={`/doctors/dr-mansoor.webp`} 
-              alt={`Dr. Mansoor Ahmad`} 
-              className={`w-1/2 sm:w-full max-w-[180px] sm:max-w-[280px] object-contain drop-shadow-2xl`}
+            <img
+              src={`/home/owner1.webp`}
+              alt={`Hair Skill Clinic Doctors`}
+              className={`w-[115%] lg:w-[125%] max-w-[550px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1050px] h-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10`}
             />
           </motion.div>
 

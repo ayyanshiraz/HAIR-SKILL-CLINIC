@@ -54,92 +54,74 @@ export default function TreatmentsHubClient() {
       title: "Manual Fue Hair Transplant",
       desc: "Experience the precision of Manual FUE Hair Transplant for seamless and natural looking hair restoration results...",
       img: "/home/techniques/4.webp",
-      href: "/techniques/manual-fue"
+      href: "/hair-transplant/treatments/manual-fue"
     },
     {
       title: "DHI Hair Transplant",
       desc: "Direct Hair Implantation DHI offers advanced placement for maximum density and natural growth without prior shaving...",
       img: "/home/techniques/3.webp",
-      href: "/techniques/dhi"
+      href: "/hair-transplant/treatments/dhi"
     },
     {
       title: "FUE By Moterize Method",
       desc: "The Motorized FUE method ensures highly efficient and precise extraction for optimal hair transplant outcomes...",
       img: "/home/techniques/1.webp",
-      href: "/treatments/fue-by-moterize"
+      href: "/hair-transplant/treatments/fue-by-moterize"
     },
     {
       title: "Chinese Method",
       desc: "Explore the specialized Chinese Method for hair restoration uniquely tailored to specific hair and scalp characteristics...",
       img: "/hair-transplant/35.webp",
-      href: "/treatments/chinese"
+      href: "/hair-transplant/treatments/chinese"
     },
     {
-      title: "Hair Transplant",
-      desc: "What is a Hair Transplant and Why Does It Matter? Hair transplantation is a surgical relocation of healthy hair follicles from donor...",
-      img: "/hair-transplant/treatments/1.webp",
-      href: "/hair-transplant"
+      title: "FUT Method",
+      desc: "FUT, also known as the Strip Method, is a hair transplant technique in which a strip of scalp is removed...",
+      img: "/hair-transplant/6.webp",
+      href: "/hair-transplant/treatments/fut"
     },
     {
       title: "Beard Transplant",
       desc: "If you are searching for a beard transplant Pakistan guide that feels honest calm and grounded in real treatment experience you ar...",
       img: "/hair-transplant/treatments/2.webp",
-      href: "/treatments/beard-transplant"
-    },
-    {
-      title: "Moustache Transplant",
-      desc: "If you have been thinking about a moustache transplant Pakistan treatment because your upper lip never fills in the way you want you...",
-      img: "/hair-transplant/19.webp",
-      href: "/treatments/moustache"
-    },
-    {
-      title: "Eyebrow Transplant",
-      desc: "Natural brows change everything. They frame your eyes lift your expression and shape how confident you feel when you look in the mirror...",
-      img: "/hair-transplant/24.webp",
-      href: "/treatments/eyebrow"
+      href: "/hair-transplant/treatments/beard-transplant"
     },
     {
       title: "Female Hair Transplant",
       desc: "Losing hair as a woman feels different. It is not just about coverage. It is about how you see yourself in photos how confidently you style...",
       img: "/hair-transplant/21.webp",
-      href: "/treatments/female"
+      href: "/hair-transplant/treatments/female"
     },
     {
       title: "Afro Hair Transplant",
       desc: "If you have been searching for a clinic that truly understands the needs of tightly coiled hair this page gives you the clarity you have been...",
       img: "/hair-transplant/13.webp",
-      href: "/treatments/afro-hair"
+      href: "/hair-transplant/treatments/afro-hair"
     },
     {
       title: "Sideburn Transplantation",
       desc: "A sideburn transplant is a focused detail-driven procedure that restores shape density and balance to an area that defines the fram...",
       img: "/hair-transplant/18.webp",
-      href: "/treatments/sideburn"
+      href: "/hair-transplant/treatments/sideburn"
     },
     {
       title: "Mesotherapy",
       desc: "Hair Treatment Mesotherapy in Pakistan is a targeted micro-injection method placing vitamins minerals and growth-supporting...",
       img: "/hair-transplant/26.webp",
-      href: "/treatments/mesotherapy"
+      href: "/hair-transplant/treatments/mesotherapy"
     },
     {
       title: "Ozone Hair Therapy",
       desc: "Ozone therapy for hair is a targeted scalp treatment that uses controlled medical ozone to support follicles calm inflammation and...",
       img: "/hair-transplant/treatments/4.webp",
-      href: "/treatments/ozone-hair-therapy"
+      href: "/hair-transplant/treatments/ozone-hair-therapy"
     },
     {
       title: "PRP Hair Treatment",
       desc: "PRP hair treatment is a medical procedure that uses your own blood to support weaker follicles. At Hair Skill Clinic PRP hair treatment...",
       img: "/hair-transplant/treatments/8.webp",
-      href: "/treatments/prp-hair-treatment"
+      href: "/hair-transplant/treatments/prp-hair-treatment"
     },
-    {
-      title: "Exosome Hair Therapy",
-      desc: "Exosome hair therapy represents the latest frontier in cellular regeneration delivering potent growth supportive signals directly to dormant...",
-      img: "/hair-transplant/treatments/12.webp",
-      href: "/treatments/exosome-hair-therapy"
-    }
   ];
 
   return (
@@ -157,7 +139,9 @@ export default function TreatmentsHubClient() {
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <span className="text-[#772424]">Treatments</span>
+            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
+           
+            
           </div>
           
           {/* Title centered independently */}

@@ -67,12 +67,14 @@ export default function ManualPunchClient() {
         className="pt-28 lg:pt-36 pb-12 bg-gray-50 border-b border-gray-200 px-6"
       >
         <div className="max-w-[1200px] mx-auto">
-          {/* Breadcrumbs aligned left */}
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center justify-start gap-2">
+          {/* Breadcrumbs aligned left with flex-wrap added */}
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center justify-start gap-2">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/techniques" className="hover:text-[#772424] transition-colors">Techniques</Link>
-            <span>/</span>
+            <Link href="/hair-transplant" className="hover:text-[#772424] active:text-[#772424] transition-colors">Hair Transplant</Link>
+             <span>/</span>
+            <Link href="/hair-transplant/techniques" className="hover:text-[#772424] active:text-[#772424] transition-colors">Techniques</Link>
+             <span>/</span>
             <span className="text-[#772424]">Manual Punch</span>
           </div>
           {/* Heading aligned center */}

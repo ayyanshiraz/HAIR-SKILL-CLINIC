@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useCart } from "../context/CartContext";
 
 type HairUnit = {
   id: number;
@@ -16,7 +17,7 @@ type HairUnit = {
 
 export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] }) {
   const router = useRouter();
-  const [cartCount, setCartCount] = useState(0);
+  const { cartCount, addToCart } = useCart();
   const [wishlist, setWishlist] = useState<number[]>([]);
   const [selectedUnit, setSelectedUnit] = useState<HairUnit | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -28,14 +29,19 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
     }, 3000);
   };
 
-  const handleAddToCart = (e?: React.MouseEvent) => {
+  const handleAddToCart = (unit: HairUnit, e?: React.MouseEvent) => {
     if (e) {
       e.stopPropagation();
     }
-    setCartCount(cartCount + 1);
-    showToast(`Item added to your cart successfully`);
     
-    // This line redirects the user to the cart page immediately
+    addToCart({
+      id: unit.id,
+      name: unit.name,
+      price: unit.price,
+      image: unit.image
+    });
+
+    showToast(`Item added to your cart successfully`);
     router.push(`/cart`);
   };
 
@@ -56,7 +62,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
     <div className={`min-h-screen bg-gray-50 pt-32 pb-20 font-sans relative`}>
       <div className={`max-w-[1400px] mx-auto px-6 sm:px-8`}>
         
-        {/* Header Section */}
         <div className={`flex flex-col md:flex-row justify-between items-center mb-16`}>
           <div>
             <h1 className={`text-4xl md:text-5xl font-extrabold text-[#772424] mb-4`}>
@@ -67,7 +72,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
             </p>
           </div>
           
-          {/* Cart & Wishlist Icons */}
           <div className={`mt-6 md:mt-0 flex items-center space-x-4`}>
             <div className={`flex items-center bg-white px-5 py-2.5 rounded-full shadow-sm border border-gray-200`}>
               <span className={`text-[#772424] font-bold mr-2 text-sm`}>Wishlist</span>
@@ -85,7 +89,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
           </div>
         </div>
 
-        {/* Product Grid */}
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8`}>
           {hairUnits.map((unit) => (
             <motion.div 
@@ -97,7 +100,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
               className={`bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-300 flex flex-col cursor-pointer relative`}
             >
               
-              {/* Wishlist Button Overlay */}
               <button 
                 onClick={(e) => toggleWishlist(unit.id, e)}
                 className={`absolute top-4 right-4 z-10 bg-white/90 backdrop-blur p-2 rounded-full shadow-md hover:bg-white transition-colors`}
@@ -114,7 +116,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 </svg>
               </button>
 
-              {/* Card Image */}
               <div className={`w-full h-64 bg-gray-100 relative overflow-hidden`}>
                 <img 
                   src={unit.image} 
@@ -152,7 +153,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 </div>
 
                 <button 
-                  onClick={(e) => handleAddToCart(e)}
+                  onClick={(e) => handleAddToCart(unit, e)}
                   className={`w-full py-3.5 rounded-xl bg-[#772424] text-white font-bold text-[15px] hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200`}
                 >
                   Add to Cart
@@ -164,7 +165,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
 
       </div>
 
-      {/* Custom Toast Notification */}
       <AnimatePresence>
         {toastMessage && (
           <motion.div
@@ -179,7 +179,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
         )}
       </AnimatePresence>
 
-      {/* Full Screen Modal */}
       <AnimatePresence>
         {selectedUnit && (
           <motion.div
@@ -196,7 +195,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
               onClick={(e) => e.stopPropagation()}
               className={`bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row relative shadow-2xl`}
             >
-              {/* Close Button */}
               <button
                 onClick={() => setSelectedUnit(null)}
                 className={`absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 transition-colors shadow-sm`}
@@ -204,7 +202,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 ✕
               </button>
 
-              {/* Modal Image */}
               <div className={`w-full md:w-1/2 h-72 md:h-auto bg-gray-100 relative overflow-hidden`}>
                 <img 
                   src={selectedUnit.image} 
@@ -213,7 +210,6 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 />
               </div>
 
-              {/* Modal Content */}
               <div className={`w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center`}>
                 
                 <div className={`flex justify-between items-start mb-2`}>
@@ -261,7 +257,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
 
                 <button
                   onClick={() => {
-                    handleAddToCart();
+                    handleAddToCart(selectedUnit);
                     setSelectedUnit(null);
                   }}
                   className={`w-full py-4 rounded-xl bg-[#772424] text-white font-bold text-lg hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#772424]/30`}
