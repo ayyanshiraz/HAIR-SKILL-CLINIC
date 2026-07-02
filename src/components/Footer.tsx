@@ -129,7 +129,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span className={`transition-colors duration-300 group-hover/item:text-white`}>
-                  info@hairskillclinic.com
+                  info@hairskill.com
                 </span>
               </li>
 
