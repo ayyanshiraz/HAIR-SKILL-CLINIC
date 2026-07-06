@@ -11,35 +11,57 @@ export type CartItem = {
   requirements?: string;
 };
 
+export type WishlistItem = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  description: string;
+  specs: string[];
+};
+
 type CartContextType = {
   cartItems: CartItem[];
   addToCart: (item: Omit<CartItem, `quantity`>) => void;
   removeFromCart: (id: number) => void;
   updateQuantity: (id: number, delta: number) => void;
   cartCount: number;
+  wishlistItems: WishlistItem[];
+  toggleWishlist: (item: WishlistItem) => void;
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const savedCart = localStorage.getItem(`clinic_cart`);
+    const savedWishlist = localStorage.getItem(`clinic_wishlist`);
+    
     if (savedCart) {
       try {
         setCartItems(JSON.parse(savedCart));
       } catch (e) {}
     }
+    
+    if (savedWishlist) {
+      try {
+        setWishlistItems(JSON.parse(savedWishlist));
+      } catch (e) {}
+    }
+    
     setIsLoaded(true);
   }, []);
 
   useEffect(() => {
     if (isLoaded) {
       localStorage.setItem(`clinic_cart`, JSON.stringify(cartItems));
+      localStorage.setItem(`clinic_wishlist`, JSON.stringify(wishlistItems));
     }
-  }, [cartItems, isLoaded]);
+  }, [cartItems, wishlistItems, isLoaded]);
 
   const addToCart = (newItem: Omit<CartItem, `quantity`>) => {
     setCartItems((prev) => {
@@ -69,10 +91,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
     );
   };
 
+  const toggleWishlist = (newItem: WishlistItem) => {
+    setWishlistItems((prev) => {
+      const exists = prev.find((item) => item.id === newItem.id);
+      if (exists) {
+        return prev.filter((item) => item.id !== newItem.id);
+      }
+      return [...prev, newItem];
+    });
+  };
+
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, cartCount }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, cartCount, wishlistItems, toggleWishlist }}>
       {children}
     </CartContext.Provider>
   );

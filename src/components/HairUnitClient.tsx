@@ -15,8 +15,7 @@ type HairUnit = {
 };
 
 export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] }) {
-  const { cartItems, cartCount, addToCart } = useCart();
-  const [wishlist, setWishlist] = useState<number[]>([]);
+  const { cartItems, cartCount, addToCart, wishlistItems, toggleWishlist } = useCart();
   const [selectedUnit, setSelectedUnit] = useState<HairUnit | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [requirements, setRequirements] = useState<string>(``);
@@ -51,15 +50,25 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
     showToast(`Item added to your cart successfully`);
   };
 
-  const toggleWishlist = (id: number, e?: React.MouseEvent) => {
+  const handleToggleWishlist = (unit: HairUnit, e?: React.MouseEvent) => {
     if (e) {
       e.stopPropagation();
     }
-    if (wishlist.includes(id)) {
-      setWishlist(wishlist.filter((itemId: number) => itemId !== id));
+    
+    const isAlreadySaved = wishlistItems.some((item) => item.id === unit.id);
+    
+    toggleWishlist({ 
+      id: unit.id, 
+      name: unit.name, 
+      price: unit.price, 
+      image: unit.image,
+      description: unit.description,
+      specs: unit.specs
+    });
+    
+    if (isAlreadySaved) {
       showToast(`Removed from wishlist`);
     } else {
-      setWishlist([...wishlist, id]);
       showToast(`Added to wishlist`);
     }
   };
@@ -84,12 +93,12 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
           </div>
           
           <div className={`mt-6 md:mt-0 flex items-center space-x-4`}>
-            <div className={`flex items-center bg-white px-5 py-2.5 rounded-full shadow-sm border border-gray-200`}>
+            <Link href={`/wishlist`} className={`flex items-center bg-white px-5 py-2.5 rounded-full shadow-sm border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer`}>
               <span className={`text-[#772424] font-bold mr-2 text-sm`}>Wishlist</span>
               <div className={`bg-gray-100 text-[#772424] rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs`}>
-                {wishlist.length}
+                {wishlistItems.length}
               </div>
-            </div>
+            </Link>
             
             <Link href={`/cart`} className={`flex items-center bg-white px-5 py-2.5 rounded-full shadow-sm border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer`}>
               <span className={`text-[#772424] font-bold mr-2 text-sm`}>Cart</span>
@@ -112,12 +121,12 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
             >
               
               <button 
-                onClick={(e) => toggleWishlist(unit.id, e)}
+                onClick={(e) => handleToggleWishlist(unit, e)}
                 className={`absolute top-4 right-4 z-10 bg-white/90 backdrop-blur p-2 rounded-full shadow-md hover:bg-white transition-colors`}
               >
                 <svg 
                   xmlns={`http://www.w3.org/2000/svg`} 
-                  fill={wishlist.includes(unit.id) ? `#772424` : `none`} 
+                  fill={wishlistItems.some(i => i.id === unit.id) ? `#772424` : `none`} 
                   viewBox={`0 0 24 24`} 
                   strokeWidth={1.5} 
                   stroke={`#772424`} 
@@ -228,12 +237,12 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                     {selectedUnit.name}
                   </h2>
                   <button 
-                    onClick={() => toggleWishlist(selectedUnit.id)}
+                    onClick={() => handleToggleWishlist(selectedUnit)}
                     className={`p-3 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors flex-shrink-0`}
                   >
                     <svg 
                       xmlns={`http://www.w3.org/2000/svg`} 
-                      fill={wishlist.includes(selectedUnit.id) ? `#772424` : `none`} 
+                      fill={wishlistItems.some(i => i.id === selectedUnit.id) ? `#772424` : `none`} 
                       viewBox={`0 0 24 24`} 
                       strokeWidth={1.5} 
                       stroke={`#772424`} 
