@@ -2,22 +2,15 @@
 
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
 import { useCart } from "../context/CartContext";
 
 export default function CartClient() {
-  const router = useRouter();
   const { cartItems, removeFromCart, updateQuantity } = useCart();
 
-  const deliveryCharge = 15.00;
   const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   const taxRate = 0.05; 
   const taxAmount = subtotal * taxRate;
-  const finalTotal = subtotal > 0 ? subtotal + taxAmount + deliveryCharge : 0;
-
-  const handleProceedToCheckout = () => {
-    router.push(`/checkout`);
-  };
+  const finalTotal = subtotal > 0 ? subtotal + taxAmount : 0; // Delivery is no longer added here
 
   return (
     <div className={`min-h-screen bg-gray-50 pt-32 pb-20 font-sans`}>
@@ -44,7 +37,7 @@ export default function CartClient() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.3 }}
-                    className={`bg-white rounded-3xl border border-gray-200 p-6 flex flex-col sm:flex-row items-center gap-6 shadow-[0_4px_20px_rgb(0,0,0,0.03)]`}
+                    className={`bg-white rounded-3xl border border-gray-200 p-6 flex flex-col sm:flex-row items-start gap-6 shadow-[0_4px_20px_rgb(0,0,0,0.03)]`}
                   >
                     <div className={`w-full sm:w-32 h-32 bg-gray-100 rounded-2xl overflow-hidden flex-shrink-0`}>
                       <img 
@@ -55,7 +48,7 @@ export default function CartClient() {
                     </div>
 
                     <div className={`flex-grow flex flex-col w-full`}>
-                      <div className={`flex justify-between items-start mb-2`}>
+                      <div className={`flex justify-between items-start mb-1`}>
                         <h2 className={`text-xl font-bold text-gray-900 leading-tight`}>
                           {item.name}
                         </h2>
@@ -66,9 +59,16 @@ export default function CartClient() {
                           ✕
                         </button>
                       </div>
+
+                      {item.requirements && (
+                        <div className={`bg-gray-50 border border-gray-100 rounded-xl p-3 mb-3`}>
+                          <span className={`text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1`}>Requirements</span>
+                          <p className={`text-sm text-gray-700`}>{item.requirements}</p>
+                        </div>
+                      )}
                       
-                      <span className={`text-2xl font-extrabold text-[#772424] mb-4 block`}>
-                        ${item.price}
+                      <span className={`text-2xl font-extrabold text-[#772424] mb-4 block mt-auto`}>
+                        PKR {item.price.toLocaleString()}
                       </span>
 
                       <div className={`flex items-center space-x-4`}>
@@ -114,38 +114,40 @@ export default function CartClient() {
               <div className={`space-y-4 mb-8`}>
                 <div className={`flex justify-between items-center text-gray-600 font-medium`}>
                   <span>Subtotal</span>
-                  <span className={`text-gray-900`}>${subtotal.toFixed(2)}</span>
+                  <span className={`text-gray-900`}>PKR {subtotal.toLocaleString()}</span>
                 </div>
                 
                 <div className={`flex justify-between items-center text-gray-600 font-medium`}>
                   <span>Estimated Tax (5 percent)</span>
-                  <span className={`text-gray-900`}>${taxAmount.toFixed(2)}</span>
+                  <span className={`text-gray-900`}>PKR {taxAmount.toLocaleString()}</span>
                 </div>
 
                 <div className={`flex justify-between items-center text-gray-600 font-medium`}>
                   <span>Delivery Charges</span>
-                  <span className={`text-gray-900`}>
-                    {subtotal > 0 ? `$${deliveryCharge.toFixed(2)}` : `$0.00`}
+                  <span className={`text-gray-900 font-bold bg-yellow-100 px-3 py-1 rounded-full text-xs`}>
+                    {subtotal > 0 ? `Calculated post order` : `PKR 0`}
                   </span>
                 </div>
               </div>
 
               <div className={`border-t border-gray-200 pt-6 mb-8`}>
                 <div className={`flex justify-between items-center`}>
-                  <span className={`text-lg font-bold text-gray-900`}>Total</span>
-                  <span className={`text-3xl font-extrabold text-[#772424]`}>
-                    ${finalTotal.toFixed(2)}
+                  <div className={`flex flex-col`}>
+                    <span className={`text-lg font-bold text-gray-900`}>Total</span>
+                    <span className={`text-xs text-gray-500`}>Excluding shipping</span>
+                  </div>
+                  <span className={`text-2xl lg:text-3xl font-extrabold text-[#772424]`}>
+                    PKR {finalTotal.toLocaleString()}
                   </span>
                 </div>
               </div>
 
-              <button 
-                onClick={handleProceedToCheckout}
-                disabled={cartItems.length === 0}
-                className={`w-full py-4 rounded-xl bg-[#772424] text-white font-bold text-lg hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#772424]/30 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#772424] disabled:active:scale-100`}
+              <Link 
+                href={`/checkout`}
+                className={`w-full py-4 rounded-xl bg-[#772424] text-white font-bold text-lg hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#772424]/30 block text-center ${cartItems.length === 0 ? `opacity-50 pointer-events-none` : ``}`}
               >
                 Proceed to Checkout
-              </button>
+              </Link>
 
               <div className={`mt-6 text-center`}>
                 <Link href={`/hair-unit`} className={`text-sm font-bold text-gray-400 hover:text-[#772424] transition-colors`}>

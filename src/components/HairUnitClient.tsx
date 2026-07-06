@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useCart } from "../context/CartContext";
 
 type HairUnit = {
@@ -16,11 +15,11 @@ type HairUnit = {
 };
 
 export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] }) {
-  const router = useRouter();
-  const { cartCount, addToCart } = useCart();
+  const { cartItems, cartCount, addToCart } = useCart();
   const [wishlist, setWishlist] = useState<number[]>([]);
   const [selectedUnit, setSelectedUnit] = useState<HairUnit | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [requirements, setRequirements] = useState<string>(``);
 
   const showToast = (message: string) => {
     setToastMessage(message);
@@ -29,20 +28,27 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
     }, 3000);
   };
 
-  const handleAddToCart = (unit: HairUnit, e?: React.MouseEvent) => {
+  const handleAddToCart = (unit: HairUnit, customReq: string = ``, e?: React.MouseEvent) => {
     if (e) {
       e.stopPropagation();
+    }
+
+    const isAlreadyInCart = cartItems.some((item) => item.id === unit.id);
+    
+    if (isAlreadyInCart) {
+      showToast(`This unit is already in your cart`);
+      return;
     }
     
     addToCart({
       id: unit.id,
       name: unit.name,
       price: unit.price,
-      image: unit.image
+      image: unit.image,
+      requirements: customReq
     });
 
     showToast(`Item added to your cart successfully`);
-    router.push(`/cart`);
   };
 
   const toggleWishlist = (id: number, e?: React.MouseEvent) => {
@@ -56,6 +62,11 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
       setWishlist([...wishlist, id]);
       showToast(`Added to wishlist`);
     }
+  };
+
+  const closeModal = () => {
+    setSelectedUnit(null);
+    setRequirements(``);
   };
 
   return (
@@ -130,7 +141,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                     {unit.name}
                   </h2>
                   <span className={`text-xl font-extrabold text-[#772424]`}>
-                    ${unit.price}
+                    PKR {unit.price.toLocaleString()}
                   </span>
                 </div>
                 
@@ -153,7 +164,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 </div>
 
                 <button 
-                  onClick={(e) => handleAddToCart(unit, e)}
+                  onClick={(e) => handleAddToCart(unit, ``, e)}
                   className={`w-full py-3.5 rounded-xl bg-[#772424] text-white font-bold text-[15px] hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200`}
                 >
                   Add to Cart
@@ -185,7 +196,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedUnit(null)}
+            onClick={closeModal}
             className={`fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 md:p-8`}
           >
             <motion.div
@@ -196,13 +207,13 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
               className={`bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row relative shadow-2xl`}
             >
               <button
-                onClick={() => setSelectedUnit(null)}
+                onClick={closeModal}
                 className={`absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 transition-colors shadow-sm`}
               >
                 ✕
               </button>
 
-              <div className={`w-full md:w-1/2 h-72 md:h-auto bg-gray-100 relative overflow-hidden`}>
+              <div className={`w-full md:w-1/2 h-72 md:h-auto bg-gray-100 relative overflow-hidden flex-shrink-0`}>
                 <img 
                   src={selectedUnit.image} 
                   alt={selectedUnit.name} 
@@ -210,7 +221,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 />
               </div>
 
-              <div className={`w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center`}>
+              <div className={`w-full md:w-1/2 p-8 md:p-12 flex flex-col`}>
                 
                 <div className={`flex justify-between items-start mb-2`}>
                   <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight pr-4`}>
@@ -234,14 +245,14 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 </div>
 
                 <span className={`text-3xl font-extrabold text-[#772424] mb-6 block`}>
-                  ${selectedUnit.price}
+                  PKR {selectedUnit.price.toLocaleString()}
                 </span>
 
                 <p className={`text-lg text-gray-600 mb-8 leading-relaxed`}>
                   {selectedUnit.description}
                 </p>
 
-                <div className={`mb-10`}>
+                <div className={`mb-8`}>
                   <h3 className={`text-sm uppercase tracking-widest font-bold text-gray-400 mb-5`}>
                     Complete Specifications
                   </h3>
@@ -255,12 +266,24 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                   </ul>
                 </div>
 
+                <div className={`mb-8`}>
+                  <label className={`block text-sm uppercase tracking-widest font-bold text-gray-400 mb-3`}>
+                    Additional Requirements
+                  </label>
+                  <textarea
+                    value={requirements}
+                    onChange={(e) => setRequirements(e.target.value)}
+                    placeholder={`Add any specific requirements colors or measurements here...`}
+                    className={`w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#772424] focus:border-transparent resize-none h-24 bg-gray-50 text-black placeholder-gray-500`}
+                  ></textarea>
+                </div>
+
                 <button
                   onClick={() => {
-                    handleAddToCart(selectedUnit);
-                    setSelectedUnit(null);
+                    handleAddToCart(selectedUnit, requirements);
+                    closeModal();
                   }}
-                  className={`w-full py-4 rounded-xl bg-[#772424] text-white font-bold text-lg hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#772424]/30`}
+                  className={`w-full py-4 rounded-xl bg-[#772424] text-white font-bold text-lg hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#772424]/30 mt-auto`}
                 >
                   Add to Cart
                 </button>
