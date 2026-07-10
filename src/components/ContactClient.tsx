@@ -164,8 +164,8 @@ export default function ContactClient() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <h3 className="text-xl font-black text-[#772424] tracking-tight uppercase">EMAIL:</h3>
-                    <a href="mailto:info@hairskillclinic.com" className="text-black text-base md:text-lg font-medium hover:text-[#772424] transition-colors">
-                      info@hairskillclinic.com
+                    <a href="mailto:info@hairskill.com" className="text-black text-base md:text-lg font-medium hover:text-[#772424] transition-colors">
+                      info@hairskill.com
                     </a>
                   </div>
                 </div>
