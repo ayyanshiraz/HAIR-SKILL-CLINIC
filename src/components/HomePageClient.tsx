@@ -1171,11 +1171,14 @@ export default function Home() {
             transition={{ delay: 1.5, duration: 1 }}
             className={`relative w-full flex justify-center lg:justify-start items-end h-full lg:-ml-12 xl:-ml-16 mt-12 -mb-20`}
           >
-            <img
-              src={`/home/owner1.webp`}
-              alt={`Hair Skill Clinic Doctors`}
-              className={`w-[115%] lg:w-[125%] max-w-[550px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1050px] h-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10`}
-            />
+            <Image
+  src={`/home/owner1.webp`}
+  alt={`Hair Skill Clinic Doctors`}
+  width={1050}
+  height={850}
+  priority={true}
+  className={`w-[115%] lg:w-[125%] max-w-[550px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1050px] h-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10`}
+/>
           </motion.div>
 
           <motion.div 
