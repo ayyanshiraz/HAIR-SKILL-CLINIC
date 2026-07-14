@@ -122,10 +122,11 @@ function BeforeAfterStage() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Added missing leading slashes to the first three image paths
   const cases = [
-    { image: `home/before-after/30.webp`, video: `/home/before-after/video1.mp4` },
-    { image: `home/before-after/18.webp`, video: `/home/before-after/video2.mp4` },
-    { image: `home/before-after/31.webp`, video: `/home/before-after/video3.mp4` },
+    { image: `/home/before-after/30.webp`, video: `/home/before-after/video1.mp4` },
+    { image: `/home/before-after/18.webp`, video: `/home/before-after/video2.mp4` },
+    { image: `/home/before-after/31.webp`, video: `/home/before-after/video3.mp4` },
     { image: `/home/before-after/4.webp` },
     { image: `/home/before-after/6.webp` },
   ];
@@ -171,9 +172,12 @@ function BeforeAfterStage() {
                   className={`snap-center shrink-0 w-fit mx-auto bg-[#772424] rounded-3xl overflow-hidden flex flex-col border border-gray-100/10 shadow-lg cursor-pointer group transition-transform duration-300 hover:-translate-y-2`}
                 >
                   <div className={`bg-white relative overflow-hidden flex items-center justify-center p-2`}>
-                    <img 
+                    {/* Replaced img with Next.js Image for the carousel */}
+                    <Image 
                       src={c.image} 
-                      alt={`Grafts Transformation`} 
+                      alt={`Grafts Transformation`}
+                      width={600}
+                      height={600} 
                       className={`h-[300px] md:h-[400px] w-auto object-contain bg-white transition-transform duration-500 md:group-hover:scale-105 block`} 
                     />
                     <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none`}>
@@ -283,9 +287,12 @@ function BeforeAfterStage() {
               className={`relative w-fit max-w-[95vw] bg-[#772424] rounded-2xl md:rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 mx-auto`}
             >
               <div className={`bg-white relative flex justify-center items-center p-2 md:p-4`}>
-                <img 
+                {/* Replaced img with Next.js Image for the lightbox popup */}
+                <Image 
                   src={cases[selectedCaseIndex].image} 
-                  alt={`Grafts Transformation`} 
+                  alt={`Grafts Transformation`}
+                  width={1200}
+                  height={1200} 
                   className={`w-auto h-auto max-h-[50vh] md:max-h-[60vh] object-contain block`} 
                 />
               </div>
@@ -341,7 +348,6 @@ function BeforeAfterStage() {
     </>
   );
 }
-
 function PhilosophyStage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
