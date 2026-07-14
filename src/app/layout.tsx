@@ -9,9 +9,10 @@ import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Fixed the Title and Description for better SEO
 export const metadata: Metadata = {
-  title: `Smile Hair Clinic`,
-  description: `Professional clinical services`,
+  title: "Hair Skill Clinic - Best Hair Transplant in Pakistan",
+  description: "Mastering the Art of Hair Transplants in Pakistan with World-Class Expertise and Natural Results.",
 };
 
 export default function RootLayout({
@@ -20,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang={`en`}>
+    <html lang="en">
       <head>
-      <meta name="google-site-verification" content="dua9CfBmUhUJTblfDmVuVVupQ8cV1ccHtmVnW4BRWiQ" />
+        <meta name="google-site-verification" content="dua9CfBmUhUJTblfDmVuVVupQ8cV1ccHtmVnW4BRWiQ" />
       </head>
       <body className={inter.className}>
         
