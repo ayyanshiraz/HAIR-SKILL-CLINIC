@@ -80,9 +80,12 @@ function SingleDoctorStage() {
           className={`max-w-4xl mx-auto bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden flex flex-col md:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100`}
         >
           <div className={`w-full md:w-2/5 bg-gradient-to-b from-gray-50 to-gray-200/50 relative flex items-stretch`}>
-            <img 
+            {/* Yahan img ko Image se replace kiya gaya hai */}
+            <Image 
               src={doctor.image} 
               alt={doctor.name} 
+              width={600}
+              height={800}
               className={`relative z-10 w-full h-full object-cover drop-shadow-xl`}
             />
           </div>
@@ -674,9 +677,12 @@ function GalleryStage() {
               className={`cursor-pointer overflow-hidden rounded-3xl h-[300px] md:h-[400px] lg:h-[500px] relative group`} 
               onClick={() => setSelectedGalleryIndex(0)}
             >
-              <img 
+              {/* Added Next.js Image component for the main gallery image */}
+              <Image 
                 src={galleryImages[0]} 
                 alt={`Clinic View 1`} 
+                width={800}
+                height={800}
                 className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105`} 
               />
               <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300`} />
@@ -690,9 +696,12 @@ function GalleryStage() {
                   className={`cursor-pointer overflow-hidden rounded-3xl h-full relative group`} 
                   onClick={() => setSelectedGalleryIndex(idx + 1)}
                 >
-                  <img 
+                  {/* Added Next.js Image component for the grid images */}
+                  <Image 
                     src={img} 
-                    alt={`Clinic View ${idx + 2}`} 
+                    alt={`Clinic View ${idx + 2}`}
+                    width={400}
+                    height={400} 
                     className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105`} 
                   />
                   <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300`} />
@@ -755,9 +764,12 @@ function GalleryStage() {
               className={`relative w-full max-w-5xl rounded-2xl md:rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-20`}
             >
               <div className={`w-full relative flex justify-center items-center`}>
-                <img 
+                {/* Added Next.js Image component for the lightbox image popup */}
+                <Image 
                   src={galleryImages[selectedGalleryIndex]} 
-                  alt={`Clinic Gallery Image`} 
+                  alt={`Clinic Gallery Image`}
+                  width={1200}
+                  height={900} 
                   className={`w-full h-auto max-h-[85vh] object-contain`} 
                 />
               </div>
@@ -769,7 +781,6 @@ function GalleryStage() {
     </>
   );
 }
-
 function PatientGuideStage() {
   const [activeStep, setActiveStep] = useState(0);
 
