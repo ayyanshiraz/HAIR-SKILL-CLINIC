@@ -375,7 +375,7 @@ function PhilosophyStage() {
   };
 
   return (
-    <div className={`w-full bg-white py-24 relative overflow-hidden z-20`}>
+    <div className={`w-full bg-white py-12 md:py-24 relative overflow-hidden z-20`}>
       <div className={`max-w-[1400px] mx-auto px-6 sm:px-8 relative`}>
         
         <motion.div 
@@ -462,10 +462,13 @@ function PhilosophyStage() {
             transition={{ duration: 0.8, delay: 0.3, ease: `easeOut` }}
             className={`w-full lg:w-1/2 flex justify-center items-center relative min-h-[400px]`}
           >
-            <img 
+            {/* Replaced img with Next.js Image */}
+            <Image 
               src={`/home/sac.webp`} 
-              alt={`Hair Skill True Philosophy Hair Anatomy`} 
-              className={`w-full max-w-xl object-contain drop-shadow-xl`} 
+              alt={`Hair Skill True Philosophy Hair Anatomy`}
+              width={600}
+              height={600} 
+              className={`w-full max-w-xl h-auto object-contain drop-shadow-xl`} 
             />
           </motion.div>
 
@@ -821,7 +824,7 @@ function PatientGuideStage() {
   ];
 
   return (
-    <div className={`w-full bg-white py-24 relative z-20`}>
+    <div className={`w-full bg-white py-12 md:py-24 relative z-20`}>
       <div className={`max-w-[1200px] mx-auto px-6 sm:px-8 relative`}>
 
         <div className={`text-center mb-16 md:mb-40`}>
@@ -835,30 +838,24 @@ function PatientGuideStage() {
 
         {/* Desktop Connected Timeline */}
         <div className={`hidden md:flex items-center w-full max-w-5xl mx-auto relative mb-64`}>
-          {/* Start Dot */}
           <div className={`w-3.5 h-3.5 rounded-full bg-[#1a202c] shrink-0`} />
 
           {steps.map((step, index) => {
             const isActive = activeStep === index;
             return (
               <React.Fragment key={step.id}>
-                {/* Connecting Line Left */}
                 <div className={`flex-1 h-[3px] bg-[#1a202c]`} />
-
-                {/* Circle Container */}
                 <div
                   onClick={() => setActiveStep(index)}
                   className={`relative flex flex-col items-center shrink-0 cursor-pointer group`}
                 >
-                  {/* Top Content (Step 2) */}
                   {step.position === `top` && (
                     <div className={`absolute bottom-[100%] mb-8 flex flex-col items-center w-[250px] transition-transform duration-300 md:group-hover:-translate-y-2`}>
-                      <img src={step.icon} alt={step.title} className={`h-16 lg:h-20 object-contain mb-4`} />
+                      <Image src={step.icon} alt={step.title} width={80} height={80} className={`h-16 lg:h-20 w-auto object-contain mb-4`} />
                       <span className={`text-[#772424] font-extrabold text-lg lg:text-xl text-center`}>{step.title}</span>
                     </div>
                   )}
 
-                  {/* Main Circle & Active Ring */}
                   <div className={`relative flex items-center justify-center w-[80px] h-[80px] lg:w-[100px] lg:h-[100px]`}>
                     <div className={`absolute inset-[-8px] rounded-full transition-all duration-300 ${isActive ? `border-[3px] ${step.ringColor} scale-100` : `border-0 opacity-0 scale-90`}`} />
                     <div className={`absolute inset-0 rounded-full flex items-center justify-center text-white text-4xl lg:text-5xl font-black ${step.circleColor} transition-transform duration-300 ${isActive ? `scale-100` : `scale-95 md:group-hover:scale-90`} z-10`}>
@@ -866,32 +863,27 @@ function PatientGuideStage() {
                     </div>
                   </div>
 
-                  {/* Bottom Content (Step 1, Step 3) */}
                   {step.position === `bottom` && (
                     <div className={`absolute top-[100%] mt-8 flex flex-col items-center w-[250px] transition-transform duration-300 md:group-hover:translate-y-2`}>
-                      <img src={step.icon} alt={step.title} className={`h-16 lg:h-20 object-contain mb-4`} />
+                      <Image src={step.icon} alt={step.title} width={80} height={80} className={`h-16 lg:h-20 w-auto object-contain mb-4`} />
                       <span className={`text-[#772424] font-extrabold text-lg lg:text-xl text-center`}>{step.title}</span>
                     </div>
                   )}
                 </div>
-
-                {/* Connecting Line Right */}
                 <div className={`flex-1 h-[3px] bg-[#1a202c]`} />
-
-                {/* Dot Between / End Dot */}
                 <div className={`w-3.5 h-3.5 rounded-full bg-[#1a202c] shrink-0`} />
               </React.Fragment>
             );
           })}
         </div>
 
-        {/* Mobile Vertical Timeline (Fallback for small screens) */}
+        {/* Mobile Vertical Timeline */}
         <div className={`flex flex-col gap-12 relative z-10 md:hidden mb-16`}>
           {steps.map((step, index) => {
             const isActive = activeStep === index;
             return (
               <div key={step.id} onClick={() => setActiveStep(index)} className={`flex flex-col items-center cursor-pointer group`}>
-                <img src={step.icon} alt={step.title} className={`h-16 object-contain mb-4`} />
+                <Image src={step.icon} alt={step.title} width={80} height={80} className={`h-16 w-auto object-contain mb-4`} />
                 <span className={`text-[#772424] font-extrabold text-xl text-center mb-4`}>{step.title}</span>
                 <div className={`relative flex items-center justify-center w-[80px] h-[80px]`}>
                   <div className={`absolute inset-[-6px] rounded-full transition-all duration-300 ${isActive ? `border-[3px] ${step.ringColor} scale-100` : `border-0 opacity-0 scale-90`}`} />
@@ -904,7 +896,7 @@ function PatientGuideStage() {
           })}
         </div>
 
-        {/* Changing Paragraph Text below the timeline */}
+        {/* Changing Paragraph Text */}
         <div className={`max-w-4xl mx-auto min-h-[150px] flex items-center justify-center text-center px-4`}>
           <AnimatePresence mode={`wait`}>
             <motion.p
@@ -966,7 +958,7 @@ function TechniquesStage() {
   ];
 
   return (
-    <div className={`w-full bg-[#772424] py-24 relative z-20`}>
+    <div className={`w-full bg-[#772424] py-12 md:py-24 relative z-20`}>
       <div className={`max-w-[1400px] mx-auto px-6 sm:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20`}>
         
         {/* Left Grid */}
@@ -980,7 +972,13 @@ function TechniquesStage() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
               <Link href={tech.link} className={`group block relative aspect-[4/5] overflow-hidden ${tech.radius} shadow-lg cursor-pointer`}>
-                <img src={tech.image} alt={tech.title.replace(`\n`, ` `)} className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110`} />
+                <Image 
+                  src={tech.image} 
+                  alt={tech.title.replace(`\n`, ` `)}
+                  width={400}
+                  height={500} 
+                  className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110`} 
+                />
                 <div className={`absolute inset-0 bg-black/40 md:group-hover:bg-black/50 transition-colors duration-300`} />
                 <div className={`absolute inset-0 p-4 flex items-center justify-center text-center`}>
                   <h3 className={`text-white font-bold text-lg md:text-xl drop-shadow-md whitespace-pre-line leading-tight`}>
