@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Skill Clinic | Our Story",
     description: "Founded by doctors, managed by doctors. Learn about our visionary perspective on hair transplantation.",
-    url: "https://www.almadinahijamacenter.com/about/our-story",
+    url: "https://www.hairskill.com//about/our-story",
     siteName: "Hair Skill Clinic",
     images: [
       {

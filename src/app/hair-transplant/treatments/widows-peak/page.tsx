@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Widows Peak Hairline Redesign | Hair Skill Clinic",
     description: "Masterclass architectural hairline design for permanent facial symmetry.",
-    url: "https://www.almadinahijamacenter.com/treatments/widows-peak",
+    url: "https://www.hairskill.com//treatments/widows-peak",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

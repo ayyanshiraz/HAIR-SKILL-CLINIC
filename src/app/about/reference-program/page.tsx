@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Skill Reference Program",
     description: "Invite your friends to experience the best hair transplant in Pakistan. You and your friend both benefit from our 20% loyalty reward.",
-    url: "https://www.almadinahijamacenter.com/about/reference-program",
+    url: "https://www.hairskill.com//about/reference-program",
     siteName: "Hair Skill Clinic",
     images: [
       {

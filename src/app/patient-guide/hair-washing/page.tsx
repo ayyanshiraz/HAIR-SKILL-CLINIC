@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Post-Op Hair Washing Guidelines",
     description: "Essential step-by-step instructions for your 48-hour post-transplant hair wash.",
-    url: "https://www.almadinahijamacenter.com/guide/hair-washing",
+    url: "https://www.hairskill.com//guide/hair-washing",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

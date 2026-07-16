@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Female Hair Restoration | Hair Skill Clinic",
     description: "Medically proven partial-shave discretion for authentic feminine softness.",
-    url: "https://www.almadinahijamacenter.com/treatments/female",
+    url: "https://www.hairskill.com//treatments/female",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

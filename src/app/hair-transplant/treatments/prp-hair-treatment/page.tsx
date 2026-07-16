@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PRP Scalp Therapy | Hair Skill Clinic",
     description: "Medically proven autologous platelet infusions to revitalize dormant follicles.",
-    url: "https://www.almadinahijamacenter.com/treatments/prp-hair-treatment",
+    url: "https://www.hairskill.com//treatments/prp-hair-treatment",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

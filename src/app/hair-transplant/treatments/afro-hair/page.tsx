@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Afro Hair Restoration | Hair Skill Clinic",
     description: "Medically proven corkscrew follicle preservation for authentic natural density.",
-    url: "https://www.almadinahijamacenter.com/treatments/afro-hair",
+    url: "https://www.hairskill.com//treatments/afro-hair",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

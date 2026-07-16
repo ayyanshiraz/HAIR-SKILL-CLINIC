@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Long FUE Hair Transplant | Hair Skill Clinic",
     description: "Maintain your existing hairstyle while undergoing surgical hair restoration.",
-    url: "https://www.almadinahijamacenter.com/treatments/long-fue",
+    url: "https://www.hairskill.com/hair-transplant/techniques/long-fue",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
