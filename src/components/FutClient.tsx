@@ -161,7 +161,7 @@ export default function FutClient() {
                     <p className="text-black text-xs font-medium leading-relaxed">Individual follicle extraction one by one for maximum graft survival.</p>
                   </Link>
 
-                  <Link href="/treatments/dhi" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
+                  <Link href="/hair-transplant/treatments/dhi" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
                     <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">DHI Technique ›</h4>
                     <p className="text-black text-xs font-medium leading-relaxed">Direct placement via Choi Implanter Pen for elite angle and density control.</p>
                   </Link>
