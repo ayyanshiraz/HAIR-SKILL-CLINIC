@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Code of Ethics | Hair Skill Clinic",
     description: "Discover our commitment to transparency, equality, and patient safety at Hair Skill Clinic.",
-    url: "https://www.hairskill.com//about/ethics",
+    url: "https://www.almadinahijamacenter.com/about/ethics",
     siteName: "Hair Skill Clinic",
     images: [
       {

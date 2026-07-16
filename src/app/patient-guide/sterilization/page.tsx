@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sterilization & Hygiene Standards | Hair Skill Clinic",
     description: "Discover our zero-compromise approach to sterile processing, instrument separation, and infection control.",
-    url: "https://www.hairskill.com//guide/sterilization",
+    url: "https://www.almadinahijamacenter.com/guide/sterilization",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

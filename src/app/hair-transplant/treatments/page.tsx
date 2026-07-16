@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Treatments & Surgical Procedures | Hair Skill Clinic",
     description: "Medically proven cellular therapies and surgical extractions for lifelong density.",
-    url: "https://www.hairskill.com//treatments",
+    url: "https://www.almadinahijamacenter.com/treatments",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

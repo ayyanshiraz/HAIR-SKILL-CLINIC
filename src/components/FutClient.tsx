@@ -156,17 +156,17 @@ export default function FutClient() {
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-6">Alternative Treatments Available at Our Clinic</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                  <Link href="/hair-transplant/treatments/manual-fue" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
+                  <Link href="/treatments/manual-fue" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
                     <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Manual FUE ›</h4>
                     <p className="text-black text-xs font-medium leading-relaxed">Individual follicle extraction one by one for maximum graft survival.</p>
                   </Link>
 
-                  <Link href="/hair-transplant/treatments/dhi" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
+                  <Link href="/treatments/dhi" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
                     <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">DHI Technique ›</h4>
                     <p className="text-black text-xs font-medium leading-relaxed">Direct placement via Choi Implanter Pen for elite angle and density control.</p>
                   </Link>
 
-                  <Link href="/hair-transplant/treatments/fue-by-moterize" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
+                  <Link href="/treatments/fue-by-moterize" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
                     <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Motorized FUE ›</h4>
                     <p className="text-black text-xs font-medium leading-relaxed">High-efficiency automated harvesting ideal for larger megasessions.</p>
                   </Link>

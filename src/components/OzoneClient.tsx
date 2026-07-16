@@ -108,7 +108,7 @@ export default function OzoneClient() {
             <span className="whitespace-nowrap">/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] active:text-[#772424] transition-colors whitespace-nowrap">Hair Transplant</Link>
              <span className="whitespace-nowrap">/</span>
-            <Link href="/hair-transplant/treatments" className="hover:text-[#772424] transition-colors whitespace-nowrap">Treatments</Link>
+            <Link href="/hair-trasnplant/treatments" className="hover:text-[#772424] transition-colors whitespace-nowrap">Treatments</Link>
             <span className="whitespace-nowrap">/</span>
             <span className="text-[#772424] whitespace-nowrap">Ozone Hair Therapy</span>
           </div>

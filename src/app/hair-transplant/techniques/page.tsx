@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Transplant Techniques Hub | Hair Skill Clinic",
     description: "Explore advanced micro grafting restoration methodologies available in Pakistan.",
-    url: "https://www.hairskill.com//techniques",
+    url: "https://www.almadinahijamacenter.com/techniques",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

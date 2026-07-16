@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Personal Data Protection Policy",
     description: "Learn how Hair Skill Clinic protects your data and privacy.",
-    url: "https://www.hairskill.com//about/data-protection",
+    url: "https://www.almadinahijamacenter.com/about/data-protection",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
