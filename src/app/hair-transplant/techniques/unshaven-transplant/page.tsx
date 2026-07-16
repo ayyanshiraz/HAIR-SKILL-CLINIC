@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Unshaven Hair Transplant | Hair Skill Clinic",
     description: "Restore density flawlessly without sacrificing your existing long hair.",
-    url: "https://www.hairskill.com//treatments/unshaven-transplant",
+    url: "https://www.almadinahijamacenter.com/treatments/unshaven-transplant",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

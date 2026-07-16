@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Operation Day Guide | Hair Skill Clinic",
     description: "Learn how we prepare you, extract follicles, and ensure your ultimate comfort during surgery.",
-    url: "https://www.hairskill.com//guide/day-of",
+    url: "https://www.almadinahijamacenter.com/guide/day-of",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

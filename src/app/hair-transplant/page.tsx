@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Transplant Treatments | Hair Skill Clinic",
     description: "World class surgical precision, dense packing, and completely natural hairline designs.",
-    url: "https://www.hairskill.com//hair-transplant",
+    url: "https://www.almadinahijamacenter.com/hair-transplant",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
