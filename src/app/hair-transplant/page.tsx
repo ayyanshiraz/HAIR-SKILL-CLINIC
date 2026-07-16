@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Transplant Treatments | Hair Skill Clinic",
     description: "World class surgical precision, dense packing, and completely natural hairline designs.",
-    url: "https://www.hairskill.com//hair-transplant",
+    url: "https://www.hairskill.com/hair-transplant",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hair-transplant/treatments/13.webp",
+        width: 1200,
+        height: 630,
+        alt: "Surgeon performing controlled manual punch extraction at Hair Skill Clinic",
+      },
+    ],
   },
 };
 
