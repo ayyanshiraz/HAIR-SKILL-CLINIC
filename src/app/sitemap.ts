@@ -59,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hair-transplant/treatments/ozone-hair-therapy',
     '/hair-transplant/treatments/prp-hair-treatment',
     '/hair-transplant/treatments/sideburn',
-    '/hair-transplant/treatments/unshaven-transplant',
+    '/hair-transplant/techniques/unshaven-transplant',
     '/hair-transplant/treatments/widows-peak'
   ];
 
