@@ -4,19 +4,22 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 
 import { countries, type Country } from "../data/countries";
 
 import AnimatedCounter from "./home/AnimatedCounter";
-import SingleDoctorStage from "./home/SingleDoctorStage";
-import BeforeAfterStage from "./home/BeforeAfterStage";
-import PhilosophyStage from "./home/PhilosophyStage";
-import WhyChooseStage from "./home/WhyChooseStage";
-import TreatmentsStage from "./home/TreatmentsStage";
-import GalleryStage from "./home/GalleryStage";
-import PatientGuideStage from "./home/PatientGuideStage";
-import TechniquesStage from "./home/TechniquesStage";
-import FAQStage from "./home/FAQStage";
+
+// Dynamically importing heavy sections to reduce initial load and improve Total Blocking Time
+const SingleDoctorStage = dynamic(() => import("./home/SingleDoctorStage"), { ssr: false });
+const BeforeAfterStage = dynamic(() => import("./home/BeforeAfterStage"), { ssr: false });
+const PhilosophyStage = dynamic(() => import("./home/PhilosophyStage"), { ssr: false });
+const WhyChooseStage = dynamic(() => import("./home/WhyChooseStage"), { ssr: false });
+const TreatmentsStage = dynamic(() => import("./home/TreatmentsStage"), { ssr: false });
+const GalleryStage = dynamic(() => import("./home/GalleryStage"), { ssr: false });
+const PatientGuideStage = dynamic(() => import("./home/PatientGuideStage"), { ssr: false });
+const TechniquesStage = dynamic(() => import("./home/TechniquesStage"), { ssr: false });
+const FAQStage = dynamic(() => import("./home/FAQStage"), { ssr: false });
 
 export default function Home() {
   const headline = `Hair Skill Clinic`;
@@ -82,13 +85,13 @@ export default function Home() {
             className={`relative w-full flex justify-center lg:justify-start items-end h-full lg:-ml-12 xl:-ml-16 mt-12 -mb-20`}
           >
             <Image
-  src={`/home/owner1.webp`}
-  alt={`Hair Skill Clinic Doctors`}
-  width={1050}
-  height={850}
-  priority={true}
-  className={`w-[115%] lg:w-[125%] max-w-[550px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1050px] h-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10`}
-/>
+              src={`/home/owner1.webp`}
+              alt={`Hair Skill Clinic Doctors`}
+              width={1050}
+              height={850}
+              priority={true}
+              className={`w-[115%] lg:w-[125%] max-w-[550px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1050px] h-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10`}
+            />
           </motion.div>
 
           <motion.div 
