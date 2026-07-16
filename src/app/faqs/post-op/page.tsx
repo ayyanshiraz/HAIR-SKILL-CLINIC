@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Post Operation F.A.Q. | Hair Skill Clinic",
     description: "Learn everything you need to know for a successful recovery after your hair transplant.",
-    url: "https://www.hairskillclinic.com/faq/post-op",
+    url: "https://www.hairskillclinic.com/faqs/post-op",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
