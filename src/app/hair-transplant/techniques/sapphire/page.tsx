@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sapphire Hair Restoration | Hair Skill Clinic",
     description: "Medically proven synthetic sapphire blade precision for refined density control.",
-    url: "https://www.almadinahijamacenter.com/techniques/sapphire",
+    url: "https://www.hairskill.com/hair-transplant/techniques/sapphire",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

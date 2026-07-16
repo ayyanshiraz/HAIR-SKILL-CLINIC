@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Manual FUE Extraction | Hair Skill Clinic",
     description: "Medically proven manual punch extractions for pristine follicular survival.",
-    url: "https://www.almadinahijamacenter.com/techniques/manual-fue",
+    url: "https://www.hairskill.com/hair-transplant/techniques/manual-fue",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

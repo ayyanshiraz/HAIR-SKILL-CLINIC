@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ozone Scalp Therapy | Hair Skill Clinic",
     description: "Medically proven high-frequency activated oxygen to revitalize hair root architecture.",
-    url: "https://www.almadinahijamacenter.com/treatments/ozone-hair-therapy",
+    url: "https://www.hairskill.com/hair-transplant/treatments/ozone-hair-therapy",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

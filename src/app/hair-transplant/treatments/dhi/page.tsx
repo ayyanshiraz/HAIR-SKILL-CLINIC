@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DHI Hair Restoration | Hair Skill Clinic",
     description: "Medically proven Choi implanter precision for natural angle control.",
-    url: "https://www.almadinahijamacenter.com/techniques/dhi",
+    url: "https://www.hairskill.com/hair-transplant/techniques/dhi",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

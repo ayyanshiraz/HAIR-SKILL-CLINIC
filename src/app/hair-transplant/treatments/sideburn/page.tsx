@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sideburn Restoration | Hair Skill Clinic",
     description: "Medically proven micro-angle graft control for absolute facial balance.",
-    url: "https://www.almadinahijamacenter.com/treatments/sideburn",
+    url: "https://www.hairskill.com/hair-transplant/treatments/sideburn",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
