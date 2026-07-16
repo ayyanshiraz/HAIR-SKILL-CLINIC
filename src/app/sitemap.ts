@@ -21,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/checkout',
     '/contact',
     '/cookie-policy',
-    '/doctors',
     '/doctors-category',
     '/faqs',
     '/faqs/general',
