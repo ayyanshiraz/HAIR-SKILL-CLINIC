@@ -26,7 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/faqs/general',
     '/faqs/post-op',
     '/faqs/pre-op',
-    '/female-hair-loss-guide',
     '/hair-transplant',
     '/hair-unit',
     '/patient-guide/after',

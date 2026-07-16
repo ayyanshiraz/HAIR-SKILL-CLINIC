@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Mesotherapy | Hair Skill Clinic",
     description: "Medically proven mesoderm vitamin infusions for authentic root density.",
-    url: "https://www.almadinahijamacenter.com/treatments/mesotherapy",
+    url: "https://www.hairskill.com/hair-transplant/treatments/mesotherapy",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
