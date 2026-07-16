@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hair-transplant/treatments/4.webp",
+        width: 1200,
+        height: 630,
+        alt: "Medical professional utilizing advanced handheld high frequency medical ozone comb wand to energize scalp follicles at Hair Skill Clinic",
+      },
+    ],
   },
 };
 
