@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Personal Data Protection & Privacy Policy | Hair Skill Clinic",
     description: "Our organizational principles and compliance standards for personal data protection.",
-    url: "https://www.hairskillclinic.com/privacy-policy",
+    url: "https://www.hairskill.com/privacy-policy",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/home/owner1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Lead Hair Transplant Surgeon and Owner of Hair Skill Clinic Lahore",
+      },
+    ],
   },
 };
 

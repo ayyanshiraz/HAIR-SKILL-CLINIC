@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/home/techniques/3.webp",
+        width: 1200,
+        height: 630,
+        alt: "Surgeon holding specialized Choi implanter pen used for Direct Hair Implantation DHI at Hair Skill Clinic",
+      },
+    ],
   },
 };
 
