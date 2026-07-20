@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pre Operation F.A.Q. | Hair Skill Clinic",
     description: "Learn everything you need to know before your hair transplant procedure.",
-    url: "https://www.hairskillclinic.com/faq/pre-op",
+    url: "https://www.hairskill.com/faqs/pre-op",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/home/owner1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Lead Hair Transplant Surgeon and Owner of Hair Skill Clinic Lahore",
+      },
+    ],
   },
 };
 
