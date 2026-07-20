@@ -70,7 +70,7 @@ export default function PreOpClient() {
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/faq" className="hover:text-[#772424] transition-colors">F.A.Q.</Link>
+            <Link href="/faqs" className="hover:text-[#772424] transition-colors">F.A.Q.</Link>
             <span>/</span>
             <span className="text-[#772424]">Pre Operation</span>
           </div>
