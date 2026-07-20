@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Manual Punch Hair Transplant Pakistan | Hair Skill Clinic",
     description: "A detail-focused approach to donor area harvesting that prioritizes graft survival and extreme precision.",
-    url: "https://www.hairskillclinic.com/hair-transplant/techniques/manual-punch",
+    url: "https://www.hairskill.com/hair-transplant/techniques/manual-punch",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

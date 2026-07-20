@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Loss Therapies | Hair Skill Clinic",
     description: "Medically proven cellular treatments to halt shedding and restore density.",
-    url: "https://www.hairskillclinic.com/blogs/hair-loss",
+    url: "https://www.hairskill.com/blogs/hair-loss",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

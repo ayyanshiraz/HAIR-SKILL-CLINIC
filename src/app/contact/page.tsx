@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Us | Hair Skill Clinic",
     description: "Reach out to us to start your hair restoration journey today.",
-    url: "https://www.hairskillclinic.com/contact",
+    url: "https://www.hairskill.com/contact",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
