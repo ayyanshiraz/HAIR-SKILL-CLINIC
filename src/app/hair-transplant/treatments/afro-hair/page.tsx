@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.hairskill.com/hair-transplant/treatments/afro-hair/1.webp",
+        url: "https://www.hairskill.com/hair-transplant/treatments/afro-hair/13.webp",
         width: 1200,
         height: 630,
         alt: "Afro Hair Transplant and Coiled Hair Restoration at Hair Skill Clinic Lahore Pakistan",

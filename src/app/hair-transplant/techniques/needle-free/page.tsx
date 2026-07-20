@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.hairskill.com/home/techniques/8.webp",
+        url: "https://www.hairskill.com/hair-transplant/25.webp",
         width: 1200,
         height: 630,
-        alt: "Medical professional administering needle free jet injection anesthesia for hair transplant at Hair Skill Clinic",
+        alt: "Surgeon holding advanced high pressure jet injection device used for Needle Free Anesthesia in Lahore",
       },
     ],
   },
