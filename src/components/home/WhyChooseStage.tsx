@@ -46,7 +46,7 @@ export default function WhyChooseStage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className={`text-black text-center text-base md:text-lg lg:text-xl leading-relaxed max-w-5xl mx-auto`}
         >
-          Hair is an important part of our aesthetic perception and self-confidence. Correct applications strengthen not only the appearance but also the persons self-confidence. Hair Skill Clinic offers best-in-class medical procedures with advanced medical techniques and ethical approach. With the experience of our specialist doctors, our patient-oriented service approach and our culture of hospitality, we ensure that you achieve natural and successful hair transplant results.
+          Hair is an important part of your aesthetic perception and overall self-confidence. Correct clinical applications strengthen not only physical appearance but also inner confidence. Providing the best hair transplant in Lahore, Hair Skill Clinic offers exceptional procedures using advanced medical techniques and ethical care. Through the vast experience of our specialist doctors and patient-oriented hospitality, we ensure you achieve completely natural and successful results.
         </motion.p>
 
       </div>

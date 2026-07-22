@@ -10,19 +10,19 @@ export default function PhilosophyStage() {
   const philosophyData = [
     {
       title: `True Planning`,
-      content: `At Hair Skill, the process always begins with analysis. True Planning technique illuminates the way to achieve a natural-looking transplant result. Examining the data before making a decision is an important step in hair transplantation. Thus, Hair Skill recognizes the patients inputs and strives to achieve the maximum. In the True Planning step, our doctors examine the donor area in detail. Hair Skill believes that determining the most appropriate number of grafts for the patients needs depends on the doctors hair design skills and taste.`
+      content: `At Hair Skill, the medical process always begins with a detailed analysis. True Planning illuminates the precise path to achieving completely natural results. Examining patient data before making a clinical decision is a crucial step in any hair transplant procedure in Pakistan. Thus, our doctors meticulously examine the donor area in detail and carefully listen to patient inputs to achieve maximum patient satisfaction. We firmly believe that determining the exact number of grafts depends entirely on the doctors clinical expertise and highly refined aesthetic taste.`
     },
     {
       title: `True Hair Line Design`,
-      content: `We believe that hairline design is the key to a natural looking hair transplant result. Our True Hairline Designing procedures prioritize the placement of single hair follicular units in the front lines to maintain aesthetic proportions and appearance. Our aesthetic front line drawing always takes angles into account to extend the hair in a natural looking way. Since it is important to maintain the masculinity of the hairline, the position of the hairline is determined by the muscles in the forehead.`
+      content: `We believe that proper hairline design is the ultimate secret to a truly flawless and natural look. Our True Hairline Design procedures prioritize the meticulous placement of single follicular units in the frontal region to perfectly maintain ideal aesthetic proportions and overall appearance. By calculating precise angles and following facial anatomy, we guarantee the hair grows naturally, which is a hallmark of the most successful hair transplant procedure. Since maintaining masculinity is crucial, the exact position is determined by forehead muscles.`
     },
     {
       title: `True Execution`,
-      content: `The day of the operation is a key milestone for a successful outcome in the entire transformation process. The day of the operation is a marathon after a long technical detail preparation. Therefore, thanks to Hair Skills high-level precautions, nothing is allowed to go wrong. Hair Skills main goal is always to achieve successful operations and results, and it uses all its efforts and resources to succeed and do room best.`
+      content: `The day of the operation is a major milestone for a successful outcome in your entire transformation process. It is a marathon after extensive technical and medical preparation. By implementing high level clinical safety precautions, our professional team ensures a smooth experience where absolutely nothing is allowed to go wrong. Our primary goal is always to deliver safe operations and outstanding results for every single patient walking through our clinic doors.`
     },
     {
       title: `True Innovation`,
-      content: `The founders of Hair Skill Clinic are strongly committed to the idea of seeing development as the foundation of medicine. Hair Skill has an undying passion for developing innovation. Hair Skill medical specialists and medical consultants are always trying to find more effective ways to perform the most effective hair transplant operations. The Sapphire Transplantation technique is a must in all operations and is one of the brightest manifestations of True Innovation.`
+      content: `The visionary founders of Hair Skill Clinic strongly view continuous development as the absolute foundation of modern medicine. Our dedicated medical specialists and consultants have an undying passion for advancing hair restoration techniques. They are constantly trying to find more effective ways to perform safe operations. Utilizing highly advanced methods like the Sapphire technique is an absolute must in all operations and it represents one of the brightest manifestations of True Innovation.`
     }
   ];
 
@@ -48,7 +48,7 @@ export default function PhilosophyStage() {
             Hair Skill True Philosophy
           </h2>
           <p className={`text-black max-w-3xl text-lg leading-relaxed`}>
-            Hair Skill Clinic has disciplined the way of performing hair transplantation around the TRUE Philosophy, which consists of four elements, and these four elements revolve around the four main values of the brand.
+            As a leading hair transplant clinic in Lahore, Hair Skill Clinic has highly disciplined the way of performing hair transplantation around a TRUE Philosophy to deliver the best hair transplant procedure for everyone.
           </p>
         </motion.div>
 

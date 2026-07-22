@@ -15,7 +15,7 @@ export default function PatientGuideStage() {
       ringColor: `border-[#4A0E0E]`,
       icon: `/home/guide/1.webp`,
       position: `bottom`,
-      description: `What to consider before having a hair transplant is one of the most important questions in the minds of many hair transplant candidates. For those who have not had this experience before, the unknown may cause anxiety, but this is completely natural. As Hair Skill Clinic, we have prepared a detailed pre-operation guide so that you can feel safe at every stage of the process. Being informed about all processes will allow you to prepare for the day of the operation more comfortably and consciously.`
+      description: `Understanding what to consider before having a hair transplant procedure is a highly important question in the minds of many candidates. For individuals who have not had this specific medical experience before, the unknown may cause some anxiety, which is completely natural. As a top hair transplant clinic in Lahore, we have prepared a fully comprehensive and detailed patient guide to ensure you feel perfectly safe. Being fully informed about all clinical processes allows you to comfortably and consciously prepare for your successful operation day.`
     },
     {
       id: 2,

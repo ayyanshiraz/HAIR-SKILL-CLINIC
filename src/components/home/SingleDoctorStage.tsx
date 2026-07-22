@@ -10,7 +10,7 @@ export default function SingleDoctorStage() {
     name: `Dr. Mansoor Ahmad`,
     title: `Senior Chief Surgeon and Medical Director`,
     image: `/home/doctor.webp`,
-    bio: `Dr Mansoor Ahmad is a highly distinguished surgical specialist with over four decades of operative practice and clinical leadership. Registered permanently with the Pakistan Medical and Dental Council his career represents a lifelong commitment to surgical precision patient safety and advanced medical administration.`
+    bio: `Dr. Mansoor Ahmad is a highly distinguished surgical specialist with over four decades of operative practice and clinical leadership. Registered permanently with the Pakistan Medical and Dental Council, his career represents a lifelong commitment to surgical precision, patient safety, and advanced medical administration.`
   };
 
   return (
@@ -51,7 +51,7 @@ export default function SingleDoctorStage() {
             transition={{ delay: 0.6, duration: 0.8, ease: `easeOut` }}
             className={`text-gray-600 max-w-2xl font-medium text-base md:text-lg leading-relaxed mt-2`}
           >
-            Our hair restoration clinics are directed exclusively by legendary surgeon who execute every single micro-incision with clinical perfection.
+            Our hair restoration clinic is directed exclusively by the best hair transplant surgeon in Lahore, who executes every single micro-incision with clinical perfection.
           </motion.p>
         </motion.div>
 

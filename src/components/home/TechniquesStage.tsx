@@ -103,7 +103,7 @@ export default function TechniquesStage() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className={`text-white/90 text-base md:text-lg leading-relaxed`}
           >
-            Hair Skill Clinic applies the highest standards in hair transplantation operations. For example, ensuring that the Sapphire FUE Transplantation technique is an indispensable standard in all operations is a clear reflection of Hair Skill Clinic, which was founded by medical doctors. Operations at Hair Skill Clinic are performed by medical doctors and a healthcare team.
+            As the best hair transplant clinic in Lahore Hair Skill Clinic applies the highest medical standards to all procedures. For example ensuring that the advanced Sapphire FUE technique remains an indispensable standard in every operation is a clear reflection of our core values. All surgical procedures are meticulously performed by specialized doctors and healthcare teams.
           </motion.p>
         </div>
 

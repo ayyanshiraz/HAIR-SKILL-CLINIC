@@ -87,7 +87,7 @@ export default function Footer() {
               />
             </div>
             <p className={`text-base text-red-100 font-medium mb-6 pr-4 leading-relaxed`}>
-              Lahore premier clinic for advanced hair transplant and restoration services. We specialize in delivering natural-looking results to help you regain your confidence with expert care.
+              As the premier advanced hair restoration center we offer exceptional clinical services. We specialize in delivering completely natural results to restore your confidence right now.
             </p>
           </div>
 

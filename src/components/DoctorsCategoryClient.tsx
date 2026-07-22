@@ -184,7 +184,7 @@ export default function DoctorsCategoryClient() {
                   <span className="text-xs font-black text-[#772424] tracking-widest uppercase">Verified Medical Leadership</span>
                   <h2 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">40+ Years of Surgical Craftsmanship</h2>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Dr Mansoor Ahmad is a highly distinguished surgical specialist with over four decades of operative practice and clinical leadership. Registered permanently with the Pakistan Medical and Dental Council his career represents a lifelong commitment to surgical precision patient safety and advanced medical administration.
+                    Dr. Mansoor Ahmad is a highly distinguished surgical specialist with over four decades of operative practice and clinical leadership. Registered permanently with the Pakistan Medical and Dental Council, his career represents a lifelong commitment to surgical precision, patient safety, and advanced medical administration.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                     Combining foundational surgical training with a Master of Hospital Management Dr Ahmad brings a comprehensive perspective to restorative clinical operations. He ensures that every procedure performed adheres to international cleanroom protocols patient education standards and ethical medical care.
