@@ -52,7 +52,7 @@ export default function DoctorsCategoryClient() {
   const officialDegrees = [
     {
       title: "Bachelor of Medicine and Bachelor of Surgery MBBS",
-      institute: "University of the Punjab Lahore",
+      institute: "Quaid-e-Azam Medical College, Bahawalpur",
       year: "1979",
       details: "Foundational medical qualification authorizing comprehensive clinical practice in medicine surgery and obstetrics."
     },
