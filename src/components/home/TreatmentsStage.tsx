@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 export default function TreatmentsStage() {
   const treatments = [
     {
-      title: `Hair Transplant`,
-      href: `/hair-transplant`,
+      title: `Manual Fue`,
+      href: `/hair-transplant/treatments/manual-fue`,
       bgColor: `bg-[#4A0E0E]`,
       icon: <img src={`/our%20treatments/1.svg`} alt={`Hair Transplant Icon`} className={`w-full h-full object-contain`} />
     },
