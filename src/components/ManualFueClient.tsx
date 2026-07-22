@@ -104,10 +104,10 @@ export default function ManuelFueClient() {
                   FUE Manual Hair Transplant
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  FUE (Follicular Unit Extraction) Manual is one of the most trusted and effective hair transplant techniques available today. In this method, each hair follicle is extracted manually with precision, ensuring maximum graft survival and natural-looking results.
+                  FUE (Follicular Unit Extraction) Manual is recognized as a highly trusted technique for restoring natural density. If you are searching for the best fue hair transplant, this method ensures maximum graft survival because each hair follicle is extracted manually with extreme precision.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Our manual extraction process minimizes trauma to the scalp and helps preserve the quality of every graft. This technique is ideal for patients seeking natural density and long-lasting outcomes.
+                  At Hair Skill Clinic, our manual extraction process minimizes trauma to the scalp and preserves the quality of every graft. We are proud to be a leading fue hair transplant clinic where patients receive personalized care for long lasting and natural-looking results.
                 </p>
               </motion.div>
 
@@ -135,7 +135,7 @@ export default function ManuelFueClient() {
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Recovery</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  The procedure requires minimal downtime, and patients can typically return to their normal routine within a few days. Our specialists will provide all necessary post-procedure guidance and medications to support a smooth recovery.
+                  The procedure requires minimal downtime, allowing you to return to your normal routine within a few days. Our specialists will provide all necessary post-procedure guidance and medications to support a smooth recovery.
                 </p>
               </motion.div>
 
@@ -145,22 +145,16 @@ export default function ManuelFueClient() {
                   The Heritage and Precision of Manual Extraction
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Manual Fue Hair Transplant is the first technique applied in hair transplantation where the grafts are removed one by one. It can be seen as the ancestor of all currently used FUE hair transplantation techniques.
+                  Manual FUE hair transplant is the first technique applied in hair transplantation where the grafts are removed one by one. It can be seen as the ancestor of all currently used FUE hair transplantation techniques. 
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  It has been developed as an alternative to the FUE method in which it is made by removing some of the skin from the donor area and leaving the visible stitch marks that cut the donor area horizontally.
+                  It has been developed as an alternative to the older methods in which a procedure is made by removing some of the skin from the donor area and leaving visible stitch marks that cut the donor area horizontally. The skin around the hair is carefully cut and grafts are obtained by rotating the punches with the help of fingers. In the technique performed using large biopsy punches in the early stages the punches have also been modernized over time and became specialized for this job.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The skin around the hair is cut and grafts are obtained by rotating the punches with the help of fingers. In the technique performed using large biopsy punches in the early stages the punches have also been modernized over time and became specialized for this job.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The biggest advantage of manual Fue hair transplantation is that it is the best technique when it comes to removing the grafts with the least damage. The hair transplant surgeon controls the whole process and makes a careful and gentle plan for each graft and takes follicular units.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  It can be stated for manual FUE hair transplantation that the only disadvantage is that it takes long time so that the number of grafts cannot be exceeded.
+                  The biggest advantage of manual FUE hair transplantation is that it is the best technique when it comes to removing the grafts with the least damage. When patients look for a reliable fue hair transplant near me, they want assurance that the hair transplant surgeon controls the whole process. The surgeon makes a careful and gentle plan for each graft and takes follicular units with extreme care. It can be stated for manual FUE hair transplantation that the only disadvantage is that it takes a long time so that the number of grafts cannot be exceeded in a single session.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  After repeated sessions with low graft numbers the results obtained in hair transplantation using a micromotor are achieved. Performing repeated sessions for large areas shifts into upper PKR investment tiers for patients.
+                  After repeated sessions with low graft numbers the results obtained in hair transplantation using a micromotor are achieved. Performing repeated sessions for large areas directly impacts the fue hair transplant cost and shifts into upper investment tiers for patients evaluating the overall fue hair transplant price in pakistan.
                 </p>
               </motion.div>
 
@@ -176,13 +170,13 @@ export default function ManuelFueClient() {
                   Clinics that perform FUE hair transplantation will transplant your grafts with this technique unless you choose another method. The procedure performed using punches of 0.6 to 1 millimeter diameter is minimally invasive. After sapphire hair transplantation the recovery of the donor area is completed in about seven days.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Its biggest advantage is that it is fast and can reach high graft numbers in FUE hair transplantation. In this way more intense results can be obtained in a larger surface area in one session. It significantly reduces the number of sessions required for patients and consequently sits inside highly accessible local PKR package ranges.
+                  Its biggest advantage is that it is fast and can reach high graft numbers. In this way more intense results can be obtained in a larger surface area in one session. It significantly reduces the number of sessions required for patients making it a highly accessible choice for anyone looking for a reliable fue hair transplant in lahore with flexible local package ranges.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   In micro motor hair transplantation the extraction process is not as controlled and gentle as manual FUE hair transplantation. If the surgeon performing the removal procedure is not experienced the fracture percentage of follicular units increases.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  Therefore in Hair Skill Clinic the quality of the grafts and the fracture percentage are observed during the removal process.
+                  Therefore in Hair Skill Clinic the quality of the grafts and the fracture percentage are meticulously observed during the removal process to ensure superior results.
                 </p>
               </motion.div>
 
