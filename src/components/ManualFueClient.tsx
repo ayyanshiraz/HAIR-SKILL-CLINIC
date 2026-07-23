@@ -67,12 +67,12 @@ export default function ManuelFueClient() {
             <span>/</span>
             <Link href="/hair-transplant/treatments" className="hover:text-[#772424] active:text-[#772424] transition-colors">Treatments</Link>
             <span>/</span>
-            <span className="text-[#772424]">Manual Fue Hair Transplant</span>
+            <span className="text-[#772424]">Manual FUE Extraction</span>
           </div>
           
           {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-            Manual Fue Hair Transplant
+            Manual FUE Extraction | Hair Skill Clinic
           </h1>
         </div>
       </motion.section>
@@ -104,10 +104,10 @@ export default function ManuelFueClient() {
                   FUE Manual Hair Transplant
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  FUE (Follicular Unit Extraction) Manual is recognized as a highly trusted technique for restoring natural density. If you are searching for the best fue hair transplant, this method ensures maximum graft survival because each hair follicle is extracted manually with extreme precision.
+                  The FUE (Follicular Unit Extraction) manual is recognized as a highly trusted technique for restoring natural density. If you are searching for the best FUE hair transplant, this method ensures maximum graft survival because each hair follicle is extracted manually with extreme precision.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  At Hair Skill Clinic, our manual extraction process minimizes trauma to the scalp and preserves the quality of every graft. We are proud to be a leading fue hair transplant clinic where patients receive personalized care for long lasting and natural-looking results.
+                  At the Hair Skill Clinic, our manual extraction process minimizes trauma to the scalp and preserves the quality of every graft. We are proud to be a leading FUE hair transplant clinic where patients receive personalized care for long-lasting and natural-looking results.
                 </p>
               </motion.div>
 
@@ -145,16 +145,16 @@ export default function ManuelFueClient() {
                   The Heritage and Precision of Manual Extraction
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Manual FUE hair transplant is the first technique applied in hair transplantation where the grafts are removed one by one. It can be seen as the ancestor of all currently used FUE hair transplantation techniques. 
+                  Manual FUE hair transplant is the first technique applied in hair transplantation where the grafts are removed one by one. It can be seen as the ancestor of all currently used FUE hair transplantation techniques.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  It has been developed as an alternative to the older methods in which a procedure is made by removing some of the skin from the donor area and leaving visible stitch marks that cut the donor area horizontally. The skin around the hair is carefully cut and grafts are obtained by rotating the punches with the help of fingers. In the technique performed using large biopsy punches in the early stages the punches have also been modernized over time and became specialized for this job.
+                  It has been developed as an alternative to the older methods in which a procedure is made by removing some of the skin from the donor area and leaving visible stitch marks that cut the donor area horizontally. The skin around the hair is carefully cut, and grafts are obtained by rotating the punches with the help of fingers. In the technique performed using large biopsy punches in the early stages, the punches have also been modernized over time and have become specialized for this job.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The biggest advantage of manual FUE hair transplantation is that it is the best technique when it comes to removing the grafts with the least damage. When patients look for a reliable fue hair transplant near me, they want assurance that the hair transplant surgeon controls the whole process. The surgeon makes a careful and gentle plan for each graft and takes follicular units with extreme care. It can be stated for manual FUE hair transplantation that the only disadvantage is that it takes a long time so that the number of grafts cannot be exceeded in a single session.
+                  The biggest advantage of manual FUE hair transplantation is that it is the best technique when it comes to removing the grafts with the least damage. When patients look for a reliable FUE hair transplant near me, they want assurance that the hair transplant surgeon controls the whole process. The surgeon makes a careful and gentle plan for each graft and takes follicular units with extreme care. It can be stated for manual FUE hair transplantation that the only disadvantage is that it takes a long time, so the number of grafts cannot be exceeded in a single session.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  After repeated sessions with low graft numbers the results obtained in hair transplantation using a micromotor are achieved. Performing repeated sessions for large areas directly impacts the fue hair transplant cost and shifts into upper investment tiers for patients evaluating the overall fue hair transplant price in pakistan.
+                  After repeated sessions with low graft numbers, the results obtained in hair transplantation using a micromotor are achieved. Performing repeated sessions for large areas directly impacts the FUE hair transplant cost and shifts into upper investment tiers for patients evaluating the overall FUE hair transplant price in Pakistan.
                 </p>
               </motion.div>
 
@@ -164,19 +164,19 @@ export default function ManuelFueClient() {
                   Micro FUE Hair Transplantation
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Micro FUE hair transplantation is a technique performed using specialized motors. In this technique punches are placed on the end of the hand piece connected to the micro motor. Rotation speed and direction can be adjusted on the motor. It is the most common technique used in the world.
+                  Micro FUE hair transplantation is a technique performed using specialized motors. In this technique, punches are placed on the end of the handpiece connected to the micromotor. Rotation speed and direction can be adjusted on the motor. It is the most common technique used in the world.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Clinics that perform FUE hair transplantation will transplant your grafts with this technique unless you choose another method. The procedure performed using punches of 0.6 to 1 millimeter diameter is minimally invasive. After sapphire hair transplantation the recovery of the donor area is completed in about seven days.
+                  Clinics that perform FUE hair transplantation will transplant your grafts with this technique unless you choose another method. The procedure performed using punches of 0.6 to 1 millimeter diameter is minimally invasive. After sapphire hair transplantation, the recovery of the donor area is completed in about seven days.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Its biggest advantage is that it is fast and can reach high graft numbers. In this way more intense results can be obtained in a larger surface area in one session. It significantly reduces the number of sessions required for patients making it a highly accessible choice for anyone looking for a reliable fue hair transplant in lahore with flexible local package ranges.
+                  Its biggest advantage is that it is fast and can reach high graft numbers. In this way, more intense results can be obtained in a larger surface area in one session. It significantly reduces the number of sessions required for patients, making it a highly accessible choice for anyone looking for a reliable FUE hair transplant in Lahore with flexible local package ranges.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  In micro motor hair transplantation the extraction process is not as controlled and gentle as manual FUE hair transplantation. If the surgeon performing the removal procedure is not experienced the fracture percentage of follicular units increases.
+                  In micro motor hair transplantation, the extraction process is not as controlled and gentle as manual FUE hair transplantation. If the surgeon performing the removal procedure is not experienced, the fracture percentage of follicular units increases.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  Therefore in Hair Skill Clinic the quality of the grafts and the fracture percentage are meticulously observed during the removal process to ensure superior results.
+                  Therefore, in the Hair Skill Clinic, the quality of the grafts and the fracture percentage are meticulously observed during the removal process to ensure superior results.
                 </p>
               </motion.div>
 
@@ -186,12 +186,12 @@ export default function ManuelFueClient() {
                   Manual FUE vs Micro FUE
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Since the introduction of micromotors in FUE hair transplantation there have been debates on which method is superior. Hair Skill Clinic embraces the classic medical statement that there is no universal patient there is only the individual condition. Therefore surgeons who successfully apply many techniques make special plans tailored to the needs of each patient.
+                  Since the introduction of micromotors in FUE hair transplantation, there have been debates on which method is superior. Hair Skill Clinic embraces the classic medical statement that there is no universal patient; there is only the individual condition. Therefore, surgeons who successfully apply many techniques make special plans tailored to the needs of each patient.
                 </p>
 
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">When we compare these two methods</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  When we compare these two methods we see that the two techniques are basically the same at their core. Manual FUE is slower and more controlled whereas micro FUE is faster. Although it is true that the grafts taken in the manual FUE technique are less damaged it is also a fact that the rapid implantation of grafts in micro FUE positively affects the overall experience and convenience for the patient.
+                  When we compare these two methods, we see that the two techniques are basically the same at their core. Manual FUE is slower and more controlled, whereas micro FUE is faster. Although the grafts taken in the manual FUE technique are indeed less damaged, it is also a fact that the rapid implantation of grafts in micro-FUE positively affects the overall experience and convenience for the patient.
                 </p>
 
                 <div className="space-y-3 ml-1 sm:ml-2 mb-6">
@@ -199,8 +199,8 @@ export default function ManuelFueClient() {
                     "Manual FUE is superior in terms of less damage to the grafts and donor area",
                     "Micro FUE is superior because the number of grafts transplanted in a single session can be three times more than manual FUE.",
                     "Micro FUE hair transplants sit inside far more competitive local PKR investment tiers",
-                    "Since fewer grafts are transplanted recovery in the donor area is faster in the manual FUE method",
-                    "It is easy to find a clinic that uses the micro FUE technique while the number of surgeons mastering the manual FUE method is much less."
+                    "Since fewer grafts are transplanted, recovery in the donor area is faster in the manual FUE method",
+                    "It is easy to find a clinic that uses the micro-FUE technique, while the number of surgeons mastering the manual FUE method is much less."
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3"><span className="text-[#772424] font-black text-lg shrink-0">•</span><p className="text-black text-base md:text-lg font-medium">{item}</p></div>
                   ))}
@@ -216,10 +216,10 @@ export default function ManuelFueClient() {
                   The best hair transplantation method is carefully selected by your FUE hair transplant surgeon to prevent any disappointment. This is done by explaining all possible results to you and making a detailed plan in that specific direction.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  FUE hair transplantation is a procedure you undergo to feel happy when you look in the mirror. The absolute best hair transplant operation is simply the one that achieves your personal goals. Thus Hair Skill Clinic surgeons will help you choose the most suitable method for your unique hair loss pattern. Many advanced methods are successfully applied in our clinic and the best possible result is always targeted for our patients.
+                  FUE hair transplantation is a procedure you undergo to feel happy when you look in the mirror. The absolute best hair transplant operation is simply the one that achieves your personal goals. Thus, Hair Skill Clinic surgeons will help you choose the most suitable method for your unique hair loss pattern. Many advanced methods are successfully applied in our clinic. The best possible result is always targeted for our patients.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  People who want to have a hair transplant operation and do research on this matter often encounter many complex medical terms. These terms can create confusion and keep people away from the path that is actually right for them. Ultimately the best hair transplant for you is the one you receive in the right clinic with an experienced medical team.
+                  People who want to have a hair transplant operation and do research on this matter often encounter many complex medical terms. These terms can create confusion and keep people away from the path that is actually right for them. Ultimately, the best hair transplant for you is the one you receive in the right clinic with an experienced medical team.
                 </p>
               </motion.div>
 
@@ -229,16 +229,13 @@ export default function ManuelFueClient() {
                   Manual FUE Hair Transplantation in Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  If you prefer the skilled surgeons of Hair Skill Clinic and a specific number of grafts can meet your needs we can expertly perform your hair transplantation using manual FUE. Our dedicated case managers in consultation with our leading physicians will support you in making the right choice and eliminating any confusion.
+                  If you prefer the skilled surgeons at Hair Skill Clinic and a specific number of grafts meets your needs, we can expertly perform your hair transplantation using manual FUE. Our dedicated case managers, in consultation with our leading physicians, will support you in making the right choice and eliminating any confusion.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Special planning for the pre-operation phase is made according to each individual person who wants to have a hair transplant in our clinic. The data obtained during the entire operation is processed carefully in the patient file. This ensures that the operation proceeds smoothly and exactly in the planned course.
+                  Special planning for the pre-operation phase is tailored to each person who wants to have a hair transplant at our clinic. The data obtained during the entire operation is processed carefully in the patient file. This ensures that the operation proceeds smoothly and exactly in the planned course.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Your vital signs are monitored periodically by our medical team who have received advanced life support training to make sure that you are completely safe. In Hair Skill Clinic all operation rooms are sterilized every single day so the risk of infection is minimized to zero.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-extrabold">
-                  Our expert team and surgeons will support you throughout the whole journey after the procedure and make sure that everything goes perfectly well during your recovery.
+                  Your vital signs are monitored periodically by our medical team, who have received advanced life support training to ensure you are completely safe. In the Hair Skill Clinic, all operation rooms are sterilized every single day so the risk of infection is minimized to zero.
                 </p>
               </motion.div>
 
