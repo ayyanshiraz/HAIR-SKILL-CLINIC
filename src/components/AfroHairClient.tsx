@@ -51,7 +51,7 @@ export default function AfroHairClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 18 FAQS DATA (Verbatim from pasted text, scrubbed of safe prose & exact numeric price errors) ---
+  // --- 18 FAQS DATA ---
   const faqList = [
     {
       q: "Can Afro hair be transplanted successfully?",
@@ -138,7 +138,6 @@ export default function AfroHairClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors whitespace-nowrap">Homepage</Link>
             <span className="whitespace-nowrap">/</span>
@@ -149,7 +148,6 @@ export default function AfroHairClient() {
             <span className="text-[#772424] whitespace-nowrap">Afro Hair Transplant</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 tracking-tight text-center break-words">
             Afro Hair Transplant
           </h1>
@@ -161,26 +159,23 @@ export default function AfroHairClient() {
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             
-            {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & 5 MAPPED IMAGES */}
+            {/* LEFT COLUMN */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual (Man flexing bicep in plaid shirt) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
                   src="/hair-transplant/13.webp" 
                   alt="Confident smiling African American gentleman flexing bicep after successful Afro Hair Transplant restoration" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
-                
               </motion.div>
 
-              {/* Lead Introduction */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  If you have been searching for a clinic that truly understands the needs of tightly coiled hair this page gives you the clarity you have been missing. A bold afro hair transplant Pakistan experience depends on surgeons who respect curl biology donor limits and natural hairline shapes. Not every clinic can do that. Hair Skill focuses on difficult cases complex textures and patients who were previously told their curls were too challenging.
+                  If you have been searching for a clinic that truly understands the needs of tightly coiled hair this page gives you the clarity you have been missing. A bold Afro hair transplant Pakistan experience depends on surgeons who respect curl biology donor limits and natural hairline shapes. Not every clinic can do that. Hair Skill focuses on difficult cases complex textures and patients who were previously told their curls were too challenging.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  An afro hair transplant in Pakistan can rebuild confidence when thinning edges traction damage or genetic loss affect your daily life. Our team approaches every case with careful planning. No templates. No assumptions. Just a deep focus on curl direction density and long term health.
+                  An Afro hair transplant in Pakistan can rebuild confidence when thinning edges traction damage or genetic loss affect your daily life. Our team approaches every case with careful planning. No templates. No assumptions. Just a deep focus on curl direction density and long term health. Whether you are looking for an Afro hair transplant near me or planning to travel you deserve a medical team that gets it right.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   If you want a natural result that honors your texture this guide explains how we work what the process looks like and why Hair Skill is trusted by men and women from the US UK Africa and the Caribbean looking for a reliable ethnic hair transplant Pakistan option.
@@ -200,70 +195,66 @@ export default function AfroHairClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Why Afro Hair Needs Specialist Expertise */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Afro Hair Needs Specialist Transplant Expertise
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
-                  Understanding curly follicle structure is the foundation of a successful afro hair transplant Lahore journey. Afro hair grows in a curved corkscrew pathway beneath the skin. The follicle has an elliptical cross section. The root follows a subcutaneous curve. These features give Afro hair its strength and identity but they also increase the risk of transection if the clinic uses standard tools or straight extraction angles.
+                  Understanding curly follicle structure is the foundation of a successful Afro hair transplant Lahore journey. Afro hair grows in a curved corkscrew pathway beneath the skin. The follicle has an elliptical cross section. The root follows a subcutaneous curve. These features give Afro hair its strength and identity but they also increase the risk of transection if the clinic uses standard tools or straight extraction angles.
                 </p>
 
-                {/* IMAGE 2: Scalp marked with blue mapping pen */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/14.webp" alt="Macro view of patient scalp marked with surgical blue pen defining temporal and frontal curl boundaries" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Why afro hair transplant is different</h3>
+                    <h3 className="text-2xl font-black text-[#772424] mb-2">Why Afro hair transplant is different</h3>
                     <p className="text-black text-base md:text-lg leading-relaxed font-medium">Afro follicles bend under the skin. That bend must be respected. If a straight punch is used the root may be cut before extraction. This creates lower growth rates and patchy results. At Hair Skill extraction follows the natural rotation of each follicle using punch sizes chosen after a detailed scalp reading.</p>
                   </div>
 
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Tools made for curls</h3>
-                    <p className="text-black text-base md:text-lg leading-relaxed font-medium">Hair Skill uses manual FUE for afro hair for many cases. This offers tight control over angle pressure and depth. Some cases combine micromotor extraction with curved punches. For hairline work our surgeons often prefer DHI with the Choi Pen because implantation angle control protects the curl pattern.</p>
+                    <p className="text-black text-base md:text-lg leading-relaxed font-medium">Hair Skill uses manual FUE for Afro hair for many cases. This offers tight control over angle pressure and depth. Some cases combine micromotor extraction with curved punches. For hairline work our surgeons often prefer DHI with the Choi Pen because implantation angle control protects the curl pattern.</p>
                   </div>
 
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Preserving curl direction</h3>
                     <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">Your final look depends on correct placement. Implanting curls without respecting their natural rotation leads to awkward texture or unnatural lift. Our surgeons place every graft with attention to curl orientation so your density matures smoothly over the months.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our clinical specialists emphasize: Afro follicles require patience. They deserve surgeons who respect their rhythm. Rushing is not an option.
+                      Our clinical specialists emphasize. Afro follicles require patience. They deserve surgeons who respect their rhythm. Rushing is not an option.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Why Choose Afro Hair Transplant at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Choose Afro Hair Transplant in Pakistan at Hair Skill Clinic
                 </h2>
 
-                {/* IMAGE 3: Before / After comparison of gentleman in yellow shirt */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/15.webp" alt="Side by side comparison of Afro patient in yellow shirt showing native frontal thinning versus restored dense mature hairline" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Many patients first search afro hair transplant Pakistan because they hear that results are strong and prices are more manageable. The truth is a bit deeper. Why afro hair transplant in Pakistan has a simple answer: Volume and focus. Clinics here treat thousands of curly and coiled cases each year which sharpens technique and understanding of different textures.
+                  Many patients first search Afro hair transplant Pakistan because they hear that results are strong and prices are more manageable. The truth is a bit deeper. Why an Afro hair transplant in Pakistan has a simple answer. Volume and focus. Clinics here treat thousands of curly and coiled cases each year which sharpens technique and understanding of different textures.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
-                  Lahore in particular attracts people looking for afro hair transplant Lahore afro american hair transplant Pakistan and afro caribbean hair transplant in Pakistan. The city has a mature ecosystem. Hotels that know post op needs. Drivers used to medical visitors. Coordinators who support patients flying in from the US UK Europe and Africa. That environment keeps things smoother from airport to follow up.
+                  Lahore in particular attracts people looking for an Afro hair transplant Lahore an Afro American hair transplant Pakistan and an Afro Caribbean hair transplant in Pakistan. The city has a mature ecosystem. Hotels that know post op needs. Drivers used to medical visitors. Coordinators who support patients flying in from the US UK Europe and Africa. That environment keeps things smoother from airport to follow up.
                 </p>
 
                 <div className="space-y-6 mb-8">
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Cost advantage: Pakistan vs US and UK in PKR tiers</h3>
-                    <p className="text-black text-base md:text-lg leading-relaxed font-medium">Another reality matters. Afro hair transplant Pakistan cost is usually significantly lower than in Western countries. When you compare afro hair transplant investment ranges in Pakistan vs USA UK or Europe the gap can be dramatic. Many medical guides highlight that a Pakistan afro hair transplant is 60 to 70 percent more affordable in local PKR tiers than the US even when booking elite high quality clinics. You are not paying less for less care. You benefit from lower regional operating costs and a highly competitive local market.</p>
+                    <p className="text-black text-base md:text-lg leading-relaxed font-medium">Another reality matters. Afro hair transplant Pakistan cost is usually significantly lower than in Western countries. When you compare Afro hair transplant investment ranges in Pakistan vs USA UK or Europe the gap can be dramatic. Many medical guides highlight that a Pakistan Afro hair transplant is 60 to 70 percent more affordable in local PKR tiers than the US even when booking elite high quality clinics. You are not paying less for less care. You benefit from lower regional operating costs and a highly competitive local market.</p>
                   </div>
 
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Why Hair Skill stands out</h3>
-                    <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">Hair Skill is not just another stop on the afro hair transplant medical tourism circuit. Our focus sits at the intersection of medical detail and design for textured hair. Patients often describe Hair Skill as the best afro hair transplant clinic in Pakistan for them because surgeons lead every step not technicians curl pattern and hairline shape are planned together and the donor area is protected for possible future needs.</p>
+                    <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">Hair Skill is not just another stop on the Afro hair transplant medical tourism circuit. Our focus sits at the intersection of medical detail and design for textured hair. Patients often describe Hair Skill as the best Afro hair transplant clinic in Pakistan for them because surgeons lead every step not technicians. Curl pattern and hairline shape are planned together and the donor area is protected for possible future needs.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our medical leadership frequently tells new patients: Pakistan gives you accessible options. Your job is to choose a medical team that respects your texture as much as you do.
+                      Our medical leadership frequently tells new patients. Pakistan gives you accessible options. Your job is to choose a medical team that respects your texture as much as you do.
                     </p>
                   </div>
                 </div>
@@ -290,30 +281,28 @@ export default function AfroHairClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Who Is a Good Candidate */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Who Is a Good Candidate for Afro Hair Transplant?
                 </h2>
 
-                {/* IMAGE 4: Comparison of man looking slightly down */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/16.webp" alt="Frontal downward view comparing thinned native Afro hairline profile against dense restored mature results" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A successful afro hair transplant in Pakistan begins with understanding whether your scalp donor area and hair pattern align with what textured procedures require. Afro follicles are strong but donor supply varies. Some patients come with traction alopecia. Some show genetic thinning. Others have breakage from relaxers or repeated protective styles. Every pattern needs a different plan.
+                  A successful Afro hair transplant in Pakistan begins with understanding whether your scalp donor area and hair pattern align with what textured procedures require. Afro follicles are strong but donor supply varies. Some patients come with traction alopecia. Some show genetic thinning. Others have breakage from relaxers or repeated protective styles. Every pattern needs a different plan.
                 </p>
 
                 <div className="space-y-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Can afro hair be transplanted?</h3>
+                    <h3 className="text-2xl font-black text-[#772424] mb-2">Can Afro hair be transplanted?</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Yes. Afro hair can be transplanted with excellent results when handled by surgeons experienced in curly follicle anatomy. The key is matching the technique to your texture. Patients with tightly coiled follicles often benefit from manual extraction and carefully controlled implantation angles.</p>
                   </div>
 
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Common situations where transplant works well</h3>
-                    <p className="text-black text-base md:text-lg font-medium mb-3">Most people seeking hair transplant for black men afro hair transplant for women or afro hair transplant for black women fall into one of these categories:</p>
+                    <p className="text-black text-base md:text-lg font-medium mb-3">Most people seeking a hair transplant for black men an Afro hair transplant for women or an Afro hair transplant for black women fall into one of these categories:</p>
                     <div className="space-y-2 ml-2">
                       {[
                         "genetic thinning at the front or crown",
@@ -333,33 +322,32 @@ export default function AfroHairClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">Difference between afro hair transplant and normal hair transplant</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">The main difference is the follicle shape. Straight hair grows in a predictable path. Afro follicles follow a corkscrew path beneath the skin. This means extraction and placement must follow that curve. Transplanting afro hair with straight hair habits leads to poor growth.</p>
+                    <h3 className="text-2xl font-black text-[#772424] mb-2">Difference between Afro hair transplant and normal hair transplant</h3>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">The main difference is the follicle shape. Straight hair grows in a predictable path. Afro follicles follow a corkscrew path beneath the skin. This means extraction and placement must follow that curve. Transplanting Afro hair with straight hair habits leads to poor growth.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our surgical leadership notes: Each curl holds its own character. The goal is not just to replace hair. The goal is to restore identity.
+                      Our surgical leadership notes. Each curl holds its own character. The goal is not just to replace hair. The goal is to restore identity.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Techniques at Hair Skill */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Techniques at Hair Skill for Afro Hair Types: FUE, DHI, and Curl-Safe Methods
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A natural looking result for afro hair transplant Pakistan depends on choosing the right extraction and implantation method. Not every technique suits every curl pattern. Hair Skill selects the method based on your donor density curl tightness scalp thickness and the design you want. The goal is simple: Protect curl integrity while building strong density.
+                  A natural looking result for an Afro hair transplant Pakistan journey depends on choosing the right extraction and implantation method. Not every technique suits every curl pattern. Hair Skill selects the method based on your donor density curl tightness scalp thickness and the design you want. The goal is simple. Protect curl integrity while building strong density.
                 </p>
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">FUE afro hair transplant in Pakistan & Custom tools</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">FUE remains the most common method for textured hair. But the way it is performed matters. For Afro follicles extraction often requires slower work with manual FUE for afro hair or controlled micromotor settings. Surgeons follow the curve of each root not a straight line. This reduces the higher transection risk in afro follicles caused by their subcutaneous curve.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Hair Skill uses punch systems designed for curl-safe extraction. Curved punches and angle adapted tips help capture the entire follicle. This is important because unique hair texture and curly roots require careful handling. Some cases benefit from special punches for curly follicles transection reduction strategies and precise depth control.</p>
+                    <h3 className="text-2xl font-black text-[#772424] mb-2">FUE Afro hair transplant in Pakistan & Custom tools</h3>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">FUE remains the most common method for textured hair. But the way it is performed matters. For Afro follicles extraction often requires slower work with manual FUE for Afro hair or controlled micromotor settings. Surgeons follow the curve of each root not a straight line. This reduces the higher transection risk in Afro follicles caused by their subcutaneous curve.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Hair Skill uses punch systems designed for curl safe extraction. Curved punches and angle adapted tips help capture the entire follicle. This is important because unique hair texture and curly roots require careful handling. Some cases benefit from special punches for curly follicles transection reduction strategies and precise depth control.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-black text-[#772424] mb-2">DHI afro hair transplant in Pakistan</h3>
+                    <h3 className="text-2xl font-black text-[#772424] mb-2">DHI Afro hair transplant in Pakistan</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">DHI shines in areas that demand detail like temples edges and refined Afro hairlines. The Choi Pen gives smoother angle control which helps preserving curl pattern and orientation during implantation. DHI can deliver tight controlled spacing when designing female edges or rebuilding traction alopecia.</p>
                   </div>
 
@@ -367,19 +355,18 @@ export default function AfroHairClient() {
                     <h3 className="text-2xl font-black text-[#772424] mb-2">FUT vs FUE & FUE vs DHI comparisons</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Most Afro patients do not choose FUT because linear scars stand out on shorter hairstyles. FUE and DHI give greater flexibility for fades tapers and low cuts. FUE suits larger cases where coverage matters. DHI suits small areas that need precision. Hair Skill sometimes combines both for balanced results.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our clinical experts state: Technique is never chosen by habit. It is chosen by your curl. The method must match the root.
+                      Our clinical experts state. Technique is never chosen by habit. It is chosen by your curl. The method must match the root.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Procedure Step by Step */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Afro Hair Transplant Procedure Step by Step
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A clear process helps you feel calm and prepared before your afro hair transplant in Pakistan. At Hair Skill each stage is predictable and guided by your surgeon. No rushed handoffs. No guessing who will handle your grafts. You always know what is happening and why.
+                  A clear process helps you feel calm and prepared before your Afro hair transplant in Pakistan. At Hair Skill each stage is predictable and guided by your surgeon. No rushed handoffs. No guessing who will handle your grafts. You always know what is happening and why.
                 </p>
 
                 <div className="space-y-6 border-l-2 border-[#772424]/20 pl-6 ml-2 mb-6">
@@ -389,30 +376,29 @@ export default function AfroHairClient() {
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">On the surgery day</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your day begins with a relaxed consultation. Your doctor designs your hairline with attention to Afro geometry and temple flow. After numbing the scalp extraction begins. This phase takes time because we follow the subcutaneous curve of afro follicles to prevent transection. Breaks are provided when needed. Implantation comes next. For most Afro cases we use a mix of FUE and DHI. This improves control over angles and helps maintain your curl direction. Each graft is positioned to match your natural corkscrew path.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your day begins with a relaxed consultation. Your doctor designs your hairline with attention to Afro geometry and temple flow. After numbing the scalp extraction begins. This phase takes time because we follow the subcutaneous curve of Afro follicles to prevent transection. Breaks are provided when needed. Implantation comes next. For most Afro cases we use a mix of FUE and DHI. This improves control over angles and helps maintain your curl direction. Each graft is positioned to match your natural corkscrew path.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Trip duration & Sedation protocol</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Most international patients stay between 3 and 5 days: Day 1 arrival Day 2 surgery Day 3 first wash Day 4 to 5 follow up. Local anesthesia is typically enough. Some patients prefer light sedation for relaxation. Your medical team will guide you depending on your comfort.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Most international patients stay between 3 and 5 days. Day 1 arrival. Day 2 surgery. Day 3 first wash. Day 4 to 5 follow up. Local anesthesia is typically enough. Some patients prefer light sedation for relaxation. Your medical team will guide you depending on your comfort.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-5 rounded-2xl border-l-4 border-[#772424]">
-                      Our supervising surgeons note: Extraction is the heart of Afro cases. We move patiently. That is how we protect the curl and the character of your hair.
+                      Our supervising surgeons note. Extraction is the heart of Afro cases. We move patiently. That is how we protect the curl and the character of your hair.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Afro Hair Transplant Pakistan Cost Ranges (PURE PKR TIERS / NO NUMERIC PRICES) */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Afro Hair Transplant Pakistan Cost Ranges at Hair Skill
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  People often begin their research with one central question: How much does an afro hair transplant cost in Pakistan? Pricing shapes your travel plan expectations and timeline. Hair Skill believes in complete transparency. No inflated figures. No sudden add ons. Your quote is structured strictly around your hair loss pattern curl structure and graft needs.
+                  People often begin their research with one central question. How much does an Afro hair transplant cost in Pakistan? Pricing shapes your travel plan expectations and timeline. Hair Skill believes in complete transparency. No inflated figures. No sudden add ons. Your quote is structured strictly around your hair loss pattern curl structure and graft needs.
                 </p>
 
                 <div className="space-y-6 mb-6">
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">Typical afro hair transplant cost tiers in PKR</h3>
+                    <h3 className="text-xl font-black text-[#772424] mb-2">Typical Afro hair transplant cost tiers in PKR</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
                       Rather than listing rigid volatile prices most Afro patients fall within highly accessible local PKR package tiers depending on technique choice and complexity. This aligns perfectly with standard restorative averages across accredited clinics in Lahore. Specialized repair cases widespread traction alopecia patterns or sessions requiring intense micro density sit inside corresponding adjusted PKR investment brackets.
                     </p>
@@ -422,26 +408,25 @@ export default function AfroHairClient() {
                     <h3 className="text-xl font-black text-[#772424] mb-2">What affects your price calculation</h3>
                     <p className="text-black font-medium text-base leading-relaxed mb-3">Your final tier calculation depends on core clinical variables including graft count technique choice FUE DHI or combined density goals scalp thickness traction alopecia corrections surgeon time required and previous surgery repair if needed.</p>
                     <p className="text-black font-bold text-base leading-relaxed border-t border-gray-200/80 pt-3">
-                      Comparing investment ranges globally demonstrates an immense economic reality: Rebuilding textured hair in Pakistan sits within highly accessible PKR package tiers offering 60 to 70 percent relative savings compared to capital-intensive upper tier ranges in the USA or UK even when booking elite accredited facilities.
+                      Comparing investment ranges globally demonstrates an immense economic reality. Rebuilding textured hair in Pakistan sits within highly accessible PKR package tiers offering 60 to 70 percent relative savings compared to capital intensive upper tier ranges in the USA or UK even when booking elite accredited facilities.
                     </p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-xl font-black text-[#772424] mb-2">All inclusive afro hair transplant package Pakistan</h3>
+                    <h3 className="text-xl font-black text-[#772424] mb-2">All inclusive Afro hair transplant package Pakistan</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
-                      Hair Skill offers complete travel friendly options. Many international visitors prefer comprehensive packages in PKR covering hotel stays and private transfers because they eliminate travel stress. These all-inclusive packages seamlessly supply your airport pickup and drop off luxury hotel stay surgical procedure cellular post op medications first clinical wash and dedicated patient coordination.
+                      Hair Skill offers complete travel friendly options. Many international visitors prefer comprehensive packages in PKR covering hotel stays and private transfers because they eliminate travel stress. These all inclusive packages seamlessly supply your airport pickup and drop off luxury hotel stay surgical procedure cellular post op medications first clinical wash and dedicated patient coordination.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Recovery Shedding and 12-18 Month Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Recovery, Shedding, and 12 to 18 Month Results for Afro Hair
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Recovery after an afro hair transplant in Pakistan follows the same stages as other hair types but the visual changes feel different because curls take longer to show their full character. Afro hair grows in a coil not a straight line. This means the first few months may look uneven before your density settles. That is entirely normal. Your new texture needs time to reveal itself.
+                  Recovery after an Afro hair transplant in Pakistan follows the same stages as other hair types but the visual changes feel different because curls take longer to show their full character. Afro hair grows in a coil not a straight line. This means the first few months may look uneven before your density settles. That is entirely normal. Your new texture needs time to reveal itself.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -466,29 +451,22 @@ export default function AfroHairClient() {
                   </div>
                 </div>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  Our lead surgical specialists note: Afro growth is steady. It does not rush. When the curls show they show beautifully.
+                  Our lead surgical specialists note. Afro growth is steady. It does not rush. When the curls show they show beautifully.
                 </p>
               </motion.div>
 
-              {/* Section: Risks Side Effects and Darker Skin Protection */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Risks, Side Effects, and How Hair Skill Protects Darker Skin
                 </h2>
-
-                {/* IMAGE 5: Dermatoscope inspection on hairline/edges */}
-                <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/hair-transplant/17.webp" alt="Clinical examination of African American female hairline and edges using diagnostic dermatoscope lens" className="w-full h-full object-cover object-top" />
-                </div>
-
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Every procedure carries some degree of risk. What matters is how those risks are managed. For an afro hair transplant in Pakistan the key challenges include the curved path of the follicles the potential for hyperpigmentation in darker skin and the possibility of scarring when the skin is sensitive. At Hair Skill your plan is shaped around these realities not against them. We do not ignore them. We prepare for them.
+                  Every procedure carries some degree of risk. What matters is how those risks are managed. For an Afro hair transplant in Pakistan the key challenges include the curved path of the follicles the potential for hyperpigmentation in darker skin and the possibility of scarring when the skin is sensitive. At Hair Skill your plan is shaped around these realities not against them. We do not ignore them. We prepare for them.
                 </p>
 
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Follicular viability & Surgical safety</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Do hair transplants work on afro hair? Yes. They work extremely well when curl anatomy is respected. Growth rates are strong when extraction follows the natural curve and implantation angles match your original direction. Safety depends entirely on technique and surgeon involvement. Afro hair should never be extracted with speed based methods that ignore curl direction. At Hair Skill qualified surgeons oversee every step which lowers complications and transection risk significantly.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Do hair transplants work on Afro hair? Yes. They work extremely well when curl anatomy is respected. Growth rates are strong when extraction follows the natural curve and implantation angles match your original direction. Safety depends entirely on technique and surgeon involvement. Afro hair should never be extracted with speed based methods that ignore curl direction. At Hair Skill qualified surgeons oversee every step which lowers complications and transection risk significantly.</p>
                   </div>
 
                   <div>
@@ -501,19 +479,18 @@ export default function AfroHairClient() {
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Success rate & Touch up policy</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Patients treated inside experienced clinical settings show exceptionally high success rates governed entirely by healthy graft survival. If a minor touch up is ever needed due to an unexpected tissue healing response your supervising doctor will guide you on timing and options transparently.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our medical directors frequently remind patients: A good result is not luck. It is careful technique meeting careful healing.
+                      Our medical directors frequently remind patients. A good result is not luck. It is careful technique meeting careful healing.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Afro Hairline Design Edges & Density */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Afro Hairline Design, Edges, and Density Planning
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Design matters as much as technique. A successful afro hair transplant Pakistan result depends on a hairline that matches your features your age and the natural behavior of Afro curls. Straight lines look artificial. Heavy density in the wrong zones creates a blocky look. The goal is absolute harmony. A result that feels honest when you look in the mirror.
+                  Design matters as much as technique. A successful Afro hair transplant Pakistan result depends on a hairline that matches your features your age and the natural behavior of Afro curls. Straight lines look artificial. Heavy density in the wrong zones creates a blocky look. The goal is absolute harmony. A result that feels honest when you look in the mirror.
                 </p>
 
                 <div className="space-y-6 mb-6">
@@ -530,27 +507,26 @@ export default function AfroHairClient() {
 
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Traction repair & Case verification</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Cases caused by tight braids or weaves require specialized planning. The underlying tissue may be thinner or sensitive requiring conservative extraction and precise implantation depths. Documented before and after cases show what truly matters: curl direction natural edges and matching density.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Cases caused by tight braids or weaves require specialized planning. The underlying tissue may be thinner or sensitive requiring conservative extraction and precise implantation depths. Documented before and after cases show what truly matters. Curl direction natural edges and matching density.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our design specialists state: A good Afro hairline is built with respect. We follow your original genetic rhythm not trends.
+                      Our design specialists state. A good Afro hairline is built with respect. We follow your original genetic rhythm not trends.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Combined Procedures */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Combined Procedures for Afro Hair, Beard, Edges, and Eyebrows
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Many international visitors choose to address multiple areas during one comprehensive visit to Lahore. This can be highly efficient when planned correctly. At Hair Skill combined procedures are designed strictly with donor safety in mind. Afro textures offer excellent coverage but donor reserves must be preserved for your lifelong needs.
+                  Many international visitors choose to address multiple areas during one comprehensive visit to Lahore Karachi or our setups extending to Islamabad Rawalpindi and Multan. This can be highly efficient when planned correctly. At Hair Skill combined procedures are designed strictly with donor safety in mind. Afro textures offer excellent coverage but donor reserves must be preserved for your lifelong needs.
                 </p>
 
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Beard edges eyebrows and moustaches</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Some men combine a scalp restoration with a beard enhancement session. Textured beard hair provides phenomenal blending when used as donor or recipient. Repairing traction edges pairs perfectly with frontal hairline lowering via DHI control. For patients requesting eyebrow refinement we implant strictly single units placed at acute skin-flat elevations. Upper lip moustache filling is similarly calibrated for absolute facial balance.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Some men combine a scalp restoration with a beard enhancement session. Textured beard hair provides phenomenal blending when used as donor or recipient. Repairing traction edges pairs perfectly with frontal hairline lowering via DHI control. For patients requesting eyebrow refinement we implant strictly single units placed at acute skin flat elevations. Upper lip moustache filling is similarly calibrated for absolute facial balance.</p>
                   </div>
 
                   <div>
@@ -562,31 +538,62 @@ export default function AfroHairClient() {
                       ))}
                     </div>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-5 rounded-2xl border-l-4 border-[#772424]">
-                      Our operating surgeons note: Combined sessions can be powerful but only when the donor vault allows it. Your future matters as much as todays result.
+                      Our operating surgeons note. Combined sessions can be powerful but only when the donor vault allows it. Your future matters as much as todays result.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Planning Your Trip to Lahore Pakistan */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Planning Your Afro Hair Transplant Trip to Lahore Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Your medical trip should feel completely peaceful from the moment your flight lands. Planning an afro hair transplant in Pakistan is wonderfully simple when your clinical coordination team manages the logistical touchpoints. Hair Skill assists men and women traveling from the US UK Africa and the Caribbean every single day.
+                  Your medical trip should feel completely peaceful from the moment your flight lands. Planning an Afro hair transplant in Pakistan is wonderfully simple when your clinical coordination team manages the logistical touchpoints. Hair Skill assists men and women traveling from the US UK Europe Africa and the Caribbean every single day.
                 </p>
 
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Trip duration & Concierge coordination</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Most international guests stay 4 to 7 days in Lahore allowing unhurried time for consultation surgery early recovery and your official first wash. You are never left guessing where to go; your personal concierge coordinator silently arranges your airport transfers hotel reservations native translations clinic scheduling aftercare instructions and digital follow up support.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Pack simple items including loose button-front shirts a travel neck pillow and loose clothing. Strictly avoid caps or tight headwear for week one. Once localized swelling recedes patients love enjoying gentle evening walks through Lahores beautiful patient-friendly districts.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Most international guests stay 4 to 7 days in Lahore allowing unhurried time for consultation surgery early recovery and your official first wash. You are never left guessing where to go. Your personal concierge coordinator silently arranges your airport transfers hotel reservations native translations clinic scheduling aftercare instructions and digital follow up support.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Pack simple items including loose button front shirts a travel neck pillow and loose clothing. Strictly avoid caps or tight headwear for week one. Once localized swelling recedes patients love enjoying gentle evening walks through Lahores beautiful patient friendly districts.</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* SECTION: 18 FAQS ACCORDION */}
+              {/* --- RESTORED CTA SECTION --- */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200 mb-16">
+                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight">
+                  Start Your Afro Hair Transplant Plan With Hair Skill Clinic
+                </h2>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
+                  If you have been waiting for the right moment to take control of your hair again this is your exact place to begin. An Afro hair transplant Pakistan journey feels fundamentally different when qualified surgeons lead the process your native curl pattern is profoundly respected and every clinical step is shaped around your personal comfort. You deserve a dense result that looks natural from every angle. You deserve a medical institution that listens.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
+                  At Hair Skill your experience is deeply personal. You sit down with your operating doctor. You examine your custom design. You understand your exact surgical blueprint before a single tool touches your skin. Zero sales pressure. Zero rushed choices. Just straightforward honest medical guidance grounded in years of elite specialization across Afro curls coils waves and every textured profile in between.
+                </p>
+
+                <h3 className="text-2xl font-black text-[#772424] mb-4">What you get when you choose Hair Skill Clinic</h3>
+                <div className="space-y-3 mb-8 ml-2">
+                  {[
+                    "Surgeon led planning and execution for your complete procedure",
+                    "Curl safe punch extraction and Choi pen implantation",
+                    "Realistic sustainable graft targets based on long term donor health",
+                    "A customized architectural design for your hairline edges or temples",
+                    "A calm sterile cleanroom environment with full localized support",
+                    "Complete luxury packages in accessible PKR tiers covering hotel and private transfers",
+                    "12 full months of dedicated medical follow up to track your emerging density"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black text-lg">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
+                  ))}
+                </div>
+
+                <h3 className="text-2xl font-black text-[#772424] mb-3">Get Your Free Afro Hair Assessment Today</h3>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  Your permanent transformation starts with a single simple step. Send our clinical team your scalp photos. Our lead restorative surgeons will carefully audit your curl pattern and supply your transparent personalized package quote in PKR. Move forward toward an authentic confident future today.
+                </p>
+              </motion.div>
+
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Afro Hair Transplant Pakistan FAQs
@@ -624,39 +631,6 @@ export default function AfroHairClient() {
                     );
                   })}
                 </div>
-              </motion.div>
-
-              {/* Section: Start Your Plan CTA */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
-                <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight">
-                  Start Your Afro Hair Transplant Plan With Hair Skill Clinic
-                </h2>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  If you have been waiting for the right moment to take control of your hair again this is your exact place to begin. An afro hair transplant Pakistan journey feels fundamentally different when qualified surgeons lead the process your native curl pattern is profoundly respected and every clinical step is shaped around your personal comfort. You deserve a dense result that looks natural from every angle. You deserve a medical institution that listens.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  At Hair Skill your experience is deeply personal. You sit down with your operating doctor. You examine your custom design. You understand your exact surgical blueprint before a single tool touches your skin. Zero sales pressure. Zero rushed choices. Just straightforward honest medical guidance grounded in years of elite specialization across Afro curls coils waves and every textured profile in between.
-                </p>
-
-                <h3 className="text-2xl font-black text-[#772424] mb-4">What you get when you choose Hair Skill Clinic</h3>
-                <div className="space-y-3 mb-8 ml-2">
-                  {[
-                    "Surgeon led planning and execution for your complete procedure",
-                    "Curl-safe punch extraction and Choi pen implantation",
-                    "Realistic sustainable graft targets based on long term donor health",
-                    "A customized architectural design for your hairline edges or temples",
-                    "A calm sterile cleanroom environment with full localized support",
-                    "Complete luxury packages in accessible PKR tiers covering hotel and private transfers",
-                    "12 full months of dedicated medical follow up to track your emerging density"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black text-lg">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
-                  ))}
-                </div>
-
-                <h3 className="text-2xl font-black text-[#772424] mb-3">Get Your Free Afro Hair Assessment Today</h3>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Your permanent transformation starts with a single simple step. Send our clinical team your scalp photos. Our lead restorative surgeons will carefully audit your curl pattern and supply your transparent personalized package quote in PKR. Move forward toward an authentic confident future today.
-                </p>
               </motion.div>
 
             </div>
