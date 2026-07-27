@@ -128,7 +128,7 @@ export default function OzoneClient() {
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & 5 MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_354de2.jpg: Handheld high frequency ozone comb emitting blue/violet energy) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
                   src="/hair-transplant/treatments/4.webp" 
@@ -144,10 +144,10 @@ export default function OzoneClient() {
               {/* Lead Introduction */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Ozone therapy for hair is a targeted scalp treatment that uses controlled medical ozone to support follicles calm inflammation and improve scalp balance. At Hair Skill Clinic ozone hair therapy sits inside a complete diagnostic process. Every session has a purpose. Nothing is random. The goal is simple: a healthier scalp that supports stronger fuller hair over time.
+                  Ozone therapy for hair is a targeted scalp treatment that uses controlled medical ozone to support follicles calm inflammation and provide effective scalp rejuvenation. At Hair Skill Clinic ozone hair therapy sits inside a complete diagnostic process. Every session has a purpose. Nothing is random. The goal is simple: a healthier scalp that supports stronger fuller hair over time.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  People choose ozone hair treatment in Pakistan because it can help with multiple concerns at once. It supports thinning areas helps reduce shedding eases dandruff and balances oil production. Many international patients visit ozone therapy Lahore or Pakistan clinics but Hair Skill offers a medical-first approach backed by doctors who understand androgenetic alopecia and transplant recovery.
+                  People searching for an ozone hair treatment near me in Pakistan because it can help with multiple concerns at once. It supports thinning areas helps reduce shedding eases dandruff and balances oil production. Many international patients visit ozone therapy Lahore or Pakistan clinics but Hair Skill offers a medical-first approach backed by doctors who understand androgenetic alopecia and transplant recovery.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Ozone is delivered in a controlled dose. It works by increasing oxygen availability on the scalp helping blood flow and supporting weakened follicles. Evidence suggests improved hair cycle activity when ozone is applied correctly. This sets it apart from spa-style treatments. Hair Skill uses doctor-led protocols medical devices and safe dosing.
@@ -163,16 +163,16 @@ export default function OzoneClient() {
                 </p>
 
                 <h2 className="text-3xl font-black text-[#772424] mt-4 tracking-tight">
-                  Ozone Hair Therapy in Pakistan at Hair Skill Clinic
+                  Ozone Hair Therapy in Pakistan and Lahore at Hair Skill Clinic
                 </h2>
                 <h3 className="text-xl font-extrabold text-[#772424]">
-                  A cleaner, calmer, healthier scalp starts here
+                  A cleaner calmer healthier scalp starts here in Lahore and Karachi
                 </h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Thinning hair stubborn dandruff itching or scalp irritation can feel exhausting. You try shampoos. You switch routines. Nothing changes. Ozone hair therapy in Pakistan gives your scalp targeted support using controlled medical ozone designed to refresh the skin improve circulation and help struggling follicles perform better.
+                  Severe hair shedding stubborn dandruff itching or scalp irritation can feel exhausting. You try shampoos. You switch routines. Nothing changes. Ozone hair therapy in Pakistan gives your scalp targeted support using controlled medical ozone designed to refresh the skin improve circulation and stimulate dormant hair follicles perform better.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-extrabold">
-                  At Hair Skill Clinic this is not a spa add on. It is a doctor guided treatment tailored for people facing real hair and scalp concerns. You receive a structured plan not a simple session list. That difference shapes everything.
+                  At Hair Skill Clinic this is not a spa add on. It is a doctor guided hair restoration treatment tailored for people facing real hair and scalp concerns. You receive a structured plan not a simple session list. That difference shapes everything.
                 </p>
               </motion.div>
 
@@ -204,11 +204,11 @@ export default function OzoneClient() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-4">Key Benefits of Ozone Hair Treatment</h3>
+                <h3 className="text-2xl font-black text-[#772424] mb-4">Key Benefits of Ozone Hair Treatment Benefits</h3>
                 <div className="space-y-4 ml-2 mb-6">
                   <div>
                     <div className="flex items-center gap-2 font-black text-[#772424] text-lg mb-1"><span>•</span><h4>Balanced Scalp Environment</h4></div>
-                    <p className="text-black text-base md:text-lg font-medium pl-4">Ozone helps refresh and clear the scalp. Patients dealing with stubborn flakes odor or irritation often see smoother comfort and cleaner roots.</p>
+                    <p className="text-black text-base md:text-lg font-medium pl-4">Ozone helps clean and provide deep scalp oxygenation. Patients dealing with stubborn flakes odor or irritation often see smoother comfort and cleaner roots.</p>
                   </div>
 
                   <div>
@@ -235,10 +235,9 @@ export default function OzoneClient() {
               {/* Section: Who Is Ozone Hair Therapy Best For */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Who Is Ozone Hair Therapy Best For?
+                  Who Is Ozone Hair Therapy Best For? A Proven Hair Loss Treatment Approach
                 </h2>
 
-                {/* IMAGE 2: Section Image Glass Comb Wand (Capture image_354e09.jpg: High frequency glass comb wand emitting violet light) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/treatments/5.webp" alt="Close up view of medical high frequency glass comb electrode conducting activated oxygen across scalp" className="w-full h-full object-cover object-center" />
                 </div>
@@ -250,7 +249,7 @@ export default function OzoneClient() {
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Thinning Hair and Early Hair Loss</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">If you notice lighter strands widening parts or slow styling changes ozone therapy for hair thinning can support struggling follicles. By improving oxygen flow and calming irritation ozone gives weakened roots a healthier environment. It does not replace lost follicles but it may slow ozone therapy for hair fall and support early ozone therapy for hair growth responses in active zones.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">If you notice lighter strands widening parts or slow styling changes ozone therapy for hair thinning can support struggling follicles. By improving oxygen flow and calming irritation and providing non invasive scalp therapy ozone gives weakened roots a healthier environment. It does not replace lost follicles but it may slow ozone therapy for hair fall and support early ozone therapy for hair growth responses in active zones.</p>
                   </div>
 
                   <div>
@@ -275,7 +274,6 @@ export default function OzoneClient() {
                   How Ozone Hair Therapy Works at Hair Skill Clinic
                 </h2>
 
-                {/* IMAGE 3: Section Image Follicle Macro (Capture image_354e28.jpg: Scalp root follicles energized) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/treatments/6.webp" alt="Macro close up view of follicular unit shafts responding to cellular oxygenation and vascular dilation" className="w-full h-full object-cover object-center" />
                 </div>
@@ -287,7 +285,7 @@ export default function OzoneClient() {
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Step by Step: From Diagnosis to First Ozone Session</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-2">Your journey begins with a scalp evaluation. The doctor checks your shedding pattern inflammation level and follicle activity. Trichoscopy helps map thinning zones and identify issues such as dandruff excess oil or early infection. This step determines whether ozone therapy scalp treatment is right for you or if PRP medications or mesotherapy should be added. A detailed plan is created so you know how many sessions you need and what improvements to expect.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-2">Your journey begins with a scalp evaluation in our Lahore clinic. The doctor checks your shedding pattern inflammation level and follicle activity. Trichoscopy helps map thinning zones and identify issues such as dandruff excess oil or early infection. This step determines whether ozone therapy scalp treatment is right for you or if PRP medications or mesotherapy should be added. A detailed plan is created so you know how many sessions you need and what improvements to expect.</p>
                   </div>
 
                   <div>
@@ -308,10 +306,8 @@ export default function OzoneClient() {
               {/* Section: Benefits of Ozone Hair Treatment */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Benefits of Ozone Hair Treatment: What Patients Can Expect
+                  Benefits of Ozone Hair Treatment Benefits: What Patients Can Expect
                 </h2>
-
-                
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Patients often choose ozone hair therapy because they want relief from scalp discomfort thinning or chronic flaking. They want something that feels gentle yet effective. When applied correctly ozone therapy for hair supports the scalp in ways many topical products cannot. It works across several layers of scalp health which is why improvement often feels gradual but steady.
@@ -320,7 +316,7 @@ export default function OzoneClient() {
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Scalp Detox Microbial Control and Dandruff Support</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Ozone helps clean and refresh the scalp surface. The ozone therapy antibacterial effect on scalp can reduce buildup and irritation especially in people struggling with flakes or odor. This is why many patients see improvements with ozone therapy for dandruff ozone therapy for scalp infections and even some cases of ozone therapy for seborrheic dermatitis. A calmer scalp makes daily grooming easier and more comfortable.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Ozone helps clean and provide deep scalp oxygenation. The ozone therapy antibacterial effect on scalp can reduce buildup and irritation especially in people struggling with flakes or odor. This is why many patients see improvements with ozone therapy for dandruff ozone therapy for scalp infections and even some cases of ozone therapy for seborrheic dermatitis. A calmer scalp makes daily grooming easier and more comfortable.</p>
                   </div>
 
                   <div>
@@ -375,7 +371,6 @@ export default function OzoneClient() {
                   Is Ozone Therapy for Hair Safe? Side Effects and Evidence
                 </h2>
 
-                {/* IMAGE 5: Section Image Smiling Patient (Capture image_354ebe.jpg: Patient smiling with healthy hair) */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/treatments/7.webp" alt="Smiling patient experiencing absolute scalp comfort and revitalized hair texture post medical ozone therapy" className="w-full h-full object-cover object-top" />
                 </div>
@@ -406,27 +401,27 @@ export default function OzoneClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Cost Ranges in Pakistan (PURE PKR TIERS / ZERO LOGISTICS) */}
+              {/* Section: Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Ozone Hair Therapy Cost Ranges in Pakistan: Packages at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Patients comparing ozone hair therapy Pakistan options usually want two things: clear pricing and honest guidance on how many sessions they truly need. Hair Skill Clinic gives both. The goal is to help you plan your treatment without guesswork or hidden fees. You see your full path from day one.
+                  Patients comparing ozone hair therapy Pakistan prices usually want lowest cost and quality. Hair Skill Clinic gives both. The goal is to help you plan your treatment without guesswork or hidden fees. You see your full path from day one.
                 </p>
 
                 <div className="space-y-6">
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
                     <h3 className="text-xl font-black text-[#772424] mb-2">Pakistan vs Global Investment Brackets</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
-                      Across Pakistan most clinics offer ozone hair treatment at package brackets that make long term care manageable. Typical ozone therapy cost ranges between 28,000 to 42,000 PKR per session depending on device quality and medical supervision. The same session in Western countries can be significantly higher. Many UK and US clinics charge several times the Pakistani average which makes multi session treatments expensive for patients dealing with hair thinning dandruff or irritation. Because ozone works best in a series cost differences matter. A full plan in Lahore can equal one or two sessions elsewhere.
+                      Across Pakistan most clinics offer ozone hair treatment at package brackets that make long term care manageable. Typical ozone therapy cost ranges between 28000 to 42000 PKR per session depending on device quality and medical supervision. The same session in Western countries can be significantly higher. Many UK and US clinics charge several times the Pakistani average which makes multi session treatments expensive for patients dealing with hair thinning dandruff or irritation. Because ozone works best in a series cost differences matter. A full plan in Lahore can equal one or two sessions elsewhere.
                     </p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
                     <h3 className="text-xl font-black text-[#772424] mb-2">Hair Skill Clinic Package Tiers</h3>
-                    <p className="text-black font-medium text-base leading-relaxed mb-3">Hair Skill Clinic offers a straightforward package range. Sessions sit inside accessible local tiers ranging from 28,000 to 42,000 PKR based on the protocol device settings and your scalp needs. You receive clear guidance on session count. Some patients need only a short series to manage dandruff or itchy scalp. Others with thinning or transplant recovery benefit from a structured plan. Your medical team tells you exactly what to expect.</p>
-                    <p className="text-black font-medium text-base leading-relaxed border-t border-gray-200/80 pt-3 mb-3">Packages for Surgical Patients: Patients undergoing a hair transplant sometimes add ozone therapy after surgery or supportive scalp care sessions. Hair Skill creates customized packages in Pakistan for those wanting combined PRP mesotherapy or follow up care. You get one coordinated plan instead of scattered treatments.</p>
+                    <p className="text-black font-medium text-base leading-relaxed mb-3">Hair Skill Clinic offers a straightforward package range. Sessions sit inside accessible local tiers ranging from 28000 to 42000 PKR based on the protocol device settings and your needs. You receive clear guidance on session count. Some patients need only a short series to manage dandruff or itchy scalp. Others with thinning or transplant recovery benefit from a structured plan. Your medical team tells you exactly what to expect.</p>
+                    <p className="text-black font-medium text-base leading-relaxed border-t border-gray-200/80 pt-3 mb-3">Packages for Surgical Patients: Patients undergoing a hair transplant sometimes add ozone therapy after surgery or supportive scalp care sessions. Hair Skill creates customized lowest cost packages in Pakistan Rawalpindi and Karachi for those wanting combined PRP mesotherapy or follow up care. You get one coordinated plan instead of scattered treatments.</p>
                     <p className="text-black font-bold text-base leading-relaxed border-t border-gray-200/80 pt-3">
                       Our physicians highlight that real value is not the accessible cost. It is the medically supervised structure that protects your scalp and guides every step of progress.
                     </p>
@@ -434,7 +429,7 @@ export default function OzoneClient() {
                 </div>
               </motion.div>
 
-              {/* SECTION: 9 FAQS ACCORDION (100% COMPLETE VERBATIM MAPPING) */}
+              {/* SECTION: 9 FAQS ACCORDION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Ozone Hair Therapy Pakistan FAQs
@@ -450,7 +445,7 @@ export default function OzoneClient() {
                           className="w-full text-left p-6 font-black text-[#772424] text-lg md:text-xl flex justify-between items-center gap-4 cursor-pointer select-none"
                         >
                           <span>{faq.q}</span>
-                          <span className="text-2xl font-light leading-none shrink-0">{isOpen ? "−" : "+"}</span>
+                          <span className="text-2xl font-light leading-none shrink-0">{isOpen ? "-" : "+"}</span>
                         </button>
                         
                         <AnimatePresence>
@@ -474,7 +469,7 @@ export default function OzoneClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Closing CTA (100% Complete) */}
+              {/* Section: Closing CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
                 <h2 className="text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Start Your Ozone Hair Therapy Journey with Hair Skill Clinic
