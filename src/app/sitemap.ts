@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hair-transplant/techniques/sapphire',
     '/hair-transplant/treatments/afro-hair',
     '/hair-transplant/treatments/beard-transplant',
-    '/hair-transplant/treatments/chinese',
+    '/hair-transplant/treatments/chinese-hair-transplant',
     '/hair-transplant/treatments/exosome-hair-therapy',
     '/hair-transplant/treatments/extracellular-matrix',
     '/hair-transplant/treatments/eyebrow',

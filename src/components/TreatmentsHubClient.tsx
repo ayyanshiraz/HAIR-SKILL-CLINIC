@@ -72,7 +72,7 @@ export default function TreatmentsHubClient() {
       title: "Chinese Method",
       desc: "Explore the specialized Chinese Method for hair restoration uniquely tailored to specific hair and scalp characteristics...",
       img: "/hair-transplant/35.webp",
-      href: "/hair-transplant/treatments/chinese"
+      href: "/hair-transplant/treatments/chinese-hair-transplant"
     },
     {
       title: "FUT Method",
