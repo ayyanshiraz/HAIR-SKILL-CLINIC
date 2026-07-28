@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "What Should I Do Before Hair Transplant?",
     description: "Read our 13 essential preparation steps before your surgery day.",
-    url: "https://www.almadinahijamacenter.com/guide/before",
+    url: "https://www.hairskill.com//guide/before",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/home/techniques/4.webp",
+        width: 1200,
+        height: 630,
+        alt: "Surgeon marking patients hairline before hair transplant procedure",
+      },
+    ],
   },
 };
 

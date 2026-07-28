@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "General F.A.Q. | Hair Skill Clinic",
     description: "Get answers to the most common general questions about your hair transplant journey.",
-    url: "https://www.hairskillclinic.com/faq/general",
+    url: "https://www.hairskill.com/faqs/general",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/_next/image?url=%2Fhome%2Fowner1.webp&w=1080&q=75",
+        width: 1200,
+        height: 630,
+        alt: "General F.A.Q. | Hair Skill Clinic Pakistan",
+      },
+    ],
   },
 };
 

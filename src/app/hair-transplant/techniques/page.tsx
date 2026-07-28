@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Transplant Techniques Hub | Hair Skill Clinic",
     description: "Explore advanced micro grafting restoration methodologies available in Pakistan.",
-    url: "https://www.almadinahijamacenter.com/techniques",
+    url: "https://www.hairskill.com/techniques",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hair-transplant/treatments/13.webp",
+        width: 1200,
+        height: 630,
+        alt: "Clinical Hair Transplant Techniques | Hair Skill Clinic Pakistan",
+      },
+    ],
   },
 };
 

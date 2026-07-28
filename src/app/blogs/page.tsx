@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Clinical Blogs | Hair Skill Clinic Pakistan",
     description: "Expert medical insights, surgical comparisons, and post-operative recovery guidelines.",
-    url: "https://www.almadinahijamacenter.com/blogs",
+    url: "https://www.hairskill.com/blogs",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/blogs/1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Medical Blogs and Hair Transplant Articles at Hair Skill Clinic Lahore",
+      },
+    ],
   },
 };
 

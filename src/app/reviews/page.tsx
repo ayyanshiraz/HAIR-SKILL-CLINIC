@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Patient Reviews | Hair Skill Clinic",
     description: "Read real stories and experiences from our hair transplant patients.",
-    url: "https://www.hairskillclinic.com/reviews",
+    url: "https://www.hairskill.com/reviews",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/home/owner1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Lead Hair Transplant Surgeon and Owner of Hair Skill Clinic Lahore",
+      },
+    ],
   },
 };
 

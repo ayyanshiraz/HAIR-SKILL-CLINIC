@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "After Hair Transplant Procedure | Hair Skill Clinic",
     description: "Your complete guide to post-operative care, washing, and recovery after a hair transplant.",
-    url: "https://www.hairskillclinic.com/patient-guide/after",
+    url: "https://www.hairskill.com/patient-guide/after",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/patient-guide/7.webp",
+        width: 1200,
+        height: 630,
+        alt: "Patient recovering after hair transplant procedure at Hair Skill Clinic",
+      },
+    ],
   },
 };
 

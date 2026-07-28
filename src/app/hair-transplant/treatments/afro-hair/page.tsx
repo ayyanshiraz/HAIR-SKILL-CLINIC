@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Afro Hair Restoration | Hair Skill Clinic",
     description: "Medically proven corkscrew follicle preservation for authentic natural density.",
-    url: "https://www.almadinahijamacenter.com/treatments/afro-hair",
+    url: "https://www.hairskill.com/hair-transplant/treatments/afro-hair",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hair-transplant/treatments/afro-hair/13.webp",
+        width: 1200,
+        height: 630,
+        alt: "Afro Hair Transplant and Coiled Hair Restoration at Hair Skill Clinic Lahore Pakistan",
+      },
+    ],
   },
 };
 

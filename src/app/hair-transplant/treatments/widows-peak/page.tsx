@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Widows Peak Hairline Redesign | Hair Skill Clinic",
     description: "Masterclass architectural hairline design for permanent facial symmetry.",
-    url: "https://www.almadinahijamacenter.com/treatments/widows-peak",
+    url: "https://www.hairskill.com/hair-transplant/treatments/widows-peak",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hair-transplant/2.webp",
+        width: 1200,
+        height: 630,
+        alt: "Patient before and after Widows Peak Hair Transplant creation and frontal band redesign",
+      },
+    ],
   },
 };
 

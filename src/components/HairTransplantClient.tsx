@@ -122,7 +122,7 @@ export default function HairTransplantClient() {
       title: "Chinese Method",
       summary: "Explore the specialized Chinese Method for hair restoration uniquely tailored to specific hair and scalp characteristics...",
       image: "/hair-transplant/35.webp",
-      link: "/hair-transplant/treatments/chinese"
+      link: "/hair-transplant/treatments/chinese-hair-transplant"
     },
     {
       title: "FUT Method",

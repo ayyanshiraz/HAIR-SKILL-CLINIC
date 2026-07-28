@@ -26,7 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/faqs/general',
     '/faqs/post-op',
     '/faqs/pre-op',
-    '/female-hair-loss-guide',
     '/hair-transplant',
     '/hair-unit',
     '/patient-guide/after',
@@ -46,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hair-transplant/techniques/sapphire',
     '/hair-transplant/treatments/afro-hair',
     '/hair-transplant/treatments/beard-transplant',
-    '/hair-transplant/treatments/chinese',
+    '/hair-transplant/treatments/chinese-hair-transplant',
     '/hair-transplant/treatments/exosome-hair-therapy',
     '/hair-transplant/treatments/extracellular-matrix',
     '/hair-transplant/treatments/eyebrow',
@@ -59,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hair-transplant/treatments/ozone-hair-therapy',
     '/hair-transplant/treatments/prp-hair-treatment',
     '/hair-transplant/treatments/sideburn',
-    '/hair-transplant/treatments/unshaven-transplant',
+    '/hair-transplant/techniques/unshaven-transplant',
     '/hair-transplant/treatments/widows-peak'
   ];
 

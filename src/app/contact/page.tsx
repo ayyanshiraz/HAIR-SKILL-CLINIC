@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Us | Hair Skill Clinic",
     description: "Reach out to us to start your hair restoration journey today.",
-    url: "https://www.hairskillclinic.com/contact",
+    url: "https://www.hairskill.com/contact",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/_next/image?url=%2Fhome%2Fowner1.webp&w=1080&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Contact Us | Hair Skill Clinic Pakistan",
+      },
+    ],
   },
 };
 

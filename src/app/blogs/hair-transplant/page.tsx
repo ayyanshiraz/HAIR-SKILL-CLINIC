@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Transplant Articles | Hair Skill Clinic",
     description: "Medically proven dietary and cellular advice for post-surgery recovery.",
-    url: "https://www.hairskillclinic.com/blogs/hair-transplant",
+    url: "https://www.hairskill.com/blogs/hair-transplant",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",

@@ -8,10 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frequently Asked Questions | Hair Skill Clinic",
     description: "Get all the answers you need regarding your hair transplant journey.",
-    url: "https://www.hairskillclinic.com/faq",
+    url: "https://www.hairskill.com/faqs",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/_next/image?url=%2Fhome%2Fowner1.webp&w=1080&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Frequently Asked Questions | Hair Skill Clinic Pakistan",
+      },
+    ],
   },
 };
 

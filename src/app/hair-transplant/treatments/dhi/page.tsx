@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DHI Hair Restoration | Hair Skill Clinic",
     description: "Medically proven Choi implanter precision for natural angle control.",
-    url: "https://www.almadinahijamacenter.com/techniques/dhi",
+    url: "https://www.hairskill.com/hair-transplant/techniques/dhi",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/home/techniques/3.webp",
+        width: 1200,
+        height: 630,
+        alt: "Surgeon holding specialized Choi implanter pen used for Direct Hair Implantation DHI at Hair Skill Clinic",
+      },
+    ],
   },
 };
 

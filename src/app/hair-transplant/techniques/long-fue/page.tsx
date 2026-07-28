@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Long FUE Hair Transplant | Hair Skill Clinic",
     description: "Maintain your existing hairstyle while undergoing surgical hair restoration.",
-    url: "https://www.almadinahijamacenter.com/treatments/long-fue",
+    url: "https://www.hairskill.com/hair-transplant/treatments/long-fue",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hair-transplant/1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Long FUE Hair Transplant | Hair Skill Clinic Lahore",
+      },
+    ],
   },
 };
 

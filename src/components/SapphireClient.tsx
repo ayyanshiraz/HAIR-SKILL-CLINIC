@@ -51,7 +51,7 @@ export default function SapphireClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 11 FAQS DATA (Verbatim from pasted text, scrubbed of safe prose, numeric price & logistics errors) ---
+  // --- 11 FAQS DATA (Verbatim, scrubbed of safe prose, numeric price & logistics errors) ---
   const faqList = [
     {
       q: "What is Sapphire FUE in simple terms?",
@@ -136,14 +136,13 @@ export default function SapphireClient() {
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_1a7137.jpg: Macro close up of synthetic sapphire scalpel pen tip) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
                   src="/home/techniques/1.webp" 
                   alt="Macro close up view of synthetic sapphire crystal blade scalpel pen tip used for micro channel incisions at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
-                
               </motion.div>
 
               {/* Lead Introduction */}
@@ -155,9 +154,9 @@ export default function SapphireClient() {
                   At Hair Skill Clinic we use sapphire FUE hair transplant in Pakistan for patients who want strong consistent density with surgeon led control. The goal is clarity. Not hype. Not confusing claims. Just a clear explanation of how this technique works and whether it fits your hair your donor and your long term goals.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Many people arrive in sapphire hair transplant Lahore searches feeling overwhelmed. Too many guarantees. Too many best technique ever headlines. Here you will find grounded guidance shaped by surgeons who work with Sapphire FUE every day. This page explains what Sapphire FUE can do what it cannot do and how Hair Skill designs a result that blends naturally with your features and donor capacity.
+                  Many people searching for a sapphire hair transplant near me in Lahore or Karachi arrive feeling overwhelmed. Too many guarantees. Too many best technique ever headlines. Here you will find grounded guidance shaped by surgeons who work with Sapphire FUE every day. This page explains what Sapphire FUE can do what it cannot do and how Hair Skill designs a result that blends naturally with your features and donor capacity.
                 </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                   If you want a method that supports high density while keeping tissue handling gentle this guide helps you decide whether Sapphire FUE is the right choice.
                 </p>
 
@@ -175,7 +174,7 @@ export default function SapphireClient() {
                 </p>
               </motion.div>
 
-              {/* IMAGE 2: Frontal Hairline Comparison (Capture image_1a74a1.jpg & image_1a8004.jpg: Marked hairline vs grown results) */}
+              {/* IMAGE 2: Frontal Hairline Comparison */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                 <img src="/hair-transplant/34.webp" alt="Frontal view comparing lowered pre surgical Sapphire FUE hairline markings against mature dense growth" className="w-full h-full object-cover object-top" />
               </motion.div>
@@ -192,7 +191,7 @@ export default function SapphireClient() {
                   It is an improved way of opening channels using blades made from sapphire. The blade material allows cleaner narrower entry points that help grafts sit comfortably and securely.
                 </p>
 
-                {/* IMAGE 3: Gloved Hand Holding Sapphire Tool (Capture image_1a74be.jpg & image_1a8020.jpg: Gloved hand display) */}
+                {/* IMAGE 3: Gloved Hand Holding Sapphire Tool */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-8 shadow-md">
                   <img src="/home/techniques/1.webp" alt="Surgeon hand wearing sterile white glove holding synthetic blue sapphire micro incision instrument" className="w-full h-full object-cover object-center" />
                 </div>
@@ -244,7 +243,7 @@ export default function SapphireClient() {
                 <div className="space-y-6 mb-8">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Why Pakistan leads in Sapphire FUE</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Patients travel from the USA UK Europe and the Middle East because they can receive advanced treatments inside accessible package tiers for a fraction of Western tier calculations. Hair restoration in Pakistan sits significantly lower than heavy capital calculations in Western clinics. You receive medical planning cleanroom extraction and cellular aftercare without inflated pricing upfront.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Patients travel from the USA UK Europe the Middle East and local cities like Islamabad and Multan because they can receive advanced treatments inside accessible package tiers for a fraction of Western tier calculations. Hair restoration in Pakistan sits significantly lower than heavy capital calculations in Western clinics. You receive medical planning cleanroom extraction and cellular aftercare without inflated pricing.</p>
                   </div>
 
                   <div>
@@ -298,7 +297,7 @@ export default function SapphireClient() {
                         <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-semibold">{item}</p></div>
                       ))}
                     </div>
-                    <p className="text-black text-base md:text-lg font-medium">People wanting sapphire hair transplant Lahore often fall into these groups because the city has experienced teams who handle both large scale and detail oriented cases.</p>
+                    <p className="text-black text-base md:text-lg font-medium">People wanting a sapphire hair transplant in Lahore Rawalpindi or Islamabad often fall into these groups because these regions have experienced teams who handle both large scale and detail oriented cases.</p>
                   </div>
 
                   <div>
@@ -318,7 +317,7 @@ export default function SapphireClient() {
                   Sapphire FUE at Hair Skill: Techniques and Tools
                 </h2>
 
-                {/* IMAGE 5: Macro Close Up Channel Incision (Capture image_1a7516.jpg & image_1a8078.jpg: Macro scalpel incision) */}
+                {/* IMAGE 5: Macro Close Up Channel Incision */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/6.webp" alt="Macro close up view of surgeon executing precise V shaped micro channel incision into scalp" className="w-full h-full object-cover object-center" />
                 </div>
@@ -366,7 +365,7 @@ export default function SapphireClient() {
                 <div className="space-y-6 border-l-2 border-[#772424]/20 pl-4 sm:pl-6 ml-2 mb-6">
                   <div>
                     <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">Before your surgery</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your journey begins with an online assessment. You send your photos. A doctor studies your pattern donor strength and long term stability. You learn whether Sapphire FUE DHI or a combined approach fits your goals. You also receive a transparent graft estimate and an outline of your potential density upfront. This step often removes most of the anxiety people feel when searching for sapphire FUE Lahore clinics.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your journey begins with an online assessment. You send your photos. A doctor studies your pattern donor strength and long term stability. You learn whether Sapphire FUE DHI or a combined approach fits your goals. You also receive a transparent graft estimate and an outline of your potential density. This step often removes most of the anxiety people feel when searching for sapphire FUE Lahore clinics.</p>
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-1">On the surgery day</h3>
@@ -382,20 +381,20 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Cost Ranges in Pakistan (PURE PKR TIERS / ZERO LOGISTICS) */}
+              {/* Section: Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire Hair Transplant Cost Ranges in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  People often compare clinics by tier calculations before they compare technique which makes sense. A sapphire hair transplant Pakistan cost search shows wide brackets across facilities and packages. Some offer low numbers with unclear details. Others present high numbers without explaining why. Hair Skill keeps things completely simple. Your tier calculation behaves inside accessible local PKR brackets based on real medical needs not marketing upfront.
+                  People often compare clinics by tier calculations before they compare technique which makes sense. A sapphire hair transplant Pakistan cost search shows wide brackets across facilities and packages. Some offer low numbers with unclear details. Others present high numbers without explaining why. Hair Skill keeps things completely simple. Your tier calculation behaves inside accessible local PKR brackets based on real medical needs not marketing.
                 </p>
 
                 <div className="space-y-6 mb-6">
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
                     <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">Typical sapphire FUE package tiers in PKR</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
-                      Most reputable clinics in Lahore operate inside competitive investment brackets in PKR upfront. The final tier planning depends on graft count design complexity and surgeon involvement. Large cases or repair surgeries sit closer to comprehensive upper tier package ranges. Smaller sessions fall inside accessible introductory brackets upfront.
+                      Most reputable clinics in Lahore operate inside competitive investment brackets in PKR. The final tier planning depends on graft count design complexity and surgeon involvement. Large cases or repair surgeries sit closer to comprehensive upper tier package ranges. Smaller sessions fall inside accessible introductory brackets.
                     </p>
                   </div>
 
@@ -410,7 +409,7 @@ export default function SapphireClient() {
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
                     <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">Comprehensive Clinical Care Packages</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
-                      Comprehensive Sapphire FUE care packages at Hair Skill bundle your cleanroom extractions micro channel incisions cellular post op medications first clinical wash and 12 months of scheduled follow up monitoring upfront.
+                      Comprehensive Sapphire FUE care packages at Hair Skill bundle your cleanroom extractions micro channel incisions cellular post op medications first clinical wash and 12 months of scheduled follow up monitoring.
                     </p>
                   </div>
                 </div>
@@ -423,7 +422,7 @@ export default function SapphireClient() {
                 </h2>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Recovery after a sapphire FUE hair transplant Pakistan is usually calm and predictable. Sapphire blades create cleaner narrower channels which can make surface healing feel smoother compared to classic steel blades. The deeper healing process remains the same. Your grafts need time to settle shed restart their growth cycle and mature into full density upfront.
+                  Recovery after a sapphire FUE hair transplant Pakistan is usually calm and predictable. Sapphire blades create cleaner narrower channels which can make surface healing feel smoother compared to classic steel blades. The deeper healing process remains the same. Your grafts need time to settle shed restart their growth cycle and mature into full density.
                 </p>
 
                 <div className="space-y-6 mb-6">
@@ -433,9 +432,9 @@ export default function SapphireClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Shedding Staging & Regrowth Milestones</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Shedding Staging & Regrowth Milestones</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Shedding begins around weeks 2 to 4. This phase can feel unsettling but it is normal. The follicles enter a resting stage before emerging again. Early growth appears between months 3 and 4. You will see thin strands first then stronger fibers. Direction becomes clearer by months 5 to 7 as the new hair adapts to your natural angle.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">When real density appears: Between months 6 and 9 the transformation becomes obvious. By months 12 to 18 most patients see their final fullness. This timing is similar to classic FUE though surface healing with sapphire channels can feel more comfortable. Most people resume gentle activity quickly while exercise requires additional tissue recovery upfront.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">When real density appears: Between months 6 and 9 the transformation becomes obvious. By months 12 to 18 most patients see their final fullness. This timing is similar to classic FUE though surface healing with sapphire channels can feel more comfortable. Most people resume gentle activity quickly while exercise requires additional tissue recovery.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our surgical specialists remind patients: Patience shapes the result. Sapphire tools help your comfort but biology sets the pace.
                     </p>
@@ -475,7 +474,7 @@ export default function SapphireClient() {
                   Aesthetics, Density, and Natural Results With Sapphire FUE
                 </h2>
 
-                {/* IMAGE 7: Crown Before / After Comparison (Capture image_1a7558.jpg & image_1a80b5.jpg: Crown restoration) */}
+                {/* IMAGE 7: Crown Before / After Comparison */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/36.webp" alt="Top downward view comparing native crown thinning against restored mature circular density" className="w-full h-full object-cover object-top" />
                 </div>
@@ -487,13 +486,13 @@ export default function SapphireClient() {
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">What natural results actually mean</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Natural does not mean full at any cost. It means correct direction smooth transitions density where the eye expects it balanced temples and a hairline appropriate for your age and features. Sapphire channels help grafts sit at lifelike angles making early growth look promising upfront.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Natural does not mean full at any cost. It means correct direction smooth transitions density where the eye expects it balanced temples and a hairline appropriate for your age and features. Sapphire channels help grafts sit at lifelike angles making early growth look promising.</p>
                   </div>
 
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Where Sapphire FUE shines in visual outcomes</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Patients with thicker hair wavy patterns or strong donor areas often see impressive density with Sapphire FUE. The controlled channel spacing supports uniform coverage especially across the front and midscalp. For crown cases the circular growth pattern requires careful mapping. Sapphire micro channels allow surgeons to follow that pattern more naturally creating a swirl that looks authentic.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Before and after expectations & Density goals: Photos help but they never tell the full story. Hair matures over 12 to 18 months and density builds slowly. The final result feels softer fuller and better blended than what many patients expect from classic FUE. Hair Skill avoids overpacking to prevent graft starvation planning consistent coverage that ages gracefully upfront.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Before and after expectations & Density goals: Photos help but they never tell the full story. Hair matures over 12 to 18 months and density builds slowly. The final result feels softer fuller and better blended than what many patients expect from classic FUE. Hair Skill avoids overpacking to prevent graft starvation planning consistent coverage that ages gracefully.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our medical staff shares: Good design does not draw attention. It disappears into your face. That is the true mark of a natural transplant.
                     </p>
@@ -501,17 +500,17 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Scheduling Your Session in Lahore (ZERO LOGISTICS LINES) */}
+              {/* Section: Scheduling Your Session in Lahore */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Planning Your Sapphire Restoration Staging in Lahore Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Preparing for your clinical staging in Lahore should feel completely calm and structured. Our clinical coordination team supports your logistical scheduling touchpoints so you can focus entirely on feeling rested and ready before your procedure upfront.
+                  Preparing for your clinical staging in Lahore Pakistan should feel completely calm and structured. Our clinical coordination team supports your logistical scheduling touchpoints so you can focus entirely on feeling rested and ready before your procedure.
                 </p>
-                <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Most patients allocate three to four days for their complete clinical staging sequence in Lahore: Day 1 personal clinical consultation trichoscopy audit diagnostic blood tests and line mapping Day 2 the unhurried FUE extraction and Sapphire channel opening block Day 3 official first clinical wash review and aftercare instruction under medical supervision Day 4 optional final check before returning to everyday routines.</p>
+                <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Most patients whether visiting from Karachi Multan or abroad allocate three to four days for their complete clinical staging sequence in Lahore: Day 1 personal clinical consultation trichoscopy audit diagnostic blood tests and line mapping Day 2 the unhurried FUE extraction and Sapphire channel opening block Day 3 official first clinical wash review and aftercare instruction under medical supervision Day 4 optional final check before returning to everyday routines.</p>
                 <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Pack light but bring items that make the experience easier including loose button-up shirts that do not pull over the head a soft neck pillow for flight comfort and gentle localized shampoo. Strictly avoid restrictive high collars or tight caps during week one.</p>
-                <p className="text-black text-base md:text-lg font-medium leading-relaxed">If you feel up to gentle unhurried walking once localized swelling settles Lahores calm patient-friendly districts offer peaceful cafes and beautiful outdoor park views. Simply avoid harsh direct sunlight physical exertion heavy sweating or busy crowds upfront.</p>
+                <p className="text-black text-base md:text-lg font-medium leading-relaxed">If you feel up to gentle unhurried walking once localized swelling settles Lahores calm patient-friendly districts offer peaceful cafes and beautiful outdoor park views. Simply avoid harsh direct sunlight physical exertion heavy sweating or busy crowds.</p>
               </motion.div>
 
               {/* SECTION: 11 FAQS ACCORDION */}
@@ -560,7 +559,7 @@ export default function SapphireClient() {
                   Start Your Sapphire FUE Journey With Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  If you want a natural result shaped by real surgeons who take time to understand your goals Sapphire FUE at Hair Skill Clinic is a strong fit. Patients often tell us the moment they felt at ease was when they saw how carefully their hairline was designed. Every angle has a purpose. Every channel supports direction. Nothing is rushed upfront. You are not choosing a trend. You are choosing a method that supports precision when applied with right judgment.
+                  If you want a natural result shaped by real surgeons who take time to understand your goals Sapphire FUE at Hair Skill Clinic is a strong fit. Patients often tell us the moment they felt at ease was when they saw how carefully their hairline was designed. Every angle has a purpose. Every channel supports direction. Nothing is rushed. You are not choosing a trend. You are choosing a method that supports precision when applied with right judgment.
                 </p>
 
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">What you receive at Hair Skill Clinic</h3>
@@ -569,21 +568,21 @@ export default function SapphireClient() {
                     "surgeon led planning from the first moment",
                     "sapphire channel opening done by your doctor",
                     "balanced graft distribution for long term density",
-                    "calm structured cleanroom care upfront",
+                    "calm structured cleanroom care",
                     "one year of scheduled follow up monitoring",
-                    "accessible package brackets inside local PKR tiers upfront"
+                    "accessible package brackets inside local PKR tiers"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
                   ))}
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  You should feel informed not pressured. Your plan should make sense for your donor your age and your long term goals. That is how we work upfront.
+                  You should feel informed not pressured. Your plan should make sense for your donor your age and your long term goals. That is how we work.
                 </p>
                 
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Your next step</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-extrabold">
-                  Send your photos. Your doctor studies your pattern. You receive a clear personalized plan and your exact package quote in PKR upfront. No confusion. No upselling. Just honest medical guidance. Get Your Free Sapphire FUE Assessment Today. Take the first step toward a natural confident result.
+                  Send your photos. Your doctor studies your pattern. You receive a clear personalized plan and your exact package quote in PKR. No confusion. No upselling. Just honest medical guidance. Get Your Free Sapphire FUE Assessment Today. Take the first step toward a natural confident result.
                 </p>
               </motion.div>
 

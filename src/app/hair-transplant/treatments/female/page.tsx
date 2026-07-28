@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Female Hair Restoration | Hair Skill Clinic",
     description: "Medically proven partial-shave discretion for authentic feminine softness.",
-    url: "https://www.almadinahijamacenter.com/treatments/female",
+    url: "https://www.hairskill.com/hair-transplant/treatments/female",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hair-transplant/21.webp",
+        width: 1200,
+        height: 630,
+        alt: "Female patient examining pre surgical hairline markings inside mirror at Hair Skill Clinic",
+      },
+    ],
   },
 };
 

@@ -470,7 +470,7 @@ export default function PrivacyPolicyClient() {
                 <strong>Hair Skill Clinic</strong> retains personal data for the period necessary for the purpose for which they are processed and in accordance with the minimum periods stipulated in the legislation applicable to the relevant activity. In this context, it first determines whether a retention period for personal data is stipulated in the relevant legislation; if a period is specified, it acts in accordance with that period. If there is no period in the legislation, personal data is retained for the period necessary for the purpose for which it is processed. Personal data is destroyed at the end of the determined retention periods, in accordance with the periodic destruction periods specified in <strong>Hair Skill Clinic</strong>’s Personal Data Retention and Destruction Policy or upon the Data Subject’s request, and using the determined destruction methods (deletion and/or destruction and/or anonymization).
               </p>
               <p>
-                For detailed information, you can access <strong>Hair Skill Clinic</strong>’s Personal Data Retention and Destruction Policy at www.hairskillclinic.com.
+                For detailed information, you can access <strong>Hair Skill Clinic</strong>’s Personal Data Retention and Destruction Policy at www.hairskill.com.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-black text-[#772424] uppercase tracking-tight mt-6">VII. INFORMING AND NOTIFYING THE DATA SUBJECT</h2>

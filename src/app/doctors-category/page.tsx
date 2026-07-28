@@ -8,5 +8,35 @@ export const metadata: Metadata = {
 };
 
 export default function DoctorsCategoryPage() {
-  return <DoctorsCategoryClient />;
+  const doctorSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    name: "Dr Mansoor Ahmad",
+    jobTitle: "Senior Chief Surgeon and Medical Director",
+    worksFor: {
+      "@type": "MedicalClinic",
+      name: "Hair Skill Clinic"
+    },
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Quaid-e-Azam Medical College, Bahawalpur"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "University of Health Sciences Lahore"
+      }
+    ],
+    description: "Senior Chief Surgeon with over 40 years of surgical craftsmanship and permanently registered with the Pakistan Medical and Dental Council."
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorSchema) }}
+      />
+      <DoctorsCategoryClient />
+    </>
+  );
 }

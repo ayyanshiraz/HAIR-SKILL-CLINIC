@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mission & Vision | Hair Skill Clinic",
     description: "Our goal is to improve our patients quality of life and earn their trust through our world-class hair transplant services.",
-    url: "https://www.almadinahijamacenter.com/about/mission",
+    url: "https://www.hairskill.com//about/mission",
     siteName: "Hair Skill Clinic",
     images: [
       {

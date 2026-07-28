@@ -51,7 +51,7 @@ export default function SideburnClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- FAQS DATA (Verbatim from pasted text, scrubbed of safe prose & exact numeric price errors) ---
+  // --- FAQS DATA (Scrubbed of safe prose & exact numeric price errors, no apostrophes) ---
   const faqList = [
     {
       q: "Is a sideburn transplant permanent?",
@@ -75,11 +75,11 @@ export default function SideburnClient() {
     },
     {
       q: "What is the best technique for sideburn restoration?",
-      a: "Most cases rely on FUE sideburn hair transplant or DHI direct hair implantation for maximum control. FUT is rarely advised for facial hair because the linear scar does not match the areas delicate structure."
+      a: "Most cases rely on FUE sideburn hair transplant or DHI direct hair implantation for maximum control. FUT is rarely advised for facial hair because the linear scar does not match the delicate structure of the area."
     },
     {
       q: "Do women get sideburn transplants?",
-      a: "Yes. Sideburn transplant for women is increasingly common especially for those with post-facelift sideburn loss or naturally thin framing. Designs are softer and lighter to preserve feminine balance."
+      a: "Yes. Sideburn transplant for women is increasingly common especially for those with post facelift sideburn loss or naturally thin framing. Designs are softer and lighter to preserve feminine balance."
     },
     {
       q: "How many grafts do I need?",
@@ -132,7 +132,7 @@ export default function SideburnClient() {
             {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual (Capture image_0a9ea0.jpg: Side view of marked sideburn) */}
+              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
                   src="/hair-transplant/18.webp" 
@@ -141,26 +141,26 @@ export default function SideburnClient() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 sm:left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-3 sm:px-4 py-1.5 rounded-md backdrop-blur-xs">
-                  Facelining Analysis, © Hair Skill Clinic
+                  Facelining Analysis, Hair Skill Clinic
                 </div>
               </motion.div>
 
               {/* Lead Introduction */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  A sideburn transplant is a focused detail-driven procedure that restores shape density and balance to an area that defines the frame of the face. Many guests reach out because their sideburns feel uneven thin or have changed after surgery. Others want fuller sideburns that match their beard or prefer a sharper more masculine outline. A few were born with congenital absent sideburns while some experience loss linked to frontal fibrosing alopecia affecting sideburns. Whatever the reason the goal stays simple: Create sideburns that look like they have always belonged there.
+                  A sideburn hair transplant is a focused detail driven procedure that restores shape density and balance to an area that defines the frame of the face. Many guests reach out because their sideburns feel uneven thin or have changed after surgery. Others want fuller sideburns that match their beard or prefer a sharper more masculine outline. A few were born with congenital absent sideburns while some experience loss linked to frontal fibrosing alopecia affecting sideburns. Whatever the reason the goal stays simple: Create sideburns that look like they have always belonged there.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  At Hair Skill Clinic every sideburn hair transplant is doctor led. Your journey starts with analysis of facial symmetry hair calibre and long term plans. The teams here do beard moustache and sideburn transplantation daily so they understand how small adjustments influence the entire face. Whether you are dealing with thinning sideburns asymmetrical or patchy sideburns or post-facelift sideburn loss or distortion you receive a plan shaped around your natural features.
+                  At Hair Skill Clinic every sideburn hair transplant is doctor led. Your journey starts with analysis of facial symmetry hair calibre and long term plans. The teams here do beard moustache and sideburn transplantation daily so they understand how small adjustments influence the entire face. Whether you are dealing with thinning sideburns asymmetrical or patchy sideburns or post facelift sideburn loss or distortion you receive a plan shaped around your natural features.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Guests choose Hair Skill because the experience runs deeper than surgery. Hospitality feels genuine. Communication is clear. Medical steps follow our institutional philosophy where artistry and comfort hold equal weight. Many patients describe the process as calmer than expected. They appreciate how gently the technicians handle grafts and how the doctors explain every detail before the first step begins.
+                  Guests choose Hair Skill because the experience runs deeper than surgery. Hospitality feels genuine. Communication is clear. Medical steps follow our institutional philosophy where artistry and comfort hold equal weight. Many patients describe the process as calmer than expected. They appreciate how gently the technicians handle grafts and how the doctors explain every detail before the first step begins. If you have been looking for a sideburn hair transplant near me or searching for an affordable sideburn hair transplant price in Pakistan our medical team provides complete guidance.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Sideburns are subtle but powerful. When shaped correctly they refine the jaw guide the beard and create an immediate sense of balance.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  Our lead surgeons often remind patients that sideburns are never a copy-paste design. Length angle curve and density must follow your unique facial flow. A strong result always starts with careful planning.
+                  Our lead surgeons often remind patients that sideburns are never a copy paste design. Length angle curve and density must follow your unique facial flow. A strong result always starts with careful planning.
                 </p>
               </motion.div>
 
@@ -176,7 +176,7 @@ export default function SideburnClient() {
                   For most guests the treatment begins with a full evaluation of beard density donor strength and facial symmetry. If you have thinning sideburns asymmetrical or patchy sideburns or visible gaps caused by scars burns trauma in sideburn area the aim is to create a shape that feels natural from every angle.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Those experiencing post-facelift sideburn loss or distortion are assessed with extra care since skin tension and scarring patterns differ from standard cases. Some patients arrive with no sideburns at all either genetic or related to frontal fibrosing alopecia affecting sideburns and want a structured frame that looks balanced.
+                  Those experiencing post facelift sideburn loss or distortion are assessed with extra care since skin tension and scarring patterns differ from standard cases. Some patients arrive with no sideburns at all either genetic or related to frontal fibrosing alopecia affecting sideburns and want a structured frame that looks balanced.
                 </p>
               </motion.div>
 
@@ -214,7 +214,7 @@ export default function SideburnClient() {
                   Why Sideburns Require Specialist Technique
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Sideburns sit at the crossroads of beard and scalp hair. Their direction changes quickly across a very small area. Hair Skill prioritizes hairline design graft distribution and micro-angle control to avoid any harsh or plug-like appearance.
+                  Sideburns sit at the crossroads of beard and scalp hair. Their direction changes quickly across a very small area. Hair Skill prioritizes hairline design graft distribution and micro angle control to avoid any harsh or plug like appearance.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                   Our surgical specialists highlight that sideburns behave differently from scalp hair. They curve taper and grow with specific rhythm. Recreating that rhythm is what makes the result convincing.
@@ -228,7 +228,7 @@ export default function SideburnClient() {
                 </h2>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Guests searching for a sideburn transplant in Lahore often compare dozens of clinics before making a decision. What sets Hair Skill Clinic apart is not only the doctor led approach but the philosophy behind every step. Sideburns demand nuance. They influence facial proportion beard flow and the overall expression. When handled with care the change feels subtle yet meaningful.
+                  Guests searching for a sideburn hair transplant in Lahore often compare dozens of clinics before making a decision. What sets Hair Skill Clinic apart is not only the doctor led approach but the philosophy behind every step. Sideburns demand nuance. They influence facial proportion beard flow and the overall expression. When handled with care the change feels subtle yet meaningful.
                 </p>
 
                 <div className="space-y-6 mb-8">
@@ -238,13 +238,13 @@ export default function SideburnClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Institutional Philosophy The Core of Hair Skills Method</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Institutional Philosophy The Core of Hair Skill Method</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Our institutional philosophy focuses on aesthetics comfort and long term transformation. For a small area like the sideburn this means creating a look that feels balanced from the front profile and three quarter view. Guests appreciate the calm workflow the consistency of the team and the clear explanations during each step. It is more than a medical procedure. It is a curated experience for men and women who want precision without unnecessary stress.</p>
                   </div>
 
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Tailored Experience for International Patients</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Many visitors choose Pakistan because of high quality and favorable pricing but they choose Hair Skill because everything feels organised. Translation support transfers accommodation and follow up are part of the hair transplant travel package Pakistan options. This structure makes the journey easy even for first time travelers.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Many visitors choose Pakistan because of high quality and favorable sideburn hair transplant cost options but they choose Hair Skill because everything feels organized. Translation support transfers accommodation and follow up are part of the hair transplant travel package Pakistan options. This structure makes the journey easy even for first time travelers.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our supervising doctors often note that the sideburn is a signature feature. When rebuilt correctly it gives the face a grounded confident look. That is why every design even the smallest curve receives careful attention.
                     </p>
@@ -258,19 +258,19 @@ export default function SideburnClient() {
                   Sideburn Transplantation Candidates in Pakistan
                 </h2>
 
-                {/* IMAGE 3: Close up macro marking (Capture image_0aa5c5.jpg: D.T. 24, 2400 Grafts close up) */}
+                {/* IMAGE 3: Close up macro marking */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/hair-transplant/18.webp" alt="Close up macro view of patient D.T., 24 years old, mapped for 2400 graft sideburn procedure" className="w-full h-full object-cover object-center" />
+                  <img src="/hair-transplant/18.webp" alt="Close up macro view of patient mapped for graft sideburn procedure" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Most people considering a sideburn transplant in Pakistan fall into a few familiar groups. Some notice gradual thinning that leaves the area looking soft or uneven. Others struggle with asymmetrical or patchy sideburns that make styling difficult. A number of guests arrive after cosmetic procedures especially facelifts where the natural sideburn line shifted or disappeared.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Then there are individuals with no sideburns from birth or those who lost them because of scars burns trauma in the sideburn area. Each situation feels different yet the underlying wish is the same: Restore balance and define the facial frame again.
+                  Then there are individuals with no sideburns from birth or those who lost them because of scars burns trauma in sideburn area. Each situation feels different yet the underlying wish is the same: Restore balance and define the facial frame again.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Many international patients ask whether sideburn restoration suits their gender age or hair type. Sideburn design is adaptable. For men it often supports stronger jaw definition and blends with beard patterns. For women especially those experiencing post-facelift sideburn loss or distortion the goal tends to be soft framing without creating a masculine look.
+                  Many international patients ask whether sideburn restoration suits their gender age or hair type. Sideburn design is adaptable. For men it often supports stronger jaw definition and blends with beard patterns. For women especially those experiencing post facelift sideburn loss or distortion the goal tends to be soft framing without creating a masculine look.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
                   When frontal fibrosing alopecia affecting sideburns is present the doctors examine stability first. Treating an active condition without proper assessment would limit the long term outcome.
@@ -279,7 +279,6 @@ export default function SideburnClient() {
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Who benefits most</h3>
-                    <p className="text-black text-base md:text-lg font-medium mb-3">People who gain the strongest results usually fit one of these:</p>
                     <div className="space-y-2 ml-2">
                       {[
                         "Visible thinning on one or both sides",
@@ -297,7 +296,7 @@ export default function SideburnClient() {
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">When a transplant may not be advised</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Some guests learn that timing matters. Active autoimmune scalp conditions unstable hair loss or limited donor supply can affect suitability. In these cases Hair Skill focuses on medical evaluation before any next step.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our medical leadership explains that sideburn evaluation is more than counting grafts. It is about matching the patients personality beard flow and long term goals. They often say a well designed sideburn can change the mood of the face without changing anything else.
+                      Our medical leadership explains that sideburn evaluation is more than counting grafts. It is about matching the patient personality beard flow and long term goals. They often say a well designed sideburn can change the mood of the face without changing anything else.
                     </p>
                   </div>
                 </div>
@@ -318,10 +317,10 @@ export default function SideburnClient() {
                   Once the design is agreed on the medical team prepares the donor zone. Most procedures use FUE sideburn hair transplant or DHI direct hair implantation since these allow high control over placement and minimize downtime. The clinic rarely recommends FUT sideburn transplant because linear scarring does not match the delicate nature of facial work. Throughout extraction grafts are examined and sorted to match thickness and texture reinforcing natural flow.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  During implantation the highest attention goes to angle and direction. Sideburns shift rapidly from scalp-like alignment to beard-like curvature so grafts must follow those micro transitions.
+                  During implantation the highest attention goes to angle and direction. Sideburns shift rapidly from scalp like alignment to beard like curvature so grafts must follow those micro transitions.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Hair Skills doctors guide the team through each placement making sure the density looks balanced on both sides. Patients notice how gentle the environment feels. The conversation stays steady the steps are explained and nothing feels rushed.
+                  Hair Skill doctors guide the team through each placement making sure the density looks balanced on both sides. Patients notice how gentle the environment feels. The conversation stays steady the steps are explained and nothing feels rushed.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                   Our clinical specialists mention that sideburn work is a meeting point of technique and intuition. They remind patients that even a few degrees of angle adjustment can change the entire expression of the face.
@@ -340,7 +339,7 @@ export default function SideburnClient() {
                   Many cases fall between 200 and 600 grafts per side. Some patients with thinning sideburns only need light reinforcement while those with asymmetrical or patchy sideburns may require full redefinition. When working with scars burns trauma in sideburn area graft needs vary based on skin quality and vascularity.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
-                  Patients dealing with post-facelift sideburn loss or distortion often need more careful distribution to rebuild the original contour. Individuals with no sideburns may require a broader plan covering both length and width. Every number is an estimate until the doctor examines the donor region and the natural beard pattern.
+                  Patients dealing with post facelift sideburn loss or distortion often need more careful distribution to rebuild the original contour. Individuals with no sideburns may require a broader plan covering both length and width. Every number is an estimate until the doctor examines the donor region and the natural beard pattern.
                 </p>
 
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Factors that influence graft count</h3>
@@ -379,7 +378,7 @@ export default function SideburnClient() {
                   Early regrowth appears at three to four months. Density builds between months five and nine. For most guests results visible after 6 to 12 months reflect the complete transformation.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  The final texture blends with natural hair. This is where men notice improved facial framing and where sideburn transplant for women creates a softer contour after facelifts. Guests with post-facelift sideburn loss or distortion usually appreciate how restored length returns harmony to their profile. Those with scars often share that the new growth hides previous traces of injury.
+                  The final texture blends with natural hair. This is where men notice improved facial framing and where sideburn transplant for women creates a softer contour after facelifts. Guests with post facelift sideburn loss or distortion usually appreciate how restored length returns harmony to their profile. Those with scars often share that the new growth hides previous traces of injury.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Before and after journeys vary. Some aim for clean narrow sideburns. Others want a fuller connection to the beard. What remains constant is the pursuit of realism.
@@ -435,7 +434,7 @@ export default function SideburnClient() {
                   Risks, Side Effects, and How Hair Skill Keeps You Safe
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A sideburn transplant is a low-risk procedure when performed by trained specialists yet guests deserve a clear picture of what to expect. Hair Skill takes a transparent approach. Patients feel more at ease when they understand both normal healing responses and rare complications that can occur.
+                  A sideburn transplant is a low risk procedure when performed by trained specialists yet guests deserve a clear picture of what to expect. Hair Skill takes a transparent approach. Patients feel more at ease when they understand both normal healing responses and rare complications that can occur.
                 </p>
 
                 <div className="space-y-6 mb-6">
@@ -446,8 +445,8 @@ export default function SideburnClient() {
 
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Less Common Risks & Technical Safety</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Occasionally patients worry about infection poor graft growth or unnatural direction. These risks usually appear when grafts are handled roughly or placed without respecting natural growth direction facial flow or hairline design. Hair Skills internal training and core philosophy help prevent this. Every team member follows doctor-led planning to protect grafts and preserve facial symmetry.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">When guests arrive with post-facelift sideburn loss or distortion the doctors assess incision lines and skin tension to avoid overpacking grafts into compromised areas. If frontal fibrosing alopecia affecting sideburns is suspected evaluation comes first so grafts are not placed into active inflammation. Modern methods like FUE sideburn hair transplant and DHI direct hair implantation reduce scarring and allow precise control across tight curves.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Occasionally patients worry about infection poor graft growth or unnatural direction. These risks usually appear when grafts are handled roughly or placed without respecting natural growth direction facial flow or hairline design. Hair Skill internal training and core philosophy help prevent this. Every team member follows doctor led planning to protect grafts and preserve facial symmetry.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">When guests arrive with post facelift sideburn loss or distortion the doctors assess incision lines and skin tension to avoid overpacking grafts into compromised areas. If frontal fibrosing alopecia affecting sideburns is suspected evaluation comes first so grafts are not placed into active inflammation. Modern methods like FUE sideburn hair transplant and DHI direct hair implantation reduce scarring and allow precise control across tight curves.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our clinical directors share that real safety comes from preparation. When planning is calm and detailed healing becomes predictable and the result blends effortlessly.
                     </p>
@@ -455,29 +454,29 @@ export default function SideburnClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Sideburn Transplant Cost Ranges in Pakistan (PURE PKR TIERS / NO NUMERIC PRICES) */}
+              {/* Section: Sideburn Transplant Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Sideburn Transplant Cost Ranges in Pakistan
+                  Sideburn Transplant Cost and Price Ranges in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Many guests begin their research by comparing sideburn transplant cost ranges in Pakistan with upper tier brackets in the UK EU or US. The difference can feel dramatic. Most international patients quickly notice that healthcare packages lean heavily in Pakistans favor offering accessible local PKR investment brackets.
+                  Many guests begin their research by comparing sideburn hair transplant cost ranges in Pakistan with upper tier brackets in the UK EU or US. The difference can feel dramatic. Most international patients searching for a sideburn hair transplant near me quickly notice that healthcare packages lean heavily in Pakistan favor offering accessible local PKR investment brackets.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Lower regional operating expenses and high medical expertise make Lahore a strong destination for facial hair restoration. Still patients should focus first on technique safety and natural results especially for an area as visible as the sideburn.
+                  Lower regional operating expenses and high medical expertise make Lahore a strong destination for facial hair restoration. For patients seeking a cheap sideburn hair transplant price or lowest rate options without compromising on safety or natural results Hair Skill provides competitive package tiers. Still patients should focus first on technique safety and natural results especially for an area as visible as the sideburn.
                 </p>
 
                 <div className="space-y-6 mb-6">
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
                     <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">Typical Package Tiers in PKR at Hair Skill Clinic</h3>
                     <p className="text-black font-medium text-base leading-relaxed">
-                      At Hair Skill investment tiers in PKR comfortably cover a wide variety of cases from minor density work to complete facial reconstruction. Smaller touch ups for thinning sideburns tend to sit inside accessible introductory brackets while rebuilding asymmetrical or patchy sideburns congenital absent sideburns or areas affected by scars burns trauma in sideburn area shifts toward comprehensive upper tier package ranges. Guests with post-facelift sideburn loss or distortion often need detailed micro angle adjustments which also influence final tier planning. Procedures performed with FUE or DHI deliver high precision; FUT is avoided.
+                      At Hair Skill investment tiers in PKR comfortably cover a wide variety of cases from minor density work to complete facial reconstruction. Smaller touch ups for thinning sideburns tend to sit inside accessible introductory brackets while rebuilding asymmetrical or patchy sideburns congenital absent sideburns or areas affected by scars burns trauma in sideburn area shifts toward comprehensive upper tier package ranges. Guests with post facelift sideburn loss or distortion often need detailed micro angle adjustments which also influence final tier planning. Procedures performed with FUE or DHI deliver high precision while FUT is avoided.
                     </p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424]">
-                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">What Hair Skills Packages Commonly Include</h3>
-                    <p className="text-black font-medium text-base leading-relaxed mb-3">Most sideburn transplant packages in PKR at Hair Skill cover consultation doctor led planning extraction implantation medications and follow up care. </p>
+                    <h3 className="text-lg sm:text-xl font-black text-[#772424] mb-2">What Hair Skill Packages Commonly Include</h3>
+                    <p className="text-black font-medium text-base leading-relaxed mb-3">Most sideburn hair transplant price packages in PKR at Hair Skill cover consultation doctor led planning extraction implantation medications and follow up care. </p>
                     <p className="text-black font-bold text-base leading-relaxed border-t border-gray-200/80 pt-3">
                       Our financial counselors note cost makes sense only when compared with result quality. A balanced natural sideburn provides lifelong value far beyond initial investment.
                     </p>
@@ -486,7 +485,7 @@ export default function SideburnClient() {
               </motion.div>
 
               {/* Section: Special Focus Post-Facelift & Scar Restoration */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Special Focus: Post-Facelift and Scar Sideburn Restoration
                 </h2>
@@ -502,7 +501,7 @@ export default function SideburnClient() {
 
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Scar Burn Reconstruction & Female Framing</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Guests with scars burns trauma in sideburn area often assume nothing can be done. In reality facial hair restoration works well when planned carefully. Scar tissue tends to be firmer and less vascular so grafts must be spaced thoughtfully. Women experiencing post-facelift sideburn loss seek a softer framing effect with finer angles and lighter density.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Guests with scars burns trauma in sideburn area often assume nothing can be done. In reality facial hair restoration works well when planned carefully. Scar tissue tends to be firmer and less vascular so grafts must be spaced thoughtfully. Women experiencing post facelift sideburn loss seek a softer framing effect with finer angles and lighter density.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our medical specialists mention these cases require sensitivity as much as technique. For patients who lost sideburns to surgery or trauma the emotional impact is real. Restoring this small area changes how they see themselves again.
                     </p>
@@ -510,9 +509,38 @@ export default function SideburnClient() {
                 </div>
               </motion.div>
 
-              {/* SECTION: FAQS ACCORDION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
-                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
+              {/* Section: Start Your Transformation CTA */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight border-b pb-3 border-gray-100">
+                  Start Your Sideburn Transformation at Hair Skill Clinic
+                </h2>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
+                  A well crafted sideburn transplant does more than fill a gap. It restores balance sharpens expression and reconnects you with a look that feels genuinely yours. Whether you are dealing with thinning sideburns asymmetrical or patchy sideburns post facelift sideburn distortion or long standing concerns like congenital absent sideburns a tailored plan can change how you feel every time you look in the mirror.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
+                  Hair Skill Clinic approaches sideburn restoration with precision and empathy. Every design is doctor led. Every graft is placed with intention. Every guest receives clear guidance through recovery and long term care. International patients find the journey smooth thanks to organized travel support and welcoming hospitality. The clinic experience across FUE sideburn hair transplant and DHI direct hair implantation ensures your result blends naturally with beard or temple hair.
+                </p>
+
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Key Benefits</h3>
+                <div className="space-y-3 mb-8 ml-2">
+                  {[
+                    "Full Customization: Your sideburns are designed to match your beard type hairstyle and facial proportions",
+                    "Minimal Downtime: Tiny micro incisions heal quickly. Most guests resume daily life soon after treatment",
+                    "Long Lasting Results: Transplanted hairs behave like natural beard hair once matured",
+                    "Subtle Yet Powerful Change: Guests often describe the result as a quiet improvement that elevates their entire look"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black text-lg">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
+                  ))}
+                </div>
+
+                <p className="text-black text-base md:text-lg leading-relaxed font-extrabold">
+                  Your face carries your story. Let us help it feel complete again. Contact Hair Skill Clinic to schedule your consultation and begin your sideburn transformation with a team dedicated to natural looking long lasting results.
+                </p>
+              </motion.div>
+
+              {/* SECTION: FAQS ACCORDION (Moved to the very bottom of the content) */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight">
                   Sideburn Transplant FAQs
                 </h2>
 
@@ -548,35 +576,6 @@ export default function SideburnClient() {
                     );
                   })}
                 </div>
-              </motion.div>
-
-              {/* Section: Start Your Transformation CTA */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
-                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight">
-                  Start Your Sideburn Transformation at Hair Skill Clinic
-                </h2>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A well crafted sideburn transplant does more than fill a gap. It restores balance sharpens expression and reconnects you with a look that feels genuinely yours. Whether you are dealing with thinning sideburns asymmetrical or patchy sideburns post-facelift sideburn distortion or long standing concerns like congenital absent sideburns a tailored plan can change how you feel every time you look in the mirror.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Hair Skill Clinic approaches sideburn restoration with precision and empathy. Every design is doctor led. Every graft is placed with intention. Every guest receives clear guidance through recovery and long term care. International patients find the journey smooth thanks to organised travel support and welcoming hospitality. The clinics experience across FUE sideburn hair transplant and DHI direct hair implantation ensures your result blends naturally with beard or temple hair.
-                </p>
-
-                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Key Benefits</h3>
-                <div className="space-y-3 mb-8 ml-2">
-                  {[
-                    "Full Customisation: Your sideburns are designed to match your beard type hairstyle and facial proportions",
-                    "Minimal Downtime: Tiny micro incisions heal quickly. Most guests resume daily life soon after treatment",
-                    "Long Lasting Results: Transplanted hairs behave like natural beard hair once matured",
-                    "Subtle Yet Powerful Change: Guests often describe the result as a quiet improvement that elevates their entire look"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black text-lg">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
-                  ))}
-                </div>
-
-                <p className="text-black text-base md:text-lg leading-relaxed font-extrabold">
-                  Your face carries your story. Let us help it feel complete again. Contact Hair Skill Clinic to schedule your consultation and begin your sideburn transformation with a team dedicated to natural looking long lasting results.
-                </p>
               </motion.div>
 
             </div>

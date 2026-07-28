@@ -228,7 +228,7 @@ export default function PrpClient() {
                   During platelet rich plasma for hair sessions a small amount of blood is taken from your arm. It is then spun in a centrifuge to separate the plasma rich in platelets. This concentrated plasma is used for prp injections for hair loss directly into thinning areas. PRP uses growth factors from your blood that may signal follicles to work better supporting prp for hair restoration in the right candidates.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Patients usually search prp for hair loss when they notice early gaps shedding or a softer hairline. They want something more serious than shampoo but less invasive than surgery. PRP hair treatment Pakistan sits exactly in that space. It can also support results after a transplant or amplify the effect of medical therapy.
+                  Patients searching for prp hair treatment near me usually search prp for hair loss when they notice early gaps shedding or a softer hairline. They want something more serious than shampoo but less invasive than surgery. PRP hair treatment Pakistan in Lahore Karachi and Rawalpindi sits exactly in that space. It can also support results after a transplant or amplify the effect of medical therapy.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Results depend on your stage genetics hormones and existing follicle count. PRP is not a miracle. Evidence shows benefit for many cases of prp for androgenetic alopecia but not everyone responds at the same level. That honesty matters.
@@ -244,7 +244,7 @@ export default function PrpClient() {
                   A medically guided way to protect the hair you still have
                 </h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Thinning hair feels stressful. Shedding breaks your confidence. And waiting only makes the problem harder to control. PRP hair treatment in Pakistan gives you a targeted science based method to support active follicles before they weaken further.
+                  Thinning hair feels stressful. Shedding breaks your confidence. And waiting only makes the problem harder to control. PRP hair treatment in Pakistan at accessible prp hair treatment cost in pakistan tiers gives you a targeted science based method to support active follicles before they weaken further.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-extrabold">
                   At Hair Skill Clinic PRP is performed by doctors who understand the patterns behind prp for hair loss. Every session follows a structured plan built around your scalps biology not guesswork. This is hair care with a clear purpose. A plan you can trust.
@@ -332,16 +332,16 @@ export default function PrpClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Thinning Hair Receding Hairline and Crown Weakness</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Many patients start PRP due to prp for thinning hair prp for receding hairline or prp for crown thinning. These areas still contain living follicles that can respond to growth factor stimulation. You should not wait until the scalp becomes shiny. PRP works best where there is still life.</p>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Dandruff, Scalp Infections and Seborrheic Issues</h3>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Many patients choose ozone hair treatment for dandruff because ozone has a gentle antimicrobial action. This may help with ozone therapy for scalp infections ozone therapy for seborrheic dermatitis and stubborn flakes that resist shampoos. People with ozone therapy for itchy scalps often describe fast relief smoother skin and easier washing routines.</p>
                   </div>
 
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">People Struggling With Shedding & Contraindications</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">If you feel hair shedding every time you shower or brush prp to reduce hair shedding can help stabilize the cycle. Shedding control is often one of the first improvements patients notice.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Who PRP Is Not Ideal For: PRP cannot regrow hair where follicles are gone. Patients with large smooth bald patches usually need a transplant sometimes supported by PRP for native hair. Certain conditions like platelet disorders active infections or uncontrolled autoimmune issues also require different treatment plans.</p>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Preparing for and Supporting Healing After Surgery</h3>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Some patients combine prp fue hair transplant protocols or start prp before hair transplant to understand benefits of prp after hair transplantation. A clean balanced scalp supports better planning and healthier tissue before surgery.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">When timed correctly prp after hair transplant may help recovery feel smoother. It answers questions like is prp necessary after hair transplant and when to do prp after hair transplant. It works by supporting circulation and easing irritation. This is why some doctors use it in protocols designed to speed healing after hair transplant or possibly increase graft survival by improving the surrounding environment.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our supervising physicians remind patients: PRP is strongest in the early chapters of hair loss. Waiting too long closes doors.
+                      Our attending physicians share that ozone therapy works best when the scalp still has active potential. Matching the right patient to the right treatment is what creates long term confidence.
                     </p>
                   </div>
                 </div>
@@ -433,7 +433,7 @@ export default function PrpClient() {
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Patients constantly ask one question: how many PRP sessions for hair loss do I actually need? Hair Skill Clinic gives clear answers based on your stage shedding rate and follicle activity. PRP works best as a structured journey not a single appointment.
+                  Patients constantly ask one question: how many prp sessions after hair transplant or for hair loss do I actually need? Hair Skill Clinic gives clear answers based on your stage shedding rate and follicle activity. PRP works best as a structured journey not a single appointment.
                 </p>
 
                 <div className="space-y-6 mb-6">
@@ -512,7 +512,7 @@ export default function PrpClient() {
                   PRP Hair Treatment Cost Ranges in Pakistan: Packages at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Patients comparing treatment options often feel overwhelmed by volatile pricing. Some clinics advertise unbelievably cheap offers while others present heavily inflated calculations. You want absolute clarity and honesty. Hair Skill Clinic gives both inside accessible local PKR tiers so you can plan with confidence.
+                  Patients reviewing the estimate cost of prp hair transplant in pakistan often compare prp vs hair transplant options. Some clinics advertise unbelievably cheap offers while others present heavily inflated calculations. You want absolute clarity and honesty. Hair Skill Clinic gives both inside accessible local PKR tiers so you can plan with confidence.
                 </p>
 
                 <div className="space-y-6">

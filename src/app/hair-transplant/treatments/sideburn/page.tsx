@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sideburn Restoration | Hair Skill Clinic",
     description: "Medically proven micro-angle graft control for absolute facial balance.",
-    url: "https://www.almadinahijamacenter.com/treatments/sideburn",
+    url: "https://www.hairskill.com/hair-transplant/treatments/sideburn",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hair-transplant/18.webp",
+        width: 1200,
+        height: 630,
+        alt: "Doctor drawing precise sideburn restoration outline on patient temple before surgical extraction",
+      },
+    ],
   },
 };
 
