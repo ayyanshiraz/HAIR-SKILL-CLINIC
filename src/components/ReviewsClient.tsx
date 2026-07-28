@@ -64,31 +64,31 @@ export default function ReviewsClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- REVIEWS DATA ---
+  // --- REVIEWS DATA WITH SEO HIGHLIGHTS ---
   const reviews = [
     {
       author: "Talal Ahmed",
-      text: "I traveled from the UK to Lahore for my hair transplant at Hair Skill Clinic. The doctors are true artists. The DHI method gave me incredible density, and the hairline design is absolutely perfect. It has been 8 months and the results are life-changing. Highly recommended!"
+      text: "I traveled from the UK to Lahore for my hair transplant at Hair Skill Clinic. The doctors are true artists. The <strong>DHI method</strong> gave me incredible density and the hairline design is absolutely perfect. It has been 8 months and the results are life changing. Highly recommended!"
     },
     {
       author: "Ali Raza",
-      text: "Amazing experience! From the consultation to the post-op care, the team at Hair Skill Clinic in Pakistan was phenomenal. I had 4000 grafts using the Sapphire FUE technique. The recovery was smooth, and the staff was available 24/7 on WhatsApp to answer all my questions."
+      text: "Amazing experience! From the consultation to the post op care the team at Hair Skill Clinic in Pakistan was phenomenal. I had 4000 grafts using the <strong>Sapphire FUE technique</strong>. The recovery was smooth and the staff was available 24 7 on WhatsApp to answer all my questions."
     },
     {
       author: "Omar Shafique",
-      text: "I was extremely nervous about getting a hair transplant, but the staff put me at ease immediately. The clinic is spotless, and the professionalism is unmatched in Lahore. My new hairline looks 100% natural, and no one can tell I had surgery."
+      text: "I was extremely nervous about getting a hair transplant but the staff put me at ease immediately. The clinic is spotless and the <strong>professionalism is unmatched in Lahore</strong>. My new hairline looks completely natural and no one can tell I had surgery."
     },
     {
       author: "Fahad Mazhar",
-      text: "Best hair transplant clinic in Pakistan! The attention to detail during the planning phase was impressive. The entire procedure was virtually painless. Thank you, Hair Skill Clinic, for restoring my confidence."
+      text: "<strong>Best hair transplant clinic in Pakistan!</strong> The attention to detail during the planning phase was impressive. The entire procedure was virtually painless. Thank you Hair Skill Clinic for restoring my confidence."
     },
     {
       author: "Musa Ali",
-      text: "Excellent service from start to finish. The transportation, hotel arrangements, and clinic facilities were world-class. The surgical team made sure I was comfortable the entire time. Very happy with my early results at month 4."
+      text: "Excellent service from start to finish. The transportation hotel arrangements and clinic facilities were <strong>world class standards</strong>. The surgical team made sure I was comfortable the entire time. Very happy with my early results at month 4."
     },
     {
       author: "Salman Shehzad",
-      text: "A truly 5-star experience. The post-operative support is fantastic. They check in on my progress regularly to ensure healthy hair growth. If you are considering a transplant in Pakistan, Hair Skill Clinic is the only place you should go."
+      text: "A truly 5 star experience. The post operative support is fantastic. They check in on my progress regularly to ensure healthy hair growth. If you are considering a <strong>transplant in Pakistan</strong> Hair Skill Clinic is the only place you should go."
     }
   ];
 
@@ -112,9 +112,9 @@ export default function ReviewsClient() {
             <span>/</span>
             <span className="text-[#772424]">Reviews</span>
           </div>
-          {/* Heading aligned left */}
+          {/* SEO Optimized Main Heading (H1) */}
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
-            Patient Reviews
+            Top Hair Transplant Patient Reviews in Pakistan
           </h1>
         </div>
       </motion.section>
@@ -127,26 +127,34 @@ export default function ReviewsClient() {
             {/* LEFT SIDE: REVIEWS CONTENT */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-gray-200 pb-8">
-                <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  What Our Patients Say
-                </h2>
+              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-10 flex flex-col justify-between gap-6 border-b border-gray-200 pb-8">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                  {/* SEO Optimized Subheading (H2) */}
+                  <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
+                    Real Success Stories from Lahore Karachi and Islamabad
+                  </h2>
+                  
+                  {/* Direct Google Reviews Link */}
+                  <a 
+                    href={googleReviewsUrl}
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex shrink-0 items-center justify-center gap-2 px-6 py-3.5 bg-white border-2 border-[#772424] text-[#772424] font-black rounded-xl hover:bg-[#772424] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                  >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="currentColor" />
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="currentColor" />
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="currentColor" />
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="currentColor" />
+                    </svg>
+                    Read All Google Reviews <span>→</span>
+                  </a>
+                </div>
                 
-                {/* Direct Google Reviews Link */}
-                <a 
-                  href={googleReviewsUrl}
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white border-2 border-[#772424] text-[#772424] font-black rounded-xl hover:bg-[#772424] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-                >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="currentColor" />
-                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="currentColor" />
-                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="currentColor" />
-                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="currentColor" />
-                  </svg>
-                  Read All Google Reviews <span>→</span>
-                </a>
+                {/* Micro SEO Text Block */}
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl">
+                  Read authentic feedback from our satisfied clients across Pakistan. Discover why thousands trust our expert surgeons for FUE unshaven and manual punch hair restoration procedures.
+                </p>
               </motion.div>
 
               <motion.div 
@@ -162,18 +170,22 @@ export default function ReviewsClient() {
                     className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300"
                   >
                     <div>
-                      {/* 5 Stars */}
-                      <div className="flex gap-1 mb-4">
+                      {/* 5 Stars with Accessibility */}
+                      <div className="flex gap-1 mb-4" aria-label="5 out of 5 stars">
                         {[1, 2, 3, 4, 5].map((star) => (
                           <svg key={star} className="w-5 h-5 text-[#C5A059]" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                           </svg>
                         ))}
                       </div>
-                      <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                        "{review.text}"
-                      </p>
+                      
+                      {/* SEO Bolded Text Render */}
+                      <p 
+                        className="text-black text-base md:text-lg leading-relaxed font-medium mb-6"
+                        dangerouslySetInnerHTML={{ __html: review.text }}
+                      />
                     </div>
+                    
                     <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-200">
                       <div className="w-10 h-10 rounded-full bg-[#772424] text-white flex items-center justify-center font-black text-lg">
                         {review.author.charAt(0)}
@@ -203,6 +215,7 @@ export default function ReviewsClient() {
                     <input 
                       type="text" 
                       placeholder="Full Name" 
+                      aria-label="Full Name"
                       value={fullName} 
                       onChange={(e) => setFullName(e.target.value)} 
                       required 
@@ -215,6 +228,7 @@ export default function ReviewsClient() {
                     <input 
                       type="email" 
                       placeholder="E-mail" 
+                      aria-label="Email Address"
                       value={email} 
                       onChange={(e) => setEmail(e.target.value)} 
                       required 
@@ -248,6 +262,7 @@ export default function ReviewsClient() {
                     <input 
                       type="tel" 
                       placeholder="Phone Number" 
+                      aria-label="Phone Number"
                       value={phone} 
                       onChange={(e) => setPhone(e.target.value)} 
                       required 
@@ -259,7 +274,7 @@ export default function ReviewsClient() {
                   <div className="flex items-center gap-2 mt-2">
                     <input type="checkbox" id="reviewPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
                     <label htmlFor="reviewPrivacy" className="text-xs text-white/80 cursor-pointer">
-                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
+                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy</Link>
                     </label>
                   </div>
 
