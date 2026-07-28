@@ -49,7 +49,7 @@ export default function ChineseMethodClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
@@ -101,10 +101,10 @@ export default function ChineseMethodClient() {
                   Chinese Hair Transplant Method
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The Chinese Hair Transplant Method is a specialized hair restoration approach designed to improve hair density and coverage while supporting healthy hair growth. The procedure is performed by experienced professionals using advanced techniques to achieve natural-looking results.
+                  The Chinese method is the new FUE method. It is a highly specialized hair restoration approach designed to improve hair density and coverage while supporting robust hair growth. This modern procedure is performed by our experienced professionals using advanced extraction and implantation techniques to achieve perfectly natural looking results.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  To enhance the overall outcome, PRP (Platelet-Rich Plasma) therapy is recommended as part of the treatment plan.
+                  To enhance the overall outcome, PRP therapy is highly recommended as a core part of the treatment plan.
                 </p>
               </motion.div>
 
@@ -114,7 +114,7 @@ export default function ChineseMethodClient() {
                 <div className="space-y-3 ml-1 sm:ml-2">
                   {[
                     "Improved hair density and coverage",
-                    "Natural-looking hair growth",
+                    "Natural looking hair growth",
                     "Advanced implantation techniques",
                     "Enhanced graft support",
                     "Comprehensive treatment approach"
@@ -149,9 +149,9 @@ export default function ChineseMethodClient() {
 
               {/* RECOVERY & AFTERCARE SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-4 pt-6 border-t border-gray-200">
-                <h3 className="text-xl sm:text-2xl font-black text-[#772424]">Recovery & Aftercare</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424]">Recovery and Aftercare</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Patients receive personalized aftercare instructions, medication guidance, and a PRP schedule to help maximize the success of their hair transplant and support long-term hair growth.
+                  Patients receive personalized aftercare instructions, medication guidance, and a PRP schedule to help maximize the success of their hair transplant and support long term hair growth.
                 </p>
               </motion.div>
 

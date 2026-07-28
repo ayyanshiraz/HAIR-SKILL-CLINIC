@@ -1,33 +1,36 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
-export type CartItem = {
+type CartItem = {
   id: number;
   name: string;
   price: number;
-  quantity: number;
+  priceDisplay?: string;
   image: string;
+  quantity: number;
   requirements?: string;
 };
 
-export type WishlistItem = {
+type WishlistItem = {
   id: number;
   name: string;
   price: number;
+  priceDisplay?: string;
   image: string;
-  description: string;
-  specs: string[];
+  description?: string;
+  specs?: string[];
 };
 
 type CartContextType = {
   cartItems: CartItem[];
+  wishlistItems: WishlistItem[];
+  cartCount: number;
   addToCart: (item: Omit<CartItem, `quantity`>) => void;
   removeFromCart: (id: number) => void;
-  updateQuantity: (id: number, delta: number) => void;
-  cartCount: number;
-  wishlistItems: WishlistItem[];
+  updateQuantity: (id: number, change: number) => void;
   toggleWishlist: (item: WishlistItem) => void;
+  clearCart: () => void;
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -35,40 +38,53 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    const savedCart = localStorage.getItem(`clinic_cart`);
-    const savedWishlist = localStorage.getItem(`clinic_wishlist`);
+    const savedCart = localStorage.getItem(`hairSkillCart`);
+    const savedWishlist = localStorage.getItem(`hairSkillWishlist`);
     
     if (savedCart) {
       try {
         setCartItems(JSON.parse(savedCart));
-      } catch (e) {}
+      } catch (error) {
+        console.error(`Error parsing cart data`);
+      }
     }
     
     if (savedWishlist) {
       try {
         setWishlistItems(JSON.parse(savedWishlist));
-      } catch (e) {}
+      } catch (error) {
+        console.error(`Error parsing wishlist data`);
+      }
     }
     
-    setIsLoaded(true);
+    setIsInitialized(true);
   }, []);
 
   useEffect(() => {
-    if (isLoaded) {
-      localStorage.setItem(`clinic_cart`, JSON.stringify(cartItems));
-      localStorage.setItem(`clinic_wishlist`, JSON.stringify(wishlistItems));
+    if (isInitialized) {
+      localStorage.setItem(`hairSkillCart`, JSON.stringify(cartItems));
     }
-  }, [cartItems, wishlistItems, isLoaded]);
+  }, [cartItems, isInitialized]);
+
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem(`hairSkillWishlist`, JSON.stringify(wishlistItems));
+    }
+  }, [wishlistItems, isInitialized]);
+
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   const addToCart = (newItem: Omit<CartItem, `quantity`>) => {
     setCartItems((prev) => {
-      const existing = prev.find((item) => item.id === newItem.id);
-      if (existing) {
+      const existingItem = prev.find((item) => item.id === newItem.id);
+      if (existingItem) {
         return prev.map((item) =>
-          item.id === newItem.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === newItem.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       }
       return [...prev, { ...newItem, quantity: 1 }];
@@ -79,11 +95,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
 
-  const updateQuantity = (id: number, delta: number) => {
+  const updateQuantity = (id: number, change: number) => {
     setCartItems((prev) =>
       prev.map((item) => {
         if (item.id === id) {
-          const newQuantity = item.quantity + delta;
+          const newQuantity = item.quantity + change;
           return { ...item, quantity: newQuantity > 0 ? newQuantity : 1 };
         }
         return item;
@@ -93,18 +109,31 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const toggleWishlist = (newItem: WishlistItem) => {
     setWishlistItems((prev) => {
-      const exists = prev.find((item) => item.id === newItem.id);
-      if (exists) {
+      const isExisting = prev.some((item) => item.id === newItem.id);
+      if (isExisting) {
         return prev.filter((item) => item.id !== newItem.id);
       }
       return [...prev, newItem];
     });
   };
 
-  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const clearCart = () => {
+    setCartItems([]);
+  };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, cartCount, wishlistItems, toggleWishlist }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        wishlistItems,
+        cartCount,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        toggleWishlist,
+        clearCart
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

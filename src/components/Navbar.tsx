@@ -58,6 +58,7 @@ export default function Navbar() {
               </div>
               <div className={`absolute left-0 top-full hidden group-hover:block w-80 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
                 {[
+                  { name: `Hair SKill Clinic`, path: `/about/our-story` },
                   { name: `Smile True Philosophy`, path: `/about/philosophy` },
                   { name: `Smile Gentle Care`, path: `/about/gentle-care` },
                   { name: `Why To Choose Smile Hair Clinic?`, path: `/about/why-choose-us` },

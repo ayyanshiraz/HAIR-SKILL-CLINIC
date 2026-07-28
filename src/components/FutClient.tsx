@@ -49,7 +49,7 @@ export default function FutClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
       {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
@@ -111,15 +111,15 @@ export default function FutClient() {
                 </p>
               </motion.div>
 
-              {/* IMPORTANT NOTICE BANNER */}
+              {/* TREATMENT HIGHLIGHT BANNER */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
                 <div className="bg-[#772424] text-white p-8 rounded-3xl shadow-xl border-4 border-[#C5A059] flex flex-col gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="text-[#C5A059] text-2xl font-black">⚠</span>
-                    <h3 className="text-xl sm:text-2xl font-black text-white uppercase tracking-wide">Important Notice</h3>
+                    <span className="text-[#C5A059] text-2xl font-black">✓</span>
+                    <h3 className="text-xl sm:text-2xl font-black text-white uppercase tracking-wide">FUT Treatment Available</h3>
                   </div>
                   <p className="text-white text-base md:text-lg font-bold leading-relaxed">
-                    FUT Hair Transplant is not offered at our clinic. We do not perform the FUT/Strip Method and instead specialize in advanced hair transplant techniques that provide more comfortable procedures and natural-looking results.
+                    FUT Hair Transplant is a highly effective treatment offered at our clinic. We expertly perform the FUT method to provide extensive coverage in a single session, ensuring comfortable procedures and perfectly natural looking results.
                   </p>
                 </div>
               </motion.div>
@@ -156,17 +156,17 @@ export default function FutClient() {
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-6">Alternative Treatments Available at Our Clinic</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                  <Link href="/treatments/manual-fue" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
+                  <Link href="/hair-transplant/treatments/manual-fue" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
                     <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Manual FUE ›</h4>
                     <p className="text-black text-xs font-medium leading-relaxed">Individual follicle extraction one by one for maximum graft survival.</p>
                   </Link>
 
-                  <Link href="/treatments/dhi" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
+                  <Link href="/hair-transplant/treatments/dhi" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
                     <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">DHI Technique ›</h4>
                     <p className="text-black text-xs font-medium leading-relaxed">Direct placement via Choi Implanter Pen for elite angle and density control.</p>
                   </Link>
 
-                  <Link href="/treatments/fue-by-moterize" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
+                  <Link href="/hair-transplant/treatments/fue-by-moterize" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
                     <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Motorized FUE ›</h4>
                     <p className="text-black text-xs font-medium leading-relaxed">High-efficiency automated harvesting ideal for larger megasessions.</p>
                   </Link>

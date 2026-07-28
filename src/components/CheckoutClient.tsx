@@ -12,6 +12,8 @@ export default function CheckoutClient() {
   const taxAmount = subtotal * taxRate;
   const finalTotal = subtotal > 0 ? subtotal + taxAmount : 0;
 
+  const hasRangeItems = cartItems.some(item => item.priceDisplay);
+
   const [formData, setFormData] = useState({
     firstName: ``,
     lastName: ``,
@@ -19,21 +21,27 @@ export default function CheckoutClient() {
     address: ``,
     city: ``,
     zipCode: ``,
+    requestDiscount: false,
     paymentMethod: `online-link`
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target as HTMLInputElement;
+    const checked = (e.target as HTMLInputElement).checked;
+    
+    setFormData(prev => ({ 
+      ...prev, 
+      [name]: type === `checkbox` ? checked : value 
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     const paymentLabels: Record<string, string> = {
-      'online-link': `Credit Card / PayPal (Secure Link)`,
-      'bank-transfer': `Direct Bank Transfer`,
-      'cod': `Cash on Delivery (Pakistan Only)`
+      "online-link": `Credit Card / PayPal (Secure Link)`,
+      "bank-transfer": `Direct Bank Transfer`,
+      "cod": `Cash on Delivery (Pakistan Only)`
     };
 
     let orderMessage = `New Order from Hair Skill Clinic\n\n` +
@@ -41,21 +49,32 @@ export default function CheckoutClient() {
       `Name: ${formData.firstName} ${formData.lastName}\n` +
       `Email: ${formData.email}\n` +
       `Address: ${formData.address}, ${formData.city}, ${formData.zipCode}\n` +
-      `Payment Method Preference: ${paymentLabels[formData.paymentMethod]}\n\n` +
-      `Items Ordered:\n`;
+      `Payment Method Preference: ${paymentLabels[formData.paymentMethod]}\n`;
+      
+    if (formData.requestDiscount) {
+      orderMessage += `\n*** CUSTOMER REQUESTED A SPECIAL DISCOUNT ***\n`;
+    }
+
+    orderMessage += `\nItems Ordered:\n`;
 
     cartItems.forEach(item => {
-      orderMessage += `- ${item.quantity}x ${item.name} (PKR ${item.price.toLocaleString()})\n`;
+      const priceText = item.priceDisplay ? item.priceDisplay : item.price.toLocaleString();
+      orderMessage += `- ${item.quantity}x ${item.name} (PKR ${priceText})\n`;
       if (item.requirements) {
         orderMessage += `  Requirements: ${item.requirements}\n`;
       }
     });
 
     orderMessage += `\nOrder Summary:\n` +
-      `Subtotal: PKR ${subtotal.toLocaleString()}\n` +
-      `Tax: PKR ${taxAmount.toLocaleString()}\n` +
+      `Estimated Base Subtotal: PKR ${subtotal.toLocaleString()}\n` +
+      `Estimated Tax: PKR ${taxAmount.toLocaleString()}\n` +
       `Delivery: Pending Address Review\n` +
-      `Total (Without Shipping): PKR ${finalTotal.toLocaleString()}`;
+      `Discount: Pending (To be applied by Manager)\n` +
+      `Estimated Base Total: PKR ${finalTotal.toLocaleString()}`;
+
+    if (hasRangeItems) {
+      orderMessage += `\n\nNote: Cart contains variable price range items. Please confirm final exact total with the customer.`;
+    }
 
     const whatsappUrl = `https://wa.me/923014923336?text=${encodeURIComponent(orderMessage)}`;
     
@@ -168,13 +187,31 @@ export default function CheckoutClient() {
                 </div>
               </div>
 
+              <div className={`border-t border-gray-200 pt-8 mb-10`}>
+                <label className={`flex items-start p-5 border border-green-200 bg-green-50 rounded-xl cursor-pointer transition-all hover:bg-green-100`}>
+                  <div className={`flex items-center h-5 mt-1`}>
+                    <input 
+                      type={`checkbox`} 
+                      name={`requestDiscount`} 
+                      checked={formData.requestDiscount}
+                      onChange={handleInputChange}
+                      className={`w-5 h-5 text-green-600 rounded focus:ring-green-500`}
+                    />
+                  </div>
+                  <div className={`ml-4 flex flex-col`}>
+                    <span className={`font-bold text-green-900`}>Request Special Discount</span>
+                    <span className={`text-sm text-green-700 mt-1 leading-relaxed`}>Check this box to request our manager for a special discount on your total bill via WhatsApp.</span>
+                  </div>
+                </label>
+              </div>
+
               <div className={`border-t border-gray-200 pt-8 mb-6`}>
                 <h2 className={`text-2xl font-bold text-gray-900 mb-2`}>Payment Method</h2>
                 <p className={`text-sm text-gray-500`}>Select how you would prefer to pay once your order is reviewed.</p>
               </div>
               
               <div className={`space-y-4 mb-8`}>
-                <label className={`flex items-start p-5 border-2 rounded-xl cursor-pointer transition-all ${formData.paymentMethod === 'online-link' ? 'border-[#772424] bg-[#772424]/5' : 'border-gray-200 hover:border-gray-300'}`}>
+                <label className={`flex items-start p-5 border-2 rounded-xl cursor-pointer transition-all ${formData.paymentMethod === `online-link` ? `border-[#772424] bg-[#772424]/5` : `border-gray-200 hover:border-gray-300`}`}>
                   <div className={`flex items-center h-5 mt-1`}>
                     <input 
                       type={`radio`} 
@@ -191,7 +228,7 @@ export default function CheckoutClient() {
                   </div>
                 </label>
 
-                <label className={`flex items-start p-5 border-2 rounded-xl cursor-pointer transition-all ${formData.paymentMethod === 'bank-transfer' ? 'border-[#772424] bg-[#772424]/5' : 'border-gray-200 hover:border-gray-300'}`}>
+                <label className={`flex items-start p-5 border-2 rounded-xl cursor-pointer transition-all ${formData.paymentMethod === `bank-transfer` ? `border-[#772424] bg-[#772424]/5` : `border-gray-200 hover:border-gray-300`}`}>
                   <div className={`flex items-center h-5 mt-1`}>
                     <input 
                       type={`radio`} 
@@ -208,7 +245,7 @@ export default function CheckoutClient() {
                   </div>
                 </label>
                 
-                <label className={`flex items-start p-5 border-2 rounded-xl cursor-pointer transition-all ${formData.paymentMethod === 'cod' ? 'border-[#772424] bg-[#772424]/5' : 'border-gray-200 hover:border-gray-300'}`}>
+                <label className={`flex items-start p-5 border-2 rounded-xl cursor-pointer transition-all ${formData.paymentMethod === `cod` ? `border-[#772424] bg-[#772424]/5` : `border-gray-200 hover:border-gray-300`}`}>
                   <div className={`flex items-center h-5 mt-1`}>
                     <input 
                       type={`radio`} 
@@ -234,16 +271,34 @@ export default function CheckoutClient() {
               
               <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 mb-8`}>
                 <p className={`text-sm text-blue-900 leading-relaxed font-medium`}>
-                  <span className={`font-extrabold block mb-1`}>Shipping and Delivery Notice</span>
-                  Because delivery rates vary based on your exact city and country your final shipping cost is not included yet. Once you submit your order our team will review your address and contact you within 1 to 2 business days with the exact shipping charges.
+                  <span className={`font-extrabold block mb-1`}>Shipping & Discount Notice</span>
+                  Because delivery rates vary based on your location and discounts are applied manually, your final cost will be verified. Once submitted, our team will contact you via WhatsApp with the exact delivery charges and your discounted total.
                 </p>
               </div>
 
               <h3 className={`text-2xl font-extrabold text-gray-900 mb-6`}>Order Summary</h3>
               
+              {/* --- NEW SECTION: ITEMS LIST IN CHECKOUT --- */}
+              <div className={`mb-6`}>
+                <h4 className={`text-xs font-bold text-gray-400 uppercase tracking-wider mb-3`}>Items in your cart</h4>
+                <div className={`space-y-3 bg-gray-50 p-4 rounded-xl border border-gray-100`}>
+                  {cartItems.map((item) => (
+                    <div key={item.id} className={`flex justify-between items-start text-sm`}>
+                      <span className={`font-bold text-gray-800 pr-4`}>
+                        {item.quantity}x {item.name}
+                      </span>
+                      <span className={`font-bold text-[#772424] text-right whitespace-nowrap`}>
+                        PKR {item.priceDisplay ? item.priceDisplay : item.price.toLocaleString()}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* ----------------------------------------- */}
+
               <div className={`space-y-4 mb-8`}>
                 <div className={`flex justify-between items-center text-gray-600 font-medium`}>
-                  <span>Subtotal</span>
+                  <span>Estimated Base Subtotal</span>
                   <span className={`text-gray-900`}>PKR {subtotal.toLocaleString()}</span>
                 </div>
                 
@@ -258,18 +313,30 @@ export default function CheckoutClient() {
                     Pending Address Review
                   </span>
                 </div>
+
+                <div className={`flex justify-between items-center text-green-600 font-medium`}>
+                  <span>Special Discount</span>
+                  <span className={`font-bold bg-green-100 px-3 py-1 rounded-full text-xs`}>
+                    Applied on WhatsApp
+                  </span>
+                </div>
               </div>
 
               <div className={`border-t border-gray-200 pt-6 mb-8`}>
-                <div className={`flex justify-between items-center`}>
+                <div className={`flex justify-between items-center mb-2`}>
                   <div className={`flex flex-col`}>
-                    <span className={`text-lg font-bold text-gray-900`}>Total</span>
-                    <span className={`text-xs text-gray-500`}>Excluding shipping</span>
+                    <span className={`text-lg font-bold text-gray-900`}>Estimated Total</span>
+                    <span className={`text-xs text-gray-500`}>Excluding shipping & discount</span>
                   </div>
                   <span className={`text-2xl lg:text-3xl font-extrabold text-[#772424]`}>
                     PKR {finalTotal.toLocaleString()}
                   </span>
                 </div>
+                {hasRangeItems && (
+                  <p className={`text-xs text-[#772424] mt-2 font-medium bg-red-50 p-2 rounded-lg`}>
+                    Note: Your cart contains items with price ranges. The total above uses the base minimum price. Final exact pricing will be verified via WhatsApp.
+                  </p>
+                )}
               </div>
 
               <button 

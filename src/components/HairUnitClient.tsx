@@ -9,12 +9,19 @@ type HairUnit = {
   id: number;
   name: string;
   price: number;
+  priceDisplay?: string;
   description: string;
   specs: string[];
   image: string;
 };
 
-export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] }) {
+export default function HairUnitClient({ 
+  hairUnits, 
+  hairCareProducts 
+}: { 
+  hairUnits: HairUnit[], 
+  hairCareProducts: HairUnit[] 
+}) {
   const { cartItems, cartCount, addToCart, wishlistItems, toggleWishlist } = useCart();
   const [selectedUnit, setSelectedUnit] = useState<HairUnit | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -35,7 +42,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
     const isAlreadyInCart = cartItems.some((item) => item.id === unit.id);
     
     if (isAlreadyInCart) {
-      showToast(`This unit is already in your cart`);
+      showToast(`This item is already in your cart`);
       return;
     }
     
@@ -43,6 +50,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
       id: unit.id,
       name: unit.name,
       price: unit.price,
+      priceDisplay: unit.priceDisplay,
       image: unit.image,
       requirements: customReq
     });
@@ -61,6 +69,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
       id: unit.id, 
       name: unit.name, 
       price: unit.price, 
+      priceDisplay: unit.priceDisplay,
       image: unit.image,
       description: unit.description,
       specs: unit.specs
@@ -82,6 +91,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
     <div className={`min-h-screen bg-gray-50 pt-32 pb-20 font-sans relative`}>
       <div className={`max-w-[1400px] mx-auto px-6 sm:px-8`}>
         
+        {/* --- HEADER --- */}
         <div className={`flex flex-col md:flex-row justify-between items-center mb-16`}>
           <div>
             <h1 className={`text-4xl md:text-5xl font-extrabold text-[#772424] mb-4`}>
@@ -109,13 +119,15 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
           </div>
         </div>
 
+        {/* --- SECTION 1: HAIR UNITS --- */}
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8`}>
           {hairUnits.map((unit) => (
             <motion.div 
               key={unit.id}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: unit.id * 0.1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: `-50px` }}
+              transition={{ duration: 0.5 }}
               onClick={() => setSelectedUnit(unit)}
               className={`bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-300 flex flex-col cursor-pointer relative`}
             >
@@ -137,6 +149,11 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
               </button>
 
               <div className={`w-full h-64 bg-gray-100 relative overflow-hidden`}>
+                <div className={`absolute top-4 left-4 z-10 bg-green-600/95 backdrop-blur-sm text-white text-[10px] uppercase tracking-wider font-extrabold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5`}>
+                  <span className={`w-1.5 h-1.5 rounded-full bg-white animate-pulse`}></span>
+                  Special Discount
+                </div>
+                
                 <img 
                   src={unit.image} 
                   alt={unit.name} 
@@ -149,8 +166,8 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                   <h2 className={`text-xl font-bold text-gray-900 leading-tight pr-4`}>
                     {unit.name}
                   </h2>
-                  <span className={`text-xl font-extrabold text-[#772424]`}>
-                    PKR {unit.price.toLocaleString()}
+                  <span className={`text-xl font-extrabold text-[#772424] shrink-0`}>
+                    PKR {unit.priceDisplay ? unit.priceDisplay : unit.price.toLocaleString()}
                   </span>
                 </div>
                 
@@ -174,6 +191,96 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
 
                 <button 
                   onClick={(e) => handleAddToCart(unit, ``, e)}
+                  className={`w-full py-3.5 rounded-xl bg-[#772424] text-white font-bold text-[15px] hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200`}
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* --- SECTION 2: WIG CARE & ACCESSORIES --- */}
+        <div className={`mt-32 mb-16`}>
+          <h2 className={`text-4xl md:text-5xl font-extrabold text-[#772424] mb-4`}>
+            Wig Care & Accessories
+          </h2>
+          <p className={`text-lg text-gray-600 max-w-2xl`}>
+            Maintain your hair systems with our premium collection of tapes glues solvents and care products for long-lasting perfect results.
+          </p>
+        </div>
+
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8`}>
+          {hairCareProducts.map((product) => (
+            <motion.div 
+              key={product.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: `-50px` }}
+              transition={{ duration: 0.5 }}
+              onClick={() => setSelectedUnit(product)}
+              className={`bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-300 flex flex-col cursor-pointer relative`}
+            >
+              
+              <button 
+                onClick={(e) => handleToggleWishlist(product, e)}
+                className={`absolute top-4 right-4 z-10 bg-white/90 backdrop-blur p-2 rounded-full shadow-md hover:bg-white transition-colors`}
+              >
+                <svg 
+                  xmlns={`http://www.w3.org/2000/svg`} 
+                  fill={wishlistItems.some(i => i.id === product.id) ? `#772424` : `none`} 
+                  viewBox={`0 0 24 24`} 
+                  strokeWidth={1.5} 
+                  stroke={`#772424`} 
+                  className={`w-5 h-5`}
+                >
+                  <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z`} />
+                </svg>
+              </button>
+
+              <div className={`w-full h-64 bg-gray-100 relative overflow-hidden flex items-center justify-center p-8`}>
+                <div className={`absolute top-4 left-4 z-10 bg-green-600/95 backdrop-blur-sm text-white text-[10px] uppercase tracking-wider font-extrabold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5`}>
+                  <span className={`w-1.5 h-1.5 rounded-full bg-white animate-pulse`}></span>
+                  Special Discount
+                </div>
+                
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className={`w-full h-full object-cover rounded-xl`}
+                />
+              </div>
+
+              <div className={`p-6 flex flex-col flex-grow`}>
+                <div className={`flex justify-between items-start mb-2`}>
+                  <h2 className={`text-lg font-bold text-gray-900 leading-tight pr-4`}>
+                    {product.name}
+                  </h2>
+                  <span className={`text-xl font-extrabold text-[#772424] shrink-0`}>
+                    PKR {product.priceDisplay ? product.priceDisplay : product.price.toLocaleString()}
+                  </span>
+                </div>
+                
+                <p className={`text-sm text-gray-500 mb-6 line-clamp-2`}>
+                  {product.description}
+                </p>
+
+                <div className={`mb-8 flex-grow`}>
+                  <h3 className={`text-xs uppercase tracking-wider font-bold text-gray-400 mb-3`}>
+                    Product Details
+                  </h3>
+                  <ul className={`space-y-2`}>
+                    {product.specs.map((spec, index) => (
+                      <li key={index} className={`flex items-start text-sm text-gray-700 font-medium`}>
+                        <span className={`text-[#772424] mr-2 mt-0.5`}>✓</span>
+                        {spec}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button 
+                  onClick={(e) => handleAddToCart(product, ``, e)}
                   className={`w-full py-3.5 rounded-xl bg-[#772424] text-white font-bold text-[15px] hover:bg-[#5a1b1b] active:scale-[0.98] transition-all duration-200`}
                 >
                   Add to Cart
@@ -222,11 +329,16 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 ✕
               </button>
 
-              <div className={`w-full md:w-1/2 h-72 md:h-auto bg-gray-100 relative overflow-hidden flex-shrink-0`}>
+              <div className={`w-full md:w-1/2 h-72 md:h-auto bg-gray-100 relative overflow-hidden flex-shrink-0 flex items-center justify-center p-8`}>
+                <div className={`absolute top-6 left-6 z-10 bg-green-600/95 backdrop-blur-sm text-white text-xs uppercase tracking-widest font-black px-4 py-2 rounded-full shadow-lg flex items-center gap-2`}>
+                  <span className={`w-2 h-2 rounded-full bg-white animate-pulse`}></span>
+                  Special Discount Available
+                </div>
+
                 <img 
                   src={selectedUnit.image} 
                   alt={selectedUnit.name} 
-                  className={`w-full h-full object-cover`}
+                  className={`w-full h-full object-cover rounded-xl`}
                 />
               </div>
 
@@ -254,7 +366,7 @@ export default function HairUnitClient({ hairUnits }: { hairUnits: HairUnit[] })
                 </div>
 
                 <span className={`text-3xl font-extrabold text-[#772424] mb-6 block`}>
-                  PKR {selectedUnit.price.toLocaleString()}
+                  PKR {selectedUnit.priceDisplay ? selectedUnit.priceDisplay : selectedUnit.price.toLocaleString()}
                 </span>
 
                 <p className={`text-lg text-gray-600 mb-8 leading-relaxed`}>

@@ -211,7 +211,7 @@ export default function Home() {
               <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#C5A059]/10 rounded-full blur-3xl opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
               
               <h3 className={`text-6xl lg:text-[80px] font-black text-[#1a202c] tracking-tighter mb-2 relative z-10 flex items-center`}>
-                <AnimatedCounter to={20} duration={2} />
+                <AnimatedCounter to={25} duration={2} />
                 <span className={`text-[#772424]`}>+</span>
               </h3>
               <div className={`flex flex-col items-center`}>
@@ -253,7 +253,7 @@ export default function Home() {
             >
               <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#C5A059]/10 rounded-full blur-3xl opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
               <h3 className={`text-6xl lg:text-[80px] font-black text-[#1a202c] tracking-tighter mb-2 relative z-10 flex items-center`}>
-                <AnimatedCounter to={20000} duration={3} />
+                <AnimatedCounter to={5000} duration={3} />
                 <span className={`text-[#772424]`}>+</span>
               </h3>
               <div className={`flex flex-col items-center`}>

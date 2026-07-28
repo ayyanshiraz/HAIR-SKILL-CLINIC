@@ -45,10 +45,19 @@ export default function Footer() {
     },
     {
       name: `YouTube`,
-      href: `https://youtube.com/@Hairskillclinic`,
+      href: `https://www.youtube.com/@Hairskillclinic`,
       icon: (
         <svg className={`w-4 h-4 fill-current shrink-0`} viewBox={`0 0 24 24`}>
           <path d={`M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z`} />
+        </svg>
+      ),
+    },
+    {
+      name: `TikTok`,
+      href: `https://www.tiktok.com/@hair_skill`,
+      icon: (
+        <svg className={`w-4 h-4 fill-current shrink-0`} viewBox={`0 0 448 512`}>
+          <path d={`M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z`} />
         </svg>
       ),
     },
@@ -139,9 +148,14 @@ export default function Footer() {
                     <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z`} />
                   </svg>
                 </div>
-                <span className={`font-bold tracking-wide transition-colors duration-300 group-hover/item:text-white`}>
-                  +92 301 492 3336
-                </span>
+                <div className={`flex flex-col`}>
+                  <span className={`font-bold tracking-wide transition-colors duration-300 group-hover/item:text-white`}>
+                    +92 301 492 3336
+                  </span>
+                  <span className={`font-bold tracking-wide transition-colors duration-300 group-hover/item:text-white`}>
+                    +92 300 411 1888
+                  </span>
+                </div>
               </li>
 
             </ul>
@@ -152,24 +166,48 @@ export default function Footer() {
             <h3 className={`text-xl font-extrabold tracking-tight text-white uppercase`}>
               Follow Us
             </h3>
-            <div className={`flex flex-wrap gap-3`}>
-              {socialPlatforms.map((platform) => (
-                <a
-                  key={platform.name}
-                  href={platform.href}
-                  target={`_blank`}
-                  rel={`noopener noreferrer`}
-                  aria-label={platform.name}
-                  className={`group relative flex items-center gap-0 overflow-hidden rounded-full bg-white/10 px-4 py-3.5 text-white backdrop-blur-md transition-all duration-300 ease-out hover:bg-white hover:px-5 hover:text-[#772424] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] hover:-translate-y-1`}
-                >
-                  <span className={`relative z-10 transition-transform duration-300 group-hover:scale-110`}>
-                    {platform.icon}
-                  </span>
-                  <span className={`max-w-0 overflow-hidden whitespace-nowrap text-xs font-black tracking-wider opacity-0 transition-all duration-300 ease-out group-hover:max-w-[100px] group-hover:pl-2.5 group-hover:opacity-100`}>
-                    {platform.name}
-                  </span>
-                </a>
-              ))}
+            <div className={`flex flex-col gap-3`}>
+              {/* Top Row: FB, IG, YT */}
+              <div className={`flex flex-wrap gap-3`}>
+                {socialPlatforms.slice(0, 3).map((platform) => (
+                  <a
+                    key={platform.name}
+                    href={platform.href}
+                    target={`_blank`}
+                    rel={`noopener noreferrer`}
+                    aria-label={platform.name}
+                    className={`group relative z-50 flex items-center gap-0 overflow-hidden rounded-full bg-white/10 px-4 py-3.5 text-white backdrop-blur-md transition-all duration-300 ease-out hover:bg-white hover:px-5 hover:text-[#772424] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] hover:-translate-y-1 cursor-pointer`}
+                  >
+                    <span className={`relative z-10 transition-transform duration-300 group-hover:scale-110`}>
+                      {platform.icon}
+                    </span>
+                    <span className={`max-w-0 overflow-hidden whitespace-nowrap text-xs font-black tracking-wider opacity-0 transition-all duration-300 ease-out group-hover:max-w-[100px] group-hover:pl-2.5 group-hover:opacity-100`}>
+                      {platform.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
+              
+              {/* Bottom Row: TikTok */}
+              <div className={`flex flex-wrap gap-3`}>
+                {socialPlatforms.slice(3).map((platform) => (
+                  <a
+                    key={platform.name}
+                    href={platform.href}
+                    target={`_blank`}
+                    rel={`noopener noreferrer`}
+                    aria-label={platform.name}
+                    className={`group relative z-50 flex items-center gap-0 overflow-hidden rounded-full bg-white/10 px-4 py-3.5 text-white backdrop-blur-md transition-all duration-300 ease-out hover:bg-white hover:px-5 hover:text-[#772424] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] hover:-translate-y-1 cursor-pointer`}
+                  >
+                    <span className={`relative z-10 transition-transform duration-300 group-hover:scale-110`}>
+                      {platform.icon}
+                    </span>
+                    <span className={`max-w-0 overflow-hidden whitespace-nowrap text-xs font-black tracking-wider opacity-0 transition-all duration-300 ease-out group-hover:max-w-[100px] group-hover:pl-2.5 group-hover:opacity-100`}>
+                      {platform.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
