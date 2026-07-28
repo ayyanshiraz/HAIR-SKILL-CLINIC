@@ -90,9 +90,9 @@ export default function Footer() {
             <div className={`group relative flex flex-col items-start cursor-pointer`}>
               <div className={`absolute -inset-4 rounded-3xl bg-white/5 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100`} />
               <img
-                src={`/home/logo.webp`}
+                src={`/home/logonew.png`}
                 alt={`Hair Skill Clinic Logo`}
-                className={`relative w-auto h-24 mb-4 object-contain transition-transform duration-500 group-hover:scale-105`}
+                className={`relative w-auto h-24 mb-4 object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-lighten`}
               />
             </div>
             <p className={`text-base text-red-100 font-medium mb-6 pr-4 leading-relaxed`}>
@@ -161,7 +161,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 (Span 3): The "Kinetic Pill Dock" Socials */}
+          {/* Col 3 (Span 3): The Kinetic Pill Dock Socials */}
           <div className={`lg:col-span-3 flex flex-col space-y-5`}>
             <h3 className={`text-xl font-extrabold tracking-tight text-white uppercase`}>
               Follow Us
