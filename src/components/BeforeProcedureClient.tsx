@@ -121,8 +121,6 @@ export default function BeforeProcedureClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   The before hair transplant procedure is simple. That is why, if you pay attention carefully, there is nothing to be worried about your forthcoming procedure.
                 </p>
-
-                
               </motion.div>
 
               {/* Master Header H2 */}
@@ -182,7 +180,7 @@ export default function BeforeProcedureClient() {
                     <h3 className="text-xl md:text-2xl font-black text-[#772424]">Should I Cut My Hair Before the Procedure?</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Shaving your hair may not be a good idea depending on the hair transplant technique performed for you. So do not cut your hair before the procedure. We want to keep your hair long for the planning before the surgery to see and mark the areas that need a surgical correction. You can keep your hair 1-2 inches long. After the planning, we will have your hair cut at the clinic.
+                    Shaving your hair may not be a good idea depending on the hair transplant technique performed for you. So do not cut your hair before the procedure. However, there is no strict requirement regarding hair size, as the surgery can be performed successfully regardless of your hair length. We generally prefer to keep your hair long for the planning before the surgery to see and mark the areas that need a surgical correction. After the planning, we will have your hair cut at the clinic if necessary.
                   </p>
                 </motion.div>
 
@@ -193,7 +191,7 @@ export default function BeforeProcedureClient() {
                     <h3 className="text-xl md:text-2xl font-black text-[#772424]">Should I Have Breakfast Before the Procedure?</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    Definitely yes! You can have breakfast but avoid a greasy and heavy breakfast. A light breakfast will be okay for you.
+                    Definitely yes! You can have breakfast but avoid a greasy and heavy breakfast. A light breakfast will be okay for you. Please remember to strictly avoid consuming both tea and coffee before the surgery.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                     Remember to inform our clinic about your food preferences for lunch (vegetarian, kosher, etc.), so we get your meal type.
@@ -289,7 +287,7 @@ export default function BeforeProcedureClient() {
                     <h3 className="text-xl md:text-2xl font-black text-[#772424]">Do not Apply Hair Care Oils, Hair Gels, and Other Similar Products</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    Hair Care oils and similar products such as gels and creams should not be used before the procedure.
+                    Hair Care oils and similar products such as gels and creams should not be used before the procedure. You can safely apply any hair oil or gel only after 2 months of your hair transplant treatment.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
                     It is also better not to wear a hat before your operation to prevent any microbial growth due to warmth or sweat and prepare your donor and recipient area.

@@ -10,7 +10,9 @@ export default function CartClient() {
   const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   const taxRate = 0.05; 
   const taxAmount = subtotal * taxRate;
-  const finalTotal = subtotal > 0 ? subtotal + taxAmount : 0; // Delivery is no longer added here
+  const finalTotal = subtotal > 0 ? subtotal + taxAmount : 0; 
+
+  const hasRangeItems = cartItems.some(item => item.priceDisplay);
 
   return (
     <div className={`min-h-screen bg-gray-50 pt-32 pb-20 font-sans`}>
@@ -68,7 +70,7 @@ export default function CartClient() {
                       )}
                       
                       <span className={`text-2xl font-extrabold text-[#772424] mb-4 block mt-auto`}>
-                        PKR {item.price.toLocaleString()}
+                        PKR {item.priceDisplay ? item.priceDisplay : item.price.toLocaleString()}
                       </span>
 
                       <div className={`flex items-center space-x-4`}>
@@ -113,7 +115,7 @@ export default function CartClient() {
               
               <div className={`space-y-4 mb-8`}>
                 <div className={`flex justify-between items-center text-gray-600 font-medium`}>
-                  <span>Subtotal</span>
+                  <span>Base Subtotal</span>
                   <span className={`text-gray-900`}>PKR {subtotal.toLocaleString()}</span>
                 </div>
                 
@@ -128,18 +130,30 @@ export default function CartClient() {
                     {subtotal > 0 ? `Calculated post order` : `PKR 0`}
                   </span>
                 </div>
+
+                <div className={`flex justify-between items-center text-green-600 font-medium`}>
+                  <span>Special Discount</span>
+                  <span className={`font-bold bg-green-100 px-3 py-1 rounded-full text-xs`}>
+                    {subtotal > 0 ? `Applied on WhatsApp` : `PKR 0`}
+                  </span>
+                </div>
               </div>
 
               <div className={`border-t border-gray-200 pt-6 mb-8`}>
-                <div className={`flex justify-between items-center`}>
+                <div className={`flex justify-between items-center mb-2`}>
                   <div className={`flex flex-col`}>
-                    <span className={`text-lg font-bold text-gray-900`}>Total</span>
-                    <span className={`text-xs text-gray-500`}>Excluding shipping</span>
+                    <span className={`text-lg font-bold text-gray-900`}>Estimated Total</span>
+                    <span className={`text-xs text-gray-500`}>Excluding shipping & discount</span>
                   </div>
                   <span className={`text-2xl lg:text-3xl font-extrabold text-[#772424]`}>
                     PKR {finalTotal.toLocaleString()}
                   </span>
                 </div>
+                {hasRangeItems && (
+                  <p className={`text-xs text-[#772424] mt-2 font-medium bg-red-50 p-2 rounded-lg`}>
+                    Note: Your cart contains items with price ranges. The total above uses the base minimum price. Final exact pricing will be verified via WhatsApp.
+                  </p>
+                )}
               </div>
 
               <Link 

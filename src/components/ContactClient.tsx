@@ -197,6 +197,9 @@ export default function ContactClient() {
                     <a href="tel:+923014923336" className="text-black text-base md:text-lg font-medium hover:text-[#772424] transition-colors">
                       +92 301 492 3336
                     </a>
+                    <a href="tel:03004111888" className="text-black text-base md:text-lg font-medium hover:text-[#772424] transition-colors">
+                      +92 300 411 1888
+                    </a>
                   </div>
                 </div>
 
