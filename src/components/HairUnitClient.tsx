@@ -88,11 +88,11 @@ export default function HairUnitClient({
   };
 
   return (
-    <div className={`min-h-screen bg-gray-50 pt-32 pb-20 font-sans relative`}>
+    <div className={`min-h-screen bg-gray-50 pt-32 pb-20 font-sans relative overflow-x-clip`}>
       <div className={`max-w-[1400px] mx-auto px-6 sm:px-8`}>
         
         {/* --- HEADER --- */}
-        <div className={`flex flex-col md:flex-row justify-between items-center mb-16`}>
+        <div className={`flex flex-col md:flex-row justify-between items-start md:items-center mb-16`}>
           <div>
             <h1 className={`text-4xl md:text-5xl font-extrabold text-[#772424] mb-4`}>
               Premium Hair Units
@@ -298,7 +298,7 @@ export default function HairUnitClient({
             initial={{ opacity: 0, y: 50, x: `-50%` }}
             animate={{ opacity: 1, y: 0, x: `-50%` }}
             exit={{ opacity: 0, y: 20, x: `-50%` }}
-            className={`fixed bottom-8 left-1/2 z-[110] bg-gray-900 text-white px-6 py-3 rounded-full shadow-2xl font-medium text-sm flex items-center tracking-wide`}
+            className={`fixed bottom-8 left-1/2 z-[110] bg-gray-900 text-white px-6 py-3 rounded-full shadow-2xl font-medium text-sm flex items-center tracking-wide w-[90vw] md:w-max max-w-md justify-center md:justify-start`}
           >
             <span className={`text-green-400 mr-2 text-lg`}>✓</span>
             {toastMessage}
@@ -320,7 +320,7 @@ export default function HairUnitClient({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className={`bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row relative shadow-2xl`}
+              className={`bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto overflow-x-hidden flex flex-col md:flex-row relative shadow-2xl`}
             >
               <button
                 onClick={closeModal}
