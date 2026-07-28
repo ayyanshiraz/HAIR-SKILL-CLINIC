@@ -57,7 +57,7 @@ export default function BeforeProcedureClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
       {/* --- PAGE HEADER --- */}
       <motion.section 
@@ -67,7 +67,7 @@ export default function BeforeProcedureClient() {
         className="pt-28 lg:pt-36 pb-12 bg-gray-50 border-b border-gray-200 px-6"
       >
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 flex-wrap">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/patient-guide" className="hover:text-[#772424] transition-colors">Patient Guide</Link>
@@ -84,7 +84,7 @@ export default function BeforeProcedureClient() {
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
             {/* LEFT SIDE: SCROLL-ANIMATED CONTENT */}
             <div className="w-full lg:w-2/3 flex flex-col">
@@ -110,25 +110,22 @@ export default function BeforeProcedureClient() {
               {/* Lead Intro Paragraphs */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  <span className="font-bold underline decoration-[#C5A059]">Before Procedure</span>; If you are the one who is thinking about undergoing a hair transplant surgery, it is so usual to linger on some thoughts such as what should I do before a hair transplant? What should I know before hair transplant? How to prepare for my forthcoming hair transplant?
+                  <span className="font-bold underline decoration-[#C5A059]">Before your procedure</span>, if you are someone who is thinking about undergoing hair restoration, it is very usual to linger on thoughts such as what should I do before hair transplant surgery and what are the essential precautions before a hair transplant. It is entirely normal to feel nervous or anxious if you have never experienced a clinical procedure like this before. Therefore, the role of detailed consultation and accurate medical information is absolutely essential for the psychological readiness of all our patients.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  It is normal to feel nervous if you have never experienced hair transplantation before. Therefore, the role of consultation and information is so essential for the patients psychological readiness.
+                  Our before procedure guide will comprehensively prepare you for your upcoming treatment. In this way, you will be fully informed about all the medical processes you will be going through. Knowing the exact things to know before hair transplant makes you feel relaxed and leads patients to experience a smooth, painless, and highly successful surgical operation.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Before Procedure Guide will prepare you for your hair transplant. In that way, you will be informed about all the processes you will be going through. Knowing the process makes you feel relaxed; it leads patients to an easy and smooth operation.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The before hair transplant procedure is simple. That is why, if you pay attention carefully, there is nothing to be worried about your forthcoming procedure.
+                  Whether you are traveling from Lahore, Karachi, Multan, or Rawalpindi, the preparation protocol remains strictly the same. The preparation steps are straightforward. If you pay careful attention to these medical guidelines, there is absolutely nothing to be worried about regarding your forthcoming procedure.
                 </p>
               </motion.div>
 
               {/* Master Header H2 */}
               <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-3xl md:text-4xl font-black text-[#772424] mb-10 tracking-tight border-b pb-4 border-gray-100">
-                Before Hair Transplant Procedure
+                Before Hair Transplant Procedure Checklist
               </motion.h2>
 
-              {/* --- 13 BULLETS CONTENT SECTION --- */}
+              {/* --- BULLETS CONTENT SECTION --- */}
               <div className="flex flex-col gap-12">
                 
                 {/* 1 */}
@@ -138,10 +135,7 @@ export default function BeforeProcedureClient() {
                     <h3 className="text-xl md:text-2xl font-black text-[#772424]">Choose a Professional Clinic</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    Finding a good clinic for your hair transplant surgery is the first important thing you should pay attention to.
-                  </p>
-                  <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Therefore, you must research the best clinics to get the best treatment.
+                    Finding a good and certified clinic for your surgery is the first important thing you should pay attention to when looking for a safe hair transplant near me. Therefore, you must research the best medical facilities to guarantee you receive the safest treatment and the best possible aesthetic outcome. Hair Skill Clinic stands as a premium choice across Pakistan.
                   </p>
                 </motion.div>
 
@@ -149,13 +143,13 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Stalk the Social Media of the Clinic</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Evaluate Social Media and Patient Reviews</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    It would be better to find clinics social media accounts that generally demonstrate their patients and experiences or websites to have the necessary information about the clinic; it will be helpful to look at before after photos of patients and comments below the pictures.
+                    It is always better to find a clinical social media account that genuinely demonstrates real patients, their raw experiences, and detailed websites to gather necessary information about the facility. It is highly helpful to look at real patient results and read the authentic comments below the pictures.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    You can go to the Hair Skill website or Instagram account to learn about Hair Skill in general, our doctors; you can also read our blogs and see the before after photos of our patients!
+                    You can visit the Hair Skill website or our official Instagram account to learn about our advanced medical techniques and our certified doctors. You can also read our informative blogs and see the incredible transformation photos of our previous patients.
                   </p>
                 </motion.div>
 
@@ -166,10 +160,10 @@ export default function BeforeProcedureClient() {
                     <h3 className="text-xl md:text-2xl font-black text-[#772424]">Search About the Doctors of the Clinic</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    Researching about the doctor and going over CVs will assist you in making up your decision of the clinic where you are going to have your hair transplantation.
+                    Researching the leading doctor and going over their professional CVs will assist you in making up your decision regarding the clinic where you are going to have your medical procedure.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Always remember that a trustworthy clinic will considerably assist in having professional treatment, instruction, effective communication with physicians and the best possible outcome at the end.
+                    Always remember that a trustworthy and internationally certified clinic will considerably assist you in having professional treatment, clear instructions, effective communication with skilled physicians, and the absolute best possible outcome at the end of your healing journey.
                   </p>
                 </motion.div>
 
@@ -180,7 +174,7 @@ export default function BeforeProcedureClient() {
                     <h3 className="text-xl md:text-2xl font-black text-[#772424]">Should I Cut My Hair Before the Procedure?</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Shaving your hair may not be a good idea depending on the hair transplant technique performed for you. So do not cut your hair before the procedure. However, there is no strict requirement regarding hair size, as the surgery can be performed successfully regardless of your hair length. We generally prefer to keep your hair long for the planning before the surgery to see and mark the areas that need a surgical correction. After the planning, we will have your hair cut at the clinic if necessary.
+                    Patients frequently ask if they can shave their head before a hair transplant or if they need a haircut. Shaving your hair yourself may not be a good idea depending on the specific medical technique planned for your scalp. So please do not cut or shave your hair before visiting the clinic. There is no strict requirement regarding hair size, as the surgery can be performed successfully regardless of your current hair length. We generally prefer to keep your hair long for the initial planning phase before the surgery. This allows our surgeons to clearly see your natural hair growth angles and accurately mark the areas that need surgical correction. After the planning phase is completed, our medical staff will have your hair safely cut at the clinic if it is deemed necessary for the extraction process.
                   </p>
                 </motion.div>
 
@@ -191,10 +185,10 @@ export default function BeforeProcedureClient() {
                     <h3 className="text-xl md:text-2xl font-black text-[#772424]">Should I Have Breakfast Before the Procedure?</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    Definitely yes! You can have breakfast but avoid a greasy and heavy breakfast. A light breakfast will be okay for you. Please remember to strictly avoid consuming both tea and coffee before the surgery.
+                    Definitely yes! You can and should have a healthy breakfast before arriving at the clinic, but please avoid any greasy, heavy, or overly spicy meals. A light and nutritious breakfast will be perfect for you. Please remember to strictly avoid consuming both tea and coffee on the morning of your surgery, as caffeine can elevate your blood pressure and heart rate.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Remember to inform our clinic about your food preferences for lunch (vegetarian, kosher, etc.), so we get your meal type.
+                    Remember to inform our clinical staff about your specific food preferences for lunch, such as vegetarian options, so we can prepare your ideal meal type during the break.
                   </p>
                 </motion.div>
 
@@ -202,10 +196,10 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Inform Your Doctor about your Health and Medications You Take</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Inform Your Doctor About Your Health and Medications</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Inform your doctor about the medicines you are taking and your health condition. We must know these details because they may affect your surgery. Therefore, you must inform your doctor if you suffer from allergies, bleeding disorders, asthma, high blood pressure, breathing problems, diabetes, psoriasis, or any chronic diseases.
+                    You must inform your doctor about all the medicines you are currently taking and your general health condition. We must know these critical medical details because they may directly affect your surgery and recovery phase. Therefore, you must proactively inform your doctor if you suffer from environmental allergies, bleeding disorders, asthma, high blood pressure, breathing problems, diabetes, scalp psoriasis, or any other chronic diseases.
                   </p>
                 </motion.div>
 
@@ -213,10 +207,10 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Inform your doctor about the Allergies You Have</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Inform Your Doctor About the Allergies You Have</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    If you have allergies to any medications, please inform your doctor about them. It has importance because you will need to take some medicines after your operation. Your doctor will prescribe different pills if you have an allergy to any medication.
+                    If you have known allergies to any medications, please inform your doctor about them immediately during the consultation. This information has vital importance because you will need to take some prescribed medicines after your operation to prevent infection and manage discomfort. Your doctor will prescribe different and safer pills if you have an allergy to any standard medication.
                   </p>
                 </motion.div>
 
@@ -224,10 +218,10 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Inform Your Doctor About Surgeries You Have Had Before</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Inform Your Doctor About Previous Surgeries</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Information about your previous surgeries is another aspect of your hair transplantation process. It gives your doctor an idea about the healing of the skin, scar formation level, and how you reacted to anesthesia in general.
+                    Information about your previous surgical history is another crucial aspect of your medical preparation process. It gives your doctor a clear idea about the healing capacity of your skin, your natural scar formation level, and how your body reacted to local anesthesia in general during past treatments.
                   </p>
                 </motion.div>
 
@@ -235,12 +229,16 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Some Medicines You Should Stop Taking One Week Before the Procedure</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Medicines You Should Stop Taking One Week Before</h3>
                   </div>
                   
+                  <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-2">
+                    There are specific things to do before a hair transplant regarding your daily medication. To prevent increased bleeding during the surgical extraction and implantation process, you must avoid the following:
+                  </p>
+
                   <ol className="list-decimal ml-6 font-bold text-black text-base md:text-lg my-4 space-y-1">
                     <li>Aspirin</li>
-                    <li>Anti-inflammatory medications</li>
+                    <li>Anti inflammatory medications</li>
                     <li>B or E vitamins</li>
                     <li>Blood Thinners</li>
                     <li>Ibuprofen</li>
@@ -248,13 +246,10 @@ export default function BeforeProcedureClient() {
                   </ol>
 
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    These are some medicines you should stop taking one week before your hair treatment to prevent increased bleeding.
-                  </p>
-                  <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    Please inform your surgeon before scheduling the surgery if you use any other medications not mentioned in the list.
+                    Please inform your surgeon before scheduling the surgery if you use any other medications not mentioned in the list above. 
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    If you are using Finasteride or Propecia, you do not need to stop taking them. However, Minoxidil or Rogaine should be avoided one week before surgery and resumed two weeks later. In addition, before taking any prescribed medications before the hair transplantation, consult your doctor.
+                    If you are using finasteride or Propecia, you do not need to stop taking them. However, applying minoxidil before a hair transplant should be strictly avoided for at least one full week before the surgery and can be resumed safely two weeks later. Also, before taking any newly prescribed medications before your operation, always consult your primary doctor.
                   </p>
                 </motion.div>
 
@@ -262,10 +257,10 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">No, You Cant Drink Alcohol</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">No, You Cannot Drink Alcohol</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Since Alcohol may interfere with the anesthetic medications used during the surgery and increase bleeding and bruising, please stop taking Alcohol 5-7 days before the surgery and avoid it for 10-14 days after the surgery.
+                    Since alcohol may severely interfere with the local anesthetic medications used during the surgery and significantly increase both bleeding and bruising, please stop consuming alcohol 5 to 7 days before the surgery. You must also avoid it completely for 10 to 14 days after the surgery to ensure your newly transplanted grafts receive proper blood flow.
                   </p>
                 </motion.div>
 
@@ -273,10 +268,10 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">No, You Cant Smoke</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">No, You Cannot Smoke</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Since cigarettes include nicotine, which can constrict blood vessels and reduce blood flow to the scalp, nicotine consumption impacts your operation process and healing phase. It is more difficult for the body to recover after an incision if you smoke because nicotine prevents oxygen from getting through your blood. Therefore, it should be avoided.
+                    Since cigarettes include high levels of nicotine, which directly constricts blood vessels and reduces vital blood flow to the scalp, nicotine consumption negatively impacts your operation process and your entire healing phase. It is much more difficult for the human body to recover after surgical incisions if you smoke because nicotine actively prevents oxygen from getting through your bloodstream to the newly implanted follicles. Therefore, smoking and vaping must be strictly avoided.
                   </p>
                 </motion.div>
 
@@ -284,19 +279,16 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Do not Apply Hair Care Oils, Hair Gels, and Other Similar Products</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Avoid Hair Care Oils and Styling Gels</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    Hair Care oils and similar products such as gels and creams should not be used before the procedure. You can safely apply any hair oil or gel only after 2 months of your hair transplant treatment.
+                    Hair care oils and similar cosmetic products such as styling gels, strong waxes, and chemical creams should not be used before the procedure. You can safely apply gentle hair oil or styling gel only after 2 full months of your hair transplant treatment have passed.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    It is also better not to wear a hat before your operation to prevent any microbial growth due to warmth or sweat and prepare your donor and recipient area.
-                  </p>
-                  <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                    It is more difficult for the body to recover after an incision if you smoke because nicotine prevents oxygen from getting through your blood.
+                    It is also highly recommended not to wear a tight hat or cap before your operation to prevent any microbial growth due to trapped warmth or sweat, keeping your donor and recipient areas perfectly clean. 
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    If you are dealing with dandruff, it is better to consult your doctor. Your doctor can advise you on the appropriate product.
+                    If you are currently dealing with severe scalp dandruff, it is advisable to consult your doctor beforehand. Your doctor can advise you on the appropriate medical shampoo to use before the surgery date.
                   </p>
                 </motion.div>
 
@@ -304,10 +296,10 @@ export default function BeforeProcedureClient() {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[#772424] font-black text-xl">•</span>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Put Something on You are Comfortable With</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424]">Wear Comfortable Clothes</h3>
                   </div>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Before your hair transplantation surgery, wear comfortable clothes. Clothes with zippers or buttons are advised because your scalp should not be damaged after the treatment. So pay attention to putting something on that you will be comfortable with!
+                    Before your surgery begins, make sure to wear highly comfortable and loose clothing. Shirts or sweaters with front zippers or buttons are strongly advised because your healing scalp and new grafts must not be damaged or rubbed against tight fabrics after the treatment is finished. Pay close attention to putting something on that you will be completely comfortable wearing for several hours!
                   </p>
                 </motion.div>
 
@@ -320,9 +312,9 @@ export default function BeforeProcedureClient() {
               initial="hidden"
               animate="visible"
               variants={slideInRight}
-              className="w-full lg:w-1/3 lg:sticky lg:top-32"
+              className="w-full lg:w-1/3 lg:sticky lg:top-32 mt-4 lg:mt-0"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -385,9 +377,9 @@ export default function BeforeProcedureClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="beforePrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="beforePrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="beforePrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer mt-0.5 sm:mt-0 shrink-0" />
+                    <label htmlFor="beforePrivacy" className="text-xs text-white/80 cursor-pointer leading-tight">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>
