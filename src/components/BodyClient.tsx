@@ -138,19 +138,19 @@ export default function BodyClient() {
               {/* Lead Introduction */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  If you are reading about body hair transplant Pakistan you have probably already heard that the back of the head is the main donor area. That is true. Most transplants rely on this zone. But sometimes the scalp donor is not enough to reach the density you want. Density is what your eye really notices. Without it even good technique looks thin.
+                  If you are reading about a body hair transplant in Pakistan you have probably already heard that the back of the head is the main donor area. That is true. Most transplants rely on this zone. But sometimes the scalp donor is not enough to reach the density you want. Density is what your eye really notices. Without it even good technique looks thin.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  In a body hair transplant in Pakistan grafts with follicles are taken from other areas of the body and moved to the scalp. This can include beard chest back arms or legs. The goal is simple: Your surgeon increases the safe graft pool so the transplanted area does not look sparse even when your scalp donor is limited.
+                  In a body hair transplant on head procedure grafts with follicles are taken from other areas of the body and moved to the scalp. This can include beard chest back arms or legs. The goal is simple: The best body hair transplant surgeon increases the safe graft pool so the transplanted area does not look sparse even when your scalp donor is limited.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Think of body hair to head transplant as a support act not the main performer. Your scalp hair still frames the hairline and front. Body hair steps in to help with background coverage midscalp thickening or crown filling. Done correctly a combined body hair and scalp hair transplant can turn a borderline case into a believable result.
+                  Think of a body to head hair transplant in Pakistan as a support act not the main performer. Your scalp hair still frames the hairline and front. Body hair steps in to help with background coverage midscalp thickening or crown filling. Done correctly a combined body hair and scalp hair transplant can transform a borderline case into a believable result.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  At Hair Skill Clinic BHT hair transplant is never offered as a quick fix. It is a strategic option for advanced hair loss depleted donor or body hair transplant for repair cases after unsatisfying surgeries.
+                  At Hair Skill Clinic body hair transplant is never offered as a quick fix. It is a strategic option for advanced hair loss depleted donor regions or body hair transplant for repair cases after unsatisfying surgeries.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  Our lead surgical specialists often remind patients: Tools like body hair transplant help us reach better density. But they only work when we respect your donor limits and design for what is truly possible.
+                  Our lead surgical specialists often remind patients: Tools like fue hair transplant body hair help us reach better density. But they only work when we respect your donor limits and design for what is truly possible.
                 </p>
 
                 <h2 className="text-3xl font-black text-[#772424] mt-4 tracking-tight">
@@ -163,7 +163,7 @@ export default function BodyClient() {
                   When thinning becomes advanced or previous procedures have exhausted your scalp donor area many people feel they are out of options. A body hair transplant in Pakistan at Hair Skill changes that. By safely using grafts from the beard chest back or other donor zones you unlock a larger supply of follicles and give your scalp a real chance to regain density.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  This is the solution for patients who want meaningful coverage without unrealistic promises. Hair Skill delivers strategic planning surgeon led design and natural looking results that honor your hair pattern.
+                  This is the solution for patients searching for a body hair transplant near me in Lahore Karachi Islamabad Multan or Rawalpindi who want meaningful coverage without unrealistic promises. Hair Skill delivers strategic planning surgeon led design and natural looking results that honor your hair pattern.
                 </p>
               </motion.div>
 
@@ -179,7 +179,7 @@ export default function BodyClient() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Surgeon Led Planning</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">BHT requires more nuance than standard FUE. Hair Skill surgeons analyze each donor zone carefully selecting grafts based on texture thickness and growth patterns so the final outcome blends naturally.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">BHT requires more nuance than standard FUE. Hair Skill surgeons analyze each donor zone carefully selecting grafts based on texture thickness and growth patterns so the final outcome blends naturally. Finding the best body hair transplant surgeon is essential because the angles and depths vary wildly.</p>
                   </div>
 
                   <div>
@@ -200,10 +200,10 @@ export default function BodyClient() {
                   What Is a Body Hair Transplant (BHT)?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A body hair transplant uses the same principles as FUE but the grafts are taken from non scalp donor areas. In a typical body hair transplant Pakistan procedure your surgeon may extract follicles from the beard chest back arms or legs to support areas of thinning on your scalp. This approach is especially helpful when the usual donor zone at the back of the head cannot supply enough grafts for the density you want.
+                  A body hair transplant uses the same principles as FUE but the grafts are taken from non scalp donor areas. In a typical body to head hair transplant in Pakistan procedure your surgeon may extract follicles from the beard chest back arms or legs to support areas of thinning on your scalp. This approach is especially helpful when the usual donor zone at the back of the head cannot supply enough grafts for the density you want.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
-                  Body hair behaves differently. Each donor area has its own texture curl angle and growth cycle. Beard hair is thicker and usually stronger. Chest hair is softer and often shorter. Arm or leg hair can be fine or slow growing. Understanding these differences is essential because texture mismatch can affect how natural your body hair to scalp transplant looks.
+                  Body hair behaves differently. Each donor area has its own texture curl angle and growth cycle. Beard hair is thicker and usually stronger. Chest hair is softer and often shorter. Arm or leg hair can be fine or slow growing. Understanding these differences is essential because texture mismatch can affect how natural your body hair transplant to head results look.
                 </p>
 
                 {/* IMAGE 2: Follicular Survival Graph */}
@@ -214,11 +214,13 @@ export default function BodyClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   This is why BHT focuses on smart placement. Beard hair may boost midscalp strength. Chest hair may help with crown coverage. Scalp grafts still build the hairline. A thoughtful combination creates better balance and reduces the chance of visible contrast.
                 </p>
+                
+                <h3 className="text-2xl font-black text-[#772424] mb-2">Body Hair Transplant Success Rate</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Success rates vary. Many clinics quote body hair transplant 60 to 80 percent success rate depending on donor type and technique. That range is honest. Body grafts do not behave exactly like scalp grafts. Yet when used correctly they increase total coverage in a way scalp grafts alone cannot.
+                  Success rates vary. Many clinics quote a body hair transplant success rate of 60 to 80 percent depending on donor type and technique. That range is honest. Body grafts do not behave exactly like scalp grafts. Yet when used correctly they increase total coverage in a way scalp grafts alone cannot.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  For patients with depleted donor or advanced hair loss stages such as body hair grafts for Norwood 6 or Norwood 7 BHT becomes a practical tool. It adds volume where you need it most.
+                  For patients with depleted donor areas or advanced hair loss stages such as Norwood 6 or Norwood 7 body hair grafts for BHT becomes a practical tool. It adds volume where you need it most.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                   Our medical leadership adds: The goal is not just more grafts. The goal is a natural pattern. Body hair grafts help us create that pattern when scalp donor is limited.
@@ -234,17 +236,17 @@ export default function BodyClient() {
                   Not everyone needs BHT. The ideal candidate is someone who either has limited scalp donor capacity or wants additional density in zones where scalp grafts alone cannot deliver enough coverage. If you have thinning across large areas or previous overharvesting a body hair transplant in Pakistan can extend your donor supply safely.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  People with strong beard or chest hair often see the best outcomes. Beard grafts tend to grow thicker and faster making them useful for midscalp reinforcement and crown filling. Chest hair is softer and blends well in background density. This flexibility gives surgeons room to design a more complete result.
+                  People with strong beard or chest hair often see the best outcomes. Beard grafts tend to grow thicker and faster making them useful for midscalp reinforcement and crown filling. Chest hair is softer and blends well in background density. This flexibility gives surgeons room to design a fuller result.
                 </p>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-3">BHT also works well for</h3>
+                <h3 className="text-2xl font-black text-[#772424] mb-3">BHT also works well for:</h3>
                 <div className="space-y-2 ml-2 mb-6">
                   {[
                     "body hair transplant for poor donor area",
                     "body hair transplant for repair cases after overharvesting",
                     "body hair transplant after failed transplant where density was not achieved",
                     "body hair to head transplant for advanced hair loss",
-                    "patients with scars or patchy areas needing support"
+                    "patients with body hair transplant scars needing coverage"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
                   ))}
@@ -267,7 +269,7 @@ export default function BodyClient() {
                   Donor Areas for Body Hair Transplant at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A successful body hair transplant Pakistan depends on selecting the right donor areas. Each part of the body offers different texture thickness and growth behavior. At Hair Skill Clinic donor selection is never random. It is carefully matched to the region of the scalp we want to strengthen.
+                  A successful body to head hair transplant in Pakistan depends on selecting the right donor areas. Each part of the body offers different texture thickness and growth behavior. At Hair Skill Clinic donor selection is never random. It is carefully matched to the region of the scalp we want to strengthen.
                 </p>
 
                 <div className="space-y-6 mb-6">
@@ -286,7 +288,7 @@ export default function BodyClient() {
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">These areas are typically used only when scalp beard and chest are insufficient. Back hair to head arm hair to head and leg hair transplant to head can help certain patients with widespread thinning. The grafts usually have finer texture and shorter cycles so they are placed where subtle coverage is enough.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">For body hair grafts for Norwood 6 or Norwood 7 the donor plan becomes a hierarchy: Scalp then Beard then Chest then Back arms legs as supplemental sources. This layered approach helps maintain a natural look while adding the density larger cases demand.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our surgical specialists note: Body hair is not a replacement for scalp donor. It is a valuable extension. When used with intention it increases density without sacrificing natural harmony.
+                      Our surgical specialists note: Body hair is not a replacement for scalp donors. It is a valuable extension. When used with intention it increases density without sacrificing natural harmony.
                     </p>
                   </div>
                 </div>
@@ -298,7 +300,7 @@ export default function BodyClient() {
                   Body Hair Transplant Technique and Planning at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A body hair transplant Pakistan procedure uses the FUE method but extraction and planning require a more sensitive approach. Body follicles grow with different angles curl patterns and lengths. Your surgeon must understand these variations to create a natural blend once the grafts reach the scalp. At Hair Skill every BHT hair transplant begins with a detailed donor analysis to decide which body zones can safely support your density goals.
+                  A body hair transplant Pakistan procedure uses the FUE method but extraction and planning require a more sensitive approach. Body follicles grow with different angles curl patterns and lengths. Your surgeon must understand these variations to create a natural blend once the grafts reach the scalp. At Hair Skill every fue hair transplant body hair begins with a detailed donor analysis to decide which body zones can safely support your density goals.
                 </p>
 
                 <div className="space-y-6 mb-6">
@@ -326,7 +328,7 @@ export default function BodyClient() {
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Why Planning Matters</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Poor planning leads to mismatch. Correct planning allows scalp and body hairs to work together. Hair Skill surgeons design each case to avoid clumping reduce directional conflicts and maintain the character of your natural pattern.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our senior clinicians often emphasize: Body hair is a precision tool. When placed with intent it fills the gaps that scalp donor alone cannot solve.
+                      Our senior clinicians often emphasize: Body hair is a precision tool. When placed with intent it fills the gaps that scalp donors alone cannot solve.
                     </p>
                   </div>
                 </div>
@@ -338,7 +340,7 @@ export default function BodyClient() {
                   Body Hair Transplant Procedure Step by Step
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  A body hair transplant in Pakistan follows the same core structure as FUE but with additional planning to manage multiple donor zones. At Hair Skill Clinic the goal is always the same: Expand your usable donor pool safely and increase density in the areas where it matters most. Here is how a typical body hair to head transplant unfolds from start to finish.
+                  A body hair transplant on the head follows the same core structure as FUE but with additional planning to manage multiple donor zones. At Hair Skill Clinic the goal is always the same: Expand your usable donor pool safely and increase density in the areas where it matters most. Here is how a typical body hair to head transplant unfolds from start to finish.
                 </p>
 
                 <div className="space-y-6 border-l-2 border-[#772424]/20 pl-6 ml-2 mb-6">
@@ -348,11 +350,11 @@ export default function BodyClient() {
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-1">Local Anesthesia and Donor Extraction</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">The procedure begins with local anesthesia. Using the micro FUE body hair transplant technique grafts are harvested one by one. Beard may provide strong thick grafts. Chest hair may offer softer blending. Back or arm grafts are taken when additional support is needed. Each follicle is handled carefully since body grafts can have curved roots or shallow angles.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">The procedure begins with local anesthesia. Using the micro fue hair transplant body hair technique grafts are harvested one by one. Beard may provide strong thick grafts. Chest hair may offer softer blending. Back or arm grafts are taken when additional support is needed. Each follicle is handled carefully since body grafts can have curved roots or shallow angles.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-1">Sorting Recipient Design & Implantation</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Grafts are grouped according to texture and thickness. Scalp singles shape the hairline. Body grafts strengthen midscalp or crown. This mix is essential for natural flow. Using fine implanters or forceps grafts are placed according to angle spacing and pattern. Body hair fills background zones while scalp grafts define structure. A BHT operation time often runs 6 to 8 hours and longer in complex cases.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Grafts are grouped by texture and thickness. Scalp singles shape the hairline. Body grafts strengthen the midscalp or crown. This mix is essential for natural flow. Using fine implanters or forceps grafts are placed according to angle spacing and pattern. Body hair fills background zones while scalp grafts define structure. A BHT operation time often runs 6 to 8 hours and longer in complex cases.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-5 rounded-2xl border-l-4 border-[#772424]">
                       Our attending doctors note: Every graft must be placed with intention. BHT cases demand more patience but they reward patients with coverage they thought was impossible.
                     </p>
@@ -363,16 +365,16 @@ export default function BodyClient() {
               {/* Section: Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Body Hair Transplant Cost Ranges in Pakistan
+                  Body Hair Transplant to Head Cost Ranges in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  The body hair transplant Pakistan cost ranges help you plan realistically. Tiers vary because BHT requires more time more precision and often more than one donor source. Compared to standard FUE BHT demands deeper expertise especially when beard chest or back grafts are combined with scalp grafts to achieve balanced density.
+                  Understanding the body hair transplant to head cost ranges helps you plan realistically. Tiers vary because BHT requires more time more precision and often more than one donor source. Compared to standard FUE BHT demands deeper expertise especially when beard chest or back grafts are combined with scalp grafts to achieve balanced density.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Most clinics follow similar patterns and public packages show highly accessible local PKR investment brackets structured around basic BHT cases with comprehensive upper tier PKR ranges allocated for multi donor or complex planning. For patients with advanced hair loss these tiers matter. Many need grafts from several different body zones. This increases surgical hours and planning time which affects total tier calculations.
                 </p>
 
-                <h3 className="text-2xl font-black text-[#772424] mb-3">Your exact tier calculation depends on</h3>
+                <h3 className="text-2xl font-black text-[#772424] mb-3">Your exact tier calculation depends on:</h3>
                 <div className="space-y-2 ml-2 mb-6">
                   {[
                     "total grafts needed",
@@ -401,10 +403,10 @@ export default function BodyClient() {
               {/* Section: Recovery Healing and Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Recovery, Healing and Results After Body Hair Transplant
+                  Recovery, Healing and Body Hair Transplant Results
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Healing after a body hair transplant Pakistan procedure follows the same general pattern as scalp FUE but each donor zone may react differently. Beard areas usually heal fast. Chest and back can feel tender for a few days. Arm and leg donor sites tend to recover quietly with minimal irritation. Your scalp follows a familiar cycle: redness tiny scabs shedding and gradual regrowth.
+                  Healing after a body hair transplant in Pakistan procedure follows the same general pattern as scalp FUE but each donor zone may react differently. Beard areas usually heal fast. Chest and back can feel tender for a few days. Arm and leg donor sites tend to recover quietly with minimal irritation. Your scalp follows a familiar cycle: redness tiny scabs shedding and gradual regrowth.
                 </p>
 
                 <div className="space-y-6 mb-6">
@@ -415,8 +417,8 @@ export default function BodyClient() {
 
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Growth Timeline & Blending for Natural Outcomes</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Body hair has a different growth rhythm than scalp hair. That means the timeline varies: Early signs appear around month 3 to 4 noticeable improvement arrives between months 6 and 9 full mature results settle inside 12 to 18 months. Because body grafts may be curlier or shorter Hair Skill surgeons place them where those differences support coverage instead of distracting.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">BHT grafts do not need to mimic scalp hair perfectly to be effective. They strengthen areas where visual density matters. When combined with scalp grafts they create a fuller more consistent look. This is how a body hair to scalp transplant enhances coverage even in advanced cases.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Body hair has a different growth rhythm than scalp hair. That means the timeline varies: Early signs appear around month 3 to 4 noticeable body hair transplant results arrive between months 6 and 9 full mature body hair transplant to head results settle inside 12 to 18 months. Because body grafts may be curlier or shorter Hair Skill surgeons place them where those differences support coverage instead of distracting.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">BHT grafts do not need to mimic scalp hair perfectly to be effective. They strengthen areas where visual density matters. Combined with scalp grafts they create a fuller more consistent look. This is how a body hair to scalp transplant enhances coverage even in advanced cases.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our restorative team shares: Growth takes patience. Body grafts wake up slowly but when placed correctly they add the extra layer of density many patients thought they could never achieve.
                     </p>
@@ -427,17 +429,17 @@ export default function BodyClient() {
               {/* Section: Risks Limits and Success Rate */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14">
                 <h2 className="text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Risks, Limits and Success Rate of Body Hair Transplant
+                  Is Body Hair Transplant Safe? Risks, Limits and Success Rate
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Every body hair transplant Pakistan procedure has unique strengths and practical limits. Body hair is a valuable donor source but it behaves differently from scalp hair. Understanding these differences helps you set healthy expectations and recognize when BHT can meaningfully improve your result.
+                  Patients often ask if body hair transplant is safe and what the realistic limits are. Every body hair transplant Pakistan procedure has unique strengths and practical limits. Body hair is a valuable donor source but it behaves differently from scalp hair. Understanding these differences helps you set healthy expectations and recognize when BHT can meaningfully improve your result.
                 </p>
 
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">What Makes BHT Different & Success Reality</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Body hair varies in curl diameter angle and growth cycle. Beard hair is thick and fast growing. Chest hair is softer and often shorter. Leg or arm hair may grow slowly. These differences mean that body grafts usually support density rather than create fine detail. This is why scalp follicles remain the foundation for hairline design.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Many clinics report a body hair transplant success rate 60 to 80 percent. This is accurate. Body grafts survive well but typically not at the same rate as scalp grafts. The key is using the right donor for the right zone. Beard grafts often achieve the highest survival while chest and limb hair may offer moderate yield. When mixed thoughtfully with scalp grafts these numbers still create visible improvement.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">As mentioned many clinics report a body hair transplant success rate of 60 to 80 percent. This is accurate. Body grafts survive well but typically not at the same rate as scalp grafts. The key is using the right donor for the right zone. Beard grafts often achieve the highest survival while chest and limb hair may offer moderate yield. When mixed thoughtfully with scalp grafts these numbers still create visible improvement.</p>
                   </div>
 
                   <div>
@@ -449,14 +451,15 @@ export default function BodyClient() {
                         "longer operations due to complex angles",
                         "overharvesting risk in visible areas like beard",
                         "limited ability to create full density in very advanced cases",
-                        "short growth cycles in some donor zones"
+                        "short growth cycles in some donor zones",
+                        "minimal body hair transplant scars in donor regions if not extracted delicately"
                       ].map((item, i) => (
                         <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
                       ))}
                     </div>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">BHT is not meant to replace scalp donor. It extends your donor supply. It improves coverage. It adds layers of density in areas where scalp grafts alone fall short.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">BHT is not intended to replace scalp donors. It extends your donor supply. It improves coverage. It adds layers of density in areas where scalp grafts alone fall short.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our surgical experts explain: We never chase graft numbers. We chase balance. Body hair grafts must blend with your pattern not compete with it. When the plan is honest BHT becomes a powerful tool.
+                      Our surgical experts explain: We never chase graft numbers. We chase balance. Body hair grafts must blend with your pattern not compete with it. When the plan is honest BHT becomes a powerful safe tool.
                     </p>
                   </div>
                 </div>
@@ -468,19 +471,19 @@ export default function BodyClient() {
                   Why Choose Pakistan and Hair Skill Clinic for Body Hair Transplant?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Pakistan has become a leading destination for advanced hair restoration and body hair transplant Pakistan procedures sit at the center of that expertise. Surgeons here perform thousands of graft extractions each year across beard chest back and limb donor zones. This volume sharpens technique improves decision making and builds the kind of intuition that complex BHT cases require.
+                  Pakistan has become a leading destination for advanced hair restoration and body hair transplant Pakistan procedures sit at the center of that expertise. Surgeons here perform thousands of graft extractions each year across beard chest back and limb donor zones. This volume sharpens technique improves decision-making and builds the kind of intuition that complex BHT cases require. Whether you are traveling from Multan Rawalpindi or abroad you gain access to exceptional care.
                 </p>
 
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Why Pakistan Stands Out</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Accessible package tiers play a role but medical expertise matters more. Clinics in Pakistan often provide the same or better outcomes as Western countries inside affordable local PKR brackets. Many international patients travel for procedures that would carry heavy premium calculations abroad. This includes comprehensive clinical packages that simplify the entire experience upfront.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Accessible package tiers play a role but medical expertise matters more. Clinics in Pakistan often provide the same or better outcomes as Western countries within affordable local PKR brackets. Many international patients travel for procedures that would carry heavy premium calculations abroad. This includes comprehensive clinical packages that simplify the entire experience upfront.</p>
                   </div>
 
                   <div>
                     <h3 className="text-2xl font-black text-[#772424] mb-2">Why Hair Skill Clinic is Different</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Hair Skill focuses on design first. Body hair is not used randomly. It is assigned to supportive zones where its texture strengthens density rather than disrupts flow. Every body hair restoration case begins with a plan built by a surgeon not by a sales team. Beard grafts reinforce structure. Chest grafts fill background spaces. Scalp grafts define the areas that frame your face.</p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Patients with body hair transplant for repair cases find comfort knowing that Hair Skill specializes in correction. Whether your donor was overharvested or previous density was not enough a carefully constructed BHT plan can recover lost coverage and restore confidence.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Hair Skill focuses on design first. Body hair is not used randomly. It is assigned to supportive zones where its texture strengthens density rather than disrupts flow. Every hair restoration case begins with a plan built by a surgeon not by a sales team. Beard grafts reinforce structure. Chest grafts fill background spaces. Scalp grafts define the areas that frame your face.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">Patients looking for body hair transplant for repair cases find comfort knowing that Hair Skill specializes in correction. Whether your donor was overharvested or previous density was not enough a carefully constructed BHT plan can recover lost coverage and restore confidence.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                       Our medical directors summarize it well: BHT is a partnership. When we combine surgical precision with a thoughtful patient plan even complex cases open new possibilities.
                     </p>
@@ -494,7 +497,7 @@ export default function BodyClient() {
                   Aesthetics, Density, and Expected Outcomes
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  When patients consider a body hair transplant Pakistan they often ask the same question: Will the result look natural? The answer depends on design placement and donor strategy. Body hair does not behave exactly like scalp hair so the technique must respect those differences. Done well BHT improves coverage fills gaps and strengthens density where your eye needs it most.
+                  When patients consider a body to head hair transplant in Pakistan they often ask the same question: Will the result look natural? The answer depends on design placement and donor strategy. Body hair does not behave exactly like scalp hair so the technique must respect those differences. Done well BHT improves coverage fills gaps and strengthens density where your eye needs it most.
                 </p>
 
                 <div className="space-y-6 mb-6">
@@ -569,7 +572,7 @@ export default function BodyClient() {
                   Start Your Body Hair Transplant Journey With Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  If you feel limited by your scalp donor area or past procedures a body hair transplant Pakistan plan at Hair Skill Clinic can help you regain options you thought were gone. Body hair opens a new donor supply. It strengthens density. It fills areas that looked impossible to fix. And most importantly it does all of this while still respecting natural design upfront.
+                  If you feel limited by your scalp donor area or past procedures a body hair transplant in Pakistan plan at Hair Skill Clinic can help you regain options you thought were gone. Body hair opens a new donor supply. It strengthens density. It fills areas that look impossible to fix. And most importantly it does all this while respecting natural design upfront.
                 </p>
 
                 <h3 className="text-2xl font-black text-[#772424] mb-3">Why Patients Choose Hair Skill Clinic</h3>
@@ -591,7 +594,7 @@ export default function BodyClient() {
 
                 <h3 className="text-2xl font-black text-[#772424] mb-2">Your Next Step</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-extrabold">
-                  Send your photos. Share your goals upfront. Let a Hair Skill surgeon create a personalized body hair to head transplant Pakistan plan designed for your real potential upfront not unrealistic promises. Request Your Free BHT Assessment Today. A fuller more confident look begins with one decision. Hair Skill is ready when you are.
+                  Send your photos. Share your goals upfront. Let the best body hair transplant surgeon at Hair Skill create a personalized body to head hair transplant Pakistan plan designed for your real potential not unrealistic promises. Request Your Free BHT Assessment Today. A fuller more confident look begins with one decision. Hair Skill is ready when you are.
                 </p>
               </motion.div>
 
