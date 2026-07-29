@@ -57,7 +57,7 @@ export default function DayOfProcedureClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
       {/* --- PAGE HEADER --- */}
       <motion.section 
@@ -110,154 +110,175 @@ export default function DayOfProcedureClient() {
               {/* Lead Intro Paragraphs */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  <span className="font-bold underline decoration-[#C5A059]">Day Of Procedure</span>; Eventually, the big day when the transformation starts to come. It is so common that you have recurring questions on your mind, such as what should I do on the day of hair transplantation? How to prepare for my hair surgery on the day of the procedure?
+                  <span className="font-bold underline decoration-[#C5A059]">Day of Procedure</span>: Eventually, the big day when the transformation starts to come. It is so common that you have recurring questions on your mind, such as what should I do on the day of hair transplantation and how do I prepare for my hair surgery on the day of the procedure. Many patients actively search for the exact hair transplant procedure step by step to understand what happens inside the operating theater.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  There is no need to worry because this guide provides all the necessary information that the patients consider to experience a smooth and successful operation.
+                  There is absolutely no need to worry because this comprehensive guide provides all the necessary information that patients must consider to experience a smooth, painless, and highly successful operation. Whether you are searching for a safe hair transplant near me or traveling from other cities, we ensure your safety and comfort at every single step.
                 </p>
               </motion.div>
 
               {/* Section: Where to Stay */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  Where to Stay During My Experience in Hair Skill Clinic?
+                  Where to Stay During My Experience at the Hair Skill Clinic?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Since the ultimate comfort of the patients is the priority, Hair Skill patients will be assisted by the authorities from the beginning of the <span className="font-bold underline decoration-[#772424]">hair transplantation</span> process to the end, which is known as Hair Skill Gentle Care in Hair Skill Clinic.
+                  Since the ultimate comfort of the patients is our absolute priority, Hair Skill patients will be fully assisted by the professional authorities from the very beginning of the hair transplant process to the very end. This premium level of medical hospitality is widely known as Hair Skill Gentle Care.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Your accommodation will be arranged in a 4-5 stars hotel by the operation team of Hair Skill.
+                  If you are traveling for your hair transplant procedure in Pakistan from cities like Lahore, Karachi, Multan, or Rawalpindi, your accommodation will be seamlessly arranged in a luxury hotel by the dedicated operation team of Hair Skill. We ensure you get proper rest before your surgical day begins.
                 </p>
               </motion.div>
 
               {/* Section: How to Get to Clinic */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  How to Get to Hair Skill Clinic on the Day of the procedure?
+                  How to Get to Hair Skill Clinic on the Day of the Procedure?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Our patients transportation is going to be provided by Hair Skill. The shuttle will pick you up to drive to the clinic on the day of your <span className="font-bold underline decoration-[#C5A059]">hair transplant</span> surgery. So you do not need to worry about transportation.
+                  Our patient transportation is going to be safely provided by Hair Skill. A comfortable private shuttle will pick you up directly from your hotel to drive you to the clinic on the morning of your surgery. So you do not need to worry about transportation, navigating local traffic, or finding parking near the facility.
                 </p>
               </motion.div>
 
               {/* Section: Interpreter */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   Do I Have an Interpreter in the Clinic?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Because health tourism is very advanced, we provide our patients with interpreters qualified in the language that you speak! At Hair Skill, we do not have a language barrier.
+                  Because international health tourism is very advanced in our clinic, we provide our patients with dedicated interpreters who are fully qualified in the exact language that you speak! At Hair Skill, we do not have a language barrier, ensuring you can communicate your aesthetic goals clearly to your surgical team.
                 </p>
               </motion.div>
 
               {/* Section: Will I Be Informed */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  Will I Be Informed about the Whole Process of Hair Transplant on the Day of the Procedure?
+                  Will I Be Informed About the Whole Hair Transplant Process?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Hair Skill Guest Relations Specialists will be with you all the way long, as well as your case manager. So, you will be informed about the whole process, pre-op and post-op procedures. You will be advised on what is best for you. If you have any questions, please do not hesitate to ask your patient experience specialist and case manager.
+                  Hair Skill Guest Relations Specialists will be with you all the way, as well as your personal case manager. So, you will be deeply informed about the whole process, including pre op preparation and post op recovery procedures. You will be medically advised on what is best for your specific scalp condition. If you have any medical questions, please do not hesitate to ask your patient experience specialist and your assigned case manager.
                 </p>
               </motion.div>
 
               {/* Section: Prepared for Operation */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   How Do We Get You Prepared for Operation?
                 </h2>
-
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  The preparation for the FUE hair transplant procedure is highly systematic to ensure zero complications.
+                </p>
+                
                 <div className="flex flex-col gap-4 ml-2">
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium">
-                      First, our doctors give general information about the surgery on the procedure day.
+                      First, our certified doctors give detailed general information about the surgery on the procedure day.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium">
-                      Consent documents will be handed out to be read carefully and signed by the patients.
+                      Medical consent documents will be handed out to be read carefully and signed by the patients.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium">
-                      Before the surgery, your before hair transplantation photos will be taken by Hair Skill photographers.
+                      Before the surgery begins, your pre hair transplantation photos will be professionally taken by Hair Skill photographers for your medical file.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium">
-                      Blood tests (HIV, HBV, HCV) will be carried out, and your vital signs (BP, Temperature, Pulse, etc.) checked before the hair transplant.
+                      Strict blood tests including HIV, HBV, and HCV will be carried out immediately.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
+                    <p className="text-black text-base md:text-lg font-medium">
+                      Your vital signs such as blood pressure, body temperature, and pulse rate will be checked continuously before the hair transplant starts to ensure you are fit for local anesthesia.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Operation Time */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              {/* Section: Operation Duration */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  How Long Does the Operation Take?
+                  Hair Transplant Duration: How Long Does It Take?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The operation takes 6-8 hours. So, please have your breakfast before the procedure. Do not worry about getting bored during your surgery; our rooms have smart television with an internet connection. So if you like, we can put on good music or movies.
+                  Patients frequently ask how long a hair transplant procedure takes. The complete operation usually takes 6 to 8 hours depending on the number of grafts required. So, please have a healthy breakfast before the procedure begins. Do not worry about getting bored during your surgery duration; our VIP patient rooms have modern smart televisions with a high speed internet connection. So if you like, we can put on good music, movies, or documentaries to keep you relaxed.
                 </p>
               </motion.div>
 
               {/* Section: Steps of Surgery */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h3 className="text-xl md:text-2xl font-black text-[#772424] tracking-tight">
-                  What are the Steps of Surgery?
+                  What are the steps of surgery?
                 </h3>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  Understanding the hair transplant steps can significantly reduce your anxiety. One of the most critical steps of your surgery is the aesthetic planning process.
+                </p>
 
                 <div className="flex flex-col gap-4 ml-2">
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium">
-                      One of the most critical steps of your surgery is the planning process. Hair Skill doctors plan your surgery to give you the best outcomes and desired appearance.
+                      Hair Skill doctors strategically plan your surgery to give you the best medical outcomes and your desired natural appearance.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium">
-                      The patients donor area quality, density, and size are evaluated.
+                      The patients donor area quality, hair density, and extraction size are thoroughly evaluated under bright medical lights.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium">
-                      Hair Skill doctors guide and advise regarding the hairline and draw the hairline for you. You can discuss your ideas about your hairline with your doctor.
+                      Hair skill doctors guide and gently advise regarding the front hairline and physically draw the hairline for you using a medical marker. You can actively discuss your styling ideas about your hairline with your doctor before any extraction begins.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium">
-                      The operation starts with the extraction of hair follicles from your donor area. After extraction, channels will be opened by your doctor, and it continues with implantation.
+                      The physical operation starts with the safe extraction of hair follicles from your donor area located at the back of your head.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
+                    <p className="text-black text-base md:text-lg font-medium">
+                      After the extraction phase is complete, tiny microscopic channels will be opened by your doctor in the bald areas.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
+                    <p className="text-black text-base md:text-lg font-medium">
+                      The procedure finally continues with the careful implantation of each hair graft into the newly opened channels at the perfect angle.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
               {/* Section: Lunch */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  What about Lunch?
+                  What about lunch?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Hair Skill Clinic orders your lunch according to your preference. So if you are a vegetarian or prefer kosher/halal food, do not worry; we will take care of it.
+                  Hair Skill Clinic orders your lunch exactly according to your dietary preference. So if you are a strict vegetarian or prefer specialized halal or kosher food, do not worry; our hospitality staff will take care of it and serve you a fresh meal during your surgical break.
                 </p>
               </motion.div>
 
               {/* Section: The Next Day */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex flex-col gap-6 pt-6 border-t border-gray-100">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="flex flex-col gap-6 pt-6 border-t border-gray-100">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   The Next Day After the Operation
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Our patients will be expected to visit Hair Skill Clinic the next day after the operation. We will do the wound care, check the recipient and donor area for any signs of infection or inflammation and change bandages at the clinic the next day after the surgery. We will do the first wash if your surgery was two days ago.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Sometimes if the patient had more bleeding or discharge than usual we can perform the first wash the next day after the surgery.
+                  Our patients will be expected to visit Hair Skill Clinic the next day after the operation. We will do the professional wound care, carefully check the recipient and donor area for any early signs of infection or inflammation, and change your medical bandages at the clinic. We will also perform the first medical wash if your surgery was completed two days ago. Sometimes, if the patient has more bleeding or fluid discharge than usual, our clinical nurses can perform the first wash the very next day after the surgery.
                 </p>
               </motion.div>
 
