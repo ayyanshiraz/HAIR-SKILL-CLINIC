@@ -34,37 +34,37 @@ export default function BeforeAfterClient() {
 
   // --- REAL PATIENT CASES ---
 const cases = [
-  { image: `home/before-after/30.webp`, video: `/home/before-after/video1.mp4` },
-  { image: `home/before-after/18.webp`, video: `/home/before-after/video2.mp4` },
-  { image: `home/before-after/31.webp`, video: `/home/before-after/video3.mp4` },
-  { image: `home/before-after/4.webp` },
-  { image: `home/before-after/5.webp` },
-  { image: `home/before-after/6.webp` },
-  { image: `home/before-after/7.webp` },
-  { image: `home/before-after/8.webp` },
-  { image: `home/before-after/9.webp` },
-  { image: `home/before-after/10.webp` },
-  { image: `home/before-after/11.webp` },
-  { image: `home/before-after/12.webp` },
-  { image: `home/before-after/13.webp` },
-  { image: `home/before-after/14.webp`},
-  { image: `home/before-after/15.webp` },
-  { image: `home/before-after/16.webp` },
-  { image: `home/before-after/17.webp` },
-  { image: `home/before-after/2.webp` },
-  { image: `home/before-after/19.webp` },
-  { image: `home/before-after/20.webp` },
-  { image: `home/before-after/21.webp` },
-  { image: `home/before-after/22.webp` },
-  { image: `home/before-after/23.webp` },
-  { image: `home/before-after/24.webp` },
-  { image: `home/before-after/25.webp` },
-  { image: `home/before-after/26.webp` },
-  { image: `home/before-after/27.webp` },
-  { image: `home/before-after/28.webp` },
-  { image: `home/before-after/29.webp` },
-  { image: `home/before-after/1.webp` },
-   { image: `home/before-after/3.webp` },
+  { image: `/home/before-after/30.webp`, video: `/home/before-after/video1.mp4` },
+  { image: `/home/before-after/18.webp`, video: `/home/before-after/video2.mp4` },
+  { image: `/home/before-after/31.webp`, video: `/home/before-after/video3.mp4` },
+  { image: `/home/before-after/4.webp` },
+  { image: `/home/before-after/5.webp` },
+  { image: `/home/before-after/6.webp` },
+  { image: `/home/before-after/7.webp` },
+  { image: `/home/before-after/8.webp` },
+  { image: `/home/before-after/9.webp` },
+  { image: `/home/before-after/10.webp` },
+  { image: `/home/before-after/11.webp` },
+  { image: `/home/before-after/12.webp` },
+  { image: `/home/before-after/13.webp` },
+  { image: `/home/before-after/14.webp`},
+  { image: `/home/before-after/15.webp` },
+  { image: `/home/before-after/16.webp` },
+  { image: `/home/before-after/17.webp` },
+  { image: `/home/before-after/2.webp` },
+  { image: `/home/before-after/19.webp` },
+  { image: `/home/before-after/20.webp` },
+  { image: `/home/before-after/21.webp` },
+  { image: `/home/before-after/22.webp` },
+  { image: `/home/before-after/23.webp` },
+  { image: `/home/before-after/24.webp` },
+  { image: `/home/before-after/25.webp` },
+  { image: `/home/before-after/26.webp` },
+  { image: `/home/before-after/27.webp` },
+  { image: `/home/before-after/28.webp` },
+  { image: `/home/before-after/29.webp` },
+  { image: `/home/before-after/1.webp` },
+   { image: `/home/before-after/3.webp` },
   // ... continue adding a new line for every single image you put in the folder
 ];
 
@@ -100,13 +100,13 @@ const cases = [
             {/* Intro Text */}
             <motion.div initial={`hidden`} whileInView={`visible`} viewport={{ once: true, margin: `-50px` }} variants={fadeUp} className={`flex flex-col gap-6 max-w-4xl mx-auto text-center`}>
               <h2 className={`text-2xl md:text-3xl font-black text-[#772424] tracking-tight`}>
-                Real Patients, Life-Changing Transformations
+                Real Patients, Life Changing Transformations
               </h2>
               <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                At Hair Skill Clinic, we believe that the ultimate proof of our medical expertise lies in the results we deliver. A successful hair transplant is not just about moving hair follicles; it is an art form that requires precision, a deep understanding of facial geometry, and meticulous execution. 
+                At Hair Skill Clinic, we strongly believe that the ultimate proof of our medical expertise deeply lies in the real hair transplant before and after results we safely deliver. A successful hair transplant procedure is not just about moving hair follicles; it is a dedicated art form that requires strict precision, a deep understanding of facial geometry, and meticulous execution to achieve the absolute best hair transplant results.
               </p>
               <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                Our patients travel to Lahore, Pakistan from all over the world to achieve natural, dense, and permanent results. By utilizing advanced techniques such as Sapphire FUE and DHI, our surgeons ensure that every implanted graft aligns perfectly with your natural hair growth pattern. Browse our gallery below to see the authentic, unedited transformations of men who trusted Hair Skill Clinic to restore their confidence.
+                Our patients travel to our premier hair transplant clinic in Lahore Pakistan from all over the world to achieve natural, highly dense, and permanent hair restoration. By safely utilizing advanced techniques such as Sapphire FUE and DHI, our expert surgeons ensure that every single implanted graft exactly aligns with your natural hair growth pattern for seamless FUE hair transplant results. Browse our comprehensive gallery below to clearly see the authentic, unedited transformations of men who completely trusted Hair Skill Clinic to permanently restore their lost hair and personal confidence.
               </p>
             </motion.div>
 
