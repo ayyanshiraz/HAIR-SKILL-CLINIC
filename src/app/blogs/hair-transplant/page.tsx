@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-
-// Exactly 3 levels up: (hair-transplant -> blogs -> app -> src) then into components
 import BlogsHairTransplantClient from "../../../components/BlogsHairTransplantClient";
 
 export const metadata: Metadata = {

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import BlogsHairLossClient from "../../../components/BlogsHairLossClient";
 
 export const metadata: Metadata = {

@@ -1,18 +1,18 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogsDatabase } from "../../../data/blogs";
+import { blogsDatabase } from "../../../../data/blogs";
 
 export async function generateStaticParams() {
-  const generalPosts = blogsDatabase.filter((post) => post.category === `general`);
-  return generalPosts.map((post) => ({
+  const categoryPosts = blogsDatabase.filter((post) => post.category === `hair-loss`);
+  return categoryPosts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export default async function SingleBlogPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function HairLossSingleBlogPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === `general`);
+  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === `hair-loss`);
 
   if (!post) {
     notFound();
@@ -25,6 +25,8 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
           <Link href={`/`} className={`md:hover:text-[#772424] active:text-[#772424] transition-colors`}>Homepage</Link>
           <span>/</span>
           <Link href={`/blogs`} className={`md:hover:text-[#772424] active:text-[#772424] transition-colors`}>Blogs</Link>
+          <span>/</span>
+          <Link href={`/blogs/hair-loss`} className={`md:hover:text-[#772424] active:text-[#772424] transition-colors`}>Hair Loss</Link>
           <span>/</span>
           <span className={`text-[#772424] truncate max-w-[200px] sm:max-w-none`}>{post.title}</span>
         </div>
@@ -51,10 +53,10 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
 
         <div className={`mt-16 pt-8 border-t border-gray-200`}>
           <Link 
-            href={`/blogs`} 
+            href={`/blogs/hair-loss`} 
             className={`inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#772424] text-white font-extrabold text-sm tracking-wider uppercase shadow-lg md:hover:bg-[#8c2a2a] active:scale-95 transition-all`}
           >
-            ← Back to All Blogs
+            ← Back to Hair Loss Blogs
           </Link>
         </div>
       </article>
