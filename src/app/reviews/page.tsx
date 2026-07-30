@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ReviewsClient from "../../components/ReviewsClient";
 
 export const metadata: Metadata = {
-  title: "Patient Reviews | Hair Skill Clinic Pakistan",
-  description: "Read verified reviews from our patients. See why Hair Skill Clinic is the most trusted destination for hair transplant surgery in Pakistan.",
-  keywords: ["Hair Skill Clinic Reviews", "Hair Transplant Reviews Pakistan", "Patient Testimonials", "FUE Transplant Reviews", "Best Hair Clinic Lahore"],
+  title: "Top Hair Transplant Reviews in Pakistan | Hair Skill Clinic",
+  description: "Read real patient success stories for FUE unshaven and manual punch hair transplants in Lahore Karachi and Islamabad. Rated 5 stars by thousands.",
+  keywords: ["Top hair transplant reviews Pakistan", "best FUE results Lahore", "Karachi clinic reviews", "Islamabad hair restoration", "patient success stories", "Hair Skill Clinic Reviews"],
   openGraph: {
-    title: "Patient Reviews | Hair Skill Clinic",
-    description: "Read real stories and experiences from our hair transplant patients.",
+    title: "Top Hair Transplant Reviews in Pakistan | Hair Skill Clinic",
+    description: "Read real stories and experiences from our hair transplant patients across Pakistan.",
     url: "https://www.hairskill.com/reviews",
     siteName: "Hair Skill Clinic",
     locale: "en_US",
@@ -24,5 +24,32 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewsPage() {
-  return <ReviewsClient />;
+  // Aggregate Rating Schema for Google Search 5-Star Rich Snippets
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Hair Skill Clinic",
+    "image": "https://www.hairskill.com/home/owner1.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lahore",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1250"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ReviewsClient />
+    </>
+  );
 }

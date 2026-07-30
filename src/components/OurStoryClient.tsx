@@ -165,11 +165,11 @@ export default function OurStoryClient() {
                 </h2>
                 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  It all started with a profound passion for advancing hair transplantation. By adapting years of experience to <span className={`font-bold text-[#772424] underline decoration-[#C5A059]`}>FUE hair transplantation</span> techniques, we established Hair Skill Clinic and demonstrated a true difference in medical aesthetics and hair restoration.
+                  It all started with a profound passion for advancing hair transplantation. By adapting years of experience to advanced FUE techniques, we established a Hair Skill Clinic and demonstrated a true difference in medical aesthetics and permanent hair restoration.
                 </p>
 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-10 font-medium`}>
-                  As a global benchmark for medical <span className={`font-bold text-gray-900 underline decoration-[#C5A059]`}>hair transplant</span> clinics and one of the best in its class in the region, Hair Skill Clinic has been recognized by leading international medical and health tourism authorities for its outstanding contributions to the field.
+                  As a global benchmark for medical facilities and one of the top-rated choices in the region, Hair Skill Clinic has been recognized by leading international medical and health tourism authorities for its outstanding contributions to the field.
                 </p>
 
                 {/* --- VIDEO COVER PAGE COMPONENT --- */}
@@ -213,7 +213,7 @@ export default function OurStoryClient() {
                 )}
 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-12 font-medium`}>
-                  Relocated to the financial district of Lahore, Hair Skill Clinic now continues its operations in a sophisticated, high-tech, seven-story clinic building where more than 100 well-trained staff members work. At Hair Skill, where quality and excellence are tied to intensive training procedures, every team member involved in hair transplant operations is well trained and tested according to the success criteria of the True Philosophy.
+                  Relocated to the financial district, Hair Skill Clinic now proudly continues its operations in a sophisticated, high-tech, seven-story clinic building where more than 100 well-trained staff members work. At Hair Skill, where absolute quality and excellence are strictly tied to intensive training procedures, every single team member involved in operations is well trained and tested according to the success criteria of our True Philosophy to ensure you receive the best hair transplant.
                 </p>
 
                 {/* Second Building Image */}
@@ -239,19 +239,19 @@ export default function OurStoryClient() {
                 </h3>
                 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  The founders top priority consists of three critical components: Aesthetics, a highly natural-looking hair result, is one of the most important goals in operations. The highest level of patient comfort during and after surgery is ensured through numerous precautions; and the patients long-term overall transformation is always closely monitored. Today, Hair Skill Clinic approaches hair transplantation holistically and brings a visionary perspective to the field. For Hair Skill, this is not just a medical procedure but a complete experience that begins with full hospitality, continues through the surgical process, and opens a new chapter in the patients life.
+                  The top priority of our founders consists of three critical components. First is aesthetics; achieving a highly natural-looking hair result is one of our most important goals during operations. Second is ensuring maximum comfort during and after the best hair transplant procedure through numerous safety precautions. Finally, the long-term overall transformation of each individual is always closely monitored.
                 </p>
 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  The founders top priority consists of three critical components: <span className={`font-black text-gray-900`}>Aesthetics</span>, achieving an extremely natural-looking hair result is one of the most important goals in operations. During and after surgery, <span className={`font-black text-gray-900`}>the patients maximum comfort</span> is ensured through numerous precautions; and the patients long-term <span className={`font-black text-gray-900`}>overall transformation</span> is always closely monitored. Today, Hair Skill Clinic approaches the entire process holistically and brings a visionary perspective to hair transplantation. For Hair Skill, this is not just a medical procedure but a complete experience that begins with full hospitality, continues through the surgical process, and opens a new chapter in the patients life.
+                  Today, as a premier hair transplant clinic in Lahore, we approach the entire process holistically and bring a visionary perspective to the field. For Hair Skill, providing a world-class hair transplant in Pakistan is not just a medical procedure but a complete experience that begins with full hospitality, continues through a flawless surgical process led by the best hair transplant surgeon in Lahore, and opens an entirely new chapter in your life.
                 </p>
 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  On this journey where many lives have been profoundly transformed, Hair Skill Clinic has become the meeting point for more than 20,000 gentlemen. For many people, Hair Skill Clinic is not only a medical clinic but also a gathering place for passionate and perfectionist individuals.
+                  On this transformative journey where many lives have been profoundly changed, Hair Skill Clinic has proudly become the ultimate meeting point for more than 20,000 gentlemen. Whether you are actively searching for a reliable hair transplant near me or traveling to find the best hair transplant in Karachi, our facility is widely recognized as a gathering place for passionate and perfectionist individuals.
                 </p>
 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-12 font-medium`}>
-                  At Hair Skill, we believe in ultimate perfection through continuous improvement, progress in research, and always remaining open to innovative technologies. The future stands before us with undiscovered chapters waiting to be experienced.
+                  At Hair Skill, we strongly believe in ultimate perfection through continuous improvement, advanced progress in research, and always remaining open to innovative technologies. The future faces us with undiscovered chapters waiting to be beautifully experienced.
                 </p>
               </motion.div>
 

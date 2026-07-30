@@ -109,7 +109,7 @@ export default function LongFueClient() {
                   Long FUE hair transplant in Pakistan is an advanced technique that allows hair transplantation without fully shaving the donor area preserving longer hair strands for a more discreet procedure. It offers better visual planning natural hairline design and less noticeable downtime.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Ideal for patients who want to maintain their existing hairstyle during treatment Long FUE combines precision with immediate aesthetic advantage. At Hair Skill Clinic each case is carefully evaluated to ensure optimal results based on individual hair characteristics and long-term goals.
+                  Ideal for patients who want to maintain their existing hairstyle during treatment Long FUE combines precision with immediate aesthetic advantage. At Hair Skill Clinic every case is carefully evaluated to ensure optimal results based on individual hair characteristics and long term goals. Whether you are searching for a fue hair transplant clinic in Karachi or the best fue hair transplant near me in Islamabad we provide elite level care and natural results.
                 </p>
               </motion.div>
 
@@ -119,7 +119,7 @@ export default function LongFueClient() {
                   What Is Long FUE?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Long FUE Long Follicular Unit Excision is a modern hair transplant technique where follicles are extracted with the hair left longer than usual. Instead of shaving the donor area down to very short stubble the surgeon removes grafts while keeping the hair shafts long. This makes it easier to preview the direction curl and overall look of the result earlier.
+                  Long Follicular Unit Excision is a modern hair transplant technique where follicles are extracted with the hair left longer than usual. Instead of shaving the donor area down to very short stubble the surgeon removes grafts while keeping the hair shafts long. This makes it easier to preview the direction curl roll and overall look of the result earlier.
                 </p>
               </motion.div>
 
@@ -135,7 +135,7 @@ export default function LongFueClient() {
                     "Want a less shaved look during the healing phase",
                     "Prefer to keep your hairstyle while undergoing treatment",
                     "Need precise placement to match existing hair direction especially at the hairline",
-                    "Have enough donor density to support FUE extraction"
+                    "Have enough donor density to support specialized extraction"
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
@@ -145,7 +145,7 @@ export default function LongFueClient() {
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  It may not be ideal if you have very tight curls severe donor thinning or if your surgeon recommends a different approach based on scalp condition.
+                  It may not be ideal if you have very tight curls severe donor thinning or if your surgeon recommends a different approach based on scalp condition. Patients traveling from Multan or Rawalpindi often choose this method to avoid broadcasting their procedure to coworkers and friends.
                 </p>
               </motion.div>
 
@@ -158,11 +158,11 @@ export default function LongFueClient() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/60">
                     <h3 className="text-lg font-extrabold text-[#772424] mb-2">Less noticeable downtime</h3>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">No fully shaved scalp so many patients feel more comfortable returning to daily life sooner.</p>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">No fully shaved scalp means many patients feel more comfortable returning to daily life sooner.</p>
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/60">
                     <h3 className="text-lg font-extrabold text-[#772424] mb-2">Better visual planning</h3>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Longer hair helps the team judge angle direction and blend with surrounding hair.</p>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Longer hair helps the team judge angle direction and blend with surrounding hair much faster.</p>
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/60">
                     <h3 className="text-lg font-extrabold text-[#772424] mb-2">Early cosmetic improvement</h3>
@@ -170,7 +170,7 @@ export default function LongFueClient() {
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/60">
                     <h3 className="text-lg font-extrabold text-[#772424] mb-2">Natural hairline control</h3>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">The surgeon can place grafts to better match your existing growth pattern.</p>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">The surgeon can place grafts to better match your existing growth pattern securing the best fue hair transplant outcome possible.</p>
                   </div>
                 </div>
               </motion.div>
@@ -184,7 +184,7 @@ export default function LongFueClient() {
                 <div className="flex flex-col gap-8 ml-2 border-l-2 border-[#772424]/20 pl-6">
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Consultation and Design</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your surgeon evaluates donor supply hair caliber curl pattern and scalp laxity. Then they design the hairline and map the areas to be filled.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your surgeon evaluates donor supply hair caliber curl pattern and scalp laxity. Then they design the hairline and map the areas to be filled. If you are comparing the fue hair transplant cost we outline all fees completely upfront.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Donor Area Preparation</h3>
@@ -192,21 +192,34 @@ export default function LongFueClient() {
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Local Anesthesia</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Numbing medication is applied to both donor and recipient sites. Most patients feel pressure and movement not pain.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Numbing medication is applied to both donor and recipient sites. Most patients experience pressure and movement not pain.</p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-black text-[#772424] mb-2">Graft Extraction (FUE)</h3>
+                    <h3 className="text-xl font-black text-[#772424] mb-2">Graft Extraction</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">Using a small punch tool follicular units are carefully removed one by one. With Long FUE extra care is taken to avoid damaging long shafts during removal.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Graft Handling and Sorting</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Grafts are kept hydrated sorted by hair count 1-hair 2-hair 3-hair units and prepared for implantation.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Grafts are kept hydrated and sorted by hair count singles doubles and triples and prepared for implantation.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Recipient Site Creation & Implantation</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Tiny incisions are made in the thinning area. Angle direction and density are planned to create a natural pattern. Grafts are inserted into the prepared sites. Single-hair grafts are usually used at the hairline for a softer more natural edge.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Tiny incisions are made in the thinning area. Angle direction and density are planned to create a natural pattern. Grafts are inserted at prepared sites. Single hair grafts are usually used at the hairline for a softer more natural edge.</p>
                   </div>
                 </div>
+              </motion.div>
+
+              {/* Section: Price in Pakistan */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+                <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                  Fue Hair Transplant Price In Pakistan
+                </h2>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
+                  Understanding the fue hair transplant price in pakistan is essential for proper planning. Long FUE requires advanced precision so it sits in a different package tier compared to standard FUE.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
+                  However finding a premium fue hair transplant in lahore remains incredibly accessible when compared to heavy clinical calculations in Western countries. At Hair Skill we provide clear and comprehensive quotes in local PKR ensuring you receive world class care without hidden costs.
+                </p>
               </motion.div>
 
               {/* Section: Recovery Timeline */}
@@ -223,12 +236,12 @@ export default function LongFueClient() {
 
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
                     <h4 className="font-extrabold text-[#772424] text-lg mb-2">Days 4 to 14</h4>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Scabs gradually fall off do not pick them. Redness fades for many patients though it can last longer in some skin types. You will likely be advised to avoid heavy sweating and direct sun exposure.</p>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Scabs gradually fall off and do not pick them. Redness fades for many patients though it can last longer in some skin types. You will likely be advised to avoid heavy sweating and direct sun exposure. Your doctor will also advise you on the best shampoo after fue hair transplant to ensure gentle cleansing.</p>
                   </div>
 
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
-                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">Weeks 2 to 8 (Shedding Phase)</h4>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Transplanted hairs often shed this is normal and expected. The follicles remain in place and begin a new growth cycle.</p>
+                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">Weeks 2 to 8</h4>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Transplanted hairs often shed this is normal. The follicles remain in place and begin a new growth cycle.</p>
                   </div>
 
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
@@ -237,8 +250,8 @@ export default function LongFueClient() {
                   </div>
 
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
-                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">Months 9 to 12 (and up to 18)</h4>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Results become fuller and more mature. Texture and thickness continue to improve.</p>
+                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">Months 9 to 12 and up to 18</h4>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Results become fuller and more mature. Texture and thickness continue to improve giving you the final look.</p>
                   </div>
                 </div>
               </motion.div>
@@ -254,7 +267,7 @@ export default function LongFueClient() {
                     "Avoid scratching or rubbing the recipient area",
                     "Sleep with your head elevated for the first few nights if advised",
                     "Skip smoking and alcohol during early healing if possible",
-                    "Attend follow-up visits to track progress and address concerns"
+                    "Attend follow up visits to track progress and address concerns"
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
@@ -269,14 +282,13 @@ export default function LongFueClient() {
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Potential Risks and Side Effects
                 </h2>
-                <p className="text-black text-base md:text-lg font-bold mb-4">As with any transplant method possible issues include:</p>
+                <p className="text-black text-base md:text-lg font-bold mb-4">As with any transplant method possible issues include the following:</p>
                 <div className="flex flex-col gap-4 mb-6 ml-2">
                   {[
                     "Temporary swelling redness and itching",
                     "Shock loss temporary shedding of nearby native hair",
-                    "Patchy growth during early months",
-                    "Infection rare with proper care",
-                    "Over-harvesting if donor planning is poor"
+                    "Patchy growth during early months. Infection is rare with proper care",
+                    "Over harvesting if donor planning is poor"
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
@@ -285,7 +297,7 @@ export default function LongFueClient() {
                   ))}
                 </div>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold">
-                  Choosing an experienced Long FUE surgeon is one of the most important factors for a safe procedure and natural-looking results.
+                  Choosing an experienced surgeon is one of the most important factors for a safe procedure and natural looking results.
                 </p>
               </motion.div>
 
@@ -298,7 +310,7 @@ export default function LongFueClient() {
                   Long FUE combines the precision of FUE with the cosmetic advantage of keeping the hair longer throughout the procedure. For patients who want minimal visible downtime and a more controlled approach to hairline planning Long FUE may be a suitable option depending on hair type donor capacity and overall goals.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  At Hair Skill Clinic every case is evaluated individually to determine the most appropriate technique for natural and long-term results. Contact us to learn whether Long FUE is the right choice for you.
+                  At Hair Skill Clinic every case is evaluated individually to determine the most appropriate technique for natural and long term results. Contact us to learn whether Long FUE is the right choice for you.
                 </p>
               </motion.div>
 

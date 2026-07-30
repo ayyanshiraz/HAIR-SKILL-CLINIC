@@ -64,15 +64,15 @@ export default function SterilizationClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // Structured Process Data for the Step-Cards
+  // Structured Process Data for the Step-Cards (SEO Optimized)
   const processSteps = [
-    { title: "Receiving (Contaminated Instruments)", desc: "Used instruments are transported in closed containers to the dirty area." },
-    { title: "Initial Inspection & Pre-Cleaning", desc: "Instruments are counted, inspected, and undergo preliminary cleaning." },
-    { title: "Removal of Organic Contaminants", desc: "Blood, protein, and other organic materials are removed using appropriate enzymatic cleaners." },
-    { title: "Documentation and Transfer", desc: "Instrument sets are recorded and transferred to the cleaning and disinfection stage." },
-    { title: "Detailed Cleaning", desc: "Manual and ultrasonic cleaning ensures complete removal of protein, fat, and particulate residues." },
-    { title: "High-Level Disinfection (HLD)", desc: "All instruments are disinfected prior to sterilization in accordance with WHO and AAMI guidelines." },
-    { title: "Infection Control and Use of PPE", desc: "All procedures are carried out in compliance with infection control standards and DAS and TEMOS criteria." }
+    { title: "Receiving Contaminated Instruments", desc: "Used instruments are transported in closed containers to the designated dirty area immediately after surgical extraction." },
+    { title: "Initial Inspection and Pre-Cleaning", desc: "Instruments are counted, inspected for wear, and undergo preliminary rinsing under controlled conditions." },
+    { title: "Removal of Organic Contaminants", desc: "Blood, protein, and other organic materials are dissolved using appropriate multi-enzymatic cleaners." },
+    { title: "Documentation and Transfer", desc: "Instrument sets are recorded and transferred to the secondary cleaning and disinfection stage." },
+    { title: "Detailed Ultrasonic Cleaning", desc: "High-frequency ultrasonic waves ensure complete removal of protein, fat, and microscopic particulate residues from fine FUE punches." },
+    { title: "High Level Disinfection (HLD)", desc: "All surgical tools are disinfected before final autoclaving in accordance with WHO and AAMI guidelines." },
+    { title: "Infection Control and Use of PPE", desc: "All staff members wear full protective gear while executing decontamination routines." }
   ];
 
   return (
@@ -122,13 +122,13 @@ export default function SterilizationClient() {
                 />
               </motion.div>
 
-              {/* Lead Paragraphs */}
+              {/* Lead Paragraphs (SEO Updated) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  At Hair Skill Clinic, our priority is to provide patients with the safest and highest quality treatment environment. Our sterilization and hygiene processes are not limited to in clinic practices; they are carried out in compliance with the Ministry of Health DAS Guidelines, WHO Sterilization Guidelines, and AAMI ST79 Steam Sterilization and Sterile Processing Standards.
+                  At Hair Skill Clinic, patient safety and clinical excellence remain our topmost priorities. Providing a safe hair transplant near me for patients across Lahore, Karachi, Multan, Rawalpindi, and all of Pakistan requires rigid adherence to surgical hygiene. Our sterilization protocols are executed in full alignment with the Ministry of Health DAS Guidelines, WHO Sterilization Guidelines, and AAMI ST79 Steam Sterilization and Sterile Processing Standards.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  All processes are also planned in accordance with international healthcare quality standards and are regularly audited and improved in line with the TEMOS International Accreditation criteria held by Hair Skill Clinic.
+                  When patients evaluate hair transplant cost in Pakistan or seek the best price for FUE procedures, surgical safety must never be compromised. Every surgical instrument used in our facilities undergoes international healthcare quality protocols, accredited under TEMOS International criteria to guarantee zero risk of cross-contamination.
                 </p>
               </motion.div>
 
@@ -148,43 +148,37 @@ export default function SterilizationClient() {
 
                 <div className="flex flex-col gap-6 mb-10">
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    To ensure the continuity, reliability, and effectiveness of our sterilization processes, daily and periodic controls are routinely performed on our equipment.
-                  </p>
-                  <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    These tests verify that the sterilization process is functioning correctly. Potential risks are identified at an early stage, ensuring uninterrupted maintenance of high hygiene standards that support patient safety.
-                  </p>
-                  <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    All testing and control procedures are documented in accordance with national and international guidelines and are regularly evaluated.
+                    To maintain strict safety for patients seeking hair restoration near me in Lahore and major cities of Pakistan, our staff conducts daily testing on all surgical equipment. These routine checks verify that every micro-punch, sapphire blade, and forceps is completely sterile before touching human tissue.
                   </p>
                 </div>
 
-                {/* Sub-Tests Breakdown */}
+                {/* Sub-Tests Breakdown (SEO Updated) */}
                 <div className="flex flex-col gap-8 ml-2 border-l-2 border-gray-100 pl-4 sm:pl-6">
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Vacuum Leak Test</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      This test is performed daily to assess the airtightness and vacuum capacity of our sterilization devices. It ensures the reliability of the sterilization process and is conducted in accordance with quality standards.
+                      This test is performed daily to assess the airtightness and vacuum capacity of our sterilization devices. It ensures total reliability of the autoclaving environment and is conducted in accordance with international quality standards.
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Bowie-Dick Test</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      This critical test verifies steam penetration and confirms the effective sterilization capacity of our autoclaves on a daily basis. Conducted in line with quality standards, it ensures device reliability and patient safety.
+                      This critical test verifies steam penetration and confirms the effective sterilization capacity of our autoclaves daily. Conducted in line with rigorous quality standards, it ensures device reliability and patient safety during every procedure.
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Ultrasonic Cleaning Test</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      Instruments are cleaned in ultrasonic washers to remove even the smallest residues. This process eliminates protein, fat, and particulate residues, minimizing the risk of infection.
+                      Instruments are cleaned in ultrasonic washers to remove even the smallest microscopic residues. This process eliminates protein, fat, and particulate residues, minimizing the risk of infection to the lowest possible level.
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Biological Indicator Test (Every 15 Days)</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      We perform biological indicator tests periodically to measure the effectiveness of our sterilization process against microorganisms. These tests confirm sterilization efficacy and are fully compliant with DAS, WHO, and TEMOS quality standards.
+                      We perform biological indicator tests periodically to measure the effectiveness of our sterilization process against resistant microorganisms. These tests confirm biological sterilization efficacy and are fully compliant with DAS, WHO, and TEMOS quality standards.
                     </p>
                   </div>
                 </div>
@@ -195,6 +189,11 @@ export default function SterilizationClient() {
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Delivery and Traceability of Sterile Instruments
                 </h2>
+                
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
+                  Proper segregation of clean and dirty instruments prevents hospital-acquired infections. Whether you undergo an unshaven transplant, long FUE, or manual punch procedure at Hair Skill Clinic, every instrument is handled through a strictly controlled pipeline.
+                </p>
+
                 <h3 className="text-lg md:text-xl font-extrabold text-[#772424] mb-8">
                   Separation and Management of Contaminated and Sterile Instruments
                 </h3>
@@ -209,10 +208,10 @@ export default function SterilizationClient() {
 
                 <div className="flex flex-col gap-6 mb-10">
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Contaminated and sterile instruments are strictly separated. Contaminated instruments are transported in sealed containers and delivered to the designated dirty area. Upon acceptance, instruments are counted and recorded.
+                    Contaminated and sterile instruments are strictly separated. Contaminated instruments are transported in sealed containers and delivered to the designated dirty utility area. Upon acceptance, instruments are counted and logged.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Instruments that have completed cleaning, disinfection, and sterilization processes are delivered to the relevant units against signed documentation. This practice ensures safe circulation of instruments while supporting institutional traceability, quality control, and patient safety.
+                    Instruments that have completed cleaning, disinfection, and sterilization processes are delivered to the surgical rooms against signed documentation. This practice ensures safe circulation of instruments while supporting institutional traceability, quality control, and patient safety.
                   </p>
                 </div>
 
@@ -222,13 +221,10 @@ export default function SterilizationClient() {
 
                 <div className="flex flex-col gap-6">
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Each sterile instrument is recorded with its autoclave number, sterilization date, expiration date, and responsible staff member.
+                    Each sterile instrument set is recorded with its autoclave number, sterilization date, expiration date, and responsible staff member ID.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    These records are stored within patient files and sterilization tracking systems. In the event of a potential infection, all equipment and sterilization processes can be retrospectively reviewed in detail, ensuring rapid traceability.
-                  </p>
-                  <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    This system is a fundamental component of infection control management and aligns with our institutional quality standards policy.
+                    These records are stored within patient files and sterilization tracking systems. In the event of a potential infection query, all equipment and sterilization processes can be retrospectively reviewed in detail, ensuring rapid traceability. This system is a fundamental component of infection control management across all our clinics in Pakistan.
                   </p>
                 </div>
               </motion.div>
@@ -236,7 +232,7 @@ export default function SterilizationClient() {
               {/* Section: Process List */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer} className="mb-16">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-8 tracking-tight">
-                  Our Sterilization Process
+                  Our Complete Sterilization Pipeline
                 </h2>
 
                 <div className="grid grid-cols-1 gap-4 mb-12">
@@ -257,7 +253,7 @@ export default function SterilizationClient() {
                 </div>
 
                 <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-6">
-                  Preparation and Packaging for Sterilization
+                  Preparation and Packaging
                 </h3>
 
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-6 shadow-md">
@@ -269,42 +265,36 @@ export default function SterilizationClient() {
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-10">
-                  Cleaned instruments are packaged using sterilization compatible materials, with biological indicators included, preparing them for sterilization.
+                  Cleaned instruments are packaged using medical-grade sterilization pouches, with chemical and biological indicators included.
                 </p>
 
                 <div className="flex flex-col gap-8 ml-2 border-l-2 border-gray-100 pl-4 sm:pl-6">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Sterilization Process</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Steam Autoclave Sterilization</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">
-                      Packaged instruments are placed into the autoclave. Air is evacuated to allow steam penetration. High pressure, high temperature steam is then applied to completely eliminate microorganisms.
-                    </p>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      At the end of the cycle, pressure and temperature are gradually reduced, packages are dried, and the sterilization process is completed, making instruments ready for use.
+                      Packaged instruments are placed into high-pressure autoclaves. Air is evacuated, and high-temperature saturated steam eliminates all microbial life.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Distribution Process</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Sterile Distribution</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      Sterilized instruments are delivered to the relevant rooms and departments against signed documentation.
+                      Pouches are dried, inspected, and delivered directly to the operating rooms against signed documentation.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Priority Conclusion */}
+              {/* Section: Priority Conclusion (Affordable Hair Restoration) */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="flex flex-col gap-6 pt-8 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-2 tracking-tight">
-                  Patient Safety Is Our Priority
+                  Affordable Hair Restoration Without Compromising Safety
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Thanks to these meticulous processes aligned with international standards, every patient at Hair Skill Clinic can receive treatment with confidence.
+                  Many patients search for the lowest price or affordable hair transplant cost in Lahore, Karachi, Multan, or Rawalpindi. At Hair Skill Clinic, competitive pricing never comes at the expense of patient hygiene. By maintaining hospital-grade sterilization protocols, we deliver international-quality hair restoration at fair costs while prioritizing human health above all else.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Our sterilization and infection control practices not only meet legal requirements but are also continuously audited and improved in line with international TEMOS quality standards.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The primary goal of our hygiene and sterilization practices is to provide every patient with a safe, traceable, and high quality treatment environment.
+                  Every patient at Hair Skill Clinic receives treatment with total confidence, knowing that our sterilization protocols meet international TEMOS quality standards and provide a clean, traceable, and secure clinical environment.
                 </p>
               </motion.div>
 

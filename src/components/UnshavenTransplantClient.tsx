@@ -92,186 +92,201 @@ export default function UnshavenTransplantClient() {
                   alt="Split comparison of patient in orange shirt showing native forward styling versus un-shaved top recipient bed" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
-                
               </motion.div>
 
               {/* Lead Introduction */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The unshaven hair transplant has become a source of happiness for lots of men and women. There was a common misconception. If you had a hair transplant you had to shave your hair. For the majority of people shaving their hair could become a major problem.
+                  For many professionals and public figures the hardest part of a hair transplant is not the surgery itself. It is the mandatory head shave. If you are searching for an unshaven hair transplant in Pakistan you already know why avoiding the razor matters. You want to restore your density without announcing it to the world. A completely shaved head requires weeks of hiding under caps or taking long leaves from work. With an unshaven hair transplant you can keep your existing hair exactly as it is.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  It is understandable if you do not want to cut your hair short for aesthetic concerns; or if you want to keep your hair transplant a secret. When these factors are taken into account people suffering from hair thinning give up on the idea of undergoing a hair transplant operation.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Fortunately with the help of the unshaven hair transplant technique the patients without losing their existing hair can have a successful unshaven Fue hair transplant.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Hair Skill Clinic provides a safe and successful unshaven hair transplant for those who are not eager to reveal the truth about their hair transplantation and are obsessed with their long hair.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  If you are planning a no-shave hair transplantation procedure the most important thing to consider is that the surgery will be carried out professionally and effectively. So a successful unshaven hair transplant depends on the experiment of your doctor.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Since the hair transplant is a work of art demanding utmost care and skill an unshaven hair transplant a more challenging procedure than the traditional one requires far more attention and expertise.
-                </p>
-              </motion.div>
-
-              {/* Section: Can Everyone Have Unshaven Hair Transplant */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Can Everyone Have Unshaven Hair Transplant?
-                </h2>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Both men and women are eligible for a hair transplant. Unshaven hair transplants which most people tend to have to keep the surgery private; or not shave their existing hair are becoming increasingly favorable.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Furthermore because it is more difficult for women to have completely shaved hair an unshaven hair transplant is a far more popular option among females.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Unshaved hair transplantation on the other hand is not for everyone. If you have severe hair loss you will not be able to undergo a no-shave hair transplant operation. Intense hair loss demands a much higher number of transplants than normal.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Therefore if the patient is experiencing intense hair loss an unshaven hair transplant might not be helpful. It is good to check your hair to see if a no-shave hair transplant is right.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  An ideal candidate for an unshaven hair transplant has mild hair loss. Because unshaven hair transplantation can only be done in a small number of grafts it cannot benefit patients with extensive hair loss.
+                  At Hair Skill Clinic we specialize in discreet hair restoration. Our unshaven FUE technique allows you to walk in for your procedure and walk out with your current hairstyle intact. It is the perfect solution for anyone searching for an unshaven hair transplant near me in Lahore Karachi or Islamabad who needs to return to normal life immediately.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  An unshaven hair transplant procedure is the best to be applied for the surgery if a patient is suffering from hair-line receding or temple thinning.
+                  The goal is absolute privacy. Your colleagues friends and clients will never know you had a procedure done unless you decide to tell them.
+                </p>
+
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mt-4 tracking-tight border-b pb-3 border-gray-100">
+                  What Is an Unshaven Hair Transplant?
+                </h2>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  An unshaven hair transplant also known as U FUE or DHI without shaving is an advanced technique where your surgeon extracts and implants follicles without shaving your recipient or main donor areas. Instead of a zero trim the surgical team carefully works between your existing hair strands.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  In a classic FUE the entire scalp is shaved to give the surgeon maximum visibility and speed. In an unshaven session the process is much slower and requires significantly more precision. Your doctor must extract individual follicles by navigating through long hair and then implant them delicately so the existing surrounding hairs remain undisturbed.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  This approach requires an elite level of skill which is why finding an expert surgeon is critical. Hair Skill Clinic focuses entirely on surgeon led execution to ensure your native hair is protected while the new grafts are placed perfectly.
                 </p>
               </motion.div>
 
-              {/* Section: Operation of Unshaven Hair Transplant */}
+              {/* Section: Who Is a Good Candidate */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Operation of Unshaven Hair Transplant
+                  Who Is a Good Candidate for Unshaven FUE?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Unshaven FUE hair transplant which is the preference of both men and women is quite similar to the traditional FUE technique. The only difference is patients do not have to cut or shave their hair. It is possible to cover your donor and recipient area and no one could find out that you have undergone hair transplantation.
+                  Not every patient is a fit for a completely unshaven procedure. Because the technique is highly detailed it works best for specific types of hair loss. You are likely an excellent candidate if you need the following:
+                </p>
+                
+                <div className="space-y-2 ml-2 mb-6">
+                  {[
+                    "hairline lowering or temple restoration",
+                    "mild to moderate density improvement",
+                    "correction of small patchy areas",
+                    "scar concealment from previous surgeries"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3"><span className="text-[#772424] font-black">•</span><p className="text-black text-base md:text-lg font-bold">{item}</p></div>
+                  ))}
+                </div>
+
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
+                  If you have advanced hair loss requiring thousands of grafts a fully unshaven session might not be practical. However our surgeons often use a partial shave or hidden donor approach for larger cases. Patients traveling from Islamabad Multan or Rawalpindi often choose Hair Skill because our doctors provide honest assessments about whether an unshaven approach will yield the best density for their specific pattern.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  The rest is the same. Your operation will start with checking your donor area and planning as always. When your doctor is done with your planning he will apply anesthesia to your donor area for the extraction of your hair follicles.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Since hair will not be shaved just a limited number of hair follicles are extracted. The incision of the grafts begins when the extraction stage is completed successfully. One by one hair follicles will be inserted.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Unshaven hair transplant is proven to be an entirely successful surgery for those in need of hair treatment. Although the unshaven FUE hair transplant operation technique is similar to traditional FUE unshaven hair transplantation requires much more work because it is challenging to extract and incise hair follicles. In contrast the patients hair is not shaved.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Requiring much more care and attention the success of the unshaven operation depends on your doctors experience and skills. Hair Skill Clinic following the latest technology and new developments to give its patients the best hair transplant results is one of the sophisticated clinics performing unshaven FUE hair transplant in Pakistan.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Hair Skill helps you to gain lost hair while giving a successful and smooth operation. Therefore our clinic has been hosting lots of patients all around the world. Over 10.000 men have gotten natural-looking hair transplants so far.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-bold">
-                  One of the popular and favorable techniques of hair transplantation unshaven hair transplant has become another success story for Hair Skill Clinic.
+                  Expectations play a huge role. An unshaven session limits the total number of grafts that can be safely moved in one day. If your priority is absolute secrecy over maximum graft volume this is the right path for you.
                 </p>
               </motion.div>
 
-              {/* Section: After the Procedure / 3 Types */}
+              {/* Section: Key Benefits */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
-                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-2 tracking-tight">
-                  Unshaven Hair Transplantation, After the Procedure
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                  Key Benefits of an Unshaven Hair Transplant
                 </h2>
-                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-6">
-                  3 Types of Unshaven Hair Transplantation
-                </h3>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
+                  The biggest advantage is complete privacy but the benefits extend beyond just keeping your hair long.
+                </p>
+
+                <div className="space-y-4 ml-2 mb-6">
+                  <div className="flex items-start gap-3">
+                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
+                    <p className="text-black text-base md:text-lg font-medium">Zero awkward transition phases with a fully shaved head</p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
+                    <p className="text-black text-base md:text-lg font-medium">Immediate return to work meetings and social events</p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
+                    <p className="text-black text-base md:text-lg font-medium">Existing hair easily conceals the newly implanted grafts and tiny donor marks</p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
+                    <p className="text-black text-base md:text-lg font-medium">Faster visual recovery since you do not have to wait for your entire head of hair to grow back</p>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
+                    <p className="text-black text-base md:text-lg font-medium">High precision placement that respects your natural hair angle and flow</p>
+                  </div>
+                </div>
+                
+                <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
+                  For business leaders public facing professionals and women an unshaven hair transplant is a game changer. It removes the social stigma and downtime associated with traditional hair restoration.
+                </p>
+              </motion.div>
+
+              {/* Section: How Procedure Works */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                  How the Unshaven Procedure Works at Hair Skill Clinic
+                </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  If a patient is experiencing considerable hair loss s/he is not a good candidate for a fully unshaven procedure. As a result several treatment options are done based on the patients hair loss.
+                  An unshaven hair transplant demands extreme focus. Here is how our clinical team ensures a flawless discreet outcome.
                 </p>
 
                 <div className="space-y-6 ml-2">
                   <div className="p-6 rounded-3xl bg-gray-50 border border-gray-200/80">
-                    <h4 className="text-lg font-black text-[#772424] mb-2">1- Shaven Donor Site, Unshaven Recipient Site</h4>
-                    <p className="text-black font-medium text-base">If your recipient area is completely bald your donor area will be shaved.</p>
+                    <h4 className="text-lg font-black text-[#772424] mb-2">Detailed Donor Management</h4>
+                    <p className="text-black font-medium text-base leading-relaxed">Instead of a buzz cut your doctor either trims only microscopic hairs meant for extraction or hides the extraction sites beneath long layers of hair at the back of your head. Once your long hair falls naturally over the donor zone the tiny extraction points become completely invisible.</p>
                   </div>
 
                   <div className="p-6 rounded-3xl bg-gray-50 border border-gray-200/80">
-                    <h4 className="text-lg font-black text-[#772424] mb-2">2- Limited Shaven Donor Site</h4>
-                    <p className="text-black font-medium text-base leading-relaxed">Only one or two short strands of hair are shaved in the donor area. Limited Shaven Donors help patients to hide their donor areas. Yet the number of hair follicles grafts that can be extracted is limited.</p>
+                    <h4 className="text-lg font-black text-[#772424] mb-2">Precise Implantation</h4>
+                    <p className="text-black font-medium text-base leading-relaxed">For the recipient area we frequently combine the unshaven approach with DHI implanter pens. This allows the surgeon to bypass standard channel creation and place the follicle directly between your native hairs without damaging their roots.</p>
                   </div>
 
                   <div className="p-6 rounded-3xl bg-gray-50 border border-gray-200/80">
-                    <h4 className="text-lg font-black text-[#772424] mb-2">3- Fully Unshaven</h4>
-                    <p className="text-black font-medium text-base leading-relaxed">Although a fully unshaven procedure that allows patients to keep their existing hair helps patients to recover in a short time it limits the graft numbers.</p>
+                    <h4 className="text-lg font-black text-[#772424] mb-2">Pacing and Clinical Care</h4>
+                    <p className="text-black font-medium text-base leading-relaxed">Because the surgeon is working through a forest of existing hair these sessions take longer. A typical unshaven procedure requires immense patience and is usually limited to a smaller number of grafts per session to ensure maximum follicle survival and scalp health.</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Pros of Unshaven Hair Transplant */}
+              {/* Section: Cost in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Pros of Unshaven Hair Transplant
+                  Unshaven Hair Transplant Cost in Pakistan
                 </h2>
-
-                <div className="space-y-4 ml-2">
-                  <div className="flex items-start gap-3">
-                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
-                    <p className="text-black text-base md:text-lg font-medium">You do not need to shave your hair which is the best part of this technique for most patients. An unshaven hair transplant is a lifesaving if you do not feel comfortable with short hair and the operation scars after the procedure!</p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
-                    <p className="text-black text-base md:text-lg font-medium">Unshaven FUE hair transplant provides you with natural-looking hair just like a regular FUE transplant.</p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
-                    <p className="text-black text-base md:text-lg font-medium">The patient will not get any prominent scars after an unshaven hair transplant.</p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="text-[#772424] font-black text-lg pb-1">•</span>
-                    <p className="text-black text-base md:text-lg font-medium">The healing phase of the patient is going to be completed in a short time after the unshaven hair transplant. So you do not need to take a long rest staying home for days. Unshaven hair transplants do not interrupt your social life.</p>
-                  </div>
-                </div>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
+                  Because of the time precision and advanced skill required an unshaven hair transplant cost in Pakistan sits in a different tier than standard FUE. The procedure takes roughly twice as long to perform and demands maximum surgeon involvement.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
+                  Your specific tier calculation depends on the number of grafts required and the complexity of working around your existing hair length. Most patients find that even the upper tier PKR packages for unshaven FUE in Pakistan remain highly accessible compared to the premium rates charged in Western clinics.
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
+                  Hair Skill provides a clear upfront quote in PKR covering your extractions cleanroom implantation and scheduled aftercare with zero hidden fees. You invest in secrecy precision and real medical expertise.
+                </p>
               </motion.div>
-
-              {/* Section: Cons of Unshaven Hair Transplant */}
+              
+              {/* Section: Recovery and Healing */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Cons of Unshaven Hair Transplant
+                  Recovery and Healing
                 </h2>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
+                  Healing from an unshaven hair transplant is incredibly manageable. Since you keep your hair the redness and tiny scabs in the recipient area are camouflaged almost instantly.
+                </p>
 
-                <div className="space-y-4 ml-2">
+                <div className="space-y-4 ml-2 mb-6">
                   <div className="flex items-start gap-3">
                     <span className="text-[#772424] font-black text-lg pb-1">•</span>
-                    <p className="text-black text-base md:text-lg font-medium">The success of an unshaven hair transplant depends on your doctor. So the patient should be sure of the clinic. You can search Hair Skill website and Instagram to witness the successful stories.</p>
+                    <p className="text-black text-base md:text-lg font-medium"><span className="font-bold">Days 1 to 3:</span> You may experience mild swelling but your native hair hides the surgical zones effectively.</p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="text-[#772424] font-black text-lg pb-1">•</span>
-                    <p className="text-black text-base md:text-lg font-medium">Unshaven hair transplant takes much longer than regular FUE transplants. The duration of the procedure depends on the number of grafts. That is why the patient should be patient during the surgery.</p>
+                    <p className="text-black text-base md:text-lg font-medium"><span className="font-bold">Days 7 to 10:</span> The small scabs naturally wash away during your clinical washing routine.</p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="text-[#772424] font-black text-lg pb-1">•</span>
-                    <p className="text-black text-base md:text-lg font-medium">Unshaven hair transplant cannot be applied to people with severe hair loss since they will require more grafts.</p>
+                    <p className="text-black text-base md:text-lg font-medium"><span className="font-bold">Months 3 to 4:</span> The new transplanted follicles begin to sprout seamlessly blending into your long hair.</p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="text-[#772424] font-black text-lg pb-1">•</span>
-                    <p className="text-black text-base md:text-lg font-medium">Bacterial growth may occur because of the unshaven hair and the roots may get damaged due to bacteria and germs.</p>
+                    <p className="text-black text-base md:text-lg font-medium"><span className="font-bold">Months 12 to 18:</span> You achieve your final mature density with a completely natural look.</p>
                   </div>
                 </div>
+                
+                <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
+                  You can resume most normal activities within a few days making it the ultimate lunch break procedure for those with busy demanding schedules.
+                </p>
               </motion.div>
-
-              {/* Section: Unshaven Hair Transplant Pakistan */}
+              
+              {/* Section: FAQs Placeholder */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
+                  Unshaven Hair Transplant FAQs
+                </h2>
+                <p className="text-gray-500 italic text-base md:text-lg">(FAQ Section placeholder - ready for your specific questions and answers)</p>
+              </motion.div>
+              
+              {/* Section: Closing CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-6 border-t border-gray-100">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight">
-                  Unshaven Hair Transplant Pakistan
+                  Schedule Your Discreet Hair Restoration Today
                 </h2>
                 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  In recent years Pakistan has been home to people from worldwide visiting our country to have the best hair transplant surgery. Hair loss which affects both men and women for various causes is now easily treatable because of advances in technology.
+                  If you want to restore your hair without pausing your life an unshaven hair transplant at Hair Skill Clinic offers the ultimate privacy. Our surgeons design every step to ensure your treatment remains a complete secret.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Hair Skill Clinic in Lahore Pakistan is one of the well-known clinics with the leading technology and a dedicated team. If you are looking for the best place to have an unshaven hair transplant in Pakistan you visit the right page.
-                </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Unshaven Hair Transplant Pakistan is the most searched caption on the internet. Our clinic has succeeded in unshaven FUE hair transplant techniques just as in other FUE techniques. You can visit our Instagram to learn more about our clinic and witness the success stories of Hair Skill!
+                  Send us your photos today for a confidential review. Our doctors will study your pattern and tell you exactly how many grafts you need providing a custom package tier in PKR. Take control of your hairline without losing your current style. Get Your Free Unshaven FUE Assessment Today.
                 </p>
               </motion.div>
 

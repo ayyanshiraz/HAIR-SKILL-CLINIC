@@ -33,14 +33,6 @@ const slideInRight: Variants = {
   }
 };
 
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 }
-  }
-};
-
 export default function HairWashingClient() {
   // --- FORM STATES ---
   const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
@@ -65,7 +57,7 @@ export default function HairWashingClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
       {/* --- PAGE HEADER --- */}
       <motion.section 
@@ -75,7 +67,7 @@ export default function HairWashingClient() {
         className="pt-28 lg:pt-36 pb-12 bg-gray-50 border-b border-gray-200 px-6"
       >
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2">
+          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2 flex-wrap">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/patient-guide" className="hover:text-[#772424] transition-colors">Patient Guide</Link>
@@ -84,7 +76,7 @@ export default function HairWashingClient() {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
-            Hair Washing
+            Hair Washing Guide After Transplant
           </h1>
         </div>
       </motion.section>
@@ -92,12 +84,12 @@ export default function HairWashingClient() {
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
             {/* LEFT SIDE: SCROLL-ANIMATED CONTENT */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* Main Hero Image with Patient Tag */}
+              {/* Main Hero Image */}
               <motion.div 
                 initial="hidden" 
                 animate="visible" 
@@ -106,120 +98,117 @@ export default function HairWashingClient() {
               >
                 <img 
                   src="/patient-guide/5.webp" 
-                  alt="Medical assistant performing gentle post-op hair wash on patient" 
+                  alt="Medical assistant performing gentle post op hair wash on patient" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95" 
                 />
-                
               </motion.div>
 
               {/* Lead Intro Paragraph */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  <span className="font-bold underline decoration-[#C5A059]">Hair washing</span> is one of the essential parts of a hair transplant. Therefore, there are some necessary steps that you need to follow to complete your healing stage. Here is the guideline to answer your considerations regarding the hair wash!
+                  Learning to wash hair after transplant is one of the most essential parts of your recovery. Whether you had your surgery in Lahore, Karachi, Multan, or Rawalpindi, following the correct hair transplant washing steps ensures your newly implanted grafts remain safe. If you are looking for a safe hair transplant near me with the lowest price and best postoperative care, Hair Skill Clinic is your ultimate destination. Here is the complete guideline to answer your questions regarding washing hair after a hair transplant!
                 </p>
               </motion.div>
 
               {/* Section 1: Wait for Two Days */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  Wait for Two Days to Wash Your Hair
+                  Wait for Two Days for the First Wash
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  When you wash the newly transplanted area of your scalp immediately after the surgery, it may damage your hair follicles. It is recommended to wash your hair 2 days after your surgery or at least 36 to 48 hours after. We will do your first wash at the Hair Skill Clinic.
+                  When you wash the newly transplanted area of your scalp immediately after the surgery, it may damage your sensitive hair follicles. We recommend waiting to wash your hair at least 36 to 48 hours after your procedure. At Hair Skill Clinic, we usually perform your first wash after a hair transplant professionally to ensure zero damage.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  You can learn <span className="font-bold underline decoration-[#772424]">how to wash your hair from the video on our Youtube channel</span>. If the patient has more bleeding or discharge than usual, we can perform the first wash the next day after the surgery.
+                  You can learn how to wash your head after a hair transplant by watching the detailed tutorial on our YouTube channel. If a patient experiences more bleeding or discharge than usual, our experts can perform the initial head wash after hair transplant the very next day.
                 </p>
-                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  It would be best to wash your head once a day for the first month after the hair transplant. It should be the way we taught you in the clinic or watched on our Youtube channel for the first two weeks. Two weeks after the surgery, you can wash your hair the way you used to do before. After a month, you can wash your hair once in two or three days.
-                </p>
-
-                
               </motion.div>
 
-              {/* Section 2: Apply Lotion/Foam */}
+              {/* Section 2: How Often to Wash */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  Apply Lotion/Foam
+                  How Often to Wash Hair After Hair Transplant
+                </h2>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  Patients frequently ask when they can wash their hair after a hair transplant and how often they should do it. It is advisable to wash your head once a day for the first month after surgery. For the first two weeks, you must follow the exact gentle tapping method we taught you in the clinic or demonstrated on our YouTube channel. 
+                </p>
+                <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                  Two weeks after the surgery, you can slowly transition to washing your hair the way you used to do before. After a month, you can reduce the frequency and wash your hair once every two or three days.
+                </p>
+              </motion.div>
+
+              {/* Section 3: Apply Lotion/Foam */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
+                <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
+                  Apply Lotion and Foam Correctly
                 </h2>
 
                 <div className="flex flex-col gap-4 ml-2">
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      You can use lotion or foam on both donor and recipient areas. Applying lotion or foam promotes your skin cells to renew, hydrate, and soften your scabs. While using lotion or foam, please be gentle and tap gently. Before rinsing it off, wait for at least 20 to 40 minutes.
+                      You can use medical lotion or foam on both the donor and recipient areas. Applying lotion promotes skin cell renewal, hydrates the scalp, and softens post surgery scabs. While using these products, please be extremely gentle and use light tapping motions. Before rinsing, wait at least 20 to 40 minutes.
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      You can apply Panthenol spray, which protects your skin; soothes and cools the skin. You should use Panthenol spray for the first 10 to 14 days. If you run out of it, you can use Bepanthol lotion.
+                      We recommend applying Panthenol spray, which soothes, cools, and protects your healing skin. You should use Panthenol spray for the first 10 to 14 days. If you run out of it, Bepanthol lotion is an excellent alternative. Stop using lotion or foam completely once all the scabs have safely fallen off.
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      Stop using lotion or foam after all the scabs are off.
-                    </p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0" />
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">
-                      Apply antibiotic cream supplied to you only for your donor area for the first 5 to 7 days after the surgery. Do not apply it over your recipient zone! After 5 to 7 days, your donor will be healed.
+                      Apply the supplied antibiotic cream only on your donor area for the first 5 to 7 days after the surgery. Do not apply it over your recipient zone under any circumstances. After 5 to 7 days, your donor area will be fully healed.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section 3: Wash in a Proper Way */}
+              {/* Section 4: Wash in a Proper Way */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   Wash Your Hair in a Proper Way
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  While shampooing your recipient area, you must be careful when touching it. After pouring shampoo over the recipient zone and making it foamy, do the gentle tapping in a vertical direction with your fingertips. Please do not rub and avoid circular movements of the recipient zone.
+                  While shampooing your recipient area, you must exercise extreme caution. After pouring shampoo over the recipient zone and making it foamy in your hands first, do gentle tapping in a vertical direction with your fingertips. Please do not rub and strictly avoid circular movements on the recipient zone.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  To prevent any infection, wash your donor area by rubbing to clean blood and any tissue remnants.
-                </p>
-                <p className="text-black text-base md:text-lg font-medium italic bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                  Hair Washing with Gentle Taps
+                  To prevent any infection and ensure a smooth healing process, wash your donor area by gently rubbing to clean dried blood and any tissue remnants.
                 </p>
               </motion.div>
 
-              {/* Section 4: Advised Shampoos */}
+              {/* Section 5: Advised Shampoos */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-4">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   Apply Advised Shampoos
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Before applying shampoo different from the one, we supplied, please consult your doctor. Your doctor will guide you to pick up a suitable shampoo for your hair. Applying advised shampoo will help you remove the scabs and improve the healing.
+                  Before applying any shampoo different from the one we supplied at Hair Skill Clinic, please consult your doctor. Your physician will guide you to choose a suitable shampoo for your specific scalp condition. Applying the advised shampoo will help you remove scabs safely and improve overall healing.
                 </p>
               </motion.div>
 
-              {/* Section 5: Rinsing */}
+              {/* Section 6: Rinsing */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-4">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  Rinsing
+                  Rinsing Guidelines
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Water should not be cold and should not be hot. It should be warm water with low pressure. Avoid using a shower header to wash your head for the first 14 days after the surgery. Instead, you can use a bowl or switch the shower header to get liquid water with low pressure.
+                  Water temperature is crucial. It should not be cold, and it should not be hot. Always use warm water with very low pressure. Avoid using a direct shower header to wash your head for the first 14 days after the surgery. Instead, you can use a small bowl or switch the shower header to a gentle, low pressure setting.
                 </p>
               </motion.div>
 
-              {/* Section 6: Drying */}
+              {/* Section 7: Drying */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                  Drying
+                  Drying Your Hair Safely
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  The recipient and donor areas should be dried differently. Please dry your recipient (transplanted) site with a paper towel. Gently apply it over the newly transplanted grafts, so it absorbs the water. Do not rub the recipient area.
+                  The recipient and donor areas require completely different drying techniques. Please dry your recipient transplant site with a soft paper towel. Gently apply it over the newly transplanted grafts so it absorbs the water naturally. Do not rub the recipient area at all.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  You can dry your donor area with a regular towel. Hairdryers are not recommended unless you are not using your hairdryer in cool mode. If it is possible, let your hair air dry.
+                  You can dry your donor area with a regular clean towel. Hairdryers are not recommended unless you strictly use the cool air mode. If it is possible, letting your hair air dry naturally is the safest option.
                 </p>
               </motion.div>
 
@@ -230,9 +219,9 @@ export default function HairWashingClient() {
               initial="hidden"
               animate="visible"
               variants={slideInRight}
-              className="w-full lg:w-1/3 lg:sticky lg:top-32"
+              className="w-full lg:w-1/3 lg:sticky lg:top-32 mt-4 lg:mt-0"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
                 <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
                 </h3>
@@ -295,9 +284,9 @@ export default function HairWashingClient() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="washPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="washPrivacy" className="text-xs text-white/80 cursor-pointer">
+                  <div className="flex items-start sm:items-center gap-2 mt-2">
+                    <input type="checkbox" id="washPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer mt-0.5 sm:mt-0 shrink-0" />
+                    <label htmlFor="washPrivacy" className="text-xs text-white/80 cursor-pointer leading-tight">
                       I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
                     </label>
                   </div>

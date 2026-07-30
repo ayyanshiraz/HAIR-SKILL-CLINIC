@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 
-// Path points to '../data/countries' because this file sits inside /src/components
+// Path points to ../data/countries because this file sits inside /src/components
 import { countries, type Country } from "../data/countries";
 
 // --- STRICT ANIMATION Bezier Tuple ---
@@ -52,7 +52,7 @@ export default function GentleCareClient() {
     window.open(whatsappUrl, `_blank`);
   };
 
-  // Defeats Google Chrome's forced white Autofill override
+  // Defeats Google Chrome forced white Autofill override
   const autofillFixStyle = {
     WebkitBoxShadow: `0 0 0px 1000px #772424 inset`,
     WebkitTextFillColor: `#ffffff`
@@ -76,7 +76,6 @@ export default function GentleCareClient() {
             <span>/</span>
             <span className={`text-[#772424]`}>Gentle Care</span>
           </div>
-          {/* Explicitly excepted heading: Changed to text-black */}
           <h1 className={`text-4xl md:text-6xl font-black text-gray-900 tracking-tight`}>
             Hair Skill Gentle Care
           </h1>
@@ -103,58 +102,63 @@ export default function GentleCareClient() {
                   alt={`Hair Skill Clinic Gentle Care Program`} 
                   className={`w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000`} 
                 />
-                
               </motion.div>
 
               {/* Core Introduction */}
               <motion.div initial={`hidden`} animate={`visible`} variants={fadeUp} className={`mb-12`}>
+                <h2 className={`text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tight`}>
+                  Gentle Care Experience
+                </h2>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  Hair Skill Hair Clinic is passionate about patient's ultimate comfort in all stages of your visit. Hair Skill Gentle Care manifests how a patient's ultimate comfort is considered a total hospitality experience.
+                  Hair Skill Clinic is deeply passionate about the ultimate comfort of our patients in all stages of their visit. Hair-skill-gentle-care beautifully manifests how the ultimate comfort of a patient is considered a complete and premium hospitality experience.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-8 font-medium`}>
-                  Your specialized assistants are assigned to you when you first contact Hair Skill Hair Clinic, which means there's always someone with you to support you during the entire process.
+                  When you first contact us to discover the best hair transplant in Lahore, your specialized assistants are assigned to you immediately. This means there is always someone with you to fully support you during the entire process.
                 </p>
                 <p className={`text-black text-lg md:text-xl font-black p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]`}>
-                  Let's have a look at how the touchpoints are carefully designed for your seamless hospitality and operation experience.
+                  Let us have a look at how the touchpoints are carefully designed for your seamless hospitality and operation experience.
                 </p>
               </motion.div>
 
-              {/* Bulleted Touchpoints List */}
+              {/* Pre-Operation Steps */}
               <motion.div 
                 initial={`hidden`} 
                 whileInView={`visible`} 
                 viewport={{ once: true, margin: `-50px` }} 
                 variants={fadeUp}
-                className={`mb-12 flex flex-col gap-4`}
+                className={`mb-14 flex flex-col gap-4`}
               >
+                <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight`}>
+                  Pre-Operation Journey
+                </h3>
                 <div className={`flex items-start gap-3`}>
                   <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
                   <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    Every <span className={`font-bold text-black underline decoration-[#C5A059]`}>hair transplant</span> application is assigned to a case manager; the whole process is executed under the control of the case manager.
+                    Every hair transplant application is assigned to a dedicated case manager. The whole process is flawlessly executed under the control of the case manager.
                   </p>
                 </div>
                 <div className={`flex items-start gap-3`}>
                   <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
                   <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    Your case manager sends Medical Evaluation Survey and collects your information about your needs and expectations, including photos of the patient.
+                    Your case manager sends a medical evaluation survey and collects vital information about your needs and expectations, including photos of the patient.
                   </p>
                 </div>
                 <div className={`flex items-start gap-3`}>
                   <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
                   <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    Your case manager and surgeon overviews needs and expectations; executes pre-planning and prepares an Evaluation Report.
+                    Your case manager and surgeon review your needs and expectations, execute pre-planning, and prepare a detailed evaluation report to ensure you get the best hair transplant procedure.
                   </p>
                 </div>
                 <div className={`flex items-start gap-3`}>
                   <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
                   <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    Your case manager submits the treatment plan to the patient.
+                    Your case manager submits the detailed treatment plan to the patient.
                   </p>
                 </div>
                 <div className={`flex items-start gap-3`}>
                   <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
                   <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    Your case manager assists you through every step you take.
+                    Your case manager assists you warmly through every step you take.
                   </p>
                 </div>
               </motion.div>
@@ -167,40 +171,49 @@ export default function GentleCareClient() {
                 variants={fadeUp}
                 className={`mb-14 flex flex-col gap-6`}
               >
+                <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-2 tracking-tight`}>
+                  The Operation Day
+                </h3>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-black`}>Operation Day:</span> You will be welcomed by your bi-lingual Guest Relations Specialists and she will be your guide throughout the day as you complete each phase of your operation.
+                  <span className={`font-black text-black`}>Arrival and Welcome:</span> You will be warmly welcomed by your bilingual guest relations specialists, and she will be your personal guide throughout the day as you complete each phase of your operation. Whether you travelled for the best hair transplant in Karachi or the best hair transplant in Multan, we make sure you feel right at home.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-black`}>Pre Operation Briefing:</span> Your doctor will be briefing you early in the morning about the procedures you will go through.
+                  <span className={`font-black text-black`}>Pre-Operation Briefing:</span> Your doctor will be briefing you early in the morning about the hair transplant procedure step-by-step and answering common questions like how long a hair transplant procedure takes.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-black`}>True Planning before the operation:</span> Your Hair Line Planning is conducted by our best-in-class Hair Transplant Surgeons.
+                  <span className={`font-black text-black`}>True Planning:</span> Your Hairline Planning is expertly conducted before the operation by our best-in-class Hair Transplant Surgeons.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-black`}>Operation:</span> All operations are performed by medical doctors and medical team.
+                  <span className={`font-black text-black`}>The Operation:</span> All operations are strictly performed by highly qualified medical doctors and our elite medical team, addressing any concerns regarding whether a hair transplant is safe. Yes, it is safe, and we ensure the utmost hygiene.
+                </p>
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                  <span className={`font-black text-black`}>Post-Operation Controls:</span> Final checks are granted by the strict checkout procedures of our doctor before you leave.
                 </p>
               </motion.div>
 
-              {/* Post Operation Bulleted Points */}
+              {/* Post-Operation & Aftercare */}
               <motion.div 
                 initial={`hidden`} 
                 whileInView={`visible`} 
                 viewport={{ once: true, margin: `-50px` }} 
                 variants={fadeUp}
-                className={`mb-14 flex flex-col gap-4`}
+                className={`mb-14 flex flex-col gap-6`}
               >
-                <div className={`flex items-start gap-3`}>
-                  <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    Post Operation controls are granted by our Doctor's final check-out procedures.
-                  </p>
-                </div>
-                <div className={`flex items-start gap-3`}>
-                  <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    After you have your hair transplant operation and check out, you will be assigned to and introduced to our experienced patient experience specialist who will be responsible for your hair growth in the coming 18 months. Patient experience specialists are experts on hair growth observation; work closely with our doctors to ensure a healthy growth
-                  </p>
-                </div>
+                <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-2 tracking-tight`}>
+                  Post-Operation & Aftercare
+                </h3>
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                  After you have your hair transplant operation and check out, you will be assigned to and introduced to our highly experienced patient experience specialist. They will be responsible for closely monitoring your hair growth in the coming eighteen months. Patient experience specialists are leading experts on hair growth observation; they work closely with our doctors to ensure healthy growth. This includes comprehensive guidance on after-fee-fee hair transplant care and FUE hair transplant after-care.
+                </p>
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                  The Hair Skill Gentle Care Program is efficiently managed by the Patient Experience Department under the corporate management hierarchy of Hair Skill Clinic. The satisfaction of our patients is completely guaranteed by the patient-first attitude of Hair Skill Clinic.
+                </p>
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                  At Hair Skill Clinic, we firmly believe that taking a holistic approach to the entire process leads to actual long-term success, which is exactly why we do not only concentrate on the operation day. This holistic point of view, fully supported by applying the postoperative guidelines, secures operation success at a very high rate.
+                </p>
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                  Taking proper care of newly transplanted hair is our mutual responsibility with the patient. From explaining the proper hair transplant washing techniques to demonstrating exactly how to wash hair after transplant, Hair Skill Clinic is always there to support you no matter what in the long run. We make sure everyone knows that hair transplant is safe and permanent.
+                </p>
               </motion.div>
 
               {/* Second Banner Placeholder */}
@@ -213,29 +226,9 @@ export default function GentleCareClient() {
               >
                 <img 
                   src={`/about/5.webp`} 
-                  alt={`Dr. Mehmet Erdogan Checkup`} 
+                  alt={`Hair Skill Clinic Checkup`} 
                   className={`w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000`} 
                 />
-               
-              </motion.div>
-
-              {/* Holistic Approach Paragraphs */}
-              <motion.div 
-                initial={`hidden`} 
-                whileInView={`visible`} 
-                viewport={{ once: true, margin: `-50px` }} 
-                variants={fadeUp}
-                className={`mb-14 flex flex-col gap-6`}
-              >
-                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  Hair Skill Gentle Care Program is managed by the Patient Experience Department under Hair Skill Hair Clinic Corporate management hierarchy. Our Patient's Satisfaction is guaranteed by Hair Skill Hair Clinic's patient-first attitude.
-                </p>
-                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  At Hair Skill Hair Clinic, we believe in taking a holistic approach to the entire process leads to actual long-term success, which is why we do not only concentrate on the operation day. This holistic point of view, supported by applying the post-operative guidelines, secures operation success at a very top rate.
-                </p>
-                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  Taking care of newly transplanted hair is our mutual responsibility with the patient, however, Hair Skill Hair Clinic is there to support you no matter what in the long run.
-                </p>
               </motion.div>
 
               {/* Program People Roster */}
@@ -250,25 +243,25 @@ export default function GentleCareClient() {
                   Get to Know Hair Skill Gentle Care Program People
                 </h3>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-[#772424]`}>Case Manager:</span> Your first-in contact assistant who plans your treatment and solves every issue about your hospitality arrangements.
+                  <span className={`font-black text-[#772424]`}>Case Manager:</span> Your first-in-contact assistant who accurately plans your treatment and resolves every issue about your hospitality arrangements.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-[#772424]`}>Guest Relations Specialist:</span> Your operation day guide who will be supporting you on the ground at the clinic.
+                  <span className={`font-black text-[#772424]`}>Guest Relations Specialist:</span> Your operation day guide who will be constantly supporting you on the ground at the clinic.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-[#772424]`}>Hair Transplant Surgeon:</span> Your hairline designer, operation planner, and performer. (M.D. Doctor)
+                  <span className={`font-black text-[#772424]`}>Hair Transplant Surgeon:</span> Your brilliant hairline designer, operation planner, and medical performer.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-[#772424]`}>Hair Transplant Surgical Assistant:</span> Your operation performer.
+                  <span className={`font-black text-[#772424]`}>Surgical Assistant:</span> Your dedicated operation performer assisting the surgeon.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  <span className={`font-black text-[#772424]`}>Patient Experience Specialist:</span> Your main point of contact for post-operation procedures, follow-up, and secure your satisfaction.
+                  <span className={`font-black text-[#772424]`}>Patient Experience Specialist:</span> Your main point of contact for post-operation procedures, continuous follow-up, and securing your absolute satisfaction.
                 </p>
               </motion.div>
 
             </div>
 
-            {/* RIGHT SIDE: STICKY CONSULTATION FORM (Glides in from right) */}
+            {/* RIGHT SIDE: STICKY CONSULTATION FORM */}
             <motion.div 
               initial={`hidden`}
               animate={`visible`}

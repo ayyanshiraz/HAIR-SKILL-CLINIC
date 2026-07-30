@@ -76,9 +76,8 @@ export default function WhyChooseUsClient() {
             <span>/</span>
             <span className={`text-[#772424]`}>Why To Choose Hair Skill Clinic?</span>
           </div>
-          {/* Explicitly excepted heading: Changed to text-black */}
           <h1 className={`text-4xl md:text-6xl font-black text-gray-900 tracking-tight`}>
-            Why To Choose Hair Skill Clinic?
+            Why Choose a Hair Skill Clinic?
           </h1>
         </div>
       </motion.section>
@@ -114,16 +113,16 @@ export default function WhyChooseUsClient() {
                 className={`mb-14`}
               >
                 <h2 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
-                  Excellence in Hair Transplantation in Pakistan
+                  Excellence in Hair Transplantation:
                 </h2>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  Hair Skill Clinic is a leading hair transplant clinic in Pakistan, providing advanced medical care to patients from all around the world. Our clinic operates under internationally recognized standards, focusing on safety, medical precision, and long-term results.
+                  Hair Skill Clinic is a leading hair transplant clinic in Pakistan, providing advanced medical care to patients from all around the world. Our clinic operates under internationally recognized standards, focusing on safety, medical precision, and long-term results. Whether you are looking for the best hair transplant in Lahore, searching for the best hair transplant in Karachi, or simply typing hair transplant clinic near me, our facility is fully equipped to provide top-tier services. We proudly serve patients from all major cities, including Multan and Islamabad.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
                   Comprehensive evaluations are conducted across all departments, including medical services, nursing care, international patient management, infection control, sustainability policies, and facility safety. These assessments ensure that every stage of the patient journey meets globally accepted healthcare standards.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  As a result of these extensive evaluations, Hair Skill Clinic has been awarded the A-Rated Certification, becoming the first and only hair transplant clinic in the world to receive this level of recognition.
+                  As a result of these extensive evaluations, Hair Skill Clinic has been awarded the A-rated certification, becoming the first and only hair transplant clinic in the world to receive this level of recognition.
                 </p>
               </motion.div>
 
@@ -136,10 +135,10 @@ export default function WhyChooseUsClient() {
                 className={`mb-14`}
               >
                 <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
-                  Patient-Centered Hair Transplant Approach
+                  Patient-Centered Hair Transplant Approach:
                 </h3>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  Every hair transplant procedure at Hair Skill Clinic is planned individually. Each patients hair structure, facial anatomy, donor capacity, and expectations are carefully assessed before treatment.
+                  Every hair transplant procedure at Hair Skill Clinic is planned individually to ensure you receive the best hair transplant procedure possible. Each patients hair structure, facial anatomy, donor capacity, and expectations are carefully assessed before treatment.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-4 font-medium`}>
                   Key principles of the planning process include:
@@ -149,7 +148,7 @@ export default function WhyChooseUsClient() {
                   {[
                     `Accurate donor area evaluation`,
                     `Long-term donor area preservation`,
-                    `Natural hairline design`,
+                    `Natural hair transplant hairline design`,
                     `Balanced and realistic density planning`
                   ].map((item, idx) => (
                     <div key={idx} className={`flex items-start gap-3`}>
@@ -160,7 +159,7 @@ export default function WhyChooseUsClient() {
                 </div>
 
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  This personalized approach ensures natural-looking results that remain sustainable over time.
+                  This personalized approach ensures natural-looking fue hair transplant results that remain sustainable over time.
                 </p>
               </motion.div>
 
@@ -173,10 +172,10 @@ export default function WhyChooseUsClient() {
                 className={`mb-14`}
               >
                 <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
-                  Medical Precision and Advanced Techniques
+                  Medical Precision and Advanced Techniques:
                 </h3>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  Hair transplantation is both a medical and artistic discipline. At Hair Skill Clinic, procedures are performed using scientifically proven techniques and evidence-based planning.
+                  Hair transplantation is both a medical and artistic discipline. At Hair Skill Clinic, procedures are performed using scientifically proven techniques and evidence-based planning, walking you through the hair transplant procedure step by step so you know exactly what to expect.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-4 font-medium`}>
                   Rather than focusing solely on the number of grafts, the clinic prioritizes:
@@ -209,10 +208,10 @@ export default function WhyChooseUsClient() {
                 className={`mb-14`}
               >
                 <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
-                  Commitment to Safety, Ethics, and Sustainability
+                  Commitment to Safety, Ethics, and Sustainability:
                 </h3>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  Patient safety is a core principle at Hair Skill Clinic. All medical procedures follow international healthcare protocols, and medical teams undergo continuous training in emergency response and patient safety.
+                  Patient safety is a core principle at Hair Skill Clinic. If you are ever wondering if a hair transplant is safe, you can rest assured with our team. All medical procedures follow strict international healthcare protocols, and medical teams undergo continuous training in emergency response and patient safety. We ensure that every patient understands that our hair transplant is safe and permanent.
                 </p>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
                   The clinic avoids unrealistic promises and focuses on transparent communication, ethical practice, and medically sound decision-making. This approach builds long-term trust and ensures responsible, patient-centered care.
@@ -227,7 +226,7 @@ export default function WhyChooseUsClient() {
                 variants={fadeUp}
               >
                 <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
-                  A Trusted Destination for Hair Transplant in Pakistan
+                  A Trusted Destination for Hair Transplant in Pakistan:
                 </h3>
                 <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
                   Located in Pakistan, one of the worlds leading medical tourism destinations, Hair Skill Clinic welcomes patients from Europe, the Middle East, and beyond. With international accreditations, experienced medical professionals, and a patient-focused philosophy, the clinic continues to be a trusted name in modern hair transplantation.
@@ -236,7 +235,7 @@ export default function WhyChooseUsClient() {
 
             </div>
 
-            {/* RIGHT SIDE: STICKY CONSULTATION FORM (Glides in from right) */}
+            {/* RIGHT SIDE: STICKY CONSULTATION FORM */}
             <motion.div 
               initial={`hidden`}
               animate={`visible`}
