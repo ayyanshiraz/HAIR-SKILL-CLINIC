@@ -76,7 +76,6 @@ export default function CodeOfEthicsClient() {
             <span>/</span>
             <span className={`text-[#772424]`}>Code of Ethics</span>
           </div>
-          {/* Explicitly excepted heading: Set to text-gray-900 */}
           <h1 className={`text-4xl md:text-6xl font-black text-gray-900 tracking-tight`}>
             Code of Ethics
           </h1>
@@ -105,60 +104,141 @@ export default function CodeOfEthicsClient() {
                 />
               </motion.div>
 
-              {/* Ethics Content Section */}
+              {/* Ethical Approach Section */}
               <motion.div 
                 initial={`hidden`} 
                 whileInView={`visible`} 
                 viewport={{ once: true, margin: `-50px` }} 
                 variants={fadeUp}
+                className={`mb-14`}
               >
-                {/* Changed the color to #772424 here */}
-                <h2 className={`text-2xl md:text-3xl font-black text-[#772424] mb-8 tracking-tight`}>
+                <h2 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
                   Our Ethical Approach at Hair Skill Clinic
                 </h2>
-                
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                  At Hair Skill Clinic, we place honesty, transparency, patient safety, confidentiality, and respect for human rights at the core of everything we do. As a trusted hair transplant clinic in Pakistan, achieving aesthetic excellence is just as important to us as ensuring that our patients feel safe, valued, and supported throughout their entire journey.
+                </p>
+              </motion.div>
+
+              {/* Core Ethical Principles */}
+              <motion.div 
+                initial={`hidden`} 
+                whileInView={`visible`} 
+                viewport={{ once: true, margin: `-50px` }} 
+                variants={fadeUp}
+                className={`mb-14`}
+              >
+                <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
+                  Core Ethical Principles
+                </h3>
+                <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
+                  To maintain our status as a provider of reliable hair restoration services, we strictly adhere to the following principles:
+                </p>
                 <div className={`flex flex-col gap-6`}>
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    At Hair Skill Clinic, we place honesty, transparency, patient safety, confidentiality, and respect for human rights at the core of everything we do. For us, achieving aesthetic excellence is just as important as ensuring that our patients feel safe, valued, and supported throughout their entire journey.
-                  </p>
-
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    We adopt a clear, honest, and transparent tone in all communications, avoiding misleading or exaggerated claims. Patient safety and privacy are paramount in every decision we make. We unconditionally respect our patients right to information, informed consent, and confidentiality.
-                  </p>
-
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    In delivering our services, we are mindful of cultural and religious sensitivities, and we treat every individual with fairness and equality.
-                  </p>
-
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    We strictly safeguard personal and medical data, ensuring that it is only accessible to authorized personnel and protected through robust technical and administrative security measures. Professionalism is part of our institutional culture. We support the continuous development of our staff and uphold a respectful, attentive approach in all interactions.
-                  </p>
-
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    We are committed to principles of equality, safety, and justice in our workplace. We maintain a zero-tolerance policy against harassment, mobbing, and discrimination. All responsibilities and authorities are exercised within an ethical framework; we avoid conflicts of interest and refrain from seeking personal gain. We adhere to defined institutional boundaries in matters of gifts, discounts, or privileges.
-                  </p>
-
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    In line with our principle of political neutrality, we do not allow any political views or activities to influence our operations. Our decisions are based solely on the best interests of the patient and our ethical values.
-                  </p>
-
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    In all interactions, especially with our suppliers, partners, and competitors. We act with transparency, fairness, and integrity. Building open and trust-based communication with our patients and supporting them at every stage of their journey is our highest priority.
-                  </p>
-
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    We also take internal ethical responsibility seriously by providing a system through which all employees can report any ethical violations without hesitation. Confidentiality is a fundamental principle of this process, and all reports are protected against any form of discrimination or retaliation.
-                  </p>
-
-                  <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                    At Hair Skill Clinic, we are committed to doing what is right under all circumstances, upholding our ethical values with determination, and providing our patients with the highest standard of care at all times.
-                  </p>
+                  <div className={`flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-black text-[#772424]`}>Clear and Honest Communication:</span> We adopt a transparent hair transplant process in all communications, avoiding misleading or exaggerated claims.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-black text-[#772424]`}>Uncompromising Patient Safety:</span> Patient safety and privacy are paramount in every decision we make. We unconditionally respect our patients right to information, informed consent, and confidentiality.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-black text-[#772424]`}>Cultural and Religious Respect:</span> In delivering our services, we are mindful of cultural and religious sensitivities, treating every individual with fairness and equality.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-black text-[#772424]`}>Strict Data Protection:</span> We strictly safeguard personal and medical data, ensuring secure medical tourism Pakistan standards. Data is only accessible to authorized personnel and protected through robust technical and administrative security measures.
+                    </p>
+                  </div>
                 </div>
+              </motion.div>
+
+              {/* Professionalism Section */}
+              <motion.div 
+                initial={`hidden`} 
+                whileInView={`visible`} 
+                viewport={{ once: true, margin: `-50px` }} 
+                variants={fadeUp}
+                className={`mb-14`}
+              >
+                <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
+                  Professionalism and Workplace Ethics
+                </h3>
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                  Professionalism is part of our institutional culture. Whether you visit us for a trusted hair transplant in Lahore or a safe hair transplant in Karachi, our medical team upholds a respectful and attentive approach in all interactions. We support the continuous development of our staff and are committed to principles of equality, safety, and justice in our workplace. We maintain a zero tolerance policy against harassment, mobbing, and discrimination.
+                </p>
+              </motion.div>
+
+              {/* Integrity Section */}
+              <motion.div 
+                initial={`hidden`} 
+                whileInView={`visible`} 
+                viewport={{ once: true, margin: `-50px` }} 
+                variants={fadeUp}
+                className={`mb-14`}
+              >
+                <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
+                  Integrity and Accountability
+                </h3>
+                <div className={`flex flex-col gap-4 ml-2`}>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Conflict of Interest:</span> All responsibilities and authorities are exercised within an ethical framework. We avoid conflicts of interest and refrain from seeking personal gain.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Institutional Boundaries:</span> We strictly adhere to defined institutional boundaries in matters of gifts, discounts, or privileges.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Political Neutrality:</span> In line with our principle of political neutrality, we do not allow any political views or activities to influence our operations. Our decisions are based solely on the best interests of the patient.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Fair Dealings:</span> In all interactions, especially with our suppliers, partners, and competitors, we act with absolute transparency, fairness, and integrity.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Internal Responsibility Section */}
+              <motion.div 
+                initial={`hidden`} 
+                whileInView={`visible`} 
+                viewport={{ once: true, margin: `-50px` }} 
+                variants={fadeUp}
+                className={`mb-6`}
+              >
+                <h3 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
+                  Internal Responsibility and Continuous Care
+                </h3>
+                <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
+                  Building open and trust based communication with our patients and supporting them at every stage of their journey is our highest priority. We also take internal ethical responsibility seriously by providing a system through which all employees can report any ethical violations without hesitation. Confidentiality is a fundamental principle of this process, and all reports are protected against any form of discrimination or retaliation.
+                </p>
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium p-6 bg-gray-50 rounded-2xl border-l-4 border-[#C5A059]`}>
+                  At Hair Skill Clinic, we are committed to doing what is right under all circumstances, upholding our ethical values with determination, and providing our patients with the best hair clinic patient care at all times.
+                </p>
               </motion.div>
 
             </div>
 
-            {/* RIGHT SIDE: STICKY CONSULTATION FORM (Glides in from right) */}
+            {/* RIGHT SIDE: STICKY CONSULTATION FORM */}
             <motion.div 
               initial={`hidden`}
               animate={`visible`}
