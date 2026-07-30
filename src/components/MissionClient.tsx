@@ -113,11 +113,40 @@ export default function MissionClient() {
                 className={`mb-14`}
               >
                 <h2 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
-                  Mission
+                  Our Mission at Hair Skill Clinic
                 </h2>
                 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  At Hair Skill Clinic, our mission is to provide our patients with reliable, innovative, and high-quality <span className={`font-bold text-gray-900 underline decoration-[#C5A059]`}>hair transplant</span> solutions. We aim to exceed our patients expectations through personalized approaches, adhering to ethical and professional values. By closely following technological advancements, we apply the most effective treatment methods and continually enhance our teams expertise through ongoing education. Our priority is to offer a safe, comfortable, and transparent service experience with a focus on quality and patient satisfaction. Our goal is to improve our patients quality of life and earn their trust through our services.
+                  At Hair Skill Clinic, our mission is to provide our patients with reliable, innovative, and high-quality hair transplant solutions. We aim to exceed our patients expectations through personalized approaches, adhering strictly to ethical and professional values.
+                </p>
+
+                <p className={`text-black text-base md:text-lg leading-relaxed mb-4 font-medium`}>
+                  To ensure the best outcomes, we focus on:
+                </p>
+
+                <div className={`flex flex-col gap-3 mb-6 ml-2`}>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Advanced Treatments:</span> By closely following technological advancements, we apply the most effective treatment methods available today.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Continuous Education:</span> We continually enhance our teams expertise through ongoing education and training.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Patient-Centric Experience:</span> Our priority is to offer a safe, comfortable, and transparent service experience with an unwavering focus on quality and patient satisfaction.
+                    </p>
+                  </div>
+                </div>
+
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]`}>
+                  Our ultimate goal is to improve our patients quality of life and earn their trust through our dedicated medical services.
                 </p>
               </motion.div>
 
@@ -130,15 +159,46 @@ export default function MissionClient() {
                 className={`mb-12`}
               >
                 <h2 className={`text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight`}>
-                  Vision
+                  Our Vision for the Future
                 </h2>
                 
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
-                  At Hair Skill Clinic, our vision is to become the worlds leading hair transplant clinic. To achieve this, we offer innovative, high-quality healthcare services, guided by the True Philosophy, which places human health and happiness at the core of everything we do.
+                  At Hair Skill Clinic, our vision is to become the worlds leading hair transplant clinic. To achieve this, we offer innovative, high-quality healthcare services, guided by our True Philosophy, which places human health and happiness at the core of everything we do.
                 </p>
 
-                <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
-                  We carefully select experienced, skilled professionals and support their continuous development and motivation. By leveraging the latest technology and innovative methods, we aim to maintain our leadership in the industry. We prioritize the safety of both patients and employees, ensuring a secure and comfortable treatment process. With a commitment to social responsibility, we strive to make a positive impact on society and the environment. Our ultimate goal is to grow globally and be recognized as a trusted health institution worldwide.
+                <p className={`text-black text-base md:text-lg leading-relaxed mb-4 font-medium`}>
+                  Our path to global leadership is built on:
+                </p>
+
+                <div className={`flex flex-col gap-3 mb-6 ml-2`}>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Elite Medical Professionals:</span> We carefully select experienced, skilled professionals and support their continuous development and motivation.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Industry Innovation:</span> By leveraging the latest technology and innovative methods, we aim to maintain our leadership in the industry.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Total Safety:</span> We prioritize the safety of both patients and employees, ensuring a secure and comfortable treatment process.
+                    </p>
+                  </div>
+                  <div className={`flex items-start gap-3`}>
+                    <span className={`w-2 h-2 rounded-full bg-[#772424] mt-2.5 shrink-0`} />
+                    <p className={`text-black text-base md:text-lg leading-relaxed font-medium`}>
+                      <span className={`font-bold`}>Global Impact:</span> With a commitment to social responsibility, we strive to make a positive impact on society and the environment.
+                    </p>
+                  </div>
+                </div>
+
+                <p className={`text-black text-base md:text-lg leading-relaxed font-medium p-6 bg-gray-50 rounded-2xl border-l-4 border-[#C5A059]`}>
+                  Our ultimate goal is to grow globally and be recognized as a trusted health institution worldwide, serving patients from Lahore, Karachi, and across the globe.
                 </p>
               </motion.div>
 
