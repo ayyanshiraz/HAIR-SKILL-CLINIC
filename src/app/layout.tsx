@@ -10,8 +10,24 @@ import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Hair Skill Clinic | Advanced Hair Transplant in Pakistan`,
-  description: `Hair Skill Clinic offers advanced hair restoration procedures with completely natural results.`,
+  title: "Advanced Hair Transplant Clinic in Lahore | Hair Skill",
+  description: "Hair Skill Clinic is Lahore's leading center for advanced hair transplant and non-surgical hair restoration. Experience natural results and expert care.",
+  keywords: [
+    "Hair Transplant Lahore",
+    "Hair Restoration Clinic",
+    "FUE Hair Transplant Lahore",
+    "Hair Systems Lahore",
+    "Hair Skill Clinic"
+  ],
+  metadataBase: new URL("https://www.hairskill.com"),
+  openGraph: {
+    title: "Advanced Hair Transplant Clinic in Lahore | Hair Skill",
+    description: "Hair Skill Clinic is Lahore's leading center for advanced hair transplant and non-surgical hair restoration. Experience natural results and expert care.",
+    url: "https://www.hairskill.com",
+    siteName: "Hair Skill Clinic",
+    locale: "en_PK",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en-PK">
       <head>
         <meta name="google-site-verification" content="dua9CfBmUhUJTblfDmVuVVupQ8cV1ccHtmVnW4BRWiQ" />
       </head>
@@ -28,12 +44,12 @@ export default function RootLayout({
         <Navbar />
         <main>
           <CartProvider>
-          {children}
+            {children}
           </CartProvider>
         </main>
         <Footer />
         <CookieBanner />
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   );

@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
-
-// Exactly 3 levels up: (female -> treatments -> app -> src) then into components
 import FemaleClient from "../../../../components/FemaleClient";
 
 export const metadata: Metadata = {
-  title: "Female Hair Transplant & Part Line Restoration | Hair Skill Clinic Lahore",
-  description: "Restore soft, natural density in Lahore Pakistan. Repair widening part lines, rebuild delicate temporal points, or execute feminine hairline lowering inside accessible PKR package tiers.",
-  keywords: ["Female Hair Transplant Pakistan", "Part Line Restoration Lahore", "DHI Female Hairline Pakistan", "Traction Alopecia Women", "Hair Skill Clinic Lahore", "Unshaven Hair Transplant Women"],
+  title: "Female Hair Transplant in Lahore | Hair Skill Clinic",
+  description: "Restore soft, natural density with a female hair transplant in Lahore. We specialize in part line restoration and hairline lowering at Hair Skill Clinic.",
+  keywords: [
+    "Female Hair Transplant Lahore",
+    "Part Line Restoration Lahore",
+    "Feminine Hairline Lowering",
+    "Unshaven Hair Transplant Women",
+    "Hair Skill Clinic Lahore"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant/treatments/female",
+  },
   openGraph: {
-    title: "Female Hair Restoration | Hair Skill Clinic",
-    description: "Medically proven partial-shave discretion for authentic feminine softness.",
+    title: "Female Hair Transplant in Lahore | Hair Skill Clinic",
+    description: "Restore soft, natural density with a female hair transplant in Lahore. We specialize in part line restoration and hairline lowering at Hair Skill Clinic.",
     url: "https://www.hairskill.com/hair-transplant/treatments/female",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/hair-transplant/21.webp",
         width: 1200,
         height: 630,
-        alt: "Female patient examining pre surgical hairline markings inside mirror at Hair Skill Clinic",
+        alt: "Female patient examining pre-surgical hairline markings for natural restoration at Hair Skill Clinic Lahore",
       },
     ],
   },

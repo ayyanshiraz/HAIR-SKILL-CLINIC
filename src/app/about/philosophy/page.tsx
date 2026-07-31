@@ -1,10 +1,29 @@
 import type { Metadata } from "next";
-// Updated the very end of the path to target "PhilosophyClient" exactly as it is written in your sidebar
 import TruePhilosophyClient from "../../../components/PhilosophyClient";
 
 export const metadata: Metadata = {
-  title: `True Philosophy | Hair Skill Clinic Pakistan`,
-  description: `Hair Skill Clinic has disciplined its way of performing hair transplantation around the TRUE Philosophy: True Planning, True Hairline Design, True Execution, and True Innovation.`,
+  title: "TRUE Philosophy & Hairline Design | Hair Skill Clinic",
+  description: "Discover the TRUE Philosophy at Hair Skill Clinic Lahore. We focus on True Planning, True Hairline Design, Execution, and Innovation for natural results.",
+  keywords: ["TRUE Philosophy", "True Hairline Design", "Hair Skill Clinic Philosophy", "Surgical Execution"],
+  alternates: {
+    canonical: "https://www.hairskill.com/about/philosophy",
+  },
+  openGraph: {
+    title: "TRUE Philosophy & Hairline Design - Hair Skill Clinic",
+    description: "Discover the TRUE Philosophy at Hair Skill Clinic Lahore. We focus on True Planning, True Hairline Design, Execution, and Innovation for natural results.",
+    url: "https://www.hairskill.com/about/philosophy",
+    siteName: "Hair Skill Clinic",
+    images: [
+      {
+        url: "/about/philosophy-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TRUE Philosophy at Hair Skill Clinic",
+      },
+    ],
+    locale: "en_PK",
+    type: "website",
+  },
 };
 
 export default function TruePhilosophyPage() {

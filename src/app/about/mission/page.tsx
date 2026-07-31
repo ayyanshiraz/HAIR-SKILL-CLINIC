@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-// Goes up three levels (mission -> about -> app -> src) to reach the components folder
 import MissionClient from "../../../components/MissionClient";
 
-// --- SEO METADATA (SERVER SIDE) ---
 export const metadata: Metadata = {
-  title: "Mission & Vision | Hair Skill Clinic Pakistan",
-  description: "Read about the mission and vision of Hair Skill Clinic. We provide reliable, innovative, and high-quality hair transplant solutions in Pakistan.",
-  keywords: ["Hair Skill Clinic Mission", "Hair Clinic Vision", "Hair Transplant Pakistan", "High Quality Hair Transplant"],
+  title: "Clinic Mission & Vision | Hair Skill Clinic Lahore",
+  description: "Discover the mission and vision of Hair Skill Clinic in Lahore. Our goal is to improve patient confidence through innovative hair restoration solutions.",
+  keywords: ["Hair Skill Clinic Mission", "Hair Restoration Vision", "Patient Trust Lahore", "Innovative Solutions"],
+  alternates: {
+    canonical: "https://www.hairskill.com/about/mission",
+  },
   openGraph: {
-    title: "Mission & Vision | Hair Skill Clinic",
-    description: "Our goal is to improve our patients quality of life and earn their trust through our world-class hair transplant services.",
-    url: "https://www.hairskill.com//about/mission",
+    title: "Clinic Mission & Vision - Hair Skill Clinic",
+    description: "Discover the mission and vision of Hair Skill Clinic in Lahore. Our goal is to improve patient confidence through innovative hair restoration solutions.",
+    url: "https://www.hairskill.com/about/mission",
     siteName: "Hair Skill Clinic",
     images: [
       {
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
         alt: "Hair Skill Clinic Mission and Vision",
       },
     ],
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
   },
 };

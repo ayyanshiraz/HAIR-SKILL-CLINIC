@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
-
-// Exactly 3 levels up: (body -> techniques -> app -> src) then into components
 import BodyClient from "../../../../components/BodyClient";
 
 export const metadata: Metadata = {
-  title: "Body Hair Transplant (BHT) & Extra Donor Supply | Hair Skill Clinic Lahore",
-  description: "Expand your safe donor pool when scalp reserves are exhausted. Discover advanced Body Hair Transplantation BHT in Lahore Pakistan using beard and chest follicles inside accessible PKR package tiers.",
-  keywords: ["Body Hair Transplant Pakistan", "BHT Surgery Lahore", "Beard Grafts Norwood 6", "Depleted Donor Repair", "Hair Skill Clinic Lahore", "Expand Donor Supply PKR"],
+  title: "Body Hair Transplant in Lahore | BHT | Hair Skill",
+  description: "Depleted scalp donor? Get the best Body Hair Transplant (BHT) in Lahore. We extract beard and chest follicles for maximum density at Hair Skill Clinic.",
+  keywords: [
+    "Body Hair Transplant Lahore",
+    "BHT Surgery Lahore",
+    "Beard to Scalp Transplant",
+    "Chest Hair Transplant Lahore",
+    "Depleted Donor Repair"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant/techniques/body",
+  },
   openGraph: {
-    title: "Body Hair Restoration | Hair Skill Clinic",
-    description: "Medically proven non-scalp follicular extractions for total background density.",
+    title: "Body Hair Transplant in Lahore | BHT | Hair Skill",
+    description: "Depleted scalp donor? Get the best Body Hair Transplant (BHT) in Lahore. We extract beard and chest follicles for maximum density at Hair Skill Clinic.",
     url: "https://www.hairskill.com/hair-transplant/techniques/body",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/home/techniques/5.webp",
         width: 1200,
         height: 630,
-        alt: "Body Hair Transplant BHT and Extra Donor Supply at Hair Skill Clinic Lahore",
+        alt: "Body Hair Transplant and Extraction at Hair Skill Clinic Lahore",
       },
     ],
   },

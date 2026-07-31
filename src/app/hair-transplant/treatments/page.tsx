@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-
-// Exactly 2 levels up from treatments/page.tsx -> (app -> src) then into components
 import TreatmentsHubClient from "../../../components/TreatmentsHubClient";
 
 export const metadata: Metadata = {
-  title: "Advanced Hair Restoration Treatments & Procedures | Hair Skill Clinic Lahore",
-  description: "Explore our complete medical directory of hair restoration procedures in Lahore Pakistan. Discover FUE, DHI, Mesotherapy, PRP infusions, and specialized temporal framing.",
-  keywords: ["Hair Transplant Lahore", "PRP Scalp Therapy Pakistan", "DHI Direct Implantation", "Afro Hair Restoration Pakistan", "Hair Skill Clinic Lahore"],
+  title: "Hair Loss & Restoration Treatments Lahore | Hair Skill",
+  description: "Explore advanced hair restoration treatments in Lahore. From FUE and DHI to PRP therapy, discover the best medical solutions for hair loss at Hair Skill.",
+  keywords: [
+    "Hair Loss Treatments Lahore",
+    "Hair Restoration Lahore",
+    "FUE Hair Transplant Lahore",
+    "PRP Therapy Lahore",
+    "Hair Skill Clinic Treatments"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant/treatments",
+  },
   openGraph: {
-    title: "Treatments & Surgical Procedures | Hair Skill Clinic",
-    description: "Medically proven cellular therapies and surgical extractions for lifelong density.",
-    url: "https://www.hairskill.com//treatments",
+    title: "Hair Loss & Restoration Treatments Lahore | Hair Skill",
+    description: "Explore advanced hair restoration treatments in Lahore. From FUE and DHI to PRP therapy, discover the best medical solutions for hair loss at Hair Skill.",
+    url: "https://www.hairskill.com/hair-transplant/treatments",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
   },
 };

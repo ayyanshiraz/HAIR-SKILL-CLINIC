@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
-
-// Exactly 3 levels up: (needle-free -> techniques -> app -> src) then into components
 import NeedleFreeClient from "../../../../components/NeedleFreeClient";
 
 export const metadata: Metadata = {
-  title: "Needle-Free Anesthesia in FUE Hair Transplant | Hair Skill Clinic Lahore",
-  description: "Overcome needle phobia during your hair restoration. Experience high-pressure jet injection local anesthesia for FUE and Sapphire hair transplantation in Lahore Pakistan.",
-  keywords: ["Needle Free Anesthesia Pakistan", "FUE Hair Transplant Lahore", "Jet Injection Anesthesia", "Sapphire Hair Transplant Pakistan", "Hair Skill Clinic Lahore", "Painless Hair Transplant"],
+  title: "Painless Needle-Free Hair Transplant Lahore | Hair Skill",
+  description: "Overcome needle phobia with a painless hair transplant in Lahore. We use advanced needle-free jet injection anesthesia for maximum comfort at Hair Skill.",
+  keywords: [
+    "Painless Hair Transplant Lahore",
+    "Needle Free Anesthesia Lahore",
+    "Jet Injection Hair Transplant",
+    "Hair Transplant Without Pain",
+    "Hair Skill Clinic Lahore"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant/techniques/needle-free",
+  },
   openGraph: {
-    title: "Needle-Free Anesthesia | Hair Skill Clinic",
-    description: "Medically proven high-pressure jet diffusion to minimize surgical anxiety.",
+    title: "Painless Needle-Free Hair Transplant Lahore | Hair Skill",
+    description: "Overcome needle phobia with a painless hair transplant in Lahore. We use advanced needle-free jet injection anesthesia for maximum comfort at Hair Skill.",
     url: "https://www.hairskill.com/hair-transplant/techniques/needle-free",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/hair-transplant/25.webp",
         width: 1200,
         height: 630,
-        alt: "Surgeon holding advanced high pressure jet injection device used for Needle Free Anesthesia in Lahore",
+        alt: "Advanced needle-free jet injection anesthesia device at Hair Skill Clinic Lahore",
       },
     ],
   },

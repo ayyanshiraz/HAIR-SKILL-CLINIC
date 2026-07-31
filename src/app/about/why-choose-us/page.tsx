@@ -1,10 +1,29 @@
 import type { Metadata } from "next";
-// Three ../ steps climb out of /app/why-choose-us to reach /components
 import WhyChooseUsClient from "../../../components/WhyChooseUsClient";
 
 export const metadata: Metadata = {
-  title: `Why Choose Us | Hair Skill Clinic Pakistan`,
-  description: `Find out why Hair Skill Clinic is the trusted destination for hair transplants in Pakistan. We offer patient-centered approaches, advanced medical precision, and globally recognized excellence.`,
+  title: "Why Choose Hair Skill Clinic? | Medical Excellence Lahore",
+  description: "Discover why patients choose Hair Skill Clinic Lahore. We combine advanced medical precision with a patient-centered approach for globally trusted results.",
+  keywords: ["Why Choose Hair Skill Clinic", "Medical Precision Lahore", "Patient-Centered Care", "Trusted Hair Restoration"],
+  alternates: {
+    canonical: "https://www.hairskill.com/about/why-choose-us",
+  },
+  openGraph: {
+    title: "Why Choose Us - Medical Excellence at Hair Skill Clinic",
+    description: "Discover why patients choose Hair Skill Clinic Lahore. We combine advanced medical precision with a patient-centered approach for globally trusted results.",
+    url: "https://www.hairskill.com/about/why-choose-us",
+    siteName: "Hair Skill Clinic",
+    images: [
+      {
+        url: "/about/why-choose-us-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Why Choose Hair Skill Clinic Lahore for Hair Restoration",
+      },
+    ],
+    locale: "en_PK",
+    type: "website",
+  },
 };
 
 export default function WhyChooseUsPage() {

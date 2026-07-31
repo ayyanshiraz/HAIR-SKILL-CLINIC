@@ -2,24 +2,27 @@ import type { Metadata } from "next";
 import GeneralClient from "../../../components/GeneralClient";
 
 export const metadata: Metadata = {
-  title: "General F.A.Q. | Hair Skill Clinic Pakistan",
-  description: "Find answers to general questions about hair transplant surgery, our clinic, and the procedures we offer at Hair Skill Clinic.",
-  keywords: ["General Hair Transplant FAQ", "Hair Skill Clinic Questions", "Hair Transplant Pakistan", "Hair Surgery General", "Hair Restoration FAQ"],
+  title: "General Hair Transplant FAQs | Hair Skill Clinic Lahore",
+  description: "Have basic questions about hair transplant surgery? Find clear answers regarding clinic procedures, timelines, and hair restoration at Hair Skill Lahore.",
+  keywords: ["General Hair Transplant FAQs", "Hair Surgery Questions Lahore", "Hair Restoration Basics", "Hair Clinic Info Lahore", "Hair Skill General Queries"],
+  alternates: {
+    canonical: "https://www.hairskill.com/faqs/general",
+  },
   openGraph: {
-    title: "General F.A.Q. | Hair Skill Clinic",
-    description: "Get answers to the most common general questions about your hair transplant journey.",
+    title: "General Hair Transplant FAQs - Hair Skill Clinic Lahore",
+    description: "Have basic questions about hair transplant surgery? Find clear answers regarding clinic procedures, timelines, and hair restoration at Hair Skill Lahore.",
     url: "https://www.hairskill.com/faqs/general",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
-    type: "website",
     images: [
       {
-        url: "https://www.hairskill.com/_next/image?url=%2Fhome%2Fowner1.webp&w=1080&q=75",
+        url: "https://www.hairskill.com/home/owner1.webp",
         width: 1200,
         height: 630,
-        alt: "General F.A.Q. | Hair Skill Clinic Pakistan",
+        alt: "General Hair Transplant FAQs at Hair Skill Clinic Lahore",
       },
     ],
+    locale: "en_PK",
+    type: "website",
   },
 };
 

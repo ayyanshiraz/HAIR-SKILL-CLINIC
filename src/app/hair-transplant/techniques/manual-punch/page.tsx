@@ -2,22 +2,31 @@ import type { Metadata } from "next";
 import ManualPunchClient from "../../../../components/ManualPunchClient";
 
 export const metadata: Metadata = {
-  title: "Manual Punch Hair Transplant Pakistan | Hair Skill Clinic Lahore",
-  description: "Experience controlled graft extraction and extreme precision with the manual punch hair transplant technique at Hair Skill Clinic Pakistan.",
-  keywords: ["Manual Punch Hair Transplant", "FUE Manual Extraction Pakistan", "Hair Skill Clinic Lahore", "Precise Hair Graft Harvesting", "Hair Transplant Pakistan"],
+  title: "Manual Punch FUE Hair Transplant Lahore | Hair Skill",
+  description: "Looking for highly precise manual punch FUE in Lahore? We ensure maximum graft survival and controlled extraction with zero motor damage at Hair Skill.",
+  keywords: [
+    "Manual Punch FUE Lahore",
+    "Manual Extraction Hair Transplant",
+    "High Graft Survival Lahore",
+    "Precision FUE Hair Clinic",
+    "Zero Damage Hair Transplant"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant/techniques/manual-punch",
+  },
   openGraph: {
-    title: "Manual Punch Hair Transplant Pakistan | Hair Skill Clinic",
-    description: "A detail-focused approach to donor area harvesting that prioritizes graft survival and extreme precision.",
+    title: "Manual Punch FUE Hair Transplant Lahore | Hair Skill",
+    description: "Looking for highly precise manual punch FUE in Lahore? We ensure maximum graft survival and controlled extraction with zero motor damage at Hair Skill.",
     url: "https://www.hairskill.com/hair-transplant/techniques/manual-punch",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/hair-transplant/treatments/13.webp",
         width: 1200,
         height: 630,
-        alt: "Manual Punch Hair Transplant Pakistan | Hair Skill Clinic Lahore",
+        alt: "Surgeon performing highly precise manual punch FUE extraction at Hair Skill Clinic Lahore",
       },
     ],
   },

@@ -2,22 +2,31 @@ import type { Metadata } from "next";
 import ReviewsClient from "../../components/ReviewsClient";
 
 export const metadata: Metadata = {
-  title: "Top Hair Transplant Reviews in Pakistan | Hair Skill Clinic",
-  description: "Read real patient success stories for FUE unshaven and manual punch hair transplants in Lahore Karachi and Islamabad. Rated 5 stars by thousands.",
-  keywords: ["Top hair transplant reviews Pakistan", "best FUE results Lahore", "Karachi clinic reviews", "Islamabad hair restoration", "patient success stories", "Hair Skill Clinic Reviews"],
+  title: "Best Hair Transplant Reviews in Lahore | Hair Skill",
+  description: "Read real 5-star hair transplant reviews and patient success stories in Lahore. Discover why thousands trust Hair Skill Clinic for their FUE procedures.",
+  keywords: [
+    "Hair Transplant Reviews Lahore",
+    "Best FUE Results Lahore",
+    "Patient Success Stories",
+    "Hair Clinic Reviews",
+    "Hair Skill Clinic Lahore"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/reviews",
+  },
   openGraph: {
-    title: "Top Hair Transplant Reviews in Pakistan | Hair Skill Clinic",
-    description: "Read real stories and experiences from our hair transplant patients across Pakistan.",
+    title: "Best Hair Transplant Reviews in Lahore | Hair Skill",
+    description: "Read real 5-star hair transplant reviews and patient success stories in Lahore. Discover why thousands trust Hair Skill Clinic for their FUE procedures.",
     url: "https://www.hairskill.com/reviews",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/home/owner1.webp",
         width: 1200,
         height: 630,
-        alt: "Lead Hair Transplant Surgeon and Owner of Hair Skill Clinic Lahore",
+        alt: "Lead Hair Transplant Surgeon featuring 5-star patient reviews at Hair Skill Clinic Lahore",
       },
     ],
   },

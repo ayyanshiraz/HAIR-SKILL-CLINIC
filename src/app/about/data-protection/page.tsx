@@ -2,15 +2,18 @@ import type { Metadata } from "next";
 import DataProtectionClient from "../../../components/DataProtectionClient";
 
 export const metadata: Metadata = {
-  title: "Personal Data Protection Policy | Hair Skill Clinic",
-  description: "Read the Hair Skill Clinic Personal Data Protection Policy. We are committed to securing your personal and medical data under the laws of Pakistan.",
+  title: "Data Protection Policy | Hair Skill Clinic Lahore",
+  description: "Review Hair Skill Clinic's Data Protection Policy. We are strictly committed to securing your personal and medical information under the laws of Pakistan.",
   keywords: ["Data Protection Pakistan", "Hair Skill Clinic Privacy", "PDPB Compliance", "Patient Privacy"],
+  alternates: {
+    canonical: "https://www.hairskill.com/about/data-protection",
+  },
   openGraph: {
-    title: "Personal Data Protection Policy",
-    description: "Learn how Hair Skill Clinic protects your data and privacy.",
+    title: "Data Protection Policy - Hair Skill Clinic Pakistan",
+    description: "Review Hair Skill Clinic's Data Protection Policy. We are strictly committed to securing your personal and medical information under the laws of Pakistan.",
     url: "https://www.hairskill.com/about/data-protection",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {

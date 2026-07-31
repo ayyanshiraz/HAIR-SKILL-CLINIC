@@ -2,22 +2,25 @@ import type { Metadata } from "next";
 import BlogsClient from "../../components/BlogsClient";
 
 export const metadata: Metadata = {
-  title: "Medical Blogs & Hair Transplant Articles | Hair Skill Clinic Lahore",
-  description: "Explore world class clinical articles written by Dr Mehmet Erdogan and Dr Gokay Bilgin. Read comprehensive guides on Minoxidil, Seborrheic Dermatitis, shock loss, and post op recovery.",
-  keywords: ["Hair Transplant Blog Pakistan", "Minoxidil Guide Lahore", "Seborrheic Dermatitis Hair Transplant", "Dr Mehmet Erdogan Articles", "Hair Restoration Lahore"],
+  title: "Hair Transplant Blogs & Guides Lahore | Hair Skill Clinic",
+  description: "Looking for the best hair transplant advice in Lahore? Read expert blogs on FUE, DHI, Minoxidil, and hair fall treatments by Hair Skill Clinic Gulberg.",
+  keywords: ["Hair Transplant Blogs Lahore", "FUE Hair Transplant Guides Lahore", "Hair Loss Treatment Gulberg", "Best Hair Specialist in Lahore", "Hair Skill Clinic Blogs"],
+  alternates: {
+    canonical: "https://www.hairskill.com/blogs",
+  },
   openGraph: {
-    title: "Clinical Blogs | Hair Skill Clinic Pakistan",
-    description: "Expert medical insights, surgical comparisons, and post-operative recovery guidelines.",
+    title: "Hair Transplant Blogs & Guides Lahore - Hair Skill Clinic",
+    description: "Looking for the best hair transplant advice in Lahore? Read expert blogs on FUE, DHI, Minoxidil, and hair fall treatments by Hair Skill Clinic Gulberg.",
     url: "https://www.hairskill.com/blogs",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/blogs/1.webp",
         width: 1200,
         height: 630,
-        alt: "Medical Blogs and Hair Transplant Articles at Hair Skill Clinic Lahore",
+        alt: "Hair Transplant Guides and Expert Blogs at Hair Skill Clinic Gulberg Lahore",
       },
     ],
   },

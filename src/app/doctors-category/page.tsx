@@ -3,8 +3,28 @@ import type { Metadata } from "next";
 import DoctorsCategoryClient from "../../components/DoctorsCategoryClient";
 
 export const metadata: Metadata = {
-  title: "Dr Mansoor Ahmad Profile | Hair Skill Clinic",
-  description: "Verified surgical degrees international fellowships and permanent medical credentials of Dr Mansoor Ahmad at Hair Skill Clinic Lahore Pakistan."
+  title: "Dr Mansoor Ahmad | Hair Transplant Surgeon in Lahore",
+  description: "Review the verified medical credentials and 40 years of surgical experience of Dr Mansoor Ahmad, the senior hair transplant surgeon at Hair Skill Lahore.",
+  keywords: ["Dr Mansoor Ahmad Lahore", "Best Hair Transplant Surgeon Lahore", "Hair Specialist Doctor Lahore", "Chief Surgeon Hair Skill"],
+  alternates: {
+    canonical: "https://www.hairskill.com/doctors-category",
+  },
+  openGraph: {
+    title: "Dr Mansoor Ahmad | Hair Transplant Surgeon in Lahore",
+    description: "Review the verified medical credentials and 40 years of surgical experience of Dr Mansoor Ahmad, the senior hair transplant surgeon at Hair Skill Lahore.",
+    url: "https://www.hairskill.com/doctors-category",
+    siteName: "Hair Skill Clinic",
+    images: [
+      {
+        url: "https://www.hairskill.com/dr-mansoor-ahmad.webp",
+        width: 1200,
+        height: 630,
+        alt: "Dr Mansoor Ahmad - Chief Hair Transplant Surgeon at Hair Skill Clinic Lahore",
+      },
+    ],
+    locale: "en_PK",
+    type: "profile",
+  },
 };
 
 export default function DoctorsCategoryPage() {

@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
-
-// Exactly 3 levels up: (mesotherapy -> treatments -> app -> src) then into components
 import MesotherapyClient from "../../../../components/MesotherapyClient";
 
 export const metadata: Metadata = {
-  title: "Hair Treatment Mesotherapy & Scalp Nutrition | Hair Skill Clinic Lahore",
-  description: "Stop active hair shedding and strengthen weak follicles in Lahore Pakistan. Discover custom micro-injection mesotherapy vitamin cocktails inside accessible local PKR package tiers.",
-  keywords: ["Hair Mesotherapy Pakistan", "Scalp Micro Injections Lahore", "Androgenetic Alopecia Care", "PRP and Mesotherapy Lahore", "Hair Skill Clinic Pakistan", "Stop Hair Shedding PKR"],
+  title: "Hair Mesotherapy & Scalp Nutrition in Lahore | Hair Skill",
+  description: "Stop active hair shedding with advanced hair mesotherapy in Lahore. We use custom micro-injections of scalp vitamins to strengthen weak follicles naturally.",
+  keywords: [
+    "Hair Mesotherapy Lahore",
+    "Scalp Micro Injections Lahore",
+    "Stop Hair Shedding Lahore",
+    "Hair Loss Treatment Lahore",
+    "Hair Skill Clinic Lahore"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant/treatments/mesotherapy",
+  },
   openGraph: {
-    title: "Hair Mesotherapy | Hair Skill Clinic",
-    description: "Medically proven mesoderm vitamin infusions for authentic root density.",
+    title: "Hair Mesotherapy & Scalp Nutrition in Lahore | Hair Skill",
+    description: "Stop active hair shedding with advanced hair mesotherapy in Lahore. We use custom micro-injections of scalp vitamins to strengthen weak follicles naturally.",
     url: "https://www.hairskill.com/hair-transplant/treatments/mesotherapy",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/hair-transplant/26.webp",
         width: 1200,
         height: 630,
-        alt: "Doctor placing nutrient rich mesotherapy micro injections directly into patient scalp at Hair Skill Clinic",
+        alt: "Doctor performing nutrient-rich hair mesotherapy micro-injections at Hair Skill Clinic Lahore",
       },
     ],
   },

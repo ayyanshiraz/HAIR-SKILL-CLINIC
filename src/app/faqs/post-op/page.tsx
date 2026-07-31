@@ -2,24 +2,27 @@ import type { Metadata } from "next";
 import PostOpClient from "../../../components/PostOpClient";
 
 export const metadata: Metadata = {
-  title: "Post Operation F.A.Q. | Hair Skill Clinic Pakistan",
-  description: "Find answers to your post-operation questions regarding hair transplant surgery at Hair Skill Clinic. Learn about washing, dietary restrictions, and recovery.",
-  keywords: ["Post Operation Hair Transplant", "Hair Transplant FAQ", "Hair Skill Clinic Post-op", "Hair Transplant Pakistan", "Hair Surgery Recovery"],
+  title: "Post-Op Hair Transplant FAQs | Hair Skill Clinic Lahore",
+  description: "Find expert answers to post-op hair transplant questions in Lahore. Learn essential guidelines about washing, diet, and fast recovery at Hair Skill Clinic.",
+  keywords: ["Post-Op Hair Transplant Lahore", "Hair Surgery Recovery FAQs", "Hair Transplant Aftercare", "Hair Skill Clinic Post-Op", "Washing After Hair Transplant"],
+  alternates: {
+    canonical: "https://www.hairskill.com/faqs/post-op",
+  },
   openGraph: {
-    title: "Post Operation F.A.Q. | Hair Skill Clinic",
-    description: "Learn everything you need to know for a successful recovery after your hair transplant.",
+    title: "Post-Op Hair Transplant FAQs - Hair Skill Clinic Lahore",
+    description: "Find expert answers to post-op hair transplant questions in Lahore. Learn essential guidelines about washing, diet, and fast recovery at Hair Skill Clinic.",
     url: "https://www.hairskill.com/faqs/post-op",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
-    type: "website",
     images: [
       {
         url: "https://www.hairskill.com/home/owner1.webp",
         width: 1200,
         height: 630,
-        alt: "Lead Hair Transplant Surgeon and Owner of Hair Skill Clinic Lahore",
+        alt: "Post-Op Hair Transplant FAQs at Hair Skill Clinic Lahore",
       },
     ],
+    locale: "en_PK",
+    type: "website",
   },
 };
 

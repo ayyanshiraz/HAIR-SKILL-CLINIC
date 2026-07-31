@@ -2,24 +2,27 @@ import type { Metadata } from "next";
 import ContactClient from "../../components/ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Hair Skill Clinic Pakistan",
-  description: "Get in touch with Hair Skill Clinic. Find our contact details, location in Lahore, Pakistan, and book a free consultation for your hair transplant.",
-  keywords: ["Contact Hair Skill Clinic", "Hair Transplant Lahore", "Hair Clinic Pakistan", "Book Consultation", "Hair Skill Contact"],
+  title: "Contact Hair Skill Clinic | Book Consultation in Lahore",
+  description: "Get in touch with Hair Skill Clinic in Lahore to book your hair transplant consultation. Call or visit us today to start your hair restoration journey.",
+  keywords: ["Contact Hair Skill Clinic", "Book Hair Consultation Lahore", "Hair Transplant Clinic Address", "Hair Clinic Phone Number Lahore"],
+  alternates: {
+    canonical: "https://www.hairskill.com/contact",
+  },
   openGraph: {
-    title: "Contact Us | Hair Skill Clinic",
-    description: "Reach out to us to start your hair restoration journey today.",
+    title: "Contact Hair Skill Clinic | Book Consultation in Lahore",
+    description: "Get in touch with Hair Skill Clinic in Lahore to book your hair transplant consultation. Call or visit us today to start your hair restoration journey.",
     url: "https://www.hairskill.com/contact",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
-    type: "website",
     images: [
       {
-        url: "https://www.hairskill.com/_next/image?url=%2Fhome%2Fowner1.webp&w=1080&q=75",
+        url: "https://www.hairskill.com/home/owner1.webp",
         width: 1200,
         height: 630,
-        alt: "Contact Us | Hair Skill Clinic Pakistan",
+        alt: "Contact Hair Skill Clinic in Lahore",
       },
     ],
+    locale: "en_PK",
+    type: "website",
   },
 };
 

@@ -1,4 +1,37 @@
+import type { Metadata } from "next";
 import HairUnitClient from "../../components/HairUnitClient";
+
+export const metadata: Metadata = {
+  title: "Hair Units & Non-Surgical Wigs in Lahore | Hair Skill",
+  description: "Discover premium hair units, non-surgical hair systems, and wig care products in Lahore. Browse our collection of front lace patches, tapes, and solvents.",
+  keywords: [
+    "Hair Units Lahore",
+    "Non Surgical Hair System",
+    "Mens Hair Wigs Lahore",
+    "Hair Patches Lahore",
+    "Wig Tapes and Glues",
+    "Hair Skill Clinic Lahore"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-unit",
+  },
+  openGraph: {
+    title: "Hair Units & Non-Surgical Wigs in Lahore | Hair Skill",
+    description: "Discover premium hair units, non-surgical hair systems, and wig care products in Lahore. Browse our collection of front lace patches, tapes, and solvents.",
+    url: "https://www.hairskill.com/hair-unit",
+    siteName: "Hair Skill Clinic",
+    locale: "en_PK",
+    type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/hairunit/frontlace.webp",
+        width: 1200,
+        height: 630,
+        alt: "Premium Front Lace Hair Unit and Non-Surgical Hair Systems at Hair Skill Clinic Lahore",
+      },
+    ],
+  },
+};
 
 export default function HairUnitPage() {
   const hairUnits = [
@@ -223,7 +256,6 @@ export default function HairUnitPage() {
         `Classic style`
       ],
       image: `/hairunit/usa apolo.webp`
-
     }
   ];
 

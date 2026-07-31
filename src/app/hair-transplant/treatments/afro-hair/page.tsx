@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
-
-// Exactly 3 levels up: (afro-hair -> treatments -> app -> src) then into components
 import AfroHairClient from "../../../../components/AfroHairClient";
 
 export const metadata: Metadata = {
-  title: "Afro Hair Transplant & Coiled Hair Restoration | Hair Skill Clinic Lahore Pakistan",
-  description: "Explore elite doctor-led Afro hair transplantation in Lahore Pakistan. Rebuild density, restore traction alopecia edges, and safeguard native corkscrew curl biology inside accessible PKR tiers.",
-  keywords: ["Afro Hair Transplant Pakistan", "Traction Alopecia Repair Lahore", "Coiled Hair Restoration", "DHI Afro Hairline Pakistan", "Hair Skill Clinic Lahore", "Ethnic Hair Transplant PKR"],
+  title: "Afro & Coiled Hair Transplant in Lahore | Hair Skill",
+  description: "Looking for an expert Afro hair transplant in Lahore? We specialize in restoring coiled hair and repairing traction alopecia safely at Hair Skill Clinic.",
+  keywords: [
+    "Afro Hair Transplant Lahore",
+    "Coiled Hair Restoration Lahore",
+    "Traction Alopecia Repair Lahore",
+    "Ethnic Hair Transplant Lahore",
+    "Afro Hairline Hair Skill"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant/treatments/afro-hair",
+  },
   openGraph: {
-    title: "Afro Hair Restoration | Hair Skill Clinic",
-    description: "Medically proven corkscrew follicle preservation for authentic natural density.",
+    title: "Afro & Coiled Hair Transplant in Lahore | Hair Skill",
+    description: "Looking for an expert Afro hair transplant in Lahore? We specialize in restoring coiled hair and repairing traction alopecia safely at Hair Skill Clinic.",
     url: "https://www.hairskill.com/hair-transplant/treatments/afro-hair",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/hair-transplant/treatments/afro-hair/13.webp",
         width: 1200,
         height: 630,
-        alt: "Afro Hair Transplant and Coiled Hair Restoration at Hair Skill Clinic Lahore Pakistan",
+        alt: "Specialized Afro and coiled hair transplant extraction at Hair Skill Clinic Lahore",
       },
     ],
   },

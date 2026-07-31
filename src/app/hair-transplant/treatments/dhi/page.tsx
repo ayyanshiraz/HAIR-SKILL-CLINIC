@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
-
-// Exactly 3 levels up: (dhi -> techniques -> app -> src) then into components
 import DhiClient from "../../../../components/DhiClient";
 
 export const metadata: Metadata = {
-  title: "DHI Hair Transplant Pakistan & Choi Implanter Pen | Hair Skill Clinic Lahore",
-  description: "Achieve flawless hairline micro-angulation without pre-opened channels. Discover advanced Direct Hair Implantation DHI in Lahore Pakistan using Choi implanter pens inside accessible PKR tiers.",
-  keywords: ["DHI Hair Transplant Pakistan", "Choi Implanter Pen Lahore", "Direct Hair Implantation PKR", "DHI Hairline vs FUE", "Hair Skill Clinic Lahore", "No Incision Hair Transplant"],
+  title: "DHI Hair Transplant in Lahore | Choi Pen | Hair Skill",
+  description: "Achieve a flawless hairline with an advanced DHI hair transplant in Lahore. We use Choi Implanter Pens for direct implantation and natural angle control.",
+  keywords: [
+    "DHI Hair Transplant Lahore",
+    "Direct Hair Implantation Lahore",
+    "Choi Implanter Pen Lahore",
+    "No Incision Hair Transplant",
+    "DHI Hairline Hair Skill"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant/treatments/dhi",
+  },
   openGraph: {
-    title: "DHI Hair Restoration | Hair Skill Clinic",
-    description: "Medically proven Choi implanter precision for natural angle control.",
-    url: "https://www.hairskill.com/hair-transplant/techniques/dhi",
+    title: "DHI Hair Transplant in Lahore | Choi Pen | Hair Skill",
+    description: "Achieve a flawless hairline with an advanced DHI hair transplant in Lahore. We use Choi Implanter Pens for direct implantation and natural angle control.",
+    url: "https://www.hairskill.com/hair-transplant/treatments/dhi",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/home/techniques/3.webp",
         width: 1200,
         height: 630,
-        alt: "Surgeon holding specialized Choi implanter pen used for Direct Hair Implantation DHI at Hair Skill Clinic",
+        alt: "Surgeon holding specialized Choi implanter pen for Direct Hair Implantation DHI at Hair Skill Clinic Lahore",
       },
     ],
   },

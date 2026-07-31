@@ -1,25 +1,32 @@
 import type { Metadata } from "next";
-
-// Exactly 2 levels up: (hair-transplant -> app -> src) then into components
 import HairTransplantClient from "../../components/HairTransplantClient";
 
 export const metadata: Metadata = {
-  title: "Advanced Hair Transplant Treatments & Techniques | Hair Skill Clinic Lahore",
-  description: "Explore our comprehensive range of surgical hair restoration options in Lahore Pakistan including DHI Implantation, Sapphire FUE, Unshaven FUE, and Needle Free Anesthesia.",
-  keywords: ["Hair Transplant Pakistan", "DHI Implantation Lahore", "Sapphire FUE Pakistan", "Unshaven Hair Transplant", "Female Hair Transplant Lahore", "Manuel FUE Pakistan"],
+  title: "Best Hair Transplant in Lahore | FUE & DHI | Hair Skill",
+  description: "Looking for the best hair transplant in Lahore? We offer seamless FUE, DHI, and Unshaven techniques with natural hairlines and maximum graft survival.",
+  keywords: [
+    "Best Hair Transplant Lahore",
+    "FUE Hair Transplant Lahore",
+    "DHI Implantation Lahore",
+    "Hair Restoration Clinic Lahore",
+    "Unshaven Hair Transplant"
+  ],
+  alternates: {
+    canonical: "https://www.hairskill.com/hair-transplant",
+  },
   openGraph: {
-    title: "Hair Transplant Treatments | Hair Skill Clinic",
-    description: "World class surgical precision, dense packing, and completely natural hairline designs.",
+    title: "Best Hair Transplant in Lahore | FUE & DHI | Hair Skill",
+    description: "Looking for the best hair transplant in Lahore? We offer seamless FUE, DHI, and Unshaven techniques with natural hairlines and maximum graft survival.",
     url: "https://www.hairskill.com/hair-transplant",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "https://www.hairskill.com/hair-transplant/treatments/13.webp",
         width: 1200,
         height: 630,
-        alt: "Surgeon performing controlled manual punch extraction at Hair Skill Clinic",
+        alt: "Surgeon performing FUE hair transplant extraction at Hair Skill Clinic Lahore",
       },
     ],
   },

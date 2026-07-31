@@ -2,24 +2,27 @@ import type { Metadata } from "next";
 import FAQClient from "../../components/FAQSClient";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Hair Skill Clinic Pakistan",
-  description: "Find answers to the most frequently asked questions about hair transplant procedures, aftercare, and recovery at Hair Skill Clinic.",
-  keywords: ["Hair Transplant FAQ", "Hair Skill Clinic Questions", "Hair Transplant Pakistan", "Post Op Questions", "Hair Graft Care"],
+  title: "Hair Transplant FAQs & Aftercare Info | Hair Skill Lahore",
+  description: "Got questions about hair transplant procedures or PRP aftercare? Find comprehensive answers and recovery guidelines at Hair Skill Clinic Lahore's FAQ page.",
+  keywords: ["Hair Transplant FAQs Lahore", "PRP Treatment Questions", "Hair Surgery Aftercare FAQs", "Hair Clinic Queries Lahore", "Hair Skill FAQs"],
+  alternates: {
+    canonical: "https://www.hairskill.com/faqs",
+  },
   openGraph: {
-    title: "Frequently Asked Questions | Hair Skill Clinic",
-    description: "Get all the answers you need regarding your hair transplant journey.",
+    title: "Hair Transplant FAQs & Aftercare Info - Hair Skill Lahore",
+    description: "Got questions about hair transplant procedures or PRP aftercare? Find comprehensive answers and recovery guidelines at Hair Skill Clinic Lahore's FAQ page.",
     url: "https://www.hairskill.com/faqs",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
-    type: "website",
     images: [
       {
-        url: "https://www.hairskill.com/_next/image?url=%2Fhome%2Fowner1.webp&w=1080&q=75",
+        url: "https://www.hairskill.com/home/owner1.webp",
         width: 1200,
         height: 630,
-        alt: "Frequently Asked Questions | Hair Skill Clinic Pakistan",
+        alt: "Hair Transplant Frequently Asked Questions at Hair Skill Clinic Lahore",
       },
     ],
+    locale: "en_PK",
+    type: "website",
   },
 };
 

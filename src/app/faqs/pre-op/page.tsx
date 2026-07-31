@@ -2,24 +2,27 @@ import type { Metadata } from "next";
 import PreOpClient from "../../../components/PreOpClient";
 
 export const metadata: Metadata = {
-  title: "Pre Operation F.A.Q. | Hair Skill Clinic Pakistan",
-  description: "Find answers to your pre-operation questions regarding hair transplant surgery at Hair Skill Clinic. Learn about candidacy, preparations, and what to expect.",
-  keywords: ["Pre Operation Hair Transplant", "Hair Transplant FAQ", "Hair Skill Clinic Pre-op", "Hair Transplant Pakistan", "Hair Surgery Preparation"],
+  title: "Pre-Op Hair Transplant FAQs | Hair Skill Clinic Lahore",
+  description: "Find expert answers to pre-op hair transplant questions in Lahore. Learn about candidacy, preparations, and what to expect before surgery at Hair Skill.",
+  keywords: ["Pre-Op Hair Transplant Lahore", "Hair Surgery Preparation FAQs", "Hair Transplant Candidacy", "Hair Skill Clinic Pre-Op", "Before Hair Transplant Guide"],
+  alternates: {
+    canonical: "https://www.hairskill.com/faqs/pre-op",
+  },
   openGraph: {
-    title: "Pre Operation F.A.Q. | Hair Skill Clinic",
-    description: "Learn everything you need to know before your hair transplant procedure.",
+    title: "Pre-Op Hair Transplant FAQs - Hair Skill Clinic Lahore",
+    description: "Find expert answers to pre-op hair transplant questions in Lahore. Learn about candidacy, preparations, and what to expect before surgery at Hair Skill.",
     url: "https://www.hairskill.com/faqs/pre-op",
     siteName: "Hair Skill Clinic",
-    locale: "en_US",
-    type: "website",
     images: [
       {
         url: "https://www.hairskill.com/home/owner1.webp",
         width: 1200,
         height: 630,
-        alt: "Lead Hair Transplant Surgeon and Owner of Hair Skill Clinic Lahore",
+        alt: "Pre-Op Hair Transplant FAQs at Hair Skill Clinic Lahore",
       },
     ],
+    locale: "en_PK",
+    type: "website",
   },
 };
 
