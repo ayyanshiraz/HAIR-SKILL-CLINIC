@@ -28,14 +28,23 @@ export const metadata: Metadata = {
 };
 
 export default function DoctorsCategoryPage() {
+  // Define schema as a Person type and include the complete accurate postal address for the clinic
   const doctorSchema = {
     "@context": "https://schema.org",
-    "@type": "Physician",
+    "@type": "Person",
     name: "Dr Mansoor Ahmad",
     jobTitle: "Senior Chief Surgeon and Medical Director",
     worksFor: {
       "@type": "MedicalClinic",
-      name: "Hair Skill Clinic"
+      name: "Hair Skill Clinic",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Hotel MayFair 1st floor, 50-52, E - III, Commercial Zone, Gulberg III",
+        addressLocality: "Lahore",
+        addressRegion: "Punjab",
+        postalCode: "54660",
+        addressCountry: "PK"
+      }
     },
     alumniOf: [
       {
