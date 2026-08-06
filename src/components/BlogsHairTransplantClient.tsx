@@ -5,7 +5,7 @@ import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 
 import { countries, type Country } from "../data/countries";
-import { blogsDatabase } from "../data/blogs";
+import { blogsDatabase } from "../data";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
 

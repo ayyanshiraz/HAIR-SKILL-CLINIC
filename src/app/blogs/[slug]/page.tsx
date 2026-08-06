@@ -1,13 +1,33 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogsDatabase } from "../../../data/blogs";
+import { blogsDatabase } from "../../../data";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   const generalPosts = blogsDatabase.filter((post) => post.category === `general`);
   return generalPosts.map((post) => ({
     slug: post.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === `general`);
+
+  if (!post) {
+    return { title: "Blog Not Found" };
+  }
+
+  return {
+    title: post.title,
+    description: post.seoDescription,
+    openGraph: {
+      title: post.title,
+      description: post.seoDescription,
+      images: [post.previewImage],
+    },
+  };
 }
 
 export default async function SingleBlogPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -44,9 +64,7 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
         </div>
 
         <div className={`flex flex-col gap-6 text-lg leading-relaxed font-medium text-gray-800`}>
-          {post.content.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+          {post.content}
         </div>
 
         <div className={`mt-16 pt-8 border-t border-gray-200`}>
