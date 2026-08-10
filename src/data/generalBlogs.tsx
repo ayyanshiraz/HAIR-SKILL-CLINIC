@@ -84,7 +84,6 @@ export const generalBlogs: BlogPost[] = [
             </tbody>
           </table>
         </div>
-// blog 1
         <h2 className="text-2xl font-bold mt-1 mb-1">Conclusion: Making the Right Choice for Your Hair</h2>
         <p className="mb-4">When investing in your appearance, it is important to prioritize quality over the lowest price. Proper research helps protect you from permanent cosmetic damage and health risks. By emphasizing transparency and high medical standards, you can ensure that your hair transplant Lahore is a safe and truly life-changing experience.</p>
 
