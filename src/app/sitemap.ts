@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // IMPORTANT: Replace this with your actual live domain URL
   const baseUrl = 'https://www.hairskill.com';
 
   const routes = [
@@ -36,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy-policy',
     '/reviews',
     '/side-effects-after-hair-transplant',
-    // Niche wale sabhi paths mein '/hair-transplant' add kar diya gaya hai
+    
     '/hair-transplant/techniques/body',
     '/hair-transplant/techniques/dhi',
     '/hair-transplant/techniques/manual-fue',
