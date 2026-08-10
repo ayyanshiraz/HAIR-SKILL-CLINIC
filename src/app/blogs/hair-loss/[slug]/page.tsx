@@ -66,7 +66,7 @@ export default async function HairLossSingleBlogPage({ params }: { params: Promi
           <img src={post.previewImage} alt={post.title} className={`w-full h-full object-cover object-top`} />
         </div>
 
-        <div className={`flex flex-col gap-6 text-lg leading-relaxed font-medium text-gray-800`}>
+        <div className={`flex flex-col gap-6 text-lg leading-relaxed font-medium text-gray-800 text-justify`}>
           {post?.content}
         </div>
 
