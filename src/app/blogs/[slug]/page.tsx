@@ -51,7 +51,11 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
       </div>
 
       <article className={`max-w-4xl mx-auto`}>
-        <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6`}>
+
+        <div className={`w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-100 shadow-xl border border-gray-100`}>
+          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-cover object-top`} />
+        </div>
+        <h1 className={`text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4`}>
           {post.title}
         </h1>
         
@@ -59,11 +63,7 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
           <span>Published {post.date}</span>
         </div>
 
-        <div className={`w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-100 shadow-xl border border-gray-100`}>
-          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-cover object-top`} />
-        </div>
-
-        <div className={`flex flex-col gap-6 text-lg leading-relaxed font-medium text-gray-800 text-justify`}>
+        <div className={`text-lg leading-relaxed font-medium text-gray-800 text-justify`}>
           {post.content}
         </div>
 

@@ -54,7 +54,7 @@ export default async function HairLossSingleBlogPage({ params }: { params: Promi
       </div>
 
       <article className={`max-w-4xl mx-auto`}>
-        <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6`}>
+        <h1 className={`text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4`}>
           {post.title}
         </h1>
         
@@ -66,7 +66,7 @@ export default async function HairLossSingleBlogPage({ params }: { params: Promi
           <img src={post.previewImage} alt={post.title} className={`w-full h-full object-cover object-top`} />
         </div>
 
-        <div className={`flex flex-col gap-6 text-lg leading-relaxed font-medium text-gray-800 text-justify`}>
+        <div className={`text-lg leading-relaxed font-medium text-gray-800 text-justify`}>
           {post?.content}
         </div>
 
