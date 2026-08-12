@@ -180,7 +180,7 @@ export const generalBlogs: BlogPost[] = [
   },
   {
     id: 3,
-    slug: "best-hair-transplant-surgeon-lahore",
+    slug: "best-hair-doctor-lahore",
     category: "general",
     title: "How to Choose the Best Hair Transplant Surgeon in Lahore: 7 Checks Patients Should Make",
     date: "August 12, 2026",

@@ -48,7 +48,10 @@ export default function BlogsHairTransplantClient() {
     WebkitTextFillColor: `#ffffff`
   };
 
-  const categoryPosts = blogsDatabase.filter((post) => post.category === `hair-transplant`);
+  // English comment: Filter hair-transplant category and sort by newest date first
+  const categoryPosts = blogsDatabase
+    .filter((post) => post.category === `hair-transplant`)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <div className={`min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24`}>

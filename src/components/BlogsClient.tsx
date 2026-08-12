@@ -48,7 +48,10 @@ export default function BlogClient() {
     WebkitTextFillColor: `#ffffff`
   };
 
-  const generalPosts = blogsDatabase.filter((post) => post.category === `general`);
+  // English comment: Filter general category and sort by newest date first
+  const generalPosts = blogsDatabase
+    .filter((post) => post.category === `general`)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <div className={`min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24`}>

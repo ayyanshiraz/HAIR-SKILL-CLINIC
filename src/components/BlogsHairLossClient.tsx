@@ -48,7 +48,10 @@ export default function BlogHairLossClient() {
     WebkitTextFillColor: `#ffffff`
   };
 
-  const hairLossPosts = blogsDatabase.filter((post) => post.category === `hair-loss`);
+  // English comment: Filter hair-loss category and sort by newest date first
+  const hairLossPosts = blogsDatabase
+    .filter((post) => post.category === `hair-loss`)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <div className={`min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24`}>
