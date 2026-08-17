@@ -328,6 +328,72 @@ export const generalBlogs: BlogPost[] = [
         <p className="mb-2">Start down the path to a long-term solution. Discover the unparalleled surgical standards of our clinic and make an appointment by visiting <a href="/about/why-choose-us" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a>.</p>
       </>
     )
+  },
+  {
+    id: 5,
+    slug: "hair-transplant-preparation-lahore",
+    category: "general",
+    title: "Before a Hair Transplant: The Complete Pre Surgery Checklist for Patients",
+    date: "August 14, 2026",
+    previewImage: "/blogs/general/5.webp",
+    summary: "Read our complete hair transplant preparation Lahore guide. Learn about blood tests, diet, and scalp care to ensure a safe and smooth surgery.",
+    seoDescription: "Get the ultimate hair transplant preparation Lahore checklist. Learn about required blood tests, medications, and scalp care before your procedure.",
+    metaTitle: "Hair Transplant Preparation Lahore: Pre Surgery Checklist",
+    focusKeyword: "hair transplant preparation Lahore",
+    content: (
+      <>
+        <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Why Proper Hair Transplant Preparation in Lahore Matters</h2>
+        <p className="mb-4">The process of getting a great restoration outcome starts long before you get to the clinic. In the weeks preceding your visit, meticulous preparation and a great deal of commitment are necessary for a successful treatment. Many people concentrate only on the procedure itself, but adhering to a rigid schedule in advance is just as important. By doing this, bleeding is greatly reduced and the maximum possible graft survival rate is ensured. How to properly prepare for a <a href="/services/hair-transplant" className="text-[#772424] font-semibold hover:underline">hair transplant Lahore</a> lays the groundwork for a flawless experience and quick recovery. Your body will have the ideal conditions to accept the new follicles and flourish for years to come if you take these first measures diligently.</p>
+
+        <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Pre Surgery Instructions: Medical Clearance and Medication Guidelines</h2>
+        <p className="mb-4">Getting complete medical clearance is crucial before beginning any restoration operation. Certain blood tests are always required by reputable clinics in order to thoroughly verify your general health status and rule out any underlying infections. Strict medication guidelines must be followed after these blood tests are finished in order to prevent any potential consequences. It is highly recommended that patients stop using aspirin, blood thinners, herbal supplements, and certain vitamins for at least one full week before the procedure. Strict adherence to these medication guidelines guarantees a much safer environment for you and the entire medical team and prevents excessive bleeding during the procedure.</p>
+
+        <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Lifestyle Changes: Diet, Smoking, and Alcohol</h2>
+        <p className="mb-4">The overall success of your procedure and the rate at which you recover are directly and significantly impacted by your everyday routines. Smoking drastically reduces blood flow to the scalp, which prolongs the healing process. You must stop drinking alcohol and smoking well in advance of your planned date because blood circulation is essential for the development of new follicles. Additionally, alcohol can thin the blood, which raises the possibility of unintended bleeding. Rather, devote all of your attention to fuelling your body. In the days before your session, eat nutritious, well-balanced meals. Giving your body the right vitamins throughout diet produces the perfect interior environment for robust follicular growth and tissue repair.</p>
+
+        <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Quick Timeline Checklist for Patients</h2>
+        <p className="mb-4">To make sure you are ready for your next session, please go over the pre-surgery instructions listed in this brief timetable.</p>
+
+        <div className="overflow-x-auto my-5 bg-white shadow-md rounded-xl border border-gray-100">
+          <table className="w-full text-left border-collapse text-sm md:text-base">
+            <thead>
+              <tr className="bg-gray-50 border-b border-gray-200">
+                <th className="p-4 font-bold text-gray-800 w-1/3">Timeframe</th>
+                <th className="p-4 font-bold text-gray-800 w-2/3">Action Required from Patient</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                <td className="p-4 font-semibold text-gray-700">1 Week Before</td>
+                <td className="p-4 text-gray-600">Stop blood thinners, vitamins, and smoking. Complete your required laboratory exams.</td>
+              </tr>
+              <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                <td className="p-4 font-semibold text-gray-700">3 Days Before</td>
+                <td className="p-4 text-gray-600">Stop alcohol consumption and avoid heavy exercises or gym sessions.</td>
+              </tr>
+              <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                <td className="p-4 font-semibold text-gray-700">The Night Before</td>
+                <td className="p-4 text-gray-600">Wash hair thoroughly for proper scalp preparation. Get a full night of restful sleep</td>
+              </tr>
+              <tr className="hover:bg-gray-50 transition-colors">
+                <td className="p-4 font-semibold text-gray-700">Surgery Morning</td>
+                <td className="p-4 text-gray-600">Eat a light healthy breakfast and wear a button down shirt. Do not apply hair gel.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Scalp Preparation and Surgery Day Clothing</h2>
+        <p className="mb-4">Personal hygiene and physical comfort are especially important during the last twenty-four hours. To reduce the chance of infection, we strongly advise comprehensive scalp preparation the night before your appointment. To get rid of any debris, oils, or product residue, give your hair a thorough wash with a gentle shampoo. The surgical team has the ideal canvas when the scalp is clean. It is very important to dress appropriately on the morning of your surgery. Wear a button-down shirt at all times. This particular selection guarantees that when you change clothes later in the day, the fabric won't scrape against the freshly inserted grafts. Wearing the right clothes safeguards your long-term investment and keeps the fragile new follicles from being inadvertently dislodged.</p>
+
+        <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Conclusion: Ready for Your Transformation</h2>
+        <p className="mb-4">Starting this medical journey is a really exciting step toward looking younger and restoring your self-confidence. You may be sure that your surgical day will go extremely smoothly and be completely stress-free if you faithfully adhere to this hair transplant preparation Lahore guide. Keep in mind that Dr. Mansoor Ahmad and his committed, knowledgeable staff will help and mentor you during each stage of this life-changing procedure.</p>
+
+        <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Contact Us for Your Pre Surgery Questions</h3>
+        <p className="mb-2">Do not hesitate to contact our staff if you need more information or if you have any questions about these instructions. We are always available to assist you in feeling fully at ease and ready.</p>
+        <p className="mb-2">To start the process of getting your new look, please visit our website at <a href="/about/why-choose-us" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a> to schedule your consultation.</p>
+      </>
+    )
   }
   
 ];
