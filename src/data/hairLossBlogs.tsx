@@ -61,7 +61,7 @@ export const hairLossBlogs: BlogPost[] = [
                 <td className="p-4 font-semibold text-gray-700">Months 9 to 12</td>
                 <td className="p-4 text-gray-600">Full density achieved. Hair thickens and matures.</td>
               </tr>
-            </tbody> //blo
+            </tbody> 
           </table>
         </div> 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Conclusion: Patience Brings the Best Results</h2>
