@@ -70,7 +70,7 @@ export const hairLossBlogs: BlogPost[] = [
         <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Visit Our Gulberg Clinic for Post Op Support</h3>
         <p className="mb-2">At every step of your change, we are here to support you. Please get in touch with us and stop by our hair clinic in Gulberg for a professional assessment if you have any queries or worries while you are recuperating.</p>
         <p className="mb-2">To make sure your scalp gets the finest treatment possible, check out our comprehensive aftercare advice at <a href="/faqs" className="text-[#772424] font-semibold hover:underline">Post Op FAQs</a>.</p>
-      </>
+        </>
     )
   }
 ];
