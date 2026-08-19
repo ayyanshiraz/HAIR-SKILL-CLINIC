@@ -61,10 +61,9 @@ export const hairLossBlogs: BlogPost[] = [
                 <td className="p-4 font-semibold text-gray-700">Months 9 to 12</td>
                 <td className="p-4 text-gray-600">Full density achieved. Hair thickens and matures.</td>
               </tr>
-            </tbody>
+            </tbody> //blo
           </table>
-        </div>
-
+        </div> 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Conclusion: Patience Brings the Best Results</h2>
         <p className="mb-4">Time commitment and rigorous devotion to expert medical recommendations are necessary for a very successful hair transplant recovery Lahore. Your appearance is drastically changed over the course of a year, but the secret to achieving those amazing, long-lasting effects is patience. Every time someone searches online for a trustworthy hair transplant near me, they eventually need a medical facility that provides constant observation and steadfast support from the initial consultation until the final reveal.</p>
 
