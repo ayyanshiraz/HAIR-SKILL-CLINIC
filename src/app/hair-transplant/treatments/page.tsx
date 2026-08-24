@@ -21,6 +21,15 @@ export const metadata: Metadata = {
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
     type: "website",
+    // Added the missing images array with an absolute URL to fix the Ahrefs Open Graph error
+    images: [
+      {
+        url: "https://www.hairskill.com/blogs/general/1.webp", // Update this link to your actual treatment banner image
+        width: 1200,
+        height: 630,
+        alt: "Hair Loss and Restoration Treatments in Lahore",
+      },
+    ],
   },
 };
 
