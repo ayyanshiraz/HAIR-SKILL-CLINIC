@@ -1,5 +1,4 @@
 import { MetadataRoute } from "next";
-
 import { blogsDatabase } from "../data"; 
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blogs",
     "/blogs/hair-loss",
     "/blogs/hair-transplant",
-    "/blogs/general",
     "/cart",
     "/checkout",
     "/contact",
@@ -59,7 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/hair-transplant/treatments/widows-peak"
   ];
 
-  // Map all static routes for the sitemap
   const sitemapRoutes = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -67,14 +64,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "" ? 1 : 0.8,
   }));
 
-  // Dynamically map all blogs from the database
-  const blogRoutes = blogsDatabase.map((post) => ({
-    url: `${baseUrl}/blogs/${post.category}/${post.slug}`,
-    lastModified: new Date(post.date || new Date()),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  const blogRoutes = blogsDatabase.map((post) => {
+    const routePath = post.category === "general" 
+      ? `/blogs/${post.slug}` 
+      : `/blogs/${post.category}/${post.slug}`;
 
-  // Combine static and dynamic routes
+    return {
+      url: `${baseUrl}${routePath}`,
+      lastModified: new Date(post.date || new Date()),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    };
+  });
+
   return [...sitemapRoutes, ...blogRoutes];
 }
