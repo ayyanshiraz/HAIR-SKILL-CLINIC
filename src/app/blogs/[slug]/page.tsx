@@ -20,10 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: post.title,
+    // Replaced title with metaTitle for correct SEO and browser tab display
+    title: post.metaTitle,
     description: post.seoDescription,
+    // Added focusKeyword for better search engine optimization
+    keywords: post.focusKeyword,
     openGraph: {
-      title: post.title,
+      // Replaced title with metaTitle for social media sharing cards
+      title: post.metaTitle,
       description: post.seoDescription,
       images: [post.previewImage],
     },
