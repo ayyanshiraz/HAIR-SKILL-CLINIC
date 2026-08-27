@@ -360,8 +360,8 @@ export const hairLossBlogs: BlogPost[] = [
         <p className="mb-4">A professional assessment is essential if changing to filtered water, eating a balanced diet, and controlling mental stress do not lessen shedding. A clinical examination establishes if thinning is a transient condition or the beginning of progressive pattern baldness. You can salvage weak follicles before they entirely cease producing hair by looking for a certified hair fall treatment near me as soon as possible.</p>
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Advanced Hair Restoration at Hair Skill Clinic</h2>
-        <p className="mb-3">Diagnostic testing at Hair Skill Clinic identify the precise causes of your hair thinning. Our experts offer meso-infusions, sophisticated <a href="/services/prp-therapy" className="text-[#772424] font-semibold hover:underline">platelet-rich plasma therapy</a>, and medical treatments intended to promote natural regrowth.</p>
-        <p className="mb-3">Visit our cutting-edge hair restoration clinic in Gulberg 3 if you are prepared to address the root causes of hair fall in Lahore. Our skilled staff will create a restoration plan just for you, whether you require preventive therapy or the <a href="/services/hair-transplant" className="text-[#772424] font-semibold hover:underline">best hair transplant in Lahore</a>.</p>
+        <p className="mb-3">Diagnostic testing at Hair Skill Clinic identify the precise causes of your hair thinning. Our experts offer meso-infusions, sophisticated <a href="/hair-transplant/treatments/prp-hair-treatment" className="text-[#772424] font-semibold hover:underline">platelet-rich plasma therapy</a>, and medical treatments intended to promote natural regrowth.</p>
+        <p className="mb-3">Visit our cutting-edge hair restoration clinic in Gulberg 3 if you are prepared to address the root causes of hair fall in Lahore. Our skilled staff will create a restoration plan just for you, whether you require preventive therapy or the <a href="/hair-transplant" className="text-[#772424] font-semibold hover:underline">best hair transplant in Lahore</a>.</p>
       </>
     )
   }
