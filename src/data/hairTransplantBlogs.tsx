@@ -129,7 +129,7 @@ export const hairTransplantBlogs: BlogPost[] = [
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Advanced Hair Restoration at Hair Skill Clinic</h2>
         <p className="mb-3">Advanced medical therapies become vital when simple lifestyle changes and better diets are unable to stop the shedding. Early action is your best defense if you are actively looking for a trustworthy hair loss treatment near you.</p>
-        <p className="mb-3">Explore extremely effective options by visiting our state-of-the-art facility in Gulberg 3. Our skilled medical staff offers customized solutions to restore your natural density and totally rebuild your confidence, from preventative <a href="/services/prp-therapy" className="text-[#772424] font-semibold hover:underline">PRP hair treatment in Gulberg 3</a> to the full range of services of the <a href="/services/hair-transplant" className="text-[#772424] font-semibold hover:underline">top hair restoration clinic in Lahore</a>.</p>
+        <p className="mb-3">Explore extremely effective options by visiting our state-of-the-art facility in Gulberg 3. Our skilled medical staff offers customized solutions to restore your natural density and totally rebuild your confidence, from preventative <a href="/hair-transplant/treatments/prp-hair-treatment" className="text-[#772424] font-semibold hover:underline">PRP hair treatment in Gulberg 3</a> to the full range of services of the <a href="/hair-transplant/treatments" className="text-[#772424] font-semibold hover:underline">top hair restoration clinic in Lahore</a>.</p>
       </>
     )
   },
