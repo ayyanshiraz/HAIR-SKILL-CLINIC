@@ -214,7 +214,7 @@ export const hairTransplantBlogs: BlogPost[] = [
     slug: "dhi-hair-transplant-lahore-procedure-benefits",
     category: "hair-transplant",
     title: "What is a DHI Hair Transplant? Procedure Steps and Benefits",
-    date: "August 24, 2026",
+    date: "Sep 01, 2026",
     previewImage: "/blogs/hairtransplant/4.webp",
     summary: "Discover Hair Skill Clinic's DHI hair transplant in Lahore. Learn Choi implanter pen steps for maximum graft survival and natural density without incisions.",
     seoDescription: "Discover Hair Skill Clinic's DHI hair transplant in Lahore. Learn Choi implanter pen steps for maximum graft survival and natural density without incisions.",
