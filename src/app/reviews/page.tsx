@@ -58,6 +58,8 @@ export default function ReviewsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      
+      {/* Renders the main UI components */}
       <ReviewsClient />
     </>
   );
