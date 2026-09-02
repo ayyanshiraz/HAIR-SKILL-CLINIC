@@ -281,7 +281,7 @@ export const hairTransplantBlogs: BlogPost[] = [
     slug: "dhi-hair-transplant-cost-in-pakistan",
     category: "hair-transplant",
     title: "DHI Hair Transplant Cost in Pakistan: Complete Pricing Breakdown (2026)",
-    date: "August 25, 2026",
+    date: "Sep 02, 2026",
     previewImage: "/blogs/hairtransplant/5.webp",
     summary: "Discover the exact DHI hair transplant cost in Pakistan. Review per-graft pricing at Hair Skill Clinic in Lahore to plan your permanent hair restoration.",
     seoDescription: "Discover the exact DHI hair transplant cost in Pakistan. Review per-graft pricing at Hair Skill Clinic in Lahore to plan your permanent hair restoration.",
