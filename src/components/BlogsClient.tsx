@@ -109,11 +109,12 @@ export default function BlogClient() {
                   className={`bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group md:hover:border-[#772424] active:border-[#772424] md:hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg`}
                 >
                   <Link href={`/blogs/${post.slug}`} className={`flex flex-col flex-1 h-full block cursor-pointer`}>
-                    <div className={`w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0`}>
+                    {/* Updated image container to prevent cropping */}
+                    <div className={`w-full aspect-[16/10] overflow-hidden relative bg-gray-50 shrink-0 flex items-center justify-center`}>
                       <img 
                         src={post.previewImage} 
                         alt={post.title} 
-                        className={`w-full h-full object-cover md:group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top`} 
+                        className={`w-full h-full object-contain md:group-hover:scale-105 group-active:scale-105 transition-transform duration-700`} 
                       />
                       <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300`} />
                     </div>
