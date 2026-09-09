@@ -72,7 +72,7 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
       <article className={`max-w-4xl mx-auto`}>
 
         <div className={`w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-100 shadow-xl border border-gray-100`}>
-          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-cover object-top`} />
+          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-contain object-top`} />
         </div>
         <h1 className={`text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4`}>
           {post.title}

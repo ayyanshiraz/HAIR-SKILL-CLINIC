@@ -78,7 +78,7 @@ export default async function HairLossSingleBlogPage({ params }: { params: Promi
         </div>
 
         <div className={`w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-100 shadow-xl border border-gray-100`}>
-          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-cover object-top`} />
+          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-contain object-top`} />
         </div>
 
         <div className={`text-lg leading-relaxed font-medium text-gray-800 text-justify`}>
