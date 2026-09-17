@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import UnshavenTransplantClient from "../../../../components/UnshavenTransplantClient";
+import dynamic from "next/dynamic";
+
+const UnshavenTransplantClient = dynamic(() => import("../../../../components/UnshavenTransplantClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Unshaven Hair Transplant in Lahore | Hair Skill Clinic",

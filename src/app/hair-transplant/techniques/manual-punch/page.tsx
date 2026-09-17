@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ManualPunchClient from "../../../../components/ManualPunchClient";
+import dynamic from "next/dynamic";
+
+const ManualPunchClient = dynamic(() => import("../../../../components/ManualPunchClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Manual Punch FUE Hair Transplant Lahore | Hair Skill",
