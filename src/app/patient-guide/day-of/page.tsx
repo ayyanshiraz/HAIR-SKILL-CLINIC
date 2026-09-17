@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import DayOfProcedureClient from "../../../components/DayOfProcedureClient";
+import dynamic from "next/dynamic";
+
+const DayOfProcedureClient = dynamic(() => import("../../../components/DayOfProcedureClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Surgery Day Guide & Itinerary in Lahore | Hair Skill",

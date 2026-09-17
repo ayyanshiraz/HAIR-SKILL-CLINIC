@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import HairWashingClient from "../../../components/HairWashingClient";
+import dynamic from "next/dynamic";
+
+const HairWashingClient = dynamic(() => import("../../../components/HairWashingClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Post-Op Hair Washing Guidelines Lahore | Hair Skill",
