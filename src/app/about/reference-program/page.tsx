@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import ReferenceProgramClient from "../../../components/ReferenceProgramClient";
+import dynamic from "next/dynamic";
 
+const ReferenceProgramClient = dynamic(() => import("../../../components/ReferenceProgramClient"), { ssr: false });
 export const metadata: Metadata = {
   title: "Reference Program & Rewards | Hair Skill Clinic Lahore",
   description: "Join the Hair Skill Gentle Club Reference Program. Refer a friend for their hair restoration journey in Lahore and both of you earn a 20% discount reward.",

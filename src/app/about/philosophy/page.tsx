@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import TruePhilosophyClient from "../../../components/PhilosophyClient";
+import dynamic from "next/dynamic";
+
+const TruePhilosophyClient = dynamic(() => import("../../../components/PhilosophyClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "TRUE Philosophy & Hairline Design | Hair Skill Clinic",
