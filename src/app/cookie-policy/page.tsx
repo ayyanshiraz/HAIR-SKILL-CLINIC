@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const CookiePolicyClient = dynamic(() => import("../../components/CookiePolicyClient"), { ssr: false });
+const CookiePolicyClient = dynamic(() => import("../../components/CookiePolicyClient"));
 
 export const metadata: Metadata = {
   title: "Cookie Policy & Tracking Info | Hair Skill Clinic Lahore",

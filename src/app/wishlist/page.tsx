@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const WishlistClient = dynamic(() => import("../../components/WishlistClient"), { ssr: false });
+const WishlistClient = dynamic(() => import("../../components/WishlistClient"));
 
 export const metadata: Metadata = {
   title: "Saved Hair Systems & Products Wishlist | Hair Skill",

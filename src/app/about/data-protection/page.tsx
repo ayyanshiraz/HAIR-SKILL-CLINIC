@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const DataProtectionClient = dynamic(() => import("../../../components/DataProtectionClient"), { ssr: false });
+const DataProtectionClient = dynamic(() => import("../../../components/DataProtectionClient"));
 
 export const metadata: Metadata = {
   title: "Data Protection Policy | Hair Skill Clinic Lahore",

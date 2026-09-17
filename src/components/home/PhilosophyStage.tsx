@@ -45,7 +45,7 @@ export default function PhilosophyStage() {
             Philosophy
           </span>
           <h2 className={`text-4xl md:text-5xl lg:text-[56px] font-extrabold text-[#772424] tracking-tight mb-6`}>
-            Hair Skill True Philosophy
+            True Philosophy
           </h2>
           <p className={`text-black max-w-3xl text-lg leading-relaxed`}>
             As a leading hair transplant clinic in Lahore, we understand that hair restoration is a deeply personal journey. We have built our TRUE Philosophy to make this life changing decision as smooth, transparent, and comfortable for you as possible.

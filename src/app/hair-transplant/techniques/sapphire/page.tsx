@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const SapphireClient = dynamic(() => import("../../../../components/SapphireClient"), { ssr: false });
+const SapphireClient = dynamic(() => import("../../../../components/SapphireClient"));
 
 export const metadata: Metadata = {
   title: "Advanced Sapphire FUE Hair Transplant Lahore | Hair Skill",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const OzoneClient = dynamic(() => import("../../../../components/OzoneClient"), { ssr: false });
+const OzoneClient = dynamic(() => import("../../../../components/OzoneClient"));
 
 export const metadata: Metadata = {
   title: "Ozone Hair Therapy & Scalp Detox in Lahore | Hair Skill",

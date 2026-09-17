@@ -28,7 +28,7 @@ export default function WhyChooseStage() {
           className={`text-center mb-16`}
         >
           <h2 className={`text-4xl md:text-5xl lg:text-7xl font-black text-[#1a202c] tracking-tight relative inline-flex flex-col items-center`}>
-            <span>Why Choose <span className={`text-[#772424]`}>Hair Skill Clinic?</span></span>
+            <span>Why Choose <span className={`text-[#772424]`}>Us?</span></span>
             <motion.div 
               initial={{ width: 0 }}
               whileInView={{ width: `100%` }}

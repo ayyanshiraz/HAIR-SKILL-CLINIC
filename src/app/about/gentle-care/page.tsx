@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const GentleCareClient = dynamic(() => import("../../../components/GentleCareClient"), { ssr: false });
+const GentleCareClient = dynamic(() => import("../../../components/GentleCareClient"));
 
 export const metadata: Metadata = {
   title: "Gentle Care Program | Hair Skill Clinic Lahore",
