@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import DhiClient from "../../../../components/DhiClient";
+import dynamic from "next/dynamic";
+
+const DhiClient = dynamic(() => import("../../../../components/DhiClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "DHI Hair Transplant in Lahore | Choi Pen | Hair Skill",

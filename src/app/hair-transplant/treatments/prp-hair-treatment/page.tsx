@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import PrpClient from "../../../../components/PrpClient";
+import dynamic from "next/dynamic";
+
+const PrpClient = dynamic(() => import("../../../../components/PrpClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "PRP Hair Treatment & Therapy in Lahore | Hair Skill",

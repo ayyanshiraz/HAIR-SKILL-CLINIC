@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import MesotherapyClient from "../../../../components/MesotherapyClient";
+import dynamic from "next/dynamic";
+
+const MesotherapyClient = dynamic(() => import("../../../../components/MesotherapyClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Hair Mesotherapy & Scalp Nutrition in Lahore | Hair Skill",

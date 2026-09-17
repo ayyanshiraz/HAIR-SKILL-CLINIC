@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ManuelFueClient from "../../../../components/ManualFueClient";
+import dynamic from "next/dynamic";
+
+const ManuelFueClient = dynamic(() => import("../../../../components/ManualFueClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Manual FUE Hair Transplant in Lahore | Hair Skill",
