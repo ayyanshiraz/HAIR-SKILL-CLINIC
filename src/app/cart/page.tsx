@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import CartClient from "../../components/CartClient";
+import dynamic from "next/dynamic";
+
+const CartClient = dynamic(() => import("../../components/CartClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Treatment Cart & Secure Booking | Hair Skill Clinic Lahore",

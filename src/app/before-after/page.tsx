@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import BeforeAfterClient from "../../components/BeforeAfterClient";
+import dynamic from "next/dynamic";
+
+const BeforeAfterClient = dynamic(() => import("../../components/BeforeAfterClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Before & After Hair Transplant Results | Hair Skill Clinic Lahore",
