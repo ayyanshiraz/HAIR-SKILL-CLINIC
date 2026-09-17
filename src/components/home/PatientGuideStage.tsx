@@ -15,7 +15,7 @@ export default function PatientGuideStage() {
       ringColor: `border-[#4A0E0E]`,
       icon: `/home/guide/1.webp`,
       position: `bottom`,
-      description: `Understanding what to consider before having a hair transplant procedure is a highly important question in the minds of many candidates. For individuals who have not had this specific medical experience before, the unknown may cause some anxiety, which is completely natural. As a top hair transplant clinic in Lahore, we have prepared a fully comprehensive and detailed patient guide to ensure you feel perfectly safe. Being fully informed about all clinical processes allows you to comfortably and consciously prepare for your successful operation day.`
+      description: `Feeling a little nervous before your procedure? That is completely normal! We have put together a simple, step by step guide so you know exactly what to expect. From your first consultation to your post op care, we are with you every step of the way.`
     },
     {
       id: 2,
