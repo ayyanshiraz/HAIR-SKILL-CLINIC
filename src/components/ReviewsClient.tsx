@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
+import Script from "next/script";
 import { countries, type Country } from "../data/countries";
 
 // --- STRICT ANIMATION TUPLE ---
@@ -34,23 +35,6 @@ const slideInRight: Variants = {
 };
 
 export default function ReviewsClient() {
-  // --- WIDGET REFERENCE ---
-  const widgetRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Inject script only once using a unique ID to prevent footer duplication
-    const scriptId = "trustindex-script-tag";
-    
-    if (widgetRef.current && !document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "https://cdn.trustindex.io/loader.js?cdfb11f80722457ffb962d7efeb";
-      script.async = true;
-      script.defer = true;
-      widgetRef.current.appendChild(script);
-    }
-  }, []);
-
   // --- FORM STATES ---
   const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
   const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
@@ -77,6 +61,9 @@ export default function ReviewsClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
+      {/* Elfsight Script Injected Securely via Next.js Script */}
+      <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
+
       {/* --- PAGE HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
@@ -131,8 +118,10 @@ export default function ReviewsClient() {
                 </p>
               </motion.div>
 
-              {/* Trustindex Live Google Reviews Widget - LOCKED POSITION */}
-              <div ref={widgetRef} className="w-full mt-2 min-h-[500px]"></div>
+              {/* Elfsight Live Google Reviews Widget Container */}
+              <div className="w-full mt-2 min-h-[500px]">
+                <div className="elfsight-app-95daa7bb-153e-44ba-a166-46c5244ebf09" data-elfsight-app-lazy></div>
+              </div>
 
             </div>
 
