@@ -113,14 +113,14 @@ export default function Navbar() {
                   </Link>
                   <div className={`absolute left-full top-0 hidden group-hover/treatments:block w-72 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100 max-h-[60vh] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}>
                     {[
-                      { name: `Manual Fue Hair Transplant`, path: `/hair-transplant/treatments/manual-fue` },
+                      { name: `Manual FUE`, path: `/hair-transplant/treatments/manual-fue` },
                       { name: `DHI Hair Transplant`, path: `/hair-transplant/treatments/dhi` },
                        { name: `FUE By Moterize Method`, path: `/hair-transplant/treatments/fue-by-moterize` },
                         { name: `Chinese Method`, path: `/hair-transplant/treatments/chinese-hair-transplant` },
                          { name: `FUT Hair Trasnplant`, path: `/hair-transplant/treatments/fut` },
                       { name: `Beard Transplant`, path: `/hair-transplant/treatments/beard-transplant` },
-                      { name: `Female Hair Transplant`, path: `/hair-transplant/treatments/female` },
-                      { name: `Afro Hair Transplant`, path: `/hair-transplant/treatments/afro-hair` },
+                      { name: `Female FUE`, path: `/hair-transplant/treatments/female` },
+                      { name: `Afro Restoration`, path: `/hair-transplant/treatments/afro-hair` },
                       { name: `Sideburn Transplantation`, path: `/hair-transplant/treatments/sideburn` },
                       { name: `Mesotherapy`, path: `/hair-transplant/treatments/mesotherapy` },
                       { name: `Ozone Hair Therapy`, path: `/hair-transplant/treatments/ozone-hair-therapy` },
@@ -146,12 +146,12 @@ export default function Navbar() {
                   </Link>
                   <div className={`absolute left-full top-0 hidden group-hover/techniques:block w-72 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
                     {[
-                      { name: `Sapphire Hair Transplant`, path: `/hair-transplant/techniques/sapphire` },
+                      { name: `Sapphire Technique`, path: `/hair-transplant/techniques/sapphire` },
                     
-                      { name: `Body Hair Transplant`, path: `/hair-transplant/techniques/body` },
-                      { name: `Unshaven Hair Transplant`, path: `/hair-transplant/techniques/unshaven-transplant` },
-                      { name: `Long FUE Hair Transplant`, path: `/hair-transplant/techniques/long-fue` },
-                      { name: `Manual Punch Hair Transplant`, path: `/hair-transplant/techniques/manual-punch` },
+                      { name: `Body-to-Scalp (BHT)`, path: `/hair-transplant/techniques/body` },
+                      { name: `Unshaven Method`, path: `/hair-transplant/techniques/unshaven-transplant` },
+                      { name: `Long Graft Technique`, path: `/hair-transplant/techniques/long-fue` },
+                      { name: `Manual Extraction`, path: `/hair-transplant/techniques/manual-punch` },
                       { name: `Needle-Free Anesthesia`, path: `/hair-transplant/techniques/needle-free` }
                     ].map((item) => (
                       <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
