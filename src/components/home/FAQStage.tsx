@@ -6,39 +6,40 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function FAQStage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  
   const faqsLeft = [
     {
       id: 0,
-      q: `How long should I wear a hat after a hair transplant?`,
-      a: `We recommend that you use the hat we gave you for 10 days after hair transplantation.`
+      q: `How long should I wear a head cover after the procedure?`,
+      a: `We recommend wearing the provided protective cap for 10 days following your restoration session to ensure safe healing.`
     },
     {
       id: 2,
-      q: `When can I do sports after surgery?`,
-      a: `You should wait at least 1 month after the operation to start exercising.`
+      q: `When is it safe to resume sports and physical activity?`,
+      a: `Patients must wait at least one month post-surgery before engaging in heavy workouts or strenuous exercises.`
     },
     {
       id: 4,
-      q: `Should I wash my hair everyday after a hair transplant?`,
-      a: `After hair transplantation, you should wash your hair everyday for 1 month.`
+      q: `Is daily washing required during the recovery phase?`,
+      a: `Yes, you must carefully wash the treated area every day for the first month to maintain optimal scalp hygiene.`
     }
   ];
 
   const faqsRight = [
     {
       id: 1,
-      q: `When can I remove my bandage after hair transplantation?`,
-      a: `You need to wash your head on the second day after the operation. The bandage is removed before washing your head and does not need to be used again afterwards.`
+      q: `When will the medical bandage be removed?`,
+      a: `Your initial wash takes place on the second day of recovery. At this time, the dressing is taken off and will not be needed again.`
     },
     {
       id: 3,
-      q: `How long do I need to use special shampoo?`,
-      a: `You should use the shampoo we recommend for 1 month. After you are sure of the health of your hair and scalp, you can continue using the shampoo you always use.`
+      q: `How long must I use the specialized clinic shampoo?`,
+      a: `Please utilize the recommended medical wash for one full month. Once the follicles are fully secure, you may return to your regular routine.`
     },
     {
       id: 5,
-      q: `How long should I use Panthenol spray?`,
-      a: `You need to use it for about 15 days, until the crusts are completely removed from the skin.`
+      q: `What is the duration for applying Panthenol spray?`,
+      a: `Continue applying the spray for approximately 15 days, or until all post-surgical crusts have naturally cleared from the scalp.`
     }
   ];
 
@@ -48,7 +49,7 @@ export default function FAQStage() {
       <div className={`mb-4 md:mb-6 flex flex-col w-full shadow-md ${isActive ? `rounded-[2rem] overflow-hidden` : `rounded-full`}`}>
         <button
           onClick={() => setActiveIndex(isActive ? null : item.id)}
-          className={`w-full text-left px-6 py-5 md:px-8 md:py-6 font-bold text-white transition-colors duration-300 ${isActive ? `bg-[#772424] rounded-t-[2rem]` : `bg-[#772424] hover:bg-red rounded-full`}`}
+          className={`w-full text-left px-6 py-5 md:px-8 md:py-6 font-bold text-white transition-colors duration-300 ${isActive ? `bg-[#772424] rounded-t-[2rem]` : `bg-[#772424] hover:bg-red-700 rounded-full`}`}
         >
           {item.q}
         </button>

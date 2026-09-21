@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function TechniquesStage() {
   const techniques = [
     { 
-      title: `Sapphire Hair\nTransplant`, 
+      title: `Sapphire Technique`, 
       image: `/home/techniques/2.webp`, 
       link: `/hair-transplant/techniques/sapphire`, 
       radius: `rounded-tl-[3rem] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl` 
@@ -20,19 +20,19 @@ export default function TechniquesStage() {
       radius: `rounded-2xl` 
     },
     { 
-      title: `Manual Fue\nHair Transplant`, 
+      title: `Manual FUE\nExtraction`, 
       image: `/home/techniques/4.webp`, 
       link: `/hair-transplant/treatments/manual-fue`, 
       radius: `rounded-tr-[3rem] rounded-tl-2xl rounded-bl-2xl rounded-br-2xl` 
     },
     { 
-      title: `Body Hair\nTransplant`, 
+      title: `Body to Scalp\n(BHT)`, 
       image: `/home/techniques/6.webp`, 
       link: `/hair-transplant/techniques/body`, 
       radius: `rounded-bl-[3rem] rounded-tl-2xl rounded-tr-2xl rounded-br-2xl` 
     },
     { 
-      title: `Unshaven Hair\nTransplant`, 
+      title: `Unshaven FUE\n(U-FUE)`, 
       image: `/home/techniques/8.webp`, 
       link: `/hair-transplant/techniques/unshaven-transplant`, 
       radius: `rounded-2xl` 
