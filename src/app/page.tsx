@@ -50,7 +50,7 @@ export default function Page() {
     },
     telephone: "+923014923336",
     priceRange: "$$$",
-    medicalSpecialty: "Hair restoration and transplantation"
+    medicalSpecialty: "Dermatology"
   };
 
   return (

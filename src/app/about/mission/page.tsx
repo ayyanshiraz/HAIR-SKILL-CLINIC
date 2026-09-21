@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import MissionClient from "../../../components/MissionClient";
+import dynamic from "next/dynamic";
+
+const MissionClient = dynamic(() => import("../../../components/MissionClient"));
 
 export const metadata: Metadata = {
   title: "Clinic Mission & Vision | Hair Skill Clinic Lahore",

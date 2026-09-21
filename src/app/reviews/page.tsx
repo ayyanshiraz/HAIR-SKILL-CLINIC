@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ReviewsClient from "../../components/ReviewsClient";
+import dynamic from "next/dynamic";
+
+const ReviewsClient = dynamic(() => import("../../components/ReviewsClient"));
 
 export const metadata: Metadata = {
   title: "Best Hair Transplant Reviews in Lahore | Hair Skill",
@@ -58,6 +60,8 @@ export default function ReviewsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      
+      {/* Renders the main UI components */}
       <ReviewsClient />
     </>
   );

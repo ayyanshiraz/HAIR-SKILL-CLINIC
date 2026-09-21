@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import SideburnClient from "../../../../components/SideburnClient";
+import dynamic from "next/dynamic";
+
+const SideburnClient = dynamic(() => import("../../../../components/SideburnClient"));
 
 export const metadata: Metadata = {
   title: "Sideburn Transplant & Restoration in Lahore | Hair Skill",

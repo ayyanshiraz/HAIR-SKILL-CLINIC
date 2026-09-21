@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -89,12 +90,15 @@ export default function Footer() {
           <div className={`lg:col-span-4 flex flex-col items-start justify-start`}>
             <div className={`group relative flex flex-col items-start cursor-pointer`}>
               <div className={`absolute -inset-4 rounded-3xl bg-white/5 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100`} />
-              <img
-                src={`/home/logonew.png`}
-                alt={`Hair Skill Clinic Logo`}
-                className={`relative w-auto h-24 mb-4 object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-lighten`}
-              />
-            </div>
+  <Image
+    src={`/home/logo.webp`}
+    alt={`Hair Skill Clinic Logo`}
+    width={300} // Set approximate original width to prevent layout shift
+    height={96} // Tailwind h-24 is exactly 96px
+    priority={true} // High priority for logo so it loads instantly
+    className={`relative w-auto h-24 mb-4 object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-lighten`}
+  />
+</div>
             <p className={`text-base text-red-100 font-medium mb-6 pr-4 leading-relaxed`}>
               As the premier advanced hair restoration center we offer exceptional clinical services. We specialize in delivering completely natural results to restore your confidence right now.
             </p>

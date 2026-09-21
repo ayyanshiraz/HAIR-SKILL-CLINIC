@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import SterilizationClient from "../../../components/SterilizationClient";
+import dynamic from "next/dynamic";
 
+const SterilizationClient = dynamic(() => import("../../../components/SterilizationClient"));
 export const metadata: Metadata = {
   title: "Sterilization & Hygiene Standards Lahore | Hair Skill",
   description: "Explore our strict sterilization and hygiene protocols in Lahore. We ensure complete infection control through advanced autoclaves and Bowie-Dick testing.",

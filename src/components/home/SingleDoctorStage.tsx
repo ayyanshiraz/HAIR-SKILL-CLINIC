@@ -51,7 +51,7 @@ export default function SingleDoctorStage() {
             transition={{ delay: 0.6, duration: 0.8, ease: `easeOut` }}
             className={`text-gray-600 max-w-2xl font-medium text-base md:text-lg leading-relaxed mt-2`}
           >
-            Our hair restoration clinic is directed exclusively by the best hair transplant surgeon in Lahore, who executes every single micro-incision with clinical perfection.
+            Our aesthetic center is directed exclusively by Pakistans leading restoration surgeon. He treats every single procedure as a work of art, ensuring your results look completely natural and flawless.
           </motion.p>
         </motion.div>
 

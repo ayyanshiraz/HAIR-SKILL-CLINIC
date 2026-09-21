@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import CheckoutClient from "../../components/CheckoutClient";
+import dynamic from "next/dynamic";
+
+const CheckoutClient = dynamic(() => import("../../components/CheckoutClient"));
 
 export const metadata: Metadata = {
   title: "Secure Checkout & Appointment | Hair Skill Clinic Lahore",

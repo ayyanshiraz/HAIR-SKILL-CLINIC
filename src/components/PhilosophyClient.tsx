@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 
-// Path points to '../data/countries' because this file sits inside /src/components
 import { countries, type Country } from "../data/countries";
 
 // --- STRICT ANIMATION Bezier Tuple ---
@@ -77,7 +76,7 @@ export default function PhilosophyClient() {
             <span className={`text-[#772424]`}>True Philosophy</span>
           </div>
           <h1 className={`text-4xl md:text-6xl font-black text-gray-900 tracking-tight`}>
-            Hair Skill True Philosophy
+            Our Philosophy
           </h1>
         </div>
       </motion.section>
@@ -108,7 +107,7 @@ export default function PhilosophyClient() {
               {/* Core Introduction (Fades in immediately) */}
               <motion.div initial={`hidden`} animate={`visible`} variants={fadeUp}>
                 <h2 className={`text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tight`}>
-                  True Philosophy
+                  Truee Philosophy
                 </h2>
                 <p className={`text-black text-base md:text-lg leading-relaxed mb-6 font-medium`}>
                   Hair Skill Clinic has strictly disciplined its unique approach to hair transplantation around the TRUE Philosophy, which primarily consists of three core elements that deeply center on the main values of our brand. When our founders first established Hair Skill, their guiding values were analysis, accomplishment, and advancement.

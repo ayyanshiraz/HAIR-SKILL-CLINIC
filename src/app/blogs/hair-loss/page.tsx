@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import BlogsHairLossClient from "../../../components/BlogsHairLossClient";
+import dynamic from "next/dynamic";
+
+const BlogsHairLossClient = dynamic(() => import("../../../components/BlogsHairLossClient"));
 
 export const metadata: Metadata = {
   title: "Hair Loss Treatment & PRP Therapy Lahore | Hair Skill",

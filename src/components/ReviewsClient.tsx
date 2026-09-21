@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
+import Script from "next/script";
 import { countries, type Country } from "../data/countries";
 
 // --- STRICT ANIMATION TUPLE ---
@@ -33,14 +34,6 @@ const slideInRight: Variants = {
   }
 };
 
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 }
-  }
-};
-
 export default function ReviewsClient() {
   // --- FORM STATES ---
   const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
@@ -58,46 +51,19 @@ export default function ReviewsClient() {
     window.open(whatsappUrl, "_blank");
   };
 
-  // Defeats Google Chrome forced white Autofill override
   const autofillFixStyle = {
     WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- REVIEWS DATA WITH SEO HIGHLIGHTS ---
-  const reviews = [
-    {
-      author: "Talal Ahmed",
-      text: "I traveled from the UK to Lahore for my hair transplant at Hair Skill Clinic. The doctors are true artists. The <strong>DHI method</strong> gave me incredible density and the hairline design is absolutely perfect. It has been 8 months and the results are life changing. Highly recommended!"
-    },
-    {
-      author: "Ali Raza",
-      text: "Amazing experience! From the consultation to the post op care the team at Hair Skill Clinic in Pakistan was phenomenal. I had 4000 grafts using the <strong>Sapphire FUE technique</strong>. The recovery was smooth and the staff was available 24 7 on WhatsApp to answer all my questions."
-    },
-    {
-      author: "Omar Shafique",
-      text: "I was extremely nervous about getting a hair transplant but the staff put me at ease immediately. The clinic is spotless and the <strong>professionalism is unmatched in Lahore</strong>. My new hairline looks completely natural and no one can tell I had surgery."
-    },
-    {
-      author: "Fahad Mazhar",
-      text: "<strong>Best hair transplant clinic in Pakistan!</strong> The attention to detail during the planning phase was impressive. The entire procedure was virtually painless. Thank you Hair Skill Clinic for restoring my confidence."
-    },
-    {
-      author: "Musa Ali",
-      text: "Excellent service from start to finish. The transportation hotel arrangements and clinic facilities were <strong>world class standards</strong>. The surgical team made sure I was comfortable the entire time. Very happy with my early results at month 4."
-    },
-    {
-      author: "Salman Shehzad",
-      text: "A truly 5 star experience. The post operative support is fantastic. They check in on my progress regularly to ensure healthy hair growth. If you are considering a <strong>transplant in Pakistan</strong> Hair Skill Clinic is the only place you should go."
-    }
-  ];
-
-  // The Google Reviews URL provided by you
   const googleReviewsUrl = "https://www.google.com/search?sca_esv=bf5b70d178609590&rlz=1C1GCEA_enPK1195PK1195&sxsrf=APpeQnvA9GXi7iUd3-Yz6IMWIUwKJbuU4Q:1782145604401&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-__wSd6NV-ZVxJuhvs5cLT_bSl9pMvKjj6iPC54pNuHuI4OpBZpeJk4pMlLlMA0BrMLtjnt7ATd5NRCqE3kOIE8ERS5LkYl7MiiOzWRDbK-WnGy-v8OirwYOoX_FKE_OMN3C24tIuOo8vbo6-0nXhNh80SS_8p7ziPhAvLqiD_hIkA7Kk2rXjPnwDZ8qu6q9nyxwv5PFRSWDNh2SuwaIfqu8N2gibt6FwlTCpge5xBl16mrfiPBwJmamRFEhRnjc27J8vXtcl80ybaW-FzvfsQm0mc8XFdjdoIkGnN4V3wd1W9QlnL9N2z1d6zUJcC32UsY9Anjh8PodWFbZKefK6JSli-_S9&q=%F0%9D%97%9B%F0%9D%97%AE%F0%9D%97%B6%F0%9D%97%BF+%F0%9D%97%A6%F0%9D%97%B8%F0%9D%97%B6%F0%9D%97%B9%F0%9D%97%B9+-+%F0%9D%97%99%F0%9D%97%A8%F0%9D%97%98+%F0%9D%90%83%F0%9D%90%87%F0%9D%90%88+%F0%9D%97%9B%F0%9D%97%AE%F0%9D%97%B6%F0%9D%97%BF+%F0%9D%97%A7%F0%9D%97%BF%F0%9D%97%AE%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B9%F0%9D%97%AE%F0%9D%97%BB%F0%9D%98%81+%F0%9D%97%96%F0%9D%97%B9%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B6%F0%9D%97%B0+%F0%9D%97%9F%F0%9D%97%AE%F0%9D%97%B5%F0%9D%97%BC%F0%9D%97%BF%F0%9D%97%B2+%F0%9D%97%A3%F0%9D%97%AE%F0%9D%97%B8%F0%9D%97%B6%F0%9D%98%80%F0%9D%98%81%F0%9D%97%AE%F0%9D%97%BB+Reviews&sa=X&ved=2ahUKEwjCrsDdoZuVAxVEuUwKHZO7HDwQ0bkNegQIQBAF&biw=1536&bih=703&dpr=1.25";
 
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
+      {/* Elfsight Script Injected Securely via Next.js Script */}
+      <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
+
       {/* --- PAGE HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
@@ -106,13 +72,11 @@ export default function ReviewsClient() {
         className="pt-28 lg:pt-36 pb-12 bg-gray-50 border-b border-gray-200 px-6"
       >
         <div className="max-w-[1200px] mx-auto">
-          {/* Breadcrumbs aligned left */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex items-center gap-2">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <span className="text-[#772424]">Reviews</span>
           </div>
-          {/* SEO Optimized Main Heading (H1) */}
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
             Top Hair Transplant Patient Reviews in Pakistan
           </h1>
@@ -129,12 +93,10 @@ export default function ReviewsClient() {
               
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-10 flex flex-col justify-between gap-6 border-b border-gray-200 pb-8">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-                  {/* SEO Optimized Subheading (H2) */}
                   <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                     Real Success Stories from Lahore Karachi and Islamabad
                   </h2>
                   
-                  {/* Direct Google Reviews Link */}
                   <a 
                     href={googleReviewsUrl}
                     target="_blank" 
@@ -151,50 +113,15 @@ export default function ReviewsClient() {
                   </a>
                 </div>
                 
-                {/* Micro SEO Text Block */}
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl">
                   Read authentic feedback from our satisfied clients across Pakistan. Discover why thousands trust our expert surgeons for FUE unshaven and manual punch hair restoration procedures.
                 </p>
               </motion.div>
 
-              <motion.div 
-                initial="hidden" 
-                animate="visible" 
-                variants={staggerContainer} 
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-              >
-                {reviews.map((review, idx) => (
-                  <motion.div 
-                    key={idx} 
-                    variants={fadeUp} 
-                    className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300"
-                  >
-                    <div>
-                      {/* 5 Stars with Accessibility */}
-                      <div className="flex gap-1 mb-4" aria-label="5 out of 5 stars">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <svg key={star} className="w-5 h-5 text-[#C5A059]" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                      </div>
-                      
-                      {/* SEO Bolded Text Render */}
-                      <p 
-                        className="text-black text-base md:text-lg leading-relaxed font-medium mb-6"
-                        dangerouslySetInnerHTML={{ __html: review.text }}
-                      />
-                    </div>
-                    
-                    <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-200">
-                      <div className="w-10 h-10 rounded-full bg-[#772424] text-white flex items-center justify-center font-black text-lg">
-                        {review.author.charAt(0)}
-                      </div>
-                      <span className="text-[#772424] font-black text-lg">{review.author}</span>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
+              {/* Elfsight Live Google Reviews Widget Container */}
+              <div className="w-full mt-2 min-h-[500px]">
+                <div className="elfsight-app-95daa7bb-153e-44ba-a166-46c5244ebf09" data-elfsight-app-lazy></div>
+              </div>
 
             </div>
 

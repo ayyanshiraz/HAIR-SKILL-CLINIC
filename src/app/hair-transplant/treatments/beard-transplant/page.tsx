@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import BeardTransplantClient from "../../../../components/BeardTransplantClient";
+import dynamic from "next/dynamic";
+
+const BeardTransplantClient = dynamic(() => import("../../../../components/BeardTransplantClient"));
 
 export const metadata: Metadata = {
   title: "Beard & Facial Hair Transplant in Lahore | Hair Skill",

@@ -94,7 +94,7 @@ export default function BlogHairLossClient() {
                       <img 
                         src={post.previewImage} 
                         alt={post.title} 
-                        className={`w-full h-full object-cover md:group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top`} 
+                        className={`w-full h-full object-contain md:group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top`} 
                       />
                       <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300`} />
                     </div>

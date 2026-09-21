@@ -1,6 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
-import DoctorsCategoryClient from "../../components/DoctorsCategoryClient";
+import dynamic from "next/dynamic";
+
+const DoctorsCategoryClient = dynamic(() => import("../../components/DoctorsCategoryClient"));
 
 export const metadata: Metadata = {
   title: "Dr Mansoor Ahmad | Hair Transplant Surgeon in Lahore",

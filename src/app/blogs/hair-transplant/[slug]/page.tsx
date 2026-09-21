@@ -19,6 +19,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return { title: "Blog Not Found" };
   }
 
+  // Base URL is required to make absolute links for Open Graph
+  const baseUrl = "https://www.hairskill.com";
+
   return {
     title: post.metaTitle,
     description: post.seoDescription,
@@ -26,7 +29,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: post.metaTitle,
       description: post.seoDescription,
-      images: [post.previewImage],
+      // Added absolute URL and specific type for Ahrefs and social media
+      url: `${baseUrl}/blogs/hair-transplant/${post.slug}`,
+      siteName: "Hair Skill",
+      type: "article",
+      images: [
+        {
+          // Open Graph requires a complete absolute URL for images
+          url: `${baseUrl}${post.previewImage}`,
+          width: 1200,
+          height: 630,
+          alt: post.metaTitle,
+        },
+      ],
     },
   };
 }
@@ -62,8 +77,9 @@ export default async function HairTransplantSingleBlogPage({ params }: { params:
           <span>Published {post.date}</span>
         </div>
 
-        <div className={`w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-100 shadow-xl border border-gray-100`}>
-          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-cover object-top`} />
+        {/* Updated image container and classes to prevent cropping */}
+        <div className={`w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-50 shadow-xl border border-gray-100 flex items-center justify-center`}>
+          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-contain`} />
         </div>
 
         <div className={`text-lg leading-relaxed font-medium text-gray-800 text-justify`}>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import NeedleFreeClient from "../../../../components/NeedleFreeClient";
+import dynamic from "next/dynamic";
+
+const NeedleFreeClient = dynamic(() => import("../../../../components/NeedleFreeClient"));
 
 export const metadata: Metadata = {
   title: "Painless Needle-Free Hair Transplant Lahore | Hair Skill",

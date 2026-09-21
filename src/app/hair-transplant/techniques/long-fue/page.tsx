@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import LongFueClient from "../../../../components/LongFueClient";
+import dynamic from "next/dynamic";
+
+const LongFueClient = dynamic(() => import("../../../../components/LongFueClient"));
 
 export const metadata: Metadata = {
   title: "Unshaven Long FUE Hair Transplant Lahore | Hair Skill",

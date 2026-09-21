@@ -389,7 +389,7 @@ export default function Navbar() {
                       
                       { name: `Body Hair Transplant`, path: `/hair-transplant/techniques/body` },
                       { name: `Unshaven Hair Transplant`, path: `/hair-transplant/treatments/unshaven-transplant` },
-                      { name: `Long FUE Hair Transplant`, path: `/hair-transplant/treatments/long-fue` },
+                      { name: `Long FUE Hair Transplant`, path: `/hair-transplant/techniques/long-fue` },
                       { name: `Manual Punch Hair Transplant`, path: `/hair-transplant/techniques/manual-punch` },
                       { name: `Needle-Free Anesthesia`, path: `/hair-transplant/techniques/needle-free` }
                         ].map(item => (
