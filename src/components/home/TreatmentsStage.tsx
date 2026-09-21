@@ -2,45 +2,46 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function TreatmentsStage() {
   const treatments = [
     {
-      title: `Manual Fue`,
+      title: `Manual FUE`,
       href: `/hair-transplant/treatments/manual-fue`,
       bgColor: `bg-[#4A0E0E]`,
-      icon: <img src={`/our%20treatments/1.svg`} alt={`Hair Transplant Icon`} className={`w-full h-full object-contain`} />
+      icon: <Image src={`/our%20treatments/1.svg`} alt={`Manual Extraction Icon`} width={150} height={150} className={`w-full h-full object-contain`} />
     },
     {
-      title: `Beard Transplant`,
+      title: `Beard Restoration`,
       href: `/hair-transplant/treatments/beard-transplant`,
       bgColor: `bg-[#5A1212]`,
-      icon: <img src={`/our%20treatments/2.svg`} alt={`Beard Transplant Icon`} className={`w-full h-full object-contain`} />
+      icon: <Image src={`/our%20treatments/2.svg`} alt={`Beard Restoration Icon`} width={150} height={150} className={`w-full h-full object-contain`} />
     },
     {
-      title: `Female Hair Transplant`,
+      title: `Female FUE`,
       href: `/hair-transplant/treatments/female`,
       bgColor: `bg-[#772424]`,
-      icon: <img src={`/our%20treatments/4.svg`} alt={`Female Hair Transplant Icon`} className={`w-full h-full object-contain`} />
+      icon: <Image src={`/our%20treatments/4.svg`} alt={`Female FUE Icon`} width={150} height={150} className={`w-full h-full object-contain`} />
     },
     {
-      title: `Afro Hair Transplant`,
+      title: `Afro FUE`,
       href: `/hair-transplant/treatments/afro-hair`,
       bgColor: `bg-[#8C2222]`,
-      icon: <img src={`/our%20treatments/5.svg`} alt={`Afro Hair Transplant Icon`} className={`w-full h-full object-contain`} />
+      icon: <Image src={`/our%20treatments/5.svg`} alt={`Afro FUE Icon`} width={150} height={150} className={`w-full h-full object-contain`} />
     },
     {
-      title: `Restoration of Sideburns`,
+      title: `Sideburn Restoration`,
       href: `/hair-transplant/treatments/sideburn`,
       bgColor: `bg-[#A32A2A]`,
-      icon: <img src={`/our%20treatments/6.svg`} alt={`Restoration of Sideburns Icon`} className={`w-full h-full object-contain`} />
+      icon: <Image src={`/our%20treatments/6.svg`} alt={`Sideburn Restoration Icon`} width={150} height={150} className={`w-full h-full object-contain`} />
     },
     {
       title: `Mesotherapy`,
       href: `/hair-transplant/treatments/mesotherapy`,
       bgColor: `bg-[#CF3D3D]`,
-      icon: <img src={`/our%20treatments/8.svg`} alt={`Mesotherapy Icon`} className={`w-full h-full object-contain`} />
+      icon: <Image src={`/our%20treatments/8.svg`} alt={`Mesotherapy Treatment Icon`} width={150} height={150} className={`w-full h-full object-contain`} />
     },
   ];
 
