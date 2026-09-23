@@ -3,174 +3,223 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
+import { countries, type Country } from "../data/countries";
 
+// --- STRICT ANIMATION TUPLE ---
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
 
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.05, ease: customEase }
-  })
+const slideInRight: Variants = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    transition: { duration: 0.8, delay: 0.2, ease: customEase } 
+  }
 };
 
+const techniquesList = [
+  {
+    title: "Sapphire Hair Transplant",
+    image: "/home/techniques/2.webp",
+    summary: "People often search sapphire hair transplant Pakistan hoping to understand whether this method truly delivers better micro-incision density and softer faster healing.",
+    link: "/hair-transplant/techniques/sapphire"
+  },
+  {
+    title: "Body Hair Transplant",
+    image: "/home/techniques/5.webp",
+    summary: "If you are reading about body hair transplant Pakistan you have probably already heard that the back of the head is the primary donor area. Here is how we utilize body reserves.",
+    link: "/hair-transplant/techniques/body"
+  },
+  {
+    title: "Unshaven Hair Transplant",
+    image: "/home/techniques/7.webp",
+    summary: "Unshaven Hair Transplant A Secret Between You and Your Doctor. The unshaven hair transplant has become a fantastic source of permanent happiness for working professionals.",
+    link: "/hair-transplant/techniques/unshaven-transplant"
+  },
+  {
+    title: "Long FUE Hair Transplant",
+    image: "/hair-transplant/1.webp",
+    summary: "Long FUE hair transplant in Pakistan is an advanced technique that allows hair transplantation without fully shaving the donor area.",
+    link: "/hair-transplant/techniques/long-fue"
+  },
+  {
+    title: "Manual Punch Hair Transplant",
+    image: "/home/techniques/4.webp",
+    summary: "Manual Punch Hair Transplant is a technique applied in hair transplantation where the grafts are extracted strictly one by one using manual precision tools.",
+    link: "/hair-transplant/techniques/manual-punch"
+  },
+  {
+    title: "Needle-Free Anesthesia",
+    image: "/hair-transplant/25.webp",
+    summary: "Needle-Free Anesthesia Patients primary concern during surgical operations is the fear of feeling pain. Our advanced jet injection systems eliminate standard needles.",
+    link: "/hair-transplant/techniques/needle-free"
+  }
+];
+
 export default function TechniquesClient() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
+  const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
-  // --- 8 MASTER CLINICAL TECHNIQUES (Exactly matching image_7bcb45.png, zero prices, build-safe prose) ---
-  const techniquesList = [
-    {
-      title: "Sapphire Hair Transplant",
-      slug: "sapphire",
-      categoryFolder: "hair-transplant/techniques",
-      description: "Utilizing precious sapphire gemstone blades instead of traditional steel to open micro channels in the recipient zone. This advanced precision reduces tissue trauma minimizes scab formation and accelerates overall healing while enabling maximum graft density.",
-      duration: "6 - 8 Hours",
-      benefits: ["Minimal tissue crusting", "Higher density placement", "Faster scalp recovery"]
-    },
-    {
-      title: "Body Hair Transplant",
-      slug: "body",
-      categoryFolder: "hair-transplant/techniques",
-      description: "When scalp donor reserves are depleted body hair from the beard chest or limbs can be safely harvested to provide vital background density and midscalp coverage creating a fully balanced and believable overall appearance.",
-      duration: "6 - 8 Hours",
-      benefits: ["Expands depleted donor pools", "Excellent midscalp filling", "Strategic layered placement"]
-    },
-    {
-      title: "Unshaven Hair Transplant",
-      slug: "unshaven-transplant",
-      categoryFolder: "hair-transplant/techniques",
-      description: "A highly discreet procedure tailored for individuals who require immediate return to professional life. The restoration process is executed without shaving the recipient or visible donor zones keeping the treatment completely undetectable.",
-      duration: "6 - 8 Hours",
-      benefits: ["Zero visible hair length change", "Complete conversational privacy", "Ideal for executive profiles"]
-    },
-    {
-      title: "Long FUE Hair Transplant",
-      slug: "long-fue",
-      categoryFolder: "hair-transplant/techniques",
-      description: "An advanced extraction protocol where follicles are harvested with longer hair shafts intact. This allows patients to walk out of the clinical facility with an immediate architectural preview of their fully mature future density.",
-      duration: "7 - 9 Hours",
-      benefits: ["Immediate visual density preview", "Longer shaft extractions", "Highly specialized handling"]
-    },
-    {
-      title: "Manual Punch Hair Transplant",
-      slug: "manual-punch",
-      categoryFolder: "hair-transplant/techniques",
-      description: "Relying strictly on tactile human precision rather than automated micro motors. The surgeon gently rotates fine punches by hand to free individual follicles keeping surrounding native tissue completely undisturbed.",
-      duration: "6 - 8 Hours",
-      benefits: ["Strict human tactile control", "Zero mechanical heat trauma", "Rapid donor zone closure"]
-    },
-    {
-      title: "Needle-Free Anesthesia",
-      slug: "needle-free",
-      categoryFolder: "hair-transplant/techniques",
-      description: "Eliminating injection anxiety through high pressure jet diffusion technology. Anesthetic medication is sprayed directly into the scalp tissue creating rapid localized numbing before any extraction begins.",
-      duration: "15 - 30 Mins",
-      benefits: ["Overcomes needle phobia", "Rapid subcutaneous diffusion", "Enhanced operational comfort"]
-    }
-  ];
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const targetWhatsapp = "923014923336";
+    const textMessage = `Hello! I would like to get a free consultation from the Techniques Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
+    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
+    window.open(whatsappUrl, "_blank");
+  };
 
-  const filteredTechniques = techniquesList.filter(tech =>
-    tech.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    tech.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const autofillFixStyle = {
+    WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
+    WebkitTextFillColor: "#ffffff"
+  };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-hidden">
+    <div className="flex flex-col lg:flex-row gap-12 items-start mt-8 mb-8 ml-8">
       
-      {/* --- BREADCRUMBS & HERO HEADLINE --- */}
-      <motion.section 
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-12 bg-white px-4 sm:px-6"
-      >
-        <div className="max-w-[1300px] mx-auto relative">
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
-            <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
-            <span>/</span>
-            <Link href="/hair-transplant" className="hover:text-[#772424] active:text-[#772424] transition-colors">Hair Transplant</Link>
-             <span>/</span>
-            <span className="text-[#772424]">Techniques</span>
-          </div>
-          
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 tracking-tight text-center mt-4">
-            Advanced Hair Restoration Techniques
+      {/* LEFT COLUMN: EXACT PREVIOUS LIST DESIGN WITH IMAGES */}
+      <div className="w-full lg:w-2/3">
+        
+        {/* Back Button */}
+        <Link 
+          href="/hair-transplant" 
+          className="mb-8 mt-24 text-[#772424] font-black text-sm tracking-widest uppercase flex items-center gap-2 hover:-translate-x-1 transition-transform w-fit"
+        >
+          <span>←</span> Back To Hair Transplant
+        </Link>
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center mb-6">
+            Techniques
           </h1>
-          <p className="text-black text-center max-w-2xl mx-auto mt-4 text-base md:text-lg font-medium leading-relaxed">
-            Explore the advanced clinical methodologies performed at Hair Skill Clinic in Pakistan to deliver seamless natural density with maximum cleanroom safety protocols.
-          </p>
-        </div>
-      </motion.section>
+        {/* The Card Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {techniquesList.map((art, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: (idx % 2) * 0.15 }}
+              className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg"
+            >
+              <Link href={art.link} className="flex flex-col flex-1 h-full block cursor-pointer select-none">
+                
+                {/* Image Box */}
+                <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
+                  <img 
+                    src={art.image} 
+                    alt={art.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
+                </div>
+                
+                {/* Text Details Box */}
+                <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+                  <div>
+                    <h2 className="text-lg sm:text-xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
+                      {art.title}
+                    </h2>
+                    <p className="text-black text-sm leading-relaxed mb-6 font-medium line-clamp-3">
+                      {art.summary}
+                    </p>
+                  </div>
+                  
+                  <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
+                    More <span>→</span>
+                  </div>
+                </div>
 
-      {/* --- LIVE INTERACTIVE FILTER HUB --- */}
-      <section className="py-6 px-4 sm:px-6 bg-white">
-        <div className="max-w-[1300px] mx-auto">
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* RIGHT COLUMN: EXACT PREVIOUS STICKY CONSULTATION FORM */}
+      <motion.div 
+        initial="hidden"
+        animate="visible"
+        variants={slideInRight}
+        className="w-full lg:w-1/3 lg:sticky lg:top-32 self-start h-max"
+      >
+        <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+          <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
+            GET FREE CONSULTATION
+          </h3>
           
-          <div className="mb-12 max-w-md mx-auto">
-            <input 
-              type="text"
-              placeholder="Filter specific techniques..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-5 py-3.5 border border-gray-200 rounded-2xl text-black placeholder-gray-400 outline-none focus:border-[#772424] transition-all font-medium text-sm shadow-xs"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 w-full">
-            {filteredTechniques.map((tech, idx) => (
-              <motion.div
-                key={tech.title}
-                custom={idx}
-                initial="hidden"
-                animate="visible"
-                variants={cardVariants}
-                className="border border-gray-100 rounded-3xl p-6 sm:p-8 bg-gray-50/60 lg:hover:bg-white lg:hover:border-[#772424]/30 lg:hover:shadow-2xl transition-all duration-500 flex flex-col justify-between group border-[#772424]/5 w-full"
-              >
-                <div>
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight lg:group-hover:text-[#772424] transition-colors">
-                    {tech.title}
-                  </h2>
-                  <p className="text-black text-sm md:text-base leading-relaxed font-medium mb-6">
-                    {tech.description}
-                  </p>
-
-                  <div className="space-y-2.5 mb-8 border-t border-gray-200/60 pt-6 ml-1">
-                    {tech.benefits.map((benefit, bIdx) => (
-                      <div key={bIdx} className="flex items-center gap-3">
-                        <span className="text-[#772424] font-black text-sm">•</span>
-                        <span className="text-black text-xs md:text-sm font-bold">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200/60 pt-6 mt-2 flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4">
-                  <div className="w-full sm:w-auto text-left">
-                    <p className="text-gray-400 font-bold uppercase tracking-wider text-[10px]">Est Clinical Duration</p>
-                    <p className="text-black font-extrabold text-sm mt-0.5">{tech.duration}</p>
-                  </div>
-
-                  <Link 
-                    href={`/${tech.categoryFolder}/${tech.slug}`}
-                    className="w-full sm:w-auto px-6 sm:px-8 py-3.5 bg-white border border-gray-200 text-black active:bg-[#772424] active:text-white lg:hover:border-[#772424] lg:hover:bg-[#772424] lg:hover:text-white font-extrabold text-xs md:text-sm rounded-xl transition-all text-center tracking-wider uppercase shadow-xs lg:group-hover:scale-[1.02] block"
-                  >
-                    Explore Details <span>›</span>
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {filteredTechniques.length === 0 && (
-            <div className="text-center py-16 bg-gray-50 rounded-3xl border border-dashed border-gray-200 mt-6 px-4">
-              <p className="text-black font-extrabold text-lg">No clinical techniques match your current search parameter.</p>
-              <button onClick={() => setSearchQuery("")} className="mt-3 text-xs font-bold text-[#772424] uppercase tracking-wider hover:underline">Reset Search</button>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+            <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
+              <input 
+                type="text" 
+                placeholder="Full Name" 
+                value={fullName} 
+                onChange={(e) => setFullName(e.target.value)} 
+                required 
+                className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
+                style={autofillFixStyle}
+              />
             </div>
-          )}
+            
+            <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
+              <input 
+                type="email" 
+                placeholder="E-mail" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+                required 
+                className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
+                style={autofillFixStyle}
+              />
+            </div>
 
+            <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
+              <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
+                <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
+                <span>{selectedCountry.dial}</span>
+                <span className="text-[10px]">▼</span>
+              </div>
+              
+              {isDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
+                  {countries.map((country: Country, idx: number) => (
+                    <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
+                      <div className="flex items-center gap-2.5 truncate mr-2">
+                        <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
+                        <span className="font-bold">{country.code}</span>
+                        <span className="text-xs text-black truncate">{country.name}</span>
+                      </div>
+                      <span className="text-[#772424] font-black shrink-0">{country.dial}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+              
+              <input 
+                type="tel" 
+                placeholder="Phone Number" 
+                value={phone} 
+                onChange={(e) => setPhone(e.target.value)} 
+                required 
+                className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
+                style={autofillFixStyle}
+              />
+            </div>
+
+            <div className="flex items-start sm:items-center gap-2 mt-2">
+              <input type="checkbox" id="mainTransplantPrivacy" required defaultChecked className="w-4 h-4 mt-0.5 sm:mt-0 accent-[#C5A059] rounded cursor-pointer shrink-0" />
+              <label htmlFor="mainTransplantPrivacy" className="text-xs text-white/80 cursor-pointer leading-relaxed">
+                I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
+              </label>
+            </div>
+
+            <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 active:bg-gray-200 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-[0.98]">
+              Submit <span>›</span>
+            </button>
+          </form>
         </div>
-      </section>
+      </motion.div>
 
     </div>
   );

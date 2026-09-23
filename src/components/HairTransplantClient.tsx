@@ -3,21 +3,9 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your app data folder
 import { countries, type Country } from "../data/countries";
 
-// --- STRICT ANIMATION TUPLE ---
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 35 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.8, ease: customEase } 
-  }
-};
 
 const slideInRight: Variants = {
   hidden: { opacity: 0, x: 40 },
@@ -28,13 +16,6 @@ const slideInRight: Variants = {
   }
 };
 
-interface TransplantArticle {
-  title: string;
-  image: string;
-  summary: string;
-  link: string;
-}
-
 export default function HairTransplantClient() {
   const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
   const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
@@ -43,9 +24,6 @@ export default function HairTransplantClient() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   
-  // NEW STATE FOR CATEGORY VIEW
-  const [activeView, setActiveView] = useState<"main" | "treatments" | "techniques">("main");
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const targetWhatsapp = "923014923336";
@@ -59,137 +37,10 @@ export default function HairTransplantClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- COMPREHENSIVE GRID DATA ---
-  const transplantArticles: TransplantArticle[] = [
-    // --- TECHNIQUES ---
-    {
-      title: "Sapphire Hair Transplant",
-      image: "/home/techniques/2.webp",
-      summary: "People often search sapphire hair transplant Pakistan hoping to understand whether this method truly delivers better micro-incision density and softer faster healing.",
-      link: "/hair-transplant/techniques/sapphire"
-    },
-    {
-      title: "Body Hair Transplant",
-      image: "/home/techniques/5.webp",
-      summary: "If you are reading about body hair transplant Pakistan you have probably already heard that the back of the head is the primary donor area. Here is how we utilize body reserves.",
-      link: "/hair-transplant/techniques/body"
-    },
-    {
-      title: "Unshaven Hair Transplant",
-      image: "/home/techniques/7.webp",
-      summary: "Unshaven Hair Transplant A Secret Between You and Your Doctor. The unshaven hair transplant has become a fantastic source of permanent happiness for working professionals.",
-      link: "/hair-transplant/techniques/unshaven-transplant"
-    },
-    {
-      title: "Long FUE Hair Transplant",
-      image: "/hair-transplant/1.webp",
-      summary: "Long FUE hair transplant in Pakistan is an advanced technique that allows hair transplantation without fully shaving the donor area.",
-      link: "/hair-transplant/techniques/long-fue"
-    },
-    {
-      title: "Manual Punch Hair Transplant",
-      image: "/home/techniques/4.webp",
-      summary: "Manual Punch Hair Transplant is a technique applied in hair transplantation where the grafts are extracted strictly one by one using manual precision tools.",
-      link: "/hair-transplant/techniques/manual-punch"
-    },
-    {
-      title: "Needle-Free Anesthesia",
-      image: "/hair-transplant/25.webp",
-      summary: "Needle-Free Anesthesia Patients primary concern during surgical operations is the fear of feeling pain. Our advanced jet injection systems eliminate standard needles.",
-      link: "/hair-transplant/techniques/needle-free"
-    },
-
-    // --- TREATMENTS ---
-    {
-      title: "Manual Fue Hair Transplant",
-      summary: "Experience the precision of Manual FUE Hair Transplant for seamless and natural looking hair restoration results...",
-      image: "/home/techniques/4.webp",
-      link: "/hair-transplant/treatments/manual-fue"
-    },
-    {
-      title: "DHI Hair Transplant",
-      summary: "Direct Hair Implantation DHI offers advanced placement for maximum density and natural growth without prior shaving...",
-      image: "/home/techniques/3.webp",
-      link: "/hair-transplant/treatments/dhi"
-    },
-    {
-      title: "FUE By Moterize Method",
-      summary: "The Motorized FUE method ensures highly efficient and precise extraction for optimal hair transplant outcomes...",
-      image: "/home/techniques/1.webp",
-      link: "/hair-transplant/treatments/fue-by-moterize"
-    },
-    {
-      title: "Chinese Method",
-      summary: "Explore the specialized Chinese Method for hair restoration uniquely tailored to specific hair and scalp characteristics...",
-      image: "/hair-transplant/35.webp",
-      link: "/hair-transplant/treatments/chinese-hair-transplant"
-    },
-    {
-      title: "FUT Method",
-      summary: "FUT, also known as the Strip Method, is a hair transplant technique in which a strip of scalp is removed...",
-      image: "/hair-transplant/6.webp",
-      link: "/hair-transplant/treatments/fut"
-    },
-    {
-      title: "Hair Transplant",
-      summary: "What is a Hair Transplant and Why Does It Matter? Hair transplantation is a surgical relocation of healthy hair follicles from donor...",
-      image: "/hair-transplant/treatments/1.webp",
-      link: "/hair-transplant/hair-transplant"
-    },
-    {
-      title: "Beard Transplant",
-      summary: "If you are searching for a beard transplant Pakistan guide that feels honest calm and grounded in real treatment experience you ar...",
-      image: "/hair-transplant/treatments/2.webp",
-      link: "/hair-transplant/treatments/beard-transplant"
-    },
-    
-    {
-      title: "Female Hair Transplant",
-      summary: "Losing hair as a woman feels different. It is not just about coverage. It is about how you see yourself in photos how confidently you style...",
-      image: "/hair-transplant/21.webp",
-      link: "/hair-transplant/treatments/female"
-    },
-    {
-      title: "Afro Hair Transplant",
-      summary: "If you have been searching for a clinic that truly understands the needs of tightly coiled hair this page gives you the clarity you have been...",
-      image: "/hair-transplant/13.webp",
-      link: "/hair-transplant/treatments/afro-hair"
-    },
-    {
-      title: "Sideburn Transplantation",
-      summary: "A sideburn transplant is a focused detail-driven procedure that restores shape density and balance to an area that defines the fram...",
-      image: "/hair-transplant/18.webp",
-      link: "/hair-transplant/treatments/sideburn"
-    },
-    {
-      title: "Mesotherapy",
-      summary: "Hair Treatment Mesotherapy in Pakistan is a targeted micro-injection method placing vitamins minerals and growth-supporting...",
-      image: "/hair-transplant/26.webp",
-      link: "/hair-transplant/treatments/mesotherapy"
-    },
-    {
-      title: "Ozone Hair Therapy",
-      summary: "Ozone therapy for hair is a targeted scalp treatment that uses controlled medical ozone to support follicles calm inflammation and...",
-      image: "/hair-transplant/treatments/4.webp",
-      link: "/hair-transplant/treatments/ozone-hair-therapy"
-    },
-    {
-      title: "PRP Hair Treatment",
-      summary: "PRP hair treatment is a medical procedure that uses your own blood to support weaker follicles. At Hair Skill Clinic PRP hair treatment...",
-      image: "/hair-transplant/treatments/8.webp",
-      link: "/hair-transplant/treatments/prp-hair-treatment"
-    },
-    
-  ];
-
-  // FILTERED LISTS
-  const treatmentsList = transplantArticles.filter(art => art.link.includes("/treatments/"));
-  const techniquesList = transplantArticles.filter(art => art.link.includes("/techniques/"));
-
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
-      {/* --- ASYMMETRIC HEADER --- */}
+      {/* --- HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -212,133 +63,79 @@ export default function HairTransplantClient() {
       {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 items-start mt-8">
             
-            {/* LEFT COLUMN: CONDITIONAL RENDERING FOR CATEGORIES OR ARTICLES */}
+            {/* LEFT COLUMN: MAIN CATEGORIES VIEW */}
             <div className="w-full lg:w-2/3">
-              
-              {activeView === "main" ? (
-                // MAIN CATEGORIES VIEW
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                  
-                  {/* TREATMENTS CATEGORY CARD */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5 }}
-                    onClick={() => setActiveView("treatments")}
-                    className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg cursor-pointer"
-                  >
-                    <div className="flex flex-col flex-1 h-full block select-none">
-                      <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
-                        <img 
-                          src="/hair-transplant/2.webp" 
-                          alt="Treatments" 
-                          className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                
+                {/* TREATMENTS CATEGORY CARD */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg cursor-pointer"
+                >
+                  <Link href="/hair-transplant/treatments" className="flex flex-col flex-1 h-full block select-none">
+                    <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
+                      <img 
+                        src="/hair-transplant/2.webp" 
+                        alt="Treatments" 
+                        className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
+                    </div>
+                    <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+                      <div>
+                        <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
+                          Hair Transplant Treatments
+                        </h2>
+                        <p className="text-black text-sm leading-relaxed mb-6 font-medium">
+                          Explore our comprehensive range of specialized hair restoration treatments designed to address specific concerns and deliver natural results.
+                        </p>
                       </div>
-                      <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
-                        <div>
-                          <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
-                            Hair Transplant Treatments
-                          </h2>
-                          <p className="text-black text-sm leading-relaxed mb-6 font-medium">
-                            Explore our comprehensive range of specialized hair restoration treatments designed to address specific concerns and deliver natural results.
-                          </p>
-                        </div>
-                        <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
-                          View Treatments <span>→</span>
-                        </div>
+                      <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
+                        View Treatments <span>→</span>
                       </div>
                     </div>
-                  </motion.div>
+                  </Link>
+                </motion.div>
 
-                  {/* TECHNIQUES CATEGORY CARD */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: 0.15 }}
-                    onClick={() => setActiveView("techniques")}
-                    className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg cursor-pointer"
-                  >
-                    <div className="flex flex-col flex-1 h-full block select-none">
-                      <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
-                        <img 
-                          src="/hair-transplant/1.webp" 
-                          alt="Techniques" 
-                          className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
+                {/* TECHNIQUES CATEGORY CARD */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.15 }}
+                  className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg cursor-pointer"
+                >
+                  <Link href="/hair-transplant/techniques" className="flex flex-col flex-1 h-full block select-none">
+                    <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
+                      <img 
+                        src="/hair-transplant/1.webp" 
+                        alt="Techniques" 
+                        className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
+                    </div>
+                    <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+                      <div>
+                        <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
+                          Hair Transplant Techniques
+                        </h2>
+                        <p className="text-black text-sm leading-relaxed mb-6 font-medium">
+                          Discover the advanced surgical methodologies and cutting edge technologies we use to ensure maximum density and rapid healing.
+                        </p>
                       </div>
-                      <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
-                        <div>
-                          <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
-                            Hair Transplant Techniques
-                          </h2>
-                          <p className="text-black text-sm leading-relaxed mb-6 font-medium">
-                            Discover the advanced surgical methodologies and cutting edge technologies we use to ensure maximum density and rapid healing.
-                          </p>
-                        </div>
-                        <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
-                          View Techniques <span>→</span>
-                        </div>
+                      <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
+                        View Techniques <span>→</span>
                       </div>
                     </div>
-                  </motion.div>
+                  </Link>
+                </motion.div>
 
-                </div>
-              ) : (
-                // SPECIFIC LIST VIEW
-                <div className="flex flex-col">
-                  <button 
-                    onClick={() => setActiveView("main")} 
-                    className="mb-8 text-[#772424] font-black text-sm tracking-widest uppercase flex items-center gap-2 hover:-translate-x-1 transition-transform w-fit"
-                  >
-                    <span>←</span> Back To Categories
-                  </button>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                    {(activeView === "treatments" ? treatmentsList : techniquesList).map((art, idx) => (
-                      <motion.div 
-                        key={idx}
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: (idx % 2) * 0.15 }}
-                        className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg"
-                      >
-                        <Link href={art.link} className="flex flex-col flex-1 h-full block cursor-pointer select-none">
-                          <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
-                            <img 
-                              src={art.image} 
-                              alt={art.title} 
-                              className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
-                            />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
-                          </div>
-                          
-                          <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
-                            <div>
-                              <h2 className="text-lg sm:text-xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
-                                {art.title}
-                              </h2>
-                              <p className="text-black text-sm leading-relaxed mb-6 font-medium line-clamp-3">
-                                {art.summary}
-                              </p>
-                            </div>
-                            
-                            <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
-                              More <span>→</span>
-                            </div>
-                          </div>
-                        </Link>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              )}
+              </div>
             </div>
 
             {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
