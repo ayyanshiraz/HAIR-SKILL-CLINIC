@@ -35,5 +35,27 @@ export const metadata: Metadata = {
 };
 
 export default function HairTransplantPage() {
-  return <HairTransplantClient />;
+  // Page-specific schema for the Hub Page
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Hair Transplant Services",
+    "description": "Comprehensive hair transplant treatments and advanced techniques at Hair Skill Clinic.",
+    "url": "https://www.hairskill.com/hair-transplant",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "address": "Lahore, Pakistan"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <HairTransplantClient />
+    </>
+  );
 }
