@@ -19,11 +19,24 @@ export default function BeforeAfterStage() {
     { image: `/home/before-after/6.webp` },
   ];
 
+  // Auto-scroll logic (Har 3 second baad next card)
   useEffect(() => {
-    if (scrollRef.current) {
+    // Agar user ne koi photo ya video open ki hui hai, toh auto-scroll pause kar do
+    if (selectedCaseIndex !== null || selectedVideo !== null) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex === cases.length - 1 ? 0 : prevIndex + 1));
+    }, 3000); // 3000ms = 3 seconds (Aap isay fast/slow karne ke liye change kar sakte hain)
+
+    return () => clearInterval(timer);
+  }, [cases.length, selectedCaseIndex, selectedVideo]);
+
+  // Scroll position update logic
+  useEffect(() => {
+    if (scrollRef.current && scrollRef.current.children.length > 0) {
       const container = scrollRef.current;
       const cardWidth = container.children[0].clientWidth;
-      const gap = 32;
+      const gap = 32; // md:gap-8 is 32px
       const scrollPosition = currentIndex * (cardWidth + gap);
       
       container.scrollTo({
@@ -57,7 +70,7 @@ export default function BeforeAfterStage() {
                 <div 
                   key={idx}
                   onClick={() => setSelectedCaseIndex(idx)}
-                  className={`snap-center shrink-0 w-fit mx-auto bg-[#772424] rounded-3xl overflow-hidden flex flex-col border border-gray-100/10 shadow-lg cursor-pointer group transition-transform duration-300 hover:-translate-y-2`}
+                  className={`snap-center shrink-0 w-fit mx-auto bg-white rounded-3xl overflow-hidden flex flex-col border border-gray-100 shadow-lg cursor-pointer group transition-transform duration-300 hover:-translate-y-2`}
                 >
                   <div className={`bg-white relative overflow-hidden flex items-center justify-center p-2`}>
                     <Image 
@@ -67,38 +80,34 @@ export default function BeforeAfterStage() {
                       height={600} 
                       className={`h-[300px] md:h-[400px] w-auto object-contain bg-white transition-transform duration-500 md:group-hover:scale-105 block`} 
                     />
+                    
+                    {/* Hover overlay for zoom icon */}
                     <div className={`absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center pointer-events-none`}>
                       <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 md:scale-75 md:group-hover:scale-100 shadow-xl`}>
                         <svg className={`w-6 h-6 text-[#772424]`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`}><path strokeLinecap={`round`} strokeLinejoin={`round`} strokeWidth={2} d={`M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7`} /></svg>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className={`py-6 px-6 md:px-8 flex items-center justify-between bg-[#772424]`}>
-                    <div className={`flex items-center gap-2 min-h-[32px] w-8`}>
-                      {c.video && (
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setSelectedVideo(c.video);
-                          }}
-                          className={`flex items-center justify-center w-8 h-8 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full border border-white/40 transition-transform hover:scale-110 z-10`}
-                          aria-label={`Play Video`}
-                        >
-                          <svg className={`w-4 h-4 text-white ml-0.5`} fill={`currentColor`} viewBox={`0 0 24 24`}><path d={`M8 5v14l11-7z`}/></svg>
-                        </button>
-                      )}
-                    </div>
-                    <span className={`text-white font-bold text-lg md:text-xl tracking-wide uppercase text-right leading-none whitespace-nowrap`}>
-                      Hair Skill Clinic
-                    </span>
+
+                    {/* Centered Play Button for Video */}
+                    {c.video && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedVideo(c.video);
+                        }}
+                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-16 h-16 bg-[#772424]/90 hover:bg-red-700 backdrop-blur-md rounded-full border-2 border-white/50 transition-transform hover:scale-110 z-20 shadow-2xl`}
+                        aria-label={`Play Video`}
+                      >
+                        <svg className={`w-8 h-8 text-white ml-1`} fill={`currentColor`} viewBox={`0 0 24 24`}><path d={`M8 5v14l11-7z`}/></svg>
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
 
             <div className={`flex justify-center items-center gap-3 mt-4`}>
-              {[0, 1, 2, 3, 4].map((idx) => {
+              {cases.map((_, idx) => {
                 const isActive = currentIndex === idx;
                 return (
                   <div 
@@ -169,7 +178,7 @@ export default function BeforeAfterStage() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: -20 }}
               transition={{ type: `spring`, damping: 25, stiffness: 300 }}
-              className={`relative w-fit max-w-[95vw] bg-[#772424] rounded-2xl md:rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 mx-auto`}
+              className={`relative w-fit max-w-[95vw] bg-white rounded-2xl md:rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 mx-auto`}
             >
               <div className={`bg-white relative flex justify-center items-center p-2 md:p-4`}>
                 <Image 
@@ -177,14 +186,8 @@ export default function BeforeAfterStage() {
                   alt={`Grafts Transformation`}
                   width={1200}
                   height={1200} 
-                  className={`w-auto h-auto max-h-[50vh] md:max-h-[60vh] object-contain block`} 
+                  className={`w-auto h-auto max-h-[70vh] md:max-h-[80vh] object-contain block`} 
                 />
-              </div>
-              
-              <div className={`py-6 px-6 md:px-10 flex items-center justify-end bg-[#772424]`}>
-                <span className={`text-white font-bold text-lg md:text-xl tracking-wide uppercase text-right leading-none whitespace-nowrap`}>
-                  Hair Skill Clinic
-                </span>
               </div>
             </motion.div>
 
