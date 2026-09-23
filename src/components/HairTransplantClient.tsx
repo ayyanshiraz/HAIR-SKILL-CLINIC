@@ -135,8 +135,6 @@ export default function HairTransplantClient() {
 
               </div>
             </div>
-
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
