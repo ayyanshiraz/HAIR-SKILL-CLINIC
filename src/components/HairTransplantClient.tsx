@@ -49,9 +49,7 @@ export default function HairTransplantClient() {
       >
         <div className="max-w-[1400px] mx-auto relative">
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
-            <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
-            <span>/</span>
-            <span className="text-[#772424]">Hair Transplant</span>
+            <Link href="/" className="hover:text-[#772424] transition-colors"><span>←</span> Homepage</Link>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
@@ -89,7 +87,7 @@ export default function HairTransplantClient() {
                     <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
                       <div>
                         <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
-                          Hair Transplant Treatments
+                          Transplant Treatments
                         </h2>
                         <p className="text-black text-sm leading-relaxed mb-6 font-medium">
                           Explore our comprehensive range of specialized hair restoration treatments designed to address specific concerns and deliver natural results.
@@ -122,7 +120,7 @@ export default function HairTransplantClient() {
                     <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
                       <div>
                         <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
-                          Hair Transplant Techniques
+                          Transplant Techniques
                         </h2>
                         <p className="text-black text-sm leading-relaxed mb-6 font-medium">
                           Discover the advanced surgical methodologies and cutting edge technologies we use to ensure maximum density and rapid healing.

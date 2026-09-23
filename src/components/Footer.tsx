@@ -19,7 +19,7 @@ export default function Footer() {
   const bottomLinks = [
     { name: `About`, href: `/about` },
     { name: `Doctors`, href: `/doctors-category` },
-    { name: `Hair Transplant Before & After`, href: `/before-after` },
+    { name: `Before & After`, href: `/before-after` },
     { name: `F.A.Q.S`, href: `/faqs` },
     { name: `Blogs`, href: `/blogs` },
     { name: `Contact`, href: `/contact` },
