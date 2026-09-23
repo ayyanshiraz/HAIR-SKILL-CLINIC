@@ -117,14 +117,14 @@ export default function Navbar() {
                       { name: `DHI Hair Transplant`, path: `/hair-transplant/treatments/dhi` },
                        { name: `FUE By Moterize Method`, path: `/hair-transplant/treatments/fue-by-moterize` },
                         { name: `Chinese Method`, path: `/hair-transplant/treatments/chinese-hair-transplant` },
-                         { name: `FUT Hair Trasnplant`, path: `/hair-transplant/treatments/fut` },
+                         { name: `FUT Trasnplant Method`, path: `/hair-transplant/treatments/fut` },
                       { name: `Beard Transplant`, path: `/hair-transplant/treatments/beard-transplant` },
                       { name: `Female FUE`, path: `/hair-transplant/treatments/female` },
                       { name: `Afro Restoration`, path: `/hair-transplant/treatments/afro-hair` },
                       { name: `Sideburn Transplantation`, path: `/hair-transplant/treatments/sideburn` },
                       { name: `Mesotherapy`, path: `/hair-transplant/treatments/mesotherapy` },
-                      { name: `Ozone Hair Therapy`, path: `/hair-transplant/treatments/ozone-hair-therapy` },
-                      { name: `PRP Hair Treatment`, path: `/hair-transplant/treatments/prp-hair-treatment` },
+                      { name: `Ozone Therapy`, path: `/hair-transplant/treatments/ozone-hair-therapy` },
+                      { name: `PRP Treatment`, path: `/hair-transplant/treatments/prp-hair-treatment` },
                      
                     ].map((item) => (
                       <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
@@ -207,11 +207,11 @@ export default function Navbar() {
               </div>
               <div className={`absolute left-0 top-full hidden group-hover:block w-80 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-4 rounded-xl border border-gray-100`}>
                 {[
-                  { name: `Sterilization at Smile Hair Clinic`, path: `/patient-guide/sterilization` },
+                  { name: `Clinical Sterilization`, path: `/patient-guide/sterilization` },
                   { name: `Hair Washing`, path: `/patient-guide/hair-washing` },
-                  { name: `What Should I Do Before Hair Transplant`, path: `/patient-guide/before` },
+                  { name: `Pre-Procedure Steps`, path: `/patient-guide/before` },
                   { name: `Day Of Procedure`, path: `/patient-guide/day-of` },
-                  { name: `After Hair Transplant Procedure`, path: `/patient-guide/after` },
+                  { name: `Post-Procedure Care`, path: `/patient-guide/after` },
                 ].map((item) => (
                   <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
                     <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>
