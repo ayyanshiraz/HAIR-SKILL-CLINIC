@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your root app data folder
+import Image from "next/image";
 import { countries, type Country } from "../data/countries";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
@@ -34,8 +33,6 @@ export default function FueMotorizedClient() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-
-  // FAQ Accordion state
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -51,54 +48,22 @@ export default function FueMotorizedClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 10 FAQS DATA ---
   const faqList = [
-    {
-      q: "What is a motorized FUE hair transplant?",
-      a: "Motorized FUE uses an electronic punch device to safely and rapidly extract hair follicles from the donor area. This speeds up the process and protects graft hydration compared to older manual methods."
-    },
-    {
-      q: "Is motorized FUE better than manual FUE?",
-      a: "For large sessions motorized FUE is vastly superior because it reduces the time grafts spend outside the body improving survival rates. Manual FUE is typically only practical for very small graft counts."
-    },
-    {
-      q: "Does the motorized punch cause more scarring?",
-      a: "No. When used by an experienced surgeon the motorized punch uses the same microdiameter as a manual punch leaving tiny dot marks that become virtually invisible once healed."
-    },
-    {
-      q: "How long does an FUE procedure take?",
-      a: "Depending on the graft count a motorized FUE session typically lasts between 5 and 7 hours allowing for comfortable breaks throughout the day."
-    },
-    {
-      q: "Will I experience pain during the motorized extraction?",
-      a: "The procedure is performed under local anesthesia. You will experience no pain during the extraction or implantation phases."
-    },
-    {
-      q: "How much does an FUE transplant cost in Lahore?",
-      a: "The FUE hair transplant cost in Pakistan depends on the total grafts required but it remains highly accessible compared to Western clinics offering immense value within local PKR tiers."
-    },
-    {
-      q: "When can I wash my hair after FUE?",
-      a: "Your first gentle wash is usually performed at the clinic within 24 to 48 hours after surgery. You will receive detailed instructions for safe home care."
-    },
-    {
-      q: "How many grafts can be extracted with motorized FUE?",
-      a: "A safe megasession can extract between 3000 and 5000 grafts in a single day depending on your specific donor density and scalp laxity."
-    },
-    {
-      q: "Do the transplanted hairs look natural?",
-      a: "Yes. The natural appearance comes from how the surgeon designs the hairline and angles the channel openings regardless of how the grafts were initially extracted."
-    },
-    {
-      q: "Are the results of motorized FUE permanent?",
-      a: "Yes. The extracted donor hairs are genetically resistant to the hormone that causes hair loss making your new growth permanent."
-    }
+    { q: "What is a motorized FUE hair transplant?", a: "Motorized FUE uses an electronic punch device to safely and rapidly extract hair follicles from the donor area. This speeds up the process and protects graft hydration compared to older manual methods." },
+    { q: "Is motorized FUE better than manual FUE?", a: "For large sessions motorized FUE is vastly superior because it reduces the time grafts spend outside the body improving survival rates. Manual FUE is typically only practical for very small graft counts." },
+    { q: "Does the motorized punch cause more scarring?", a: "No. When used by an experienced surgeon the motorized punch uses the same microdiameter as a manual punch leaving tiny dot marks that become virtually invisible once healed." },
+    { q: "How long does an FUE procedure take?", a: "Depending on the graft count a motorized FUE session typically lasts between 5 and 7 hours allowing for comfortable breaks throughout the day." },
+    { q: "Will I experience pain during the motorized extraction?", a: "The procedure is performed under local anesthesia. You will experience no pain during the extraction or implantation phases." },
+    { q: "How much does an FUE transplant cost in Lahore?", a: "The FUE hair transplant cost in Pakistan depends on the total grafts required but it remains highly accessible compared to Western clinics offering immense value within local PKR tiers." },
+    { q: "When can I wash my hair after FUE?", a: "Your first gentle wash is usually performed at the clinic within 24 to 48 hours after surgery. You will receive detailed instructions for safe home care." },
+    { q: "How many grafts can be extracted with motorized FUE?", a: "A safe megasession can extract between 3000 and 5000 grafts in a single day depending on your specific donor density and scalp laxity." },
+    { q: "Do the transplanted hairs look natural?", a: "Yes. The natural appearance comes from how the surgeon designs the hairline and angles the channel openings regardless of how the grafts were initially extracted." },
+    { q: "Are the results of motorized FUE permanent?", a: "Yes. The extracted donor hairs are genetically resistant to the hormone that causes hair loss making your new growth permanent." }
   ];
 
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
-      {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -106,7 +71,6 @@ export default function FueMotorizedClient() {
         className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
@@ -117,26 +81,24 @@ export default function FueMotorizedClient() {
             <span className="text-[#772424]">FUE Motorized Hair Transplant</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             FUE Motorized Hair Transplant Pakistan
           </h1>
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
-            {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & HERO */}
             <div className="w-full lg:w-2/3 block">
               
-              {/* Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
-                <img 
+                <Image 
                   src="/home/techniques/1.webp" 
                   alt="Surgeon performing FUE Motorized hair transplant extraction at Hair Skill Clinic" 
+                  fill
+                  priority
                   className="w-full h-full object-cover group-hover:scale-[1.02] group-active:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -145,7 +107,6 @@ export default function FueMotorizedClient() {
                 </div>
               </motion.div>
 
-              {/* OVERVIEW SECTION */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   FUE Motorized Hair Transplant
@@ -155,7 +116,6 @@ export default function FueMotorizedClient() {
                 </p>
               </motion.div>
 
-              {/* BENEFITS SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Benefits of Motorized FUE</h3>
                 <div className="space-y-3 ml-1 sm:ml-2">
@@ -175,7 +135,6 @@ export default function FueMotorizedClient() {
                 </div>
               </motion.div>
 
-              {/* RECOVERY & AFTERCARE SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Recovery and Aftercare</h3>
                 <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
@@ -188,7 +147,6 @@ export default function FueMotorizedClient() {
                 </div>
               </motion.div>
 
-              {/* COMPREHENSIVE GUIDE SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Comprehensive Guide to FUE Motorized Hair Transplant
@@ -204,7 +162,6 @@ export default function FueMotorizedClient() {
                 </p>
               </motion.div>
 
-              {/* FUE VS MANUAL SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Motorized FUE vs Manual FUE: Understanding the Difference
@@ -220,7 +177,6 @@ export default function FueMotorizedClient() {
                 </p>
               </motion.div>
 
-              {/* CANDIDATE SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Who Is a Good Candidate for Motorized FUE?
@@ -250,7 +206,6 @@ export default function FueMotorizedClient() {
                 </p>
               </motion.div>
 
-              {/* COST RANGES SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   FUE Hair Transplant Cost Ranges in Pakistan
@@ -266,7 +221,6 @@ export default function FueMotorizedClient() {
                 </p>
               </motion.div>
 
-              {/* TIMELINE SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   The Procedure and Recovery Timeline
@@ -296,7 +250,6 @@ export default function FueMotorizedClient() {
                 </div>
               </motion.div>
 
-              {/* RISKS & SAFETY SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Risks, Safety, and Donor Management
@@ -309,7 +262,6 @@ export default function FueMotorizedClient() {
                 </p>
               </motion.div>
 
-              {/* CLOSING SECTION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Start Your Hair Restoration Journey With Hair Skill Clinic
@@ -322,7 +274,6 @@ export default function FueMotorizedClient() {
                 </p>
               </motion.div>
 
-              {/* SECTION: FAQS ACCORDION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   FUE Motorized Hair Transplant FAQs
@@ -364,7 +315,6 @@ export default function FueMotorizedClient() {
 
             </div>
 
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
@@ -403,7 +353,7 @@ export default function FueMotorizedClient() {
 
                   <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
                     <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
+                      <Image src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} width={20} height={15} className="w-5 object-contain" />
                       <span>{selectedCountry.dial}</span>
                       <span className="text-[10px]">▼</span>
                     </div>
@@ -413,7 +363,7 @@ export default function FueMotorizedClient() {
                         {countries.map((country: Country, idx: number) => (
                           <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 active:bg-gray-200 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
-                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
+                              <Image src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} width={20} height={15} className="w-5 object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
                               <span className="text-xs text-black truncate">{country.name}</span>
                             </div>
