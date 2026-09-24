@@ -33,5 +33,26 @@ export const metadata: Metadata = {
 };
 
 export default function ChineseMethodPage() {
-  return <ChineseMethodClient />;
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Chinese Hair Transplant Method in Lahore",
+    "description": "Discover the high-density Chinese hair transplant method in Lahore combined with strategic PRP therapy.",
+    "url": "https://www.hairskill.com/hair-transplant/treatments/chinese-hair-transplant",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "address": "Lahore, Pakistan"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <ChineseMethodClient />
+    </>
+  );
 }

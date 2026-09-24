@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your root app data folder
+import Image from "next/image";
 import { countries, type Country } from "../data/countries";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
@@ -51,7 +50,6 @@ export default function ChineseMethodClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
-      {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -59,7 +57,6 @@ export default function ChineseMethodClient() {
         className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
@@ -70,26 +67,24 @@ export default function ChineseMethodClient() {
             <span className="text-[#772424]">Chinese Hair Transplant Method</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Chinese Hair Transplant Method
           </h1>
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
-            {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & HERO */}
             <div className="w-full lg:w-2/3 block">
               
-              {/* Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
-                <img 
+                <Image 
                   src="/home/techniques/2.webp" 
                   alt="Surgeon performing specialized Chinese Hair Transplant Method at Hair Skill Clinic" 
+                  fill
+                  priority
                   className="w-full h-full object-cover group-hover:scale-[1.02] group-active:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -98,28 +93,25 @@ export default function ChineseMethodClient() {
                 </div>
               </motion.div>
 
-              {/* OVERVIEW SECTION */}
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
+              <div className="mb-12 flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   What is the Chinese Hair Transplant Method?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   The Chinese hair transplant method is a highly specialized hair restoration approach designed to improve hair density and complete scalp coverage while supporting healthy and rapid hair growth. This innovative procedure is performed by experienced medical professionals using advanced rapid implantation techniques. The primary focus of the Chinese method of hair transplant is to minimize the time hair follicles spend outside the scalp. By doing so the biological integrity of each graft is preserved leading to natural looking results and an incredibly high survival rate for the transplanted hair.
                 </p>
-              </motion.div>
+              </div>
 
-              {/* SCIENCE SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12 flex flex-col gap-6">
+              <div className="mb-12 flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   The Science Behind Chinese Hair Restoration
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Unlike older manual techniques the Chinese hair transplant relies on speed and precision. The surgical team utilizes calibrated extraction punches and specialized implanter pens. This allows continuous fluid movement during surgery. When you reduce graft handling and friction you protect the delicate root structures. For patients suffering from severe androgenetic alopecia this means achieving maximum density in a single session without causing unnecessary trauma to the donor area.
                 </p>
-              </motion.div>
+              </div>
 
-              {/* BENEFITS SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
+              <div className="mb-12">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Benefits of the Chinese Hair Transplant Method</h3>
                 <div className="space-y-3 ml-1 sm:ml-2">
                   {[
@@ -136,10 +128,9 @@ export default function ChineseMethodClient() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
 
-              {/* PRP RECOMMENDATION SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">The Critical Role of PRP Therapy in the Chinese Method</h3>
                 <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
@@ -159,30 +150,27 @@ export default function ChineseMethodClient() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              {/* VS TRADITIONAL SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Chinese Method vs Traditional FUE
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   When researching the best options patients frequently compare the Chinese method vs traditional FUE. While standard FUE extracts and places follicles one by one it can sometimes be a slower process. The Chinese technique accelerates the implantation phase significantly. The faster the grafts are secured back into the scalp the higher the chance they will thrive. Furthermore traditional FUE does not strictly mandate extensive PRP support whereas the Chinese hair restoration protocol considers biological support essential for high density outcomes.
                 </p>
-              </motion.div>
+              </div>
 
-              {/* COST SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Chinese Hair Transplant Cost in Pakistan and Lahore
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   If you are looking for a transparent Chinese hair transplant cost in Lahore the Hair Skill Clinic offers exceptional value. Global standards of clinical excellence are maintained while keeping the packages within accessible local PKR tiers. Because the first two PRP sessions and your initial post op medications are bundled into the primary cost patients can plan their financial commitment without worrying about hidden clinical fees. If you are searching for the best hair transplant clinic near me you will find our pricing structure both competitive and medically driven.
                 </p>
-              </motion.div>
+              </div>
 
-              {/* TIMELINE SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Recovery and Aftercare Timeline
                 </h2>
@@ -208,21 +196,19 @@ export default function ChineseMethodClient() {
                     <p className="text-black text-base md:text-lg font-medium"><strong className="font-black">Months Twelve to Fifteen:</strong> You will experience the full mature density and the final natural result of your Chinese method hair transplant.</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              {/* START JOURNEY SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Start Your Hair Restoration Journey
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Achieving a full head of hair requires the right technique and an experienced medical team. At Hair Skill Clinic we ensure every step of your procedure is safe comfortable and designed for maximum growth. Get your free consultation today and discover how this advanced technique can restore your confidence.
                 </p>
-              </motion.div>
+              </div>
 
             </div>
 
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
@@ -261,7 +247,7 @@ export default function ChineseMethodClient() {
 
                   <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
                     <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
+                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} loading="lazy" className="w-5 h-auto object-contain" />
                       <span>{selectedCountry.dial}</span>
                       <span className="text-[10px]">▼</span>
                     </div>
@@ -271,7 +257,7 @@ export default function ChineseMethodClient() {
                         {countries.map((country: Country, idx: number) => (
                           <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 active:bg-gray-200 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
-                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
+                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} loading="lazy" className="w-5 h-auto object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
                               <span className="text-xs text-black truncate">{country.name}</span>
                             </div>
