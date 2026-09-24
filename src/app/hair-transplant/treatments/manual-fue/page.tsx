@@ -35,5 +35,26 @@ export const metadata: Metadata = {
 };
 
 export default function ManuelFuePage() {
-  return <ManuelFueClient />;
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Manual FUE Hair Transplant in Lahore",
+    "description": "Get a highly controlled Manual FUE hair transplant in Lahore. We use one-by-one manual punch extraction to ensure maximum graft survival and pristine quality.",
+    "url": "https://www.hairskill.com/hair-transplant/treatments/manual-fue",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "address": "Lahore, Pakistan"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <ManuelFueClient />
+    </>
+  );
 }
