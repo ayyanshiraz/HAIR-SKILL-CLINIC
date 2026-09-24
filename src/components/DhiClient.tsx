@@ -498,23 +498,24 @@ export default function DhiClient() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  {/* CHANGED FROM h4 TO h3 */}
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/80">
-                    <h4 className="text-lg font-black text-[#772424] mb-2">The First Week</h4>
+                    <h3 className="text-lg font-black text-[#772424] mb-2">The First Week</h3>
                     <p className="text-black font-medium text-sm md:text-base leading-relaxed">Redness mild swelling tightness or small scabs improve within days. Your first wash happens at the clinic. Sleeping upright protects grafts upfront. Early days feel far easier than classic channel opening.</p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/80">
-                    <h4 className="text-lg font-black text-[#772424] mb-2">Shedding Staging</h4>
+                    <h3 className="text-lg font-black text-[#772424] mb-2">Shedding Staging</h3>
                     <p className="text-black font-medium text-sm md:text-base leading-relaxed">Between weeks 2 and 4 transplanted shafts shed. This is normal. The follicle enters a resting stage before new sprouts anchor. Shedding does not mean failure; it is vital root remodeling.</p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/80">
-                    <h4 className="text-lg font-black text-[#772424] mb-2">Growth Turning Points</h4>
+                    <h3 className="text-lg font-black text-[#772424] mb-2">Growth Turning Points</h3>
                     <p className="text-black font-medium text-sm md:text-base leading-relaxed">Small thin hairs appear around months 3 and 4 thickening gradually. By months 6 to 9 patients see noticeable DHI hair transplant results representing the first major visual milestone.</p>
                   </div>
 
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/80">
-                    <h4 className="text-lg font-black text-[#772424] mb-2">Mature Results and Desk Work</h4>
+                    <h3 className="text-lg font-black text-[#772424] mb-2">Mature Results and Desk Work</h3>
                     <p className="text-black font-medium text-sm md:text-base leading-relaxed">Final mature density settles between months 12 and 18. Most people return to desk work in a few days while heavy physical exertion requires additional tissue recovery upfront.</p>
                   </div>
                 </div>

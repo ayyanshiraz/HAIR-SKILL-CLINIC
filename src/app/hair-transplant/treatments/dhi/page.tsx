@@ -35,5 +35,26 @@ export const metadata: Metadata = {
 };
 
 export default function DhiPage() {
-  return <DhiClient />;
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "DHI Hair Transplant in Lahore",
+    "description": "Achieve a flawless hairline with an advanced DHI hair transplant in Lahore. We use Choi Implanter Pens for direct implantation and natural angle control.",
+    "url": "https://www.hairskill.com/hair-transplant/treatments/dhi",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "address": "Lahore, Pakistan"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <DhiClient />
+    </>
+  );
 }
