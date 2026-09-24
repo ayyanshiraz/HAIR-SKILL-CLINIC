@@ -33,5 +33,26 @@ export const metadata: Metadata = {
 };
 
 export default function FueMotorizedPage() {
-  return <FueMotorizedClient />;
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Motorized FUE Hair Transplant in Lahore",
+    "description": "Get a high-density Motorized FUE hair transplant in Lahore. We perform safe, high-speed graft extraction for mega-sessions and maximum natural regrowth.",
+    "url": "https://www.hairskill.com/hair-transplant/treatments/fue-by-moterize",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "address": "Lahore, Pakistan"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <FueMotorizedClient />
+    </>
+  );
 }
