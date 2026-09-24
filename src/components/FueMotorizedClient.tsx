@@ -107,16 +107,17 @@ export default function FueMotorizedClient() {
                 </div>
               </motion.div>
 
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
+              {/* Reduced JS payload: Replaced motion.div with standard div for text blocks */}
+              <div className="mb-12 flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   FUE Motorized Hair Transplant
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   An FUE motorized hair transplant is a modern hair restoration technique that uses a specialized electronic punch device to extract hair follicles from the donor area. This method allows highly efficient graft harvesting while maintaining excellent graft quality and natural looking results. Motorized FUE is a popular option for patients requiring a larger number of grafts because it offers a minimally invasive approach to hair transplantation with exceptional speed and safety.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
+              <div className="mb-12">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Benefits of Motorized FUE</h3>
                 <div className="space-y-3 ml-1 sm:ml-2">
                   {[
@@ -133,9 +134,9 @@ export default function FueMotorizedClient() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Recovery and Aftercare</h3>
                 <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
@@ -145,9 +146,9 @@ export default function FueMotorizedClient() {
                     Our medical specialists will assess your scalp condition and provide personalized guidance throughout your entire recovery journey.
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Comprehensive Guide to FUE Motorized Hair Transplant
                 </h2>
@@ -160,9 +161,9 @@ export default function FueMotorizedClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                   If you are searching for the best FUE hair transplant clinic near me you deserve a medical team that balances extraction speed with strict donor preservation.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Motorized FUE vs Manual FUE: Understanding the Difference
                 </h2>
@@ -175,9 +176,9 @@ export default function FueMotorizedClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   In experienced hands the motorized punch is just as safe as a manual punch. The risk of overharvesting only arises in unaccredited clinics where untrained technicians operate the device at incorrect speeds. At the Hair Skill Clinic every extraction is supervised and executed with strict depth control.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Who Is a Good Candidate for Motorized FUE?
                 </h2>
@@ -204,9 +205,9 @@ export default function FueMotorizedClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   For micro refinement or strictly hairline lowering methods like DHI motorized extraction may be combined with direct implantation. Matching the extraction speed to your pattern protects both your donor zone and your long term result.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   FUE Hair Transplant Cost Ranges in Pakistan
                 </h2>
@@ -219,9 +220,9 @@ export default function FueMotorizedClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Most reputable clinical facilities offering an FUE hair transplant Lahore package provide comprehensive care. Packages at Hair Skill bundle your complete cleanroom extractions implantation cellular post op medications first clinical wash and scheduled follow up care upfront.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   The Procedure and Recovery Timeline
                 </h2>
@@ -248,9 +249,9 @@ export default function FueMotorizedClient() {
                     <p className="text-black text-base md:text-lg font-medium"><strong className="font-black">Months 12 to 15:</strong> The final mature density settles giving you a complete natural transformation.</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Risks, Safety, and Donor Management
                 </h2>
@@ -260,9 +261,9 @@ export default function FueMotorizedClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
                   When guided by a skilled surgeon motorized FUE is exceptionally safe yielding a graft survival rate that easily matches or exceeds slower manual methods due to reduced out of body time.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
+              <div className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight mb-6 border-b pb-3 border-gray-100">
                   Start Your Hair Restoration Journey With Hair Skill Clinic
                 </h2>
@@ -272,9 +273,9 @@ export default function FueMotorizedClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   You meet real doctors. You review your design together. You receive a personalized plan and your exact package quote in PKR based on real medical need not generic marketing. Get your free assessment today and let Hair Skill help you take the next step toward a confident natural looking result.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
+              <div className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   FUE Motorized Hair Transplant FAQs
                 </h2>
@@ -311,7 +312,7 @@ export default function FueMotorizedClient() {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
 
             </div>
 
@@ -353,7 +354,8 @@ export default function FueMotorizedClient() {
 
                   <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
                     <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <Image src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} width={20} height={15} className="w-5 object-contain" />
+                      {/* Fixed: Use normal img here to save Next.js injection size on dropdown */}
+                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} loading="lazy" className="w-5 h-auto object-contain" />
                       <span>{selectedCountry.dial}</span>
                       <span className="text-[10px]">▼</span>
                     </div>
@@ -363,7 +365,8 @@ export default function FueMotorizedClient() {
                         {countries.map((country: Country, idx: number) => (
                           <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 active:bg-gray-200 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
-                              <Image src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} width={20} height={15} className="w-5 object-contain shrink-0" />
+                              {/* Fixed: Use normal img here instead of Next Image to massively reduce DOM size */}
+                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} loading="lazy" className="w-5 h-auto object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
                               <span className="text-xs text-black truncate">{country.name}</span>
                             </div>
