@@ -72,7 +72,7 @@ export default function ManuelFueClient() {
           
           {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-            Manual FUE Extraction | Hair Skill Clinic
+            Manual FUE Extraction
           </h1>
         </div>
       </motion.section>
