@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your root app data folder
+import Image from "next/image";
 import { countries, type Country } from "../data/countries";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
@@ -51,7 +50,6 @@ export default function FutClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
-      {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -59,7 +57,6 @@ export default function FutClient() {
         className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
@@ -70,26 +67,25 @@ export default function FutClient() {
             <span className="text-[#772424]">FUT Hair Transplant</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             FUT Hair Transplant
           </h1>
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
-            {/* LEFT COLUMN: PROSE */}
             <div className="w-full lg:w-2/3 block">
               
-              {/* Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
-                <img 
+                <Image 
                   src="/home/techniques/3.webp" 
                   alt="Modern advanced minimally invasive hair restoration consultation at Hair Skill Clinic" 
+                  width={1200}
+                  height={750}
+                  priority
                   className="w-full h-full object-cover group-hover:scale-[1.02] group-active:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -98,7 +94,6 @@ export default function FutClient() {
                 </div>
               </motion.div>
 
-              {/* OVERVIEW SECTION */}
               <div className="mb-10 flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   What is FUT Follicular Unit Transplantation?
@@ -111,7 +106,6 @@ export default function FutClient() {
                 </p>
               </div>
 
-              {/* IMPORTANT MEDICAL NOTICE SECTION */}
               <div className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4">Important Medical Notice: We Do Not Perform FUT</h2>
                 <div className="bg-[#772424] text-white p-8 rounded-3xl shadow-xl border-4 border-[#C5A059] flex flex-col gap-4">
@@ -128,7 +122,6 @@ export default function FutClient() {
                 </div>
               </div>
 
-              {/* SURGICAL PROCEDURE SECTION */}
               <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   The Surgical Procedure: How Was FUT Traditionally Done?
@@ -159,7 +152,6 @@ export default function FutClient() {
                 </p>
               </div>
 
-              {/* DIFFERENCE BETWEEN FUE AND FUT */}
               <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   The Core Difference Between FUE and FUT Hair Transplant
@@ -186,7 +178,6 @@ export default function FutClient() {
                 </p>
               </div>
 
-              {/* COST & LOCAL SEO SECTION */}
               <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Analyzing FUT Hair Transplant Cost in Pakistan
@@ -202,7 +193,6 @@ export default function FutClient() {
                 </p>
               </div>
 
-              {/* PERMANENT SCARRING SECTION */}
               <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Permanent Scarring and Long-Term Complications
@@ -218,7 +208,6 @@ export default function FutClient() {
                 </p>
               </div>
 
-              {/* ALTERNATIVE TREATMENTS AVAILABLE SECTION */}
               <div className="mb-14 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6">Exploring Better Modern Alternatives at Hair Skill Clinic</h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
@@ -243,7 +232,6 @@ export default function FutClient() {
                 </div>
               </div>
 
-              {/* PRP RECOMMENDATION SECTION */}
               <div className="mb-14 pt-6 border-t border-gray-200">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">The Critical Role of PRP Therapy for Hair Growth</h3>
                 <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
@@ -270,7 +258,6 @@ export default function FutClient() {
                 </div>
               </div>
 
-              {/* CONCLUSION SECTION */}
               <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Why Choose Hair Skill Clinic Over Traditional Invasive Methods
@@ -288,7 +275,6 @@ export default function FutClient() {
 
             </div>
 
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
@@ -327,7 +313,7 @@ export default function FutClient() {
 
                   <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
                     <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
+                      <img loading="lazy" src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
                       <span>{selectedCountry.dial}</span>
                       <span className="text-[10px]">▼</span>
                     </div>
@@ -337,7 +323,7 @@ export default function FutClient() {
                         {countries.map((country: Country, idx: number) => (
                           <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 active:bg-gray-200 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
-                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
+                              <img loading="lazy" src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
                               <span className="font-bold">{country.code}</span>
                               <span className="text-xs text-black truncate">{country.name}</span>
                             </div>
