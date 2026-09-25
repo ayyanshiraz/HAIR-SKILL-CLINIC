@@ -1,40 +1,24 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// Type sirf local define kiya hai taake heavy file import na karni paray
-interface Country {
-  name: string;
-  code: string;
-  dial: string;
-}
+// Safely mapped to your root app data folder
+import { countries, type Country } from "../data/countries";
 
 export default function FutClient() {
+  const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
+  const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  
-  // Lazy Loading States
-  const [countriesList, setCountriesList] = useState<Country[]>([]);
-  const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
-
-  // Dynamic Import: Data sirf tab load hoga jab page render ho jayega (Initial Payload bachane ke liye)
-  useEffect(() => {
-    import("../data/countries").then((module) => {
-      const data = module.countries;
-      setCountriesList(data);
-      setSelectedCountry(data.find((c: Country) => c.code === "PK") || data[0]);
-    });
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const dialCode = selectedCountry ? selectedCountry.dial : "+92";
     const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the FUT Information Page regarding advanced FUE/DHI alternatives.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${dialCode} ${phone}`;
+    const textMessage = `Hello! I would like to get a free consultation from the FUT Information Page regarding advanced FUE/DHI alternatives.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
     const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -46,7 +30,7 @@ export default function FutClient() {
 
   return (
     <>
-      {/* Lightweight Custom CSS (No Framer Motion JS Payload) */}
+      {/* Lightweight Custom CSS for Animations (Zero JS Payload) */}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes fadeUpAnim {
           from { opacity: 0; transform: translateY(35px); }
@@ -62,12 +46,13 @@ export default function FutClient() {
         .css-slide-right {
           animation: slideInRightAnim 0.8s cubic-bezier(0.2, 0.65, 0.3, 0.9) forwards;
           animation-delay: 0.2s;
-          opacity: 0; 
+          opacity: 0; /* Stays hidden until delay finishes */
         }
       `}} />
 
       <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
         
+        {/* --- ASYMMETRIC HEADER --- */}
         <section className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6 css-fade-up">
           <div className="max-w-[1300px] mx-auto relative">
             <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
@@ -86,6 +71,7 @@ export default function FutClient() {
           </div>
         </section>
 
+        {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
         <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
           <div className="max-w-[1300px] mx-auto">
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
@@ -93,6 +79,7 @@ export default function FutClient() {
               {/* LEFT COLUMN: PROSE */}
               <div className="w-full lg:w-2/3 block">
                 
+                {/* Flagship Hero Visual */}
                 <div className="css-fade-up w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                   <Image 
                     src="/home/techniques/3.webp" 
@@ -108,6 +95,7 @@ export default function FutClient() {
                   </div>
                 </div>
 
+                {/* OVERVIEW SECTION */}
                 <div className="mb-10 flex flex-col gap-6">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                     What is FUT Follicular Unit Transplantation?
@@ -120,6 +108,7 @@ export default function FutClient() {
                   </p>
                 </div>
 
+                {/* IMPORTANT MEDICAL NOTICE SECTION */}
                 <div className="mb-14">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4">Important Medical Notice: We Do Not Perform FUT</h2>
                   <div className="bg-[#772424] text-white p-8 rounded-3xl shadow-xl border-4 border-[#C5A059] flex flex-col gap-4">
@@ -136,6 +125,7 @@ export default function FutClient() {
                   </div>
                 </div>
 
+                {/* SURGICAL PROCEDURE SECTION */}
                 <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                     The Surgical Procedure: How Was FUT Traditionally Done?
@@ -166,6 +156,7 @@ export default function FutClient() {
                   </p>
                 </div>
 
+                {/* DIFFERENCE BETWEEN FUE AND FUT */}
                 <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                     The Core Difference Between FUE and FUT Hair Transplant
@@ -192,6 +183,7 @@ export default function FutClient() {
                   </p>
                 </div>
 
+                {/* COST & LOCAL SEO SECTION */}
                 <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                     Analyzing FUT Hair Transplant Cost in Pakistan
@@ -207,6 +199,7 @@ export default function FutClient() {
                   </p>
                 </div>
 
+                {/* PERMANENT SCARRING SECTION */}
                 <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                     Permanent Scarring and Long-Term Complications
@@ -222,6 +215,7 @@ export default function FutClient() {
                   </p>
                 </div>
 
+                {/* ALTERNATIVE TREATMENTS AVAILABLE SECTION */}
                 <div className="mb-14 pt-6 border-t border-gray-200">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6">Exploring Better Modern Alternatives at Hair Skill Clinic</h2>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
@@ -246,6 +240,7 @@ export default function FutClient() {
                   </div>
                 </div>
 
+                {/* PRP RECOMMENDATION SECTION */}
                 <div className="mb-14 pt-6 border-t border-gray-200">
                   <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">The Critical Role of PRP Therapy for Hair Growth</h3>
                   <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
@@ -272,6 +267,7 @@ export default function FutClient() {
                   </div>
                 </div>
 
+                {/* CONCLUSION SECTION */}
                 <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                     Why Choose Hair Skill Clinic Over Traditional Invasive Methods
@@ -323,20 +319,14 @@ export default function FutClient() {
 
                     <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
                       <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                        {selectedCountry ? (
-                          <>
-                            <img loading="lazy" src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
-                            <span>{selectedCountry.dial}</span>
-                          </>
-                        ) : (
-                          <span>+92</span> // Default Text jab tak list lazy load ho rahi ho
-                        )}
+                        <img loading="lazy" src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
+                        <span>{selectedCountry.dial}</span>
                         <span className="text-[10px]">▼</span>
                       </div>
                       
-                      {isDropdownOpen && countriesList.length > 0 && (
+                      {isDropdownOpen && (
                         <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
-                          {countriesList.map((country: Country, idx: number) => (
+                          {countries.map((country: Country, idx: number) => (
                             <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 active:bg-gray-200 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                               <div className="flex items-center gap-2.5 truncate mr-2">
                                 <img loading="lazy" src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
