@@ -82,7 +82,7 @@ export default function FutClient() {
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
-            {/* LEFT COLUMN: SCROLL-ANIMATED PROSE */}
+            {/* LEFT COLUMN: PROSE */}
             <div className="w-full lg:w-2/3 block">
               
               {/* Flagship Hero Visual */}
@@ -99,7 +99,7 @@ export default function FutClient() {
               </motion.div>
 
               {/* OVERVIEW SECTION */}
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-10 flex flex-col gap-6">
+              <div className="mb-10 flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   What is FUT Follicular Unit Transplantation?
                 </h2>
@@ -109,10 +109,10 @@ export default function FutClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   While FUT was widely used in the past and considered the absolute gold standard for many years, the medical community recognizes it as a highly invasive surgical procedure. Because it requires a surgical scalpel, deep tissue cutting, and stitches or staples to close the wound, it naturally involves a significantly longer healing process. Furthermore, it leaves a permanent linear scar on the back of the head, which can severely limit the future hairstyle choices of the patient. Understanding the mechanics of the strip method is essential for anyone researching permanent hair loss solutions today.
                 </p>
-              </motion.div>
+              </div>
 
               {/* IMPORTANT MEDICAL NOTICE SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
+              <div className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4">Important Medical Notice: We Do Not Perform FUT</h2>
                 <div className="bg-[#772424] text-white p-8 rounded-3xl shadow-xl border-4 border-[#C5A059] flex flex-col gap-4">
                   <div className="flex items-center gap-3">
@@ -126,10 +126,10 @@ export default function FutClient() {
                     We strongly advise all our patients to consider advanced contemporary treatments such as Manual FUE, Motorized FUE, and the highly precise DHI technique. These modern approaches provide maximum graft survival without the intense pain, extended surgical downtime, and highly visible linear scars fundamentally associated with the traditional strip method. Our commitment is to elevate the standard of care and ensure that every patient experiences a comfortable journey from consultation to final growth.
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
               {/* SURGICAL PROCEDURE SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   The Surgical Procedure: How Was FUT Traditionally Done?
                 </h2>
@@ -157,10 +157,10 @@ export default function FutClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mt-2">
                   Because this method involves cutting and removing a continuous piece of tissue, the FUT hair transplant side effects often include extreme scalp tightness, prolonged tissue numbness, and a significant risk of stretching the linear scar if the patient engages in heavy physical activity too soon after the surgery.
                 </p>
-              </motion.div>
+              </div>
 
               {/* DIFFERENCE BETWEEN FUE AND FUT */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   The Core Difference Between FUE and FUT Hair Transplant
                 </h2>
@@ -184,10 +184,10 @@ export default function FutClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   If you are asking if a future hair transplant is safe, the answer is technically yes when it is performed by a highly qualified and experienced surgeon in a sterile environment. However, being safe does not mean it is the optimal choice. The modern medical community heavily favors FUE because it eliminates the risks associated with large surgical incisions such as nerve damage, severe infections, and permanent scalp tightness.
                 </p>
-              </motion.div>
+              </div>
 
               {/* COST & LOCAL SEO SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Analyzing FUT Hair Transplant Cost in Pakistan
                 </h2>
@@ -200,10 +200,10 @@ export default function FutClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   Today, modern technology has made both Manual FUE and Motorized FUE highly affordable and incredibly efficient. If you are looking for a top-rated hair transplant clinic near me with highly competitive and transparent prices, Hair Skill Clinic offers exceptional FUE packages. These packages provide maximum hair density without exposing you to the severe anatomical drawbacks of the traditional strip method. The overall value of preserving your donor area intact far exceeds any initial cost difference whether you are traveling from Lahore, Karachi, Rawalpindi, or anywhere else in Pakistan.
                 </p>
-              </motion.div>
+              </div>
 
               {/* PERMANENT SCARRING SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Permanent Scarring and Long-Term Complications
                 </h2>
@@ -216,10 +216,10 @@ export default function FutClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   By eliminating the scalpel, FUE and DHI methods preserve the complex nerve networks and vascular structures of the scalp, ensuring a much healthier long-term outcome for the patient.
                 </p>
-              </motion.div>
+              </div>
 
               {/* ALTERNATIVE TREATMENTS AVAILABLE SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 pt-6 border-t border-gray-200">
+              <div className="mb-14 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6">Exploring Better Modern Alternatives at Hair Skill Clinic</h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-8">
                   Since we strictly do not offer FUT, we provide world-class modern alternatives that guarantee a remarkably high survival rate for your grafts and a pristine, unscarred donor area.
@@ -227,24 +227,24 @@ export default function FutClient() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                   <Link href="/hair-transplant/treatments/manual-fue" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
-                    <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Manual FUE ›</h4>
+                    <h3 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Manual FUE ›</h3>
                     <p className="text-black text-xs font-medium leading-relaxed">Manual FUE involves extracting individual hair follicles one by one using a highly precise handheld manual punch. This method is incredibly gentle on the donor area, giving the surgeon ultimate tactile feedback. It ensures maximum graft survival and minimal tissue trauma, making it absolutely perfect for smaller refinement sessions, facial hair restoration, and detailed hairline reconstructions.</p>
                   </Link>
 
                   <Link href="/hair-transplant/treatments/fue-by-moterize" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
-                    <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Motorized FUE ›</h4>
+                    <h3 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Motorized FUE ›</h3>
                     <p className="text-black text-xs font-medium leading-relaxed">For patients suffering from advanced baldness and requiring high-volume megasessions, Motorized FUE is the ultimate clinical solution. This technique uses a low-rotation automated punch to isolate and extract grafts rapidly, safely, and efficiently. It provides the high graft yield that people traditionally associated with FUT, but it achieves this without ever cutting a strip of skin or leaving a linear scar.</p>
                   </Link>
 
                   <Link href="/hair-transplant/treatments/dhi" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
-                    <h4 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">DHI Technique ›</h4>
+                    <h3 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">DHI Technique ›</h3>
                     <p className="text-black text-xs font-medium leading-relaxed">DHI takes clinical precision to the highest level. Using a specialized medical instrument known as the Choi Implanter Pen, our surgeons can place the extracted grafts directly into the scalp without needing to open prior surgical channels. This one-step implantation offers elite mechanical control over the exact angle, direction, and depth of the implanted hair, resulting in a completely natural look and ultra-high density.</p>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
 
               {/* PRP RECOMMENDATION SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 pt-6 border-t border-gray-200">
+              <div className="mb-14 pt-6 border-t border-gray-200">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">The Critical Role of PRP Therapy for Hair Growth</h3>
                 <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
@@ -268,10 +268,10 @@ export default function FutClient() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* CONCLUSION SECTION */}
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
+              <div className="mb-14 flex flex-col gap-6 pt-6 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Why Choose Hair Skill Clinic Over Traditional Invasive Methods
                 </h2>
@@ -284,7 +284,7 @@ export default function FutClient() {
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   If you want a flawless full head of hair without carrying the heavy burden of a permanent surgical scar, schedule your free clinical assessment today. Let our specialists design a custom FUE or DHI restoration plan specifically tailored for you.
                 </p>
-              </motion.div>
+              </div>
 
             </div>
 
@@ -296,9 +296,9 @@ export default function FutClient() {
               className="w-full lg:w-1/3 lg:sticky lg:top-32"
             >
               <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
-                <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
+                <h2 className="text-white text-xl font-black text-center mb-8 tracking-wide">
                   GET FREE CONSULTATION
-                </h3>
+                </h2>
                 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                   <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
