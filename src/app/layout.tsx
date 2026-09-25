@@ -11,19 +11,20 @@ import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Advanced Hair Transplant Clinic in Lahore | Hair Skill",
-  description: "Hair Skill Clinic is Lahore's leading center for advanced hair transplant and non-surgical hair restoration. Experience natural results and expert care.",
+  title: "Hair Skill Clinic | Best Hair Transplant & Restoration in Lahore",
+  description: "Welcome to Hair Skill, Lahore's premier medical clinic for advanced hair transplants, FUE, DHI, and non-surgical hair systems. Book your free consultation today.",
   keywords: [
-    "Hair Transplant Lahore",
-    "Hair Restoration Clinic",
-    "FUE Hair Transplant Lahore",
-    "Hair Systems Lahore",
-    "Hair Skill Clinic"
+    "Hair Skill",
+    "Hair Skill Clinic Lahore",
+    "Best Hair Transplant Lahore",
+    "Hair Restoration Clinic Pakistan",
+    "FUE & DHI Transplant Lahore",
+    "Non-Surgical Hair Systems"
   ],
   metadataBase: new URL("https://www.hairskill.com"),
   openGraph: {
-    title: "Advanced Hair Transplant Clinic in Lahore | Hair Skill",
-    description: "Hair Skill Clinic is Lahore's leading center for advanced hair transplant and non-surgical hair restoration. Experience natural results and expert care.",
+    title: "Hair Skill Clinic | Best Hair Transplant & Restoration in Lahore",
+    description: "Welcome to Hair Skill, Lahore's premier medical clinic for advanced hair transplants, FUE, DHI, and non-surgical hair systems.",
     url: "https://www.hairskill.com",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",

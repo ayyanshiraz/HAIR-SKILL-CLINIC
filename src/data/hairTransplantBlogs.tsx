@@ -741,7 +741,7 @@ export const hairTransplantBlogs: BlogPost[] = [
         <p className="mb-4">Three intricate surgical steps centered on facial symmetry are involved in beard restoration:</p>
         <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-2">
           <li><strong>Mapping and Design:</strong> The surgical team considers bone structure, chin width, and individual preferences when mapping the ideal beard perimeter.</li>
-          <li><strong>Follicle Extraction:</strong> Under local anesthetic, healthy grafts are carefully removed. Surgeons can perform a specialist <a href="/hair-transplant/treatments/body" className="text-[#772424] font-semibold hover:underline">beard transplant from body hair</a> by removing appropriate donor roots from the upper chest in cases where scalp donor hair is scarce or extremely thin.</li>
+          <li><strong>Follicle Extraction:</strong> Under local anesthetic, healthy grafts are carefully removed. Surgeons can perform a specialist <a href="/hair-transplant/techniques/body" className="text-[#772424] font-semibold hover:underline">beard transplant from body hair</a> by removing appropriate donor roots from the upper chest in cases where scalp donor hair is scarce or extremely thin.</li>
           <li><strong>Implantation:</strong> To replicate natural face stubble, each graft is positioned at the precise directional slope needed.</li>
         </ul>
         <p className="mb-4">A beard hair transplant in Pakistan is one of the most dependable aesthetic investments accessible today because of its exacting precision.</p>
