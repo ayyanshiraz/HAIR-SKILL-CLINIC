@@ -3,6 +3,20 @@ import dynamic from "next/dynamic";
 
 const SapphireClient = dynamic(() => import("../../../../components/SapphireClient"));
 
+// Define structured data for medical procedure SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalProcedure",
+  "name": "Sapphire FUE Hair Transplant",
+  "description": "Advanced Sapphire FUE hair transplant procedure in Lahore offering high density and faster recovery.",
+  "relevantSpecialty": "Dermatology",
+  "provider": {
+    "@type": "MedicalClinic",
+    "name": "Hair Skill Clinic",
+    "url": "https://www.hairskill.com"
+  }
+};
+
 export const metadata: Metadata = {
   title: "Advanced Sapphire FUE Hair Transplant Lahore | Hair Skill",
   description: "Get maximum density and faster healing with an advanced Sapphire FUE hair transplant in Lahore. Experience precision micro-channel incisions at Hair Skill.",
@@ -35,5 +49,14 @@ export const metadata: Metadata = {
 };
 
 export default function SapphirePage() {
-  return <SapphireClient />;
+  return (
+    <>
+      {/* Inject Schema into the page header */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <SapphireClient />
+    </>
+  );
 }

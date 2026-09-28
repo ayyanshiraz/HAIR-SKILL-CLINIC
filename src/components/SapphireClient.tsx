@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your root app data folder
 import { countries, type Country } from "../data/countries";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
@@ -35,7 +33,6 @@ export default function SapphireClient() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  // FAQ Accordion state
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -51,7 +48,6 @@ export default function SapphireClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 11 FAQS DATA (Verbatim, scrubbed of safe prose, numeric price & logistics errors) ---
   const faqList = [
     {
       q: "What is Sapphire FUE in simple terms?",
@@ -102,7 +98,6 @@ export default function SapphireClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
-      {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -110,7 +105,6 @@ export default function SapphireClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
@@ -121,22 +115,18 @@ export default function SapphireClient() {
             <span className="text-[#772424]">Sapphire Hair Transplant</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             Sapphire Hair Transplant 
           </h1>
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
-            {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
                   src="/home/techniques/1.webp" 
@@ -145,7 +135,6 @@ export default function SapphireClient() {
                 />
               </motion.div>
 
-              {/* Lead Introduction */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   People often search sapphire hair transplant Pakistan hoping to understand whether this method truly delivers better density softer healing and more natural looking results. The truth is simple. Sapphire FUE is not magic. It is a refined way of creating micro channels using sapphire blades instead of steel. When the tool is placed in skilled hands you get cleaner incisions smoother healing and a design that feels naturally yours.
@@ -174,12 +163,10 @@ export default function SapphireClient() {
                 </p>
               </motion.div>
 
-              {/* IMAGE 2: Frontal Hairline Comparison */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                 <img src="/hair-transplant/34.webp" alt="Frontal view comparing lowered pre surgical Sapphire FUE hairline markings against mature dense growth" className="w-full h-full object-cover object-top" />
               </motion.div>
 
-              {/* Section: Why Sapphire FUE Became Popular */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Sapphire FUE Became Popular in Pakistan
@@ -191,7 +178,6 @@ export default function SapphireClient() {
                   It is an improved way of opening channels using blades made from sapphire. The blade material allows cleaner narrower entry points that help grafts sit comfortably and securely.
                 </p>
 
-                {/* IMAGE 3: Gloved Hand Holding Sapphire Tool */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-8 shadow-md">
                   <img src="/home/techniques/1.webp" alt="Surgeon hand wearing sterile white glove holding synthetic blue sapphire micro incision instrument" className="w-full h-full object-cover object-center" />
                 </div>
@@ -227,7 +213,6 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Why Choose Sapphire Hair Transplant at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Choose Sapphire Hair Transplant in Pakistan at Hair Skill Clinic
@@ -273,7 +258,6 @@ export default function SapphireClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Who Is a Good Candidate */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Who Is a Good Candidate for Sapphire FUE at Hair Skill?
@@ -311,13 +295,11 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Techniques and Tools */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire FUE at Hair Skill: Techniques and Tools
                 </h2>
 
-                {/* IMAGE 5: Macro Close Up Channel Incision */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/6.webp" alt="Macro close up view of surgeon executing precise V shaped micro channel incision into scalp" className="w-full h-full object-cover object-center" />
                 </div>
@@ -353,7 +335,6 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Procedure Step by Step */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire FUE Hair Transplant Procedure Step by Step
@@ -381,7 +362,6 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire Hair Transplant Cost Ranges in Pakistan
@@ -415,7 +395,6 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Recovery Healing and Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Recovery, Healing, and 12 to 18 Month Results With Sapphire FUE
@@ -442,7 +421,6 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Risks Safety and Guarantees */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Risks, Safety, and What Sapphire FUE Can and Cannot Guarantee
@@ -468,13 +446,11 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Aesthetics Density and Natural Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Aesthetics, Density, and Natural Results With Sapphire FUE
                 </h2>
 
-                {/* IMAGE 7: Crown Before / After Comparison */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
                   <img src="/hair-transplant/36.webp" alt="Top downward view comparing native crown thinning against restored mature circular density" className="w-full h-full object-cover object-top" />
                 </div>
@@ -500,7 +476,6 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Scheduling Your Session in Lahore */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Planning Your Sapphire Restoration Staging in Lahore Pakistan
@@ -513,7 +488,6 @@ export default function SapphireClient() {
                 <p className="text-black text-base md:text-lg font-medium leading-relaxed">If you feel up to gentle unhurried walking once localized swelling settles Lahores calm patient-friendly districts offer peaceful cafes and beautiful outdoor park views. Simply avoid harsh direct sunlight physical exertion heavy sweating or busy crowds.</p>
               </motion.div>
 
-              {/* SECTION: 11 FAQS ACCORDION */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Sapphire FUE Pakistan FAQs
@@ -553,7 +527,6 @@ export default function SapphireClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Closing CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Start Your Sapphire FUE Journey With Hair Skill Clinic
@@ -588,7 +561,6 @@ export default function SapphireClient() {
 
             </div>
 
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
