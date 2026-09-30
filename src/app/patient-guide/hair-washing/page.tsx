@@ -5,7 +5,7 @@ const HairWashingClient = dynamic(() => import("../../../components/HairWashingC
 
 export const metadata: Metadata = {
   title: "Post-Op Hair Washing Guidelines Lahore | Hair Skill",
-  description: "Master your 48-hour post-op hair wash in Lahore. Learn how to safely apply panthenol foam, rinse grafts, and ensure proper scab removal at Hair Skill.",
+  description: "Master your post-op scalp wash in Lahore. Learn how to safely apply panthenol foam, rinse grafts, and remove scabs at Hair Skill.",
   keywords: [
     "Post Op Hair Wash Lahore",
     "Scab Removal Hair Transplant",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Post-Op Hair Washing Guidelines Lahore | Hair Skill",
-    description: "Master your 48-hour post-op hair wash in Lahore. Learn how to safely apply panthenol foam, rinse grafts, and ensure proper scab removal at Hair Skill.",
+    description: "Master your post-op scalp wash in Lahore. Learn how to safely apply panthenol foam, rinse grafts, and remove scabs at Hair Skill.",
     url: "https://www.hairskill.com/patient-guide/hair-washing",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
@@ -35,5 +35,30 @@ export const metadata: Metadata = {
 };
 
 export default function HairWashingPage() {
-  return <HairWashingClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Post-Op Hair Washing Guidelines",
+    "description": "Master your post-op scalp wash in Lahore. Learn how to safely apply panthenol foam, rinse grafts, and remove scabs at Hair Skill.",
+    "url": "https://www.hairskill.com/patient-guide/hair-washing",
+    "about": {
+      "@type": "MedicalSpecialty",
+      "name": "Postoperative Care"
+    },
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "url": "https://www.hairskill.com"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HairWashingClient />
+    </>
+  );
 }
