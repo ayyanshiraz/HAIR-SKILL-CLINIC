@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "../context/CartContext";
 
 type HairUnit = {
@@ -91,7 +92,7 @@ export default function HairUnitClient({
     <div className={`min-h-screen bg-gray-50 pt-32 pb-20 font-sans relative overflow-x-clip`}>
       <div className={`max-w-[1400px] mx-auto px-6 sm:px-8`}>
         
-        {/* --- HEADER --- */}
+        {/* HEADER SECTION */}
         <div className={`flex flex-col md:flex-row justify-between items-start md:items-center mb-16`}>
           <div>
             <h1 className={`text-4xl md:text-5xl font-extrabold text-[#772424] mb-4`}>
@@ -119,7 +120,7 @@ export default function HairUnitClient({
           </div>
         </div>
 
-        {/* --- SECTION 1: HAIR UNITS --- */}
+        {/* SECTION 1: HAIR UNITS */}
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8`}>
           {hairUnits.map((unit) => (
             <motion.div 
@@ -154,10 +155,12 @@ export default function HairUnitClient({
                   Special Discount
                 </div>
                 
-                <img 
+                <Image 
                   src={unit.image} 
                   alt={unit.name} 
-                  className={`w-full h-full object-cover`}
+                  fill
+                  sizes={`(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw`}
+                  className={`object-cover`}
                 />
               </div>
 
@@ -200,7 +203,7 @@ export default function HairUnitClient({
           ))}
         </div>
 
-        {/* --- SECTION 2: WIG CARE & ACCESSORIES --- */}
+        {/* SECTION 2: WIG CARE AND ACCESSORIES */}
         <div className={`mt-32 mb-16`}>
           <h2 className={`text-4xl md:text-5xl font-extrabold text-[#772424] mb-4`}>
             Wig Care & Accessories
@@ -244,10 +247,12 @@ export default function HairUnitClient({
                   Special Discount
                 </div>
                 
-                <img 
+                <Image 
                   src={product.image} 
                   alt={product.name} 
-                  className={`w-full h-full object-cover rounded-xl`}
+                  fill
+                  sizes={`(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw`}
+                  className={`object-cover rounded-xl`}
                 />
               </div>
 
@@ -292,6 +297,7 @@ export default function HairUnitClient({
 
       </div>
 
+      {/* TOAST NOTIFICATION */}
       <AnimatePresence>
         {toastMessage && (
           <motion.div
@@ -306,6 +312,7 @@ export default function HairUnitClient({
         )}
       </AnimatePresence>
 
+      {/* PRODUCT MODAL */}
       <AnimatePresence>
         {selectedUnit && (
           <motion.div
@@ -335,10 +342,12 @@ export default function HairUnitClient({
                   Special Discount Available
                 </div>
 
-                <img 
+                <Image 
                   src={selectedUnit.image} 
                   alt={selectedUnit.name} 
-                  className={`w-full h-full object-cover rounded-xl`}
+                  fill
+                  sizes={`(max-width: 768px) 100vw, 50vw`}
+                  className={`object-cover rounded-xl`}
                 />
               </div>
 

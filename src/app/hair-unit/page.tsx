@@ -5,7 +5,7 @@ const HairUnitClient = dynamic(() => import("../../components/HairUnitClient"));
 
 export const metadata: Metadata = {
   title: "Hair Units & Non-Surgical Wigs in Lahore | Hair Skill",
-  description: "Discover premium hair units, non-surgical hair systems, and wig care products in Lahore. Browse our collection of front lace patches, tapes, and solvents.",
+  description: "Get premium hair units and non-surgical hair systems in Lahore. Browse our front lace patches, wig tapes, glues, and care products.",
   keywords: [
     "Hair Units Lahore",
     "Non Surgical Hair System",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Hair Units & Non-Surgical Wigs in Lahore | Hair Skill",
-    description: "Discover premium hair units, non-surgical hair systems, and wig care products in Lahore. Browse our collection of front lace patches, tapes, and solvents.",
+    description: "Get premium hair units and non-surgical hair systems in Lahore. Browse our front lace patches, wig tapes, glues, and care products.",
     url: "https://www.hairskill.com/hair-unit",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
