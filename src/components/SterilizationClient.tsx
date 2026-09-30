@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { countries, type Country } from "../data/countries";
 
-// --- STRICT ANIMATION TUPLE ---
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
 
 const fadeUp: Variants = {
@@ -42,7 +42,6 @@ const staggerContainer: Variants = {
 };
 
 export default function SterilizationClient() {
-  // --- FORM STATES ---
   const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
   const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -58,13 +57,11 @@ export default function SterilizationClient() {
     window.open(whatsappUrl, "_blank");
   };
 
-  // Defeats Google Chrome forced white Autofill override
   const autofillFixStyle = {
     WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
     WebkitTextFillColor: "#ffffff"
   };
 
-  // Structured Process Data for the Step-Cards (SEO Optimized)
   const processSteps = [
     { title: "Receiving Contaminated Instruments", desc: "Used instruments are transported in closed containers to the designated dirty area immediately after surgical extraction." },
     { title: "Initial Inspection and Pre-Cleaning", desc: "Instruments are counted, inspected for wear, and undergo preliminary rinsing under controlled conditions." },
@@ -78,7 +75,6 @@ export default function SterilizationClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
-      {/* --- PAGE HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -100,29 +96,28 @@ export default function SterilizationClient() {
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-16 px-4 sm:px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
-            {/* LEFT SIDE: SCROLL-ANIMATED CONTENT */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* Main Autoclave Hero Image */}
               <motion.div 
                 initial="hidden" 
                 animate="visible" 
                 variants={fadeUp}
                 className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-10 shadow-lg group"
               >
-                <img 
+                <Image 
                   src="/patient-guide/1.webp" 
                   alt="Autoclave device measuring barometric steam pressure" 
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000" 
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                  className="object-cover group-hover:scale-[1.02] transition-transform duration-1000" 
                 />
               </motion.div>
 
-              {/* Lead Paragraphs (SEO Updated) */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-14 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   At Hair Skill Clinic, patient safety and clinical excellence remain our topmost priorities. Providing a safe hair transplant near me for patients across Lahore, Karachi, Multan, Rawalpindi, and all of Pakistan requires rigid adherence to surgical hygiene. Our sterilization protocols are executed in full alignment with the Ministry of Health DAS Guidelines, WHO Sterilization Guidelines, and AAMI ST79 Steam Sterilization and Sterile Processing Standards.
@@ -132,17 +127,18 @@ export default function SterilizationClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Daily and Periodic Testing Procedures */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-8 tracking-tight">
                   Daily and Periodic Testing Procedures
                 </h2>
 
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img 
+                  <Image 
                     src="/patient-guide/2.webp" 
                     alt="Medical technician running testing procedures on autoclave" 
-                    className="w-full h-full object-cover" 
+                    fill
+                    sizes="(max-width: 768px) 100vw, 66vw"
+                    className="object-cover" 
                   />
                 </div>
 
@@ -152,7 +148,6 @@ export default function SterilizationClient() {
                   </p>
                 </div>
 
-                {/* Sub-Tests Breakdown (SEO Updated) */}
                 <div className="flex flex-col gap-8 ml-2 border-l-2 border-gray-100 pl-4 sm:pl-6">
                   <div>
                     <h3 className="text-xl md:text-2xl font-black text-[#772424] mb-3">Vacuum Leak Test</h3>
@@ -184,7 +179,6 @@ export default function SterilizationClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Delivery and Traceability */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Delivery and Traceability of Sterile Instruments
@@ -199,10 +193,12 @@ export default function SterilizationClient() {
                 </h3>
 
                 <div className="w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img 
+                  <Image 
                     src="/patient-guide/3.webp" 
                     alt="Surgical stainless steel instrument trays organized" 
-                    className="w-full h-full object-cover" 
+                    fill
+                    sizes="(max-width: 768px) 100vw, 66vw"
+                    className="object-cover" 
                   />
                 </div>
 
@@ -229,7 +225,6 @@ export default function SterilizationClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Process List */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer} className="mb-16">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-8 tracking-tight">
                   Our Complete Sterilization Pipeline
@@ -242,9 +237,9 @@ export default function SterilizationClient() {
                       variants={fadeUp}
                       className="p-6 rounded-2xl bg-gray-50 border-l-4 border-[#772424] shadow-xs flex flex-col justify-center"
                     >
-                      <h4 className="text-lg md:text-xl font-black text-[#772424] mb-1.5">
+                      <h3 className="text-lg md:text-xl font-black text-[#772424] mb-1.5">
                         {step.title}
-                      </h4>
+                      </h3>
                       <p className="text-black font-medium text-base">
                         {step.desc}
                       </p>
@@ -257,10 +252,12 @@ export default function SterilizationClient() {
                 </h3>
 
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-6 shadow-md">
-                  <img 
+                  <Image 
                     src="/patient-guide/4.webp" 
                     alt="Nurse sealing sterile pouches inside sterilization cleanroom" 
-                    className="w-full h-full object-cover" 
+                    fill
+                    sizes="(max-width: 768px) 100vw, 66vw"
+                    className="object-cover" 
                   />
                 </div>
 
@@ -285,7 +282,6 @@ export default function SterilizationClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Priority Conclusion (Affordable Hair Restoration) */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="flex flex-col gap-6 pt-8 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-2 tracking-tight">
                   Affordable Hair Restoration Without Compromising Safety
@@ -300,7 +296,6 @@ export default function SterilizationClient() {
 
             </div>
 
-            {/* RIGHT SIDE: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
