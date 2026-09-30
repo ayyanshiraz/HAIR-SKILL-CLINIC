@@ -289,5 +289,36 @@ export default function HairUnitPage() {
     { id: 125, name: `EXTENDA-BOND PLUS`, price: 649, description: `Extenda-Bond Plus tape strips for hair systems featuring breathable holes.`, specs: [`Breathable holes`, `Extra long hold`, `Skin safe`, `Easy to place`], image: `/products/24.webp` }
   ];
 
-  return <HairUnitClient hairUnits={hairUnits} hairCareProducts={hairCareProducts} />;
+  const allProducts = [...hairUnits, ...hairCareProducts];
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": allProducts.map((product, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": product.name,
+        "image": `https://www.hairskill.com${product.image}`,
+        "description": product.description,
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "PKR",
+          "price": product.price,
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.hairskill.com/hair-unit"
+        }
+      }
+    }))
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HairUnitClient hairUnits={hairUnits} hairCareProducts={hairCareProducts} />
+    </>
+  );
 }
