@@ -35,7 +35,6 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewsPage() {
-  // Aggregate Rating Schema for Google Search 5-Star Rich Snippets
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
@@ -61,7 +60,6 @@ export default function ReviewsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* Renders the main UI components */}
       <ReviewsClient />
     </>
   );

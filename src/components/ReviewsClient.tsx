@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import Script from "next/script";
@@ -42,6 +42,12 @@ export default function ReviewsClient() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Defer third party widget rendering to fix page size and LCP issues
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,10 +67,8 @@ export default function ReviewsClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
-      {/* Elfsight Script Injected Securely via Next.js Script */}
       <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
 
-      {/* --- PAGE HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -78,23 +82,21 @@ export default function ReviewsClient() {
             <span className="text-[#772424]">Reviews</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
-            Top Hair Transplant Patient Reviews in Pakistan
+            Top Patient Reviews and Success Stories in Pakistan
           </h1>
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             
-            {/* LEFT SIDE: REVIEWS CONTENT */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-10 flex flex-col justify-between gap-6 border-b border-gray-200 pb-8">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
                   <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
-                    Real Success Stories from Lahore Karachi and Islamabad
+                    Real Feedback from Lahore Karachi and Islamabad
                   </h2>
                   
                   <a 
@@ -114,18 +116,18 @@ export default function ReviewsClient() {
                 </div>
                 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl">
-                  Read authentic feedback from our satisfied clients across Pakistan. Discover why thousands trust our expert surgeons for FUE unshaven and manual punch hair restoration procedures.
+                  Read authentic feedback from our satisfied clients across Pakistan. Discover why thousands trust our expert surgeons for FUE unshaven and manual punch follicular restoration procedures.
                 </p>
               </motion.div>
 
-              {/* Elfsight Live Google Reviews Widget Container */}
-              <div className="w-full mt-2 min-h-[500px]">
-                <div className="elfsight-app-95daa7bb-153e-44ba-a166-46c5244ebf09" data-elfsight-app-lazy></div>
-              </div>
+              {isMounted && (
+                <div className="w-full mt-2 min-h-[500px]">
+                  <div className="elfsight-app-95daa7bb-153e-44ba-a166-46c5244ebf09" data-elfsight-app-lazy></div>
+                </div>
+              )}
 
             </div>
 
-            {/* RIGHT SIDE: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
