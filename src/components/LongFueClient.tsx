@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your app data folder
+import Image from "next/image";
 import { countries, type Country } from "../data/countries";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
@@ -51,7 +50,6 @@ export default function LongFueClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
-      {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -59,43 +57,41 @@ export default function LongFueClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs pinned strictly to left with flex-wrap added */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
+            <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Transplant</Link>
             <span>/</span>
             <Link href="/hair-transplant/techniques" className="hover:text-[#772424] active:text-[#772424] transition-colors">Techniques</Link>
              <span>/</span>
             <span className="text-[#772424]">Long FUE</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-            Long FUE Hair Transplant
+            Long FUE Procedure
           </h1>
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             
-            {/* LEFT COLUMN: SCROLL-ANIMATED PROSE */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* Main Hero Image */}
               <motion.div 
                 initial="hidden" 
                 animate="visible" 
                 variants={fadeUp}
                 className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group"
               >
-                <img 
+                <Image 
                   src="/hair-transplant/1.webp" 
-                  alt="Doctor marking patient hairline for Long FUE procedure without shaving" 
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
+                  alt="Doctor marking patient frontal line for Long FUE procedure without shaving" 
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                  className="object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-top" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
@@ -103,27 +99,24 @@ export default function LongFueClient() {
                 </div>
               </motion.div>
 
-              {/* Lead Intro Paragraphs */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Long FUE hair transplant in Pakistan is an advanced technique that allows hair transplantation without fully shaving the donor area preserving longer hair strands for a more discreet procedure. It offers better visual planning natural hairline design and less noticeable downtime.
+                  Long FUE restoration in Pakistan is an advanced technique that allows follicular transplantation without fully shaving the donor area preserving longer native strands for a more discreet procedure. It offers better visual planning natural frontal design and less noticeable downtime.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Ideal for patients who want to maintain their existing hairstyle during treatment Long FUE combines precision with immediate aesthetic advantage. At Hair Skill Clinic every case is carefully evaluated to ensure optimal results based on individual hair characteristics and long term goals. Whether you are searching for a fue hair transplant clinic in Karachi or the best fue hair transplant near me in Islamabad we provide elite level care and natural results.
+                  Ideal for patients who want to maintain their existing style during treatment Long FUE combines precision with immediate aesthetic advantage. At Hair Skill Clinic every case is carefully evaluated to ensure optimal results based on individual growth characteristics and long term goals. Whether you are searching for a clinical restoration center in Karachi or the best FUE clinic near me in Islamabad we provide elite level care and natural results.
                 </p>
               </motion.div>
 
-              {/* Section: What Is Long FUE */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   What Is Long FUE?
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Long Follicular Unit Excision is a modern hair transplant technique where follicles are extracted with the hair left longer than usual. Instead of shaving the donor area down to very short stubble the surgeon removes grafts while keeping the hair shafts long. This makes it easier to preview the direction curl roll and overall look of the result earlier.
+                  Long Follicular Unit Excision is a modern restoration technique where follicles are extracted with the shafts left longer than usual. Instead of shaving the donor area down to very short stubble the surgeon removes grafts while keeping the native strands long. This makes it easier to preview the direction curl roll and overall look of the result earlier.
                 </p>
               </motion.div>
 
-              {/* Section: Who Is It For */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight">
                   Who Is It For?
@@ -133,8 +126,8 @@ export default function LongFueClient() {
                 <div className="flex flex-col gap-4 mb-6 ml-2">
                   {[
                     "Want a less shaved look during the healing phase",
-                    "Prefer to keep your hairstyle while undergoing treatment",
-                    "Need precise placement to match existing hair direction especially at the hairline",
+                    "Prefer to keep your style while undergoing treatment",
+                    "Need precise placement to match existing growth direction especially at the front",
                     "Have enough donor density to support specialized extraction"
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-start gap-3">
@@ -149,7 +142,6 @@ export default function LongFueClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Main Benefits */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight">
                   Main Benefits of Long FUE
@@ -162,20 +154,19 @@ export default function LongFueClient() {
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/60">
                     <h3 className="text-lg font-extrabold text-[#772424] mb-2">Better visual planning</h3>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Longer hair helps the team judge angle direction and blend with surrounding hair much faster.</p>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Longer strands help the team judge angle direction and blend with surrounding growth much faster.</p>
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/60">
                     <h3 className="text-lg font-extrabold text-[#772424] mb-2">Early cosmetic improvement</h3>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Even though transplanted hairs often shed later the immediate look can be more natural right after surgery.</p>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Even though transplanted grafts often shed later the immediate look can be more natural right after surgery.</p>
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/60">
-                    <h3 className="text-lg font-extrabold text-[#772424] mb-2">Natural hairline control</h3>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">The surgeon can place grafts to better match your existing growth pattern securing the best fue hair transplant outcome possible.</p>
+                    <h3 className="text-lg font-extrabold text-[#772424] mb-2">Natural frontal control</h3>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">The surgeon can place grafts to better match your existing growth pattern securing the best restoration outcome possible.</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Key Steps */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-4 border-gray-100">
                   Key Steps in the Long FUE Procedure
@@ -184,11 +175,11 @@ export default function LongFueClient() {
                 <div className="flex flex-col gap-8 ml-2 border-l-2 border-[#772424]/20 pl-6">
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Consultation and Design</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your surgeon evaluates donor supply hair caliber curl pattern and scalp laxity. Then they design the hairline and map the areas to be filled. If you are comparing the fue hair transplant cost we outline all fees completely upfront.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Your surgeon evaluates donor supply strand caliber curl pattern and scalp laxity. Then they design the boundaries and map the areas to be filled. If you are comparing the restoration cost we outline all fees completely upfront.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Donor Area Preparation</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Instead of fully shaving the donor hair is typically trimmed in sections or selectively reduced to allow accurate extraction while keeping surrounding hair long enough to cover the area.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Instead of fully shaving the donor follicles are typically trimmed in sections or selectively reduced to allow accurate extraction while keeping surrounding strands long enough to cover the area.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Local Anesthesia</h3>
@@ -200,29 +191,27 @@ export default function LongFueClient() {
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Graft Handling and Sorting</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Grafts are kept hydrated and sorted by hair count singles doubles and triples and prepared for implantation.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Grafts are kept hydrated and sorted by count singles doubles and triples and prepared for implantation.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-black text-[#772424] mb-2">Recipient Site Creation & Implantation</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Tiny incisions are made in the thinning area. Angle direction and density are planned to create a natural pattern. Grafts are inserted at prepared sites. Single hair grafts are usually used at the hairline for a softer more natural edge.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Tiny incisions are made in the thinning area. Angle direction and density are planned to create a natural pattern. Grafts are inserted at prepared sites. Single follicle grafts are usually used at the front for a softer more natural edge.</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Price in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Fue Hair Transplant Price In Pakistan
+                  FUE Restoration Price In Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  Understanding the fue hair transplant price in pakistan is essential for proper planning. Long FUE requires advanced precision so it sits in a different package tier compared to standard FUE.
+                  Understanding the FUE restoration price in pakistan is essential for proper planning. Long FUE requires advanced precision so it sits in a different package tier compared to standard FUE.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-4">
-                  However finding a premium fue hair transplant in lahore remains incredibly accessible when compared to heavy clinical calculations in Western countries. At Hair Skill we provide clear and comprehensive quotes in local PKR ensuring you receive world class care without hidden costs.
+                  However finding a premium FUE procedure in lahore remains incredibly accessible when compared to heavy clinical calculations in Western countries. At Hair Skill we provide clear and comprehensive quotes in local PKR ensuring you receive world class care without hidden costs.
                 </p>
               </motion.div>
 
-              {/* Section: Recovery Timeline */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight">
                   Recovery What to Expect
@@ -230,33 +219,32 @@ export default function LongFueClient() {
 
                 <div className="space-y-6">
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
-                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">First 1 to 3 Days</h4>
+                    <h3 className="font-extrabold text-[#772424] text-lg mb-2">First 1 to 3 Days</h3>
                     <p className="text-black font-medium text-sm md:text-base leading-relaxed">Mild swelling tightness and redness are common. Small scabs begin to form around grafts. Keep the scalp clean and follow washing instructions exactly.</p>
                   </div>
 
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
-                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">Days 4 to 14</h4>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Scabs gradually fall off and do not pick them. Redness fades for many patients though it can last longer in some skin types. You will likely be advised to avoid heavy sweating and direct sun exposure. Your doctor will also advise you on the best shampoo after fue hair transplant to ensure gentle cleansing.</p>
+                    <h3 className="font-extrabold text-[#772424] text-lg mb-2">Days 4 to 14</h3>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Scabs gradually fall off and do not pick them. Redness fades for many patients though it can last longer in some skin types. You will likely be advised to avoid heavy sweating and direct sun exposure. Your doctor will also advise you on the best shampoo after FUE restoration to ensure gentle cleansing.</p>
                   </div>
 
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
-                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">Weeks 2 to 8</h4>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Transplanted hairs often shed this is normal. The follicles remain in place and begin a new growth cycle.</p>
+                    <h3 className="font-extrabold text-[#772424] text-lg mb-2">Weeks 2 to 8</h3>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">Transplanted grafts often shed this is normal. The follicles remain in place and begin a new growth cycle.</p>
                   </div>
 
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
-                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">Months 3 to 6</h4>
-                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">New hairs start growing initially fine and lighter. Density begins to improve steadily.</p>
+                    <h3 className="font-extrabold text-[#772424] text-lg mb-2">Months 3 to 6</h3>
+                    <p className="text-black font-medium text-sm md:text-base leading-relaxed">New follicles start growing initially fine and lighter. Density begins to improve steadily.</p>
                   </div>
 
                   <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-[#772424]">
-                    <h4 className="font-extrabold text-[#772424] text-lg mb-2">Months 9 to 12 and up to 18</h4>
+                    <h3 className="font-extrabold text-[#772424] text-lg mb-2">Months 9 to 12 and up to 18</h3>
                     <p className="text-black font-medium text-sm md:text-base leading-relaxed">Results become fuller and more mature. Texture and thickness continue to improve giving you the final look.</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: Aftercare Tips */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-6 tracking-tight">
                   Aftercare Tips
@@ -277,16 +265,15 @@ export default function LongFueClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Risks and Side Effects */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Potential Risks and Side Effects
                 </h2>
-                <p className="text-black text-base md:text-lg font-bold mb-4">As with any transplant method possible issues include the following:</p>
+                <p className="text-black text-base md:text-lg font-bold mb-4">As with any clinical method possible issues include the following:</p>
                 <div className="flex flex-col gap-4 mb-6 ml-2">
                   {[
                     "Temporary swelling redness and itching",
-                    "Shock loss temporary shedding of nearby native hair",
+                    "Shock loss temporary shedding of nearby native strands",
                     "Patchy growth during early months. Infection is rare with proper care",
                     "Over harvesting if donor planning is poor"
                   ].map((item, idx) => (
@@ -301,13 +288,12 @@ export default function LongFueClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Final Notes */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="flex flex-col gap-6 pt-6 border-t border-gray-100">
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight">
                   Final Notes
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Long FUE combines the precision of FUE with the cosmetic advantage of keeping the hair longer throughout the procedure. For patients who want minimal visible downtime and a more controlled approach to hairline planning Long FUE may be a suitable option depending on hair type donor capacity and overall goals.
+                  Long FUE combines the precision of FUE with the cosmetic advantage of keeping the strands longer throughout the procedure. For patients who want minimal visible downtime and a more controlled approach to planning Long FUE may be a suitable option depending on texture donor capacity and overall goals.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   At Hair Skill Clinic every case is evaluated individually to determine the most appropriate technique for natural and long term results. Contact us to learn whether Long FUE is the right choice for you.
@@ -316,7 +302,6 @@ export default function LongFueClient() {
 
             </div>
 
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
