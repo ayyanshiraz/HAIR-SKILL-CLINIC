@@ -5,7 +5,7 @@ const ManualPunchClient = dynamic(() => import("../../../../components/ManualPun
 
 export const metadata: Metadata = {
   title: "Manual Punch FUE Hair Transplant Lahore | Hair Skill",
-  description: "Looking for highly precise manual punch FUE in Lahore? We ensure maximum graft survival and controlled extraction with zero motor damage at Hair Skill.",
+  description: "Get highly precise manual punch FUE in Lahore. We ensure maximum graft survival and controlled extraction with zero motor damage.",
   keywords: [
     "Manual Punch FUE Lahore",
     "Manual Extraction Hair Transplant",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Manual Punch FUE Hair Transplant Lahore | Hair Skill",
-    description: "Looking for highly precise manual punch FUE in Lahore? We ensure maximum graft survival and controlled extraction with zero motor damage at Hair Skill.",
+    description: "Get highly precise manual punch FUE in Lahore. We ensure maximum graft survival and controlled extraction with zero motor damage.",
     url: "https://www.hairskill.com/hair-transplant/techniques/manual-punch",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
@@ -35,5 +35,26 @@ export const metadata: Metadata = {
 };
 
 export default function ManualPunchPage() {
-  return <ManualPunchClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Manual Punch FUE Hair Transplant Lahore | Hair Skill",
+    "description": "Get highly precise manual punch FUE in Lahore. We ensure maximum graft survival and controlled extraction with zero motor damage.",
+    "url": "https://www.hairskill.com/hair-transplant/techniques/manual-punch",
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "url": "https://www.hairskill.com"
+    }
+  };
+
+  return (
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ManualPunchClient />
+    </main>
+  );
 }
