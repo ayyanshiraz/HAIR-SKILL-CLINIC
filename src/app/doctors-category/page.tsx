@@ -6,14 +6,14 @@ const DoctorsCategoryClient = dynamic(() => import("../../components/DoctorsCate
 
 export const metadata: Metadata = {
   title: "Dr Mansoor Ahmad | Hair Transplant Surgeon in Lahore",
-  description: "Review the verified medical credentials and 40 years of surgical experience of Dr Mansoor Ahmad, the senior hair transplant surgeon at Hair Skill Lahore.",
+  description: "Review the verified credentials and 40 years of surgical experience of Dr Mansoor Ahmad, the senior hair transplant surgeon at Hair Skill.",
   keywords: ["Dr Mansoor Ahmad Lahore", "Best Hair Transplant Surgeon Lahore", "Hair Specialist Doctor Lahore", "Chief Surgeon Hair Skill"],
   alternates: {
     canonical: "https://www.hairskill.com/doctors-category",
   },
   openGraph: {
     title: "Dr Mansoor Ahmad | Hair Transplant Surgeon in Lahore",
-    description: "Review the verified medical credentials and 40 years of surgical experience of Dr Mansoor Ahmad, the senior hair transplant surgeon at Hair Skill Lahore.",
+    description: "Review the verified credentials and 40 years of surgical experience of Dr Mansoor Ahmad, the senior hair transplant surgeon at Hair Skill.",
     url: "https://www.hairskill.com/doctors-category",
     siteName: "Hair Skill Clinic",
     images: [
@@ -30,7 +30,6 @@ export const metadata: Metadata = {
 };
 
 export default function DoctorsCategoryPage() {
-  // Define schema as a Person type and include the complete accurate postal address for the clinic
   const doctorSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -38,24 +37,24 @@ export default function DoctorsCategoryPage() {
     jobTitle: "Senior Chief Surgeon and Medical Director",
     worksFor: {
       "@type": "MedicalClinic",
-      name: "Hair Skill Clinic",
-      address: {
+      "name": "Hair Skill Clinic",
+      "address": {
         "@type": "PostalAddress",
-        streetAddress: "Hotel MayFair 1st floor, 50-52, E - III, Commercial Zone, Gulberg III",
-        addressLocality: "Lahore",
-        addressRegion: "Punjab",
-        postalCode: "54660",
-        addressCountry: "PK"
+        "streetAddress": "Hotel MayFair 1st floor, 50-52, E - III, Commercial Zone, Gulberg III",
+        "addressLocality": "Lahore",
+        "addressRegion": "Punjab",
+        "postalCode": "54660",
+        "addressCountry": "PK"
       }
     },
     alumniOf: [
       {
         "@type": "CollegeOrUniversity",
-        name: "Quaid-e-Azam Medical College, Bahawalpur"
+        "name": "Quaid-e-Azam Medical College, Bahawalpur"
       },
       {
         "@type": "CollegeOrUniversity",
-        name: "University of Health Sciences Lahore"
+        "name": "University of Health Sciences Lahore"
       }
     ],
     description: "Senior Chief Surgeon with over 40 years of surgical craftsmanship and permanently registered with the Pakistan Medical and Dental Council."
