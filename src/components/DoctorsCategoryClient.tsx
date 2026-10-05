@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your root app data folder
+import Image from "next/image";
 import { countries, type Country } from "../data/countries";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
@@ -48,13 +47,12 @@ export default function DoctorsCategoryClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- COMPREHENSIVE TEXT-ONLY CREDENTIALS MAPPING ---
   const officialDegrees = [
     {
       title: "Bachelor of Medicine and Bachelor of Surgery MBBS",
       institute: "Quaid-e-Azam Medical College, Bahawalpur",
       year: "1979",
-      details: "Foundational medical qualification authorizing comprehensive clinical practice in medicine surgery and obstetrics."
+      details: "Foundational clinical qualification authorizing comprehensive practice in surgery and obstetrics."
     },
     {
       title: "Member of the College of Physicians and Surgeons MCPS",
@@ -63,14 +61,14 @@ export default function DoctorsCategoryClient() {
       details: "Admitted as an official member of the college in the specialized postgraduate subject of General Surgery."
     },
     {
-      title: "Foreign Medical Practitioner Registration",
-      institute: "Libyan Medical Professional Congress Socialist Peoples Libyan Arab Jamahiriya Benghazi Libya",
+      title: "Foreign Clinical Practitioner Registration",
+      institute: "Libyan Professional Congress Socialist Peoples Libyan Arab Jamahiriya Benghazi Libya",
       year: "March 1985",
       details: "Official international Ministry of Health registration qualifying Dr Mansoor Ahmad for full operative surgical practice abroad."
     },
     {
-      title: "Primary FRCS Basic Sciences Postgraduate Medical Education",
-      institute: "University of Glasgow West of Scotland Committee for Postgraduate Medical Education",
+      title: "Primary FRCS Basic Sciences Postgraduate Education",
+      institute: "University of Glasgow West of Scotland Committee for Postgraduate Education",
       year: "December 1988",
       details: "Completed an intensive 12-week surgical instruction curriculum covering Anatomy Physiology Pathology Bacteriology Virology Biochemistry and Pharmacology."
     },
@@ -87,10 +85,10 @@ export default function DoctorsCategoryClient() {
       details: "Postgraduate administrative degree mastering healthcare systems executive leadership and clinical facility management."
     },
     {
-      title: "Permanent Medical Specialist Registration",
+      title: "Permanent Healthcare Specialist Registration",
       institute: "Pakistan Medical and Dental Council PMDC",
       year: "Valid Upto 2030",
-      details: "Permanent medical license holder formally registered as an executive chief surgeon and restorative specialist."
+      details: "Permanent healthcare license holder formally registered as an executive chief surgeon and restorative specialist."
     }
   ];
 
@@ -105,7 +103,7 @@ export default function DoctorsCategoryClient() {
       title: "21st Annual International Conference on Family Medicine",
       institute: "FAMILYCON Pakistan Academy of Family Physicians Lahore",
       year: "January 2011",
-      details: "Delegate participation focusing on modern medical prevention strategies and primary healthcare solutions."
+      details: "Delegate participation focusing on modern health prevention strategies and primary healthcare solutions."
     },
     {
       title: "SAARC Surgical International Conference",
@@ -117,13 +115,13 @@ export default function DoctorsCategoryClient() {
       title: "Transforming Health Care through Education Training and Research",
       institute: "University of Health Sciences Lahore Department of Family Medicine",
       year: "March 2015",
-      details: "International symposium participation awarded four accredited continuing medical education credit hours."
+      details: "International symposium participation awarded four accredited continuing professional education credit hours."
     },
     {
       title: "77th Annual Surgical Update",
       institute: "International College of Surgeons United States Section Annapolis Maryland USA",
       year: "June 2015",
-      details: "Continuing medical education assembly dedicated to global surgical advancements and operative refinement."
+      details: "Continuing professional education assembly dedicated to global surgical advancements and operative refinement."
     },
     {
       title: "CME Workshop on Major Comorbid Psychiatric Disorders",
@@ -142,7 +140,6 @@ export default function DoctorsCategoryClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-clip">
       
-      {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -153,7 +150,6 @@ export default function DoctorsCategoryClient() {
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
-           
             <span className="text-[#772424]">Dr Mansoor Ahmad Profile</span>
           </div>
           
@@ -166,33 +162,29 @@ export default function DoctorsCategoryClient() {
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
-            {/* LEFT COLUMN: BIOGRAPHY & TEXT-ONLY CERTIFICATES SHOWCASE */}
             <div className="w-full lg:w-2/3 block">
               
-              {/* Lead Biography & Doctor Profile Picture */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-14 grid grid-cols-1 md:grid-cols-5 gap-8 items-stretch bg-gray-50 rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-sm">
-                <div className="md:col-span-2 w-full h-full rounded-2xl overflow-hidden bg-gray-900 relative shadow-md shrink-0">
-                  <img src="/home/doctor.webp" alt="Dr Mansoor Ahmad Senior Chief Surgeon and Medical Director at Hair Skill Clinic" className="w-full h-full object-cover object-top" />
+                <div className="md:col-span-2 w-full h-full min-h-[350px] rounded-2xl overflow-hidden bg-gray-900 relative shadow-md shrink-0">
+                  <Image src="/home/doctor.webp" alt="Dr Mansoor Ahmad Senior Chief Surgeon and Medical Director at Hair Skill Clinic" fill priority sizes="(max-width: 768px) 100vw, 40vw" className="object-cover object-top" />
                 </div>
                 
                 <div className="md:col-span-3 flex flex-col gap-4 justify-center">
-                  <span className="text-xs font-black text-[#772424] tracking-widest uppercase">Verified Medical Leadership</span>
+                  <span className="text-xs font-black text-[#772424] tracking-widest uppercase">Verified Clinical Leadership</span>
                   <h2 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">40+ Years of Surgical Craftsmanship</h2>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Dr. Mansoor Ahmad is a highly distinguished surgical specialist with over four decades of operative practice and clinical leadership. Registered permanently with the Pakistan Medical and Dental Council, his career represents a lifelong commitment to surgical precision, patient safety, and advanced medical administration.
+                    Dr. Mansoor Ahmad is a highly distinguished surgical specialist with over four decades of operative practice and clinical leadership. Registered permanently with the Pakistan Medical and Dental Council, his career represents a lifelong commitment to surgical precision, patient safety, and advanced healthcare administration.
                   </p>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                    Combining foundational surgical training with a Master of Hospital Management Dr Ahmad brings a comprehensive perspective to restorative clinical operations. He ensures that every procedure performed adheres to international cleanroom protocols patient education standards and ethical medical care.
+                    Combining foundational surgical training with a Master of Hospital Management Dr Ahmad brings a comprehensive perspective to restorative clinical operations. He ensures that every procedure performed adheres to international cleanroom protocols patient education standards and ethical patient care.
                   </p>
                 </div>
               </motion.div>
 
-              {/* Degrees Section */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   Official Degrees Fellowships and Registrations
@@ -212,7 +204,6 @@ export default function DoctorsCategoryClient() {
                 </div>
               </motion.div>
 
-              {/* Conferences Section */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   International Symposia Honors and Clinical Updates
@@ -234,7 +225,6 @@ export default function DoctorsCategoryClient() {
 
             </div>
 
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
