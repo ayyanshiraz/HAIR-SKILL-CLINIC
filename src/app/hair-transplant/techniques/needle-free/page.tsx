@@ -5,7 +5,7 @@ const NeedleFreeClient = dynamic(() => import("../../../../components/NeedleFree
 
 export const metadata: Metadata = {
   title: "Painless Needle-Free Hair Transplant Lahore | Hair Skill",
-  description: "Overcome needle phobia with a painless hair transplant in Lahore. We use advanced needle-free jet injection anesthesia for maximum comfort at Hair Skill.",
+  description: "Get a painless needle-free hair transplant in Lahore. We use advanced jet injection anesthesia for maximum comfort at Hair Skill.",
   keywords: [
     "Painless Hair Transplant Lahore",
     "Needle Free Anesthesia Lahore",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Painless Needle-Free Hair Transplant Lahore | Hair Skill",
-    description: "Overcome needle phobia with a painless hair transplant in Lahore. We use advanced needle-free jet injection anesthesia for maximum comfort at Hair Skill.",
+    description: "Get a painless needle-free hair transplant in Lahore. We use advanced jet injection anesthesia for maximum comfort at Hair Skill.",
     url: "https://www.hairskill.com/hair-transplant/techniques/needle-free",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
@@ -35,5 +35,26 @@ export const metadata: Metadata = {
 };
 
 export default function NeedleFreePage() {
-  return <NeedleFreeClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Painless Needle-Free Hair Transplant Lahore | Hair Skill",
+    "description": "Get a painless needle-free hair transplant in Lahore. We use advanced jet injection anesthesia for maximum comfort at Hair Skill.",
+    "url": "https://www.hairskill.com/hair-transplant/techniques/needle-free",
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "url": "https://www.hairskill.com"
+    }
+  };
+
+  return (
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <NeedleFreeClient />
+    </main>
+  );
 }
