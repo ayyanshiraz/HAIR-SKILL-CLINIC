@@ -5,7 +5,7 @@ const UnshavenTransplantClient = dynamic(() => import("../../../../components/Un
 
 export const metadata: Metadata = {
   title: "Unshaven Hair Transplant in Lahore | Hair Skill Clinic",
-  description: "Keep your surgery discreet with a completely unshaven hair transplant in Lahore. Restore hair density without shaving your head at Hair Skill Clinic.",
+  description: "Get a discreet unshaven hair transplant in Lahore. Restore density without shaving your head at Hair Skill.",
   keywords: [
     "Unshaven Hair Transplant Lahore",
     "No Shave FUE Lahore",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Unshaven Hair Transplant in Lahore | Hair Skill Clinic",
-    description: "Keep your surgery discreet with a completely unshaven hair transplant in Lahore. Restore hair density without shaving your head at Hair Skill Clinic.",
+    description: "Get a discreet unshaven hair transplant in Lahore. Restore density without shaving your head at Hair Skill.",
     url: "https://www.hairskill.com/hair-transplant/techniques/unshaven-transplant",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
@@ -35,5 +35,26 @@ export const metadata: Metadata = {
 };
 
 export default function UnshavenTransplantPage() {
-  return <UnshavenTransplantClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Unshaven Hair Transplant in Lahore | Hair Skill Clinic",
+    "description": "Get a discreet unshaven hair transplant in Lahore. Restore density without shaving your head at Hair Skill.",
+    "url": "https://www.hairskill.com/hair-transplant/techniques/unshaven-transplant",
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "url": "https://www.hairskill.com"
+    }
+  };
+
+  return (
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <UnshavenTransplantClient />
+    </main>
+  );
 }
