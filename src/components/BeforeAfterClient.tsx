@@ -126,7 +126,7 @@ export default function BeforeAfterClient() {
                     />
                   </div>
                   
-                  <div className="flex justify-between items-center pt-3 px-1 pb-1">
+                  <div className="flex justify-center items-center pt-3 px-1 pb-1">
                     <div className="flex items-center gap-2 min-h-[32px]">
                       {c.video && (
                         <button
@@ -141,11 +141,11 @@ export default function BeforeAfterClient() {
                         </button>
                       )}
                     </div>
-                    <div className="text-right leading-none">
-                      <span className="text-white/90 font-black text-[10px] text-center sm:text-xs uppercase tracking-widest">
+                    <div className="text-center leading-none w-full">
+                      <span className="text-white/90 font-black text-[10px] sm:text-xs uppercase tracking-widest">
                         HAIR SKILL CLINIC
                       </span>
-                    </div>
+                    </div>  
                   </div>
                 </motion.div>
               ))}
@@ -229,7 +229,7 @@ export default function BeforeAfterClient() {
                   
                 </div>
                 <div className="text-right leading-none">
-                  <span className="text-white/90 font-black text-center text-xs md:text-sm uppercase tracking-widest">
+                  <span className="text-white/90 font-black text-xs md:text-sm uppercase tracking-widest">
                     HAIR SKILL CLINIC
                   </span>
                 </div>
