@@ -35,5 +35,26 @@ export const metadata: Metadata = {
 };
 
 export default function BodyPage() {
-  return <BodyClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Body Hair Transplant in Lahore | BHT | Hair Skill",
+    "description": "Depleted scalp donor? Get the best Body Hair Transplant (BHT) in Lahore. We extract beard and chest follicles for maximum density at Hair Skill Clinic.",
+    "url": "https://www.hairskill.com/hair-transplant/techniques/body",
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "url": "https://www.hairskill.com"
+    }
+  };
+
+  return (
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BodyClient />
+    </main>
+  );
 }

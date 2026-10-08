@@ -29,8 +29,25 @@ export const metadata: Metadata = {
 };
 
 export default function MissionPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Clinic Mission & Vision",
+    "description": "Discover the mission and vision of Hair Skill Clinic in Lahore. Our goal is to improve patient confidence through innovative hair restoration solutions.",
+    "url": "https://www.hairskill.com/about/mission",
+    "mainEntity": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "url": "https://www.hairskill.com"
+    }
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <MissionClient />
     </main>
   );
