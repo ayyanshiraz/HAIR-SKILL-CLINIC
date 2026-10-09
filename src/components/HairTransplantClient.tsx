@@ -27,8 +27,8 @@ export default function HairTransplantClient() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the Hair Transplant Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
+    const textMessage = "Hello! I would like to get a free consultation from the Hair Transplant Page.\n\n*Name*: " + fullName + "\n*Email*: " + email + "\n*Phone*: " + selectedCountry.dial + " " + phone;
+    const whatsappUrl = "https://wa.me/" + targetWhatsapp + "?text=" + encodeURIComponent(textMessage);
     window.open(whatsappUrl, "_blank");
   };
 
@@ -40,7 +40,6 @@ export default function HairTransplantClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
       
-      {/* --- HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,16 +57,25 @@ export default function HairTransplantClient() {
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 items-start mt-8">
             
-            {/* LEFT COLUMN: MAIN CATEGORIES VIEW */}
             <div className="w-full lg:w-2/3">
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: customEase }}
+                className="mb-8 p-6 sm:p-8 rounded-3xl bg-gray-50 border border-gray-200/80"
+              >
+                <p className="text-gray-800 text-base sm:text-lg leading-relaxed font-medium">
+                  At Hair Skill Clinic Lahore, permanent hair restoration is designed around careful donor planning, natural angles, and biological graft safety. Choosing between clinical therapies and micro-surgical extraction depends on your stage of thinning and density goals. Before choosing a procedure, read our essential guide on the <Link href="/blogs/hair-transplant-lahore-10-things" className="text-[#772424] font-bold underline hover:text-black transition-colors">key factors before getting a hair transplant in Lahore</Link> and review critical standards when selecting the <Link href="/blogs/best-hair-doctor-lahore" className="text-[#772424] font-bold underline hover:text-black transition-colors">best hair doctor in Lahore</Link>. Select an option below to explore our verified methods.
+                </p>
+              </motion.div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 
-                {/* TREATMENTS CATEGORY CARD */}
                 <motion.div 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -81,6 +89,8 @@ export default function HairTransplantClient() {
                         src="/hair-transplant/2.webp" 
                         alt="Treatments" 
                         className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
                     </div>
@@ -100,7 +110,6 @@ export default function HairTransplantClient() {
                   </Link>
                 </motion.div>
 
-                {/* TECHNIQUES CATEGORY CARD */}
                 <motion.div 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -114,6 +123,8 @@ export default function HairTransplantClient() {
                         src="/hair-transplant/1.webp" 
                         alt="Techniques" 
                         className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
                     </div>
@@ -135,6 +146,7 @@ export default function HairTransplantClient() {
 
               </div>
             </div>
+
             <motion.div 
               initial="hidden"
               animate="visible"
@@ -173,7 +185,7 @@ export default function HairTransplantClient() {
 
                   <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
                     <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
+                      <img src={"https://flagcdn.com/w20/" + selectedCountry.code.toLowerCase() + ".png"} alt={selectedCountry.name} className="w-5 object-contain" width={20} height={15} loading="lazy" />
                       <span>{selectedCountry.dial}</span>
                       <span className="text-[10px]">▼</span>
                     </div>
@@ -183,7 +195,7 @@ export default function HairTransplantClient() {
                         {countries.map((country: Country, idx: number) => (
                           <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
-                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
+                              <img src={"https://flagcdn.com/w20/" + country.code.toLowerCase() + ".png"} alt={country.name} className="w-5 object-contain shrink-0" width={20} height={15} loading="lazy" />
                               <span className="font-bold">{country.code}</span>
                               <span className="text-xs text-black truncate">{country.name}</span>
                             </div>
