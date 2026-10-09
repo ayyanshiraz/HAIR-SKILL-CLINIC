@@ -5,7 +5,7 @@ import { blogsDatabase } from "../../../data";
 import { Metadata } from "next";
 
 export async function generateStaticParams() {
-  const generalPosts = blogsDatabase.filter((post) => post.category === `general`);
+  const generalPosts = blogsDatabase.filter((post) => post.category === "general");
   return generalPosts.map((post) => ({
     slug: post.slug,
   }));
@@ -13,32 +13,30 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
-  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === `general`);
+  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === "general");
 
   if (!post) {
     return { title: "Blog Not Found" };
   }
 
-  // Base URL is required to make absolute links for Open Graph
   const baseUrl = "https://www.hairskill.com";
+  const postUrl = `${baseUrl}/blogs/general/${post.slug}`;
 
   return {
-    // Replaced title with metaTitle for correct SEO and browser tab display
     title: post.metaTitle,
     description: post.seoDescription,
-    // Added focusKeyword for better search engine optimization
     keywords: post.focusKeyword,
+    alternates: {
+      canonical: postUrl,
+    },
     openGraph: {
-      // Replaced title with metaTitle for social media sharing cards
       title: post.metaTitle,
       description: post.seoDescription,
-      // Added absolute URL and specific type for Ahrefs and social media
-      url: `${baseUrl}/blogs/general/${post.slug}`,
+      url: postUrl,
       siteName: "Hair Skill",
       type: "article",
       images: [
         {
-          // Open Graph requires a complete absolute URL for images
           url: `${baseUrl}${post.previewImage}`,
           width: 1200,
           height: 630,
@@ -51,45 +49,78 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function SingleBlogPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === `general`);
+  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === "general");
 
   if (!post) {
     notFound();
   }
 
+  const baseUrl = "https://www.hairskill.com";
+  const postUrl = `${baseUrl}/blogs/general/${post.slug}`;
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.seoDescription,
+    "image": `${baseUrl}${post.previewImage}`,
+    "datePublished": post.date,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": postUrl
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Hair Skill Clinic",
+      "url": baseUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hair Skill Clinic",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${baseUrl}/logo.webp`
+      }
+    }
+  };
+
   return (
-    <div className={`min-h-screen bg-white text-black font-sans pt-32 pb-24 px-6`}>
-      <div className={`max-w-[1300px] mx-auto mb-8`}>
-        <div className={`text-xs font-black uppercase tracking-widest text-black flex items-center gap-2 justify-start flex-wrap`}>
-          <Link href={`/`} className={`md:hover:text-[#772424] active:text-[#772424] transition-colors`}>Homepage</Link>
+    <div className="min-h-screen bg-white text-black font-sans pt-32 pb-24 px-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+
+      <div className="max-w-[1300px] mx-auto mb-8">
+        <div className="text-xs font-black uppercase tracking-widest text-black flex items-center gap-2 justify-start flex-wrap">
+          <Link href="/" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
           <span>/</span>
-          <Link href={`/blogs`} className={`md:hover:text-[#772424] active:text-[#772424] transition-colors`}>Blogs</Link>
+          <Link href="/blogs" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Blogs</Link>
           <span>/</span>
-          <span className={`text-[#772424] truncate max-w-[200px] sm:max-w-none`}>{post.title}</span>
+          <span className="text-[#772424] truncate max-w-[200px] sm:max-w-none">{post.title}</span>
         </div>
       </div>
 
-      <article className={`max-w-4xl mx-auto`}>
-
-        <div className={`w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-100 shadow-xl border border-gray-100`}>
-          <img src={post.previewImage} alt={post.title} className={`w-full h-full object-contain object-top`} />
+      <article className="max-w-4xl mx-auto">
+        <div className="w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-100 shadow-xl border border-gray-100">
+          <img src={post.previewImage} alt={post.title} className="w-full h-full object-contain object-top" />
         </div>
-        <h1 className={`text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4`}>
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4">
           {post.title}
         </h1>
         
-        <div className={`flex flex-wrap items-center gap-4 text-sm font-bold text-gray-500 pb-8 border-b border-gray-200 mb-8`}>
+        <div className="flex flex-wrap items-center gap-4 text-sm font-bold text-gray-500 pb-8 border-b border-gray-200 mb-8">
           <span>Published {post.date}</span>
         </div>
 
-        <div className={`text-lg leading-relaxed font-medium text-gray-800 text-justify`}>
+        <div className="text-lg leading-relaxed font-medium text-gray-800 text-justify">
           {post.content}
         </div>
 
-        <div className={`mt-16 pt-8 border-t border-gray-200`}>
+        <div className="mt-16 pt-8 border-t border-gray-200">
           <Link 
-            href={`/blogs`} 
-            className={`inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#772424] text-white font-extrabold text-sm tracking-wider uppercase shadow-lg md:hover:bg-[#8c2a2a] active:scale-95 transition-all`}
+            href="/blogs" 
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#772424] text-white font-extrabold text-sm tracking-wider uppercase shadow-lg md:hover:bg-[#8c2a2a] active:scale-95 transition-all"
           >
             ← Back to All Blogs
           </Link>
