@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your root app data folder
 import { countries, type Country } from "../data/countries";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
@@ -34,15 +32,13 @@ export default function DhiClient() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-
-  // FAQ Accordion state
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the DHI Technique Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
+    const textMessage = "Hello! I would like to get a free consultation from the DHI Technique Page.\n\n*Name*: " + fullName + "\n*Email*: " + email + "\n*Phone*: " + selectedCountry.dial + " " + phone;
+    const whatsappUrl = "https://wa.me/" + targetWhatsapp + "?text=" + encodeURIComponent(textMessage);
     window.open(whatsappUrl, "_blank");
   };
 
@@ -51,7 +47,6 @@ export default function DhiClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 11 FAQS DATA (Verbatim, scrubbed of live prose & logistics errors) ---
   const faqList = [
     {
       q: "What is a DHI hair transplant?",
@@ -102,7 +97,6 @@ export default function DhiClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
-      {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -110,7 +104,6 @@ export default function DhiClient() {
         className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
@@ -121,27 +114,24 @@ export default function DhiClient() {
             <span className="text-[#772424]">DHI Hair Transplant</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             DHI Hair Transplant Pakistan
           </h1>
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             
-            {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & 5 MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 block">
               
-              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
                   src="/home/techniques/3.webp" 
                   alt="Surgeon holding specialized Choi implanter pen used for Direct Hair Implantation DHI at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-4 py-1.5 rounded-md backdrop-blur-xs">
@@ -149,7 +139,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* --- TOP ADDITION 1: DHI OVERVIEW --- */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   DHI Hair Transplant (Direct Hair Implantation)
@@ -162,7 +151,6 @@ export default function DhiClient() {
                 </p>
               </motion.div>
 
-              {/* --- TOP ADDITION 2: BENEFITS OF DHI --- */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Benefits of DHI</h3>
                 <div className="space-y-3 ml-1 sm:ml-2">
@@ -182,7 +170,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* --- TOP ADDITION 3: RECOVERY --- */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Recovery</h3>
                 <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
@@ -195,7 +182,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* --- EXISTING DEEP DIVE: LEAD INTRODUCTION --- */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12 flex flex-col gap-6 pt-8 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Comprehensive Guide to Direct Hair Implantation
@@ -230,12 +216,16 @@ export default function DhiClient() {
                 </p>
               </motion.div>
 
-              {/* IMAGE 2: Frontal Lowering Comparison */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                <img src="/hair-transplant/34.webp" alt="Frontal view comparing lowered pre surgical DHI hairline markings against mature dense growth" className="w-full h-full object-cover object-top" />
+                <img 
+                  src="/hair-transplant/34.webp" 
+                  alt="Frontal view comparing lowered pre surgical DHI hairline markings against mature dense growth" 
+                  className="w-full h-full object-cover object-top" 
+                  loading="lazy"
+                  decoding="async"
+                />
               </motion.div>
 
-              {/* Section: Key Benefits at a Glance */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Key Benefits at a Glance</h3>
                 <div className="space-y-2 ml-2 mb-6">
@@ -252,7 +242,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: What Is DHI Hair Transplant and How Does It Work */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   What Is a DHI Hair Transplant and How Does It Work?
@@ -272,7 +261,9 @@ export default function DhiClient() {
 
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">DHI vs FUE</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-2">Many patients compare DHI vs FUE or look up FUE vs DHI hair transplant methods. The difference is not extraction. It is implantation. FUE creates channels then inserts grafts. DHI inserts grafts directly which supports angle control.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-2">
+                      Many patients <Link href="/blogs/hair-transplant/dhi-vs-fue-hair-transplant-lahore" className="text-[#772424] font-bold underline hover:text-black transition-colors">compare DHI vs FUE in Lahore</Link> or examine which extraction and placement protocol matches their scalp. The difference is not extraction. It is implantation. FUE creates channels then inserts grafts. DHI inserts grafts directly which supports angle control.
+                    </p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">It is also important to understand that in experienced hands DHI and standard FUE can achieve equally natural high quality outcomes. The technique is a tool; what truly determines the result is the expertise of the team proper planning graft handling angle and direction control and disciplined donor management. The best results come from the right hands not the trendiest label.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">For large areas like full crowns classic FUE or Sapphire FUE can be just as effective. For hairlines or temples DHI often provides cleaner detail because the surgeon manages every angle individually.</p>
                   </div>
@@ -293,7 +284,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Why Choose DHI Hair Transplant at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Choose a DHI Hair Transplant in Pakistan at Hair Skill Clinic
@@ -334,7 +324,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Who Is a Good Candidate */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Who Is a Good Candidate for a DHI Hair Transplant?
@@ -377,15 +366,19 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: DHI Techniques Choi Pen Control & Density Planning */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   DHI Techniques: Choi Pen Control, Density Planning, and Natural Design
                 </h2>
 
-                {/* IMAGE 3: Two Implanter Pens Lying Flat */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-8 shadow-md">
-                  <img src="/hair-transplant/35.webp" alt="Two sterile Choi implanter pens calibrated for single and double follicular unit placements" className="w-full h-full object-cover object-center" />
+                  <img 
+                    src="/hair-transplant/35.webp" 
+                    alt="Two sterile Choi implanter pens calibrated for single and double follicular unit placements" 
+                    className="w-full h-full object-cover object-center" 
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -417,19 +410,23 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Procedure Step by Step at Hair Skill */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   DHI Hair Transplant Procedure Step by Step at Hair Skill Clinic
                 </h2>
 
-                {/* IMAGE 4: Macro Choi Insertion */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/hair-transplant/6.webp" alt="Macro close up view of surgeon placing follicular unit directly into scalp with Choi implanter pen" className="w-full h-full object-cover object-center" />
+                  <img 
+                    src="/hair-transplant/6.webp" 
+                    alt="Macro close up view of surgeon placing follicular unit directly into scalp with Choi implanter pen" 
+                    className="w-full h-full object-cover object-center" 
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Understanding the full DHI procedure step by step helps remove most of the anxiety people feel before surgery. The goal is to make the day predictable calm and structured. At Hair Skill every step is guided by your surgeon and every decision is explained. Nothing feels rushed. Nothing feels unclear.
+                  Understanding the full <Link href="/blogs/hair-transplant/dhi-hair-transplant-lahore-procedure-benefits" className="text-[#772424] font-bold underline hover:text-black transition-colors">DHI procedure and clinical benefits</Link> step by step helps remove most of the anxiety people feel before surgery. The goal is to make the day predictable calm and structured. At Hair Skill every step is guided by your surgeon and every decision is explained. Nothing feels rushed. Nothing feels unclear.
                 </p>
 
                 <div className="space-y-6 border-l-2 border-[#772424]/20 pl-4 sm:pl-6 ml-1 sm:ml-2 mb-6">
@@ -451,13 +448,12 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: DHI Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   DHI Hair Transplant Cost Ranges in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  When people search for a DHI hair transplant cost in Pakistan they often find confusing numbers that range from surprisingly cheap to questionably high. The truth sits in the middle. DHI is more labor intensive than classic FUE and it requires surgeon led precision during implantation so reliable clinics price it realistically. If you are comparing the direct hair implantation price globally you will see massive advantages here.
+                  When people evaluate a <Link href="/blogs/hair-transplant/dhi-hair-transplant-cost-in-pakistan" className="text-[#772424] font-bold underline hover:text-black transition-colors">DHI hair transplant cost in Pakistan</Link> they often find confusing numbers that range from surprisingly cheap to questionably high. The truth sits in the middle. DHI is more labor intensive than classic FUE and it requires surgeon led precision during implantation so reliable clinics price it realistically. If you are comparing the direct hair implantation price globally you will see massive advantages here.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   At Hair Skill package brackets stay transparent medically driven and tailored to your case inside accessible local PKR tiers not marketing trends.
@@ -488,7 +484,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Recovery Healing and 12-18 Month Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Recovery, Healing, and 12 to 18 Month Results With DHI
@@ -498,7 +493,6 @@ export default function DhiClient() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  {/* CHANGED FROM h4 TO h3 */}
                   <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200/80">
                     <h3 className="text-lg font-black text-[#772424] mb-2">The First Week</h3>
                     <p className="text-black font-medium text-sm md:text-base leading-relaxed">Redness mild swelling tightness or small scabs improve within days. Your first wash happens at the clinic. Sleeping upright protects grafts upfront. Early days feel far easier than classic channel opening.</p>
@@ -525,7 +519,6 @@ export default function DhiClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Risks Safety and Success Rate */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Risks, Safety, and Success Rate of a DHI Hair Transplant
@@ -551,7 +544,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Aesthetics Density and Natural Results */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Aesthetics, Density, and Natural Results With DHI
@@ -578,7 +570,6 @@ export default function DhiClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Scheduling Your Session in Lahore */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Scheduling Your DHI Restoration Staging in Lahore, Pakistan
@@ -594,7 +585,6 @@ export default function DhiClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Closing CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200 mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Start Your DHI Hair Transplant Journey With Hair Skill Clinic
@@ -631,7 +621,6 @@ export default function DhiClient() {
                 </p>
               </motion.div>
 
-              {/* SECTION: 11 FAQS ACCORDION (Moved to the end) */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   DHI Hair Transplant Pakistan FAQs
@@ -673,7 +662,6 @@ export default function DhiClient() {
 
             </div>
 
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
@@ -712,7 +700,7 @@ export default function DhiClient() {
 
                   <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
                     <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
+                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" width={20} height={15} loading="lazy" />
                       <span>{selectedCountry.dial}</span>
                       <span className="text-[10px]">▼</span>
                     </div>
@@ -722,7 +710,7 @@ export default function DhiClient() {
                         {countries.map((country: Country, idx: number) => (
                           <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
-                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
+                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" width={20} height={15} loading="lazy" />
                               <span className="font-bold">{country.code}</span>
                               <span className="text-xs text-black truncate">{country.name}</span>
                             </div>
