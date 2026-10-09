@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Link from "next/link";
-
-// Safely mapped to your root app data folder
 import { countries, type Country } from "../data/countries";
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
@@ -34,15 +32,13 @@ export default function PrpClient() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-
-  // FAQ Accordion state
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the PRP Hair Treatment Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
+    const textMessage = "Hello! I would like to get a free consultation from the PRP Hair Treatment Page.\n\n*Name*: " + fullName + "\n*Email*: " + email + "\n*Phone*: " + selectedCountry.dial + " " + phone;
+    const whatsappUrl = "https://wa.me/" + targetWhatsapp + "?text=" + encodeURIComponent(textMessage);
     window.open(whatsappUrl, "_blank");
   };
 
@@ -51,7 +47,6 @@ export default function PrpClient() {
     WebkitTextFillColor: "#ffffff"
   };
 
-  // --- 10 FAQS DATA (Verbatim, scrubbed of live prose & logistics errors) ---
   const faqList = [
     {
       q: "Does PRP really work for hair loss?",
@@ -98,7 +93,6 @@ export default function PrpClient() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24 overflow-x-clip">
       
-      {/* --- ASYMMETRIC HEADER --- */}
       <motion.section 
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -106,38 +100,34 @@ export default function PrpClient() {
         className="pt-28 lg:pt-36 pb-12 bg-white px-4 sm:px-6"
       >
         <div className="max-w-[1300px] mx-auto relative">
-          {/* Breadcrumbs strictly pinned to far left */}
           <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
             <Link href="/" className="hover:text-[#772424] transition-colors">Homepage</Link>
             <span>/</span>
             <Link href="/hair-transplant" className="hover:text-[#772424] transition-colors">Hair Transplant</Link>
             <span>/</span>
             <Link href="/hair-transplant/treatments" className="hover:text-[#772424] active:text-[#772424] transition-colors">Treatments</Link>
-             <span>/</span>
+            <span>/</span>
             <span className="text-[#772424]">PRP Hair Treatment</span>
           </div>
           
-          {/* Title centered independently */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
             PRP Hair Treatment 
           </h1>
         </div>
       </motion.section>
 
-      {/* --- MAIN CONTENT & STICKY SIDEBAR --- */}
       <section className="py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch lg:items-start w-full">
             
-            {/* LEFT COLUMN: SCROLL-ANIMATED PROSE & 4 MAPPED IMAGES */}
             <div className="w-full lg:w-2/3 flex flex-col">
               
-              {/* IMAGE 1: Flagship Hero Visual */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-900 relative mb-10 shadow-xl group">
                 <img 
                   src="/hair-transplant/treatments/8.webp" 
                   alt="Medical professional wearing sterile purple gloves administering precise PRP cellular injection into patient scalp at Hair Skill Clinic" 
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-1000 opacity-95 object-center" 
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 sm:left-6 text-white font-bold text-xs tracking-wider bg-black/40 px-3 sm:px-4 py-1.5 rounded-md backdrop-blur-xs">
@@ -145,7 +135,6 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* --- TOP ADDITION 1: WHAT IS PRP --- */}
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12 flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight border-b pb-3 border-gray-100">
                   What is PRP?
@@ -155,7 +144,6 @@ export default function PrpClient() {
                 </p>
               </motion.div>
 
-              {/* --- TOP ADDITION 2: HOW PRP HELPS --- */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">How PRP Helps</h3>
                 <p className="text-black text-base md:text-lg font-medium mb-3">PRP is commonly used to:</p>
@@ -174,7 +162,6 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* --- TOP ADDITION 3: IMPORTANT INFORMATION ABOUT PRP --- */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Important Information About PRP</h3>
                 <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424] flex flex-col gap-4">
@@ -190,7 +177,6 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* --- TOP ADDITION 4: PRP TREATMENT PLAN --- */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">PRP Treatment Plan</h3>
                 <p className="text-black text-base md:text-lg font-medium mb-3">For patients undergoing hair transplant procedures:</p>
@@ -208,7 +194,6 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* --- TOP ADDITION 5: LEARN MORE CTA --- */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-3">Learn More</h3>
                 <p className="text-black text-base md:text-lg leading-relaxed font-extrabold bg-[#772424]/10 p-6 rounded-2xl border border-[#772424]/30">
@@ -216,7 +201,6 @@ export default function PrpClient() {
                 </p>
               </motion.div>
 
-              {/* --- EXISTING DEEP DIVE: CLINICAL INTRODUCTION --- */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-12 flex flex-col gap-6 pt-8 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] tracking-tight">
                   Comprehensive Medical Guide to PRP
@@ -251,7 +235,6 @@ export default function PrpClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Why Choose Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Why Choose Hair Skill Clinic for PRP Hair Treatment?
@@ -277,7 +260,7 @@ export default function PrpClient() {
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Integrates With Hair Transplant Plans & Comfort Care</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">PRP can support recovery after a transplant calm irritation or help strengthen native hair. You receive guidance on how PRP fits into your overall long term plan. Local numbing and gentle techniques make the experience manageable. Sessions fit easily into your week.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our clinical experts often share: PRP works best when the right patient the right protocol and the right timing meet.
+                      Our clinical experts often share: PRP works best when the right patient the right protocol and the right timing meet. Learn more about clinical quality standards in our guide to the <Link href="/blogs/hair-transplant/best-prp-hair-treatment-lahore" className="text-[#772424] underline hover:text-black transition-colors font-black">best PRP hair treatment in Lahore</Link>.
                     </p>
                   </div>
                 </div>
@@ -310,15 +293,19 @@ export default function PrpClient() {
                 </p>
               </motion.div>
 
-              {/* Section: Who Is PRP Hair Treatment Best For */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Who Is PRP Hair Treatment Best For?
                 </h2>
 
-                {/* IMAGE 2: Section Image Injecting Temple */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/hair-transplant/treatments/9.webp" alt="Surgeon administering precise localized platelet plasma dosage into male frontal temple peak at Hair Skill Clinic" className="w-full h-full object-cover object-center" />
+                  <img 
+                    src="/hair-transplant/treatments/9.webp" 
+                    alt="Surgeon administering precise localized platelet plasma dosage into male frontal temple peak at Hair Skill Clinic" 
+                    className="w-full h-full object-cover object-center" 
+                    loading="lazy" 
+                    decoding="async"
+                  />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -332,8 +319,8 @@ export default function PrpClient() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Dandruff, Scalp Infections and Seborrheic Issues</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Many patients choose ozone hair treatment for dandruff because ozone has a gentle antimicrobial action. This may help with ozone therapy for scalp infections ozone therapy for seborrheic dermatitis and stubborn flakes that resist shampoos. People with ozone therapy for itchy scalps often describe fast relief smoother skin and easier washing routines.</p>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Scalp Weakness, Thinning and Miniaturisation</h3>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">Many patients choose PRP hair treatment when dormant roots need biological activation. Platelet growth factors nourish scalp circulation, decrease miniaturisation, and help revive weaker strands that struggle to stay in the natural growth phase.</p>
                   </div>
 
                   <div>
@@ -341,21 +328,25 @@ export default function PrpClient() {
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">Some patients combine prp fue hair transplant protocols or start prp before hair transplant to understand benefits of prp after hair transplantation. A clean balanced scalp supports better planning and healthier tissue before surgery.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-4">When timed correctly prp after hair transplant may help recovery feel smoother. It answers questions like is prp necessary after hair transplant and when to do prp after hair transplant. It works by supporting circulation and easing irritation. This is why some doctors use it in protocols designed to speed healing after hair transplant or possibly increase graft survival by improving the surrounding environment.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our attending physicians share that ozone therapy works best when the scalp still has active potential. Matching the right patient to the right treatment is what creates long term confidence.
+                      Our attending physicians share that PRP therapy works best when the scalp still has active potential. Matching the right patient to the right treatment is what creates long term confidence.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Section: How PRP Hair Treatment Works at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   How PRP Hair Treatment Works at Hair Skill Clinic
                 </h2>
 
-                {/* IMAGE 3: Section Image Blood Draw Tube */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/hair-transplant/treatments/10.webp" alt="Clinical blood draw from patient arm into specialized biological centrifuge separation container" className="w-full h-full object-cover object-center" />
+                  <img 
+                    src="/hair-transplant/treatments/10.webp" 
+                    alt="Clinical blood draw from patient arm into specialized biological centrifuge separation container" 
+                    className="w-full h-full object-cover object-center" 
+                    loading="lazy" 
+                    decoding="async"
+                  />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -384,7 +375,6 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Results What to Expect and When */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   PRP Hair Treatment Results: What to Expect and When
@@ -421,15 +411,19 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Protocols How Many Sessions You Really Need */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   PRP Hair Treatment Protocols: How Many Sessions You Really Need
                 </h2>
 
-                {/* IMAGE 4: Section Image Crown Syringe Injection */}
                 <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden bg-gray-100 relative mb-8 shadow-md">
-                  <img src="/hair-transplant/treatments/11.webp" alt="Surgeon administering concentrated platelet booster into patient crown and midscalp parting" className="w-full h-full object-cover object-center" />
+                  <img 
+                    src="/hair-transplant/treatments/11.webp" 
+                    alt="Surgeon administering concentrated platelet booster into patient crown and midscalp parting" 
+                    className="w-full h-full object-cover object-center" 
+                    loading="lazy" 
+                    decoding="async"
+                  />
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
@@ -453,7 +447,6 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* Section: PRP and Hair Transplant at Hair Skill Clinic */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   PRP Hair Treatment and Hair Transplant at Hair Skill Clinic
@@ -479,7 +472,6 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Is PRP Hair Treatment Safe Side Effects and Evidence */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   Is PRP Hair Treatment Safe? Side Effects and Evidence
@@ -506,13 +498,12 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Cost Ranges in Pakistan */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
                   PRP Hair Treatment Cost Ranges in Pakistan: Packages at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Patients reviewing the estimate cost of prp hair transplant in pakistan often compare prp vs hair transplant options. Some clinics advertise unbelievably cheap offers while others present heavily inflated calculations. You want absolute clarity and honesty. Hair Skill Clinic gives both inside accessible local PKR tiers so you can plan with confidence.
+                  Patients reviewing the estimate cost of prp hair transplant in pakistan often compare prp vs hair transplant options. For detailed session package pricing and protocol options, explore our <Link href="/blogs/hair-transplant/prp-hair-treatment-cost-lahore-price" className="text-[#772424] font-bold underline hover:text-black transition-colors">PRP hair treatment cost guide</Link>. Some clinics advertise unbelievably cheap offers while others present heavily inflated calculations. You want absolute clarity and honesty. Hair Skill Clinic gives both inside accessible local PKR tiers so you can plan with confidence.
                 </p>
 
                 <div className="space-y-6">
@@ -533,7 +524,20 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* SECTION: 10 FAQS ACCORDION */}
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
+                <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Related Clinical Guides</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Link href="/blogs/hair-transplant/best-prp-hair-treatment-lahore" className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:border-[#772424] hover:bg-white transition-all group">
+                    <span className="text-xs font-black uppercase tracking-wider text-[#772424] block mb-1">Clinical Comparison</span>
+                    <h4 className="font-bold text-gray-900 group-hover:text-[#772424] text-base leading-snug">Best PRP Hair Treatment in Lahore: Complete Guide</h4>
+                  </Link>
+                  <Link href="/blogs/hair-transplant/prp-hair-treatment-cost-lahore-price" className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:border-[#772424] hover:bg-white transition-all group">
+                    <span className="text-xs font-black uppercase tracking-wider text-[#772424] block mb-1">Pricing & Packages</span>
+                    <h4 className="font-bold text-gray-900 group-hover:text-[#772424] text-base leading-snug">PRP Hair Treatment Cost in Lahore: Session Details</h4>
+                  </Link>
+                </div>
+              </motion.div>
+
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
                   PRP Hair Treatment Pakistan FAQs
@@ -573,7 +577,6 @@ export default function PrpClient() {
                 </div>
               </motion.div>
 
-              {/* Section: Closing CTA */}
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="pt-8 border-t border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-4 tracking-tight">
                   Start Your PRP Hair Treatment Journey With Hair Skill Clinic
@@ -589,7 +592,6 @@ export default function PrpClient() {
 
             </div>
 
-            {/* RIGHT COLUMN: STICKY CONSULTATION FORM */}
             <motion.div 
               initial="hidden"
               animate="visible"
@@ -628,7 +630,7 @@ export default function PrpClient() {
 
                   <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
                     <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
+                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" width={20} height={15} loading="lazy" />
                       <span>{selectedCountry.dial}</span>
                       <span className="text-[10px]">▼</span>
                     </div>
@@ -638,7 +640,7 @@ export default function PrpClient() {
                         {countries.map((country: Country, idx: number) => (
                           <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
                             <div className="flex items-center gap-2.5 truncate mr-2">
-                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
+                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" width={20} height={15} loading="lazy" />
                               <span className="font-bold">{country.code}</span>
                               <span className="text-xs text-black truncate">{country.name}</span>
                             </div>
