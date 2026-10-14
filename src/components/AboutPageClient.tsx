@@ -83,13 +83,13 @@ export default function AboutPageClient() {
       title: "Why To Choose Hair Skill Clinic?",
       image: "/about/3.webp",
       summary: "Excellence in Hair Transplantation in Lahore, Pakistan. Hair Skill Clinic is a leading hair transplant clinic in Pakistan, providing advanced micro-surgical procedures.",
-      link: "/about/why-choose-us"
+      link: "/about/why-choose-hair-skill"
     },
     {
       title: "Hair Skill Gentle Care",
       image: "/about/4.webp",
       summary: "Hair Skill Clinic is passionate about patients ultimate comfort in all stages of your visit. Hair Skill Gentle Care manifests how a patients well-being is prioritized.",
-      link: "/about/gentle-care"
+      link: "/about/patient-care-standards"
     },
     {
       title: "Data Protection Policy",
@@ -101,7 +101,7 @@ export default function AboutPageClient() {
       title: "Hair Skill True Philosophy",
       image: "/about/6.webp",
       summary: "True Philosophy. Hair Skill Clinic has disciplined its way of performing hair transplantation around the TRUE Philosophy, establishing a higher medical benchmark.",
-      link: "/about/philosophy"
+      link: "/about/our-approach"
     },
     {
       title: "Hair Skill Clinic",

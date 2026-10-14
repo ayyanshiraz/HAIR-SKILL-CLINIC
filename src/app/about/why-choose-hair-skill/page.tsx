@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: "Discover why patients choose Hair Skill Clinic Lahore. We combine medical precision with a patient-centered approach for trusted results.",
   keywords: ["Why Choose Hair Skill Clinic", "Medical Precision Lahore", "Patient-Centered Care", "Trusted Hair Restoration"],
   alternates: {
-    canonical: "https://www.hairskill.com/about/why-choose-us",
+    canonical: "https://www.hairskill.com/about/why-choose-hair-skill",
   },
   openGraph: {
     title: "Why Choose Us - Medical Excellence at Hair Skill Clinic",
     description: "Discover why patients choose Hair Skill Clinic Lahore. We combine medical precision with a patient-centered approach for trusted results.",
-    url: "https://www.hairskill.com/about/why-choose-us",
+    url: "https://www.hairskill.com/about/why-choose-hair-skill",
     siteName: "Hair Skill Clinic",
     images: [
       {
@@ -34,7 +34,7 @@ export default function WhyChooseUsPage() {
     "@type": "AboutPage",
     "name": "Why Choose Hair Skill Clinic?",
     "description": "Discover why patients choose Hair Skill Clinic Lahore. We combine medical precision with a patient-centered approach for trusted results.",
-    "url": "https://www.hairskill.com/about/why-choose-us",
+    "url": "https://www.hairskill.com/about/why-choose-hair-skill",
     "mainEntity": {
       "@type": "MedicalClinic",
       "name": "Hair Skill Clinic",

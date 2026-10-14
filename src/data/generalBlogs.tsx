@@ -174,7 +174,7 @@ export const generalBlogs: BlogPost[] = [
 
         <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Consult with a Master Surgeon Today</h3>
         <p className="mb-2">Do not compromise on your hair restoration journey. Start your hair restoration journey with a consultation with our medical team to ensure safe and optimal results.</p>
-        <p className="mb-2">Visit <a href="/about/why-choose-us" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a> to learn more about our excellent medical services and experience and to book your consultation.</p>
+        <p className="mb-2">Visit <a href="/about/why-choose-hair-skill" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a> to learn more about our excellent medical services and experience and to book your consultation.</p>
       </>
     )
   },
@@ -325,7 +325,7 @@ export const generalBlogs: BlogPost[] = [
         <p className="mb-4">Your well-being must come first. The only dependable route to safe, predictable outcomes is still to choose a surgeon-led hair transplant in Lahore. Do not sacrifice medical standards in order to cut expenses. Any short-term cost savings are greatly outweighed by the long-term benefits of a successful surgery.</p>
 
         <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Book Your Surgeon-Led Consultation Today</h3>
-        <p className="mb-2">Start down the path to a long-term solution. Discover the unparalleled surgical standards of our clinic and make an appointment by visiting <a href="/about/why-choose-us" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a>.</p>
+        <p className="mb-2">Start down the path to a long-term solution. Discover the unparalleled surgical standards of our clinic and make an appointment by visiting <a href="/about/why-choose-hair-skill" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a>.</p>
       </>
     )
   },
@@ -391,7 +391,7 @@ export const generalBlogs: BlogPost[] = [
 
         <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Contact Us for Your Pre Surgery Questions</h3>
         <p className="mb-2">Do not hesitate to contact our staff if you need more information or if you have any questions about these instructions. We are always available to assist you in feeling fully at ease and ready.</p>
-        <p className="mb-2">To start the process of getting your new look, please visit our website at <a href="/about/why-choose-us" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a> to schedule your consultation.</p>
+        <p className="mb-2">To start the process of getting your new look, please visit our website at <a href="/about/why-choose-hair-skill" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a> to schedule your consultation.</p>
       </>
     )
   },
@@ -461,7 +461,7 @@ export const generalBlogs: BlogPost[] = [
         <p className="mb-4">Making the decision to restore hair demands serious consideration, but the fundamental question of whether a hair transplant safe Lahore choice fits your lifestyle is answered by giving rigorous safety checks first priority. Instead of focusing on low prices or eye-catching marketing, patients should base their decisions on medical expertise and professional credentials. Selecting licensed medical treatment ensures long-term satisfaction and peace of mind.</p>
 
         <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Schedule Your Safe Consultation Today</h3>
-        <p className="mb-2">Now is the time to move on with permanent hair restoration. To schedule a secure professional consultation with our knowledgeable staff, go to <a href="/about/why-choose-us" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a>.</p>
+        <p className="mb-2">Now is the time to move on with permanent hair restoration. To schedule a secure professional consultation with our knowledgeable staff, go to <a href="/about/why-choose-hair-skill" className="text-[#772424] font-semibold hover:underline">Why Choose Us</a>.</p>
       </>
     )
   }

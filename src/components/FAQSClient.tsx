@@ -53,11 +53,35 @@ export default function FAQClient() {
     window.open(whatsappUrl, "_blank");
   };
 
-  // Defeats Google Chrome forced white Autofill override
   const autofillFixStyle = {
     WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
     WebkitTextFillColor: "#ffffff"
   };
+
+  // --- CATEGORY CARDS DATA ---
+  const faqCategories = [
+    {
+      id: "pre-op",
+      title: "Pre-Operation F.A.Q",
+      desc: "Everything you need to know to prepare for your surgery.",
+      link: "/faqs/pre-op",
+      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      id: "post-op",
+      title: "Post-Operation F.A.Q",
+      desc: "Essential aftercare instructions for optimal healing.",
+      link: "/faqs/post-op",
+      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      id: "general",
+      title: "General F.A.Q",
+      desc: "Common questions about costs, timelines, and procedures.",
+      link: "/faqs/general",
+      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop"
+    }
+  ];
 
   // --- FAQ DATA EXTRACTED FROM SCREENSHOTS ---
   const faqs = [
@@ -134,8 +158,11 @@ export default function FAQClient() {
       >
         <div className="max-w-[1200px] mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
-            F.A.Q.S
+            How Can We Help You?
           </h1>
+          <p className="mt-4 text-gray-600 font-medium text-lg max-w-2xl mx-auto">
+            Find answers to common questions below, or choose a specific category for more details.
+          </p>
         </div>
       </motion.section>
 
@@ -144,51 +171,80 @@ export default function FAQClient() {
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             
-            {/* LEFT SIDE: FAQ ACCORDION */}
-            <div className="w-full lg:w-2/3 flex flex-col">
+            {/* LEFT SIDE: CARDS + ACCORDION */}
+            <div className="w-full lg:w-2/3 flex flex-col gap-16">
               
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-8">
+              {/* SECTION 1: CATEGORY CARDS */}
+              <motion.div initial="hidden" animate="visible" variants={fadeUp}>
                 <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight mb-6">
-                  Frequently Asked Questions
+                  Browse by Category
                 </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {faqCategories.map((category) => (
+                    <Link href={category.link} key={category.id} className="group relative w-full h-[240px] rounded-3xl overflow-hidden shadow-lg block">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
+                        style={{ backgroundImage: `url(${category.image})` }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 transition-opacity duration-300 group-hover:opacity-90" />
+                      <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                        <div className="transform transition-transform duration-500 ease-out translate-y-2 group-hover:translate-y-0">
+                          <h3 className="text-xl font-black text-white mb-1">{category.title}</h3>
+                          <p className="text-white/80 text-sm font-medium opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 line-clamp-2">
+                            {category.desc}
+                          </p>
+                        </div>
+                        <div className="absolute bottom-6 right-6 w-8 h-8 bg-white text-[#772424] rounded-full flex items-center justify-center opacity-0 transform translate-x-4 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:translate-x-0 shadow-xl">
+                          <span className="font-bold text-lg leading-none">›</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </motion.div>
 
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} className="flex flex-col gap-4">
-                {faqs.map((item) => {
-                  const isActive = activeIndex === item.id;
-                  return (
-                    <div 
-                      key={item.id} 
-                      className="flex flex-col w-full shadow-md transition-all duration-300 overflow-hidden"
-                    >
-                      <button
-                        onClick={() => toggleAccordion(item.id)}
-                        className="w-full flex items-center justify-between px-6 py-5 md:px-8 md:py-6 bg-[#772424] text-white font-bold text-left transition-colors duration-300"
+              {/* SECTION 2: TOP FAQS ACCORDION */}
+              <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+                <h2 className="text-2xl md:text-3xl font-black text-[#772424] tracking-tight mb-6">
+                  Top Frequently Asked Questions
+                </h2>
+                <div className="flex flex-col gap-4">
+                  {faqs.map((item) => {
+                    const isActive = activeIndex === item.id;
+                    return (
+                      <div 
+                        key={item.id} 
+                        className="flex flex-col w-full shadow-md transition-all duration-300 overflow-hidden rounded-lg"
                       >
-                        <span className="text-base md:text-lg pr-4">{item.q}</span>
-                        <span className="text-2xl font-light leading-none shrink-0">
-                          {isActive ? "−" : "+"}
-                        </span>
-                      </button>
-                      
-                      <AnimatePresence>
-                        {isActive && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="bg-gray-200 overflow-hidden"
-                          >
-                            <div className="px-6 py-8 md:px-8 md:py-10 text-black font-medium text-base md:text-lg leading-relaxed">
-                              {item.a}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
+                        <button
+                          onClick={() => toggleAccordion(item.id)}
+                          className={`w-full flex items-center justify-between px-6 py-5 md:px-8 md:py-5 font-bold text-left transition-colors duration-300 ${isActive ? 'bg-[#772424] text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                        >
+                          <span className="text-base md:text-[15px] pr-4">{item.q}</span>
+                          <span className="text-2xl font-light leading-none shrink-0">
+                            {isActive ? "−" : "+"}
+                          </span>
+                        </button>
+                        
+                        <AnimatePresence>
+                          {isActive && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3, ease: "easeInOut" }}
+                              className="bg-white border-x border-b border-gray-200 overflow-hidden"
+                            >
+                              <div className="px-6 py-6 md:px-8 md:py-6 text-gray-600 font-medium text-[15px] leading-relaxed">
+                                {item.a}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
+                </div>
               </motion.div>
 
             </div>

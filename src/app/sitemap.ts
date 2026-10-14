@@ -8,12 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/about/data-protection",
     "/about/ethics",
-    "/about/gentle-care",
+    "/about/patient-care-standards", // Updated from gentle-care
     "/about/mission",
     "/about/our-story",
-    "/about/philosophy",
+    "/about/our-approach", // Updated from philosophy
     "/about/reference-program",
-    "/about/why-choose-us",
+    "/about/why-choose-hair-skill", // Updated from why-choose-us
     "/before-after",
     "/blogs",
     "/blogs/hair-loss",

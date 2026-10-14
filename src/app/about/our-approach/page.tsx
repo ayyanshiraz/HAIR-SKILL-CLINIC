@@ -8,16 +8,16 @@ export const metadata: Metadata = {
   description: "Explore the TRUE Philosophy at Hair Skill Clinic Lahore: True Planning, True Hairline Design, Execution, and Innovation for natural results.",
   keywords: ["TRUE Philosophy", "True Hairline Design", "Hair Skill Clinic Philosophy", "Surgical Execution"],
   alternates: {
-    canonical: "https://www.hairskill.com/about/philosophy",
+    canonical: "https://www.hairskill.com/about/our-approach",
   },
   openGraph: {
     title: "TRUE Philosophy & Hairline Design - Hair Skill Clinic",
     description: "Explore the TRUE Philosophy at Hair Skill Clinic Lahore: True Planning, True Hairline Design, Execution, and Innovation for natural results.",
-    url: "https://www.hairskill.com/about/philosophy",
+    url: "https://www.hairskill.com/about/our-approach",
     siteName: "Hair Skill Clinic",
     images: [
       {
-        url: "https://www.hairskill.com/about/philosophy-og.jpg",
+        url: "https://www.hairskill.com/about/our-approach-og.jpg",
         width: 1200,
         height: 630,
         alt: "TRUE Philosophy at Hair Skill Clinic",
@@ -34,7 +34,7 @@ export default function TruePhilosophyPage() {
     "@type": "AboutPage",
     "name": "TRUE Philosophy & Hairline Design",
     "description": "Explore the TRUE Philosophy at Hair Skill Clinic Lahore: True Planning, True Hairline Design, Execution, and Innovation for natural results.",
-    "url": "https://www.hairskill.com/about/philosophy",
+    "url": "https://www.hairskill.com/about/our-approach",
     "mainEntity": {
       "@type": "MedicalClinic",
       "name": "Hair Skill Clinic",

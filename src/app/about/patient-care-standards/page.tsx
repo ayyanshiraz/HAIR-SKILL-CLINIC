@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: "Gentle Care Program & Patient Comfort | Hair Skill",
   description: "Experience premium patient comfort at Hair Skill Lahore. Enjoy seamless hospitality, case managers, and 18 months of post-op observation.",
   alternates: {
-    canonical: "https://www.hairskill.com/about/gentle-care",
+    canonical: "https://www.hairskill.com/about/patient-care-standards",
   },
   openGraph: {
     title: "Patient Comfort & Gentle Care - Hair Skill Clinic",
     description: "Experience premium patient comfort at Hair Skill Lahore. Enjoy seamless hospitality, case managers, and 18 months of post-op observation.",
-    url: "https://www.hairskill.com/about/gentle-care",
+    url: "https://www.hairskill.com/about/patient-care-standards",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
     type: "website",
@@ -33,7 +33,7 @@ export default function GentleCarePage() {
     "@type": "AboutPage",
     "name": "Gentle Care Program & Patient Comfort",
     "description": "Experience premium patient comfort at Hair Skill Lahore. Enjoy seamless hospitality, case managers, and 18 months of post-op observation.",
-    "url": "https://www.hairskill.com/about/gentle-care",
+    "url": "https://www.hairskill.com/about/patient-care-standards",
     "mainEntity": {
       "@type": "MedicalClinic",
       "name": "Hair Skill Clinic",
