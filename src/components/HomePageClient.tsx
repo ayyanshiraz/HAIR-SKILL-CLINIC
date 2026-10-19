@@ -20,7 +20,7 @@ const FAQStage = dynamic(() => import("./home/FAQStage"), { ssr: false });
 
 export default function Home() {
   const headline = "Hair Skill Clinic";
-  const tagline = "Mastering the Art of the Best Hair Transplant in Lahore and Karachi with World-Class Expertise and 100% Natural Results.";
+  const tagline = "Mastering the Art of the Best Hair Transplant in Lahore and Karachi with World-Class Expertise and Precision-Designed Hairlines.";
   
   const taglineWords = tagline.split(" ");
   const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];

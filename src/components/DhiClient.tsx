@@ -524,7 +524,7 @@ export default function DhiClient() {
                   Risks, Safety, and Success Rate of a DHI Hair Transplant
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Anyone researching safety usually wants absolute clarity. DHI is completely safe when done by trained surgeons who understand donor limits angle control and proper graft handling. The technique itself is precise but safety depends on planning execution and realistic expectations. The Choi pen is a tool. The outcome comes from the hands guiding it.
+                  Hair transplantation is generally safe when performed by a qualified surgeon in a sterile setting. Risks include infection, poor growth, scarring and an unnatural hairline. Your surgeon will explain them before you consent.
                 </p>
 
                 <div className="space-y-6 mb-6">
