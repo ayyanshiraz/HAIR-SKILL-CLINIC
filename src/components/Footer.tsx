@@ -18,7 +18,7 @@ export default function Footer() {
 
   const bottomLinks = [
     { name: `About`, href: `/about` },
-    { name: `Doctors`, href: `/dr-mansoor-ahmad` },
+    { name: `Doctors`, href: `/doctors/dr-mansoor-ahmad` },
     { name: `Before & After`, href: `/before-after` },
     { name: `F.A.Q.S`, href: `/faqs` },
     { name: `Blogs`, href: `/blogs` },

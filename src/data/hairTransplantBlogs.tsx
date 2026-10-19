@@ -860,7 +860,7 @@ export const hairTransplantBlogs: BlogPost[] = [
         <p className="mb-4">These testimonies demonstrate how a carefully thought-out female hair transplant completely changes everyday life and the facial frame of the patient. Real-world experiences demonstrate that the investment is well worth it, providing a long-term solution to the worry of concealing thinning spots and regaining a youthful appearance.</p>
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Why Choose Hair Skill Clinic for Your Procedure?</h2>
-        <p className="mb-4">One of the best places in Lahore for hair restoration is the Hair Skill Clinic. The clinic is committed to providing 100 percent natural results under the direction and <a href="/dr-mansoor-ahmad" className="text-[#772424] font-semibold hover:underline">medical expertise of Dr. Mansoor Ahmad</a>. The clinic specializes in cutting-edge unshaven procedures designed especially for ladies, guaranteeing total privacy and less recovery time.</p>
+        <p className="mb-4">One of the best places in Lahore for hair restoration is the Hair Skill Clinic. The clinic is committed to providing 100 percent natural results under the direction and <a href="/doctors/dr-mansoor-ahmad" className="text-[#772424] font-semibold hover:underline">medical expertise of Dr. Mansoor Ahmad</a>. The clinic specializes in cutting-edge unshaven procedures designed especially for ladies, guaranteeing total privacy and less recovery time.</p>
         <p className="mb-2">Do not let hair loss limit you or diminish your value any longer. To learn more about your alternatives and reclaim your confidence, schedule a free consultation right now. To discuss your particular situation with our caring medical staff, visit the official website or send us a WhatsApp message.</p>
       </>
     )
@@ -1228,7 +1228,7 @@ export const hairTransplantBlogs: BlogPost[] = [
               <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                 <td className="p-4 font-semibold text-gray-700">Operator Requirement</td>
                 <td className="p-4 text-gray-600">General clinical team</td>
-                <td className="p-4 text-gray-600"><a href="/dr-mansoor-ahmad" className="text-[#772424] font-semibold hover:underline">Certified hair restoration surgeon Lahore</a></td>
+                <td className="p-4 text-gray-600"><a href="/doctors/dr-mansoor-ahmad" className="text-[#772424] font-semibold hover:underline">Certified hair restoration surgeon Lahore</a></td>
               </tr>
               <tr className="hover:bg-gray-50 transition-colors">
                 <td className="p-4 font-semibold text-gray-700">Primary Objective</td>
