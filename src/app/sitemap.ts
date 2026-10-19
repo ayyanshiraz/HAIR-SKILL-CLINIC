@@ -8,12 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/about/data-protection",
     "/about/ethics",
-    "/about/patient-care-standards", // Updated from gentle-care
+    "/about/patient-care-standards",
     "/about/mission",
     "/about/our-story",
-    "/about/our-approach", // Updated from philosophy
+    "/about/our-approach",
     "/about/reference-program",
-    "/about/why-choose-hair-skill", // Updated from why-choose-us
+    "/about/why-choose-hair-skill",
     "/before-after",
     "/blogs",
     "/blogs/hair-loss",
@@ -65,12 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const blogRoutes = blogsDatabase.map((post) => {
-    const routePath = post.category === "general" 
-      ? `/blogs/${post.slug}` 
-      : `/blogs/${post.category}/${post.slug}`;
-
     return {
-      url: `${baseUrl}${routePath}`,
+      url: `${baseUrl}/blogs/${post.slug}`,
       lastModified: new Date(post.date || new Date()),
       changeFrequency: "monthly" as const,
       priority: 0.6,

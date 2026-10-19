@@ -5,22 +5,21 @@ import { blogsDatabase } from "../../../data";
 import { Metadata } from "next";
 
 export async function generateStaticParams() {
-  const generalPosts = blogsDatabase.filter((post) => post.category === "general");
-  return generalPosts.map((post) => ({
+  return blogsDatabase.map((post) => ({
     slug: post.slug,
   }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
-  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === "general");
+  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug);
 
   if (!post) {
     return { title: "Blog Not Found" };
   }
 
   const baseUrl = "https://www.hairskill.com";
-  const postUrl = `${baseUrl}/blogs/general/${post.slug}`;
+  const postUrl = `${baseUrl}/blogs/${post.slug}`;
 
   return {
     title: post.metaTitle,
@@ -49,46 +48,55 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function SingleBlogPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug && b.category === "general");
+  const post = blogsDatabase.find((b) => b.slug === resolvedParams.slug);
 
   if (!post) {
     notFound();
   }
 
   const baseUrl = "https://www.hairskill.com";
-  const postUrl = `${baseUrl}/blogs/general/${post.slug}`;
+  const postUrl = `${baseUrl}/blogs/${post.slug}`;
 
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": post.title,
-    "description": post.seoDescription,
-    "image": `${baseUrl}${post.previewImage}`,
-    "datePublished": post.date,
-    "mainEntityOfPage": {
+    headline: post.title,
+    description: post.seoDescription,
+    image: `${baseUrl}${post.previewImage}`,
+    datePublished: post.date,
+    mainEntityOfPage: {
       "@type": "WebPage",
       "@id": postUrl
     },
-    "author": {
+    author: {
       "@type": "Organization",
-      "name": "Hair Skill Clinic",
-      "url": baseUrl
+      name: "Hair Skill Clinic",
+      url: baseUrl
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "Hair Skill Clinic",
-      "logo": {
+      name: "Hair Skill Clinic",
+      logo: {
         "@type": "ImageObject",
-        "url": `${baseUrl}/logo.webp`
+        url: `${baseUrl}/logo.webp`
       }
     }
   };
+
+  const categoryNames: Record<string, string> = {
+    "hair-loss": "Hair Loss",
+    "hair-transplant": "Hair Transplant",
+    "general": "General"
+  };
+
+  const categoryTitle = categoryNames[post.category] || "Blogs";
+  const categoryLink = post.category === "general" ? "/blogs" : `/blogs/${post.category}`;
 
   return (
     <div className="min-h-screen bg-white text-black font-sans pt-32 pb-24 px-6">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData).replace(/</g, "\\u003c") }}
       />
 
       <div className="max-w-[1300px] mx-auto mb-8">
@@ -96,15 +104,18 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
           <Link href="/" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Homepage</Link>
           <span>/</span>
           <Link href="/blogs" className="md:hover:text-[#772424] active:text-[#772424] transition-colors">Blogs</Link>
+          {post.category !== "general" && (
+            <>
+              <span>/</span>
+              <Link href={categoryLink} className="md:hover:text-[#772424] active:text-[#772424] transition-colors">{categoryTitle}</Link>
+            </>
+          )}
           <span>/</span>
           <span className="text-[#772424] truncate max-w-[200px] sm:max-w-none">{post.title}</span>
         </div>
       </div>
 
       <article className="max-w-4xl mx-auto">
-        <div className="w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-100 shadow-xl border border-gray-100">
-          <img src={post.previewImage} alt={post.title} className="w-full h-full object-contain object-top" />
-        </div>
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4">
           {post.title}
         </h1>
@@ -113,16 +124,26 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
           <span>Published {post.date}</span>
         </div>
 
+        <div className="w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-50 shadow-xl border border-gray-100 flex items-center justify-center">
+          <img 
+            src={post.previewImage} 
+            alt={post.title} 
+            className="w-full h-full object-contain object-top" 
+            loading="lazy" 
+            decoding="async" 
+          />
+        </div>
+
         <div className="text-lg leading-relaxed font-medium text-gray-800 text-justify">
           {post.content}
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-200">
           <Link 
-            href="/blogs" 
+            href={categoryLink} 
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#772424] text-white font-extrabold text-sm tracking-wider uppercase shadow-lg md:hover:bg-[#8c2a2a] active:scale-95 transition-all"
           >
-            ← Back to All Blogs
+            ← Back to {categoryTitle}
           </Link>
         </div>
       </article>

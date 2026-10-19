@@ -89,7 +89,7 @@ export default function BlogHairLossClient() {
                   transition={{ duration: 0.5, delay: idx * 0.15 }}
                   className={`bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group md:hover:border-[#772424] active:border-[#772424] md:hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg`}
                 >
-                  <Link href={`/blogs/hair-loss/${post.slug}`} className={`flex flex-col flex-1 h-full block cursor-pointer`}>
+                  <Link href={`/blogs/${post.slug}`} className={`flex flex-col flex-1 h-full block cursor-pointer`}>
                     <div className={`w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0`}>
                       <img 
                         src={post.previewImage} 
