@@ -260,7 +260,7 @@ export default function PrpClient() {
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">Integrates With Hair Transplant Plans & Comfort Care</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">PRP can support recovery after a transplant calm irritation or help strengthen native hair. You receive guidance on how PRP fits into your overall long term plan. Local numbing and gentle techniques make the experience manageable. Sessions fit easily into your week.</p>
                     <p className="text-black text-base md:text-lg leading-relaxed font-bold bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
-                      Our clinical experts often share: PRP works best when the right patient the right protocol and the right timing meet. Learn more about clinical quality standards in our guide to the <Link href="/blogs/hair-transplant/best-prp-hair-treatment-lahore" className="text-[#772424] underline hover:text-black transition-colors font-black">best PRP hair treatment in Lahore</Link>.
+                      Our clinical experts often share: PRP works best when the right patient the right protocol and the right timing meet. Learn more about clinical quality standards in our guide to the <Link href="/blogs/best-prp-hair-treatment-lahore" className="text-[#772424] underline hover:text-black transition-colors font-black">best PRP hair treatment in Lahore</Link>.
                     </p>
                   </div>
                 </div>
@@ -503,7 +503,7 @@ export default function PrpClient() {
                   PRP Hair Treatment Cost Ranges in Pakistan: Packages at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Patients reviewing the estimate cost of prp hair transplant in pakistan often compare prp vs hair transplant options. For detailed session package pricing and protocol options, explore our <Link href="/blogs/hair-transplant/prp-hair-treatment-cost-lahore-price" className="text-[#772424] font-bold underline hover:text-black transition-colors">PRP hair treatment cost guide</Link>. Some clinics advertise unbelievably cheap offers while others present heavily inflated calculations. You want absolute clarity and honesty. Hair Skill Clinic gives both inside accessible local PKR tiers so you can plan with confidence.
+                  Patients reviewing the estimate cost of prp hair transplant in pakistan often compare prp vs hair transplant options. For detailed session package pricing and protocol options, explore our <Link href="/blogs/prp-hair-treatment-cost-lahore-price" className="text-[#772424] font-bold underline hover:text-black transition-colors">PRP hair treatment cost guide</Link>. Some clinics advertise unbelievably cheap offers while others present heavily inflated calculations. You want absolute clarity and honesty. Hair Skill Clinic gives both inside accessible local PKR tiers so you can plan with confidence.
                 </p>
 
                 <div className="space-y-6">
@@ -527,11 +527,11 @@ export default function PrpClient() {
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-4">Related Clinical Guides</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Link href="/blogs/hair-transplant/best-prp-hair-treatment-lahore" className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:border-[#772424] hover:bg-white transition-all group">
+                  <Link href="/blogs/best-prp-hair-treatment-lahore" className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:border-[#772424] hover:bg-white transition-all group">
                     <span className="text-xs font-black uppercase tracking-wider text-[#772424] block mb-1">Clinical Comparison</span>
                     <h4 className="font-bold text-gray-900 group-hover:text-[#772424] text-base leading-snug">Best PRP Hair Treatment in Lahore: Complete Guide</h4>
                   </Link>
-                  <Link href="/blogs/hair-transplant/prp-hair-treatment-cost-lahore-price" className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:border-[#772424] hover:bg-white transition-all group">
+                  <Link href="/blogs/prp-hair-treatment-cost-lahore-price" className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:border-[#772424] hover:bg-white transition-all group">
                     <span className="text-xs font-black uppercase tracking-wider text-[#772424] block mb-1">Pricing & Packages</span>
                     <h4 className="font-bold text-gray-900 group-hover:text-[#772424] text-base leading-snug">PRP Hair Treatment Cost in Lahore: Session Details</h4>
                   </Link>

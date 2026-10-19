@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/want-know-hair-care-methods-will-make-hair-smash.html",
-        destination: "/blogs/hair-transplant/how-to-prevent-hair-loss-in-lahore",
+        destination: "/blogs/how-to-prevent-hair-loss-in-lahore",
         permanent: true,
       },
       {

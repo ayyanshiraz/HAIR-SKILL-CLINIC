@@ -262,7 +262,7 @@ export default function DhiClient() {
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">DHI vs FUE</h3>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-2">
-                      Many patients <Link href="/blogs/hair-transplant/dhi-vs-fue-hair-transplant-lahore" className="text-[#772424] font-bold underline hover:text-black transition-colors">compare DHI vs FUE in Lahore</Link> or examine which extraction and placement protocol matches their scalp. The difference is not extraction. It is implantation. FUE creates channels then inserts grafts. DHI inserts grafts directly which supports angle control.
+                      Many patients <Link href="/blogs/dhi-vs-fue-hair-transplant-lahore" className="text-[#772424] font-bold underline hover:text-black transition-colors">compare DHI vs FUE in Lahore</Link> or examine which extraction and placement protocol matches their scalp. The difference is not extraction. It is implantation. FUE creates channels then inserts grafts. DHI inserts grafts directly which supports angle control.
                     </p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed mb-3">It is also important to understand that in experienced hands DHI and standard FUE can achieve equally natural high quality outcomes. The technique is a tool; what truly determines the result is the expertise of the team proper planning graft handling angle and direction control and disciplined donor management. The best results come from the right hands not the trendiest label.</p>
                     <p className="text-black text-base md:text-lg font-medium leading-relaxed">For large areas like full crowns classic FUE or Sapphire FUE can be just as effective. For hairlines or temples DHI often provides cleaner detail because the surgeon manages every angle individually.</p>
@@ -426,7 +426,7 @@ export default function DhiClient() {
                 </div>
 
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Understanding the full <Link href="/blogs/hair-transplant/dhi-hair-transplant-lahore-procedure-benefits" className="text-[#772424] font-bold underline hover:text-black transition-colors">DHI procedure and clinical benefits</Link> step by step helps remove most of the anxiety people feel before surgery. The goal is to make the day predictable calm and structured. At Hair Skill every step is guided by your surgeon and every decision is explained. Nothing feels rushed. Nothing feels unclear.
+                  Understanding the full <Link href="/blogs/dhi-hair-transplant-lahore-procedure-benefits" className="text-[#772424] font-bold underline hover:text-black transition-colors">DHI procedure and clinical benefits</Link> step by step helps remove most of the anxiety people feel before surgery. The goal is to make the day predictable calm and structured. At Hair Skill every step is guided by your surgeon and every decision is explained. Nothing feels rushed. Nothing feels unclear.
                 </p>
 
                 <div className="space-y-6 border-l-2 border-[#772424]/20 pl-4 sm:pl-6 ml-1 sm:ml-2 mb-6">
@@ -453,7 +453,7 @@ export default function DhiClient() {
                   DHI Hair Transplant Cost Ranges in Pakistan
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  When people evaluate a <Link href="/blogs/hair-transplant/dhi-hair-transplant-cost-in-pakistan" className="text-[#772424] font-bold underline hover:text-black transition-colors">DHI hair transplant cost in Pakistan</Link> they often find confusing numbers that range from surprisingly cheap to questionably high. The truth sits in the middle. DHI is more labor intensive than classic FUE and it requires surgeon led precision during implantation so reliable clinics price it realistically. If you are comparing the direct hair implantation price globally you will see massive advantages here.
+                  When people evaluate a <Link href="/blogs/dhi-hair-transplant-cost-in-pakistan" className="text-[#772424] font-bold underline hover:text-black transition-colors">DHI hair transplant cost in Pakistan</Link> they often find confusing numbers that range from surprisingly cheap to questionably high. The truth sits in the middle. DHI is more labor intensive than classic FUE and it requires surgeon led precision during implantation so reliable clinics price it realistically. If you are comparing the direct hair implantation price globally you will see massive advantages here.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   At Hair Skill package brackets stay transparent medically driven and tailored to your case inside accessible local PKR tiers not marketing trends.
