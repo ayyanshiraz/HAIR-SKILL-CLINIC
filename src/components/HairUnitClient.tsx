@@ -331,7 +331,7 @@ export default function HairUnitClient({
                 </p>
               </div>
               <Link 
-                href="/blogs/hair-transplant/hair-transplant-vs-hair-patch" 
+                href="/blogs/hair-transplant-vs-hair-patch" 
                 className="shrink-0 px-6 py-3 bg-[#772424] text-white rounded-xl font-bold text-sm hover:bg-[#5a1b1b] transition-colors shadow-md"
               >
                 Read Comparison Guide →
