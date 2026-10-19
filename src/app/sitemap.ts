@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/checkout",
     "/contact",
     "/cookie-policy",
-    "/doctors-category",
+    "/dr-mansoor-ahmad",
     "/faqs",
     "/faqs/general",
     "/faqs/post-op",

@@ -84,7 +84,7 @@ export default function SingleDoctorStage() {
             </p>
             <div>
               <Link 
-                href={`/doctors-category`} 
+                href={`/dr-mansoor-ahmad`} 
                 className={`inline-flex items-center justify-center px-8 py-3.5 font-bold text-white bg-[#772424] rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg`}
               >
                 Read Full Profile

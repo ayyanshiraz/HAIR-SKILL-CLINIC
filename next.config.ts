@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/best-hair-transplant-surgeon-in-pakistan.html",
-        destination: "/doctors-category",
+        destination: "/dr-mansoor-ahmad",
         permanent: true,
       },
       {
@@ -42,6 +42,11 @@ const nextConfig: NextConfig = {
         source: "/want-know-hair-care-methods-will-make-hair-smash.html",
         destination: "/blogs/hair-transplant/how-to-prevent-hair-loss-in-lahore",
         permanent: true,
+      },
+      {
+        source: "/doctors-category",
+        destination: "/doctors/dr-mansoor-ahmad",
+        permanent: true, // Yeh 301 redirect hai
       },
     ];
   },

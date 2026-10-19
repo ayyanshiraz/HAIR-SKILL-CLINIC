@@ -145,6 +145,24 @@ export default function HairTransplantClient() {
                 </motion.div>
 
               </div>
+              {/* --- SEO Block Under Cards (Keeps UI Clean) --- */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="mt-8 p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 shadow-sm"
+                >
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#1a202c] mb-4 tracking-tight">
+                    Permanent Hair Restoration in Lahore
+                  </h2>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-medium mb-4">
+                    Depending on your Norwood baldness stage, our PMC-verified surgeons carefully select the most effective extraction and implantation methods. From the precision of <Link href="/hair-transplant/treatments/dhi" className="text-[#772424] font-bold hover:underline">Direct Hair Implantation (DHI)</Link> for dense hairlines, to the efficiency of <Link href="/hair-transplant/techniques/sapphire" className="text-[#772424] font-bold hover:underline">Sapphire FUE</Link> for maximum coverage, we ensure undetectable, lifetime-guaranteed results without any linear scarring.
+                  </p>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-medium">
+                    A major factor for our patients is understanding the investment. The overall <strong className="font-extrabold text-gray-800">hair transplant cost in Lahore</strong> depends heavily on the technique chosen and the exact number of grafts required for your donor area. We maintain complete transparency with no hidden charges. <Link href="/hair-transplant/cost-dummy" className="text-[#C5A059] font-black hover:text-[#772424] transition-colors underline decoration-2 underline-offset-4">Review our complete per-graft pricing guide here.</Link>
+                  </p>
+                </motion.div>
             </div>
 
             <motion.div 
