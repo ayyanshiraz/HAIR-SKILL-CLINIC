@@ -16,6 +16,43 @@ const slideInRight: Variants = {
   }
 };
 
+// FAQ Data with safe HTML for Schema
+const faqsData = [
+  {
+    question: "How much does a hair transplant cost in Lahore?",
+    answerText: "The exact cost varies based on the number of grafts and the technique (FUE or DHI) used. At Hair Skill Clinic, we maintain 100% transparency with no hidden charges.",
+    answerJSX: (
+      <>
+        The exact cost varies based on the number of grafts and the technique (FUE or DHI) used. At Hair Skill Clinic, we maintain 100% transparency with no hidden charges. For a detailed breakdown, please visit our <Link href="/hair-transplant/cost" className="text-[#772424] font-bold hover:underline">Hair Transplant Cost Guide</Link>.
+      </>
+    )
+  },
+  {
+    question: "Is the hair transplant procedure painful?",
+    answerText: "Not at all. We use advanced needle-free local anesthesia technology, making the extraction and implantation process virtually painless and highly comfortable for our patients.",
+    answerJSX: "Not at all. We use advanced needle-free local anesthesia technology, making the extraction and implantation process virtually painless and highly comfortable for our patients."
+  },
+  {
+    question: "Why choose Hair Skill Clinic?",
+    answerText: "Our procedures are strictly doctor-led. Headed by Dr. Mansoor Ahmad (PMDC verified: 1535-P) with over 40 years of surgical experience, we guarantee aesthetic precision, maximum graft survival, and natural-looking hairlines.",
+    answerJSX: "Our procedures are strictly doctor-led. Headed by Dr. Mansoor Ahmad (PMDC verified: 1535-P) with over 40 years of surgical experience, we guarantee aesthetic precision, maximum graft survival, and natural-looking hairlines."
+  },
+  {
+    question: "What is the basic difference between FUE and DHI?",
+    answerText: "FUE involves extracting grafts and opening channels before implantation, making it great for maximum coverage. DHI uses a Choi pen to implant grafts directly without prior incisions, perfect for high density.",
+    answerJSX: (
+      <>
+        FUE (Follicular Unit Extraction) involves extracting grafts and opening channels before implantation, making it great for maximum coverage. DHI (Direct Hair Implantation) uses a Choi pen to implant grafts directly without prior incisions, perfect for high density. Learn more on our <Link href="/hair-transplant/techniques" className="text-[#772424] font-bold hover:underline">Techniques page</Link>.
+      </>
+    )
+  },
+  {
+    question: "How long does it take to see permanent results?",
+    answerText: "Initial hair growth starts around the 3rd to 4th month. Significant density is visible by the 6th month, and you will see the final, permanent 100% natural-looking results within 12 to 14 months.",
+    answerJSX: "Initial hair growth starts around the 3rd to 4th month. Significant density is visible by the 6th month, and you will see the final, permanent 100% natural-looking results within 12 to 14 months."
+  }
+];
+
 export default function HairTransplantClient() {
   const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
   const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
@@ -23,6 +60,9 @@ export default function HairTransplantClient() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  
+  // Accordion State
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,114 +78,135 @@ export default function HairTransplantClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
-      
-      <motion.section 
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: customEase }}
-        className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
-      >
-        <div className="max-w-[1400px] mx-auto relative">
-          <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
-            <Link href="/" className="hover:text-[#772424] transition-colors"><span>←</span> Homepage</Link>
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-            Hair Transplant
-          </h1>
-        </div>
-      </motion.section>
+    <>
+      {/* --- SEO FAQ Schema Injection --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqsData.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answerText
+              }
+            }))
+          })
+        }}
+      />
 
-      <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-12 items-start mt-8">
+      <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">
+        
+        <motion.section 
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: customEase }}
+          className="pt-28 lg:pt-36 pb-8 md:pb-12 bg-white px-4 sm:px-6"
+        >
+          <div className="max-w-[1400px] mx-auto relative">
+            <div className="text-xs font-black uppercase tracking-widest text-black mb-3 flex flex-wrap items-center gap-2 justify-start">
+              <Link href="/" className="hover:text-[#772424] transition-colors"><span>←</span> Homepage</Link>
+            </div>
             
-            <div className="w-full lg:w-2/3">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
+              Hair Transplant
+            </h1>
+          </div>
+        </motion.section>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: customEase }}
-                className="mb-8 p-6 sm:p-8 rounded-3xl bg-gray-50 border border-gray-200/80"
-              >
-                <p className="text-gray-800 text-base sm:text-lg leading-relaxed font-medium">
-                  At Hair Skill Clinic Lahore, permanent hair restoration is designed around careful donor planning, natural angles, and biological graft safety. Choosing between clinical therapies and micro-surgical extraction depends on your stage of thinning and density goals. Before choosing a procedure, read our essential guide on the <Link href="/blogs/hair-transplant-lahore-10-things" className="text-[#772424] font-bold underline hover:text-black transition-colors">key factors before getting a hair transplant in Lahore</Link> and review critical standards when selecting the <Link href="/blogs/best-hair-doctor-lahore" className="text-[#772424] font-bold underline hover:text-black transition-colors">best hair doctor in Lahore</Link>. Select an option below to explore our verified methods.
-                </p>
-              </motion.div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                
-                <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg cursor-pointer"
-                >
-                  <Link href="/hair-transplant/treatments" className="flex flex-col flex-1 h-full block select-none">
-                    <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
-                      <img 
-                        src="/hair-transplant/2.webp" 
-                        alt="Treatments" 
-                        className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
-                    </div>
-                    <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
-                      <div>
-                        <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
-                          Transplant Treatments
-                        </h2>
-                        <p className="text-black text-sm leading-relaxed mb-6 font-medium">
-                          Explore our comprehensive range of specialized hair restoration treatments designed to address specific concerns and deliver natural results.
-                        </p>
-                      </div>
-                      <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
-                        View Treatments <span>→</span>
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
+        <section className="py-8 md:py-12 px-4 sm:px-6 bg-white">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="flex flex-col lg:flex-row gap-12 items-start mt-8">
+              
+              <div className="w-full lg:w-2/3">
 
                 <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: 0.15 }}
-                  className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: customEase }}
+                  className="mb-8 p-6 sm:p-8 rounded-3xl bg-gray-50 border border-gray-200/80"
                 >
-                  <Link href="/hair-transplant/techniques" className="flex flex-col flex-1 h-full block select-none">
-                    <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
-                      <img 
-                        src="/hair-transplant/1.webp" 
-                        alt="Techniques" 
-                        className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
-                    </div>
-                    <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
-                      <div>
-                        <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
-                          Transplant Techniques
-                        </h2>
-                        <p className="text-black text-sm leading-relaxed mb-6 font-medium">
-                          Discover the advanced surgical methodologies and cutting edge technologies we use to ensure maximum density and rapid healing.
-                        </p>
-                      </div>
-                      <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
-                        View Techniques <span>→</span>
-                      </div>
-                    </div>
-                  </Link>
+                  <p className="text-gray-800 text-base sm:text-lg leading-relaxed font-medium">
+                    At Hair Skill Clinic Lahore, permanent hair restoration is designed around careful donor planning, natural angles, and biological graft safety. Choosing between clinical therapies and micro-surgical extraction depends on your stage of thinning and density goals. Before choosing a procedure, read our essential guide on the <Link href="/blogs/hair-transplant-lahore-10-things" className="text-[#772424] font-bold underline hover:text-black transition-colors">key factors before getting a hair transplant in Lahore</Link> and review critical standards when selecting the <Link href="/blogs/best-hair-doctor-lahore" className="text-[#772424] font-bold underline hover:text-black transition-colors">best hair doctor in Lahore</Link>. Select an option below to explore our verified methods.
+                  </p>
                 </motion.div>
 
-              </div>
-              {/* --- SEO Block Under Cards (Keeps UI Clean) --- */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                  
+                  <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg cursor-pointer"
+                  >
+                    <Link href="/hair-transplant/treatments" className="flex flex-col flex-1 h-full block select-none">
+                      <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
+                        <img 
+                          src="/hair-transplant/2.webp" 
+                          alt="Treatments" 
+                          className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
+                      </div>
+                      <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+                        <div>
+                          <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
+                            Transplant Treatments
+                          </h2>
+                          <p className="text-black text-sm leading-relaxed mb-6 font-medium">
+                            Explore our comprehensive range of specialized hair restoration treatments designed to address specific concerns and deliver natural results.
+                          </p>
+                        </div>
+                        <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
+                          View Treatments <span>→</span>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+
+                  <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5, delay: 0.15 }}
+                    className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 flex flex-col h-full group hover:border-[#772424] active:border-[#772424] hover:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] active:shadow-[0_20px_40px_-15px_rgba(119,36,36,0.15)] transition-all duration-300 shadow-lg cursor-pointer"
+                  >
+                    <Link href="/hair-transplant/techniques" className="flex flex-col flex-1 h-full block select-none">
+                      <div className="w-full aspect-[16/10] overflow-hidden relative bg-gray-100 shrink-0">
+                        <img 
+                          src="/hair-transplant/1.webp" 
+                          alt="Techniques" 
+                          className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700 object-top" 
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 group-active:bg-black/5 transition-colors duration-300" />
+                      </div>
+                      <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+                        <div>
+                          <h2 className="text-lg sm:text-2xl font-extrabold text-[#772424] mb-3 leading-snug group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform">
+                            Transplant Techniques
+                          </h2>
+                          <p className="text-black text-sm leading-relaxed mb-6 font-medium">
+                            Discover the advanced surgical methodologies and cutting edge technologies we use to ensure maximum density and rapid healing.
+                          </p>
+                        </div>
+                        <div className="text-[#772424] font-black text-sm tracking-wider uppercase flex items-center gap-2 group-hover:translate-x-1 group-active:translate-x-1 transition-transform w-fit">
+                          View Techniques <span>→</span>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+
+                </div>
+
+                {/* --- Original SEO Text Block --- */}
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -160,98 +221,151 @@ export default function HairTransplantClient() {
                     Depending on your Norwood baldness stage, our PMC-verified surgeons carefully select the most effective extraction and implantation methods. From the precision of <Link href="/hair-transplant/treatments/dhi" className="text-[#772424] font-bold hover:underline">Direct Hair Implantation (DHI)</Link> for dense hairlines, to the efficiency of <Link href="/hair-transplant/techniques/sapphire" className="text-[#772424] font-bold hover:underline">Sapphire FUE</Link> for maximum coverage, we ensure undetectable, lifetime-guaranteed results without any linear scarring.
                   </p>
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-medium">
-                    A major factor for our patients is understanding the investment. The overall <strong className="font-extrabold text-gray-800">hair transplant cost in Lahore</strong> depends heavily on the technique chosen and the exact number of grafts required for your donor area. We maintain complete transparency with no hidden charges. <Link href="https://www.hairskill.com/blogs/dhi-hair-transplant-cost-in-pakistan" className="text-[#C5A059] font-black hover:text-[#772424] transition-colors underline decoration-2 underline-offset-4">Review our complete per-graft pricing guide here.</Link>
+                    A major factor for our patients is understanding the investment. The overall <strong className="font-extrabold text-gray-800">hair transplant cost in Lahore</strong> depends heavily on the technique chosen and the exact number of grafts required for your donor area. We maintain complete transparency with no hidden charges. <Link href="/hair-transplant/cost" className="text-[#C5A059] font-black hover:text-[#772424] transition-colors underline decoration-2 underline-offset-4">Review our complete per-graft pricing guide here.</Link>
                   </p>
                 </motion.div>
-            </div>
 
-            <motion.div 
-              initial="hidden"
-              animate="visible"
-              variants={slideInRight}
-              className="w-full lg:w-1/3 lg:sticky lg:top-32 self-start h-max"
-            >
-              <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
-                <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
-                  GET FREE CONSULTATION
-                </h3>
-                
-                <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                  <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
-                    <input 
-                      type="text" 
-                      placeholder="Full Name" 
-                      value={fullName} 
-                      onChange={(e) => setFullName(e.target.value)} 
-                      required 
-                      className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
-                      style={autofillFixStyle}
-                    />
-                  </div>
+                {/* --- New SEO FAQ Accordion Block --- */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="mt-12"
+                >
+                  <h3 className="text-2xl sm:text-3xl font-black text-[#1a202c] mb-6 tracking-tight">
+                    Frequently Asked Questions
+                  </h3>
                   
-                  <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
-                    <input 
-                      type="email" 
-                      placeholder="E-mail" 
-                      value={email} 
-                      onChange={(e) => setEmail(e.target.value)} 
-                      required 
-                      className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
-                      style={autofillFixStyle}
-                    />
+                  <div className="flex flex-col gap-4">
+                    {faqsData.map((faq, index) => (
+                      <div 
+                        key={index} 
+                        className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openFaqIndex === index ? 'border-[#772424] shadow-md bg-white' : 'border-gray-200 bg-[#772424] hover:border-[#772424]/50'}`}
+                      >
+                        <button
+                          onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                          className="w-full px-6 py-5 flex items-center justify-between cursor-pointer focus:outline-none"
+                        >
+                          <span className={`text-left font-extrabold sm:text-lg text-white duration-300 pr-4 ${openFaqIndex === index ? 'text-[#772424]' : 'text-gray-900'}`}>
+                            {faq.question}
+                          </span>
+                          <span className={`text-2xl font-light transition-transform duration-300 shrink-0 ${openFaqIndex === index ? 'text-[#772424] rotate-180' : 'text-gray-400'}`}>
+                            {openFaqIndex === index ? '−' : '+'}
+                          </span>
+                        </button>
+                        
+                        <motion.div
+                          initial={false}
+                          animate={{ height: openFaqIndex === index ? 'auto' : 0, opacity: openFaqIndex === index ? 1 : 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-6 pb-6 text-gray-600 font-medium leading-relaxed border-t border-gray-100 pt-4">
+                            {faq.answerJSX}
+                          </div>
+                        </motion.div>
+                      </div>
+                    ))}
                   </div>
 
-                  <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
-                    <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <img src={"https://flagcdn.com/w20/" + selectedCountry.code.toLowerCase() + ".png"} alt={selectedCountry.name} className="w-5 object-contain" width={20} height={15} loading="lazy" />
-                      <span>{selectedCountry.dial}</span>
-                      <span className="text-[10px]">▼</span>
+                  {/* Internal Link to Main FAQ Pages */}
+                  <div className="mt-8 flex justify-center sm:justify-start">
+                    <Link href="/faqs" className="inline-flex items-center gap-3 bg-gray-50 text-[#772424] font-extrabold px-8 py-4 rounded-xl border border-gray-200 hover:bg-[#772424] hover:text-white transition-all shadow-sm group">
+                      Read Detailed Pre-Op & Post-Op FAQs <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </Link>
+                  </div>
+                </motion.div>
+
+              </div>
+
+              <motion.div 
+                initial="hidden"
+                animate="visible"
+                variants={slideInRight}
+                className="w-full lg:w-1/3 lg:sticky lg:top-32 self-start h-max"
+              >
+                <div className="bg-[#772424] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
+                  <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
+                    GET FREE CONSULTATION
+                  </h3>
+                  
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                    <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
+                      <input 
+                        type="text" 
+                        placeholder="Full Name" 
+                        value={fullName} 
+                        onChange={(e) => setFullName(e.target.value)} 
+                        required 
+                        className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
+                        style={autofillFixStyle}
+                      />
                     </div>
                     
-                    {isDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
-                        {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
-                            <div className="flex items-center gap-2.5 truncate mr-2">
-                              <img src={"https://flagcdn.com/w20/" + country.code.toLowerCase() + ".png"} alt={country.name} className="w-5 object-contain shrink-0" width={20} height={15} loading="lazy" />
-                              <span className="font-bold">{country.code}</span>
-                              <span className="text-xs text-black truncate">{country.name}</span>
-                            </div>
-                            <span className="text-[#772424] font-black shrink-0">{country.dial}</span>
-                          </div>
-                        ))}
+                    <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
+                      <input 
+                        type="email" 
+                        placeholder="E-mail" 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)} 
+                        required 
+                        className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
+                        style={autofillFixStyle}
+                      />
+                    </div>
+
+                    <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
+                      <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
+                        <img src={"https://flagcdn.com/w20/" + selectedCountry.code.toLowerCase() + ".png"} alt={selectedCountry.name} className="w-5 object-contain" width={20} height={15} loading="lazy" />
+                        <span>{selectedCountry.dial}</span>
+                        <span className="text-[10px]">▼</span>
                       </div>
-                    )}
-                    
-                    <input 
-                      type="tel" 
-                      placeholder="Phone Number" 
-                      value={phone} 
-                      onChange={(e) => setPhone(e.target.value)} 
-                      required 
-                      className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
-                      style={autofillFixStyle}
-                    />
-                  </div>
+                      
+                      {isDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
+                          {countries.map((country: Country, idx: number) => (
+                            <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-black transition-colors">
+                              <div className="flex items-center gap-2.5 truncate mr-2">
+                                <img src={"https://flagcdn.com/w20/" + country.code.toLowerCase() + ".png"} alt={country.name} className="w-5 object-contain shrink-0" width={20} height={15} loading="lazy" />
+                                <span className="font-bold">{country.code}</span>
+                                <span className="text-xs text-black truncate">{country.name}</span>
+                              </div>
+                              <span className="text-[#772424] font-black shrink-0">{country.dial}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      
+                      <input 
+                        type="tel" 
+                        placeholder="Phone Number" 
+                        value={phone} 
+                        onChange={(e) => setPhone(e.target.value)} 
+                        required 
+                        className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
+                        style={autofillFixStyle}
+                      />
+                    </div>
 
-                  <div className="flex items-start sm:items-center gap-2 mt-2">
-                    <input type="checkbox" id="mainTransplantPrivacy" required defaultChecked className="w-4 h-4 mt-0.5 sm:mt-0 accent-[#C5A059] rounded cursor-pointer shrink-0" />
-                    <label htmlFor="mainTransplantPrivacy" className="text-xs text-white/80 cursor-pointer leading-relaxed">
-                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
-                    </label>
-                  </div>
+                    <div className="flex items-start sm:items-center gap-2 mt-2">
+                      <input type="checkbox" id="mainTransplantPrivacy" required defaultChecked className="w-4 h-4 mt-0.5 sm:mt-0 accent-[#C5A059] rounded cursor-pointer shrink-0" />
+                      <label htmlFor="mainTransplantPrivacy" className="text-xs text-white/80 cursor-pointer leading-relaxed">
+                        I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
+                      </label>
+                    </div>
 
-                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 active:bg-gray-200 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-[0.98]">
-                    Submit <span>›</span>
-                  </button>
-                </form>
-              </div>
-            </motion.div>
+                    <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 active:bg-gray-200 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-[0.98]">
+                      Submit <span>›</span>
+                    </button>
+                  </form>
+                </div>
+              </motion.div>
 
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </div>
+      </div>
+    </>
   );
 }
