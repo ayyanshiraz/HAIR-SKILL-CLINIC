@@ -33,45 +33,11 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": ["MedicalClinic", "MedicalBusiness"],
-    name: "Hair Skill Clinic",
-    description: "As the premier hair transplant clinic in Lahore, we offer advanced FUE, DHI, and Sapphire hair restoration services with completely natural results.",
-    url: "https://www.hairskill.com",
-    logo: "https://www.hairskill.com/home/logo.webp",
-    image: "https://www.hairskill.com/home/owner1.webp",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Hotel MayFair 1st floor 50-52 E-III Commercial Zone Gulberg III",
-      addressLocality: "Lahore",
-      addressRegion: "Punjab",
-      postalCode: "54660",
-      addressCountry: "PK"
-    },
-    telephone: "+923014923336",
-    priceRange: "$$$",
-    medicalSpecialty: ["Dermatology", "Hair Transplantation"],
-    availableService: [
-      {
-        "@type": "MedicalProcedure",
-        name: "FUE Hair Transplant",
-        procedureType: "SurgicalProcedure"
-      },
-      {
-        "@type": "MedicalProcedure",
-        name: "DHI Hair Transplant",
-        procedureType: "SurgicalProcedure"
-      }
-    ]
-  };
+  
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+      
       <HomePageClient />
     </>
   );

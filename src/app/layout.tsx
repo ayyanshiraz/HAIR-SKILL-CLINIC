@@ -37,10 +37,56 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const globalSchema = {
+    "@context": "https://schema.org",
+    "@type": ["MedicalClinic", "MedicalBusiness"],
+    name: "Hair Skill Clinic",
+    description: "As the premier hair transplant clinic in Lahore, we offer advanced FUE, DHI, and Sapphire hair restoration services.",
+    url: "https://www.hairskill.com",
+    logo: "https://www.hairskill.com/home/logo.webp",
+    image: "https://www.hairskill.com/home/owner1.webp",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Hotel MayFair 1st floor 50-52 E-III Commercial Zone Gulberg III",
+      addressLocality: "Lahore",
+      addressRegion: "Punjab",
+      postalCode: "54660",
+      addressCountry: "PK"
+    },
+    telephone: "+923014923336",
+    priceRange: "$$$",
+    medicalSpecialty: ["Dermatology", "Hair Transplantation"],
+    founder: {
+      "@type": "Physician",
+      name: "Dr. Mansoor Ahmad",
+      identifier: "1535-P",
+      medicalSpecialty: "Hair Transplantation"
+    },
+    availableService: [
+      {
+        "@type": "MedicalProcedure",
+        name: "FUE Hair Transplant",
+        procedureType: "SurgicalProcedure"
+      },
+      {
+        "@type": "MedicalProcedure",
+        name: "DHI Hair Transplant",
+        procedureType: "SurgicalProcedure"
+      }
+    ]
+  };
+
   return (
     <html lang="en-PK">
       <head>
         <meta name="google-site-verification" content="dua9CfBmUhUJTblfDmVuVVupQ8cV1ccHtmVnW4BRWiQ" />
+        
+        {/* Global MedicalClinic & Physician Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
+        />
+
         {/* Google Analytics Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ERNEPZWKMR"
