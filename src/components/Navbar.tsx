@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Navbar() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   
-  // Mobile specific state toggles
+  // Specific state toggles for mobile
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileAccordion, setOpenMobileAccordion] = useState<string | null>(null);
 
@@ -137,17 +137,17 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Reviews */}
+            {/* Cost (Replaced Reviews) */}
             <div 
               className={`relative h-full flex items-center`}
-              onMouseEnter={() => setHoveredItem(`Reviews`)}
+              onMouseEnter={() => setHoveredItem(`Cost`)}
               onMouseLeave={() => setHoveredItem(null)}
             >
               <div className={`relative px-4 py-2 flex items-center justify-center`}>
-                {hoveredItem === `Reviews` && (
+                {hoveredItem === `Cost` && (
                   <motion.div layoutId={`active-pill`} className={`absolute inset-0 bg-[#772424]/10 rounded-full`} transition={{ type: `spring`, stiffness: 400, damping: 25 }} />
                 )}
-                <Link href={`/reviews`} className={`relative z-10 transition-colors duration-300`}>Reviews</Link>
+                <Link href={`/hair-transplant/cost`} className={`relative z-10 transition-colors duration-300`}>Cost</Link>
               </div>
             </div>
             
@@ -210,7 +210,7 @@ export default function Navbar() {
                   { name: `Hair Transplant`, path: `/blogs/hair-transplant` },
                   { name: `Hair Loss`, path: `/blogs/hair-loss` }
                 ].map((item) => (
-                  <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:bg-gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
+                  <Link key={item.path} href={item.path} className={`group/link flex items-center px-8 py-3 text-[15px] font-medium text-gray-600 hover:text-[#772424] hover:gradient-to-r hover:from-[#772424]/5 hover:to-transparent transition-all duration-300`}>
                     <span className={`w-0 overflow-hidden opacity-0 text-[#772424] transition-all duration-300 ease-in-out group-hover/link:w-6 group-hover/link:opacity-100 flex-shrink-0`}>—</span>
                     <span>{item.name}</span>
                   </Link>
@@ -319,15 +319,15 @@ export default function Navbar() {
               {/* Hair Unit Mobile */}
               <Link href={`/hair-unit`} onClick={() => setIsMobileMenuOpen(false)} className={`py-2 block active:text-[#902b2b]`}>Hair Unit</Link>
 
-              {/* Reviews Mobile */}
-              <Link href={`/reviews`} onClick={() => setIsMobileMenuOpen(false)} className={`py-2 block active:text-[#902b2b]`}>Reviews</Link>
+              {/* Cost Mobile (Replaced Reviews) */}
+              <Link href={`/hair-transplant/cost`} onClick={() => setIsMobileMenuOpen(false)} className={`py-2 block active:text-[#902b2b]`}>Cost</Link>
 
-              {/* Patient Guide Mobile (Clean Single Link) */}
+              {/* Patient Guide Mobile */}
               <Link href={`/patient-guide`} onClick={() => setIsMobileMenuOpen(false)} className={`py-2 block active:text-[#902b2b]`}>
                 Patient Guide
               </Link>
 
-              {/* FAQ Mobile (Clean Single Link) */}
+              {/* FAQ Mobile */}
               <Link href={`/faqs`} onClick={() => setIsMobileMenuOpen(false)} className={`py-2 block active:text-[#902b2b]`}>
                 F.A.Q.S
               </Link>
