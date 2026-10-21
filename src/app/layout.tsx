@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import { CartProvider } from "../context/CartContext";
 import { Analytics } from "@vercel/analytics/next";
+import MobileStickyBar from "@/components/MobileStickyBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -111,6 +112,7 @@ export default function RootLayout({
         <Footer />
         <CookieBanner />
         <Analytics />
+        <MobileStickyBar />
       </body>
     </html>
   );

@@ -21,7 +21,7 @@ export default function Footer() {
     { name: `Doctors`, href: `/doctors/dr-mansoor-ahmad` },
     { name: `Before & After`, href: `/before-after` },
     { name: `F.A.Q.S`, href: `/faqs` },
-    { name: `Blogs`, href: `/blogs` },
+    { name: `Reviews`, href: `/reviews` },
     { name: `Contact`, href: `/contact` },
   ];
 
