@@ -169,9 +169,10 @@ export default function HairUnitClient({
 
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-2">
-                  <h2 className="text-xl font-bold text-gray-900 leading-tight pr-4">
+                  {/* Changed from h2 to h3 for SEO fix */}
+                  <h3 className="text-xl font-bold text-gray-900 leading-tight pr-4">
                     {unit.name}
-                  </h2>
+                  </h3>
                   <span className="text-xl font-extrabold text-[#772424] shrink-0">
                     PKR {unit.priceDisplay ? unit.priceDisplay : unit.price.toLocaleString()}
                   </span>
@@ -182,9 +183,9 @@ export default function HairUnitClient({
                 </p>
 
                 <div className="mb-8 flex-grow">
-                  <h3 className="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">
+                  <h4 className="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">
                     Specifications
-                  </h3>
+                  </h4>
                   <ul className="space-y-2">
                     {unit.specs.map((spec, index) => (
                       <li key={index} className="flex items-start text-sm text-gray-700 font-medium">
@@ -255,9 +256,10 @@ export default function HairUnitClient({
 
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-2">
-                  <h2 className="text-lg font-bold text-gray-900 leading-tight pr-4">
+                  {/* Changed from h2 to h3 for SEO fix */}
+                  <h3 className="text-lg font-bold text-gray-900 leading-tight pr-4">
                     {product.name}
-                  </h2>
+                  </h3>
                   <span className="text-xl font-extrabold text-[#772424] shrink-0">
                     PKR {product.priceDisplay ? product.priceDisplay : product.price.toLocaleString()}
                   </span>
@@ -268,9 +270,9 @@ export default function HairUnitClient({
                 </p>
 
                 <div className="mb-8 flex-grow">
-                  <h3 className="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">
+                  <h4 className="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">
                     Product Details
-                  </h3>
+                  </h4>
                   <ul className="space-y-2">
                     {product.specs.map((spec, index) => (
                       <li key={index} className="flex items-start text-sm text-gray-700 font-medium">
@@ -301,6 +303,41 @@ export default function HairUnitClient({
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 font-medium">
               When searching for a dependable hair unit price in Lahore, patients often evaluate the balance between natural density, breathability, and durability. At Hair Skill Clinic, hair systems and non-surgical hair replacement solutions are customized using genuine human hair matched precisely to your native texture, hair color, and age-appropriate hairline.
             </p>
+
+            {/* NEW: SEO Pricing Table Added Here */}
+            <div className="overflow-x-auto my-8 bg-white shadow-md rounded-2xl border border-gray-100">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-gray-50 border-b border-gray-200">
+                    <th className="p-4 font-bold text-gray-800">Hair System Type</th>
+                    <th className="p-4 font-bold text-gray-800">Base Material Specs</th>
+                    <th className="p-4 font-bold text-gray-800">Estimated Price (PKR)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                    <td className="p-4 font-semibold text-gray-700">MGM Hair System</td>
+                    <td className="p-4 text-gray-600">Monofilament with Poly Perimeter</td>
+                    <td className="p-4 font-bold text-[#772424]">35,000 - 55,000</td>
+                  </tr>
+                  <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                    <td className="p-4 font-semibold text-gray-700">French Lace Unit</td>
+                    <td className="p-4 text-gray-600">Ultra-thin Breathable Lace</td>
+                    <td className="p-4 font-bold text-[#772424]">45,000 - 65,000</td>
+                  </tr>
+                  <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                    <td className="p-4 font-semibold text-gray-700">Australian Miraj</td>
+                    <td className="p-4 text-gray-600">Skin/PU base with invisible knots</td>
+                    <td className="p-4 font-bold text-[#772424]">40,000 - 60,000</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="p-4 font-semibold text-gray-700">Custom Bespoke Unit</td>
+                    <td className="p-4 text-gray-600">Tailored to exact scalp contour</td>
+                    <td className="p-4 font-bold text-[#772424]">65,000+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
               <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-[#772424]">
@@ -399,9 +436,10 @@ export default function HairUnitClient({
 
               <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col">
                 <div className="flex justify-between items-start mb-2">
-                  <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight pr-4">
+                  {/* Changed from h2 to h3 for SEO fix */}
+                  <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight pr-4">
                     {selectedUnit.name}
-                  </h2>
+                  </h3>
                   <button 
                     onClick={() => handleToggleWishlist(selectedUnit)}
                     className="p-3 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors flex-shrink-0"
@@ -429,9 +467,9 @@ export default function HairUnitClient({
                 </p>
 
                 <div className="mb-8">
-                  <h3 className="text-sm uppercase tracking-widest font-bold text-gray-400 mb-5">
+                  <h4 className="text-sm uppercase tracking-widest font-bold text-gray-400 mb-5">
                     Complete Specifications
-                  </h3>
+                  </h4>
                   <ul className="space-y-4">
                     {selectedUnit.specs.map((spec, index) => (
                       <li key={index} className="flex items-start text-base text-gray-800 font-medium">
@@ -449,7 +487,7 @@ export default function HairUnitClient({
                   <textarea
                     value={requirements}
                     onChange={(e) => setRequirements(e.target.value)}
-                    placeholder="Add any specific requirements colors or measurements here..."
+                    placeholder="Add any specific requirements, colors, or measurements here..."
                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#772424] focus:border-transparent resize-none h-24 bg-gray-50 text-black placeholder-gray-500"
                   ></textarea>
                 </div>

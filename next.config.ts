@@ -48,6 +48,46 @@ const nextConfig: NextConfig = {
         destination: "/doctors/dr-mansoor-ahmad",
         permanent: true, // Yeh 301 redirect hai
       },
+      {
+      source: "/blogs/hair-transplant-lahore-10-things",
+      destination: "/blogs/best-hair-doctor-lahore",
+      permanent: true,
+    },
+    {
+      source: "/blogs/best-hair-transplant-surgeon-lahore-checklist",
+      destination: "/blogs/best-hair-doctor-lahore",
+      permanent: true,
+    },
+    {
+      source: "/blogs/hair-transplant-results-timeline-lahore",
+      destination: "/blogs/hair-transplant-recovery-timeline-lahore",
+      permanent: true,
+    },
+    {
+      source: "/blogs/dhi-hair-transplant-cost-in-pakistan",
+      destination: "/blogs/dhi-hair-transplant-lahore-procedure-benefits",
+      permanent: true,
+    },
+    {
+      source: "/blogs/hair-transplant-method-by-baldness-stage",
+      destination: "/blogs/dhi-vs-fue-hair-transplant-lahore",
+      permanent: true,
+    },
+    {
+      source: "/blogs/prp-hair-treatment-cost-lahore-price",
+      destination: "/blogs/best-prp-hair-treatment-lahore",
+      permanent: true,
+    },
+    {
+      source: "/blogs/female-hair-transplant-cost-lahore",
+      destination: "/blogs/female-hair-transplant-lahore-fue",
+      permanent: true,
+    },
+    {
+      source: "/blogs/female-hair-transplant-results-recovery-success",
+      destination: "/blogs/female-hair-transplant-lahore-fue",
+      permanent: true,
+    },
     ];
   },
   async headers() {
