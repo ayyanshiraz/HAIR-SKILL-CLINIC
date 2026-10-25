@@ -1,11 +1,12 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/cart", "/checkout", "/api/"],
     },
-    sitemap: 'https://www.hairskill.com/sitemap.xml',
-  }
+    sitemap: "https://www.hairskill.com/sitemap.xml",
+  };
 }

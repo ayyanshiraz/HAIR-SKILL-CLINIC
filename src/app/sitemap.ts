@@ -16,10 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about/why-choose-hair-skill",
     "/before-after",
     "/blogs",
-    "/blogs/hair-loss",
-    "/blogs/hair-transplant",
-    "/cart",
-    "/checkout",
     "/contact",
     "/cookie-policy",
     "/doctors/dr-mansoor-ahmad",
@@ -28,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/faqs/post-op",
     "/faqs/pre-op",
     "/hair-transplant",
+    "/hair-transplant/cost", // Added new Cost page
     "/hair-unit",
     "/patient-guide/after",
     "/patient-guide/before",
