@@ -22,11 +22,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const postUrl = `${baseUrl}/blogs/${post.slug}`;
 
   return {
+    metadataBase: new URL(baseUrl),
     title: post.metaTitle,
     description: post.seoDescription,
     keywords: post.focusKeyword,
     alternates: {
-      canonical: postUrl,
+      canonical: `/blogs/${post.slug}`,
     },
     openGraph: {
       title: post.metaTitle,

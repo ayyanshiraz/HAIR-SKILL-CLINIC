@@ -12,8 +12,8 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hair Skill Clinic | Best Hair Transplant & Restoration in Lahore",
-  description: "Welcome to Hair Skill, Lahore's premier medical clinic for advanced hair transplants, FUE, DHI, and non-surgical hair systems. Book your free consultation today.",
+  title: "Hair Skill Clinic | Best Hair Transplant in Lahore",
+  description: "Looking for the best hair transplant in Lahore? Hair Skill Clinic offers advanced FUE, DHI, and hair restoration surgery. Book your free consultation!",
   keywords: [
     "Hair Skill",
     "Hair Skill Clinic Lahore",
