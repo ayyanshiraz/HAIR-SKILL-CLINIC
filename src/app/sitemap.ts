@@ -1,11 +1,14 @@
 import { MetadataRoute } from "next";
-import { blogsDatabase } from "../data"; 
+import { blogsDatabase } from "../data";
+import { isRetiredSlug } from "../../redirects"; // Yeh redirects.ts se check karega
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.hairskill.com";
 
+  // SEO rules ke mutabiq /cookie-policy aur /privacy-policy ko nikal diya gaya hai
   const staticRoutes = [
     "",
+    "/about",
     "/about/data-protection",
     "/about/ethics",
     "/about/patient-care-standards",
@@ -16,22 +19,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about/why-choose-hair-skill",
     "/before-after",
     "/blogs",
+    "/blogs/hair-transplant", // Category index added
+    "/blogs/hair-loss",       // Category index added
     "/contact",
-    "/cookie-policy",
     "/doctors/dr-mansoor-ahmad",
     "/faqs",
     "/faqs/general",
     "/faqs/post-op",
     "/faqs/pre-op",
     "/hair-transplant",
-    "/hair-transplant/cost", // Added new Cost page
+    "/hair-transplant/cost",
     "/hair-unit",
+    "/patient-guide",
     "/patient-guide/after",
     "/patient-guide/before",
     "/patient-guide/day-of",
     "/patient-guide/hair-washing",
     "/patient-guide/sterilization",
-    "/privacy-policy",
     "/reviews",
     "/hair-transplant/techniques/body",
     "/hair-transplant/treatments/dhi",
@@ -54,21 +58,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/hair-transplant/treatments/widows-peak"
   ];
 
-  const sitemapRoutes = staticRoutes.map((route) => ({
+  // Static routes map (Bina fake lastModified aur priority ke)
+  const sitemapRoutes: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: route === "" ? 1 : 0.8,
   }));
 
-  const blogRoutes = blogsDatabase.map((post) => {
-    return {
+  // Blog routes map (Sirf wo blogs jo redirect/retire NAHI hue)
+  const blogRoutes: MetadataRoute.Sitemap = blogsDatabase
+    .filter((post) => !isRetiredSlug(post.slug))
+    .map((post) => ({
       url: `${baseUrl}/blogs/${post.slug}`,
-      lastModified: new Date(post.date || new Date()),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    };
-  });
+      // Sirf real publish/edit date jayegi
+      lastModified: post.date ? new Date(post.date) : new Date(),
+    }));
 
   return [...sitemapRoutes, ...blogRoutes];
 }
