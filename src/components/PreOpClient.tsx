@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { countries, type Country } from "../data/countries";
 
@@ -113,7 +113,7 @@ export default function PreOpClient() {
     },
     {
       q: "Should you cut or have a haircut before surgery?",
-      a: "We usually ask patients not to cut their strands before they arrive at the clinic. This helps us assess the affected areas more accurately and plan the procedure properly. If a haircut or shaving is needed, we prefer to perform it here ourselves."
+      a: "We usually ask patients not to cut their strands before they arrive at the clinic. This helps us assess the affected areas accurately and plan the procedure properly. If a haircut or shaving is needed, we prefer to perform it here ourselves."
     },
     {
       q: "What can you do if you are scared to have the surgery?",
@@ -182,21 +182,18 @@ export default function PreOpClient() {
                       {openFaqIndex === index ? "-" : "+"}
                     </span>
                   </button>
-                  <AnimatePresence>
-                    {openFaqIndex === index && (
-                      <motion.div 
-                        initial={{ height: 0, opacity: 0 }} 
-                        animate={{ height: "auto", opacity: 1 }} 
-                        exit={{ height: 0, opacity: 0 }} 
-                        transition={{ duration: 0.3, ease: "easeInOut" }} 
-                        className="bg-gray-50 border-x border-b border-[#772424] overflow-hidden"
-                      >
-                        <div className="p-6 text-black text-base md:text-lg leading-relaxed font-medium">
-                          {faq.a}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  
+                  {/* SEO FIX APPLIED HERE - No more AnimatePresence hiding the content */}
+                  <motion.div
+                    initial={false}
+                    animate={{ height: openFaqIndex === index ? "auto" : 0, opacity: openFaqIndex === index ? 1 : 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="bg-gray-50 overflow-hidden"
+                  >
+                    <div className={`p-6 text-black text-base md:text-lg leading-relaxed font-medium ${openFaqIndex === index ? 'border-x border-b border-[#772424]' : ''}`}>
+                      {faq.a}
+                    </div>
+                  </motion.div>
                 </motion.div>
               ))}
 

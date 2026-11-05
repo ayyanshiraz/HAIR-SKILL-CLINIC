@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { countries, type Country } from "../data/countries";
 
@@ -285,21 +285,16 @@ export default function PostOpClient() {
                         </span>
                       </button>
                       
-                      <AnimatePresence>
-                        {isActive && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="bg-gray-200 overflow-hidden"
-                          >
-                            <div className="px-6 py-8 md:px-8 md:py-10 text-black font-medium text-base md:text-lg leading-relaxed">
-                              {item.a}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      <motion.div
+                        initial={false}
+                        animate={{ height: isActive ? "auto" : 0, opacity: isActive ? 1 : 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-gray-200 overflow-hidden"
+                      >
+                        <div className="px-6 py-8 md:px-8 md:py-10 text-black font-medium text-base md:text-lg leading-relaxed">
+                          {item.a}
+                        </div>
+                      </motion.div>
                     </div>
                   );
                 })}

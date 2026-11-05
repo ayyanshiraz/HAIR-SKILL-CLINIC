@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { countries, type Country } from "../data/countries";
 
@@ -226,21 +226,17 @@ export default function FAQClient() {
                           </span>
                         </button>
                         
-                        <AnimatePresence>
-                          {isActive && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3, ease: "easeInOut" }}
-                              className="bg-white border-x border-b border-gray-200 overflow-hidden"
-                            >
-                              <div className="px-6 py-6 md:px-8 md:py-6 text-gray-600 font-medium text-[15px] leading-relaxed">
-                                {item.a}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
+                        {/* --- SEO FIX: Removed conditional rendering so text is ALWAYS in DOM for Googlebot --- */}
+                        <motion.div
+                          initial={false}
+                          animate={{ height: isActive ? "auto" : 0, opacity: isActive ? 1 : 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          className="bg-white overflow-hidden"
+                        >
+                          <div className={`px-6 py-6 md:px-8 md:py-6 text-gray-600 font-medium text-[15px] leading-relaxed ${isActive ? 'border-x border-b border-gray-200' : ''}`}>
+                            {item.a}
+                          </div>
+                        </motion.div>
                       </div>
                     );
                   })}

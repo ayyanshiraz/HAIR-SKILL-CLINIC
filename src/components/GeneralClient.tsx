@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { countries, type Country } from "../data/countries";
 
@@ -246,21 +246,17 @@ export default function GeneralClient() {
                       {openFaqIndex === index ? "-" : "+"}
                     </span>
                   </button>
-                  <AnimatePresence>
-                    {openFaqIndex === index && (
-                      <motion.div 
-                        initial={{ height: 0, opacity: 0 }} 
-                        animate={{ height: "auto", opacity: 1 }} 
-                        exit={{ height: 0, opacity: 0 }} 
-                        transition={{ duration: 0.3, ease: "easeInOut" }} 
-                        className="bg-gray-50 border-x border-b border-[#772424] overflow-hidden"
-                      >
-                        <div className="p-6 text-black text-base md:text-lg leading-relaxed font-medium">
-                          {faq.a}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  
+                  <motion.div
+                    initial={false}
+                    animate={{ height: openFaqIndex === index ? "auto" : 0, opacity: openFaqIndex === index ? 1 : 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="bg-gray-50 overflow-hidden"
+                  >
+                    <div className={`p-6 text-black text-base md:text-lg leading-relaxed font-medium ${openFaqIndex === index ? 'border-x border-b border-[#772424]' : ''}`}>
+                      {faq.a}
+                    </div>
+                  </motion.div>
                 </motion.div>
               ))}
 
