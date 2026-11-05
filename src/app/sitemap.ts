@@ -1,11 +1,10 @@
 import { MetadataRoute } from "next";
 import { blogsDatabase } from "../data";
-import { isRetiredSlug } from "../../redirects"; // Yeh redirects.ts se check karega
-
+import { isRetiredSlug } from "../../redirects"; 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.hairskill.com";
 
-  // SEO rules ke mutabiq /cookie-policy aur /privacy-policy ko nikal diya gaya hai
+  
   const staticRoutes = [
     "",
     "/about",
@@ -19,8 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about/why-choose-hair-skill",
     "/before-after",
     "/blogs",
-    "/blogs/hair-transplant", // Category index added
-    "/blogs/hair-loss",       // Category index added
+    "/blogs/hair-transplant", 
+    "/blogs/hair-loss",       
     "/contact",
     "/doctors/dr-mansoor-ahmad",
     "/faqs",
@@ -58,17 +57,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/hair-transplant/treatments/widows-peak"
   ];
 
-  // Static routes map (Bina fake lastModified aur priority ke)
   const sitemapRoutes: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
   }));
 
-  // Blog routes map (Sirf wo blogs jo redirect/retire NAHI hue)
   const blogRoutes: MetadataRoute.Sitemap = blogsDatabase
     .filter((post) => !isRetiredSlug(post.slug))
     .map((post) => ({
       url: `${baseUrl}/blogs/${post.slug}`,
-      // Sirf real publish/edit date jayegi
       lastModified: post.date ? new Date(post.date) : new Date(),
     }));
 
