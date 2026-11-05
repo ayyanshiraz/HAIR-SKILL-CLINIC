@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomePageClient from "../components/HomePageClient";
 
 export const metadata: Metadata = {
-  title: "Best Hair Transplant Clinic in Lahore | Hair Skill",
+  title: "Hair Skill Clinic | Best Hair Transplant & Restoration in Lahore",
   description: "Experience the best hair transplant in Lahore at Hair Skill Clinic. We offer advanced FUE procedures, natural hairline restoration, and premium patient care.",
   keywords: [
     "Best Hair Transplant Lahore",

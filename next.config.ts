@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { blogRedirects } from "./redirects";
 
 const redirectList: [string, string][] = [
   ["/best-fue-hair-transplant-in-pakistan.html", "/hair-transplant/treatments/manual-fue"],
@@ -29,11 +30,14 @@ const nextConfig: NextConfig = {
     remotePatterns: [{ protocol: "https", hostname: "flagcdn.com" }],
   },
   async redirects() {
-    return redirectList.map(([source, destination]) => ({
+    const oldRedirects = redirectList.map(([source, destination]) => ({
       source,
       destination,
       permanent: true,
     }));
+    
+    // Naye SEO redirects ko pehle rakha gaya hai taake Google ko proper signals milen
+    return [...blogRedirects, ...oldRedirects];
   },
   async headers() {
     return [
