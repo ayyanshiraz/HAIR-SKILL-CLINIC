@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 
-export default function AnimatedCounter({ from = 0, to, duration = 2.5 }: { from?: number, to: number, duration?: number }) {
+export default function AnimatedCounter({ from = 0, to, duration = 2.5, suffix = "+" }: { from?: number, to: number, duration?: number, suffix?: string }) {
+  const [value, setValue] = useState(to); // SSR aur first render ke liye real number direct set rahega
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest: number) => Math.round(latest).toLocaleString());
   const ref = useRef(null);
@@ -15,5 +16,10 @@ export default function AnimatedCounter({ from = 0, to, duration = 2.5 }: { from
     }
   }, [count, isInView, to, duration]);
 
-  return <motion.span ref={ref}>{rounded}</motion.span>;
+  return (
+    <span ref={ref}>
+      <motion.span>{rounded}</motion.span>
+      {suffix}
+    </span>
+  );
 }
