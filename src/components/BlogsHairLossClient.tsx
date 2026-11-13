@@ -42,7 +42,7 @@ export default function BlogHairLossClient() {
     const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
     window.open(whatsappUrl, `_blank`);
   };
-
+//hello
   const autofillFixStyle = {
     WebkitBoxShadow: `0 0 0px 1000px #772424 inset`,
     WebkitTextFillColor: `#ffffff`
