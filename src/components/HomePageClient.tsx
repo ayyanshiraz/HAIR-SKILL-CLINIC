@@ -8,21 +8,19 @@ import dynamic from "next/dynamic";
 import { countries, type Country } from "../data/countries";
 import AnimatedCounter from "./home/AnimatedCounter";
 
-const SingleDoctorStage = dynamic(() => import("./home/SingleDoctorStage"), { ssr: false });
-const BeforeAfterStage = dynamic(() => import("./home/BeforeAfterStage"), { ssr: false });
-const PhilosophyStage = dynamic(() => import("./home/PhilosophyStage"), { ssr: false });
-const WhyChooseStage = dynamic(() => import("./home/WhyChooseStage"), { ssr: false });
-const TreatmentsStage = dynamic(() => import("./home/TreatmentsStage"), { ssr: false });
-const GalleryStage = dynamic(() => import("./home/GalleryStage"), { ssr: false });
-const PatientGuideStage = dynamic(() => import("./home/PatientGuideStage"), { ssr: false });
-const TechniquesStage = dynamic(() => import("./home/TechniquesStage"), { ssr: false });
-const FAQStage = dynamic(() => import("./home/FAQStage"), { ssr: false });
+const SingleDoctorStage = dynamic(() => import("./home/SingleDoctorStage"));
+const BeforeAfterStage = dynamic(() => import("./home/BeforeAfterStage"));
+const PhilosophyStage = dynamic(() => import("./home/PhilosophyStage"));
+const WhyChooseStage = dynamic(() => import("./home/WhyChooseStage"));
+const TreatmentsStage = dynamic(() => import("./home/TreatmentsStage"));
+const GalleryStage = dynamic(() => import("./home/GalleryStage"));
+const PatientGuideStage = dynamic(() => import("./home/PatientGuideStage"));
+const TechniquesStage = dynamic(() => import("./home/TechniquesStage"));
+const FAQStage = dynamic(() => import("./home/FAQStage"));
 
 export default function Home() {
-  const headline = "Hair Skill Clinic";
-  const tagline = "Mastering the Art of the Best Hair Transplant in Lahore and Karachi with World-Class Expertise and Precision-Designed Hairlines.";
+  const tagline = "Mastering the Art of the Best Hair Transplant in Lahore with World-Class Expertise and Precision-Designed Hairlines.";
   
-  const taglineWords = tagline.split(" ");
   const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
   
   const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
@@ -49,15 +47,11 @@ export default function Home() {
         
         <div className="text-center mb-16 flex flex-col items-center">
           <h1 className="mb-6 text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight text-white drop-shadow-2xl text-center">
-            {headline}
+            Hair Skill Clinic <span className="block text-2xl md:text-4xl mt-4">Hair Transplant in Lahore</span>
           </h1>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-white max-w-4xl mx-auto font-bold leading-relaxed flex flex-wrap justify-center gap-x-2 drop-shadow-xl">
-            {taglineWords.map((word, index) => (
-              <span key={index}>
-                {word}{" "}
-              </span>
-            ))}
+          <p className="text-lg md:text-xl lg:text-2xl text-white max-w-4xl mx-auto font-bold leading-relaxed drop-shadow-xl text-center">
+            {tagline}
           </p>
         </div>
 
