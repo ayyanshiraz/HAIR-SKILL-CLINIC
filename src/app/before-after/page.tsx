@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-}; //fix
+}; 
 
 export default function BeforeAfterPage() {
   return <BeforeAfterClient />;
