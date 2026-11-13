@@ -351,7 +351,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 15,
-    slug: "fut-hair-transplant-cost-lahore",
+    slug: "fut-hair-transplant-lahore-guide",
     category: "hair-transplant",
     title: "A Complete Guide to FUT Hair Transplant: Procedure, Results & Side Effects in Lahore",
     date: "September 04, 2026",
@@ -774,7 +774,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 22,
-    slug: "hair-mesotherapy-in-lahore-stop-hair-fall",
+    slug: "hair-mesotherapy-lahore",
     category: "hair-transplant",
     title: "Hair Mesotherapy in Lahore: Does It Really Stop Hair Fall Without Surgery?",
     date: "September 17, 2026",
@@ -819,7 +819,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 23,
-    slug: "scalp-micropigmentation-lahore-smp-treatment",
+    slug: "scalp-micropigmentation-lahore",
     category: "hair-transplant",
     title: "Scalp Micropigmentation in Lahore: Procedure, Healing, and What to Expect",
     date: "September 18, 2026",
@@ -865,7 +865,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 24,
-    slug: "ozone-hair-treatment-lahore-scalp-rejuvenation",
+    slug: "ozone-hair-treatment-lahore",
     category: "hair-transplant",
     title: "Ozone Hair Treatment in Lahore: Complete Scalp Rejuvenation for Stronger Hair",
     date: "October 08, 2026",
@@ -1148,7 +1148,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 29,
-    slug: "hair-transplant-for-diabetic-and-blood-pressure-patients-lahore",
+    slug: "hair-transplant-for-diabetic-patients-lahore",
     category: "hair-transplant",
     title: "Hair Transplant for Diabetic and Blood Pressure Patients in Lahore: Medical Safety Protocols",
     date: "October 27, 2026",

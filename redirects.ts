@@ -1,20 +1,10 @@
-// redirects.ts  — import into next.config.ts (see bottom of file)
-//
-// WHY A RESOLVER: hairskill.com already 301s several merged posts. Renaming a
-// post that others point to would create chains (A -> B -> C). finalPath() follows
-// every old slug to its FINAL destination so every rule is a single hop.
-//
-// Status code: `statusCode: 301` is used (not `permanent: true`, which emits 308).
-// Google treats 301 and 308 the same; use whichever your team prefers.
-
+// redirects.ts
 type Redirect = { source: string; destination: string; statusCode: 301 };
 
-/** Flip to 1 ONLY after the Search Console check described in report section 1.5 (per pair). */
 const MERGE_INTO_SERVICE_PAGES = process.env.MERGE_BLOGS_INTO_SERVICE_PAGES === '1';
 
 const blogPath = (slug: string) => `/blogs/${slug}`;
 
-/** 1) Plain renames: old slug -> new slug (post stays, URL gets cleaner). */
 const RENAMES: Record<string, string> = {
   'best-hair-doctor-lahore': 'best-hair-transplant-surgeon-lahore',
   'hair-transplant-cost-lahore-2026': 'hair-transplant-cost-factors-lahore',
@@ -23,23 +13,17 @@ const RENAMES: Record<string, string> = {
   'scalp-micropigmentation-lahore-smp-treatment': 'scalp-micropigmentation-lahore',
 };
 
-/** 2) Posts ALREADY merged on the live site (verified 2026-11-05) or listed in the
- *    sitemap but retired. old slug -> surviving slug. Re-pointed so there are no chains. */
 const ALREADY_MERGED: Record<string, string> = {
-  'hair-transplant-lahore-10-things': 'best-hair-doctor-lahore', // verified: redirects today
-  'best-hair-transplant-surgeon-lahore-checklist': 'best-hair-doctor-lahore', // verified
-  'dhi-hair-transplant-cost-in-pakistan': 'dhi-hair-transplant-lahore-procedure-benefits', // verified
-  'prp-hair-treatment-cost-lahore-price': 'best-prp-hair-treatment-lahore', // verified
-  'female-hair-transplant-cost-lahore': 'female-hair-transplant-lahore-fue', // verified
-  'hair-transplant-method-by-baldness-stage': 'dhi-vs-fue-hair-transplant-lahore', // verified
-  // NOT yet verified by fetch — confirm with the curl script before shipping:
+  'hair-transplant-lahore-10-things': 'best-hair-doctor-lahore',
+  'best-hair-transplant-surgeon-lahore-checklist': 'best-hair-doctor-lahore',
+  'dhi-hair-transplant-cost-in-pakistan': 'dhi-hair-transplant-lahore-procedure-benefits',
+  'prp-hair-treatment-cost-lahore-price': 'best-prp-hair-treatment-lahore',
+  'female-hair-transplant-cost-lahore': 'female-hair-transplant-lahore-fue',
+  'hair-transplant-method-by-baldness-stage': 'dhi-vs-fue-hair-transplant-lahore',
   'female-hair-transplant-results-recovery-success': 'female-hair-transplant-lahore-fue',
   'hair-transplant-results-timeline-lahore': 'hair-transplant-recovery-timeline-lahore',
 };
 
-/** 3) Blog posts that target the same head keyword as a service page.
- *    MERGE flag ON  -> 301 post -> service page.
- *    MERGE flag OFF -> post stays (renamed to `keepAs` if the slug is weak). */
 const CANNIBALS: { slug: string; servicePage: string; keepAs: string }[] = [
   { slug: 'dhi-hair-transplant-lahore-procedure-benefits', servicePage: '/hair-transplant/treatments/dhi', keepAs: 'dhi-hair-transplant-lahore-procedure-benefits' },
   { slug: 'female-hair-transplant-lahore-fue', servicePage: '/hair-transplant/treatments/female', keepAs: 'female-hair-transplant-lahore-fue' },
@@ -72,23 +56,19 @@ const RETIRED_SLUGS = [
   ...CANNIBALS.map((c) => c.slug),
 ];
 
-/** Every URL pattern that has been (or is being) advertised for a post. */
 const PREFIXES = ['/blogs', '/blogs/hair-transplant', '/blogs/hair-loss'];
 
 export function buildBlogRedirects(): Redirect[] {
   const rules: Redirect[] = [];
 
-  // Explicit rules FIRST (Next.js applies the first match).
   for (const slug of RETIRED_SLUGS) {
     const destination = finalPath(slug);
-    if (destination === blogPath(slug)) continue; // slug survives unchanged
+    if (destination === blogPath(slug)) continue;
     for (const prefix of PREFIXES) {
       rules.push({ source: `${prefix}/${slug}`, destination, statusCode: 301 });
     }
   }
 
-  // Catch-all LAST: the sitemap advertised /blogs/<category>/<slug>, but the live
-  // route is flat /blogs/<slug>. Send every nested URL to its flat equivalent.
   rules.push({ source: '/blogs/hair-transplant/:slug', destination: '/blogs/:slug', statusCode: 301 });
   rules.push({ source: '/blogs/hair-loss/:slug', destination: '/blogs/:slug', statusCode: 301 });
 
@@ -97,19 +77,5 @@ export function buildBlogRedirects(): Redirect[] {
 
 export const blogRedirects = buildBlogRedirects();
 
-/** True when a post URL now redirects elsewhere. Use it to keep retired slugs out of the sitemap. */
 export const isRetiredSlug = (slug: string) =>
   RETIRED_SLUGS.includes(slug) && finalPath(slug) !== blogPath(slug);
-
-// ------------------------------------------------------------
-// next.config.ts
-// ------------------------------------------------------------
-// import type { NextConfig } from 'next';
-// import { blogRedirects } from './redirects';
-//
-// const nextConfig: NextConfig = {
-//   async redirects() {
-//     return [...blogRedirects]; // append your other redirects here
-//   },
-// };
-// export default nextConfig;
