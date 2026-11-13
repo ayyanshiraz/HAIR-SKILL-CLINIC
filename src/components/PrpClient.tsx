@@ -503,7 +503,7 @@ export default function PrpClient() {
                   PRP Hair Treatment Cost Ranges in Pakistan: Packages at Hair Skill Clinic
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  Patients reviewing the estimate cost of prp hair transplant in pakistan often compare prp vs hair transplant options. For detailed session package pricing and protocol options, explore our <Link href="/blogs/prp-hair-treatment-cost-lahore-price" className="text-[#772424] font-bold underline hover:text-black transition-colors">PRP hair treatment cost guide</Link>. Some clinics advertise unbelievably cheap offers while others present heavily inflated calculations. You want absolute clarity and honesty. Hair Skill Clinic gives both inside accessible local PKR tiers so you can plan with confidence.
+                  Patients reviewing the estimate cost of prp hair transplant in pakistan often compare prp vs hair transplant options. For detailed session package pricing and protocol options, explore our <Link href="/blogs/best-prp-hair-treatment-lahore" className="text-[#772424] font-bold underline hover:text-black transition-colors">PRP hair treatment cost guide</Link>. Some clinics advertise unbelievably cheap offers while others present heavily inflated calculations. You want absolute clarity and honesty. Hair Skill Clinic gives both inside accessible local PKR tiers so you can plan with confidence.
                 </p>
 
                 <div className="space-y-6">
@@ -531,7 +531,7 @@ export default function PrpClient() {
                     <span className="text-xs font-black uppercase tracking-wider text-[#772424] block mb-1">Clinical Comparison</span>
                     <h4 className="font-bold text-gray-900 group-hover:text-[#772424] text-base leading-snug">Best PRP Hair Treatment in Lahore: Complete Guide</h4>
                   </Link>
-                  <Link href="/blogs/prp-hair-treatment-cost-lahore-price" className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:border-[#772424] hover:bg-white transition-all group">
+                  <Link href="/blogs/best-prp-hair-treatment-lahore" className="p-5 rounded-2xl border border-gray-200 bg-gray-50 hover:border-[#772424] hover:bg-white transition-all group">
                     <span className="text-xs font-black uppercase tracking-wider text-[#772424] block mb-1">Pricing & Packages</span>
                     <h4 className="font-bold text-gray-900 group-hover:text-[#772424] text-base leading-snug">PRP Hair Treatment Cost in Lahore: Session Details</h4>
                   </Link>
