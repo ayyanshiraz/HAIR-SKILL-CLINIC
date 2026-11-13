@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     ],
   },
 }; 
-
+//hkhsdk
 export default function BeforeAfterPage() {
   return <BeforeAfterClient />;
 }
