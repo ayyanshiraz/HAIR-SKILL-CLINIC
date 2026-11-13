@@ -9,7 +9,7 @@ export const hairLossBlogs: BlogPost[] = [
     category: "hair-loss",
     title: "Hair Transplant Recovery & Results Timeline: Day 1 to Month 12 Guide",
     date: "August 18, 2026",
-    previewImage: "/blogs/hair-loss/1.webp",
+    previewImage: "/blogs/1.webp",
     summary: "Read our complete hair transplant recovery and results timeline in Lahore. Learn what happens from first-week scab healing and shock loss to full 12-month hair growth.",
     seoDescription: "Discover the complete hair transplant recovery and results timeline in Lahore. Learn what to expect from day 1 healing and shock loss to month 12 density.",
     metaTitle: "Hair Transplant Recovery & Results Timeline in Lahore",
@@ -96,7 +96,7 @@ export const hairLossBlogs: BlogPost[] = [
     category: "hair-loss",
     title: "Hair Transplant Aftercare: 15 Mistakes That Can Affect Your Recovery",
     date: "August 19, 2026",
-    previewImage: "/blogs/hair-loss/2.webp",
+    previewImage: "/blogs/2.webp",
     summary: "Protect new hair grafts during recovery by avoiding fifteen major mistakes regarding sleeping positions, scalp washing, swelling care, and physical strain.",
     seoDescription: "Protect new hair grafts during recovery by avoiding fifteen major mistakes regarding sleeping positions, scalp washing, swelling care, and physical strain.",
     metaTitle: "Hair Transplant Aftercare Mistakes to Avoid in Lahore",
@@ -109,11 +109,11 @@ export const hairLossBlogs: BlogPost[] = [
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Early Recovery: Sleeping and Physical Activity Mistakes</h2>
         <p className="mb-4">The first few nights require careful rest schedules and alertness. Fragile grafts can be easily dislodged by unintentional rubbing against pillows when sleeping in an improper position. You should use a supportive travel neck cushion and elevate your upper body instead of resting face down or sleeping completely flat. Furthermore, vigorous exercise, heavy lifting, and strenuous labor rapidly increase internal blood pressure, which can cause unintended bleeding and push recently implanted roots out of position.</p>
-        <img src="/blogs/hair-loss/2(1).webp" alt="Safe elevated sleeping positions after hair transplant in Lahore" width="1200" height="630" className="w-full h-auto rounded-xl shadow-md my-5 object-cover" />
+        <img src="/blogs/2(1).webp" alt="Safe elevated sleeping positions after hair transplant in Lahore" width="1200" height="630" className="w-full h-auto rounded-xl shadow-md my-5 object-cover" />
         
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Managing Your Scalp: Washing and Scabs Removal</h2>
         <p className="mb-4">It takes specific methods and a light touch to maintain proper scalp hygiene. Never expose your scalp to direct, high-pressure shower streams when bathing following a transplant. Instead, follow our clinical <a href="/patient-guide/hair-washing" className="text-[#772424] font-semibold hover:underline">hair washing protocol</a> by gently pouring lukewarm water with a clean plastic cup over the treated area. Protective crusts will form as natural healing progresses. You must let these scabs shed at their own pace. Picking at dry tissue or scratching an itchy scalp can permanently dislodge fragile hair follicles.</p>
-        <img src="/blogs/hair-loss/2(2).webp" alt="Correct gentle scalp washing technique after hair transplant" width="1200" height="630" className="w-full h-auto rounded-xl shadow-md my-5 object-cover" />
+        <img src="/blogs/2(2).webp" alt="Correct gentle scalp washing technique after hair transplant" width="1200" height="630" className="w-full h-auto rounded-xl shadow-md my-5 object-cover" />
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Dealing with Normal Swelling Safely</h2>
         <p className="mb-4">Patients sometimes experience unnecessary anxiety due to post-operative forehead puffiness. During the early stages of recuperation, mild swelling across the forehead is a normal physiological reaction. Applying cold ice packs directly onto the newly planted graft zone is a common mistake. To promote smooth fluid drainage, apply a cold compress gently across the forehead only—never touching the grafts—while keeping your head elevated.</p>
@@ -181,14 +181,14 @@ export const hairLossBlogs: BlogPost[] = [
         <p className="mb-2">Go to <a href="/faqs/post-op" className="text-[#772424] font-semibold hover:underline">Post-Op FAQs</a> to view our comprehensive post-treatment instructions.</p>
       </>
     )
-  },
+  }, //fix image issue
   {
     id: 8,
     slug: "hair-transplant-side-effects-lahore-guide",
     category: "hair-loss",
     title: "Hair Transplant Side Effects: What is Normal and When Should You Call Your Surgeon",
     date: "August 21, 2026",
-    previewImage: "/blogs/hair-loss/3.webp",
+    previewImage: "/blogs/3.webp",
     summary: "Identify normal hair transplant side effects in Lahore versus warning signs requiring immediate medical care at Hair Skill Clinic for a safe recovery.",
     seoDescription: "Identify normal hair transplant side effects in Lahore versus warning signs requiring immediate medical care at Hair Skill Clinic for a safe recovery.",
     metaTitle: "Guide to Hair Transplant Side Effects Lahore Recovery",
@@ -259,7 +259,7 @@ export const hairLossBlogs: BlogPost[] = [
     category: "hair-loss",
     title: "Why Are You Losing Hair? Hard Water, Depression, and Nutritional Deficiencies Explained",
     date: "August 20, 2026",
-    previewImage: "/blogs/hair-loss/5.webp",
+    previewImage: "/blogs/5.webp",
     summary: "Struggling with daily hair thinning? Uncover how hard water in Lahore, clinical depression, and vitamin deficiencies might be the hidden culprits behind your hair fall.",
     seoDescription: "Discover the hidden causes of hair fall in Lahore, from hard water and depression to diet. Learn when to seek hair restoration in Gulberg III.",
     metaTitle: "Why Are You Losing Hair? Causes of Hair Fall in Lahore",
@@ -310,7 +310,7 @@ export const hairLossBlogs: BlogPost[] = [
     category: "hair-loss",
     title: "Understanding Male Pattern Baldness: Is It Genetics or Just Hair Fall?",
     date: "August 21, 2026",
-    previewImage: "/blogs/hair-loss/6.webp",
+    previewImage: "/blogs/6.webp",
     summary: "Are you experiencing normal daily shedding or genetic hair loss? Learn the early signs of male pattern baldness and discover permanent solutions in Lahore.",
     seoDescription: "Discover the early signs of male pattern baldness and learn how DHT affects your hair. Find the best male pattern baldness treatment in Lahore today.",
     metaTitle: "Male Pattern Baldness vs Hair Fall: Signs and Treatments",
