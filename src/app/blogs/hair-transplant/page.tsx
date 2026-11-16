@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 const BlogsHairTransplantClient = dynamic(() => import("../../../components/BlogsHairTransplantClient"));
 
 export const metadata: Metadata = {
-  title: "Hair Transplant Diet & Care Blogs Lahore | Hair Skill",
-  description: "Read expert guides on post-op diet, essential vitamins, and nutrition for hair transplant recovery. Ensure perfect graft survival in Lahore with Hair Skill.",
+  title: "Hair Transplant Guides: Procedures, Costs & Recovery | Hair Skill Clinic Lahore",
+  description: "Surgeon-written guides on FUE, DHI, FUT, costs, graft counts and recovery for patients in Lahore.",
   keywords: ["Hair Transplant Diet Lahore", "Post-Op Hair Transplant Care", "Vitamins After Hair Transplant", "Graft Survival Tips", "Hair Clinic Blogs Lahore"],
   alternates: {
     canonical: "https://www.hairskill.com/blogs/hair-transplant",

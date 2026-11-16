@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 const BlogsHairLossClient = dynamic(() => import("../../../components/BlogsHairLossClient"));
 
 export const metadata: Metadata = {
-  title: "Hair Loss Treatment & PRP Therapy Lahore | Hair Skill",
-  description: "Struggling with hair loss? Discover clinically proven solutions like PRP and Ozone Scalp Therapy at Hair Skill Clinic Lahore to effectively stop hair fall.",
+  title: "Hair Fall Causes & Prevention Guides | Hair Skill Clinic Lahore",
+  description: "Why hair thins in Lahore, how to tell hair fall from male pattern baldness, and the best prevention treatments.",
   keywords: ["Hair Loss Treatment Lahore", "PRP Hair Therapy Lahore", "Ozone Scalp Treatment Lahore", "Stop Hair Fall", "Best Hair Clinic in Lahore"],
   alternates: {
     canonical: "https://www.hairskill.com/blogs/hair-loss",
