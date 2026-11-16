@@ -41,7 +41,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#772424] font-sans relative overflow-hidden">
       
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-white/10 blur-[120px] rounded-full pointer-events-none" />
+      {/* Optimized Background Gradient (Replaced expensive blur-120px) */}
+      <div 
+        className="absolute top-0 left-0 w-full h-[800px] pointer-events-none" 
+        style={{
+          background: "radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(119, 36, 36, 0) 60%)"
+        }}
+      />
 
       <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-8 pt-24 lg:pt-36 pb-20 relative z-10">
         
@@ -58,13 +64,15 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end relative mt-8">
           
           <div className="relative w-full flex justify-center lg:justify-start items-end h-full lg:-ml-12 xl:-ml-16 mt-12 -mb-20">
+           {/* Fixed Shadow (Now follows the body outline properly) */}
             <Image
               src="/home/owner1.webp"
               alt="Hair Skill Clinic Doctors"
               width={1050}
               height={850}
               priority={true}
-              className="w-[115%] lg:w-[125%] max-w-[550px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1050px] h-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10"
+              sizes="(max-width:1024px) 100vw, 50vw"
+              className="w-[115%] lg:w-[125%] max-w-[550px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1050px] h-auto object-contain object-bottom z-10 drop-shadow-2xl"
             />
           </div>
 

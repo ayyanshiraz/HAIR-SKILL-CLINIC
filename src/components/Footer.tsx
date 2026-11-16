@@ -98,7 +98,6 @@ export default function Footer() {
                   alt={`Hair Skill Clinic Logo`}
                   width={240}
                   height={72}
-                  priority={true}
                   className={`relative w-auto h-16 object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-lighten`}
                 />
               </Link>

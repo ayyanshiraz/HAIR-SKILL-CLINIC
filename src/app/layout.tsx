@@ -8,6 +8,7 @@ import CookieBanner from "@/components/CookieBanner";
 import { CartProvider } from "../context/CartContext";
 import { Analytics } from "@vercel/analytics/next";
 import MobileStickyBar from "@/components/MobileStickyBar";
+import MotionProvider from "../components/MotionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -139,7 +140,9 @@ export default function RootLayout({
         {/* Changed <main> to <div> to fix semantic HTML nested main error */}
         <div className="w-full flex-grow">
           <CartProvider>
-            {children}
+            <MotionProvider>
+              {children}
+            </MotionProvider>
           </CartProvider>
         </div>
         <Footer />
