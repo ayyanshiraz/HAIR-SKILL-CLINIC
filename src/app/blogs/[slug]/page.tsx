@@ -149,7 +149,34 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
             </Link>
           </div>
         </aside>
-
+        {/* === KEEP READING (3 RELATED BLOGS) === */}
+        {blogsDatabase.filter((b) => b.category === post.category && b.slug !== post.slug).length > 0 && (
+          <div className="mt-16 mb-12 border-t border-gray-100 pt-12">
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">Keep Reading</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {blogsDatabase
+                .filter((b) => b.category === post.category && b.slug !== post.slug)
+                .slice(0, 3)
+                .map((rb) => (
+                  <Link key={rb.slug} href={`/blogs/${rb.slug}`} className="group block border border-gray-100 rounded-2xl p-4 md:hover:border-[#772424] active:border-[#772424] transition-colors bg-gray-50/50 shadow-sm md:hover:shadow-md">
+                    <div className="w-full aspect-[16/10] bg-white rounded-xl mb-4 overflow-hidden border border-gray-100 flex items-center justify-center">
+                      <Image 
+                        src={rb.previewImage} 
+                        alt={rb.title} 
+                        width={400} 
+                        height={250} 
+                        className="w-full h-full object-contain md:group-hover:scale-105 group-active:scale-105 transition-transform duration-500" 
+                      />
+                    </div>
+                    <h4 className="font-extrabold text-gray-900 text-sm md:group-hover:text-[#772424] group-active:text-[#772424] line-clamp-2 leading-snug">
+                      {rb.title}
+                    </h4>
+                  </Link>
+                ))}
+            </div>
+          </div>
+        )}
+        {/* === KEEP READING END === */}
         <div className="mt-16 pt-8 border-t border-gray-200">
           <Link 
             href={categoryLink} 
