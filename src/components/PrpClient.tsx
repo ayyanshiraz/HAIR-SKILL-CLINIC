@@ -111,7 +111,7 @@ export default function PrpClient() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-            PRP Hair Treatment 
+            PRP Hair Treatment in Lahore 
           </h1>
         </div>
       </motion.section>
@@ -237,7 +237,7 @@ export default function PrpClient() {
 
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Why Choose Hair Skill Clinic for PRP Hair Treatment?
+                  Expert PRP Hair Restoration in Lahore
                 </h2>
 
                 <div className="space-y-6 mb-8">
