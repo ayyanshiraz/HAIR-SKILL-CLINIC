@@ -58,7 +58,7 @@ export default function DhiClient() {
     },
     {
       q: "How much does a DHI hair transplant cost in Pakistan?",
-      a: "Most clinics offer DHI inside accessible local package brackets in PKR upfront. Your DHI hair transplant Pakistan cost calculation depends on density needs method choice and complexity providing immense savings over Western tiers."
+      a: "Most clinics offer DHI inside accessible local package brackets in PKR upfront. Your DHI Hair Transplant in Lahore cost calculation depends on density needs method choice and complexity providing immense savings over Western tiers."
     },
     {
       q: "How long does a DHI procedure take?",
@@ -115,7 +115,7 @@ export default function DhiClient() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-            DHI Hair Transplant Pakistan
+            DHI Hair Transplant in Lahore
           </h1>
         </div>
       </motion.section>
@@ -187,7 +187,7 @@ export default function DhiClient() {
                   Comprehensive Guide to Direct Hair Implantation
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
-                  Many people discover a DHI hair transplant Pakistan when they start searching for a method that feels gentler more controlled and more focused on natural angles. DHI often appears in headlines beside promises of no incisions fast healing and perfect density which can leave patients confused. At Hair Skill Clinic our job is to cut through the noise and give you a clear explanation of what a DHI hair transplant in Pakistan can truly deliver and when it is the right choice for you.
+                  Many people discover a DHI Hair Transplant in Lahore when they start searching for a method that feels gentler more controlled and more focused on natural angles. DHI often appears in headlines beside promises of no incisions fast healing and perfect density which can leave patients confused. At Hair Skill Clinic our job is to cut through the noise and give you a clear explanation of what a DHI hair transplant in Pakistan can truly deliver and when it is the right choice for you.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium">
                   DHI is not magic. It is a technique built around the DHI Choi pen technique which helps your surgeon place each graft with refined depth and direction without creating channels first. This can support softer hairlines clean transitions and smoother blending in areas where precision matters most. Patients searching for a DHI hair transplant in Lahore usually want exactly that: natural detail not overpromised density.
@@ -256,7 +256,7 @@ export default function DhiClient() {
                 <div className="space-y-6 mb-6">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-black text-[#772424] mb-2">DHI in simple language</h3>
-                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">During a DHI hair transplant Pakistan grafts are extracted using standard FUE techniques. Instead of opening channels the surgeon loads each graft into the Choi pen. With a gentle press the pen implants the follicle exactly where it needs to sit. Placement and channel opening happen in one movement. This reduces handling time and helps the graft settle more naturally.</p>
+                    <p className="text-black text-base md:text-lg font-medium leading-relaxed">During a DHI Hair Transplant in Lahore grafts are extracted using standard FUE techniques. Instead of opening channels the surgeon loads each graft into the Choi pen. With a gentle press the pen implants the follicle exactly where it needs to sit. Placement and channel opening happen in one movement. This reduces handling time and helps the graft settle more naturally.</p>
                   </div>
 
                   <div>
@@ -286,10 +286,10 @@ export default function DhiClient() {
 
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-14">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                  Why Choose a DHI Hair Transplant in Pakistan at Hair Skill Clinic
+                  Advanced DHI Technique at Hair Skill Clinic Lahore
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
-                  People searching for a DHI hair transplant Pakistan usually fall into two groups. Some want a premium method that feels gentle and precise. Others want clarity about whether DHI is truly better or just heavily marketed.
+                  People searching for a DHI Hair Transplant in Lahore usually fall into two groups. Some want a premium method that feels gentle and precise. Others want clarity about whether DHI is truly better or just heavily marketed.
                 </p>
                 <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                   Pakistan became one of the most trusted destinations for DHI because experienced surgeons competitive package tiers and a well developed medical care system come together in one place. However not every clinic uses DHI the same way. At Hair Skill the method is chosen with intention not as a blanket solution.
@@ -623,7 +623,7 @@ export default function DhiClient() {
 
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} className="mb-16">
                 <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-8 tracking-tight border-b pb-3 border-gray-100">
-                  DHI Hair Transplant Pakistan FAQs
+                  DHI Hair Transplant in Lahore FAQs
                 </h2>
 
                 <div className="space-y-4">
