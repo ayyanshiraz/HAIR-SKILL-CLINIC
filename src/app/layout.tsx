@@ -12,24 +12,29 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hair Skill Clinic | Best Hair Transplant in Lahore",
+  title: {
+    default: "Hair Skill Clinic | Best Hair Transplant in Lahore",
+    template: "%s | Hair Skill Clinic"
+  },
   description: "Looking for the best hair transplant in Lahore? Hair Skill Clinic offers advanced FUE, DHI, and hair restoration surgery. Book your free consultation!",
-  keywords: [
-    "Hair Skill",
-    "Hair Skill Clinic Lahore",
-    "Best Hair Transplant Lahore",
-    "Hair Restoration Clinic Pakistan",
-    "FUE & DHI Transplant Lahore",
-    "Non-Surgical Hair Systems"
-  ],
   metadataBase: new URL("https://www.hairskill.com"),
   openGraph: {
     title: "Hair Skill Clinic | Best Hair Transplant & Restoration in Lahore",
     description: "Welcome to Hair Skill, Lahore's premier medical clinic for advanced hair transplants, FUE, DHI, and non-surgical hair systems.",
-    url: "https://www.hairskill.com",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
     type: "website",
+    images: [
+      {
+        url: "https://www.hairskill.com/home/owner1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Hair Skill Clinic Lahore",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -54,6 +59,33 @@ export default function RootLayout({
       postalCode: "54660",
       addressCountry: "PK"
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "31.5074", 
+      longitude: "74.3490"
+    },
+    hasMap: "https://maps.google.com/?q=Hair+Skill+Clinic+Lahore",
+    sameAs: [
+      "https://www.facebook.com/share/1H7FzSj5Uf/",
+      "https://www.instagram.com/hairskillclinic",
+      "https://youtube.com/@Hairskillclinic",
+      "https://www.tiktok.com/@hair_skill"
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        opens: "11:00",
+        closes: "20:00"
+      }
+    ],
     telephone: "+923014923336",
     priceRange: "$$$",
     medicalSpecialty: ["Dermatology", "Hair Transplantation"],
@@ -104,11 +136,12 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Navbar />
-        <main>
+        {/* Changed <main> to <div> to fix semantic HTML nested main error */}
+        <div className="w-full flex-grow">
           <CartProvider>
             {children}
           </CartProvider>
-        </main>
+        </div>
         <Footer />
         <CookieBanner />
         <Analytics />
