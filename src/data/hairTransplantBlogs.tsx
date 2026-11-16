@@ -6,7 +6,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   {
     id: 11,
     slug: "how-to-prevent-hair-loss-in-lahore",
-    category: "hair-transplant",
+    category: "hair-loss",
     title: "How to Prevent Hair Loss in Pakistan: What Actually Helps and What Fails",
     date: "August 22, 2026",
     previewImage: "/blogs/hairtransplant/2.webp",
@@ -511,7 +511,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 17,
-    slug: "prp-after-hair-transplant-necessity",
+    slug: "prp-after-hair-transplant",
     category: "hair-transplant",
     title: "PRP vs Hair Transplant: Is PRP Necessary After Hair Transplant?",
     date: "September 09, 2026",
@@ -739,7 +739,7 @@ export const hairTransplantBlogs: BlogPost[] = [
     focusKeyword: "hair transplant vs hair patch",
     content: (
       <>
-        <p className="mb-4 mt-2">Losing hair can be a stressful experience that affects everyday confidence. For many patients, choosing between non-surgical replacement and surgical restoration is a major decision. Because everyone has different lifestyle goals and <a href="/blogs/understanding-male-pattern-baldness" className="text-[#772424] font-semibold hover:underline">stages of male pattern baldness</a>, comparing a hair transplant vs hair patch clearly highlights which approach fits your situation best.</p>
+        <p className="mb-4 mt-2">Losing hair can be a stressful experience that affects everyday confidence. For many patients, choosing between non-surgical replacement and surgical restoration is a major decision. Because everyone has different lifestyle goals and <a href="/blogs/male-pattern-baldness-treatment-lahore" className="text-[#772424] font-semibold hover:underline">stages of male pattern baldness</a>, comparing a hair transplant vs hair patch clearly highlights which approach fits your situation best.</p>
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">What is a Hair Transplant? (The Permanent Biological Solution)</h2>
         <p className="mb-4">Modern <a href="/hair-transplant/treatments/manual-fue" className="text-[#772424] font-semibold hover:underline">Manual FUE</a>, <a href="/hair-transplant/techniques/sapphire" className="text-[#772424] font-semibold hover:underline">Sapphire FUE</a>, and <a href="/hair-transplant/treatments/dhi" className="text-[#772424] font-semibold hover:underline">DHI techniques</a> involve relocating living, DHT-resistant follicles from the back of your head to thinning areas. This microsurgical procedure provides a permanent solution for patients who want their own natural, growing hair.</p>
@@ -794,7 +794,7 @@ export const hairTransplantBlogs: BlogPost[] = [
         <p className="mb-4">This minimally invasive therapy addresses several specific forms of hair thinning:</p>
 
         <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Early to Moderate Thinning (Androgenetic Alopecia)</h3>
-        <p className="mb-4">Patients in early stages of <a href="/blogs/understanding-male-pattern-baldness" className="text-[#772424] font-semibold hover:underline">androgenetic alopecia</a> benefit significantly. The nutrient blend slows follicular miniaturization and helps preserve active strands before permanent loss occurs.</p>
+        <p className="mb-4">Patients in early stages of <a href="/blogs/male-pattern-baldness-treatment-lahore" className="text-[#772424] font-semibold hover:underline">androgenetic alopecia</a> benefit significantly. The nutrient blend slows follicular miniaturization and helps preserve active strands before permanent loss occurs.</p>
 
         <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Post-Pregnancy and Stress-Induced Hair Fall</h3>
         <p className="mb-4">Hormonal shifts after childbirth or elevated cortisol from chronic stress often trigger rapid telogen effluvium shedding. Targeted mesotherapy stabilizes the biological growth cycle and helps resting follicles return to active growth.</p>
@@ -831,7 +831,7 @@ export const hairTransplantBlogs: BlogPost[] = [
     content: (
       <>
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Introduction: Non-Surgical Optical Density in Lahore</h2>
-        <p className="mb-4 mt-2">A receding hairline, <a href="/blogs/understanding-male-pattern-baldness" className="text-[#772424] font-semibold hover:underline">thinning hair at the crown</a>, or visible donor scars can be a source of daily self-consciousness. When patients want the look of fuller density or a sharp buzz-cut frame without surgical incisions, <a href="/hair-transplant/treatments/prp-hair-treatment" className="text-[#772424] font-semibold hover:underline">scalp micropigmentation in Lahore</a> offers a reliable cosmetic solution.</p>
+        <p className="mb-4 mt-2">A receding hairline, <a href="/blogs/male-pattern-baldness-treatment-lahore" className="text-[#772424] font-semibold hover:underline">thinning hair at the crown</a>, or visible donor scars can be a source of daily self-consciousness. When patients want the look of fuller density or a sharp buzz-cut frame without surgical incisions, <a href="/hair-transplant/treatments/prp-hair-treatment" className="text-[#772424] font-semibold hover:underline">scalp micropigmentation in Lahore</a> offers a reliable cosmetic solution.</p>
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">What is Scalp Micropigmentation (SMP)?</h2>
         <p className="mb-4">Scalp micropigmentation (SMP) is a specialized medical-grade cosmetic pigmentation procedure that replicates the appearance of natural shaven hair follicles. Using ultra-fine microneedles, practitioners deposit specialized carbon-based pigments into the upper dermal layer of the scalp. Unlike standard body tattoos that penetrate deeply and turn blue or green over time, SMP uses calibrated pointillism to reduce the contrast between bare scalp skin and existing hair.</p>
@@ -898,7 +898,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 25,
-    slug: "failed-hair-transplant-repair-lahore",
+    slug: "hair-transplant-repair-lahore",
     category: "hair-transplant",
     title: "Failed Hair Transplant Repair in Lahore: How Certified Surgeons Fix Botched Results",
     date: "September 20, 2026",
@@ -1015,7 +1015,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 27,
-    slug: "afro-hair-transplant-in-lahore",
+    slug: "afro-hair-transplant-lahore",
     category: "hair-transplant",
     title: "Afro Hair Transplant in Lahore: Safe Restoration for Coiled and Curly Hair (2026)",
     date: "September 23, 2026",
@@ -1076,7 +1076,7 @@ export const hairTransplantBlogs: BlogPost[] = [
     content: (
       <>
         <h1 className="text-2xl md:text-3xl font-bold mb-4">What is the Best Age for a Hair Transplant in Lahore? The Medical Reality</h1>
-        <p className="mb-4 mt-2">Young men between 19 and 22 years of age in Lahore often find their crowns thinning or their hairlines receding. Early <a href="/blogs/understanding-male-pattern-baldness" className="text-[#772424] font-semibold hover:underline">male pattern baldness</a> is strongly influenced by hard water, daily stress, and genetics. The majority of people want to have a quick surgical fix to look better. But first an ethics expert has to determine that the hair loss has completely stopped. To find out the best age for hair transplant in Lahore, it takes a lot of patience and thorough medical evaluation of your scalp.</p>
+        <p className="mb-4 mt-2">Young men between 19 and 22 years of age in Lahore often find their crowns thinning or their hairlines receding. Early <a href="/blogs/male-pattern-baldness-treatment-lahore" className="text-[#772424] font-semibold hover:underline">male pattern baldness</a> is strongly influenced by hard water, daily stress, and genetics. The majority of people want to have a quick surgical fix to look better. But first an ethics expert has to determine that the hair loss has completely stopped. To find out the best age for hair transplant in Lahore, it takes a lot of patience and thorough medical evaluation of your scalp.</p>
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Can You Get a Hair Transplant in Your Early 20s?</h2>
         <p className="mb-4">There are a lot of young men who are wondering about when to get a hair transplant. There are a lot of long-term difficulties when operating in your early twenties.</p>
@@ -1235,7 +1235,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 30,
-    slug: "how-many-grafts-needed-hair-transplant-lahore",
+    slug: "how-many-grafts-for-hair-transplant",
     category: "hair-transplant",
     title: "How Many Grafts Do You Need for a Hair Transplant in Lahore? Safe Donor Limits Explained",
     date: "November 03, 2026",
@@ -1333,7 +1333,7 @@ export const hairTransplantBlogs: BlogPost[] = [
   },
   {
     id: 31,
-    slug: "crown-hair-transplant-vertex-restoration-lahore",
+    slug: "crown-hair-transplant-lahore",
     category: "hair-transplant",
     title: "Crown Hair Transplant in Lahore: Complete Guide to Vertex Restoration",
     date: "November 05, 2026",

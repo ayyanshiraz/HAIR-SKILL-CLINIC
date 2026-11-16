@@ -6,7 +6,7 @@ export const hairLossBlogs: BlogPost[] = [
   {
     id: 6,
     slug: "hair-transplant-recovery-timeline-lahore",
-    category: "hair-loss",
+    category: "hair-transplant",
     title: "Hair Transplant Recovery & Results Timeline: Day 1 to Month 12 Guide",
     date: "August 18, 2026",
     previewImage: "/blogs/1.webp",
@@ -92,8 +92,8 @@ export const hairLossBlogs: BlogPost[] = [
   },
   {
     id: 7,
-    slug: "hair-transplant-aftercare-mistakes-recovery",
-    category: "hair-loss",
+    slug: "hair-transplant-aftercare-mistakes",
+    category: "hair-transplant",
     title: "Hair Transplant Aftercare: 15 Mistakes That Can Affect Your Recovery",
     date: "August 19, 2026",
     previewImage: "/blogs/2.webp",
@@ -184,8 +184,8 @@ export const hairLossBlogs: BlogPost[] = [
   }, //fix image issue
   {
     id: 8,
-    slug: "hair-transplant-side-effects-lahore-guide",
-    category: "hair-loss",
+    slug: "hair-transplant-side-effects-lahore",
+    category: "hair-transplant",
     title: "Hair Transplant Side Effects: What is Normal and When Should You Call Your Surgeon",
     date: "August 21, 2026",
     previewImage: "/blogs/3.webp",
@@ -306,7 +306,7 @@ export const hairLossBlogs: BlogPost[] = [
   },
   {
     id: 10,
-    slug: "understanding-male-pattern-baldness",
+    slug: "male-pattern-baldness-treatment-lahore",
     category: "hair-loss",
     title: "Understanding Male Pattern Baldness: Is It Genetics or Just Hair Fall?",
     date: "August 21, 2026",
