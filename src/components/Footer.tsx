@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import RelatedPosts from "./RelatedPosts";
 
 export default function Footer() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -23,6 +24,7 @@ export default function Footer() {
     { name: `F.A.Q.S`, href: `/faqs` },
     { name: `Reviews`, href: `/reviews` },
     { name: `Contact`, href: `/contact` },
+    { name: `Reference Program`, href: `/about/reference-program` },
   ];
 
   const socialPlatforms = [
@@ -65,195 +67,186 @@ export default function Footer() {
   ];
 
   return (
-    <footer
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className={`relative overflow-hidden bg-[#772424] text-slate-100 pt-10 pb-6 border-t border-[#8f2b2b] font-sans selection:bg-white selection:text-[#772424]`}
-    >
-      {/* Dynamic Ambient Mouse Spotlight */}
-      <div
-        className={`pointer-events-none absolute -inset-px transition-opacity duration-500 ease-out`}
-        style={{
-          opacity: isHovered ? 1 : 0,
-          background: `radial-gradient(500px circle at ${mousePos.x}px ${mousePos.y}px, rgba(255, 255, 255, 0.12), transparent 40%)`,
-        }}
-      />
+    <>
+      <RelatedPosts />
+      
+      <footer
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className={`relative overflow-hidden bg-[#772424] text-slate-100 pt-10 pb-6 border-t border-[#8f2b2b] font-sans selection:bg-white selection:text-[#772424]`}
+      >
+        <div
+          className={`pointer-events-none absolute -inset-px transition-opacity duration-500 ease-out`}
+          style={{
+            opacity: isHovered ? 1 : 0,
+            background: `radial-gradient(500px circle at ${mousePos.x}px ${mousePos.y}px, rgba(255, 255, 255, 0.12), transparent 40%)`,
+          }}
+        />
 
-      {/* Top Subtle Animated Shimmer Bar */}
-      <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse`} />
+        <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse`} />
 
-      <div className={`relative max-w-7xl mx-auto px-6 lg:px-8 z-10`}>
-        
-        {/* Main 4-Column Grid for Laptop & Clean Stack for Mobile */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-8 border-b border-[#8f2b2b]/80 items-start`}>
+        <div className={`relative max-w-7xl mx-auto px-6 lg:px-8 z-10`}>
           
-          {/* Column 1 (Span 4): Logo, Text & Social Links Below */}
-          <div className={`lg:col-span-4 flex flex-col items-start justify-start space-y-4`}>
-            <Link href={`/`} className={`group relative inline-block cursor-pointer`}>
-              <div className={`absolute -inset-3 rounded-2xl bg-white/5 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100`} />
-              <Image
-                src={`/home/logo.webp`}
-                alt={`Hair Skill Clinic Logo`}
-                width={240}
-                height={72}
-                priority={true}
-                className={`relative w-auto h-16 object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-lighten`}
-              />
-            </Link>
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-8 border-b border-[#8f2b2b]/80 items-start`}>
+            
+            <div className={`lg:col-span-4 flex flex-col items-start justify-start space-y-4`}>
+              <Link href={`/`} className={`group relative inline-block cursor-pointer`}>
+                <div className={`absolute -inset-3 rounded-2xl bg-white/5 opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100`} />
+                <Image
+                  src={`/home/logo.webp`}
+                  alt={`Hair Skill Clinic Logo`}
+                  width={240}
+                  height={72}
+                  priority={true}
+                  className={`relative w-auto h-16 object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-lighten`}
+                />
+              </Link>
 
-            <p className={`text-sm text-red-100/90 font-medium leading-relaxed pr-2`}>
-              As the premier advanced hair restoration center we offer exceptional clinical services. We specialize in delivering completely natural results to restore your confidence right now.
-            </p>
+              <p className={`text-sm text-red-100/90 font-medium leading-relaxed pr-2`}>
+                As the premier advanced hair restoration center we offer exceptional clinical services. We specialize in delivering completely natural results to restore your confidence right now.
+              </p>
 
-            {/* Social Links placed directly below text */}
-            <div className={`pt-1 w-full`}>
-              <span className={`text-xs font-extrabold uppercase tracking-widest text-white/90 block mb-2.5`}>
-                Social Links
-              </span>
-              <div className={`flex flex-wrap items-center gap-2.5`}>
-                {socialPlatforms.map((platform) => (
-                  <a
-                    key={platform.name}
-                    href={platform.href}
-                    target={`_blank`}
-                    rel={`noopener noreferrer`}
-                    aria-label={platform.name}
-                    className={`group relative z-30 flex items-center gap-0 overflow-hidden rounded-full bg-white/10 p-3 text-white backdrop-blur-md transition-all duration-300 ease-out hover:bg-white hover:px-4 hover:text-[#772424] hover:shadow-[0_0_20px_rgba(255,255,255,0.35)] hover:-translate-y-0.5 cursor-pointer`}
-                  >
-                    <span className={`relative z-10 transition-transform duration-300 group-hover:scale-110`}>
-                      {platform.icon}
-                    </span>
-                    <span className={`max-w-0 overflow-hidden whitespace-nowrap text-xs font-black tracking-wider opacity-0 transition-all duration-300 ease-out group-hover:max-w-[90px] group-hover:pl-2 group-hover:opacity-100`}>
-                      {platform.name}
-                    </span>
-                  </a>
-                ))}
+              <div className={`pt-1 w-full`}>
+                <span className={`text-xs font-extrabold uppercase tracking-widest text-white/90 block mb-2.5`}>
+                  Social Links
+                </span>
+                <div className={`flex flex-wrap items-center gap-2.5`}>
+                  {socialPlatforms.map((platform) => (
+                    <a
+                      key={platform.name}
+                      href={platform.href}
+                      target={`_blank`}
+                      rel={`noopener noreferrer`}
+                      aria-label={platform.name}
+                      className={`group relative z-30 flex items-center gap-0 overflow-hidden rounded-full bg-white/10 p-3 text-white backdrop-blur-md transition-all duration-300 ease-out hover:bg-white hover:px-4 hover:text-[#772424] hover:shadow-[0_0_20px_rgba(255,255,255,0.35)] hover:-translate-y-0.5 cursor-pointer`}
+                    >
+                      <span className={`relative z-10 transition-transform duration-300 group-hover:scale-110`}>
+                        {platform.icon}
+                      </span>
+                      <span className={`max-w-0 overflow-hidden whitespace-nowrap text-xs font-black tracking-wider opacity-0 transition-all duration-300 ease-out group-hover:max-w-[90px] group-hover:pl-2 group-hover:opacity-100`}>
+                        {platform.name}
+                      </span>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Column 2 (Span 2): Quick Links */}
-          <div className={`lg:col-span-2 flex flex-col space-y-3`}>
-            <h3 className={`text-base font-extrabold tracking-wider text-white uppercase border-b border-white/15 pb-2`}>
-              Quick Links
-            </h3>
-            <ul className={`grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-4 text-sm font-semibold text-red-100`}>
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className={`group flex items-center hover:text-white transition-all duration-200 py-0.5`}
-                  >
-                    <span className={`text-white/50 mr-2 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-white`}>
-                      ›
-                    </span>
-                    <span>{link.name}</span>
-                  </Link>
+            <div className={`lg:col-span-2 flex flex-col space-y-3`}>
+              <h3 className={`text-base font-extrabold tracking-wider text-white uppercase border-b border-white/15 pb-2`}>
+                Quick Links
+              </h3>
+              <ul className={`grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-4 text-sm font-semibold text-red-100`}>
+                {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className={`group flex items-center hover:text-white transition-all duration-200 py-0.5`}
+                    >
+                      <span className={`text-white/50 mr-2 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-white`}>
+                        ›
+                      </span>
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className={`lg:col-span-3 flex flex-col space-y-3`}>
+              <h3 className={`text-base font-extrabold tracking-wider text-white uppercase border-b border-white/15 pb-2`}>
+                Contact Us
+              </h3>
+              <ul className={`space-y-3 text-sm text-red-100 font-medium`}>
+                
+                <li className={`group/item flex items-center space-x-3 p-2 -ml-2 rounded-xl transition-all duration-300 hover:bg-white/10`}>
+                  <div className={`p-2 rounded-lg bg-white/10 text-white transition-all duration-300 group-hover/item:bg-white group-hover/item:text-[#772424] shrink-0`}>
+                    <svg className={`w-4 h-4`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`} strokeWidth={`2.5`}>
+                      <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9`} />
+                    </svg>
+                  </div>
+                  <div className={`flex flex-col`}>
+                    <span className={`text-[11px] uppercase tracking-wider text-red-200/70 font-bold`}>Email Address</span>
+                    <a href={`mailto:info@hairskill.com`} className={`font-bold text-white hover:underline`}>
+                      info@hairskill.com
+                    </a>
+                  </div>
                 </li>
-              ))}
-            </ul>
+
+                <li className={`group/item flex items-start space-x-3 p-2 -ml-2 rounded-xl transition-all duration-300 hover:bg-white/10`}>
+                  <div className={`p-2 rounded-lg bg-white/10 text-white transition-all duration-300 group-hover/item:bg-white group-hover/item:text-[#772424] shrink-0 mt-0.5`}>
+                    <svg className={`w-4 h-4`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`} strokeWidth={`2.5`}>
+                      <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z`} />
+                    </svg>
+                  </div>
+                  <div className={`flex flex-col space-y-0.5`}>
+                    <span className={`text-[11px] uppercase tracking-wider text-red-200/70 font-bold`}>Phone / WhatsApp</span>
+                    <a href={`tel:+923014923336`} className={`font-bold tracking-wide text-white hover:underline`}>
+                      +92 301 492 3336
+                    </a>
+                    <a href={`tel:+923004111888`} className={`font-bold tracking-wide text-white hover:underline`}>
+                      +92 300 411 1888
+                    </a>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+            <div className={`lg:col-span-3 flex flex-col space-y-3`}>
+              <h3 className={`text-base font-extrabold tracking-wider text-white uppercase border-b border-white/15 pb-2`}>
+                Our Branches
+              </h3>
+              <ul className={`space-y-3 text-xs sm:text-sm text-red-100 font-medium`}>
+                
+                <li className={`group/item flex items-start space-x-3 p-2 -ml-2 rounded-xl transition-all duration-300 hover:bg-white/10`}>
+                  <div className={`p-2 rounded-lg bg-white/10 text-white transition-all duration-300 group-hover/item:bg-white group-hover/item:text-[#772424] shrink-0 mt-0.5`}>
+                    <svg className={`w-4 h-4`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`} strokeWidth={`2.5`}>
+                      <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z`} />
+                      <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M15 11a3 3 0 11-6 0 3 3 0 016 0z`} />
+                    </svg>
+                  </div>
+                  <div className={`leading-snug`}>
+                    <span className={`text-xs font-extrabold uppercase tracking-wider text-white block mb-0.5`}>
+                      Main Branch (Lahore)
+                    </span>
+                    <span className={`text-xs text-red-100/90 block leading-relaxed`}>
+                      Hotel MayFair 1st floor, 50-52, E - III, Commercial Zone, Gulberg III, 54660, Lahore, Punjab.
+                    </span>
+                  </div>
+                </li>
+
+                <li className={`group/item flex items-start space-x-3 p-2 -ml-2 rounded-xl transition-all duration-300 hover:bg-white/10`}>
+                  <div className={`p-2 rounded-lg bg-white/10 text-white transition-all duration-300 group-hover/item:bg-white group-hover/item:text-[#772424] shrink-0 mt-0.5`}>
+                    <svg className={`w-4 h-4`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`} strokeWidth={`2.5`}>
+                      <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z`} />
+                      <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M15 11a3 3 0 11-6 0 3 3 0 016 0z`} />
+                    </svg>
+                  </div>
+                  <div className={`leading-snug`}>
+                    <span className={`text-xs font-extrabold uppercase tracking-wider text-white block mb-0.5`}>
+                      2nd Branch (Karachi)
+                    </span>
+                    <span className={`text-xs text-red-100/90 block leading-relaxed`}>
+                      Gulshan-e-Iqbal, Hair Skill, office #9, 1st floor AMJAD HOSPITAL, Akber paradise building, Rashid Minhas Road, opp Aladin Park, Karachi.
+                    </span>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
           </div>
 
-          {/* Column 3 (Span 3): Contact Us (Phone & Email Only) */}
-          <div className={`lg:col-span-3 flex flex-col space-y-3`}>
-            <h3 className={`text-base font-extrabold tracking-wider text-white uppercase border-b border-white/15 pb-2`}>
-              Contact Us
-            </h3>
-            <ul className={`space-y-3 text-sm text-red-100 font-medium`}>
-              
-              {/* Email */}
-              <li className={`group/item flex items-center space-x-3 p-2 -ml-2 rounded-xl transition-all duration-300 hover:bg-white/10`}>
-                <div className={`p-2 rounded-lg bg-white/10 text-white transition-all duration-300 group-hover/item:bg-white group-hover/item:text-[#772424] shrink-0`}>
-                  <svg className={`w-4 h-4`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`} strokeWidth={`2.5`}>
-                    <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9`} />
-                  </svg>
-                </div>
-                <div className={`flex flex-col`}>
-                  <span className={`text-[11px] uppercase tracking-wider text-red-200/70 font-bold`}>Email Address</span>
-                  <a href={`mailto:info@hairskill.com`} className={`font-bold text-white hover:underline`}>
-                    info@hairskill.com
-                  </a>
-                </div>
-              </li>
-
-              {/* Phone Numbers */}
-              <li className={`group/item flex items-start space-x-3 p-2 -ml-2 rounded-xl transition-all duration-300 hover:bg-white/10`}>
-                <div className={`p-2 rounded-lg bg-white/10 text-white transition-all duration-300 group-hover/item:bg-white group-hover/item:text-[#772424] shrink-0 mt-0.5`}>
-                  <svg className={`w-4 h-4`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`} strokeWidth={`2.5`}>
-                    <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z`} />
-                  </svg>
-                </div>
-                <div className={`flex flex-col space-y-0.5`}>
-                  <span className={`text-[11px] uppercase tracking-wider text-red-200/70 font-bold`}>Phone / WhatsApp</span>
-                  <a href={`tel:+923014923336`} className={`font-bold tracking-wide text-white hover:underline`}>
-                    +92 301 492 3336
-                  </a>
-                  <a href={`tel:+923004111888`} className={`font-bold tracking-wide text-white hover:underline`}>
-                    +92 300 411 1888
-                  </a>
-                </div>
-              </li>
-
-            </ul>
-          </div>
-
-          {/* Column 4 (Span 3): Our Branches (Lahore & Karachi) */}
-          <div className={`lg:col-span-3 flex flex-col space-y-3`}>
-            <h3 className={`text-base font-extrabold tracking-wider text-white uppercase border-b border-white/15 pb-2`}>
-              Our Branches
-            </h3>
-            <ul className={`space-y-3 text-xs sm:text-sm text-red-100 font-medium`}>
-              
-              {/* Main Branch - Lahore */}
-              <li className={`group/item flex items-start space-x-3 p-2 -ml-2 rounded-xl transition-all duration-300 hover:bg-white/10`}>
-                <div className={`p-2 rounded-lg bg-white/10 text-white transition-all duration-300 group-hover/item:bg-white group-hover/item:text-[#772424] shrink-0 mt-0.5`}>
-                  <svg className={`w-4 h-4`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`} strokeWidth={`2.5`}>
-                    <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z`} />
-                    <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M15 11a3 3 0 11-6 0 3 3 0 016 0z`} />
-                  </svg>
-                </div>
-                <div className={`leading-snug`}>
-                  <span className={`text-xs font-extrabold uppercase tracking-wider text-white block mb-0.5`}>
-                    Main Branch (Lahore)
-                  </span>
-                  <span className={`text-xs text-red-100/90 block leading-relaxed`}>
-                    Hotel MayFair 1st floor, 50-52, E - III, Commercial Zone, Gulberg III, 54660, Lahore, Punjab.
-                  </span>
-                </div>
-              </li>
-
-              {/* 2nd Branch - Karachi */}
-              <li className={`group/item flex items-start space-x-3 p-2 -ml-2 rounded-xl transition-all duration-300 hover:bg-white/10`}>
-                <div className={`p-2 rounded-lg bg-white/10 text-white transition-all duration-300 group-hover/item:bg-white group-hover/item:text-[#772424] shrink-0 mt-0.5`}>
-                  <svg className={`w-4 h-4`} fill={`none`} viewBox={`0 0 24 24`} stroke={`currentColor`} strokeWidth={`2.5`}>
-                    <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z`} />
-                    <path strokeLinecap={`round`} strokeLinejoin={`round`} d={`M15 11a3 3 0 11-6 0 3 3 0 016 0z`} />
-                  </svg>
-                </div>
-                <div className={`leading-snug`}>
-                  <span className={`text-xs font-extrabold uppercase tracking-wider text-white block mb-0.5`}>
-                    2nd Branch (Karachi)
-                  </span>
-                  <span className={`text-xs text-red-100/90 block leading-relaxed`}>
-                    Gulshan-e-Iqbal, Hair Skill, office #9, 1st floor AMJAD HOSPITAL, Akber paradise building, Rashid Minhas Road, opp Aladin Park, Karachi.
-                  </span>
-                </div>
-              </li>
-
-            </ul>
+          <div className={`pt-5 flex items-center justify-center`}>
+            <p className={`text-xs font-semibold text-red-200/80 text-center tracking-wide`}>
+              {`© 2026 Hair Skill Clinic. All Rights Reserved.`}
+            </p>
           </div>
 
         </div>
-
-        {/* Compact Copyright Bar at Bottom */}
-        <div className={`pt-5 flex items-center justify-center`}>
-          <p className={`text-xs font-semibold text-red-200/80 text-center tracking-wide`}>
-            {`© 2026 Hair Skill Clinic. All Rights Reserved.`}
-          </p>
-        </div>
-
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
