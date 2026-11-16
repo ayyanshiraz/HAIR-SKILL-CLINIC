@@ -1,10 +1,10 @@
 import { MetadataRoute } from "next";
 import { blogsDatabase } from "../data";
 import { isRetiredSlug } from "../../redirects"; 
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.hairskill.com";
 
-  
   const staticRoutes = [
     "",
     "/about",
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/hair-transplant/treatments/beard-transplant",
     "/hair-transplant/treatments/chinese-hair-transplant",
     "/hair-transplant/treatments/female",
-    "/hair-transplant/treatments/fue-by-moterize",
+    "/hair-transplant/treatments/motorized-fue",
     "/hair-transplant/treatments/fut",
     "/hair-transplant/techniques/long-fue",
     "/hair-transplant/treatments/mesotherapy",
@@ -54,19 +54,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/hair-transplant/treatments/prp-hair-treatment",
     "/hair-transplant/treatments/sideburn",
     "/hair-transplant/techniques/unshaven-transplant",
-    "/hair-transplant/treatments/widows-peak"
+    "/hair-transplant/treatments/widows-peak",
+    "/hair-transplant/treatments",
+    "/hair-transplant/techniques",
+    "/privacy-policy",
+    "/cookie-policy"
   ];
 
+  // Adding lastModified to static routes
   const sitemapRoutes: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
+    lastModified: new Date().toISOString(),
   }));
 
+  // Converting blog dates to ISO format
   const blogRoutes: MetadataRoute.Sitemap = blogsDatabase
     .filter((post) => !isRetiredSlug(post.slug))
-    .map((post) => ({
-      url: `${baseUrl}/blogs/${post.slug}`,
-      lastModified: post.date ? new Date(post.date) : new Date(),
-    }));
+    .map((post) => {
+      const dateObj = post.date ? new Date(post.date) : new Date();
+      return {
+        url: `${baseUrl}/blogs/${post.slug}`,
+        lastModified: dateObj.toISOString(),
+      };
+    });
 
   return [...sitemapRoutes, ...blogRoutes];
 }
