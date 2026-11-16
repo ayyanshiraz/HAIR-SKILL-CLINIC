@@ -122,6 +122,12 @@ export default function TreatmentsHubClient() {
       img: "/hair-transplant/treatments/8.webp",
       href: "/hair-transplant/treatments/prp-hair-treatment"
     },
+    {
+      title: "Widow's Peak Hair Transplant",
+      desc: "Restore a natural and youthful hairline with our specialized Widow's Peak hair transplant, tailored for perfect facial framing and density.",
+      img: "/hair-transplant/2.webp", 
+      href: "/hair-transplant/treatments/widows-peak"
+    }
   ];
 
   return (
