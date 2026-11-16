@@ -8,9 +8,15 @@ const blogPath = (slug: string) => `/blogs/${slug}`;
 const RENAMES: Record<string, string> = {
   'best-hair-doctor-lahore': 'best-hair-transplant-surgeon-lahore',
   'hair-transplant-cost-lahore-2026': 'hair-transplant-cost-factors-lahore',
-  'hair-transplant-for-diabetic-and-blood-pressure-patients-lahore':
-    'hair-transplant-for-diabetic-patients-lahore',
+  'hair-transplant-for-diabetic-and-blood-pressure-patients-lahore': 'hair-transplant-for-diabetic-patients-lahore',
   'scalp-micropigmentation-lahore-smp-treatment': 'scalp-micropigmentation-lahore',
+  'failed-hair-transplant-repair-lahore': 'hair-transplant-repair-lahore',
+  'understanding-male-pattern-baldness': 'male-pattern-baldness-treatment-lahore',
+  'prp-after-hair-transplant-necessity': 'prp-after-hair-transplant',
+  'how-many-grafts-needed-hair-transplant-lahore': 'how-many-grafts-for-hair-transplant',
+  'hair-transplant-side-effects-lahore-guide': 'hair-transplant-side-effects-lahore',
+  'hair-transplant-aftercare-mistakes-recovery': 'hair-transplant-aftercare-mistakes',
+  'crown-hair-transplant-vertex-restoration-lahore': 'crown-hair-transplant-lahore'
 };
 
 const ALREADY_MERGED: Record<string, string> = {
@@ -30,7 +36,7 @@ const CANNIBALS: { slug: string; servicePage: string; keepAs: string }[] = [
   { slug: 'best-prp-hair-treatment-lahore', servicePage: '/hair-transplant/treatments/prp-hair-treatment', keepAs: 'best-prp-hair-treatment-lahore' },
   { slug: 'beard-transplant-lahore-cost-procedure', servicePage: '/hair-transplant/treatments/beard-transplant', keepAs: 'beard-transplant-lahore-cost-procedure' },
   { slug: 'sideburn-hair-transplant-lahore', servicePage: '/hair-transplant/treatments/sideburn', keepAs: 'sideburn-hair-transplant-lahore' },
-  { slug: 'afro-hair-transplant-in-lahore', servicePage: '/hair-transplant/treatments/afro-hair', keepAs: 'afro-hair-transplant-in-lahore' },
+  { slug: 'afro-hair-transplant-in-lahore', servicePage: '/hair-transplant/treatments/afro-hair', keepAs: 'afro-hair-transplant-lahore' },
   { slug: 'hair-mesotherapy-in-lahore-stop-hair-fall', servicePage: '/hair-transplant/treatments/mesotherapy', keepAs: 'hair-mesotherapy-lahore' },
   { slug: 'ozone-hair-treatment-lahore-scalp-rejuvenation', servicePage: '/hair-transplant/treatments/ozone-hair-therapy', keepAs: 'ozone-hair-treatment-lahore' },
   { slug: 'fut-hair-transplant-cost-lahore', servicePage: '/hair-transplant/treatments/fut', keepAs: 'fut-hair-transplant-lahore-guide' },

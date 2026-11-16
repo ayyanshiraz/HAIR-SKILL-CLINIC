@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     "Hair Skill Clinic FUE"
   ],
   alternates: {
-    canonical: "https://www.hairskill.com/hair-transplant/treatments/fue-by-moterize",
+    canonical: "https://www.hairskill.com/hair-transplant/treatments/motorized-fue",
   },
   openGraph: {
     title: "Motorized FUE Hair Transplant in Lahore | Hair Skill",
     description: "Get a high-density Motorized FUE hair transplant in Lahore. We perform safe, high-speed graft extraction for mega-sessions and maximum natural regrowth.",
-    url: "https://www.hairskill.com/hair-transplant/treatments/fue-by-moterize",
+    url: "https://www.hairskill.com/hair-transplant/treatments/motorized-fue",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
     type: "website",
@@ -38,7 +38,7 @@ export default function FueMotorizedPage() {
     "@type": "MedicalWebPage",
     "name": "Motorized FUE Hair Transplant in Lahore",
     "description": "Get a high-density Motorized FUE hair transplant in Lahore. We perform safe, high-speed graft extraction for mega-sessions and maximum natural regrowth.",
-    "url": "https://www.hairskill.com/hair-transplant/treatments/fue-by-moterize",
+    "url": "https://www.hairskill.com/hair-transplant/treatments/motorized-fue",
     "provider": {
       "@type": "MedicalClinic",
       "name": "Hair Skill Clinic",

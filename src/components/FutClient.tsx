@@ -228,7 +228,7 @@ export default function FutClient() {
                       <p className="text-black text-xs font-medium leading-relaxed">Manual FUE involves extracting individual hair follicles one by one using a highly precise handheld manual punch. This method is incredibly gentle on the donor area, giving the surgeon ultimate tactile feedback. It ensures maximum graft survival and minimal tissue trauma, making it absolutely perfect for smaller refinement sessions, facial hair restoration, and detailed hairline reconstructions.</p>
                     </Link>
 
-                    <Link href="/hair-transplant/treatments/fue-by-moterize" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
+                    <Link href="/hair-transplant/treatments/motorized-fue" className="p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#772424] transition-all group block">
                       <h3 className="font-black text-[#772424] text-lg mb-2 group-hover:translate-x-1 transition-transform">Motorized FUE ›</h3>
                       <p className="text-black text-xs font-medium leading-relaxed">For patients suffering from advanced baldness and requiring high-volume megasessions, Motorized FUE is the ultimate clinical solution. This technique uses a low-rotation automated punch to isolate and extract grafts rapidly, safely, and efficiently. It provides the high graft yield that people traditionally associated with FUT, but it achieves this without ever cutting a strip of skin or leaving a linear scar.</p>
                     </Link>

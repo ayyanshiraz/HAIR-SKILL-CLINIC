@@ -5,7 +5,7 @@ import { BlogPost } from ".";
 export const generalBlogs: BlogPost[] = [
   {
     id: 1,
-    slug: "hair-transplant-cost-lahore-2026",
+    slug: "hair-transplant-cost-factors-lahore",
     category: "general",
     title: "Factors Affecting Hair Transplant Cost in Lahore (2026 Consultation Guide)",
     date: "August 11, 2026",
@@ -19,7 +19,7 @@ export const generalBlogs: BlogPost[] = [
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Understanding Hair Transplant Pricing in Pakistan</h2>
         <p className="mb-3">People often face confusion when searching for the current <a href="/hair-transplant/cost" className="text-[#772424] font-semibold hover:underline">hair transplant cost in Lahore</a>. Rather than a single fixed rate, hair restoration pricing in the city varies across clinics depending on your baldness grade, donor hair quality, and the surgical technique required for natural density.</p>
         <p className="mb-3">Why does the investment differ from one patient to another?</p>
-        <p className="mb-3">The fact is that your final treatment cost does not only depend on the size of the bald area, but also on the clinical protocols adopted to ensure patient safety, the skill and experience of the doctor, and whether you select <a href="/hair-transplant/treatments/fue-by-moterize" className="text-[#772424] font-semibold hover:underline">Motorized FUE</a> or <a href="/hair-transplant/treatments/manual-fue" className="text-[#772424] font-semibold hover:underline">Manual FUE</a> combined with <a href="/hair-transplant/treatments/dhi" className="text-[#772424] font-semibold hover:underline">Direct Hair Implantation (DHI)</a>.</p>
+        <p className="mb-3">The fact is that your final treatment cost does not only depend on the size of the bald area, but also on the clinical protocols adopted to ensure patient safety, the skill and experience of the doctor, and whether you select <a href="/hair-transplant/treatments/motorized-fue" className="text-[#772424] font-semibold hover:underline">Motorized FUE</a> or <a href="/hair-transplant/treatments/manual-fue" className="text-[#772424] font-semibold hover:underline">Manual FUE</a> combined with <a href="/hair-transplant/treatments/dhi" className="text-[#772424] font-semibold hover:underline">Direct Hair Implantation (DHI)</a>.</p>
         <p className="mb-4">Let us understand in detail what clinical factors determine hair transplant costs so that you can make an informed, safe, and accurate medical decision during your consultation.</p>
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">How is the Cost Calculated? Consultation-Based Session Plans vs. Per-Graft Baits</h2>

@@ -9,6 +9,7 @@ const redirectList: [string, string][] = [
   ["/hair-transplant-center-in-lahore-pakistan/", "/hair-transplant"],
   ["/want-know-hair-care-methods-will-make-hair-smash.html", "/blogs/how-to-prevent-hair-loss-in-lahore"],
   ["/doctors-category", "/doctors/dr-mansoor-ahmad"],
+  ["/hair-transplant/treatments/fue-by-moterize", "/hair-transplant/treatments/motorized-fue"],
 ];
 
 const nextConfig: NextConfig = {

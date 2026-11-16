@@ -66,7 +66,7 @@ export default function TreatmentsHubClient() {
       title: "FUE By Moterize Method",
       desc: "The Motorized FUE method ensures highly efficient and precise extraction for optimal hair transplant outcomes...",
       img: "/home/techniques/1.webp",
-      href: "/hair-transplant/treatments/fue-by-moterize"
+      href: "/hair-transplant/treatments/motorized-fue"
     },
     {
       title: "Chinese Method",
