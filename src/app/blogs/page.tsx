@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import { blogsDatabase } from "../../data";
 
 const BlogsClient = dynamic(() => import("../../components/BlogsClient"));
 
@@ -29,5 +30,14 @@ export const metadata: Metadata = {
 };
 
 export default function BlogsPage() {
-  return <BlogsClient />;
+  const posts = blogsDatabase.map(({ slug, title, date, previewImage, summary, category }) => ({
+    slug,
+    title,
+    date,
+    previewImage,
+    summary,
+    category
+  }));
+
+  return <BlogsClient posts={posts} />;
 }

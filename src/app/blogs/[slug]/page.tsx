@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogsDatabase } from "../../../data";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export async function generateStaticParams() {
   return blogsDatabase.map((post) => ({
@@ -124,16 +125,16 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
         <div className="flex flex-wrap items-center gap-4 text-sm font-bold text-gray-500 pb-8 border-b border-gray-200 mb-8">
           <span>Published {post.date}</span>
         </div>
-
-        <div className="w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-50 shadow-xl border border-gray-100 flex items-center justify-center">
-          <img 
-            src={post.previewImage} 
-            alt={post.title} 
-            className="w-full h-full object-contain object-top" 
-            loading="lazy" 
-            decoding="async" 
-          />
-        </div>
+<div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-50 shadow-xl border border-gray-100 flex items-center justify-center">
+  <Image 
+    src={post.previewImage} 
+    alt={post.title} 
+    fill 
+    priority 
+    sizes="(max-width:1024px) 100vw, 896px" 
+    className="object-contain object-top" 
+  />
+</div>
 
         <div className="text-lg leading-relaxed font-medium text-gray-800 text-justify">
           {post.content}
