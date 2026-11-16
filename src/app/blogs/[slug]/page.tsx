@@ -23,10 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const postUrl = `${baseUrl}/blogs/${post.slug}`;
 
   return {
-    metadataBase: new URL(baseUrl),
     title: post.metaTitle,
     description: post.seoDescription,
-    keywords: post.focusKeyword,
     alternates: {
       canonical: `/blogs/${post.slug}`,
     },
@@ -34,8 +32,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: post.metaTitle,
       description: post.seoDescription,
       url: postUrl,
-      siteName: "Hair Skill",
+      siteName: "Hair Skill Clinic",
+      locale: "en_PK",
       type: "article",
+      publishedTime: new Date(post.date).toISOString(),
+      authors: ["Dr. Mansoor Ahmad"],
       images: [
         {
           url: `${baseUrl}${post.previewImage}`,
@@ -58,31 +59,48 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
 
   const baseUrl = "https://www.hairskill.com";
   const postUrl = `${baseUrl}/blogs/${post.slug}`;
+  
+  // Date format for Schema
+  const iso = new Date(post.date).toISOString();
+  
+  // Doctor Author Schema
+  const doctor = { 
+    "@type": "Physician", 
+    "@id": `${baseUrl}/doctors/dr-mansoor-ahmad#physician`, 
+    name: "Dr. Mansoor Ahmad", 
+    url: `${baseUrl}/doctors/dr-mansoor-ahmad` 
+  };
 
+  // Upgraded Schema with Breadcrumbs and Author
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.seoDescription,
-    image: `${baseUrl}${post.previewImage}`,
-    datePublished: post.date,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": postUrl
-    },
-    author: {
-      "@type": "Organization",
-      name: "Hair Skill Clinic",
-      url: baseUrl
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hair Skill Clinic",
-      logo: {
-        "@type": "ImageObject",
-        url: `${baseUrl}/logo.webp`
-      }
-    }
+    "@graph": [
+      { 
+        "@type": "BlogPosting", 
+        "@id": `${postUrl}#article`, 
+        headline: post.title, 
+        description: post.seoDescription,
+        image: `${baseUrl}${post.previewImage}`, 
+        datePublished: iso, 
+        dateModified: iso, 
+        inLanguage: "en-PK",
+        mainEntityOfPage: { "@id": postUrl }, 
+        author: doctor,
+        publisher: { 
+          "@type": "Organization", 
+          name: "Hair Skill Clinic", 
+          logo: { "@type": "ImageObject", url: `${baseUrl}/home/logo.webp` } 
+        } 
+      },
+      { 
+        "@type": "BreadcrumbList", 
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+          { "@type": "ListItem", position: 2, name: "Blogs", item: `${baseUrl}/blogs` },
+          { "@type": "ListItem", position: 3, name: post.title, item: postUrl } 
+        ] 
+      },
+    ],
   };
 
   const categoryNames: Record<string, string> = {
@@ -125,22 +143,24 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
         <div className="flex flex-wrap items-center gap-4 text-sm font-bold text-gray-500 pb-8 border-b border-gray-200 mb-8">
           <span>Published {post.date}</span>
         </div>
-<div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-50 shadow-xl border border-gray-100 flex items-center justify-center">
-  <Image 
-    src={post.previewImage} 
-    alt={post.title} 
-    fill 
-    priority 
-    sizes="(max-width:1024px) 100vw, 896px" 
-    className="object-contain object-top" 
-  />
-</div>
+        
+        <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 bg-gray-50 shadow-xl border border-gray-100 flex items-center justify-center">
+          <Image 
+            src={post.previewImage} 
+            alt={post.title} 
+            fill 
+            priority 
+            sizes="(max-width:1024px) 100vw, 896px" 
+            className="object-contain object-top" 
+          />
+        </div>
 
         <div className="text-lg leading-relaxed font-medium text-gray-800 text-justify">
           {post.content}
         </div>
+        
         <aside aria-label="Medical reviewer" className="mt-12 flex gap-4 rounded-2xl border border-gray-200 p-6 bg-gray-50/50">
-          <Image src="/home/doctor.webp" alt="Dr. Mansoor Ahmad" width={72} height={72} className="rounded-full object-cover shrink-0" />
+          <Image src="/home/owner1.webp" alt="Dr. Mansoor Ahmad" width={72} height={72} className="rounded-full object-cover shrink-0" />
           <div className="flex flex-col justify-center">
             <p className="font-bold text-gray-900">Medically reviewed by Dr. Mansoor Ahmad</p>
             <p className="text-sm text-gray-600 mt-1">Hair transplant surgeon, Hair Skill Clinic Lahore (Reg. 1535-P). Last reviewed {post.date}.</p>
@@ -149,6 +169,7 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
             </Link>
           </div>
         </aside>
+
         {/* === KEEP READING (3 RELATED BLOGS) === */}
         {blogsDatabase.filter((b) => b.category === post.category && b.slug !== post.slug).length > 0 && (
           <div className="mt-16 mb-12 border-t border-gray-100 pt-12">
@@ -177,6 +198,7 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
           </div>
         )}
         {/* === KEEP READING END === */}
+
         <div className="mt-16 pt-8 border-t border-gray-200">
           <Link 
             href={categoryLink} 
