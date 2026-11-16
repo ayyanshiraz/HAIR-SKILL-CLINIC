@@ -144,16 +144,7 @@ export default function AboutPageClient() {
             The Art of Restoration
           </motion.div>
           
-          {/* SEO Optimized Main Heading (H1) - Yeh chota aur golden dikhega */}
           <motion.h1 
-            initial="hidden" animate="visible" variants={fadeUp}
-            className="text-xs md:text-sm lg:text-base font-extrabold uppercase tracking-[0.25em] text-[#C5A059] mb-4"
-          >
-            About Hair Skill Clinic, Lahore&apos;s Hair Transplant Specialists
-          </motion.h1>
-
-          {/* Large Visual Text (Changed from h1 to h2) - Design bilkul same rahega */}
-          <motion.h2 
             initial="hidden" animate="visible" variants={fadeUp}
             className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 text-white leading-[1.15]"
           >
@@ -161,7 +152,7 @@ export default function AboutPageClient() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#C5A059] to-amber-100 drop-shadow-md">
               Confidence.
             </span>
-          </motion.h2>
+          </motion.h1>
           
           <motion.p 
             initial="hidden" animate="visible" variants={fadeUp} transition={{ delay: 0.2 }}
