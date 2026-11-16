@@ -121,7 +121,7 @@ export default function FemaleClient() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight text-center">
-              Female Hair Transplant
+              Female Hair Transplant in Lahore
             </h1>
           </div>
         </section>
@@ -220,7 +220,7 @@ export default function FemaleClient() {
 
                 <div className="css-fade-up mb-14">
                   <h2 className="text-2xl sm:text-3xl font-black text-[#772424] mb-6 tracking-tight border-b pb-3 border-gray-100">
-                    Why Choose Female Hair Transplant in Pakistan at Hair Skill Clinic
+                    Specialized Hair Transplants for Women in Lahore
                   </h2>
                   <p className="text-black text-base md:text-lg leading-relaxed font-medium mb-6">
                     Pakistan has become one of the most trusted destinations for women seeking natural, subtle hair restoration. The country combines experienced surgeons, modern techniques, patient friendly pricing, and a warm, organized treatment experience. For many women, a female hair transplant in Pakistan journey offers the right balance of quality, comfort, and safety.
