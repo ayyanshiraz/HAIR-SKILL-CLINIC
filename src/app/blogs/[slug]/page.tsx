@@ -160,7 +160,7 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
         </div>
         
         <aside aria-label="Medical reviewer" className="mt-12 flex gap-4 rounded-2xl border border-gray-200 p-6 bg-gray-50/50">
-          <Image src="/home/owner1.webp" alt="Dr. Mansoor Ahmad" width={72} height={72} className="rounded-full object-cover shrink-0" />
+          <Image src="/home/doctor.webp" alt="Dr. Mansoor Ahmad" width={72} height={72} className="rounded-full object-cover shrink-0" />
           <div className="flex flex-col justify-center">
             <p className="font-bold text-gray-900">Medically reviewed by Dr. Mansoor Ahmad</p>
             <p className="text-sm text-gray-600 mt-1">Hair transplant surgeon, Hair Skill Clinic Lahore (Reg. 1535-P). Last reviewed {post.date}.</p>
