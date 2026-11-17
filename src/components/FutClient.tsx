@@ -106,6 +106,7 @@ export default function FutClient() {
 
             </div>
           </div>
+          </div>
         </section>
 
       </div>
