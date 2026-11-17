@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about/mission",
     "/about/our-story",
     "/about/our-approach",
-    "/about/reference-program",
     "/about/why-choose-hair-skill",
     "/before-after",
     "/blogs",

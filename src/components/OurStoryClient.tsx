@@ -4,7 +4,10 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { countries, type Country } from "../data/countries";
+
+import dynamic from "next/dynamic";
+const ConsultationForm = dynamic(() => import("./ConsultationForm"), { ssr: false });
+
 
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];
 
@@ -42,12 +45,7 @@ const staggerContainer: Variants = {
 };
 
 export default function OurStoryClient() {
-  const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
-  const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  
 
   const [lightboxIndex, setLightboxIndex] = useState<number>(-1);
   const isLightboxOpen = lightboxIndex !== -1;
@@ -278,81 +276,7 @@ export default function OurStoryClient() {
               variants={slideInRight}
               className="w-full lg:w-1/3 lg:sticky lg:top-32"
             >
-              <div className="bg-[#772424] text-white rounded-3xl p-8 shadow-2xl relative w-full border border-[#8c2a2a]">
-                <h3 className="text-white text-xl font-black text-center mb-8 tracking-wide">
-                  GET FREE CONSULTATION
-                </h3>
-                
-                <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                  <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
-                    <input 
-                      type="text" 
-                      placeholder="Full Name" 
-                      value={fullName} 
-                      onChange={(e) => setFullName(e.target.value)} 
-                      required 
-                      className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
-                      style={autofillFixStyle}
-                    />
-                  </div>
-                  
-                  <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors">
-                    <input 
-                      type="email" 
-                      placeholder="E-mail" 
-                      value={email} 
-                      onChange={(e) => setEmail(e.target.value)} 
-                      required 
-                      className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
-                      style={autofillFixStyle}
-                    />
-                  </div>
-
-                  <div className="border-b border-white/30 pb-2 focus-within:border-white transition-colors flex items-center relative">
-                    <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#C5A059] select-none mr-3 shrink-0">
-                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
-                      <span>{selectedCountry.dial}</span>
-                      <span className="text-[10px]">▼</span>
-                    </div>
-                    
-                    {isDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-2xl rounded-xl z-50">
-                        {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-gray-900 transition-colors">
-                            <div className="flex items-center gap-2.5 truncate mr-2">
-                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain shrink-0" />
-                              <span className="font-bold">{country.code}</span>
-                              <span className="text-xs text-gray-500 truncate">{country.name}</span>
-                            </div>
-                            <span className="text-[#772424] font-black shrink-0">{country.dial}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    
-                    <input 
-                      type="tel" 
-                      placeholder="Phone Number" 
-                      value={phone} 
-                      onChange={(e) => setPhone(e.target.value)} 
-                      required 
-                      className="w-full bg-transparent text-sm text-white placeholder-white/70 outline-none font-medium" 
-                      style={autofillFixStyle}
-                    />
-                  </div>
-
-                  <div className="flex items-center gap-2 mt-2">
-                    <input type="checkbox" id="storyPrivacy" required defaultChecked className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer" />
-                    <label htmlFor="storyPrivacy" className="text-xs text-white/80 cursor-pointer">
-                      I have read and accept the <Link href="/privacy-policy" className="text-[#C5A059] font-black hover:underline">Privacy Policy.</Link>
-                    </label>
-                  </div>
-
-                  <button type="submit" className="w-full py-4 bg-white hover:bg-gray-100 text-[#772424] font-extrabold rounded-xl transition-all tracking-wider text-sm mt-2 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02]">
-                    Submit <span>›</span>
-                  </button>
-                </form>
-              </div>
+              <ConsultationForm />
             </motion.div>
 
           </div>

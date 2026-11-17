@@ -3,7 +3,13 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-import { countries, type Country } from "../data/countries";
+
+import dynamic from "next/dynamic";
+
+import dynamic from "next/dynamic";
+const ConsultationForm = dynamic(() => import("./ConsultationForm"), { ssr: false });
+const ConsultationForm = dynamic(() => import("./ConsultationForm"), { ssr: false });
+
 
 // --- STRICT ANIMATION TUPLE ---
 const customEase: [number, number, number, number] = [0.2, 0.65, 0.3, 0.9];

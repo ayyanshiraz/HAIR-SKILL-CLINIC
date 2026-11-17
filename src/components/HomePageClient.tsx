@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 
-import { countries, type Country } from "../data/countries";
 import AnimatedCounter from "./home/AnimatedCounter";
 
+const ConsultationForm = dynamic(() => import("./ConsultationForm"), { ssr: false });
 const SingleDoctorStage = dynamic(() => import("./home/SingleDoctorStage"));
 const BeforeAfterStage = dynamic(() => import("./home/BeforeAfterStage"));
 const PhilosophyStage = dynamic(() => import("./home/PhilosophyStage"));
@@ -21,27 +20,9 @@ const FAQStage = dynamic(() => import("./home/FAQStage"));
 export default function Home() {
   const tagline = "Mastering the Art of the Best Hair Transplant in Lahore with World-Class Expertise and Precision-Designed Hairlines.";
   
-  const defaultCountry = countries.find((c: Country) => c.code === "PK") || countries[0];
-  
-  const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
-    window.open(whatsappUrl, "_blank");
-  };
-
   return (
     <div className="min-h-screen bg-[#772424] font-sans relative overflow-hidden">
       
-      {/* Optimized Background Gradient (Replaced expensive blur-120px) */}
       <div 
         className="absolute top-0 left-0 w-full h-[800px] pointer-events-none" 
         style={{
@@ -64,7 +45,6 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end relative mt-8">
           
           <div className="relative w-full flex justify-center lg:justify-start items-end h-full lg:-ml-12 xl:-ml-16 mt-12 -mb-20">
-           {/* Fixed Shadow (Now follows the body outline properly) */}
             <Image
               src="/home/owner1.webp"
               alt="Hair Skill Clinic Doctors"
@@ -77,65 +57,7 @@ export default function Home() {
           </div>
 
           <div className="w-full max-w-lg mx-auto lg:ml-auto lg:mr-0 flex flex-col gap-6 relative">
-            <div className="bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/20 relative z-10">
-              <h2 className="text-[#772424] text-xl font-extrabold text-center mb-8 tracking-wide">
-                GET FREE CONSULTATION
-              </h2>
-              
-              <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-                <div className="relative flex items-center border-b border-gray-300 pb-2 transition-colors focus-within:border-[#772424]">
-                  <svg className="w-5 h-5 text-gray-400 mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                  </svg>
-                  <input type="text" placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} required className="w-full text-sm outline-none bg-transparent text-gray-800 placeholder-gray-500 font-medium" />
-                </div>
-
-                <div className="relative flex items-center border-b border-gray-300 pb-2 transition-colors focus-within:border-[#772424]">
-                  <svg className="w-5 h-5 text-gray-400 mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                  <input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full text-sm outline-none bg-transparent text-gray-800 placeholder-gray-500 font-medium" />
-                </div>
-
-                <div className="relative flex items-center border-b border-gray-300 pb-2 transition-colors focus-within:border-[#772424]">
-                  <div className="relative mr-4">
-                    <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 cursor-pointer text-sm font-bold text-[#772424] select-none whitespace-nowrap">
-                      <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={selectedCountry.name} className="w-5 object-contain" />
-                      {selectedCountry.dial}
-                      <span className="text-[10px] ml-1">▼</span>
-                    </div>
-                    {isDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-xl rounded-lg z-50">
-                        {countries.map((country: Country, idx: number) => (
-                          <div key={idx} onClick={() => { setSelectedCountry(country); setIsDropdownOpen(false); }} className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm flex items-center justify-between text-gray-800">
-                            <div className="flex items-center gap-2">
-                              <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 object-contain" />
-                              <span className="font-bold">{country.code}</span>
-                              <span className="text-xs text-gray-400 hidden sm:inline truncate max-w-[80px]">{country.name}</span>
-                            </div>
-                            <span className="text-gray-500 font-medium">{country.dial}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required className="w-full text-sm outline-none bg-transparent text-gray-800 font-medium" />
-                </div>
-
-                <div className="flex items-center gap-2 mt-2">
-                  <input type="checkbox" id="privacy" className="w-4 h-4 accent-[#772424] rounded cursor-pointer shrink-0" required defaultChecked />
-                  <label htmlFor="privacy" className="text-[13px] text-gray-600 cursor-pointer leading-tight">
-                    I have read and accept the <Link href="/privacy-policy" className="text-[#772424] font-bold hover:underline">Privacy Policy.</Link>
-                  </label>
-                </div>
-
-                <button type="submit" className="w-full bg-[#772424] text-white py-4 rounded-xl font-bold text-lg flex justify-center items-center gap-2 shadow-lg hover:bg-[#5a1b1b] hover:scale-[1.02] active:scale-[0.98] transition-all mt-2">
-                  Submit
-                  <span className="text-xl font-light">›</span>
-                </button>
-              </form>
-            </div>
+            <ConsultationForm />
 
             <div className="flex justify-center w-full z-20">
               <a 
@@ -168,7 +90,6 @@ export default function Home() {
                 </div>
               </a>
             </div>
-
           </div>
         </div>
       </div>
