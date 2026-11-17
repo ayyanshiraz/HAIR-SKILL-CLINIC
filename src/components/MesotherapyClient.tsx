@@ -35,12 +35,6 @@ export default function MesotherapyClient() {
   // FAQ Accordion state
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
-  
-
-  const autofillFixStyle = {
-    WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
-    WebkitTextFillColor: "#ffffff"
-  };
 
   // --- 10 FAQS DATA ---
   const faqList = [

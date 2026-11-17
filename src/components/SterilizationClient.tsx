@@ -47,19 +47,6 @@ const staggerContainer: Variants = {
 export default function SterilizationClient() {
   
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the Sterilization Standards Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
-    window.open(whatsappUrl, "_blank");
-  };
-
-  const autofillFixStyle = {
-    WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
-    WebkitTextFillColor: "#ffffff"
-  };
-
   const processSteps = [
     { title: "Receiving Contaminated Instruments", desc: "Used instruments are transported in closed containers to the designated dirty area immediately after surgical extraction." },
     { title: "Initial Inspection and Pre-Cleaning", desc: "Instruments are counted, inspected for wear, and undergo preliminary rinsing under controlled conditions." },

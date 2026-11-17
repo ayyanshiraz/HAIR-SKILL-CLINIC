@@ -37,20 +37,6 @@ const slideInRight: Variants = {
 };
 
 export default function WhyChooseUsClient() {
-  
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the Why Choose Us Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
-    window.open(whatsappUrl, "_blank");
-  };
-
-  const autofillFixStyle = {
-    WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
-    WebkitTextFillColor: "#ffffff"
-  };
 
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-[#772424] selection:text-white pb-24">

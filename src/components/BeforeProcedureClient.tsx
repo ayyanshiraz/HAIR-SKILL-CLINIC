@@ -40,13 +40,7 @@ export default function BeforeProcedureClient() {
   // --- FORM STATES ---
   
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the Before Procedure Guide.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
-    window.open(whatsappUrl, "_blank");
-  };
+  
 
   // Defeats Google Chrome forced white Autofill override
   const autofillFixStyle = {

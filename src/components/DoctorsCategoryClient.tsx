@@ -32,18 +32,9 @@ const slideInRight: Variants = {
 export default function DoctorsCategoryClient() {
   
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to book a consultation with Dr Mansoor Ahmad.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
-    window.open(whatsappUrl, "_blank");
-  };
+  
 
-  const autofillFixStyle = {
-    WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
-    WebkitTextFillColor: "#ffffff"
-  };
+  
 
   const officialDegrees = [
     {

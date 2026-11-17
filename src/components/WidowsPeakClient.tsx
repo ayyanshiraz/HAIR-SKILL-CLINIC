@@ -36,19 +36,6 @@ export default function WidowsPeakClient() {
   // FAQ Accordion state
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const targetWhatsapp = "923014923336";
-    const textMessage = `Hello! I would like to get a free consultation from the Widows Peak Treatment Page.\n\n*Name*: ${fullName}\n*Email*: ${email}\n*Phone*: ${selectedCountry.dial} ${phone}`;
-    const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(textMessage)}`;
-    window.open(whatsappUrl, "_blank");
-  };
-
-  const autofillFixStyle = {
-    WebkitBoxShadow: "0 0 0px 1000px #772424 inset",
-    WebkitTextFillColor: "#ffffff"
-  };
-
   // --- 10 FAQS DATA (Verbatim from your pasted text, scrubbed of safe prose errors) ---
   const faqList = [
     {
