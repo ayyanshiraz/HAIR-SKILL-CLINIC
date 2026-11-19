@@ -28,6 +28,168 @@ export const metadata: Metadata = {
   },
 };
 
+// Exact FAQ items matching the visible questions and answers in GeneralClient
+const generalFaqs = [
+  {
+    q: "Will your restoration surgery be kept safe and private?",
+    a: "Yes. According to Pakistani law, there are very strict rules regarding patient privacy. Unless the patient gives permission, we do not share any before-and-after photos on social media or websites."
+  },
+  {
+    q: "Why should you choose Pakistan for restoration surgery?",
+    a: "Pakistan is located at the crossroads of Asia and Europe. It is a major international hub in one of the busiest regions of the world. In addition, the combination of high-quality procedures and affordable prices makes it very attractive for patients seeking quality aesthetic treatment."
+  },
+  {
+    q: "Why is the procedure cheaper in Pakistan?",
+    a: "Pakistan is now one of the leading countries in the restoration market. This growth has taken place over the last 10 years. Before that, there were not many clinics around the world performing these procedures. As competition increased, prices became more affordable as a result of the free market. In Pakistan, many new clinics opened within the last 5 to 10 years. Many doctors who previously worked in public hospitals moved into private practice and opened their own restoration clinics. This increased competition and lowered prices. However, a lower price does not mean a lower-quality result. It depends on the clinic experience. A clinic that has treated thousands of patients from around the world can deliver strong results. What has changed over time is not necessarily the technique, but the level of experience. I have personally seen thousands of patients from all over the world, from America to Australia. I have worked with different ethnic backgrounds, face types, and strand characteristics, and that experience helps me perform the right procedure. Prices have become lower mainly because of competition."
+  },
+  {
+    q: "Why are the success rates of FUE restoration higher?",
+    a: "In daily practice, when we perform an FUE procedure, we can separate the best grafts, classify them according to the number of follicles they contain, and use them appropriately in specific areas of the scalp. This careful planning and classification gives us a better chance of implanting them properly and achieving higher success rates."
+  },
+  {
+    q: "Who performs the restoration surgery?",
+    a: "These surgeries are performed by qualified medical professionals with a medical background. These may include physicians, doctors, and surgical assistants with training in medical specialties such as nursing, anesthesia, paramedicine, or operating room services."
+  },
+  {
+    q: "Who are Hair Skill Clinic clients?",
+    a: "Our patients come from all over the world. Anyone who wants to improve their appearance with a procedure or would like to have more density may be a suitable candidate. At the moment, around 90% of our patients come from the United Kingdom and Ireland. We are also seeing increasing numbers from the United States and Canada, along with many patients from other European countries."
+  },
+  {
+    q: "Which restoration technique is the best?",
+    a: "Techniques vary depending on the patient condition. For some patients, we prefer the Sapphire Microblade Technique, while for others we prefer DHI. Both implantation techniques are performed in our clinic. For extraction, however, we use only FUE, which stands for Follicular Unit Excision. After the follicles are extracted, they can be implanted in two different ways. In one method, we first create the incisions and then place the grafts into those channels. In the other method, DHI, the grafts are inserted into a special pen and implanted at the same time as the incisions are made. Which method is better depends on the patient needs. In some cases, DHI is more suitable, and we choose that approach. I mostly use DHI for female patients or for patients who need work in a particular area using a non-shaven method. However, in my daily practice, I often find the Sapphire Technique more effective for controlling angle, direction, and incision density during the operation."
+  },
+  {
+    q: "Which country is the best for aesthetic restoration?",
+    a: "Lahore, Pakistan, has been considered the capital of follicular restoration for the last decade. Every year, more than 1 million men travel to Lahore for procedures. For that reason, Lahore can be considered one of the best destinations for surgery today, as patients often pay much less than they would in Europe, the United States, or Canada while still achieving excellent results."
+  },
+  {
+    q: "What method is used for beard restoration?",
+    a: "Both FUT, also known as FUSS (Follicular Unit Strip Surgery), and FUE can be used for beard transplantation. However, today more than 90% of beard restoration procedures are performed using FUE."
+  },
+  {
+    q: "What is the Sapphire FUE method?",
+    a: "Sapphire FUE is a type of FUE technique in which a sapphire microblade is used to create the recipient sites, or channels, for implantation."
+  },
+  {
+    q: "What is the price of restoration surgery in the United Kingdom?",
+    a: "Prices vary widely from clinic to clinic. Based on information available online and from patients who have previously undergone surgery, the cost generally ranges from around £4,500 to £15,000 or even £20,000."
+  },
+  {
+    q: "What is the meaning of limited donor area?",
+    a: "A limited donor area is a term used to describe an insufficient or weak donor zone. There can be many reasons for this. Has the patient had previous surgery? Are there any large scars on the back of the head? Has thinning progressed into the donor area, creating a horseshoe-shaped appearance? Are the strands thin or thick? These are all factors that determine the quality of the donor area."
+  },
+  {
+    q: "What is the \"ISHRS\" accreditation?",
+    a: "ISHRS stands for the International Society of Hair Restoration Surgery. It is an organization that brings together surgeons and professionals from all over the world. Being a fellow, associate member, or member of ISHRS indicates high standards of quality, ethics, and professionalism. Patients should always pay attention to whether their surgeon or surgical team are members, fellows, or at least associate members of ISHRS."
+  },
+  {
+    q: "What is the future of restoration surgery or follicular treatment?",
+    a: "There are many ongoing studies related to thinning treatments and techniques. Today, the FDA approves only a limited number of treatments for thinning. Two medications are approved: minoxidil and finasteride. There are also two main surgical techniques: FUE (Follicular Unit Extraction) and FUT, sometimes called FUSS (Follicular Unit Strip Surgery). In addition, there is a physical device called low-level laser therapy (LLLT), which is used as a treatment option for thinning."
+  },
+  {
+    q: "What is the density of the incisions or implantation during surgery?",
+    a: "As with many aspects of restoration, this is very individual. However, there are average ranges. A good density is generally considered to be 40 to 60 incisions per square centimeter. Medium density is 30 to 40, and low density is 20 to 30 incisions per square centimeter. There is a common misconception that the higher the density, the better the result. In reality, making too many incisions can damage the vasculature, or blood vessels, under the skin. This may reduce blood flow to the grafts and lower the survival rate. The ideal approach is to achieve appropriate density with the right angle, direction, and depth."
+  },
+  {
+    q: "What is body follicular transplant?",
+    a: "Body follicular transplant refers to using donor follicles from parts of the body other than the back of the head. This may include the beard area or the chest. Some clinics also offer extraction from the arms or legs."
+  },
+  {
+    q: "What is alopecia areata?",
+    a: "Alopecia areata is an autoimmune condition in which the immune system attacks the follicles. This causes inflammation and leads to thinning."
+  },
+  {
+    q: "What is the process for facial follicle restoration?",
+    a: "A facial procedure involves transferring follicles from a person donor area to the face. If you do not have a beard or have missing areas in your beard, this can be corrected by transplanting follicles to those areas. After a few months, the transplanted strands adapt naturally to the face. In most cases, people cannot tell that a beard procedure was performed. The most important point is to implant only single-follicle grafts. If multiple-follicle grafts are implanted in the beard area, the result may look unnatural."
+  },
+  {
+    q: "What do you do for existing native strands?",
+    a: "We aim to preserve existing native strands during surgery. Even though most grafts are taken from the donor area, protecting the existing strands and increasing the overall density in the recipient area is a positive outcome for the patient. It is also a more conservative approach, as the patient may need another procedure in the future. We use magnification to identify and protect the existing roots. In some situations, if the strands are very fine or miniaturized, implantation may be performed over it. Otherwise, we focus on placing the grafts while preserving the native density."
+  },
+  {
+    q: "What are the reasons for follicular thinning in men?",
+    a: "The most common cause of thinning in men is androgenetic alopecia. However, other types of thinning may also occur, such as alopecia areata, scarring alopecia, chronic medical conditions, or thinning related to medical treatments."
+  },
+  {
+    q: "Other alternatives to surgical procedures or medical treatments for thinning?",
+    a: "Depending on the stage and type of thinning, medical treatment may also be an option. For example, in androgenetic alopecia, minoxidil and finasteride may be prescribed. For autoimmune conditions, other treatment plans may be necessary. If the patient is undergoing chemotherapy or radiotherapy, restoration procedures should be postponed until the treatment is complete and the follicles have had time to recover."
+  },
+  {
+    q: "Are your staff full-time employees?",
+    a: "Yes. The staff at Hair Skill Clinic are full-time employees. We work as a team, including not only the doctor but also the surgical assistants. To deliver the right technique and the best possible result, the team needs to know each other well and work together consistently over time. This team coordination is essential, because the surgical team must clearly understand the doctor expectations during each patient procedure."
+  },
+  {
+    q: "Is there any non-surgical type of restoration?",
+    a: "No. Follicular transplantation is a surgical procedure, and there are no non-surgical techniques."
+  },
+  {
+    q: "Is the restoration surgery a simple procedure?",
+    a: "The key to a good outcome is proper preparation and planning. The better the planning and evaluation process, the higher the chance of a successful surgery."
+  },
+  {
+    q: "Is a robotic restoration surgery the best option?",
+    a: "The best technique is the one that fits the patient needs. There is no single best option for everyone. Robotic surgery has some advantages, and FUE and FUT each have their own advantages and disadvantages as well. The decision should be made individually with the doctor or surgeon. In some cases, robotic surgery may offer benefits such as shorter procedure time or more precise extraction. However, an experienced team can achieve comparable results with the classic FUE method."
+  },
+  {
+    q: "If you had previous surgery and were not satisfied with the results, can you have another procedure?",
+    a: "Yes. This is called revision surgery. Around 10% to 18% of our patients have had surgery at other clinics and were not satisfied with the results. We perform revision procedures for such cases. During planning, we evaluate the aspects the patient was unhappy with and work to improve them as much as possible. Revision surgeries require a very experienced team."
+  },
+  {
+    q: "How does the restoration procedure work?",
+    a: "In simple terms, aesthetic restoration is the process of relocating follicles from the back of the head, called the donor area or safe donor area, to the recipient area where thinning has occurred."
+  },
+  {
+    q: "How can I stop my follicular thinning?",
+    a: "Thinning should first be evaluated by a dermatologist or surgeon before deciding on surgery. Before accepting a patient for a procedure, we want the thinning to be more stable. We need to assess the patient condition, understand the underlying causes, and provide the right treatment before surgery. Once the condition is stable and thinning is under control, the procedure may then be performed."
+  },
+  {
+    q: "How can I choose the best clinic for my procedure in Pakistan?",
+    a: "You can research clinics online, review patient experiences, and examine before-and-after results. In some forums, you can even connect directly with former patients and learn about their experiences. Most importantly, make sure the clinic is run by doctors and not only by technicians."
+  },
+  {
+    q: "Does it matter where to have the surgery?",
+    a: "Yes, absolutely. You should have your surgery in a clinic where real doctors, nurses, and trained surgical assistants work. It is very important to avoid unregulated clinics, because the outcomes may be poor and the risk of failure is much higher."
+  },
+  {
+    q: "Does the procedure leave scars?",
+    a: "The procedure can leave scars in the donor area. However, visible scarring is not usually expected in the recipient area, as the incisions there are very small. In the donor area, extensive extraction or poor technique may lead to more noticeable scarring. When the procedure is performed properly, any scarring is usually minimal and not easily visible to the naked eye."
+  },
+  {
+    q: "If you have white strands, will the transplanted follicles be white as well?",
+    a: "Yes. The transplanted follicles will have the same color as the donor strands, because it is taken from the back of your head and redistributed evenly. If the donor section is white, the transplanted section will also be white. If it is your natural original color, it will remain that color."
+  },
+  {
+    q: "Should you travel abroad for restoration surgery?",
+    a: "Not necessarily. The best surgery is the one performed with the proper technique for your needs by a surgeon or clinic you trust."
+  },
+  {
+    q: "Are you too young to have the procedure?",
+    a: "To be eligible for surgery, patients are generally expected to be at least 18 years old and usually under the age of 60. In some clinics, patients over 65 may also be accepted, but the decision should always be made individually. More important than age is the degree and extent of the patient thinning."
+  }
+];
+
 export default function GeneralPage() {
-  return <GeneralClient />;
+  // FAQPage structured data generated dynamically from generalFaqs
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": generalFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <GeneralClient />
+    </>
+  );
 }
