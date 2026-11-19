@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     canonical: "https://www.hairskill.com/patient-guide/hair-washing",
   },
   openGraph: {
-    title: "Post-Op Hair Washing Guidelines Lahore | Hair Skill",
+    title: "Post-Op Hair Washing Guidelines Lahore | Hair Skill Clinic",
     description: "Master your post-op scalp wash in Lahore. Learn how to safely apply panthenol foam, rinse grafts, and remove scabs at Hair Skill.",
     url: "https://www.hairskill.com/patient-guide/hair-washing",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
-    type: "website",
+    type: "article",
     images: [
       {
         url: "https://www.hairskill.com/patient-guide/5.webp",
@@ -35,12 +35,36 @@ export const metadata: Metadata = {
 };
 
 export default function HairWashingPage() {
+  // Combined MedicalWebPage and Article structured data for post-op washing guide
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": ["MedicalWebPage", "Article"],
+    "headline": "Post-Op Hair Washing Guidelines in Lahore",
     "name": "Post-Op Hair Washing Guidelines",
     "description": "Master your post-op scalp wash in Lahore. Learn how to safely apply panthenol foam, rinse grafts, and remove scabs at Hair Skill.",
     "url": "https://www.hairskill.com/patient-guide/hair-washing",
+    "image": "https://www.hairskill.com/patient-guide/5.webp",
+    "datePublished": "2026-01-15",
+    "dateModified": "2026-11-19",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.hairskill.com/patient-guide/hair-washing"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Mansoor Ahmad",
+      "jobTitle": "Lead Hair Transplant Surgeon",
+      "url": "https://www.hairskill.com"
+    },
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "url": "https://www.hairskill.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.hairskill.com/home/owner1.webp"
+      }
+    },
     "about": {
       "@type": "MedicalSpecialty",
       "name": "Postoperative Care"

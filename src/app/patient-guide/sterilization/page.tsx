@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://www.hairskill.com/patient-guide/sterilization",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
-    type: "website",
+    type: "article",
     images: [
       {
         url: "https://www.hairskill.com/patient-guide/1.webp",
@@ -35,12 +35,36 @@ export const metadata: Metadata = {
 };
 
 export default function SterilizationPage() {
+  // Combined MedicalWebPage and Article structured data for sterilization and hygiene guide
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": ["MedicalWebPage", "Article"],
+    "headline": "Sterilization & Hygiene Standards in Lahore",
     "name": "Sterilization & Hygiene Standards",
     "description": "Explore our strict sterilization and hygiene protocols in Lahore. We ensure complete infection control through advanced autoclaves.",
     "url": "https://www.hairskill.com/patient-guide/sterilization",
+    "image": "https://www.hairskill.com/patient-guide/1.webp",
+    "datePublished": "2026-01-15",
+    "dateModified": "2026-11-19",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.hairskill.com/patient-guide/sterilization"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Mansoor Ahmad",
+      "jobTitle": "Lead Hair Transplant Surgeon",
+      "url": "https://www.hairskill.com"
+    },
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Hair Skill Clinic",
+      "url": "https://www.hairskill.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.hairskill.com/home/owner1.webp"
+      }
+    },
     "about": {
       "@type": "MedicalSpecialty",
       "name": "Infection Control"

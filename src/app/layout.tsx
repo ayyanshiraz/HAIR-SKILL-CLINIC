@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "Hair Skill Clinic | Best Hair Transplant in Lahore",
-    template: "%s | Hair Skill Clinic"
+    template: "%s"
   },
   description: "Looking for the best hair transplant in Lahore? Hair Skill Clinic offers advanced FUE, DHI, and hair restoration surgery. Book your free consultation!",
   metadataBase: new URL("https://www.hairskill.com"),

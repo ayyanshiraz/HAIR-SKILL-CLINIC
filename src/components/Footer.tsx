@@ -24,7 +24,7 @@ export default function Footer() {
     { name: `F.A.Q.S`, href: `/faqs` },
     { name: `Reviews`, href: `/reviews` },
     { name: `Contact`, href: `/contact` },
-    { name: `Reference Program`, href: `/about/reference-program` },
+    { name: `Privacy Policy`, href: `/privacy-policy` },
   ];
 
   const socialPlatforms = [
