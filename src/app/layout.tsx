@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.hairskill.com"),
   openGraph: {
     title: "Hair Skill Clinic | Best Hair Transplant & Restoration in Lahore",
-    description: "Welcome to Hair Skill, Lahore's premier medical clinic for advanced hair transplants, FUE, DHI, and non-surgical hair systems.",
+    description: "Welcome to Hair Skill, the premier medical clinic in Lahore for advanced hair transplants, FUE, DHI, and non-surgical hair systems.",
     siteName: "Hair Skill Clinic",
     locale: "en_PK",
     type: "website",
@@ -46,12 +46,26 @@ export default function RootLayout({
 }) {
   const globalSchema = {
     "@context": "https://schema.org",
-    "@type": ["MedicalClinic", "MedicalBusiness"],
+    "@type": ["MedicalClinic", "MedicalBusiness", "Organization"],
+    "@id": "https://www.hairskill.com/#organization",
     name: "Hair Skill Clinic",
+    alternateName: "Hair Skill",
     description: "As the premier hair transplant clinic in Lahore, we offer advanced FUE, DHI, and Sapphire hair restoration services.",
     url: "https://www.hairskill.com",
-    logo: "https://www.hairskill.com/home/logo.webp",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hairskill.com/home/logo.webp"
+    },
     image: "https://www.hairskill.com/home/owner1.webp",
+    telephone: "+923014923336",
+    priceRange: "$$$",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+923014923336",
+      contactType: "customer service",
+      areaServed: "PK",
+      availableLanguage: ["English", "Urdu"]
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: "Hotel MayFair 1st floor 50-52 E-III Commercial Zone Gulberg III",
@@ -62,7 +76,7 @@ export default function RootLayout({
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "31.5074", 
+      latitude: "31.5074",
       longitude: "74.3490"
     },
     hasMap: "https://maps.google.com/?q=Hair+Skill+Clinic+Lahore",
@@ -87,8 +101,6 @@ export default function RootLayout({
         closes: "20:00"
       }
     ],
-    telephone: "+923014923336",
-    priceRange: "$$$",
     medicalSpecialty: ["Dermatology", "Hair Transplantation"],
     founder: {
       "@type": "Physician",
@@ -114,14 +126,12 @@ export default function RootLayout({
     <html lang="en-PK">
       <head>
         <meta name="google-site-verification" content="dua9CfBmUhUJTblfDmVuVVupQ8cV1ccHtmVnW4BRWiQ" />
-        
-        {/* Global MedicalClinic & Physician Schema */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
         />
 
-        {/* Google Analytics Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ERNEPZWKMR"
           strategy="afterInteractive"
@@ -137,7 +147,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Navbar />
-        {/* Changed <main> to <div> to fix semantic HTML nested main error */}
         <div className="w-full flex-grow">
           <CartProvider>
             <MotionProvider>
