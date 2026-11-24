@@ -25,6 +25,8 @@ export default function Footer() {
     { name: `Reviews`, href: `/reviews` },
     { name: `Contact`, href: `/contact` },
     { name: `Privacy Policy`, href: `/privacy-policy` },
+    { name: `Cookie Policy`, href: `/cookie-policy` },
+    
   ];
 
   const socialPlatforms = [
