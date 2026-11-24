@@ -1560,6 +1560,14 @@ export const hairTransplantBlogs: BlogPost[] = [
         <h3 className="text-lg md:text-xl font-bold mt-5 mb-2">Air quality and the healing scalp: practical protection and when to postpone</h3>
         <p className="mb-4">From late October through December, the city experiences severe air pollution in the form of a thick, grey haze. During this period, it is essential to take indoor precautions both to manage the smog and hair transplant recovery. Fine dust particles suspended in the outdoor air can irritate a sensitive scalp and exacerbate itching; furthermore, if you spend several hours outdoors, these particles may accumulate near the newly created micro-channels. Poor air quality can also lead to a sore throat, allergies, and persistent coughing. Frequent coughing can increase blood pressure in the head, potentially causing minor bleeding around the newly implanted graft protection.</p>
         <p className="mb-4">Keep your bedroom windows securely closed, use an air purifier indoors, and avoid evening walks outside when the Air Quality Index (AQI) is high. If you must go out even for a short trip and choose to wear a protective mask, opt for one with soft ear loops rather than tight elastic bands that might exert pressure on the donor area (the back of the head). Patients prone to asthma or sinus issues that worsen during periods of heavy smog might consider postponing their surgery until the air clears (following rain), or scheduling their procedure for late January or February.</p>
+        <div className="my-6 rounded-xl overflow-hidden shadow-md border border-gray-100">
+          <img
+            src="/blogs/hairtransplant/34-2.webp"
+            alt="Man resting indoors under air conditioning during early scab healing after a hair transplant in Lahore"
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </div>
 
         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-2">Monsoon and Humid Months</h2>
         <p className="mb-4">During the early days of July, August, and September, the weather often features pleasant rain accompanied by intense, stifling humidity. Even when the sky is overcast in the morning, the high humidity causes the skin of a person to become damp within minutes of stepping onto a rooftop or driveway. This persistent moisture can create challenging conditions during the initial recovery phase. Constant sweating, combined with a humid indoor environment, can leave the scalp feeling greasy, increase the scalp infection risk, and tempt the patient to rub or pick at the forming scabs.</p>
