@@ -101,23 +101,27 @@ export default function RootLayout({
         closes: "20:00"
       }
     ],
-    medicalSpecialty: ["Dermatology", "Hair Transplantation"],
+    medicalSpecialty: "Dermatology",
     founder: {
       "@type": "Physician",
       name: "Dr. Mansoor Ahmad",
-      identifier: "1535-P",
-      medicalSpecialty: "Hair Transplantation"
+      identifier: {
+        "@type": "PropertyValue",
+        name: "PMDC",
+        value: "1535-P"
+      },
+      medicalSpecialty: "Dermatology"
     },
     availableService: [
       {
         "@type": "MedicalProcedure",
         name: "FUE Hair Transplant",
-        procedureType: "SurgicalProcedure"
+        procedureType: "https://schema.org/SurgicalProcedure"
       },
       {
         "@type": "MedicalProcedure",
         name: "DHI Hair Transplant",
-        procedureType: "SurgicalProcedure"
+        procedureType: "https://schema.org/SurgicalProcedure"
       }
     ]
   };

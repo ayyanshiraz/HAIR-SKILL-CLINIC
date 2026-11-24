@@ -5,7 +5,7 @@ const BlogsHairTransplantClient = dynamic(() => import("../../../components/Blog
 
 export const metadata: Metadata = {
   title: "Hair Transplant Guides: Procedures, Costs & Recovery | Hair Skill",
-  description: "Surgeon-written guides on FUE, DHI, FUT, costs, graft counts and recovery for patients in Lahore.",
+  description: "Explore surgeon-written hair transplant guides in Lahore covering FUE, DHI, FUT techniques, realistic costs, graft counts, and recovery tips.",
   keywords: ["Hair Transplant Diet Lahore", "Post-Op Hair Transplant Care", "Vitamins After Hair Transplant", "Graft Survival Tips", "Hair Clinic Blogs Lahore"],
   alternates: {
     canonical: "https://www.hairskill.com/blogs/hair-transplant",
