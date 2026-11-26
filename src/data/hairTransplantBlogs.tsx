@@ -1657,5 +1657,6 @@ export const hairTransplantBlogs: BlogPost[] = [
         <p className="mb-2">Contact our clinic team today to have your scalp examined, discuss your daily routine, and select a date for your hair transplant that aligns with your personal convenience and preferred timeline.</p>
       </>
     )
-  }
+  },
+  
 ];
