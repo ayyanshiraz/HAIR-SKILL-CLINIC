@@ -354,7 +354,7 @@ export const hairLossBlogs: BlogPost[] = [
   },
   {
     id: 35,
-    slug: "minoxidil-finasteride-hair-loss-pakistan",
+    slug: "minoxidil-finasteride-hair-loss-lahore",
     category: "hair-loss",
     title: "Minoxidil and Finasteride in Pakistan: What Works, Side Effects, and When Medication Is Not Enough",
     date: "November 26, 2026",
